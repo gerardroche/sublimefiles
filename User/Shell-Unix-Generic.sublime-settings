@@ -1,0 +1,27 @@
+{
+	"extensions":
+	[
+        ".bash_completions",
+        ".bowerrc",
+        ".curlrc",
+        ".editorconfig",
+        ".gitconfig",
+        ".gitexcludes",
+        ".gvimrc",
+        ".netrwhist",
+        ".tmux.conf",
+        ".vim",
+        ".vimrc",
+        ".wgetrc",
+        ".npmrc",
+        ".mx.conf",
+        "lde",
+        "lde-apache",
+        "lde-hosts",
+        "lde-mysql",
+        "lde-php",
+        "lde-sh-config",
+        "lde-sh-library",
+        "lde-sh-setup",
+    ]
+}

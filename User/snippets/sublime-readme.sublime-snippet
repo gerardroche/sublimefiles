@@ -1,0 +1,64 @@
+<snippet>
+    <content><![CDATA[
+# $1
+
+$2
+
+## Overview
+
+* [Features](#features)
+* [Key Bindings](#key-bindings)
+* [Configuration](#configuration)
+* [Installation](#installation)
+* [Contributing](#contributing)
+* [Changelog](#changelog)
+* [License](#license)
+
+## Features
+
+$3
+
+## Key Bindings
+
+| OS X | Windows | Linux | Description |
+|------|---------|-------|-------------|
+| <kbd>Ctrl</kbd>+<kbd>Space</kbd> | <kbd>Ctrl</kbd>+<kbd>Space</kbd> | <kbd>Alt</kbd>+<kbd>/</kbd> | Activate completions |
+
+To enable [tab-completions][tab-completed-completions] set `"tab_completion": true` in `Preferences > Settings - User`.
+
+## Configuration
+
+$4
+
+## Installation
+
+### Package Control installation
+
+[Package Control](https://packagecontrol.io) is the preferred method of installation.
+
+Search for "[{{{NAME}}}](https://packagecontrol.io/search/{{{NAME}}})".
+
+### Manual installation
+
+1. Close Sublime Text.
+2. Download or clone this repository to a directory named `{{{NAME}}}` in the packages directory for your platform:
+    * Linux: `git clone https://github.com/gerardroche/sublime_{{{NAME}}}.git ~/.config/sublime-text-3/Packages/{{{NAME}}}`
+    * OS X: `git clone https://github.com/gerardroche/sublime_{{{NAME}}}.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/{{{NAME}}}`
+    * Windows: `git clone https://github.com/gerardroche/sublime_{{{NAME}}}.git %APPDATA%\Sublime/ Text/ 3/Packages/{{{NAME}}}`
+3. The features listed above will be available the next time Sublime Text is started.
+
+## Contributing
+
+Your issue reports and pull requests are always welcome.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md).
+
+## License
+
+Released under the [BSD 3-Clause License](LICENSE).
+]]></content>
+    <tabTrigger>readme-basic</tabTrigger>
+    <scope>text.plain, text.html.markdown</scope>
+</snippet>

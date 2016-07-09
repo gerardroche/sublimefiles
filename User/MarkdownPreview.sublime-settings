@@ -1,0 +1,4 @@
+{
+    "enable_autoreload": true,
+    "enabled_parsers": ["markdown"]
+}

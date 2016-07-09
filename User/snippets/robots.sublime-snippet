@@ -1,0 +1,26 @@
+<snippet>
+    <content><![CDATA[
+# For documentation on how to use the robots.txt file see:
+#
+# - http://www.robotstxt.org/
+# - https://support.google.com/webmasters/answer/156449
+#
+# To ban all spiders from the entire site uncomment the next two lines see
+# http://www.robotstxt.org/wc/norobots.html:
+#
+# User-Agent: *
+# Disallow: /
+#
+#
+# User-agent: *
+# Disallow: /css/
+# Disallow: /img/
+# Disallow: /js/
+# Disallow: /styles/
+# Allow: /
+#
+
+]]></content>
+    <tabTrigger>robots</tabTrigger>
+    <scope>text.plain</scope>
+</snippet>

@@ -1,0 +1,69 @@
+<snippet>
+    <content><![CDATA[
+<?php
+
+\$finder = Symfony\CS\Finder\DefaultFinder::create()
+    ->name('*.phtml')
+    ->exclude('build')
+    ->exclude('lib')
+    ->exclude('tmp')
+    ->exclude('vendor')
+    ->in(__DIR__)
+;
+
+return Symfony\CS\Config\Config::create()
+    ->level(Symfony\CS\FixerInterface::PSR2_LEVEL)
+    ->fixers(array(
+        '-psr0',
+        'encoding', // [PSR-1]
+        'short_tag', // [PSR-1]
+        'braces', // [PSR-2]
+        'elseif', // [PSR-2]
+        'eof_ending', // [PSR-2]
+        'function_call_space', // [PSR-2]
+        'function_declaration', // [PSR-2]
+        'indentation', // [PSR-2]
+        'line_after_namespace', // [PSR-2]
+        'linefeed', // [PSR-2]
+        'lowercase_constants', // [PSR-2]
+        'lowercase_keywords', // [PSR-2]
+        'method_argument_space', // [PSR-2]
+        'multiple_use', // [PSR-2]
+        'parenthesis', // [PSR-2]
+        'php_closing_tag', // [PSR-2]
+        'single_line_after_imports', // [PSR-2]
+        'trailing_spaces', // [PSR-2]
+        'visibility', // [PSR-2]
+        'double_arrow_multiline_whitespaces', // [symfony]
+        'duplicate_semicolon', // [symfony]
+        'empty_return', // [symfony]
+        'extra_empty_lines', // [symfony]
+        'include', // [symfony]
+        'join_function', // [symfony]
+        'namespace_no_leading_whitespace', // [symfony]
+        'new_with_braces', // [symfony]
+        'no_blank_lines_after_class_opening', // [symfony]
+        'operators_spaces', // [symfony]
+        'phpdoc_indent', // [symfony]
+        'phpdoc_params', // [symfony]
+        'remove_leading_slash_use', // [symfony]
+        'remove_lines_between_uses', // [symfony]
+        'return', // [symfony]
+        'single_array_no_trailing_comma', // [symfony]
+        'single_blank_line_before_namespace', // [symfony]
+        'spaces_before_semicolon', // [symfony]
+        'spaces_cast', // [symfony]
+        'standardize_not_equal', // [symfony]
+        'ternary_spaces', // [symfony]
+        'unused_use', // [symfony]
+        'whitespacy_lines', // [symfony]
+        'concat_with_spaces', // [contrib]
+        'multiline_spaces_before_semicolon', // [contrib]
+        'ordered_use' // [contrib]
+    ))->finder(\$finder)
+;
+]]></content>
+    <tabTrigger>phpcs</tabTrigger>
+    <scope>text.plain, embedding.php - comment - variable</scope>
+    <description>PHP - PHP CS Fixer - .php_cs</description>
+</snippet>

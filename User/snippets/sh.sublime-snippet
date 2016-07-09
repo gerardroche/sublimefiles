@@ -1,0 +1,39 @@
+<snippet>
+    <content><![CDATA[
+#!/bin/sh
+
+set -e
+unset CDPATH
+unset IFS
+readonly SOURCE=\$(readlink -nf "\$0")
+readonly SOURCE_PATH=\$(dirname "\$SOURCE")
+readonly SOURCE_NAME=\$(basename "\$SOURCE")
+
+show_usage() {
+    echo "usage: \$0 [-h|--help]"
+    echo "       \$0 --version"
+}
+
+# if no arguments then show usage and exit
+test "\$#" = 0 && show_usage && exit 0
+
+# parse arguments
+# Example --opt=val handling:
+# --opt)    VAL="$2"
+# --opt=*)  VAL=\${1#*=} # Delete everything up till "="
+while test "\$#" != 0; do
+    case "\$1" in
+        --help|-h)
+            show_usage
+            exit 0
+            ;;
+        --) shift; break ;; # standard end of options list
+        -*) echo >&2 "\$0: unknown option '\$1'"; exit 1 ;;
+        *)  echo >&2 "\$0: unknown argument '\$1'"; exit 1 ;;
+    esac
+    shift
+done
+]]></content>
+    <tabTrigger>sh</tabTrigger>
+    <scope>text.plain, source.shell, source.sh</scope>
+</snippet>

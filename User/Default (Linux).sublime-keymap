@@ -1,0 +1,66 @@
+[
+    /////////////////
+    // Open Sesame //
+    /////////////////
+
+    { "keys": ["ctrl+alt+p"], "command": "open_sesame" },
+
+    //////////
+    // Flow //
+    //////////
+
+    { "keys": ["shift+f11"], "command": "flow" },
+
+    ////////////////
+    // PHP Manual //
+    ////////////////
+
+    { "keys": ["f1"],       "command": "goto_php_man" },
+    { "keys": ["shift+f1"], "command": "goto_php_man", "args": {"remote": true}},
+
+    ///////////////////
+    // Vim Overrides //
+    ///////////////////
+
+    { "keys": ["ctrl+c"], "command": "copy" },
+
+    //////////////////////
+    // Color Scheme Dev //
+    //////////////////////
+
+    // { "keys": ["ctrl+shift+t"], "command": "run_color_scheme_tests" },
+    // { "keys": ["ctrl+shift+r"], "command": "run_color_scheme_test" },
+    // { "keys": ["ctrl+shift+alt+p"], "command": "show_scope_name_and_styles" },
+
+    /////////////////////
+    // PHP Grammar Dev //
+    /////////////////////
+
+    // { "keys": [",", "r"], "command": "run_php_grammar_syntax_tests", "context": [{"key": "setting.command_mode"}] },
+    // { "keys": ["ctrl+b"], "command": "build_php_grammar" },
+
+    ////////////
+    // Tweaks //
+    ////////////
+
+    // Smarter insert newline on Enter
+    {
+        "keys": ["enter"],
+        "command": "smarter_insert_newline",
+        "context": [
+            { "key": "setting.auto_indent", "operator": "equal", "operand": true },
+            { "key": "setting.command_mode", "operator": "equal", "operand": false },
+            { "key": "selector", "operator": "equal", "operand": "source.php", "match_all": true },
+            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+            { "key": "preceding_text", "operator": "regex_contains", "operand": "(\\{|\\[)\\s*$", "match_all": true },
+            { "key": "following_text", "operator": "regex_contains", "operand": "^\\s*$", "match_all": true }
+        ]
+    },
+
+    //////////////
+    // ST Fixes //
+    //////////////
+
+    // Fixes open content menu keymap
+    { "keys": ["shift+f10"], "command": "context_menu" },
+]

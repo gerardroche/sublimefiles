@@ -1,0 +1,41 @@
+{
+	"auto_upgrade_ignore":
+	[
+	],
+	"bootstrapped": true,
+	"debug": false,
+	"ignore_vcs_packages": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"1337 Color Scheme",
+		"3024 Color Scheme",
+		"Base16 Color Schemes",
+		"Boxy Theme",
+		"Color Highlighter",
+		"DocBlockr",
+		"five_easy_color_schemes",
+		"GitGutter",
+		"Markdown Preview",
+		"molokai",
+		"Monokai Extended",
+		"open-sesame",
+		"Origami",
+		"Package Control",
+		"PHP Completions Kit",
+		"php-grammar",
+		"php-snippets",
+		"phpunitkit",
+		"polyfill",
+		"SideBarEnhancements",
+		"Solarized Color Scheme",
+		"SublimeLinter",
+		"SublimeLinter-php",
+		"Tomorrow Color Schemes",
+		"Vintageous"
+	],
+	"submit_url": "",
+	"submit_usage": false
+}

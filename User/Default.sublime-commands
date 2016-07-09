@@ -1,0 +1,16 @@
+[
+    {
+        "caption": "Open Sesame: Open Vendor",
+        "command": "open_sesame",
+        "args": { "path": "~/vendor" }
+    },
+    {
+        "caption": "Open Sesame: Add Vendor Folder",
+        "command": "open_sesame_add_folder",
+        "args": { "path": "~/vendor" }
+    },
+    {
+        "caption": "Man",
+        "command": "man"
+    }
+]
