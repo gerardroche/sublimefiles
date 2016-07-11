@@ -1,6 +1,6 @@
 {
-	"extensions":
-	[
+    "extensions":
+    [
         ".bash_completions",
         ".bowerrc",
         ".curlrc",
@@ -8,13 +8,15 @@
         ".gitconfig",
         ".gitexcludes",
         ".gvimrc",
+        ".mx",
+        ".mx.conf",
+        ".mxrc",
         ".netrwhist",
+        ".npmrc",
         ".tmux.conf",
         ".vim",
         ".vimrc",
         ".wgetrc",
-        ".npmrc",
-        ".mx.conf",
         "lde",
         "lde-apache",
         "lde-hosts",
@@ -22,6 +24,6 @@
         "lde-php",
         "lde-sh-config",
         "lde-sh-library",
-        "lde-sh-setup",
+        "lde-sh-setup"
     ]
 }
