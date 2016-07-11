@@ -18,7 +18,7 @@
         "passive_warnings": false,
         "paths": {
             "linux": [
-                "~/.php-build/versions/7.0.x/bin"
+                "~/.phpenv/versions/7.x/bin"
             ],
             "osx": [],
             "windows": []
