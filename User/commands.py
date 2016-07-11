@@ -38,8 +38,6 @@ def man_path(window):
     if not path:
         return None
 
-    # array_merge
-    # Expand PROJECTS_PATH environment variable
     projects_path = os.getenv('PROJECTS_PATH')
 
     if projects_path:
@@ -51,10 +49,10 @@ def man_path(window):
     if not path:
         return None
 
-    if os.path.isdir(path):
-        return path
+    if not os.path.isdir(path):
+        return None
 
-    return None
+    return path
 
 class ManCommand(sublime_plugin.WindowCommand):
 
