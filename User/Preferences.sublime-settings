@@ -169,7 +169,7 @@
 		"resources",
 		"tags"
 	],
-	"line_numbers": true,
+	"line_numbers": false,
 	"man.path": "${PROJECTS_PATH}/.lde/man",
 	"php-grammar.development_mode": false,
 	"phpunit.development": false,
@@ -182,8 +182,6 @@
 	"preview_on_click": false,
 	"rulers":
 	[
-		80,
-		120
 	],
 	"save_on_focus_lost": true,
 	"scrolloff": "8",
