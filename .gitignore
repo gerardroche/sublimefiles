@@ -5,18 +5,19 @@
 #   git config --global core.excludesfile ~/.gitignore_global
 
 /.logs/
-/bz2/
-/pygments/
-/pyyaml/
-/ssl-linux/
+/PyV8/
 /SublimeLinter/
-/User/bh_unicode_properties.cache
 /User/Color Highlighter/ColorPicker/
 /User/Package Control.cache/
 /User/Package Control.last-run
 /User/Package Control.merged-ca-bundle
 /User/Package Control.user-ca-bundle
-/User/sandbox.py
 /User/SublimeLinter/
+/User/bh_unicode_properties.cache
+/User/sandbox.py
 /User/tmp.py
 /User/tmp/
+/bz2/
+/pygments/
+/pyyaml/
+/ssl-linux/
