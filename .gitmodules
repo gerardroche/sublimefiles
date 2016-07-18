@@ -37,9 +37,6 @@
 [submodule "SideBarEnhancements"]
 	path = SideBarEnhancements
 	url = https://github.com/gerardroche/SideBarEnhancements.git
-[submodule "Boxy Theme Addon - Mono File Icons - Dark UI"]
-	path = Boxy Theme Addon - Mono File Icons - Dark UI
-	url = https://github.com/oivva/boxy-addon-mono-file-icons-dark-ui.git
 [submodule "Vintageous"]
 	path = Vintageous
 	url = https://github.com/gerardroche/Vintageous.git

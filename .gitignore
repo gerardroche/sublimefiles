@@ -5,6 +5,7 @@
 #   git config --global core.excludesfile ~/.gitignore_global
 
 /.logs/
+/Boxy Theme Addon - Mono File Icons - Dark UI/
 /PyV8/
 /SublimeLinter/
 /User/Color Highlighter/ColorPicker/
