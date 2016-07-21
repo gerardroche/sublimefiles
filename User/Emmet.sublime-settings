@@ -1,0 +1,5 @@
+{
+    // "update_image_size" uses the ctrl+u keybinding which overrides undoing a
+    // multiple selection.
+    "disabled_keymap_actions": "update_image_size"
+}
