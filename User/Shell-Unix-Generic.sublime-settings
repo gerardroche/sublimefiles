@@ -23,6 +23,10 @@
 		"lde-php",
 		"lde-sh-config",
 		"lde-sh-library",
-		"lde-sh-setup"
+		"lde-sh-setup",
+		".inputrc",
+		".pam_environment",
+		".ctags",
+		".gitignore"
 	]
 }
