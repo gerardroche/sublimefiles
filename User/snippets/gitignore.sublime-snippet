@@ -42,5 +42,5 @@ tags
 
 ]]></content>
     <tabTrigger>gitignore</tabTrigger>
-    <scope>text.plain, source.git, source.gitignore</scope>
+    <scope>text.plain, source.git, source.gitignore, source.shell</scope>
 </snippet>

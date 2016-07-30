@@ -22,5 +22,5 @@
 
 ]]></content>
     <tabTrigger>robots</tabTrigger>
-    <scope>text.plain</scope>
+    <scope>text.plain, source.shell</scope>
 </snippet>

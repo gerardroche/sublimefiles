@@ -15,6 +15,6 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 ]]></content>
     <tabTrigger>editorconfig</tabTrigger>
-    <scope>text.plain</scope>
+    <scope>text.plain, source.shell</scope>
     <description>.editorconfig</description>
 </snippet>
