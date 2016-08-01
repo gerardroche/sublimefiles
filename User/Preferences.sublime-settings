@@ -6,7 +6,6 @@
 	"debug": false,
 	"disable_pyv8_update": true,
 	"docblockr.development_mode": false,
-	"docblockr.extend_double_slash": false,
 	"docblockr.function_description": false,
 	"docblockr.lower_case_primitives": true,
 	"docblockr.old_settings_migrated": true,
