@@ -43,7 +43,7 @@
     // Tweaks //
     ////////////
 
-    // Smarter insert newline on Enter
+    // Smarter insert newline on Enter.
     {
         "keys": ["enter"],
         "command": "smarter_insert_newline",
@@ -61,6 +61,6 @@
     // ST Fixes //
     //////////////
 
-    // Fixes open content menu keymap
+    // Fixes open content menu keymap.
     { "keys": ["shift+f10"], "command": "context_menu" },
 ]
