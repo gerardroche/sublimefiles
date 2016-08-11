@@ -6,23 +6,23 @@
 
 /.logs/
 /Boxy Theme Addon - Mono File Icons - Dark UI/
+/bz2/
+/markupsafe/
+/mdpopups/
+/pygments/
+/python-jinja2/
+/python-markdown/
 /PyV8/
+/pyyaml/
+/ssl-linux/
 /SublimeLinter/
+/User/bh_unicode_properties.cache
 /User/Color Highlighter/ColorPicker/
 /User/Package Control.cache/
 /User/Package Control.last-run
 /User/Package Control.merged-ca-bundle
 /User/Package Control.user-ca-bundle
-/User/SublimeLinter/
-/User/bh_unicode_properties.cache
 /User/sandbox.py
+/User/SublimeLinter/
 /User/tmp.py
 /User/tmp/
-/bz2/
-/pygments/
-/pyyaml/
-/ssl-linux/
-/python-jinja2/
-/python-markdown/
-/mdpopups/
-/markupsafe/
