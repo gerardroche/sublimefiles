@@ -71,7 +71,6 @@
 		"/*/*/*/*/*/vendor/*/*/package.xml",
 		"/*/*/*/*/*/vendor/*/*/phpmd.xml*",
 		"/*/*/*/*/*/vendor/*/*/phpunit.xml*",
-		"/*/*/*/*/*/vendor/autoload.php",
 		"/*/*/*/*/*/vendor/composer/ClassLoader.php",
 		"/*/*/*/*/*/vendor/composer/installed.json",
 		"cache.properties",
@@ -106,7 +105,6 @@
 		"logs",
 		"nbproject"
 	],
-	"font_face": "SourceCodePro+Powerline+Awesome Regular",
 	"font_size": 10,
 	"ignored_packages":
 	[
