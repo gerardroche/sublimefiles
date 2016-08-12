@@ -1,4 +1,5 @@
 {
+	"animation_enabled": false,
 	"auto_complete_delay": 0,
 	"auto_complete_with_fields": true,
 	"auto_upgrade": false,
@@ -106,6 +107,7 @@
 		"nbproject"
 	],
 	"font_size": 10,
+	"hot_exit": false,
 	"ignored_packages":
 	[
 		"Color Highlighter",
@@ -183,6 +185,7 @@
 	"polyfill.experimental_features": true,
 	"polyfill.vi_tree_view_toggle": true,
 	"preview_on_click": false,
+	"remember_full_screen": true,
 	"rulers":
 	[
 	],
@@ -209,6 +212,7 @@
 	"theme_sidebar_folder_mono": true,
 	"theme_sidebar_indent_top_level_disabled": true,
 	"theme_tab_separator": true,
+	"tree_animation_enabled": false,
 	"update_check": false,
 	"vintageous_test_runner_keymaps": false,
 	"vintageous_visualbell": false,
