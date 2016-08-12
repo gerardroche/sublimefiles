@@ -191,6 +191,7 @@
 	"save_on_focus_lost": true,
 	"scrolloff": "8",
 	"show_definitions": false,
+	"show_full_path": false,
 	"sidescroll": "1",
 	"sidescrolloff": "12",
 	"splitbelow": true,
