@@ -15,6 +15,7 @@
 	"docblockr.short_primitives": true,
 	"docblockr.spacer_between_sections": true,
 	"docblockr.tests_php_syntax_file": "Packages/php-grammar/PHP.sublime-syntax",
+	"draw_white_space": "selection",
 	"enable_telemetry": false,
 	"fade_fold_buttons": false,
 	"file_exclude_patterns":
@@ -84,6 +85,7 @@
 	[
 		".git",
 		".hg",
+		".lde/man",
 		".settings",
 		".svn",
 		".tx",

@@ -1,0 +1,20 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"Package Control.merged-ca-bundle",
+				"Package Control.user-ca-bundle",
+				"Package Control.last-run"
+			],
+			"folder_exclude_patterns":
+			[
+				".logs",
+				"Package Control.cache",
+				"SublimeLinter"
+			],
+			"path": "."
+		}
+	]
+}
