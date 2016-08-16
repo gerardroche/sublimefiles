@@ -1,0 +1,11 @@
+{
+    "name": "phpunit-snippets",
+    "details": "https://github.com/gerardroche/sublime-phpunit-snippets",
+    "labels": ["php", "testing", "phpunit", "snippets"],
+    "releases": [
+        {
+            "sublime_text": "*",
+            "tags": true
+        }
+    ]
+}
