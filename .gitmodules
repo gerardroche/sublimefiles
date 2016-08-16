@@ -13,9 +13,6 @@
 [submodule "php-snippets"]
 	path = php-snippets
 	url = https://github.com/gerardroche/sublime-php-snippets.git
-[submodule "phpunit-snippets"]
-	path = phpunit-snippets
-	url = https://github.com/gerardroche/sublime-phpunit-snippets.git
 [submodule "phpunit-completions"]
 	path = phpunit-completions
 	url = https://github.com/gerardroche/sublime-phpunit-completions.git
@@ -28,9 +25,6 @@
 [submodule "open-sesame"]
 	path = open-sesame
 	url = https://github.com/gerardroche/sublime-open-sesame.git
-[submodule "molokai"]
-	path = molokai
-	url = https://github.com/gerardroche/sublime-molokai.git
 [submodule "color_scheme_unit"]
 	path = color_scheme_unit
 	url = https://github.com/gerardroche/sublime_color_scheme_unit.git
