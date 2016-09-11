@@ -61,4 +61,5 @@ Released under the [BSD 3-Clause License](LICENSE).
 ]]></content>
     <tabTrigger>readme-basic</tabTrigger>
     <scope>text.plain, text.html.markdown</scope>
+    <description>Sublime: Plugin Readme</description>
 </snippet>

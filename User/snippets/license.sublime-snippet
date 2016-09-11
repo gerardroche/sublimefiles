@@ -30,4 +30,5 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ]]></content>
     <tabTrigger>license</tabTrigger>
     <scope>text.plain, license</scope>
+    <description>Licence: Template</description>
 </snippet>

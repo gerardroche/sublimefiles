@@ -36,4 +36,5 @@ done
 ]]></content>
     <tabTrigger>sh</tabTrigger>
     <scope>text.plain, source.shell, source.sh</scope>
+    <description>Shell: Template</description>
 </snippet>

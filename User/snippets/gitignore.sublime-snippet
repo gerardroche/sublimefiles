@@ -43,4 +43,5 @@ tags
 ]]></content>
     <tabTrigger>gitignore</tabTrigger>
     <scope>text.plain, source.git, source.gitignore, source.shell</scope>
+    <description>Git: .gitignore Template</description>
 </snippet>
