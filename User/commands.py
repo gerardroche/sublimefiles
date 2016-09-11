@@ -100,7 +100,7 @@ class GotoPhpManCommand(sublime_plugin.WindowCommand):
             self.goto_local(symbol)
 
     def goto_remote(self, symbol):
-        webbrowser.open_new_tab('http://php.net/manual-lookup.php?pattern=%s' % symbol)
+        webbrowser.open_new_tab('https://secure.php.net/%s' % symbol)
 
     def goto_local(self, symbol):
         path = man_path(self.window)
@@ -113,6 +113,7 @@ class GotoPhpManCommand(sublime_plugin.WindowCommand):
             else:
                 sublime.status_message('goto_php_manual: file not found: %s' % filename)
 
+        # https://secure.php.net/urlhowto.php
         open_file_in_browser('%s/php/language.types.%s.html' % (path, symbol))
         open_file_in_browser('%s/php/control-structures.%s.html' % (path, symbol))
         open_file_in_browser('%s/php/book.%s.html' % (path, symbol))
