@@ -9,20 +9,65 @@ import os
 class FlowCommand(sublime_plugin.WindowCommand):
 
     def run(self):
-
         self.window.run_command('toggle_distraction_free')
 
         if self.window.is_sidebar_visible():
             self.window.set_sidebar_visible(False)
 
-        if self.window.is_menu_visible():
-            self.window.set_menu_visible(False)
+        self.window.run_command('resize_groups_almost_equally')
+
+class ClearWindowCommand(sublime_plugin.WindowCommand):
+
+    def run(self):
+
+        if self.window.is_sidebar_visible():
+            self.window.set_sidebar_visible(False)
 
         if self.window.is_minimap_visible():
             self.window.set_minimap_visible(False)
 
+        if self.window.is_menu_visible():
+            self.window.set_menu_visible(False)
+
         if self.window.is_status_bar_visible():
             self.window.set_status_bar_visible(False)
+
+        self.window.run_command('resize_groups_almost_equally')
+
+class ResetWindowCommand(sublime_plugin.WindowCommand):
+
+    def run(self):
+
+        if not self.window.is_sidebar_visible():
+            self.window.set_sidebar_visible(True)
+
+        if not self.window.is_minimap_visible():
+            self.window.set_minimap_visible(True)
+
+        if not self.window.is_menu_visible():
+            self.window.set_menu_visible(True)
+
+        if not self.window.is_status_bar_visible():
+            self.window.set_status_bar_visible(True)
+
+        self.window.run_command('resize_groups_almost_equally')
+
+# Re: https://akrabat.com/hide-the-st3-sidebar-automatically/
+class FlowListener(sublime_plugin.EventListener):
+
+    def on_activated(self, view):
+        if not view:
+            return
+
+        window = view.window()
+        if not window:
+            return
+
+        if len(window.views()) == 0:
+            window.set_sidebar_visible(True)
+            window.run_command('focus_side_bar')
+        elif window.is_sidebar_visible():
+            window.set_sidebar_visible(False)
 
 def is_php_identifier(value):
     return re.match('^[a-zA-Z_][a-zA-Z0-9_]*$', value)
@@ -38,13 +83,12 @@ def man_path(window):
     if not path:
         return None
 
-    projects_path = os.getenv('PROJECTS_PATH')
+    env_projects_path = os.getenv('PROJECTS_PATH')
+    if env_projects_path:
+        if not os.path.isdir(env_projects_path):
+            raise RuntimeError('PROJECTS_PATH env is not a valid directory')
 
-    if projects_path:
-        if not os.path.isdir(projects_path):
-            raise RuntimeError('environment "PROJECTS_PATH" not a valid directory')
-
-        path = path.replace('${PROJECTS_PATH}', projects_path)
+        path = path.replace('${PROJECTS_PATH}', env_projects_path)
 
     if not path:
         return None

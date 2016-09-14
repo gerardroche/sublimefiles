@@ -12,5 +12,13 @@
     {
         "caption": "Man",
         "command": "man"
-    }
+    },
+    {
+        "caption": "Application: Clear Window",
+        "command": "clear_window"
+    },
+    {
+        "caption": "Application: Reset Window",
+        "command": "reset_window"
+    },
 ]
