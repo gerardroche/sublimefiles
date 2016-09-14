@@ -19,7 +19,6 @@
 	"draw_white_space": "selection",
 	"enable_telemetry": false,
 	"fade_fold_buttons": false,
-	"show_errors_inline": false,
 	"file_exclude_patterns":
 	[
 		"*.a",
@@ -196,6 +195,7 @@
 	"save_on_focus_lost": true,
 	"scrolloff": "8",
 	"show_definitions": false,
+	"show_errors_inline": false,
 	"show_full_path": true,
 	"sidescroll": "1",
 	"sidescrolloff": "12",
