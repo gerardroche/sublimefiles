@@ -7,7 +7,6 @@
 	"color_scheme_unit.keymaps": false,
 	"completion_unit.keymaps": false,
 	"debug": false,
-	"disable_pyv8_update": true,
 	"docblockr.development_mode": false,
 	"docblockr.function_description": false,
 	"docblockr.lower_case_primitives": true,
