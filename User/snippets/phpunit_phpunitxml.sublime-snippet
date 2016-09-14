@@ -38,6 +38,7 @@
 
     <logging>
         <log type="coverage-html" target="build/coverage" />
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="true" />
     </logging>
 
 </phpunit>
