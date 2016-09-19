@@ -53,21 +53,21 @@ class ResetWindowCommand(sublime_plugin.WindowCommand):
         self.window.run_command('resize_groups_almost_equally')
 
 # Re: https://akrabat.com/hide-the-st3-sidebar-automatically/
-class FlowListener(sublime_plugin.EventListener):
+# class FlowListener(sublime_plugin.EventListener):
 
-    def on_activated(self, view):
-        if not view:
-            return
+#     def on_activated(self, view):
+#         if not view:
+#             return
 
-        window = view.window()
-        if not window:
-            return
+#         window = view.window()
+#         if not window:
+#             return
 
-        if len(window.views()) == 0:
-            window.set_sidebar_visible(True)
-            window.run_command('focus_side_bar')
-        elif window.is_sidebar_visible():
-            window.set_sidebar_visible(False)
+#         if len(window.views()) == 0:
+#             window.set_sidebar_visible(True)
+#             window.run_command('focus_side_bar')
+#         elif window.is_sidebar_visible():
+#             window.set_sidebar_visible(False)
 
 def is_php_identifier(value):
     return re.match('^[a-zA-Z_][a-zA-Z0-9_]*$', value)
