@@ -1,7 +1,4 @@
 {
-	"auto_upgrade_ignore":
-	[
-	],
 	"bootstrapped": true,
 	"debug": false,
 	"auto_upgrade": false,
