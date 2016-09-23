@@ -271,3 +271,29 @@ class AsciiInfoCommand(sublime_plugin.TextCommand):
             msg_template = "%7s %3s,  Hex %4s,  Octal %5s"
 
             return sublime.status_message(msg_template % (c_not, c_ord, c_hex, c_oct))
+
+class EnableThemeCommand(sublime_plugin.ApplicationCommand):
+
+    def run(self):
+
+        self.themes = []
+
+        for theme in sublime.find_resources('*.sublime-theme'):
+            if "Addon" not in theme:
+                self.themes.append(os.path.basename(theme))
+
+        if len(self.themes) > 0:
+            sublime.active_window().show_quick_panel(
+                self.themes,
+                self.on_done
+            )
+
+    def on_done(self, index):
+        if index == -1:
+            return
+
+        theme = self.themes[index]
+
+        settings = sublime.load_settings('Preferences.sublime-settings')
+        settings.set('theme', theme)
+        sublime.save_settings('Preferences.sublime-settings')

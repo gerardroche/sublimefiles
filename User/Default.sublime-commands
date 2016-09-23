@@ -21,4 +21,8 @@
         "caption": "Application: Reset Window",
         "command": "reset_window"
     },
+    {
+        "caption": "Application: Enable Theme",
+        "command": "enable_theme"
+    }
 ]
