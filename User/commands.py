@@ -297,3 +297,28 @@ class EnableThemeCommand(sublime_plugin.ApplicationCommand):
         settings = sublime.load_settings('Preferences.sublime-settings')
         settings.set('theme', theme)
         sublime.save_settings('Preferences.sublime-settings')
+
+class EnableColorSchemeCommand(sublime_plugin.ApplicationCommand):
+
+    def run(self):
+
+        self.color_schemes = []
+
+        for color_scheme in sublime.find_resources('*.tmTheme'):
+            self.color_schemes.append(color_scheme)
+
+        if len(self.color_schemes) > 0:
+            sublime.active_window().show_quick_panel(
+                self.color_schemes,
+                self.on_done
+            )
+
+    def on_done(self, index):
+        if index == -1:
+            return
+
+        color_scheme = self.color_schemes[index]
+
+        settings = sublime.load_settings('Preferences.sublime-settings')
+        settings.set('color_scheme', color_scheme)
+        sublime.save_settings('Preferences.sublime-settings')

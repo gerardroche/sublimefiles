@@ -24,5 +24,9 @@
     {
         "caption": "Application: Enable Theme",
         "command": "enable_theme"
+    },
+    {
+        "caption": "Application: Enable Color Scheme",
+        "command": "enable_color_scheme"
     }
 ]
