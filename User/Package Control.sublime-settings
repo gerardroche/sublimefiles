@@ -4,6 +4,7 @@
 	],
 	"bootstrapped": true,
 	"debug": false,
+	"auto_upgrade": false,
 	"ignore_vcs_packages": true,
 	"in_process_packages":
 	[
