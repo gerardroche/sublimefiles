@@ -1,4 +1,15 @@
 [
+    {
+        "keys": ["ctrl+l"],
+        "command": "exec",
+        "args": {
+            "hide_phantoms_only": true
+        },
+        "context": [
+            { "key": "setting.command_mode" }
+        ]
+    },
+
     { "keys": ["ctrl+alt+r"], "command": "prompt_open_recent_project" },
 
     //////////////////////////
