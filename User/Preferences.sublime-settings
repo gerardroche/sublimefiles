@@ -120,23 +120,34 @@
 	"ignored_words":
 	[
 		"autoload",
+		"com",
 		"config",
 		"contrib",
 		"dev",
+		"dict",
 		"div",
 		"elseif",
 		"foo",
 		"foobar",
 		"gerardroche",
 		"github",
+		"https",
+		"ini",
+		"json",
+		"md",
+		"mdash",
 		"param",
 		"php",
 		"phpunit",
 		"phtml",
 		"src",
 		"symfony",
+		"testsuite",
+		"testsuites",
 		"textarea",
-		"todo"
+		"todo",
+		"whitelist",
+		"xdebug"
 	],
 	"indent_guide_options":
 	[
