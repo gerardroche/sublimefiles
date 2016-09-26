@@ -53,6 +53,7 @@
 		"*.zip",
 		".DS_Store",
 		".buildpath",
+		".git",
 		".project",
 		"/*/*/*/*/*/vendor/**/LICENSE",
 		"/*/*/*/*/*/vendor/*/*/*.bat",
@@ -120,6 +121,7 @@
 	"ignored_words":
 	[
 		"autoload",
+		"color",
 		"com",
 		"config",
 		"contrib",
@@ -151,6 +153,8 @@
 	],
 	"indent_guide_options":
 	[
+		"draw_normal",
+		"draw_active"
 	],
 	"index_exclude_patterns":
 	[
@@ -192,6 +196,7 @@
 	"man.path": "${PROJECTS_PATH}/.lde/man",
 	"php-grammar.development_mode": false,
 	"phpunit.development": false,
+	"phpunit.keymaps": true,
 	"phpunit.options":
 	{
 		"no-coverage": true
