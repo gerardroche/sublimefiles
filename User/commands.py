@@ -301,19 +301,42 @@ class EnableThemeCommand(sublime_plugin.ApplicationCommand):
 class EnableColorSchemeCommand(sublime_plugin.ApplicationCommand):
 
     def run(self):
-
         self.color_schemes = []
 
         for color_scheme in sublime.find_resources('*.tmTheme'):
-            self.color_schemes.append(color_scheme)
+            if "(SL)" not in color_scheme:
+                self.color_schemes.append(color_scheme)
 
-        if len(self.color_schemes) > 0:
+        if len(self.color_schemes) > 1:
+
+            color_scheme = sublime.load_settings('Preferences.sublime-settings').get('color_scheme')
+
+            if color_scheme not in self.color_schemes:
+                self.color_schemes.insert(0, color_scheme)
+
             sublime.active_window().show_quick_panel(
                 self.color_schemes,
-                self.on_done
+                self.on_done,
+                0,
+                self.color_schemes.index(color_scheme),
+                self.on_select
             )
 
+    def on_select(self, index):
+        if index == -1:
+            return
+
+        color_scheme = self.color_schemes[index]
+        window = sublime.active_window()
+        for group in range(0, window.num_groups()):
+            active_view_in_group = window.active_view_in_group(group)
+            if active_view_in_group:
+                active_view_in_group.settings().set('color_scheme', color_scheme)
+
     def on_done(self, index):
+        for view in sublime.active_window().views():
+            view.settings().erase('color_scheme')
+
         if index == -1:
             return
 
