@@ -28,5 +28,12 @@
     {
         "caption": "Application: Enable Color Scheme",
         "command": "enable_color_scheme"
+    },
+    {
+        "caption": "Toggle color_scheme_unit.keymaps",
+        "command": "toggle_user_setting",
+        "args": {
+            "key": "color_scheme_unit.keymaps"
+        }
     }
 ]
