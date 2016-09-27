@@ -1,16 +1,13 @@
 {
+	"auto_upgrade": false,
 	"bootstrapped": true,
 	"debug": false,
-	"auto_upgrade": false,
 	"ignore_vcs_packages": true,
 	"in_process_packages":
 	[
 	],
 	"installed_packages":
 	[
-		"1337 Color Scheme",
-		"3024 Color Scheme",
-		"Base16 Color Schemes",
 		"Boxy Theme",
 		"Boxy Theme Addon - Mono File Icons - Dark UI",
 		"Color Highlighter",
@@ -21,7 +18,6 @@
 		"INI",
 		"Markdown Preview",
 		"molokai",
-		"Monokai Extended",
 		"open-sesame",
 		"Origami",
 		"Package Control",
@@ -33,7 +29,6 @@
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-php",
-		"Tomorrow Color Schemes",
 		"Vintageous"
 	],
 	"submit_url": "",
