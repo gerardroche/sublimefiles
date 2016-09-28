@@ -205,6 +205,7 @@
 	"polyfill.vi_tree_view_toggle": true,
 	"preview_on_click": false,
 	"remember_full_screen": true,
+	"remember_open_files": true,
 	"rulers":
 	[
 	],
