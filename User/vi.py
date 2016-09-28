@@ -1,6 +1,8 @@
-import sublime
 import os
 import re
+
+import sublime
+
 from Vintageous import plugins
 from Vintageous.vi import keys
 from Vintageous.vi.cmd_base import ViMotionDef

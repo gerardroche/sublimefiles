@@ -1,10 +1,11 @@
 import re
-import sublime
-import sublime_plugin
 import glob
 import re
 import webbrowser
 import os
+
+import sublime
+import sublime_plugin
 
 class FlowCommand(sublime_plugin.WindowCommand):
 
