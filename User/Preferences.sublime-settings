@@ -116,6 +116,7 @@
 	[
 		"Color Highlighter",
 		"PHP",
+		"SublimeLinter-phpcs",
 		"Vintage"
 	],
 	"ignored_words":

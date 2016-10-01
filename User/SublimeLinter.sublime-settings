@@ -11,6 +11,12 @@
                 "@disable": false,
                 "args": [],
                 "excludes": []
+            },
+            "phpcs": {
+                "@disable": true,
+                "args": [],
+                "excludes": [],
+                "standard": "PSR2"
             }
         },
         "mark_style": "outline",

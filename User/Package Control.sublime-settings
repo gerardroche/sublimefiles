@@ -29,6 +29,7 @@
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-php",
+		"SublimeLinter-phpcs",
 		"Vintageous"
 	],
 	"submit_url": "",
