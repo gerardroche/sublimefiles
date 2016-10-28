@@ -1,0 +1,17 @@
+[
+    {
+        "caption": "New PHP File",
+        "command": "new_php_file",
+        "args": {"dirs": []}
+    },
+    {
+        "caption": "New PHTML File",
+        "command": "new_phtml_file",
+        "args": {"dirs": []}
+    },
+    {
+        "caption": "New PHPUnit Test Case",
+        "command": "new_phpunit_test_case",
+        "args": {"dirs": []}
+    }
+]

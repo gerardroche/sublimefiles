@@ -1,23 +1,16 @@
 [
-    {
-        "keys": ["ctrl+l"],
-        "command": "exec",
-        "args": {
-            "hide_phantoms_only": true
-        },
-        "context": [
-            { "key": "setting.command_mode" }
-        ]
-    },
+    ///////////////////////
+    // Package: polyfill //
+    ///////////////////////
 
     { "keys": ["ctrl+alt+r"], "command": "prompt_open_recent_project" },
+
 
     //////////////////////////
     // Package: open-sesame //
     //////////////////////////
 
-    { "keys": ["ctrl+alt+p"], "command": "open_sesame" },
-    { "keys": ["ctrl+alt+v"], "command": "open_sesame", "args": { "path": "~/vendor" } },
+    { "keys": ["ctrl+alt+v"], "command": "open_sesame", "args": { "path": "~/vendor" }, "context": [ { "key": "setting.open-sesame.keymaps" } ] },
 
     //////////
     // Flow //
@@ -31,23 +24,17 @@
 
     { "keys": ["f1"],       "command": "goto_php_man" },
     { "keys": ["shift+f1"], "command": "goto_php_man", "args": {"remote": true}},
+    { "keys": ["ctrl+shift+f1"], "command": "goto_documentation" },
 
-    ///////////////////
-    // Vim Overrides //
-    ///////////////////
+    ////////
+    // Vi //
+    ////////
 
     { "keys": ["ctrl+c"], "command": "copy" },
 
-    //////////////////////////
-    // Package: php-grammar //
-    //////////////////////////
-
-    // { "keys": [",", "r"], "command": "run_php_grammar_syntax_tests", "context": [{"key": "setting.command_mode"}] },
-    // { "keys": ["ctrl+b"], "command": "build_php_grammar" },
-
-    ////////////
-    // Tweaks //
-    ////////////
+    ///////////
+    // Fixes //
+    ///////////
 
     // Smarter insert newline on Enter.
     {
@@ -63,10 +50,9 @@
         ]
     },
 
-    //////////////
-    // ST Fixes //
-    //////////////
-
     // Fixes open content menu keymap.
     { "keys": ["shift+f10"], "command": "context_menu" },
+
+    // Clear inline build errors
+    { "keys": ["ctrl+l"], "command": "exec", "args": { "hide_phantoms_only": true }, "context": [ { "key": "setting.command_mode" } ] }
 ]

@@ -1,7 +1,9 @@
 import os
 import re
 
+
 import sublime
+
 
 from Vintageous import plugins
 from Vintageous.vi import keys
@@ -10,8 +12,10 @@ from Vintageous.vi.cmd_base import ViOperatorDef
 from Vintageous.vi.core import ViWindowCommandBase
 from Vintageous.vi.utils import modes
 
+
 def plugin_loaded():
     init_vimrc()
+
 
 def init_vimrc():
 
@@ -55,6 +59,7 @@ def init_vimrc():
                 if setting['key'] in implemented_vim_settings:
                     settings.set(setting['key'], setting['value'])
 
+
 @plugins.register(seq=']c', modes=(modes.NORMAL,))
 class _vi_def_right_bracket_c(ViOperatorDef):
     def translate(self, state):
@@ -62,6 +67,7 @@ class _vi_def_right_bracket_c(ViOperatorDef):
             'action': 'git_gutter_next_change',
             'action_args': {}
         }
+
 
 @plugins.register(seq='[c', modes=(modes.NORMAL,))
 class _vi_def_left_bracket_c(ViOperatorDef):

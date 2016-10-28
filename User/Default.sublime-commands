@@ -22,14 +22,6 @@
         "command": "reset_window"
     },
     {
-        "caption": "Application: Enable Theme",
-        "command": "enable_theme"
-    },
-    {
-        "caption": "Application: Enable Color Scheme",
-        "command": "enable_color_scheme"
-    },
-    {
         "caption": "Toggle color_scheme_unit.keymaps",
         "command": "toggle_user_setting",
         "args": {
