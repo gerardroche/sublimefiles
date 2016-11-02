@@ -8,12 +8,12 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"Boxy Theme",
-		"Boxy Theme Addon - Mono File Icons - Dark UI",
+		"Boxy Theme Addon - Mono File Icons",
 		"Color Highlighter",
 		"color_scheme_unit",
 		"DocBlockr",
-		"File Icons Extended",
 		"five_easy_color_schemes",
 		"GitGutter",
 		"GotoDocumentation",
