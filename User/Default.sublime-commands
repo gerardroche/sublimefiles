@@ -14,14 +14,6 @@
         "command": "man"
     },
     {
-        "caption": "Application: Clear Window",
-        "command": "clear_window"
-    },
-    {
-        "caption": "Application: Reset Window",
-        "command": "reset_window"
-    },
-    {
         "caption": "Toggle color_scheme_unit.keymaps",
         "command": "toggle_user_setting",
         "args": {
