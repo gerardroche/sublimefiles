@@ -4,7 +4,7 @@
 	"auto_complete_with_fields": true,
 	"auto_upgrade": false,
 	"color_scheme": "Packages/five_easy_color_schemes/Monokai (Dark).tmTheme",
-	"color_scheme_unit.keymaps": false,
+	"color_scheme_unit.keymaps": true,
 	"completion_unit.keymaps": false,
 	"debug": false,
 	"docblockr.development_mode": false,
