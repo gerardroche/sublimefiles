@@ -28,12 +28,12 @@
 [submodule "color_scheme_unit"]
 	path = color_scheme_unit
 	url = https://github.com/gerardroche/sublime_color_scheme_unit.git
-[submodule "SideBarEnhancements"]
-	path = SideBarEnhancements
-	url = https://github.com/gerardroche/SideBarEnhancements.git
 [submodule "Vintageous"]
 	path = Vintageous
 	url = https://github.com/gerardroche/Vintageous.git
 [submodule "DocBlockr"]
 	path = DocBlockr
 	url = https://github.com/gerardroche/sublime-jsdocs.git
+[submodule "SideBarEnhancements"]
+	path = SideBarEnhancements
+	url = git@github.com:gerardroche/SideBarEnhancements.git
