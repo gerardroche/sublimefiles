@@ -1,5 +1,5 @@
 {
-	"animation_enabled": false,
+	"animation_enabled": true,
 	"auto_complete_delay": 0,
 	"auto_complete_with_fields": true,
 	"auto_upgrade": false,
@@ -117,6 +117,7 @@
 	[
 		"Color Highlighter",
 		"PHP",
+		"SideBarEnhancements",
 		"SublimeLinter-phpcs",
 		"Vintage"
 	],

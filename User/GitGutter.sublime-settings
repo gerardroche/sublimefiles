@@ -1,5 +1,5 @@
 {
-    "show_in_minimap": false,
+    "show_in_minimap": 0,
     "show_markers_on_untracked_file": false,
-    "show_status": "none"
+    "show_status_bar_text": false,
 }
