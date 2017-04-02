@@ -1,17 +1,26 @@
 [
     {
-        "caption": "New PHP File",
+        "caption": "New File - PHP",
         "command": "new_php_file",
-        "args": {"dirs": []}
+        "args": { "dirs": [] }
     },
     {
-        "caption": "New PHTML File",
+        "caption": "New File - PHTML",
         "command": "new_phtml_file",
-        "args": {"dirs": []}
     },
     {
-        "caption": "New PHPUnit Test Case",
-        "command": "new_phpunit_test_case",
-        "args": {"dirs": []}
+        "caption": "New File - PHPUnit Test Case",
+        "command": "new_phpunit_test_case_file",
+        "args": { "dirs": [] }
+    },
+    {
+        "caption": "New File - Python",
+        "command": "new_python_file",
+        "args": { "dirs": [] }
     }
+    // { "caption": "-", "id": "folder_commands" },
+    // {
+    //     "caption": "Refresh Folders",
+    //     "command": "refresh_folder_list"
+    // },
 ]

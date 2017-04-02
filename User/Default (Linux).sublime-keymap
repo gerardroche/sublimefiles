@@ -1,10 +1,20 @@
 [
+
+    { "keys": ["shift+f11"], "command": "flow" },
+
+    // Goto PHP manual
+    { "keys": ["f1"],       "command": "goto_php_man" },
+    { "keys": ["shift+f1"], "command": "goto_php_man", "args": {"remote": true}},
+    { "keys": ["ctrl+shift+f1"], "command": "goto_documentation" },
+
+    // override vi
+    { "keys": ["ctrl+c"], "command": "copy" },
+
     ///////////////////////
     // Package: polyfill //
     ///////////////////////
 
-    { "keys": ["ctrl+alt+r"], "command": "prompt_open_recent_project" },
-
+    { "keys": ["ctrl+'"], "command": "tree_view_reveal_active_file" },
 
     //////////////////////////
     // Package: open-sesame //
@@ -12,29 +22,9 @@
 
     { "keys": ["ctrl+alt+v"], "command": "open_sesame", "args": { "path": "~/vendor" }, "context": [ { "key": "setting.open-sesame.keymaps" } ] },
 
-    //////////
-    // Flow //
-    //////////
-
-    { "keys": ["shift+f11"], "command": "flow" },
-
-    ////////////////
-    // PHP Manual //
-    ////////////////
-
-    { "keys": ["f1"],       "command": "goto_php_man" },
-    { "keys": ["shift+f1"], "command": "goto_php_man", "args": {"remote": true}},
-    { "keys": ["ctrl+shift+f1"], "command": "goto_documentation" },
-
-    ////////
-    // Vi //
-    ////////
-
-    { "keys": ["ctrl+c"], "command": "copy" },
-
-    ///////////
-    // Fixes //
-    ///////////
+    //////////////
+    // ST Fixes //
+    //////////////
 
     // Smarter insert newline on Enter.
     {
@@ -54,5 +44,5 @@
     { "keys": ["shift+f10"], "command": "context_menu" },
 
     // Clear inline build errors
-    { "keys": ["ctrl+l"], "command": "exec", "args": { "hide_phantoms_only": true }, "context": [ { "key": "setting.command_mode" } ] }
+    // { "keys": ["ctrl+l"], "command": "exec", "args": { "hide_phantoms_only": true }, "context": [ { "key": "setting.command_mode" } ] }
 ]

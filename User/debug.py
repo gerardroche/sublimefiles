@@ -3,13 +3,25 @@ import os
 
 import sublime
 
+DEBUG_SCREAM = False
+DEBUG = bool(os.getenv('SUBLIME_DEBUG'))
+DEBUG_COMMAND = bool(os.getenv('SUBLIME_COMMAND_DEBUG'))
+DEBUG_RESULT_REGEX = bool(os.getenv('SUBLIME_RESULT_REGEX_DEBUG'))
+DEBUG_INDEXING = bool(os.getenv('SUBLIME_INDEXING_DEBUG'))
+DEBUG_BUILD_SYSTEMS = bool(os.getenv('SUBLIME_BUILD_SYSTEMS_DEBUG'))
+DEBUG_INPUT = bool(os.getenv('SUBLIME_INPUT_DEBUG'))
+
 
 def plugin_loaded():
-    sublime.log_commands(bool(os.getenv('SUBLIME_DEBUG')) and bool(os.getenv('SUBLIME_COMMAND_DEBUG')))
-    sublime.log_result_regex(bool(os.getenv('SUBLIME_DEBUG')) and bool(os.getenv('SUBLIME_RESULT_REGEX_DEBUG')))
-    sublime.log_indexing(bool(os.getenv('SUBLIME_DEBUG')) and bool(os.getenv('SUBLIME_INDEXING_DEBUG')))
-    sublime.log_build_systems(bool(os.getenv('SUBLIME_DEBUG')) and bool(os.getenv('SUBLIME_BUILD_SYSTEMS_DEBUG')))
-    sublime.log_input(bool(os.getenv('SUBLIME_DEBUG')) and bool(os.getenv('SUBLIME_INPUT_DEBUG')))
+    sublime.log_commands(DEBUG_SCREAM or (DEBUG and DEBUG_COMMAND))
+    sublime.log_result_regex(DEBUG_SCREAM or (DEBUG and DEBUG_RESULT_REGEX))
+    sublime.log_indexing(DEBUG_SCREAM or (DEBUG and DEBUG_INDEXING))
+    sublime.log_build_systems(DEBUG_SCREAM or (DEBUG and DEBUG_BUILD_SYSTEMS))
+    sublime.log_input(DEBUG_SCREAM or (DEBUG and DEBUG_INPUT))
+
+
+def message(*args):
+    print(*args)
 
 
 def var_dump(value):

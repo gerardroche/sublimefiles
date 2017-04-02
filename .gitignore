@@ -7,6 +7,8 @@
 /.logs/
 /Boxy Theme Addon - Mono File Icons - Dark UI/
 /Boxy Theme Addon - Mono File Icons/
+/Default/
+/Package Control/
 /PyV8/
 /Solarized Color Scheme
 /SublimeLinter*/
@@ -19,12 +21,15 @@
 /User/Package Control.merged-ca-bundle
 /User/Package Control.user-ca-bundle
 /User/SublimeLinter/
+/User/UnitTesting/
+/User/UnitTesting.sublime-settings
 /User/bh_unicode_properties.cache
 /User/sandbox*.py
 /User/snippets/SNIPPETS.md
 /User/tmp*.py
 /User/tmp/
 /bz2/
+/coverage/
 /markupsafe/
 /mdpopups/
 /pygments/

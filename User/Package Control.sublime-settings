@@ -13,7 +13,6 @@
 		"A File Icon",
 		"Boxy Theme",
 		"Boxy Theme Addon - Mono File Icons",
-		"Color Highlighter",
 		"color_scheme_unit",
 		"DocBlockr",
 		"five_easy_color_schemes",
@@ -30,11 +29,8 @@
 		"php-snippets",
 		"phpunitkit",
 		"polyfill",
-		"SideBarEnhancements",
 		"SublimeLinter",
-		"SublimeLinter-php",
-		"SublimeLinter-phpcs",
-		"Vintageous"
+		"SublimeLinter-flake8"
 	],
 	"submit_url": "",
 	"submit_usage": false
