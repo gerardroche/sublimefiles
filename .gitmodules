@@ -34,9 +34,6 @@
 [submodule "NeoVintageous"]
 	path = NeoVintageous
 	url = https://github.com/NeoVintageous/NeoVintageous.git
-[submodule "SideBarTools"]
-	path = SideBarTools
-	url = https://github.com/braver/SideBarTools.git
 [submodule "ToggleNeoVintageous"]
 	path = ToggleNeoVintageous
 	url = https://github.com/NeoVintageous/ToggleNeoVintageous
