@@ -14,10 +14,19 @@
         "command": "man"
     },
     {
-        "caption": "Toggle color_scheme_unit.keymaps",
-        "command": "toggle_user_setting",
-        "args": {
-            "key": "color_scheme_unit.keymaps"
-        }
+        "caption": "Toggle Debug Mode",
+        "command": "toggle_debug_mode"
+    },
+    {
+        "caption": "Refactor: Test - Coding Standard Fixer",
+        "command": "refactor_test_coding_standard_fixer"
+    },
+    {
+        "caption": "Refactor: Test Class - Underscore -> Camelcase",
+        "command": "refactor_test_class_underscore_to_camelcase"
+    },
+    {
+        "caption": "Refactor: Test Function - Camelcase -> Underscore",
+        "command": "refactor_test_function_camelcase_to_underscore"
     }
 ]

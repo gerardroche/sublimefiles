@@ -1,5 +1,4 @@
 [
-
     { "keys": ["shift+f11"], "command": "flow" },
 
     // Goto PHP manual
@@ -9,6 +8,12 @@
 
     // override vi
     { "keys": ["ctrl+c"], "command": "copy" },
+
+    ///////////
+    // Debug //
+    ///////////
+
+    // { "keys": ["ctrl+shift+d"], "command": "debug_view_to_scope" },
 
     ///////////////////////
     // Package: polyfill //

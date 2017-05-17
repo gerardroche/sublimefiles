@@ -11,8 +11,12 @@ class SmarterInsertNewlineCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
 
-        if len(self.view.sel()) == 0: return
-        if len(self.view.sel()) != 1: return # doesn't support multiple selections
+        if len(self.view.sel()) == 0:
+            return
+
+        if len(self.view.sel()) != 1:
+            # doesn't support multiple selections
+            return
 
         cursor_point = self.view.sel()[0].begin()
         cursor_line_region = self.view.full_line(cursor_point)

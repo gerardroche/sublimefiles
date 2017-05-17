@@ -2,16 +2,24 @@
 	"extensions":
 	[
 		".bash_completions",
+		".ctags",
 		".curlrc",
 		".editorconfig",
+		".flake8",
+		".gitattributes",
 		".gitconfig",
 		".gitexcludes",
+		".gitignore",
+		".gitmodules",
+		".gtkrc-2.0",
 		".gvimrc",
+		".inputrc",
 		".mx",
 		".mx.conf",
 		".mxrc",
 		".netrwhist",
 		".npmrc",
+		".pam_environment",
 		".tmux.conf",
 		".vim",
 		".vimrc",
@@ -24,9 +32,9 @@
 		"lde-sh-config",
 		"lde-sh-library",
 		"lde-sh-setup",
-		".inputrc",
-		".pam_environment",
-		".ctags",
-		".gitignore"
+		".tmux",
+		".todo",
+		".coveragerc",
+		"vim"
 	]
 }

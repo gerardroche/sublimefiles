@@ -12,7 +12,9 @@
 			[
 				".logs",
 				"Package Control.cache",
-				"SublimeLinter"
+				"SublimeLinter",
+				"User/SublimeLinter",
+				"User/UnitTesting"
 			],
 			"path": "."
 		}

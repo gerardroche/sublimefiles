@@ -4,40 +4,40 @@
 # operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile ~/.gitignore_global
 
+/*/tmp/
 /.logs/
 /Boxy Theme Addon - Mono File Icons - Dark UI/
 /Boxy Theme Addon - Mono File Icons/
+/bz2/
+/coverage/
 /Default/
+/GitGutter/
+/markupsafe/
+/mdpopups/
 /Package Control/
+/pygments/
+/python-jinja2/
+/python-markdown/
 /PyV8/
-/Solarized Color Scheme
+/pyyaml/
+/sandbox
+/sandbox/
+/Solarized Color Scheme/
+/ssl-linux/
 /SublimeLinter*/
-/SublimeLinter/
-/Theme - Cobalt2
+/tmp/
+/User/bh_unicode_properties.cache
 /User/Color Highlighter/
-/User/Color Highlighter/ColorPicker/
 /User/Package Control.cache/
 /User/Package Control.last-run
 /User/Package Control.merged-ca-bundle
 /User/Package Control.user-ca-bundle
-/User/SublimeLinter/
-/User/UnitTesting/
-/User/UnitTesting.sublime-settings
-/User/bh_unicode_properties.cache
 /User/sandbox*.py
 /User/snippets/SNIPPETS.md
+/User/SublimeLinter/
 /User/tmp*.py
 /User/tmp/
-/bz2/
-/coverage/
-/markupsafe/
-/mdpopups/
-/pygments/
-/python-jinja2/
-/python-markdown/
-/pyyaml/
-/sandbox
-/sandbox/
-/ssl-linux/
+/User/UnitTesting.sublime-settings
+/User/UnitTesting/
 /zz File Icons/
 /zzz A File Icon zzz/

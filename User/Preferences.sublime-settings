@@ -16,7 +16,8 @@
 	"auto_complete_delay": 0,
 	"auto_complete_with_fields": true,
 	"auto_upgrade": false,
-	"color_scheme": "Packages/five_easy_color_schemes/Monokai (Dark).tmTheme",
+	"color_scheme": "Packages/molokai/Monokai.tmTheme",
+	"color_scheme_unit.debug": true,
 	"color_scheme_unit.keymaps": true,
 	"completion_unit.keymaps": false,
 	"debug": false,
@@ -45,6 +46,7 @@
 		"*.idb",
 		"*.lib",
 		"*.log",
+		"*.log.*",
 		"*.ncb",
 		"*.o",
 		"*.obj",
@@ -60,6 +62,7 @@
 		"*.sdf",
 		"*.so",
 		"*.sqlite",
+		"*.sublime-package",
 		"*.sublime-workspace",
 		"*.suo",
 		"*.tar",
@@ -93,6 +96,11 @@
 		"cache.properties",
 		"composer.lock",
 		"log",
+		"sublime_*/changelog.txt",
+		"sublime_*/crash_reporter",
+		"sublime_*/plugin_host",
+		"sublime_*/sublime_text",
+		"sublime_*/sublime_text.desktop",
 		"tags"
 	],
 	"fold_buttons": false,
@@ -121,19 +129,20 @@
 		"build/coverage",
 		"build/log",
 		"build/logs",
+		"covhtml",
 		"logs",
-		"nbproject"
+		"nbproject",
+		"sublime_text_3/Icon"
 	],
+	"font_size": 11,
 	"hot_exit": true,
 	"ignored_packages":
 	[
-		"Boxy Theme",
-		"PHP",
-		"Solarized Color Scheme",
-		"Theme - Cobalt2",
+		"Six",
+		"SublimeLinter-php",
 		"Vintage",
-		"color_scheme_unit",
-		"sandbox"
+		"Vintageous",
+		"php-grammar"
 	],
 	"ignored_words":
 	[
@@ -236,6 +245,7 @@
 		"*.tar",
 		"*.zip",
 		"build",
+		"covhtml",
 		"data",
 		"doc",
 		"docs",
@@ -285,6 +295,7 @@
 	"theme_tab_separator": true,
 	"tree_animation_enabled": false,
 	"update_check": false,
+	"vintage_start_in_command_mode": true,
 	"vintageous_log_level": "debug",
 	"vintageous_test_runner_keymaps": true,
 	"vintageous_use_ctrl_keys": true,

@@ -1,31 +1,14 @@
 import os
 
-
 import sublime
-
-DEBUG_SCREAM = False
-DEBUG = bool(os.getenv('SUBLIME_DEBUG'))
-DEBUG_COMMAND = bool(os.getenv('SUBLIME_COMMAND_DEBUG'))
-DEBUG_RESULT_REGEX = bool(os.getenv('SUBLIME_RESULT_REGEX_DEBUG'))
-DEBUG_INDEXING = bool(os.getenv('SUBLIME_INDEXING_DEBUG'))
-DEBUG_BUILD_SYSTEMS = bool(os.getenv('SUBLIME_BUILD_SYSTEMS_DEBUG'))
-DEBUG_INPUT = bool(os.getenv('SUBLIME_INPUT_DEBUG'))
+import sublime_plugin
 
 
-def plugin_loaded():
-    sublime.log_commands(DEBUG_SCREAM or (DEBUG and DEBUG_COMMAND))
-    sublime.log_result_regex(DEBUG_SCREAM or (DEBUG and DEBUG_RESULT_REGEX))
-    sublime.log_indexing(DEBUG_SCREAM or (DEBUG and DEBUG_INDEXING))
-    sublime.log_build_systems(DEBUG_SCREAM or (DEBUG and DEBUG_BUILD_SYSTEMS))
-    sublime.log_input(DEBUG_SCREAM or (DEBUG and DEBUG_INPUT))
-
-
-def message(*args):
-    print(*args)
+_DEBUG = bool(os.getenv('SUBLIME_DEBUG'))
+_AUTO_SHOW_PANEL = bool(os.getenv('SUBLIME_DEBUG'))
 
 
 def var_dump(value):
-
     if isinstance(value, sublime.View):
         print('>>>' + str(dir(value)))
         print('  id = ' + str(value.id()))
@@ -55,3 +38,44 @@ def var_dump(value):
         print('<<<')
     else:
         print('  Unknown type: ' + str(value))
+
+
+class ToggleDebugMode(sublime_plugin.ApplicationCommand):
+
+    def run(self):
+        global _DEBUG
+        _DEBUG = not _DEBUG
+        sublime.log_commands(_DEBUG)
+        sublime.log_result_regex(_DEBUG)
+        sublime.log_indexing(_DEBUG)
+        sublime.log_build_systems(_DEBUG)
+        sublime.log_input(_DEBUG)
+
+
+class DebugViewToScopeCommand(sublime_plugin.TextCommand):
+    """
+    Dump view scope name representation.
+
+    Each point in the view is converted to a scope name.  A newline is appended
+    to each scope name.
+    """
+
+    def run(self, edit):
+        scopes = []
+        for point in range(self.view.size()):
+            scopes.append(self.view.scope_name(point).strip())
+
+        print('>>>')
+        print("\n".join(scopes))
+        print('<<<')
+
+
+def plugin_loaded():
+    if _AUTO_SHOW_PANEL:
+        sublime.active_window().run_command('show_panel', {'panel': 'console'})
+
+    sublime.log_commands(_DEBUG)
+    sublime.log_result_regex(_DEBUG)
+    sublime.log_indexing(_DEBUG)
+    sublime.log_build_systems(_DEBUG)
+    sublime.log_input(_DEBUG)

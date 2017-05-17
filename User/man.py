@@ -68,7 +68,7 @@ class ManCommand(sublime_plugin.WindowCommand):
 
 class GotoPhpManCommand(sublime_plugin.WindowCommand):
 
-    def run(self, remote = False):
+    def run(self, remote=False):
         view = self.window.active_view()
         if not view:
             return

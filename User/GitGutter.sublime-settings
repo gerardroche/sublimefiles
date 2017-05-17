@@ -2,4 +2,6 @@
     "show_in_minimap": 0,
     "show_markers_on_untracked_file": false,
     "show_status_bar_text": false,
+    "debug": false,
+    "enable_hover_diff_popup": false
 }

@@ -49,7 +49,7 @@ class NewFileByExtension:
     def content(self):
         return ''
 
-    def is_visible(self, dirs = []):
+    def is_visible(self, dirs=[]):
         return len(dirs) == 1
 
     def run(self, dirs):
@@ -74,6 +74,7 @@ class NewPhpFile(NewFileByExtension, sublime_plugin.WindowCommand):
 
     def content(self):
         return '<?php\n\n'
+
 
 class NewPythonFile(NewFileByExtension, sublime_plugin.WindowCommand):
     def extension(self):
