@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+The Answer to the Ultimate Question of Life, the Universe, and Everything.
+]]></content>
+    <tabTrigger>loremtheanswer</tabTrigger>
+    <scope>text</scope>
+</snippet>

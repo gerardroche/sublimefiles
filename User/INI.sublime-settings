@@ -1,0 +1,11 @@
+{
+	"extensions":
+	[
+		".coveragerc",
+		".flake8",
+		".wgetrc",
+		".curlrc",
+		".ctags",
+		".inputrc"
+	]
+}

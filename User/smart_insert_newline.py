@@ -1,12 +1,13 @@
 import re
 
-import sublime_plugin
+from sublime_plugin import TextCommand
 
 
-class SmarterInsertNewlineCommand(sublime_plugin.TextCommand):
+class SmarterInsertNewlineCommand(TextCommand):
     """
-    Inserts a newline if the next line is not blank, otherwise
-    moves down to the blank line.
+    Insert newline if the next line is not blank.
+
+    Otherwise moves down to the blank line.
     """
 
     def run(self, edit):

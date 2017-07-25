@@ -1,0 +1,29 @@
+{
+    "folders":
+    [
+        {
+            "folder_exclude_patterns":
+            [
+                "Package Control.cache",
+                "SublimeLinter",
+                "UnitTesting",
+            ],
+            "file_exclude_patterns":
+            [
+                "Package Control.last-run",
+                "Package Control.*-ca-bundle",
+                "SublimeLinter",
+            ],
+            "path": "."
+        }
+    ],
+    "settings":
+    {
+        "default_line_ending": "unix",
+        "ensure_new_line_at_eof_on_save": true,
+        "tab_size": 4,
+        "translate_tabs_to_spaces": true,
+        "trim_automatic_white_space": true,
+        "trim_trailing_white_space_on_save": true
+    }
+}

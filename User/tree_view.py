@@ -2,12 +2,14 @@ from functools import partial
 import os
 import shutil
 
+from sublime import Region
+from sublime import error_message
+from sublime import set_timeout_async
+from sublime import ENCODED_POSITION
+from sublime_plugin import WindowCommand
 
-import sublime
-import sublime_plugin
 
-
-class TreeViewMoveCommand(sublime_plugin.WindowCommand):
+class TreeViewMoveCommand(WindowCommand):
 
     def is_visible(self, files):
         return len(files) == 1
@@ -17,7 +19,7 @@ class TreeViewMoveCommand(sublime_plugin.WindowCommand):
             return
 
         if not os.path.isfile(files[0]):
-            sublime.error_message('Unable to move: invalid file')
+            error_message('Unable to move: invalid file')
             return
 
         file = files[0]
@@ -34,7 +36,7 @@ class TreeViewMoveCommand(sublime_plugin.WindowCommand):
         )
 
         input_panel.sel().clear()
-        input_panel.sel().add(sublime.Region(len(head) + 1, (len(head) + 1 + len(root))))
+        input_panel.sel().add(Region(len(head) + 1, (len(head) + 1 + len(root))))
 
     def on_done(self, file, new_file):
         try:
@@ -52,11 +54,10 @@ class TreeViewMoveCommand(sublime_plugin.WindowCommand):
                 v.retarget(new_file)
 
         except Exception as e:
-            sublime.error_message('Unable to move: ' + str(e))
-            return
+            error_message('Unable to move: ' + str(e))
 
 
-class TreeViewDuplicateCommand(sublime_plugin.WindowCommand):
+class TreeViewDuplicateCommand(WindowCommand):
 
     def is_visible(self, files):
         return len(files) == 1
@@ -66,7 +67,7 @@ class TreeViewDuplicateCommand(sublime_plugin.WindowCommand):
             return
 
         if not os.path.isfile(files[0]):
-            sublime.error_message('Unable to duplicate: invalid file')
+            error_message('Unable to duplicate: invalid file')
             return
 
         file = files[0]
@@ -84,7 +85,7 @@ class TreeViewDuplicateCommand(sublime_plugin.WindowCommand):
         )
 
         input_panel.sel().clear()
-        input_panel.sel().add(sublime.Region(0, len(new_tail) - (len(ext))))
+        input_panel.sel().add(Region(0, len(new_tail) - (len(ext))))
 
     def on_done(self, file, new_head, new_tail):
         new_file = os.path.join(new_head, new_tail)
@@ -95,12 +96,13 @@ class TreeViewDuplicateCommand(sublime_plugin.WindowCommand):
 
             shutil.copy2(file, new_file)
 
+            self.window.open_file(new_file)
+
         except Exception as e:
-            sublime.error_message('Unable to duplicate: ' + str(e))
-            return
+            error_message('Unable to duplicate: ' + str(e))
 
 
-class NewFileMixin():
+class _NewFile():
 
     extension = None
     content = ''
@@ -133,47 +135,47 @@ class NewFileMixin():
         )
 
         input_panel.sel().clear()
-        input_panel.sel().add(sublime.Region(0, len(initial_text) - (len(initial_text))))
+        input_panel.sel().add(Region(0, len(initial_text) - (len(initial_text))))
 
     def on_done(self, dir, file):
         file = os.path.join(dir, file)
         if os.path.exists(file):
-            sublime.error_message('Unable to create file, file or folder exists.')
+            error_message('Unable to create file, file or folder exists.')
             return
 
         with open(file, 'w+', encoding='utf8') as f:
             f.write(str(self.content))
 
-        view = self.window.open_file(file + ':99:99', sublime.ENCODED_POSITION)
+        view = self.window.open_file(file + ':99:99', ENCODED_POSITION)
         view.run_command('_enter_insert_mode')
 
-        def insert_best_completion_async():
+        def _insert_best_completion_async():
             # no idea why this needs to be async but won't work otherwise
             view.run_command('insert_best_completion')
 
-        sublime.set_timeout_async(lambda: insert_best_completion_async())
+        set_timeout_async(lambda: _insert_best_completion_async())
 
 
-class TreeViewNewPhpFileCommand(NewFileMixin, sublime_plugin.WindowCommand):
+class TreeViewNewPhpFileCommand(_NewFile, WindowCommand):
 
     def configure(self):
         self.extension = 'php'
         self.content = '<?php\n\n'
 
 
-class TreeViewNewPythonFileCommand(NewFileMixin, sublime_plugin.WindowCommand):
+class TreeViewNewPythonFileCommand(_NewFile, WindowCommand):
 
     def configure(self):
         self.extension = 'py'
 
 
-class TreeViewNewPhtmlFileCommand(NewFileMixin, sublime_plugin.WindowCommand):
+class TreeViewNewPhtmlFileCommand(_NewFile, WindowCommand):
 
     def configure(self):
         self.extension = 'phtml'
 
 
-class TreeViewNewPhpunitTestCaseFileCommand(NewFileMixin, sublime_plugin.WindowCommand):
+class TreeViewNewPhpunitTestCaseFileCommand(_NewFile, WindowCommand):
 
     def configure(self):
         self.extension = 'Test.php'

@@ -1,0 +1,46 @@
+" The character " (the double quote mark) starts a comment
+
+let mapleader=,
+
+" Enter command line mode
+nnoremap <space> :
+
+" Visually select all content
+nnoremap <leader>a ggvG
+
+" " Sort with ,s in visual mode
+" vnoremap <leader>s <F9>
+
+" Scroll viewport faster with ctrl+e and ctrl+y
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+
+" " Make j and k work file linewise instead of screen linewise.
+" " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+" " Important! There is a potential performance hit
+" " navigating with j and k with these mappings enabled.
+" nnoremap j gj
+" nnoremap k gk
+
+" " Scroll down using shift+enter
+" noremap <S-cr> <C-d>
+
+" ------------------------------------------------------------------------------
+
+" " TODO implement [ and ]
+" map [ {
+" map ] }
+
+" " TODO implement disabling arrow keys and hjkl from rcfile
+" " Moving your Vim cursor around using the arrow keys is a bad habit, and like
+" " many bad habits it’s a difficult one to break!
+" " http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/
+" " Putting these lines into your vimrc can help:
+" noremap <left> <NOP>
+" noremap <right> <NOP>
+" noremap <down> <NOP>
+" noremap <up> <NOP>
+" Map h <NOP>
+" Map j <NOP>
+" Map k <NOP>
+" Map l <NOP>

@@ -2,9 +2,9 @@
 	"user":
 	{
 		"debug": true,
-		"delay": 0.25,
+		"delay": 0.5,
 		"error_color": "D02000",
-		"gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
+		"gutter_theme": "Packages/SublimeLinter/gutter-themes/Circle/Circle.gutter-theme",
 		"gutter_theme_excludes":
 		[
 		],
@@ -84,9 +84,9 @@
 				"@version": 3.3
 			}
 		},
-		"mark_style": "outline",
-		"no_column_highlights_line": false,
-		"passive_warnings": false,
+		"mark_style": "solid underline",
+		"no_column_highlights_line": true,
+		"passive_warnings": true,
 		"paths":
 		{
 			"linux":
@@ -115,7 +115,7 @@
 		"rc_search_limit": 3,
 		"shell_timeout": 10,
 		"show_errors_on_save": false,
-		"show_marks_in_minimap": true,
+		"show_marks_in_minimap": false,
 		"syntax_map":
 		{
 			"coffeescript (gulpfile)": "coffeescript",

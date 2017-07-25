@@ -1,6 +1,6 @@
 import re
 
-import sublime_plugin
+from sublime_plugin import TextCommand
 
 
 # https://stackoverflow.com/questions/1175208/elegant-python-function-to-convert-camelcase-to-snake-case
@@ -22,14 +22,14 @@ def _convert_underscore_to_camelcase(word):
     return ''.join(r)
 
 
-class RefactorTestCodingStandardFixerCommand(sublime_plugin.TextCommand):
+class RefactorTestCodingStandardFixerCommand(TextCommand):
 
     def run(self, edit):
         self.view.run_command('refactor_test_class_underscore_to_camelcase')
         self.view.run_command('refactor_test_function_camelcase_to_underscore')
 
 
-class RefactorTestClassUnderscoreToCamelcaseCommand(sublime_plugin.TextCommand):
+class RefactorTestClassUnderscoreToCamelcaseCommand(TextCommand):
 
     def run(self, edit):
         done = False
@@ -45,7 +45,7 @@ class RefactorTestClassUnderscoreToCamelcaseCommand(sublime_plugin.TextCommand):
                         done = False
 
 
-class RefactorTestFunctionCamelcaseToUnderscoreCommand(sublime_plugin.TextCommand):
+class RefactorTestFunctionCamelcaseToUnderscoreCommand(TextCommand):
 
     def run(self, edit):
         done = False

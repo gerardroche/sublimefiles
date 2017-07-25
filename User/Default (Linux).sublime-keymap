@@ -1,53 +1,36 @@
 [
-    { "keys": ["shift+f11"], "command": "flow" },
+    // Manuals
+    { "keys": ["f1"], "command": "goto_php_man", "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
+    { "keys": ["f1"], "command": "goto_documentation", "context": [ { "key": "selector", "operator": "equal", "operand": "-embedding.php", "match_all": true } ]},
+    { "keys": ["shift+f1"], "command": "goto_php_man", "args": {"remote": true},   "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
 
-    // Goto PHP manual
-    { "keys": ["f1"],       "command": "goto_php_man" },
-    { "keys": ["shift+f1"], "command": "goto_php_man", "args": {"remote": true}},
-    { "keys": ["ctrl+shift+f1"], "command": "goto_documentation" },
-
-    // override vi
+    // Vim
     { "keys": ["ctrl+c"], "command": "copy" },
+    { "keys": ["ctrl+s"], "command": "save" },
 
-    ///////////
-    // Debug //
-    ///////////
+    // // Polyfill
+    // { "keys": ["ctrl+'"], "command": "tree_view_reveal_active_file" },
 
-    // { "keys": ["ctrl+shift+d"], "command": "debug_view_to_scope" },
-
-    ///////////////////////
-    // Package: polyfill //
-    ///////////////////////
-
-    { "keys": ["ctrl+'"], "command": "tree_view_reveal_active_file" },
-
-    //////////////////////////
-    // Package: open-sesame //
-    //////////////////////////
-
+    // Open Sesame
     { "keys": ["ctrl+alt+v"], "command": "open_sesame", "args": { "path": "~/vendor" }, "context": [ { "key": "setting.open-sesame.keymaps" } ] },
 
-    //////////////
-    // ST Fixes //
-    //////////////
-
-    // Smarter insert newline on Enter.
-    {
-        "keys": ["enter"],
-        "command": "smarter_insert_newline",
-        "context": [
-            { "key": "setting.auto_indent", "operator": "equal", "operand": true },
-            { "key": "setting.command_mode", "operator": "equal", "operand": false },
-            { "key": "selector", "operator": "equal", "operand": "source.php", "match_all": true },
-            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
-            { "key": "preceding_text", "operator": "regex_contains", "operand": "(\\{|\\[)\\s*$", "match_all": true },
-            { "key": "following_text", "operator": "regex_contains", "operand": "^\\s*$", "match_all": true }
-        ]
-    },
-
-    // Fixes open content menu keymap.
+    // ST workaround/bugfix: fixes open content menu keymap
     { "keys": ["shift+f10"], "command": "context_menu" },
 
-    // Clear inline build errors
-    // { "keys": ["ctrl+l"], "command": "exec", "args": { "hide_phantoms_only": true }, "context": [ { "key": "setting.command_mode" } ] }
+    // // ST workaround/bugfix: clear inline build errors
+    // { "keys": ["ctrl+l"], "command": "exec", "args": { "hide_phantoms_only": true }, "context": [ { "key": "setting.command_mode" } ] },
+
+    // // ST workaround/bugfix: smarter insert newline on Enter
+    // {
+    //     "keys": ["enter"],
+    //     "command": "smarter_insert_newline",
+    //     "context": [
+    //         { "key": "setting.auto_indent", "operator": "equal", "operand": true },
+    //         { "key": "setting.command_mode", "operator": "equal", "operand": false },
+    //         { "key": "selector", "operator": "equal", "operand": "source.php", "match_all": true },
+    //         { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+    //         { "key": "preceding_text", "operator": "regex_contains", "operand": "(\\{|\\[)\\s*$", "match_all": true },
+    //         { "key": "following_text", "operator": "regex_contains", "operand": "^\\s*$", "match_all": true }
+    //     ]
+    // }
 ]

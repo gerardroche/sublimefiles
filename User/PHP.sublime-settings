@@ -1,6 +1,7 @@
 {
 	"extensions":
 	[
-        "php.dist"
+		"php.dist",
+		".php_cs"
 	]
 }

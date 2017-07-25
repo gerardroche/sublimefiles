@@ -24,7 +24,6 @@
 		"php-snippets",
 		"phpunitkit",
 		"polyfill",
-		"SublimeLinter",
 		"SublimeLinter-flake8"
 	],
 	"submit_url": "",

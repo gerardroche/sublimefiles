@@ -40,3 +40,6 @@
 [submodule "molokai"]
 	path = molokai
 	url = https://github.com/gerardroche/sublime-molokai
+[submodule "test"]
+	path = test
+	url = https://github.com/gerardroche/sublime-test.git

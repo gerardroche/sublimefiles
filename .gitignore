@@ -4,40 +4,46 @@
 # operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile ~/.gitignore_global
 
-/*/tmp/
+!/User/lib/
+/*tmp/
 /.logs/
+/BlockCursorEverywhere/
 /Boxy Theme Addon - Mono File Icons - Dark UI/
 /Boxy Theme Addon - Mono File Icons/
-/bz2/
-/coverage/
 /Default/
 /GitGutter/
+/NeoVintageous/
+/Package Control/
+/PyV8/
+/RelativeLineNumbers/
+/Solarized Color Scheme/
+/SublimeLinter*/
+/User/Color Highlighter/
+/User/Package Control.*-ca-bundle
+/User/Package Control.cache/
+/User/Package Control.last-run
+/User/SublimeLinter/
+/User/UnitTesting.sublime-settings
+/User/UnitTesting/
+/User/bh_unicode_properties.cache
+/User/libsublime
+/User/sandbox*.py
+/User/snippets/SNIPPETS.md
+/User/tmp*.py
+/User/tmp*/
+/lockdown/
+/VimL/
+/Vintage/
+/bz2/
+/coverage/
 /markupsafe/
 /mdpopups/
-/Package Control/
 /pygments/
 /python-jinja2/
 /python-markdown/
-/PyV8/
 /pyyaml/
-/sandbox
-/sandbox/
-/Solarized Color Scheme/
+/sandbox*
 /ssl-linux/
-/SublimeLinter*/
-/tmp/
-/User/bh_unicode_properties.cache
-/User/Color Highlighter/
-/User/Package Control.cache/
-/User/Package Control.last-run
-/User/Package Control.merged-ca-bundle
-/User/Package Control.user-ca-bundle
-/User/sandbox*.py
-/User/snippets/SNIPPETS.md
-/User/SublimeLinter/
-/User/tmp*.py
-/User/tmp/
-/User/UnitTesting.sublime-settings
-/User/UnitTesting/
+/tmp*/
 /zz File Icons/
 /zzz A File Icon zzz/
