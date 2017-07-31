@@ -1,0 +1,6 @@
+[
+    {
+        "caption": "Toggle NeoVintageous Arrow Keys",
+        "command": "toggle_neovintageous_arrow_keys"
+    }
+]
