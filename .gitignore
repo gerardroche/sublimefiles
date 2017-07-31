@@ -4,37 +4,13 @@
 # operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile ~/.gitignore_global
 
-!/User/lib/
-/*tmp/
 /.logs/
-/BlockCursorEverywhere/
-/Boxy Theme Addon - Mono File Icons - Dark UI/
-/Boxy Theme Addon - Mono File Icons/
-/Default/
-/GitGutter/
-/NeoVintageous/
-/Package Control/
-/PyV8/
-/RelativeLineNumbers/
-/Solarized Color Scheme/
-/SublimeLinter*/
-/User/Color Highlighter/
 /User/Package Control.*-ca-bundle
 /User/Package Control.cache/
 /User/Package Control.last-run
-/User/SublimeLinter/
+/User/UnitTesting/schedule.json
 /User/UnitTesting.sublime-settings
-/User/UnitTesting/
-/User/bh_unicode_properties.cache
-/User/libsublime
-/User/sandbox*.py
-/User/snippets/SNIPPETS.md
-/User/tmp*.py
-/User/tmp*/
-/lockdown/
-/VimL/
-/Vintage/
-/bz2/
+/User/UnitTesting/*/coverage
 /coverage/
 /markupsafe/
 /mdpopups/
@@ -42,8 +18,5 @@
 /python-jinja2/
 /python-markdown/
 /pyyaml/
-/sandbox*
-/ssl-linux/
 /tmp*/
-/zz File Icons/
 /zzz A File Icon zzz/

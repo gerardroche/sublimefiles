@@ -43,3 +43,30 @@
 [submodule "test"]
 	path = test
 	url = https://github.com/gerardroche/sublime-test.git
+[submodule "SublimeLinter-php"]
+	path = SublimeLinter-php
+	url = https://github.com/gerardroche/SublimeLinter-php.git
+[submodule "A File Icon"]
+	path = A File Icon
+	url = https://github.com/gerardroche/a-file-icon.git
+[submodule "SublimeLinter"]
+	path = SublimeLinter
+	url = https://github.com/gerardroche/SublimeLinter3.git
+[submodule "Markdown Preview"]
+	path = Markdown Preview
+	url = https://github.com/revolunet/sublimetext-markdown-preview.git
+[submodule "Package Control"]
+	path = Package Control
+	url = https://github.com/gerardroche/sublime_package_control.git
+[submodule "lockdown"]
+	path = lockdown
+	url = https://github.com/gerardroche/sublime-lockdown.git
+[submodule "GitGutter"]
+	path = GitGutter
+	url = https://github.com/jisaacks/GitGutter.git
+[submodule "SublimeLinter-flake8"]
+	path = SublimeLinter-flake8
+	url = https://github.com/SublimeLinter/SublimeLinter-flake8.git
+[submodule "Origami"]
+	path = Origami
+	url = https://github.com/SublimeText/Origami

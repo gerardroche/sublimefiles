@@ -10,21 +10,6 @@
 	],
 	"installed_packages":
 	[
-		"A File Icon",
-		"color_scheme_unit",
-		"DocBlockr",
-		"GotoDocumentation",
-		"INI",
-		"Markdown Preview",
-		"open-sesame",
-		"Origami",
-		"Package Control",
-		"PHP Completions Kit",
-		"php-grammar",
-		"php-snippets",
-		"phpunitkit",
-		"polyfill",
-		"SublimeLinter-flake8"
 	],
 	"submit_url": "",
 	"submit_usage": false
