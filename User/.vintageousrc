@@ -2,28 +2,51 @@
 
 let mapleader=,
 
-" Enter command line mode
+" Enter command line mode.
 nnoremap <space> :
 
-" Visually select all content
-nnoremap <leader>a ggvG
+" Toggle the sidebar.
+" `cot` is a non standard Unimpaired plugin command (provided out-of-the-box).
+nnoremap <leader>d cot
+
+" Select entire buffer
+" https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
+nnoremap <leader>vaa ggvGg_
+nnoremap <leader>Vaa ggVG
 
 " " Sort with ,s in visual mode
 " vnoremap <leader>s <F9>
 
-" Scroll viewport faster with ctrl+e and ctrl+y
+" Make j and k work file linewise instead of screen linewise.
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+" https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
+
+" Scroll viewport faster.
+" http://items.sjbach.com/319/configuring-vim-right
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
-" " Make j and k work file linewise instead of screen linewise.
-" " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
-" " Important! There is a potential performance hit
-" " navigating with j and k with these mappings enabled.
-" nnoremap j gj
-" nnoremap k gk
+" Easy buffer navigation.
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+" https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " " Scroll down using shift+enter
-" noremap <S-cr> <C-d>
+" nnoremap <S-cr> <C-d>
+
+" Test
+nmap <leader>t :TestNearest<CR>
+nmap <leader>T :TestFile<CR>
+nmap <leader>a :TestSuite<CR>
+nmap <leader>l :TestLast<CR>
+nmap <leader>g :TestVisit<CR>
 
 " ------------------------------------------------------------------------------
 

@@ -1,24 +1,33 @@
 [
-    // Manuals
-    { "keys": ["f1"], "command": "goto_php_man", "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
-    { "keys": ["f1"], "command": "goto_documentation", "context": [ { "key": "selector", "operator": "equal", "operand": "-embedding.php", "match_all": true } ]},
-    { "keys": ["shift+f1"], "command": "goto_php_man", "args": {"remote": true},   "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
+    // // Package Development
+    // { "keys": ["ctrl+i"], "command": "install_package", "args": { "package": "NeoVintageous" }},
+    // { "keys": ["ctrl+r"], "command": "remove_package", "args": { "package": "NeoVintageous" }},
+    // { "keys": ["ctrl+u"], "command": "upgrade_package", "args": { "package": "NeoVintageous" }},
 
-    // Vim
+    // { "keys": ["ctrl+'"], "command": "tree_view_reveal_active_file" },
+    // { "keys": ["ctrl+l"], "command": "exec", "args": { "hide_phantoms_only": true }, "context": [ { "key": "setting.command_mode" } ] }, // ST workaround/bugfix: clear inline build errors
+    { "keys": ["ctrl+alt+v"], "command": "open_sesame", "args": { "path": "~/vendor" }, "context": [ { "key": "setting.open-sesame.keymaps" } ] },
     { "keys": ["ctrl+c"], "command": "copy" },
     { "keys": ["ctrl+s"], "command": "save" },
+    { "keys": ["f11"], "command": "toggle_true_full_screen" },
+    { "keys": ["f12"], "command": "find" },
+    { "keys": ["shift+f10"], "command": "context_menu" }, // ST workaround/bugfix: fixes open content menu keymap
+    { "keys": ["shift+f11"], "command": "toggle_true_distraction_free" },
 
-    // // Polyfill
-    // { "keys": ["ctrl+'"], "command": "tree_view_reveal_active_file" },
+    // Man
+    { "keys": ["f1"], "command": "goto_documentation", "context": [ { "key": "selector", "operator": "equal", "operand": "-embedding.php", "match_all": true } ]},
+    { "keys": ["f1"], "command": "goto_php_man", "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
+    { "keys": ["shift+f1"], "command": "goto_php_man", "args": {"remote": true},   "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
 
-    // Open Sesame
-    { "keys": ["ctrl+alt+v"], "command": "open_sesame", "args": { "path": "~/vendor" }, "context": [ { "key": "setting.open-sesame.keymaps" } ] },
-
-    // ST workaround/bugfix: fixes open content menu keymap
-    { "keys": ["shift+f10"], "command": "context_menu" },
-
-    // // ST workaround/bugfix: clear inline build errors
-    // { "keys": ["ctrl+l"], "command": "exec", "args": { "hide_phantoms_only": true }, "context": [ { "key": "setting.command_mode" } ] },
+    // Test
+    { "keys": ["ctrl+shift+a"], "command": "dispatch_test_suite" },
+    { "keys": ["ctrl+shift+c"], "command": "dispatch_test_cancel" },
+    { "keys": ["ctrl+shift+f"], "command": "dispatch_test_file" },
+    { "keys": ["ctrl+shift+l"], "command": "dispatch_test_last" },
+    { "keys": ["ctrl+shift+n"], "command": "dispatch_test_nearest" },
+    { "keys": ["ctrl+shift+r"], "command": "dispatch_test_results" },
+    { "keys": ["ctrl+shift+s"], "command": "dispatch_test_switch" },
+    { "keys": ["ctrl+shift+v"], "command": "dispatch_test_visit" },
 
     // // ST workaround/bugfix: smarter insert newline on Enter
     // {

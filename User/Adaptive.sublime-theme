@@ -1,34 +1,7 @@
 [
-    // {
-    //     "class": "sidebar_container",
-    //     "layer0.tint": ["background", 0, 0, 0, 0.0],
-    //     "border_color": ["background", 0, 0, 0, 0.4],
-    //     "border_size": 10
-    // },
     {
         "class": "sidebar_tree",
         "indent": 13,
-        "indent_offset": 0
+        "indent_offset": 13
     },
-    // {
-    //     "class": "sidebar_heading",
-    //     "font.size": 13
-    // },
-    // {
-    //     "class": "tabset_control",
-    //     "content_margin": [0, -6, 0, 0],
-    //     // "tint_index": 0,
-    //     "tint_modifier": [0, 0, 0, 0]
-    // },
-    // {
-    //     "class": "grid_layout_control",
-    //     "border_color": ["background", 0, 0, 0, 0.4],
-    //     "border_size": 1
-    // },
-    // {
-    //     "class": "status_bar",
-    //     "layer0.tint": ["background", 0, 0, 0, 0.0],
-    //     "content_margin": [0, 0, 0, 0],
-    //     "border_size": 10
-    // },
 ]

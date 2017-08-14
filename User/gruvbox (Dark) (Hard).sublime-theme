@@ -1,0 +1,46 @@
+[
+    // Minimise space used
+    {
+        "class": "sidebar_container",
+        "content_margin": [-20, 0, 1, 0]
+    },
+
+    // Make sidebar row have a solid bg on mouse hover
+    {
+        "class": "tree_row",
+        "attributes": ["selectable", "hover"],
+        "layer0.opacity": 1.0
+    },
+
+    // Panels
+
+    {
+      "class": "panel_control",
+      "content_margin": [0, 0, 0, 0]
+    },
+    {
+      "class": "text_line_control",
+      "content_margin": [18, 6, 18, 6]
+    },
+    {
+      "class": "text_line_control",
+      "content_margin": [0, 6, 0, 4],
+      "parents": [{"class": "input_panel"}]
+    },
+    {
+      "class": "text_line_control",
+      "content_margin": [0, 0, 0, 0],
+      "parents": [{"class": "console_panel"}]
+    },
+    {
+      "class": "console_panel",
+      "content_margin": [-4, -3, -4, -4]
+    },
+
+    // Make active tab bg the same as Monokai bg
+    {
+        "class": "tab_control",
+        "attributes": [ "selected" ],
+        "layer0.tint": [39, 40, 34]
+    },
+]

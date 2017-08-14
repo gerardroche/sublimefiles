@@ -10,6 +10,7 @@
 	],
 	"installed_packages":
 	[
+		"Package Control"
 	],
 	"submit_url": "",
 	"submit_usage": false

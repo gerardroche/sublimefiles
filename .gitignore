@@ -5,12 +5,13 @@
 #   git config --global core.excludesfile ~/.gitignore_global
 
 /.logs/
+/NeoVintageous/
 /User/Package Control.*-ca-bundle
 /User/Package Control.cache/
 /User/Package Control.last-run
-/User/UnitTesting/schedule.json
 /User/UnitTesting.sublime-settings
 /User/UnitTesting/*/coverage
+/User/UnitTesting/schedule.json
 /coverage/
 /markupsafe/
 /mdpopups/
@@ -20,3 +21,7 @@
 /pyyaml/
 /tmp*/
 /zzz A File Icon zzz/
+/ayu/
+/Boxy Theme/
+/User/SublimeLinter/*.tmTheme
+/gruvbox/
