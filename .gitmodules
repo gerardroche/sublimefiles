@@ -73,3 +73,6 @@
 [submodule "AutomaticPackageReloader"]
 	path = AutomaticPackageReloader
 	url = https://github.com/randy3k/AutomaticPackageReloader
+[submodule "Monokai Free"]
+	path = Monokai Free
+	url = https://github.com/gerardroche/sublime-monokai-free.git
