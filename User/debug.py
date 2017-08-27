@@ -46,13 +46,15 @@ class DebugViewToScopeCommand(TextCommand):
 def _sublime_log(flag):
     log_commands(flag)
     log_input(flag)
-    # log_result_regex(flag)
+    log_result_regex(flag)
     # log_indexing(flag)
-    # log_build_systems(flag)
+    log_build_systems(flag)
 
 
 def plugin_loaded():
     global _DEBUG
+
+    log_indexing(False)  # disable it by default
 
     file = os.path.join(packages_path(), 'User', '.debug')
     if os.path.isfile(file):

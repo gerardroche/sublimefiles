@@ -188,12 +188,12 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
-		"ayu",
 		"Boxy Theme",
-		"php-grammar",
 		"Six",
 		"Vintage",
-		"Vintageous"
+		"Vintageous",
+		"ayu",
+		"php-grammar"
 	],
 	"ignored_words":
 	[

@@ -1,21 +1,22 @@
 [
     {
-        "caption": "Open Sesame: Open Vendor",
-        "command": "open_sesame",
-        "args": { "path": "~/vendor" }
-    },
-    {
-        "caption": "Open Sesame: Add Vendor Folder",
-        "command": "open_sesame_add_folder",
-        "args": { "path": "~/vendor" }
-    },
-    {
         "caption": "Man",
         "command": "man"
     },
     {
-        "caption": "Toggle Debug Mode",
-        "command": "toggle_debug_mode"
+        "caption": "Open Sesame: Add Vendor",
+        "command": "open_sesame_add_project",
+        "args": { "path": "~/vendor" }
+    },
+    {
+        "caption": "Open Sesame: Open Vendor",
+        "command": "open_sesame_open_project",
+        "args": { "path": "~/vendor" }
+    },
+    {
+        "caption": "Open Sesame: Switch Vendor",
+        "command": "open_sesame_switch_project",
+        "args": { "path": "~/vendor" }
     },
     {
         "caption": "Refactor: Test - Coding Standard Fixer",
@@ -28,5 +29,9 @@
     {
         "caption": "Refactor: Test Function - Camelcase -> Underscore",
         "command": "refactor_test_function_camelcase_to_underscore"
+    },
+    {
+        "caption": "Toggle Debug Mode",
+        "command": "toggle_debug_mode"
     }
 ]
