@@ -40,9 +40,6 @@
 [submodule "molokai"]
 	path = molokai
 	url = https://github.com/gerardroche/sublime-molokai
-[submodule "test"]
-	path = DispatchTest
-	url = https://github.com/gerardroche/sublime-test.git
 [submodule "SublimeLinter-php"]
 	path = SublimeLinter-php
 	url = https://github.com/gerardroche/SublimeLinter-php.git
@@ -74,5 +71,8 @@
 	path = AutomaticPackageReloader
 	url = https://github.com/randy3k/AutomaticPackageReloader
 [submodule "Monokai Free"]
-	path = Monokai Free
+	path = MonokaiFree
 	url = https://github.com/gerardroche/sublime-monokai-free.git
+[submodule "Test"]
+	path = Test
+	url = https://github.com/gerardroche/sublime-test
