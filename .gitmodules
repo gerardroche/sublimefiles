@@ -23,7 +23,7 @@
 	path = open-sesame
 	url = https://github.com/gerardroche/sublime-open-sesame.git
 [submodule "color_scheme_unit"]
-	path = color_scheme_unit
+	path = ColorSchemeUnit
 	url = https://github.com/gerardroche/sublime_color_scheme_unit.git
 [submodule "DocBlockr"]
 	path = DocBlockr

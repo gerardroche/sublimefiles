@@ -38,6 +38,9 @@
     { "keys": ["ctrl+shift+s"], "command": "test_switch" },
     { "keys": ["ctrl+shift+v"], "command": "test_visit" },
 
+    // ToggleNeoVintageous
+    { "keys": ["ctrl+alt+t"], "command": "toggle_neovintageous" }
+
     // // ST workaround/bugfix: smarter insert newline on Enter
     // {
     //     "keys": ["enter"],
