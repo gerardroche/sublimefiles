@@ -4,6 +4,7 @@
     // { "keys": ["ctrl+r"], "command": "remove_package", "args": { "package": "NeoVintageous" }},
     // { "keys": ["ctrl+u"], "command": "upgrade_package", "args": { "package": "NeoVintageous" }},
     // { "keys": ["ctrl+r"], "command": "sandbox" },
+    // { "keys": ["ctrl+e"], "command": "sandbox2" },
 
     // Custom
     // { "keys": ["ctrl+'"], "command": "tree_view_reveal_active_file" },
