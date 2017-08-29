@@ -1,7 +1,7 @@
 import os
 
-from sublime import status_message
 from sublime import packages_path
+from sublime import status_message
 from sublime_plugin import WindowCommand
 
 

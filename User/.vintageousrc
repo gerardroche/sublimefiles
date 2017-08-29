@@ -1,5 +1,4 @@
 " The character " (the double quote mark) starts a comment
-
 let mapleader=,
 
 " Enter command line mode.
@@ -20,10 +19,10 @@ nnoremap <leader>Vaa ggVG
 " Make j and k work file linewise instead of screen linewise.
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 " https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
-nnoremap j gj
-nnoremap k gk
-nnoremap gj j
-nnoremap gk k
+" nnoremap j gj
+" nnoremap k gk
+" nnoremap gj j
+" nnoremap gk k
 
 " Scroll viewport faster.
 " http://items.sjbach.com/319/configuring-vim-right
@@ -42,11 +41,12 @@ nnoremap <C-l> <C-w>l
 " nnoremap <S-cr> <C-d>
 
 " Test
-nmap <leader>t :TestNearest<CR>
-nmap <leader>T :TestFile<CR>
-nmap <leader>a :TestSuite<CR>
-nmap <leader>l :TestLast<CR>
-nmap <leader>g :TestVisit<CR>
+nmap <leader>t :i<CR>
+" nmap <leader>t :TestNearest<CR>
+" nmap <leader>T :TestFile<CR>
+" nmap <leader>a :TestSuite<CR>
+" nmap <leader>l :TestLast<CR>
+" nmap <leader>g :TestVisit<CR>
 
 " ------------------------------------------------------------------------------
 

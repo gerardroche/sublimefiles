@@ -1,5 +1,5 @@
-import webbrowser
 import re
+import webbrowser
 
 from sublime_plugin import TextCommand
 

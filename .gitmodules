@@ -23,7 +23,7 @@
 	path = open-sesame
 	url = https://github.com/gerardroche/sublime-open-sesame.git
 [submodule "color_scheme_unit"]
-	path = ColorSchemeUnit
+	path = color_scheme_unit
 	url = https://github.com/gerardroche/sublime_color_scheme_unit.git
 [submodule "DocBlockr"]
 	path = DocBlockr
@@ -43,9 +43,6 @@
 [submodule "SublimeLinter-php"]
 	path = SublimeLinter-php
 	url = https://github.com/gerardroche/SublimeLinter-php.git
-[submodule "A File Icon"]
-	path = A File Icon
-	url = https://github.com/gerardroche/a-file-icon.git
 [submodule "SublimeLinter"]
 	path = SublimeLinter
 	url = https://github.com/gerardroche/SublimeLinter3.git

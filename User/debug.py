@@ -10,73 +10,77 @@ from sublime import log_input
 from sublime import log_result_regex
 from sublime import packages_path
 from sublime_plugin import ApplicationCommand
-from sublime_plugin import WindowCommand
 from sublime_plugin import TextCommand
 
 
 _DEBUG = bool(os.getenv('SUBLIME_DEBUG'))
 
 
-class ToggleDebugModeCommand(ApplicationCommand):
-    def run(self):
-        global _DEBUG
-        _DEBUG = not _DEBUG
-        _sublime_log(_DEBUG)
-
-        file = os.path.join(packages_path(), 'User', '.debug')
-        if os.path.isfile(file):
-            if not _DEBUG:
-                os.remove(file)
-        else:
-            if _DEBUG:
-                with open(file, 'w+', encoding='utf8') as f:
-                    f.write('')
-
-
-class DebugViewToScopeCommand(TextCommand):
-    def run(self, edit):
-        scopes = []
-        for point in range(self.view.size()):
-            scopes.append(self.view.scope_name(point).strip())
-
-        print('>>>')
-        print("\n".join(scopes))
-        print('<<<')
-
-
-def _sublime_log(flag):
+def _set_log(flag):
     log_commands(flag)
     log_input(flag)
-    log_result_regex(flag)
+    # log_result_regex(flag)
     # log_indexing(flag)
-    log_build_systems(flag)
+    # log_build_systems(flag)
+
+
+def _debug_marker_file():
+    return os.path.join(packages_path(), 'User', '.debug')
+
+
+def _toggle_debug_mode():
+    global _DEBUG
+
+    _DEBUG = not _DEBUG
+
+    _set_log(_DEBUG)
+
+    file = _debug_marker_file()
+    if os.path.isfile(file):
+        if not _DEBUG:
+            os.remove(file)
+    else:
+        if _DEBUG:
+            with open(file, 'w+', encoding='utf8') as f:
+                f.write('')
+
+
+def _is_debug_mode():
+    global _DEBUG
+
+    if _DEBUG:
+        return True
+
+    if os.path.isfile(_debug_marker_file()):
+        _DEBUG = True
+
+    return _DEBUG
 
 
 def plugin_loaded():
-    global _DEBUG
+    log_result_regex(False)  # try disable it by default; looks like a bug in ST
+    log_build_systems(False)  # try disable it by default; looks like a bug in ST
+    log_indexing(False)  # try disable it by default; looks like a bug in ST
 
-    log_indexing(False)  # disable it by default
+    if _is_debug_mode():
+        print("""User: >>> debug is enabled
+Python v{}.{}.{}
+{}
+paths = {}
+abiflags = {}
+{}
+platform = {}
+<<<""".format(
+            sys.version_info[0], sys.version_info[1], sys.version_info[2],
+            sys.version_info,
+            sys.path,
+            sys.abiflags,
+            sys.flags,
+            sys.platform))
 
-    file = os.path.join(packages_path(), 'User', '.debug')
-    if os.path.isfile(file):
-        _DEBUG = True
+        _set_log(True)
 
-    if _DEBUG:
-        print('DEBUG User: debug is enabled')
         active_window().run_command('show_panel', {'panel': 'console'})
-        _sublime_log(True)
-
-        print('DEBUG User: python v{}.{}.{} ({})'.format(
-            sys.version_info[0],
-            sys.version_info[1],
-            sys.version_info[2],
-            sys.version_info
-        ))
-
-        print('DEBUG User: paths = {}'.format(sys.path))
-        print('DEBUG User: abiflags = {}, flags = {}'.format(sys.abiflags, sys.flags))
-        print('                       Legend = attribute: flag, debug: -d, inspect: -i, interactive: -i, optimize: -O or -OO, dont_write_bytecode: -B, no_user_site: -s, no_site: -S, ignore_environment: -E, verbose: -v, bytes_warning: -b, quiet: -q, hash_randomization: -R')  # noqa: E501
-        print('DEBUG User: platform = {} (Linux: \'linux\', Windows: \'win32\', Windows/Cygwin: \'cygwin\', Mac OS X: \'darwin\')'.format(sys.platform))  # noqa: E501
 
         window = active_window()
         if not window:
@@ -106,6 +110,54 @@ def plugin_loaded():
                         neovintageous_debug_settings['level'].strip().upper(),
                         logging.DEBUG
                     ))
+
+
+class ToggleDebugModeCommand(ApplicationCommand):
+
+    def run(self):
+        _toggle_debug_mode()
+
+
+class DebugViewToScopeCommand(TextCommand):
+    def run(self, edit):
+        scopes = []
+        for point in range(self.view.size()):
+            scopes.append(self.view.scope_name(point).strip())
+
+        print('>>>')
+        print("\n".join(scopes))
+        print('<<<')
+
+
+class DebugCurrentLineScopes(TextCommand):
+
+    def run(self, edit):
+        line = self.view.line(self.view.sel()[0].begin())
+
+        scopes = []
+        for i in range(line.begin(), line.end()):
+            scopes.append(self.view.scope_name(i))
+
+        comment_start = ''
+        comment_end = ''
+        for v in self.view.meta_info('shellVariables', self.view.sel()[0].begin()):
+            if v['name'] == 'TM_COMMENT_START':
+                comment_start = v['value']
+
+            if v['name'] == 'TM_COMMENT_END':
+                comment_end = ' ' + v['value']
+
+        scopes_str = ''
+        for i, s in enumerate(scopes):
+            scopes_str += comment_start
+            scopes_str += (' ' * (i - len(comment_start)))
+            scopes_str += ('^ ' if i > len(comment_start) - 1 else '<-' + ('-' * i) + ' ')
+            scopes_str += s
+            scopes_str += comment_end
+            scopes_str += '\n'
+
+        # TODO use popup
+        self.view.insert(edit, line.end(), '\n' + scopes_str)
 
 
 class DebugViewCommand(TextCommand):

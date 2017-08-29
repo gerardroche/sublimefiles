@@ -1,33 +1,30 @@
 [
-    // // Package Development
-    // { "keys": ["ctrl+i"], "command": "install_package", "args": { "package": "NeoVintageous" }},
-    // { "keys": ["ctrl+r"], "command": "remove_package", "args": { "package": "NeoVintageous" }},
-    // { "keys": ["ctrl+u"], "command": "upgrade_package", "args": { "package": "NeoVintageous" }},
-    // { "keys": ["ctrl+r"], "command": "sandbox" },
-    // { "keys": ["ctrl+e"], "command": "sandbox2" },
-
     // Custom
-    // { "keys": ["ctrl+'"], "command": "tree_view_reveal_active_file" },
-    // { "keys": ["ctrl+l"], "command": "exec", "args": { "hide_phantoms_only": true }, "context": [ { "key": "setting.command_mode" } ] }, // ST workaround/bugfix: clear inline build errors
-    { "keys": ["ctrl+alt+v"], "command": "open_sesame_open_project", "args": { "path": "~/vendor" } },
+    { "keys": ["ctrl+'"], "command": "tree_view_reveal_active_file" },
     { "keys": ["ctrl+c"], "command": "copy" },
-    { "keys": ["ctrl+f3"], "command": "find_in_open_folders" },
+    { "keys": ["ctrl+l"], "command": "exec", "args": { "hide_phantoms_only": true }, "context": [ { "key": "setting.command_mode" } ] }, // ST workaround/bugfix: clear inline build errors
     { "keys": ["ctrl+s"], "command": "save" },
-    { "keys": ["f11"], "command": "toggle_true_full_screen" },
     { "keys": ["shift+f10"], "command": "context_menu" }, // ST workaround/bugfix: fixes open content menu keymap
-    { "keys": ["shift+f11"], "command": "toggle_true_distraction_free" },
+
+    // Find
+    { "keys": ["ctrl+f3"], "command": "find_in_open_folders" },
     { "keys": ["shift+f3"], "command": "find_all_in_open_folders" },
 
-    // Sesame
+    // Open Sesame
     { "keys": ["ctrl+alt+a"], "command": "open_sesame_add_project" },
     { "keys": ["ctrl+alt+o"], "command": "open_sesame_open_project" },
     { "keys": ["ctrl+alt+r"], "command": "open_sesame_remove_folder" },
     { "keys": ["ctrl+alt+s"], "command": "open_sesame_switch_project" },
+    { "keys": ["ctrl+alt+v"], "command": "open_sesame_open_project", "args": { "path": "~/vendor" } },
+
+    // Sesame
+    { "keys": ["f11"], "command": "sesame_toggle_full_screen" },
+    { "keys": ["shift+f11"], "command": "sesame_toggle_distraction_free" },
 
     // Man
     { "keys": ["f1"], "command": "goto_documentation", "context": [ { "key": "selector", "operator": "equal", "operand": "-embedding.php", "match_all": true } ]},
-    { "keys": ["f1"], "command": "goto_php_man", "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
-    { "keys": ["shift+f1"], "command": "goto_php_man", "args": {"remote": true},   "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
+    { "keys": ["f1"], "command": "man_goto_php", "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
+    { "keys": ["shift+f1"], "command": "man_goto_php", "args": {"remote": true},   "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
 
     // Test
     { "keys": ["ctrl+shift+a"], "command": "test_suite" },
@@ -39,8 +36,12 @@
     { "keys": ["ctrl+shift+s"], "command": "test_switch" },
     { "keys": ["ctrl+shift+v"], "command": "test_visit" },
 
+    // ColorSchemeUnit
+    { "keys": ["ctrl+shift+alt+p"], "command": "color_scheme_unit_show_scope_name_and_styles" },
+    { "keys": ["ctrl+a"], "command": "color_scheme_unit_insert_assertions" },
+
     // ToggleNeoVintageous
-    { "keys": ["ctrl+alt+t"], "command": "toggle_neovintageous" }
+    { "keys": ["ctrl+alt+t"], "command": "toggle_neovintageous" },
 
     // // ST workaround/bugfix: smarter insert newline on Enter
     // {
@@ -54,5 +55,11 @@
     //         { "key": "preceding_text", "operator": "regex_contains", "operand": "(\\{|\\[)\\s*$", "match_all": true },
     //         { "key": "following_text", "operator": "regex_contains", "operand": "^\\s*$", "match_all": true }
     //     ]
-    // }
+    // },
+
+    // Debug/Development
+    // { "keys": ["ctrl+i"], "command": "install_package", "args": { "package": "NeoVintageous" }},
+    // { "keys": ["ctrl+r"], "command": "remove_package", "args": { "package": "NeoVintageous" }},
+    // { "keys": ["ctrl+u"], "command": "upgrade_package", "args": { "package": "NeoVintageous" }},
+    { "keys": ["ctrl+f"], "command": "debug_current_line_scopes" },
 ]

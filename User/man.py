@@ -1,7 +1,7 @@
-import os
-import webbrowser
 import glob
+import os
 import re
+import webbrowser
 
 from sublime import status_message
 from sublime_plugin import WindowCommand
@@ -67,7 +67,7 @@ class ManCommand(WindowCommand):
             webbrowser.open_new_tab('file://%s' % (manual))
 
 
-class GotoPhpManCommand(WindowCommand):
+class ManGotoPhpCommand(WindowCommand):
 
     def run(self, remote=False):
         view = self.window.active_view()

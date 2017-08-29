@@ -2,10 +2,10 @@ from functools import partial
 import os
 import shutil
 
-from sublime import Region
-from sublime import error_message
-from sublime import set_timeout_async
 from sublime import ENCODED_POSITION
+from sublime import error_message
+from sublime import Region
+from sublime import set_timeout_async
 from sublime_plugin import WindowCommand
 
 
