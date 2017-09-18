@@ -73,3 +73,6 @@
 [submodule "Test"]
 	path = Test
 	url = https://github.com/gerardroche/sublime-test
+[submodule "Tmux"]
+	path = Tmux
+	url = https://github.com/gerardroche/sublime-tmux.git
