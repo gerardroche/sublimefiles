@@ -1,7 +1,6 @@
 [
     {
         "class": "sidebar_tree",
-        "settings": ["theme_sidebar_indent_top_level_disabled"],
         "indent_offset": 0,
         "indent_top_level": false
     },
@@ -11,7 +10,6 @@
     },
     {
         "class": "sidebar_heading",
-        "settings": ["theme_sidebar_heading_bold"],
         "font.bold": true
     }
 ]

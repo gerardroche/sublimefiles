@@ -2,6 +2,8 @@ import logging
 import os
 import sys
 
+from sublime import load_settings
+from sublime import save_settings
 from sublime import active_window
 from sublime import log_build_systems
 from sublime import log_commands
@@ -43,6 +45,25 @@ def _toggle_debug_mode():
         if _DEBUG:
             with open(file, 'w+', encoding='utf8') as f:
                 f.write('')
+
+    settings = load_settings('Preferences.sublime-settings')
+
+    debug_flag_settings = [
+        'color_scheme_unit.debug',
+        'git_gutter_debug',
+        'neovintageous.debug',
+        'phpunit.debug',
+        'test.debug',
+        'user.debug'
+    ]
+
+    for setting in debug_flag_settings:
+        if _DEBUG:
+            settings.set(setting, True)
+        else:
+            settings.erase(setting)
+
+    save_settings('Preferences.sublime-settings')
 
 
 def _is_debug_mode():

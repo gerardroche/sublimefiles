@@ -79,3 +79,6 @@
 [submodule "Tmux"]
 	path = Tmux
 	url = https://github.com/gerardroche/sublime-tmux.git
+[submodule "GotoDocumentation"]
+	path = GotoDocumentation
+	url = https://github.com/kemayo/sublime-text-2-goto-documentation.git

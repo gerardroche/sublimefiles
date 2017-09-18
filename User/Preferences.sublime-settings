@@ -42,7 +42,6 @@
 	"caret_style": "smooth",
 	"color_scheme": "Packages/MonokaiFree/MonokaiFree.tmTheme",
 	"color_scheme_unit.coverage": true,
-	"color_scheme_unit.debug": true,
 	"debug": false,
 	"docblockr.development_mode": false,
 	"docblockr.function_description": false,
@@ -163,11 +162,10 @@
 		"libsublime/Packages",
 		"logs",
 		"nbproject",
-		"sublime_text_3/Icon",
-		"tmp"
+		"sublime_text_3/Icon"
 	],
+	"font_face": "Source Code Pro",
 	"font_size": 12,
-	"git_gutter_debug": false,
 	"git_gutter_enable_hover_diff_popup": false,
 	"git_gutter_next_prev_change_wrap": false,
 	"git_gutter_show_in_minimap": 0,
@@ -191,9 +189,7 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
-		"AutomaticPackageReloader",
 		"Six",
-		"UnitTesting",
 		"Vintage",
 		"Vintageous",
 		"php-grammar"
@@ -346,7 +342,6 @@
 	"mouse_wheel_switches_tabs": false,
 	"neovintageous_disable_arrow_keys": false,
 	"overlay_scroll_bars": "enabled",
-	"phpunit.debug": false,
 	"phpunit.options":
 	{
 		"no-coverage": true
@@ -365,9 +360,8 @@
 	"show_errors_inline": false,
 	"show_full_path": false,
 	"show_line_endings": false,
-	"show_tab_close_buttons": false,
+	"show_tab_close_buttons": true,
 	"submit_usage": false,
-	"test.debug": false,
 	"theme": "Adaptive.sublime-theme",
 	"theme_autocomplete_item_selected_colored": true,
 	"theme_find_panel_close_hidden": true,
@@ -388,7 +382,6 @@
 	"ui_sidebar_highlight_row": true,
 	"ui_wide_scrollbars": true,
 	"update_check": false,
-	"user.debug": false,
 	"user.debug.neovintageous":
 	{
 		"level": "debug"
