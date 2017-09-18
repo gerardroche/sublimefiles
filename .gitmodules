@@ -53,7 +53,7 @@
 	path = Package Control
 	url = https://github.com/gerardroche/sublime_package_control.git
 [submodule "lockdown"]
-	path = lockdown
+	path = Lockdown
 	url = https://github.com/gerardroche/sublime-lockdown.git
 [submodule "GitGutter"]
 	path = GitGutter
