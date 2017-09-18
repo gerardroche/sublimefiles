@@ -70,6 +70,9 @@
 [submodule "Monokai Free"]
 	path = MonokaiFree
 	url = https://github.com/gerardroche/sublime-monokai-free.git
+[submodule "Pine"]
+	path = Pine
+	url = https://github.com/gerardroche/sublime-pine.git
 [submodule "Test"]
 	path = Test
 	url = https://github.com/gerardroche/sublime-test
