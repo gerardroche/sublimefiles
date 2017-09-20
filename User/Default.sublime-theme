@@ -2,14 +2,6 @@
     {
         "class": "sidebar_tree",
         "indent_offset": 0,
-        "indent_top_level": false
-    },
-    {
-        "class": "sidebar_tree",
         "indent": 12
-    },
-    {
-        "class": "sidebar_heading",
-        "font.bold": true
     }
 ]
