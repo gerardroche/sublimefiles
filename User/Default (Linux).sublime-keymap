@@ -39,6 +39,7 @@
     // ColorSchemeUnit
     { "keys": ["ctrl+shift+alt+p"], "command": "color_scheme_unit_show_scope_name_and_styles" },
     { "keys": ["ctrl+a"], "command": "color_scheme_unit_insert_assertions" },
+    { "keys": ["ctrl+f"], "command": "color_scheme_unit_insert_scopes" },
 
     // ToggleNeoVintageous
     { "keys": ["ctrl+alt+t"], "command": "toggle_neovintageous" },
@@ -61,5 +62,4 @@
     // { "keys": ["ctrl+i"], "command": "install_package", "args": { "package": "NeoVintageous" }},
     // { "keys": ["ctrl+r"], "command": "remove_package", "args": { "package": "NeoVintageous" }},
     // { "keys": ["ctrl+u"], "command": "upgrade_package", "args": { "package": "NeoVintageous" }},
-    { "keys": ["ctrl+f"], "command": "debug_current_line_scopes" },
 ]

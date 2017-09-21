@@ -150,37 +150,6 @@ class DebugViewToScopeCommand(TextCommand):
         print('<<<')
 
 
-class DebugCurrentLineScopes(TextCommand):
-
-    def run(self, edit):
-        line = self.view.line(self.view.sel()[0].begin())
-
-        scopes = []
-        for i in range(line.begin(), line.end()):
-            scopes.append(self.view.scope_name(i))
-
-        comment_start = ''
-        comment_end = ''
-        for v in self.view.meta_info('shellVariables', self.view.sel()[0].begin()):
-            if v['name'] == 'TM_COMMENT_START':
-                comment_start = v['value']
-
-            if v['name'] == 'TM_COMMENT_END':
-                comment_end = ' ' + v['value']
-
-        scopes_str = ''
-        for i, s in enumerate(scopes):
-            scopes_str += comment_start
-            scopes_str += (' ' * (i - len(comment_start)))
-            scopes_str += ('^ ' if i > len(comment_start) - 1 else '<-' + ('-' * i) + ' ')
-            scopes_str += s
-            scopes_str += comment_end
-            scopes_str += '\n'
-
-        # TODO use popup
-        self.view.insert(edit, line.end(), '\n' + scopes_str)
-
-
 class DebugViewCommand(TextCommand):
 
     def run(self, edit=None):
