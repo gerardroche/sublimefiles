@@ -6,6 +6,6 @@ class Test${1}(${2}):
 ]]></content>
     <tabTrigger>testcase</tabTrigger>
     <scopeName>language_construct</scopeName>
-    <scope>source.python - comment - constant.other.class - entity.name - meta.catch - meta.class - meta.function.arguments - meta.use - string - variable.other</scope>
+    <scope>source.python - comment - constant.other.class - entity.name - meta.catch - meta.function.arguments - meta.use - string - variable.other</scope>
     <description>Python: test case</description>
 </snippet>

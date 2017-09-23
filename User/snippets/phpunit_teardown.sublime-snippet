@@ -7,6 +7,6 @@ protected function tearDown()
 ]]></content>
     <tabTrigger>teardown</tabTrigger>
     <scopeName>language_construct</scopeName>
-    <scope>source.php - comment - constant.other.class - entity.name - meta.catch - meta.class - meta.function.arguments - meta.use - string - variable.other</scope>
+    <scope>source.php - comment - constant.other.class - entity.name - meta.catch - meta.function.arguments - meta.use - string - variable.other</scope>
     <description>PHPUnit: teardown method</description>
 </snippet>

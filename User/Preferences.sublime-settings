@@ -165,7 +165,7 @@
 		"sublime_text_3/Icon"
 	],
 	"font_face": "Source Code Pro",
-	"font_size": 12,
+	"font_size": 13,
 	"git_gutter_enable_hover_diff_popup": false,
 	"git_gutter_next_prev_change_wrap": false,
 	"git_gutter_show_in_minimap": 0,
@@ -189,10 +189,11 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
+		"A File Icon",
+		"php-grammar",
 		"Six",
 		"Vintage",
-		"Vintageous",
-		"php-grammar"
+		"Vintageous"
 	],
 	"ignored_words":
 	[

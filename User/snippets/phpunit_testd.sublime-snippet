@@ -7,6 +7,6 @@ ${1/.+/\/**\n * @depends test/}${1:methodName}${1/.+/\n *\/\n//}public function 
 ]]></content>
     <tabTrigger>testd</tabTrigger>
     <scopeName>language_construct</scopeName>
-    <scope>source.php - comment - constant.other.class - entity.name - meta.catch - meta.class - meta.function.arguments - meta.use - string - variable.other</scope>
+    <scope>source.php - comment - constant.other.class - entity.name - meta.catch - meta.function.arguments - meta.use - string - variable.other</scope>
     <description>PHPUnit: test with annotated @depends</description>
 </snippet>
