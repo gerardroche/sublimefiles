@@ -2,15 +2,16 @@ import logging
 import os
 import sys
 
-from sublime import load_settings
-from sublime import save_settings
 from sublime import active_window
+from sublime import load_settings
 from sublime import log_build_systems
 from sublime import log_commands
 from sublime import log_indexing
 from sublime import log_input
 from sublime import log_result_regex
 from sublime import packages_path
+from sublime import save_settings
+from sublime import status_message
 from sublime_plugin import ApplicationCommand
 from sublime_plugin import TextCommand
 
@@ -18,16 +19,37 @@ from sublime_plugin import TextCommand
 _DEBUG = bool(os.getenv('SUBLIME_DEBUG'))
 
 
-def _set_log(flag):
-    log_commands(flag)
-    log_input(flag)
-    # log_result_regex(flag)
-    # log_indexing(flag)
-    # log_build_systems(flag)
+_DEBUGGING_PREFERENCES = [
+    'color_scheme_unit.debug',
+    'docblockr.debug',
+    'git_gutter_debug',
+    'neovintageous.debug',
+    'open-sesame.debug',
+    'php-grammar.debug',
+    'phpunit.debug',
+    'sesame.debug',
+    'sulimelinter_debug',
+    'test.debug',
+    'user.debug',
+    'vintageous_debug'
+]
 
 
-def _debug_marker_file():
+def _debug_indicator_file_name():
     return os.path.join(packages_path(), 'User', '.debug')
+
+
+def _debug_indicator_file_exists():
+    return os.path.isfile(_debug_indicator_file_name())
+
+
+def _remove_debug_indicator_file():
+    os.remove(_debug_indicator_file_name())
+
+
+def _create_debug_indicator_file():
+    with open(_debug_indicator_file_name(), 'w+', encoding='utf8') as f:
+        f.write('')
 
 
 def _toggle_debug_mode():
@@ -35,79 +57,70 @@ def _toggle_debug_mode():
 
     _DEBUG = not _DEBUG
 
-    _set_log(_DEBUG)
-
-    file = _debug_marker_file()
-    if os.path.isfile(file):
-        if not _DEBUG:
-            os.remove(file)
+    if _DEBUG:
+        if not _debug_indicator_file_exists():
+            _create_debug_indicator_file()
     else:
-        if _DEBUG:
-            with open(file, 'w+', encoding='utf8') as f:
-                f.write('')
+        if _debug_indicator_file_exists():
+            _remove_debug_indicator_file()
 
-    settings = load_settings('Preferences.sublime-settings')
+    _init_debug(_DEBUG)
 
-    debug_flag_settings = [
-        'color_scheme_unit.debug',
-        'git_gutter_debug',
-        'neovintageous.debug',
-        'phpunit.debug',
-        'test.debug',
-        'user.debug'
-    ]
-
-    for setting in debug_flag_settings:
-        if _DEBUG:
-            settings.set(setting, True)
-        else:
-            settings.erase(setting)
-
-    save_settings('Preferences.sublime-settings')
+    status_message('Debug is ' + 'enabled' if _DEBUG else 'disabled')
 
 
 def _is_debug_mode():
     global _DEBUG
 
-    if _DEBUG:
-        return True
-
-    if os.path.isfile(_debug_marker_file()):
+    if _debug_indicator_file_exists():
         _DEBUG = True
 
     return _DEBUG
 
 
+def _init_debug(flag):
+    log_commands(flag)
+    log_input(flag)
+
+    preferences = load_settings('Preferences.sublime-settings')
+
+    for debug_preference in _DEBUGGING_PREFERENCES:
+        if flag:
+            preferences.set(debug_preference, True)
+        else:
+            preferences.erase(debug_preference)
+
+    save_settings('Preferences.sublime-settings')
+
+
 def plugin_loaded():
-    log_result_regex(False)  # try disable it by default; looks like a bug in ST
-    log_build_systems(False)  # try disable it by default; looks like a bug in ST
-    log_indexing(False)  # try disable it by default; looks like a bug in ST
+    log_result_regex(False)  # Try disable it by default; looks like a bug in ST
+    log_build_systems(False)  # Try disable it by default; looks like a bug in ST
+    log_indexing(False)  # Try disable it by default; looks like a bug in ST
 
     if _is_debug_mode():
-        print("""User: >>> debug is enabled
-Python v{}.{}.{}
-{}
-paths = {}
-abiflags = {}
-{}
-platform = {}
-<<<""".format(
-            sys.version_info[0], sys.version_info[1], sys.version_info[2],
-            sys.version_info,
-            sys.path,
-            sys.abiflags,
-            sys.flags,
-            sys.platform))
 
-        _set_log(True)
+        print('User: >>>')
+        print('=> Debug is enabled'.format())
+        print('=> Python v{}.{}.{} {}{}'.format(sys.version_info[0], sys.version_info[1], sys.version_info[2], sys.version_info[3], sys.version_info[4]))
+        print('=> {}'.format(sys.flags))
+        print('=> abiflags are {}'.format(sys.abiflags))
+        print('=> path is {}'.format(sys.path))
+        print('=> __debug__ is {}'.format(__debug__))
+        print('<<<')
 
-        active_window().run_command('show_panel', {'panel': 'console'})
+        _init_debug(True)
 
         window = active_window()
         if not window:
             return
 
         view = window.active_view()
+
+        active_group = window.active_group()
+        window.run_command('show_panel', {'panel': 'console'})
+        window.focus_group(active_group)
+
         if not view:
             return
 
@@ -186,7 +199,7 @@ class DebugViewCommand(TextCommand):
                 i, view.word(sel.begin()), view.substr(view.word(sel.begin()))).replace('\n', '\\n'))
             print('   sel[{}] rowcol {} {}'.format(i, view.rowcol(sel.begin()), type(view.rowcol(sel.begin()))))
             print('   sel[{}] visible_region {} {}'.format(i, view.visible_region(), type(view.visible_region())))
-            print('   sel[{}] viewport_position {} {}'.format(i, view.viewport_position(), type(view.viewport_position())))
+            print('   sel[{}] viewport_position {} {}'.format(i, view.viewport_position(), type(view.viewport_position())))  # noqa: E501
             print('   sel[{}] viewport_extent {} {}'.format(i, view.viewport_extent(), type(view.viewport_extent())))
             print('   sel[{}] layout_extent {} {}'.format(i, view.layout_extent(), type(view.layout_extent())))
             print('   sel[{}] text_to_layout (begin) {} {}'.format(
@@ -199,7 +212,7 @@ class DebugViewCommand(TextCommand):
             #   i, view.substr(view.indented_region(sel.begin()))))
 
 
-class DebugNeovintageousView(TextCommand):
+class DumpNeovintageousSettings(TextCommand):
 
     def run(self, edit):
 
@@ -250,12 +263,10 @@ class DebugNeovintageousView(TextCommand):
             'vintageous_ex_data',
             'vintageous_hlsearch',
             'vintageous_ignorecase',
-            'vintageous_ignorecase',
             'vintageous_incsearch',
             'vintageous_inverse_caret_state',
             'vintageous_last_buffer_search',
             'vintageous_linux_shell',
-            'vintageous_magic',
             'vintageous_magic',
             'vintageous_mode',
             'vintageous_motion',
@@ -272,8 +283,11 @@ class DebugNeovintageousView(TextCommand):
             'vintageous_surround_spaces',
             'vintageous_use_ctrl_keys',
             'vintageous_use_sys_clipboard',
+            'VintageousEx_linux_shell',
+            'VintageousEx_osx_shell',
             'vintageous_vi_editor_setting',
             'VintageousEx_linux_shell',
+            'VintageousEx_osx_terminal'
             'VintageousEx_linux_terminal',
             'VintageousEx_osx_shell',
             'VintageousEx_osx_terminal',
@@ -289,6 +303,8 @@ class DebugNeovintageousView(TextCommand):
         settings = self.view.settings()
         for key in keys:
             value = settings.get(key)
+            if value is None:
+                continue
             if isinstance(value, dict):
                 print('  {} {{'.format(key))
                 for k, v in value.items():

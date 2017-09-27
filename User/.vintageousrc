@@ -1,24 +1,16 @@
 " The character " (the double quote mark) starts a comment
+
 let mapleader=,
 
 " Enter command line mode.
 nnoremap <space> :
 
-" Toggle the sidebar.
-" `cot` is a non standard Unimpaired plugin command (provided out-of-the-box).
-nnoremap <leader>d cot
+" Toggle the side bar.
+nnoremap <leader>d :ToggleSideBar<CR>
 
-" Select entire buffer
-" https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
-nnoremap <leader>vaa ggvGg_
-nnoremap <leader>Vaa ggVG
-
-" " Sort with ,s in visual mode
-" vnoremap <leader>s <F9>
-
-" Make j and k work file linewise instead of screen linewise.
-" http://stevelosh.com/blog/2010/09/coming-home-to-vim/
-" https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
+" " Make j and k work file linewise instead of screen linewise.
+" " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+" " https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
 " nnoremap j gj
 " nnoremap k gk
 " nnoremap gj j
@@ -37,33 +29,58 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" " Scroll down using shift+enter
-" nnoremap <S-cr> <C-d>
+" Yank and paste using system clipboard.
+" http://www.drbunsen.org/the-text-triumvirate/
+nnoremap <leader>y "+y
+nnoremap <leader>Y "+Y
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+nnoremap <leader>yy "+Y
 
-" Test
-nmap <leader>t :i<CR>
-" nmap <leader>t :TestNearest<CR>
-" nmap <leader>T :TestFile<CR>
-" nmap <leader>a :TestSuite<CR>
-" nmap <leader>l :TestLast<CR>
-" nmap <leader>g :TestVisit<CR>
+" Select entire buffer
+" https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
+nnoremap <leader>vaa ggvGg_
+nnoremap <leader>Vaa ggVG
 
-" ------------------------------------------------------------------------------
+" Sorting
+nnoremap <leader>s vi]oj^<F9>o<Esc>^8<C-y>
 
-" " TODO implement [ and ]
-" map [ {
-" map ] }
+" Multiple cursors
+nnoremap <C-n> gh
+snoremap <C-n> j
+snoremap <C-p> k
+snoremap <C-x> l
+snoremap i <Esc>i
 
-" " TODO implement disabling arrow keys and hjkl from rcfile
-" " Moving your Vim cursor around using the arrow keys is a bad habit, and like
-" " many bad habits it’s a difficult one to break!
-" " http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/
-" " Putting these lines into your vimrc can help:
-" noremap <left> <NOP>
-" noremap <right> <NOP>
-" noremap <down> <NOP>
-" noremap <up> <NOP>
-" Map h <NOP>
-" Map j <NOP>
-" Map k <NOP>
-" Map l <NOP>
+" Folds
+nnoremap zc :Fold<CR>
+nnoremap zo :Unfold<CR>
+nnoremap zM :FoldAll<CR>
+nnoremap zR :UnfoldAll<CR>
+
+" Search & Replace
+nnoremap <leader>f :ShowFindInFiles<CR>
+nnoremap <leader>sf :ShowFindResults<CR>
+nnoremap <leader>hp :HidePhantoms<CR>
+
+" Open
+nnoremap <leader>oc :SesameCommandPalette<CR>
+nnoremap <leader>op :SesamePreferences<CR>
+nnoremap <leader>on :NeovintageousOpenMyRcFile<CR>
+
+" Reload
+nnoremap <leader>nr :NeovintageousReloadMyRcFile<CR>
+
+" Test plugin
+" https://github.com/gerardroche/sublime-test
+" https://github.com/gerardroche/sublime-phpunit
+nnoremap <leader>t :TestNearest<CR>
+nnoremap <leader>T :TestFile<CR>
+nnoremap <leader>a :TestSuite<CR>
+nnoremap <leader>l :TestLast<CR>
+nnoremap <leader>g :TestVisit<CR>
+
+" ColorSchemeUnit plugin
+" https://github.com/gerardroche/sublime-color-scheme-unit
+nnoremap <leader>ia :ColorSchemeUnitInsertAssertions<CR>
+nnoremap <leader>is :ColorSchemeUnitInsertSyntaxAssertions<CR>
