@@ -3,7 +3,7 @@ import re
 from sublime_plugin import TextCommand
 
 
-class SmarterInsertNewlineCommand(TextCommand):
+class SmartInsertNewlineCommand(TextCommand):
     """
     Insert newline if the next line is not blank.
 

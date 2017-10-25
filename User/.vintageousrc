@@ -27,7 +27,11 @@ nnoremap <C-y> 3<C-y>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+
+" Stop the highlighting
+" The :nohlsearch ex command is currently not
+" supported. Pressing Esc is workaround.
+nnoremap <C-l> <Esc>
 
 " Yank and paste using system clipboard.
 " http://www.drbunsen.org/the-text-triumvirate/
@@ -39,11 +43,8 @@ nnoremap <leader>yy "+Y
 
 " Select entire buffer
 " https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
-nnoremap <leader>vaa ggvGg_
-nnoremap <leader>Vaa ggVG
-
-" Sorting
-nnoremap <leader>s vi]oj^<F9>o<Esc>^8<C-y>
+nnoremap <leader>va ggvGg_
+nnoremap <leader>Va ggVG
 
 " Multiple cursors
 nnoremap <C-n> gh
@@ -58,18 +59,21 @@ nnoremap zo :Unfold<CR>
 nnoremap zM :FoldAll<CR>
 nnoremap zR :UnfoldAll<CR>
 
-" Search & Replace
-nnoremap <leader>f :ShowFindInFiles<CR>
-nnoremap <leader>sf :ShowFindResults<CR>
+" Reveal
+nnoremap <leader>f :RevealInSideBar<CR>
+
+" <leader>h{char}
 nnoremap <leader>hp :HidePhantoms<CR>
 
-" Open
-nnoremap <leader>oc :SesameCommandPalette<CR>
-nnoremap <leader>op :SesamePreferences<CR>
+" <leader>o{char}
+nnoremap <leader>oc :ShowCommandPalette<CR>
 nnoremap <leader>on :NeovintageousOpenMyRcFile<CR>
+nnoremap <leader>op :OpenPreferences<CR>
 
-" Reload
-nnoremap <leader>nr :NeovintageousReloadMyRcFile<CR>
+" <leader>s{char}
+nnoremap <leader>sf :ShowFindInFiles<CR>
+nnoremap <leader>sr :ShowFindResults<CR>
+nnoremap <leader>ss vip<F9>o^<Esc>^8<C-y>
 
 " Test plugin
 " https://github.com/gerardroche/sublime-test

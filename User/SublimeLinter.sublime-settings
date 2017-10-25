@@ -1,7 +1,7 @@
 {
 	"user":
 	{
-		"debug": false,
+		"debug": true,
 		"delay": 0.5,
 		"error_color": "D02000",
 		"gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
@@ -44,35 +44,22 @@
 			"phpcs":
 			{
 				"@disable": true,
-				"args":
-				[
-				],
 				"excludes":
 				[
+					"*/vendor/*"
 				],
 				"standard": "PSR2"
 			},
 			"pylint":
 			{
-				"@disable": false,
-				"args":
-				[
-				],
-				"disable": "",
-				"enable": "",
 				"excludes":
 				[
 					"*/vendor/*"
-				],
-				"paths":
-				[
-				],
-				"rcfile": "",
-				"show-codes": false
+				]
 			},
 			"python":
 			{
-				"@version": 3.3
+				"@version": 3
 			}
 		},
 		"mark_style": "solid underline",
@@ -82,7 +69,8 @@
 		{
 			"linux":
 			[
-				"~/.phpenv/versions/7.x/bin"
+				"~/.phpenv/versions/7.x/bin",
+				"~/.local/bin"
 			],
 			"osx":
 			[
@@ -153,6 +141,6 @@
 		],
 		"tooltips": true,
 		"warning_color": "DDB700",
-		"wrap_find": true
+		"wrap_find": false
 	}
 }

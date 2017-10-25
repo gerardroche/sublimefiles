@@ -114,7 +114,7 @@ class _NewFile():
         if len(dirs) != 1:
             return
 
-        self.configure()
+        self.init()
 
         extension = self.extension
 
@@ -157,26 +157,22 @@ class _NewFile():
 
 
 class TreeViewNewPhpFileCommand(_NewFile, WindowCommand):
-
-    def configure(self):
+    def init(self):
         self.extension = 'php'
         self.content = '<?php\n\n'
 
 
 class TreeViewNewPythonFileCommand(_NewFile, WindowCommand):
-
-    def configure(self):
+    def init(self):
         self.extension = 'py'
 
 
 class TreeViewNewPhtmlFileCommand(_NewFile, WindowCommand):
-
-    def configure(self):
+    def init(self):
         self.extension = 'phtml'
 
 
 class TreeViewNewPhpunitTestCaseFileCommand(_NewFile, WindowCommand):
-
-    def configure(self):
+    def init(self):
         self.extension = 'Test.php'
         self.content = 'testcase'
