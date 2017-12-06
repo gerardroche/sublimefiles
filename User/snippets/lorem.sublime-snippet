@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+Lorem ipsum dolor sit amet.
+]]></content>
+    <tabTrigger>lorem</tabTrigger>
+    <scope>text, source</scope>
+</snippet>
