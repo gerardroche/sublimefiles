@@ -20,7 +20,7 @@
 	path = PHP Completions Kit
 	url = https://github.com/gerardroche/sublime-phpck.git
 [submodule "open-sesame"]
-	path = open-sesame
+	path = Sesame
 	url = https://github.com/gerardroche/sublime-open-sesame.git
 [submodule "ColorSchemeUnit"]
 	path = ColorSchemeUnit
@@ -52,9 +52,6 @@
 [submodule "Package Control"]
 	path = Package Control
 	url = https://github.com/gerardroche/sublime_package_control.git
-[submodule "lockdown"]
-	path = Lockdown
-	url = https://github.com/gerardroche/sublime-lockdown.git
 [submodule "GitGutter"]
 	path = GitGutter
 	url = https://github.com/jisaacks/GitGutter.git
@@ -82,3 +79,6 @@
 [submodule "GotoDocumentation"]
 	path = GotoDocumentation
 	url = https://github.com/kemayo/sublime-text-2-goto-documentation.git
+[submodule "SublimeTextAPICompletions"]
+	path = SublimeTextAPICompletions
+	url = https://github.com/gerardroche/sublime-api-completions.git

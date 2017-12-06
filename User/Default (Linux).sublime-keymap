@@ -9,11 +9,11 @@
     { "keys": ["shift+f3"], "command": "find_all_in_open_folders" },
 
     // Open Sesame
-    { "keys": ["ctrl+alt+a"], "command": "open_sesame_add_project" },
-    { "keys": ["ctrl+alt+o"], "command": "open_sesame_open_project" },
-    { "keys": ["ctrl+alt+r"], "command": "open_sesame_remove_folder" },
-    { "keys": ["ctrl+alt+s"], "command": "open_sesame_switch_project" },
-    { "keys": ["ctrl+alt+v"], "command": "open_sesame_open_project", "args": { "path": "~/vendor" } },
+    { "keys": ["ctrl+alt+a"], "command": "sesame_add" },
+    { "keys": ["ctrl+alt+o"], "command": "sesame_open" },
+    { "keys": ["ctrl+alt+r"], "command": "sesame_remove" },
+    { "keys": ["ctrl+alt+s"], "command": "sesame_switch" },
+    { "keys": ["ctrl+alt+v"], "command": "sesame_open", "args": { "path": "~/vendor" } },
 
     // Sesame
     { "keys": ["f11"], "command": "toggle_full_screen" },

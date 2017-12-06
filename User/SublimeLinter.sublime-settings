@@ -1,146 +1,145 @@
 {
-	"user":
+	"gutter_theme_excludes":
+	[
+	],
+	"linters":
 	{
-		"debug": true,
-		"delay": 0.5,
-		"error_color": "D02000",
-		"gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
-		"gutter_theme_excludes":
-		[
-		],
-		"lint_mode": "background",
-		"linters":
+		"flake8":
 		{
-			"flake8":
-			{
-				"@disable": false,
-				"args":
-				[
-				],
-				"builtins": "",
-				"excludes":
-				[
-					"*/sublime_text_3/*"
-				],
-				"executable": "",
-				"ignore": "",
-				"jobs": "1",
-				"max-complexity": -1,
-				"max-line-length": null,
-				"select": "",
-				"show-code": false
-			},
-			"php":
-			{
-				"@disable": false,
-				"args":
-				[
-				],
-				"excludes":
-				[
-					"*/vendor/*"
-				]
-			},
-			"phpcs":
-			{
-				"@disable": true,
-				"excludes":
-				[
-					"*/vendor/*"
-				],
-				"standard": "PSR2"
-			},
-			"pylint":
-			{
-				"excludes":
-				[
-					"*/vendor/*"
-				]
-			},
-			"python":
-			{
-				"@version": 3
-			}
+			"@disable": false,
+			"args":
+			[
+			],
+			"builtins": "",
+			"excludes":
+			[
+				"*/sublime_text_3/*"
+			],
+			"executable": "~/.local/bin/flake8",
+			"ignore": "",
+			"jobs": "1",
+			"max-complexity": -1,
+			"max-line-length": null,
+			"select": "",
+			"show-code": false
 		},
-		"mark_style": "solid underline",
-		"no_column_highlights_line": true,
-		"passive_warnings": true,
-		"paths":
+		"php":
 		{
-			"linux":
-			[
-				"~/.phpenv/versions/7.x/bin",
-				"~/.local/bin"
-			],
-			"osx":
+			"@disable": false,
+			"args":
 			[
 			],
-			"windows":
+			"excludes":
 			[
+				"*/vendor/*"
+			],
+			"executable": "~/.phpenv/versions/7.x/bin/php"
+		},
+		"phpcs":
+		{
+			"@disable": true,
+			"excludes":
+			[
+				"*/vendor/*"
+			],
+			"standard": "PSR2"
+		},
+		"pylint":
+		{
+			"excludes":
+			[
+				"*/vendor/*"
 			]
 		},
-		"python_paths":
+		"python":
 		{
-			"linux":
-			[
-			],
-			"osx":
-			[
-			],
-			"windows":
-			[
-			]
-		},
-		"rc_search_limit": 3,
-		"shell_timeout": 10,
-		"show_errors_on_save": false,
-		"show_marks_in_minimap": false,
-		"syntax_map":
-		{
-			"coffeescript (gulpfile)": "coffeescript",
-			"html (django)": "html",
-			"html (rails)": "html",
-			"html 5": "html",
-			"javascript (babel)": "javascript",
-			"javascript (eslint)": "javascript",
-			"javascript (gruntfile)": "javascript",
-			"javascript (gulpfile)": "javascript",
-			"javascript (postcss)": "javascript",
-			"javascript (puglint)": "javascript",
-			"javascript (stylelint)": "javascript",
-			"javascript (webpack)": "javascript",
-			"json (babel)": "json",
-			"json (bower)": "json",
-			"json (composer)": "json",
-			"json (eslint)": "json",
-			"json (npm)": "json",
-			"json (postcss)": "json",
-			"json (puglint)": "json",
-			"json (settings)": "json",
-			"json (stylelint)": "json",
-			"json (sublime)": "json",
-			"json (tern js)": "json",
-			"magicpython": "python",
-			"php": "html",
-			"python django": "python",
-			"pythonimproved": "python",
-			"xml (config)": "xml",
-			"xml (svg)": "xml",
-			"yaml (circleci)": "yaml",
-			"yaml (docker)": "yaml",
-			"yaml (eslint)": "yaml",
-			"yaml (lock)": "yaml",
-			"yaml (procfile)": "yaml",
-			"yaml (stylelint)": "yaml",
-			"yaml (yarn)": "yaml"
-		},
-		"tooltip_fontsize": "1rem",
-		"tooltip_theme": "none",
-		"tooltip_theme_excludes":
+			"@version": 3
+		}
+	},
+	"no_column_highlights_line": true,
+	"passive_warnings": true,
+	"paths":
+	{
+		"linux":
+		[
+			"~/.phpenv/versions/7.x/bin",
+			"~/.local/bin"
+		],
+		"osx":
 		[
 		],
-		"tooltips": true,
-		"warning_color": "DDB700",
-		"wrap_find": false
-	}
+		"windows":
+		[
+		]
+	},
+	"show_marks_in_minimap": false,
+	"styles":
+	[
+		{
+			"icon": "warning",
+			"mark_style": "fill",
+			"priority": 1,
+			"scope": "region.yellowish markup.warning.sublime_linter",
+			"types":
+			[
+				"warning"
+			]
+		},
+		{
+			"icon": "error",
+			"mark_style": "fill",
+			"priority": 1,
+			"scope": "region.redish markup.error.sublime_linter",
+			"types":
+			[
+				"error"
+			]
+		}
+	],
+	"syntax_map":
+	{
+		"coffeescript (gulpfile)": "coffeescript",
+		"html (django)": "html",
+		"html (rails)": "html",
+		"html 5": "html",
+		"javascript (babel)": "javascript",
+		"javascript (eslint)": "javascript",
+		"javascript (gruntfile)": "javascript",
+		"javascript (gulpfile)": "javascript",
+		"javascript (postcss)": "javascript",
+		"javascript (puglint)": "javascript",
+		"javascript (stylelint)": "javascript",
+		"javascript (webpack)": "javascript",
+		"json (babel)": "json",
+		"json (bower)": "json",
+		"json (composer)": "json",
+		"json (eslint)": "json",
+		"json (npm)": "json",
+		"json (postcss)": "json",
+		"json (puglint)": "json",
+		"json (settings)": "json",
+		"json (stylelint)": "json",
+		"json (sublime)": "json",
+		"json (tern js)": "json",
+		"magicpython": "python",
+		"php": "html",
+		"python django": "python",
+		"pythonimproved": "python",
+		"xml (config)": "xml",
+		"xml (svg)": "xml",
+		"yaml (circleci)": "yaml",
+		"yaml (docker)": "yaml",
+		"yaml (eslint)": "yaml",
+		"yaml (lock)": "yaml",
+		"yaml (procfile)": "yaml",
+		"yaml (stylelint)": "yaml",
+		"yaml (yarn)": "yaml"
+	},
+	"tooltip_fontsize": "1rem",
+	"tooltip_theme": "none",
+	"tooltip_theme_excludes":
+	[
+	],
+	"tooltips": true,
+	"wrap_find": false
 }

@@ -3,9 +3,9 @@
     { "caption": "Man", "command": "man" },
 
     // Open Sesame
-    { "caption": "Open Sesame: Add Vendor", "command": "open_sesame_add_project", "args": { "path": "~/vendor" } },
-    { "caption": "Open Sesame: Open Vendor", "command": "open_sesame_open_project", "args": { "path": "~/vendor" } },
-    { "caption": "Open Sesame: Switch Vendor", "command": "open_sesame_switch_project", "args": { "path": "~/vendor" } },
+    { "caption": "Sesame: Add Vendor", "command": "sesame_add", "args": { "path": "~/vendor" } },
+    { "caption": "Sesame: Open Vendor", "command": "sesame_open", "args": { "path": "~/vendor" } },
+    { "caption": "Sesame: Switch Vendor", "command": "sesame_switch", "args": { "path": "~/vendor" } },
 
     // Refactor
     { "caption": "Refactor: Test - Coding Standard Fixer", "command": "refactor_test_coding_standard_fixer" },
