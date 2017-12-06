@@ -32,13 +32,13 @@
 	],
 	"always_show_minimap_viewport": false,
 	"animation_enabled": false,
-	"auto_complete_delay": 0,
+	"auto_complete_delay": 10,
 	"auto_complete_with_fields": true,
 	"auto_upgrade": false,
 	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,
 	"caret_extra_width": 0,
-	"caret_style": "blink",
+	"caret_style": "solid",
 	"color_scheme": "Packages/MonokaiFree/MonokaiFree.tmTheme",
 	"color_scheme_unit.coverage": true,
 	"debug": false,
@@ -168,7 +168,7 @@
 	],
 	"font_face": "Source Code Pro",
 	"font_facex": "Fira Code",
-	"font_size": 10,
+	"font_size": 11,
 	"git_gutter_enable_hover_diff_popup": false,
 	"git_gutter_next_prev_change_wrap": false,
 	"git_gutter_show_in_minimap": 0,
@@ -176,9 +176,9 @@
 	"git_gutter_show_status_bar_text": true,
 	"git_gutter_status_bar_text":
 	[
-		"{% if inserted > 0 %}+{{inserted}} {% endif %}",
-		"{% if modified > 0 %}~{{modified}} {% endif %}",
-		"{% if deleted > 0 %}-{{deleted}} {% endif %}",
+		"+{{inserted}} ",
+		"~{{modified}} ",
+		"-{{deleted}} ",
 		"⎇ {{branch}}",
 		"{% if modified_files or added_files or deleted_files or staged_files %} ",
 		"{% if modified_files %}*{% elif deleted_files %}*{% endif %}",
@@ -205,6 +205,7 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
+		"LSP",
 		"php-grammar",
 		"Six",
 		"Vintage",
@@ -375,7 +376,7 @@
 	"match_brackets_angle": true,
 	"mouse_wheel_switches_tabs": false,
 	"neovintageous_disable_arrow_keys": false,
-	"overlay_scroll_bars": "disabled",
+	"overlay_scroll_bars": "enabled",
 	"phpunit.options":
 	{
 		"no-coverage": true
@@ -387,11 +388,12 @@
 	"rulers":
 	[
 	],
-	"save_on_focus_lost": false,
+	"save_on_focus_lost": true,
 	"show_definitions": false,
 	"show_encoding": true,
 	"show_errors_inline": false,
 	"show_full_path": true,
+	"show_legacy_color_schemes": true,
 	"show_line_endings": false,
 	"show_tab_close_buttons": true,
 	"submit_usage": false,
@@ -424,6 +426,7 @@
 	"vintageous_hlsearch": true,
 	"vintageous_reset_mode_when_switching_tabs": true,
 	"vintageous_use_ctrl_keys": true,
+	"vintageous_use_sys_clipboard": false,
 	"vintageous_verbose": true,
 	"vintageous_visualbell": false,
 	"vintageous_visualyank": false,

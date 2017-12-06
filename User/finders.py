@@ -1,4 +1,4 @@
-from sublime_plugin import WindowCommand
+import sublime_plugin
 
 
 def _find_in_open_folders(window, interactive=True):
@@ -22,24 +22,24 @@ def _find_in_open_folders(window, interactive=True):
         })
 
 
-class FindInOpenFoldersCommand(WindowCommand):
+class FindInOpenFoldersCommand(sublime_plugin.WindowCommand):
     def run(self):
         _find_in_open_folders(self.window)
 
 
-class FindAllInOpenFoldersCommand(WindowCommand):
+class FindAllInOpenFoldersCommand(sublime_plugin.WindowCommand):
     def run(self):
         _find_in_open_folders(self.window, interactive=False)
 
 
-class ShowFindInFilesCommand(WindowCommand):
+class ShowFindInFilesCommand(sublime_plugin.WindowCommand):
     def run(self):
         self.window.run_command('show_panel', {
             'panel': 'find_in_files'
         })
 
 
-class ShowFindResultsCommand(WindowCommand):
+class ShowFindResultsCommand(sublime_plugin.WindowCommand):
     def run(self):
         for view in self.window.views():
             if view.name() == 'Find Results':
@@ -51,7 +51,7 @@ class ShowFindResultsCommand(WindowCommand):
                 return self.window.focus_view(view)
 
 
-class HidePhantoms(WindowCommand):
+class HidePhantoms(sublime_plugin.WindowCommand):
 
     def run(self):
         self.window.run_command('exec', {

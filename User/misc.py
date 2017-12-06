@@ -3,11 +3,10 @@ import os
 from sublime import load_settings
 from sublime import packages_path
 from sublime import save_settings
-from sublime_plugin import TextCommand
-from sublime_plugin import WindowCommand
+import sublime_plugin
 
 
-class OpenPreferencesCommand(WindowCommand):
+class OpenPreferencesCommand(sublime_plugin.WindowCommand):
     def run(self):
         self.window.run_command('open_file', {
             'file': os.path.join(
@@ -18,21 +17,28 @@ class OpenPreferencesCommand(WindowCommand):
         })
 
 
-class Ruler(TextCommand):
+class RulersCommand(sublime_plugin.TextCommand):
     def run(self, edit, action):
         col = self.view.rowcol(self.view.sel()[0].begin())[1]
         if col > 0:
             queue_save = False
             preferences = load_settings('Preferences.sublime-settings')
             rulers = preferences.get('rulers')
+
             if action == 'add':
                 if col not in rulers:
                     rulers.append(col)
                     queue_save = True
-            if action == 'remove':
+            elif action == 'remove':
                 if col in rulers:
                     rulers.remove(col)
                     queue_save = True
+            elif action == 'clear':
+                if rulers != []:
+                    rulers = []
+                    queue_save = True
+            else:
+                raise Exception('unknown action')
 
             if queue_save:
                 rulers.sort()
@@ -40,14 +46,22 @@ class Ruler(TextCommand):
                 save_settings('Preferences.sublime-settings')
 
 
-class ShowCommandPaletteCommand(WindowCommand):
+class ShowGotoCommand(sublime_plugin.WindowCommand):
+    def run(self):
+        self.window.run_command('show_overlay', {
+            'overlay': 'goto',
+            'text': '@'
+        })
+
+
+class ShowCommandPaletteCommand(sublime_plugin.WindowCommand):
     def run(self):
         self.window.run_command('show_overlay', {
             'overlay': 'command_palette'
         })
 
 
-class ToggleDistractionFreeCommand(WindowCommand):
+class ToggleDistractionFreeCommand(sublime_plugin.WindowCommand):
     _is_active = False
     _original_is_menu_visible = False
 
@@ -63,7 +77,7 @@ class ToggleDistractionFreeCommand(WindowCommand):
             self._is_active = True
 
 
-class ToggleFullScreenCommand(WindowCommand):
+class ToggleFullScreenCommand(sublime_plugin.WindowCommand):
     _is_active = False
     _original_is_menu_visible = False
 
@@ -79,7 +93,7 @@ class ToggleFullScreenCommand(WindowCommand):
             self._is_active = True
 
 
-class ToggleTemporaryFolder(WindowCommand):
+class ToggleTemporaryFolderCommand(sublime_plugin.WindowCommand):
     def run(self):
         preferences = load_settings('Preferences.sublime-settings')
 
@@ -94,6 +108,15 @@ class ToggleTemporaryFolder(WindowCommand):
         preferences.set('folder_exclude_patterns', folder_exclude_patterns)
 
         save_settings('Preferences.sublime-settings')
+
+
+class FocusUnitTestingPanelCommand(sublime_plugin.WindowCommand):
+    def run(self):
+        name = 'output.UnitTesting'
+        self.window.run_command('show_panel', {'panel': name})
+
+        name = 'UnitTesting'
+        self.window.focus_view(self.window.find_output_panel(name))
 
 
 # TODO RenameFile()

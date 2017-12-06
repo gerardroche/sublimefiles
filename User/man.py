@@ -4,7 +4,7 @@ import re
 import webbrowser
 
 from sublime import status_message
-from sublime_plugin import WindowCommand
+import sublime_plugin
 
 
 def _man_path(window):
@@ -34,7 +34,7 @@ def _is_php_identifier(value):
     return re.match('^[a-zA-Z_][a-zA-Z0-9_]*$', value)
 
 
-class ManCommand(WindowCommand):
+class ManCommand(sublime_plugin.WindowCommand):
 
     def run(self):
         view = self.window.active_view()
@@ -67,7 +67,7 @@ class ManCommand(WindowCommand):
             webbrowser.open_new_tab('file://%s' % (manual))
 
 
-class ManGotoPhpCommand(WindowCommand):
+class ManGotoPhpCommand(sublime_plugin.WindowCommand):
 
     def run(self, remote=False):
         view = self.window.active_view()

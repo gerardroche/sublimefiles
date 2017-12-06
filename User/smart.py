@@ -1,9 +1,9 @@
 import re
 
-from sublime_plugin import TextCommand
+import sublime_plugin
 
 
-class SmartInsertNewlineCommand(TextCommand):
+class SmartInsertNewlineCommand(sublime_plugin.TextCommand):
     """
     Insert newline if the next line is not blank.
 

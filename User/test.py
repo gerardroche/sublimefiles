@@ -2,10 +2,10 @@ import os
 
 from sublime import packages_path
 from sublime import status_message
-from sublime_plugin import WindowCommand
+import sublime_plugin
 
 
-class PythonTestSwitchCommand(WindowCommand):
+class PythonTestSwitchCommand(sublime_plugin.WindowCommand):
 
     def run(self):
         view = self.window.active_view()

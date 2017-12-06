@@ -12,14 +12,13 @@ from sublime import log_result_regex
 from sublime import packages_path
 from sublime import save_settings
 from sublime import status_message
-from sublime_plugin import ApplicationCommand
-from sublime_plugin import TextCommand
+import sublime_plugin
 
 
 _DEBUG = bool(os.getenv('SUBLIME_DEBUG'))
 
 
-_DEBUGGING_PREFERENCES = [
+_DEBUGABLE_PLUGINS = [
     'color_scheme_unit.debug',
     'docblockr.debug',
     'git_gutter_debug',
@@ -28,7 +27,7 @@ _DEBUGGING_PREFERENCES = [
     'php-grammar.debug',
     'phpunit.debug',
     'sesame.debug',
-    'sulimelinter_debug',
+    ('SublimeLinter', 'debug'),
     'test.debug',
     'user.debug',
     'vintageous_debug'
@@ -52,45 +51,80 @@ def _create_debug_indicator_file():
         f.write('')
 
 
-def _toggle_debug_mode():
+def _is_debug_mode():
     global _DEBUG
 
-    _DEBUG = not _DEBUG
-
     if _DEBUG:
+        return True
+
+    if _debug_indicator_file_exists():
+        return True
+
+    return False
+
+
+def _set_debug(flag):
+    print('Debug: set debug', flag)
+    log_commands(flag)
+    log_input(flag)
+
+    if flag:
         if not _debug_indicator_file_exists():
             _create_debug_indicator_file()
     else:
         if _debug_indicator_file_exists():
             _remove_debug_indicator_file()
 
-    _init_debug(_DEBUG)
-
-    status_message('Debug is ' + 'enabled' if _DEBUG else 'disabled')
-
-
-def _is_debug_mode():
-    global _DEBUG
-
-    if _debug_indicator_file_exists():
-        _DEBUG = True
-
-    return _DEBUG
-
-
-def _init_debug(flag):
-    log_commands(flag)
-    log_input(flag)
-
     preferences = load_settings('Preferences.sublime-settings')
+    plugins = {}
 
-    for debug_preference in _DEBUGGING_PREFERENCES:
-        if flag:
-            preferences.set(debug_preference, True)
+    for debug_preference in _DEBUGABLE_PLUGINS:
+        print('Debug: {} \'{}\' debug mode'.format('enabling' if flag else 'disabling', debug_preference))
+
+        if isinstance(debug_preference, tuple):
+            plugin_name = debug_preference[0]
+            plugins[plugin_name] = load_settings(plugin_name + '.sublime-settings')
+            if flag:
+                plugins[plugin_name].set(debug_preference[1], True)
+            else:
+                plugins[plugin_name].erase(debug_preference[1])
         else:
-            preferences.erase(debug_preference)
+            if flag:
+                preferences.set(debug_preference, True)
+            else:
+                preferences.erase(debug_preference)
+
+    for plugin in plugins.keys():
+        save_settings(plugin + '.sublime-settings')
 
     save_settings('Preferences.sublime-settings')
+
+
+def _toggle_debug(setting=None):
+    if setting is not None:
+        if isinstance(setting, tuple):
+            settings_name = setting[0] + '.sublime-settings'
+            preferences = load_settings(settings_name)
+            setting = setting[1]
+        else:
+            settings_name = 'Preferences.sublime-settings'
+            preferences = load_settings(settings_name)
+
+        flag = not preferences.get(setting)
+        if flag:
+            preferences.set(setting, True)
+        else:
+            preferences.erase(setting)
+
+        save_settings(settings_name)
+
+        return flag
+    else:
+        global _DEBUG
+        _DEBUG = not _DEBUG
+        _set_debug(_DEBUG)
+
+        return _DEBUG
 
 
 def plugin_loaded():
@@ -102,14 +136,19 @@ def plugin_loaded():
 
         print('User: >>>')
         print('=> Debug is enabled'.format())
-        print('=> Python v{}.{}.{} {}{}'.format(sys.version_info[0], sys.version_info[1], sys.version_info[2], sys.version_info[3], sys.version_info[4]))
+        print('=> Python v{}.{}.{} {}{}'.format(
+            sys.version_info[0],
+            sys.version_info[1],
+            sys.version_info[2],
+            sys.version_info[3],
+            sys.version_info[4]))
         print('=> {}'.format(sys.flags))
         print('=> abiflags are {}'.format(sys.abiflags))
         print('=> path is {}'.format(sys.path))
         print('=> __debug__ is {}'.format(__debug__))
         print('<<<')
 
-        _init_debug(True)
+        _set_debug(True)
 
         window = active_window()
         if not window:
@@ -146,13 +185,25 @@ def plugin_loaded():
                     ))
 
 
-class ToggleDebugModeCommand(ApplicationCommand):
+class DebugApplicationCommand(sublime_plugin.ApplicationCommand):
+    def run(self, action):
+        if action == 'toggle':
+            status = _toggle_debug()
+            status_message('Debug is ' + 'enabled' if status else 'disabled')
+        elif action == 'toggle_plugin':
+            self.toggle_plugins = [str(p) for p in _DEBUGABLE_PLUGINS]
+            self.window = active_window()
+            self.window.show_quick_panel(self.toggle_plugins, self._toggle_plugin_on_done)
+        else:
+            raise Exception('unknown action')
 
-    def run(self):
-        _toggle_debug_mode()
+    def _toggle_plugin_on_done(self, index):
+        if index >= 0:
+            status = _toggle_debug(_DEBUGABLE_PLUGINS[index])
+            status_message('Debug is ' + 'enabled' if status else 'disabled')
 
 
-class DebugViewToScopeCommand(TextCommand):
+class DebugViewToScopeCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         scopes = []
         for point in range(self.view.size()):
@@ -163,7 +214,7 @@ class DebugViewToScopeCommand(TextCommand):
         print('<<<')
 
 
-class DebugViewCommand(TextCommand):
+class DebugViewCommand(sublime_plugin.TextCommand):
 
     def run(self, edit=None):
         view = self.view
@@ -212,7 +263,7 @@ class DebugViewCommand(TextCommand):
             #   i, view.substr(view.indented_region(sel.begin()))))
 
 
-class DumpNeovintageousSettings(TextCommand):
+class DumpNeovintageousSettings(sublime_plugin.TextCommand):
 
     def run(self, edit):
 

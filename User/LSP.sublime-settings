@@ -1,0 +1,25 @@
+// Settings in here override those in "LSP/LSP.sublime-settings",
+
+{
+    "clients": {
+        "pyls": {
+            "command": ["~/.local/bin/pyls"],
+            "scopes": ["source.python"],
+            "syntaxes": ["Packages/Python/Python.sublime-syntax"],
+            "languageId": "python"
+        },
+        "phpls": {
+            "command": ["php", "~/vendor/felixfbecker/php-language-server/bin/php-language-server.php", "--memory-limit=256M"],
+            "scopes": ["source.php", "embedding.php"],
+            "syntaxes": ["Packages/PHP/PHP.sublime-syntax"],
+            "languageId": "php"
+        }
+    },
+    "auto_show_diagnostics_panel": false,
+    "complete_all_chars": true,
+    "only_show_lsp_completions": false,
+    "show_diagnostics_phantoms": false,
+    "log_debug": true,
+    "log_server": true,
+    "log_stderr": true
+}

@@ -1,10 +1,13 @@
 [
-    { "caption": "New File - PHP", "command": "tree_view_new_php_file", "args": { "dirs": [] } },
-    { "caption": "New File - PHTML", "command": "tree_view_new_phtml_file", "args": { "dirs": [] } },
-    { "caption": "New File - PHPUnit Test Case", "command": "tree_view_new_phpunit_test_case_file", "args": { "dirs": [] } },
-    { "caption": "New File - Python", "command": "tree_view_new_python_file", "args": { "dirs": [] } },
-    { "caption": "Duplicate…", "command": "tree_view_duplicate", "args": { "files": [] } },
-    { "caption": "Move…", "command": "tree_view_move", "args": { "files": [] } },
+    { "caption": "Duplicate...", "command": "tree_duplicate", "args": { "files": [] } },
+    { "caption": "Move...", "command": "tree_move", "args": { "files": [] } },
+    { "caption": "New File (basic)", "command": "tree_new_file" },
+    { "caption": "New File - HTML", "command": "tree_new_html_file", "args": { "dirs": [] } },
+    { "caption": "New File - Markdown", "command": "tree_new_markdown_file", "args": { "dirs": [] } },
+    { "caption": "New File - PHP", "command": "tree_new_php_file", "args": { "dirs": [] } },
+    { "caption": "New File - PHPUnit TestCase", "command": "tree_new_phpunit_test_case_file", "args": { "dirs": [] } },
+    { "caption": "New File - PHTML", "command": "tree_new_phtml_file", "args": { "dirs": [] } },
+    { "caption": "New File - Python", "command": "tree_new_python_file", "args": { "dirs": [] } },
     { "caption": "-", "id": "folder_commands" },
     { "caption": "Refresh Folders", "command": "refresh_folder_list" }
 ]

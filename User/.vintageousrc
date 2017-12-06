@@ -2,8 +2,8 @@
 
 let mapleader=,
 
-" Enter command line mode.
-nnoremap <space> :
+" " Enter command line mode.
+" nnoremap <space> :
 
 " Toggle the side bar.
 nnoremap <leader>d :ToggleSideBar<CR>
@@ -28,9 +28,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 
-" Stop the highlighting
-" The :nohlsearch ex command is currently not
-" supported. Pressing Esc is workaround.
+" Stop the highlighting for the 'hlsearch' option. It is automatically turned
+" back on when using a search command, or setting the 'hlsearch' option.
+" :nohlsearch is currently not supported. Pressing Esc is workaround.
 nnoremap <C-l> <Esc>
 
 " Yank and paste using system clipboard.
@@ -55,22 +55,24 @@ snoremap i <Esc>i
 
 " Folds
 nnoremap zc :Fold<CR>
-nnoremap zo :Unfold<CR>
 nnoremap zM :FoldAll<CR>
+nnoremap zo :Unfold<CR>
 nnoremap zR :UnfoldAll<CR>
 
-" Reveal
+" Window command leader aliases
+nnoremap <leader>_ <C-w>_
+nnoremap <leader>\| <C-w>\|
+nnoremap <leader>= <C-w>=
+nnoremap <leader>. <C-w>_<C-w>\|
+
+" Misc.
 nnoremap <leader>f :RevealInSideBar<CR>
-
-" <leader>h{char}
-nnoremap <leader>hp :HidePhantoms<CR>
-
-" <leader>o{char}
+nnoremap <leader>h :HidePhantoms<CR>
+nnoremap <leader>m :GotoSymbolInProject<CR>
 nnoremap <leader>oc :ShowCommandPalette<CR>
+nnoremap <leader>og :ShowGoto<CR>
 nnoremap <leader>on :NeovintageousOpenMyRcFile<CR>
 nnoremap <leader>op :OpenPreferences<CR>
-
-" <leader>s{char}
 nnoremap <leader>sf :ShowFindInFiles<CR>
 nnoremap <leader>sr :ShowFindResults<CR>
 nnoremap <leader>ss vip<F9>o^<Esc>^8<C-y>
@@ -78,11 +80,23 @@ nnoremap <leader>ss vip<F9>o^<Esc>^8<C-y>
 " Test plugin
 " https://github.com/gerardroche/sublime-test
 " https://github.com/gerardroche/sublime-phpunit
+" https://github.com/gerardroche/sublime-color-scheme-unit
+" https://github.com/randy3k/UnitTesting
 nnoremap <leader>t :TestNearest<CR>
 nnoremap <leader>T :TestFile<CR>
 nnoremap <leader>a :TestSuite<CR>
 nnoremap <leader>l :TestLast<CR>
 nnoremap <leader>g :TestVisit<CR>
+
+" AceJump plugin
+" https://packagecontrol.io/packages/AceJump
+nnoremap <leader><leader>a :AceJumpAfter<CR>
+nnoremap <leader><leader>c :AceJumpChar<CR>
+nnoremap <leader><leader>d :AceJumpAddCursor<CR>
+nnoremap <leader><leader>i :AceJumpWithinLine<CR>
+nnoremap <leader><leader>l :AceJumpLine<CR>
+nnoremap <leader><leader>s :AceJumpSelect<CR>
+nnoremap <leader><leader>w :AceJumpWord<CR>
 
 " ColorSchemeUnit plugin
 " https://github.com/gerardroche/sublime-color-scheme-unit

@@ -1,13 +1,13 @@
 import re
 import webbrowser
 
-from sublime_plugin import TextCommand
+import sublime_plugin
 
 
-_GITHUB_USER_REPO_REGEX = re.compile('[a-zA-Z0-9-_]+\/[a-zA-Z0-9-_]+')
+_GITHUB_USER_REPO_REGEX = re.compile('[a-zA-Z0-9-_]+\\/[a-zA-Z0-9-_]+')
 
 
-class OpenGithubUrlCommand(TextCommand):
+class OpenGithubUrlCommand(sublime_plugin.TextCommand):
 
     def run(self, edit, event):
         url = self.find_url(event)
