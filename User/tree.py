@@ -72,36 +72,37 @@ class TreeDuplicateCommand(sublime_plugin.WindowCommand):
             return
 
         if not os.path.isfile(files[0]):
-            _error_message('Unable to duplicate: invalid file')
-            return
+            return _error_message('Unable to duplicate: invalid file')
 
         file = files[0]
-
         head, tail = os.path.split(file)
         root, ext = os.path.splitext(tail)
         new_tail = root + ' (Copy)' + ext
+        duplicate_file = os.path.join(head, new_tail)
 
         input_panel = self.window.show_input_panel(
             'Duplicate:',
-            new_tail,
-            partial(self.on_done, file, head),
+            duplicate_file,
+            partial(self.on_done, file),
             None,
-            None
-        )
+            None)
 
-        input_panel.sel().clear()
-        input_panel.sel().add(Region(0, len(new_tail) - (len(ext))))
+        sel = input_panel.sel()
+        sel.clear()
+        sel.add(Region(len(head) + 1, len(duplicate_file) - (len(ext))))
 
-    def on_done(self, file, new_head, new_tail):
-        new_file = os.path.join(new_head, new_tail)
-
+    def on_done(self, file, duplicate_file):
         try:
-            if os.path.exists(new_file):
+            duplicate_file_dirname = os.path.dirname(duplicate_file)
+            if not os.path.exists(duplicate_file_dirname):
+                os.makedirs(duplicate_file_dirname)
+
+            if os.path.exists(duplicate_file):
                 raise OSError('file already exists')
 
-            shutil.copy2(file, new_file)
+            shutil.copy2(file, duplicate_file)
 
-            self.window.open_file(new_file)
+            self.window.open_file(duplicate_file)
 
         except Exception as e:
             _error_message('Unable to duplicate: ' + str(e))
@@ -119,8 +120,6 @@ class NewFileMixin():
         pass
 
     def run(self, dirs=None):
-        print('Tree: run() dirs =', dirs)
-
         if dirs is None:
             view = self.window.active_view()
             if not view:
@@ -135,8 +134,6 @@ class NewFileMixin():
         if len(dirs) != 1:
             raise ValueError('one directory is required')
 
-        print('Tree: dirs =', dirs)
-
         self.init()
 
         if self.extension and '.' not in self.extension:
@@ -149,11 +146,11 @@ class NewFileMixin():
             initial_text,
             partial(self.on_done, dirs[0]),
             None,
-            None
-        )
+            None)
 
-        input_panel.sel().clear()
-        input_panel.sel().add(Region(0, len(initial_text) - (len(initial_text))))
+        sel = input_panel.sel()
+        sel.clear()
+        sel.add(Region(0, len(initial_text) - (len(initial_text))))
 
     def on_done(self, dir, file):
         file = os.path.join(dir, file)
@@ -178,9 +175,6 @@ class NewFileMixin():
 
         set_timeout_async(lambda: _insert_best_completion_async())
 
-
-class TreeNewFileAdvancedCommand(NewFileMixin, sublime_plugin.WindowCommand):
-    pass
 
 class TreeNewFileCommand(NewFileMixin, sublime_plugin.WindowCommand):
     pass

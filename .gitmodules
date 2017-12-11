@@ -82,3 +82,6 @@
 [submodule "SublimeTextAPICompletions"]
 	path = SublimeTextAPICompletions
 	url = https://github.com/gerardroche/sublime-api-completions.git
+[submodule "Python Completions"]
+	path = Python Completions
+	url = https://github.com/gerardroche/Python-Auto-Complete.git

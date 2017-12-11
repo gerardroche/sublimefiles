@@ -111,6 +111,6 @@ return Symfony\CS\Config\Config::create()
         ->in(__DIR__));
 ]]></content>
     <tabTrigger>phpcs</tabTrigger>
-    <scope>text.plain, embedding.php - comment - variable</scope>
+    <scope>text.plain, embedding.php - comment - variable - punctuation.section.embedded.begin</scope>
     <description>PHP - PHP CS Fixer - .php_cs</description>
 </snippet>

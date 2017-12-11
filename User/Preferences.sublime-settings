@@ -206,7 +206,6 @@
 	"ignored_packages":
 	[
 		"LSP",
-		"php-grammar",
 		"Six",
 		"Vintage",
 		"Vintageous"
