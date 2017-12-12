@@ -9,6 +9,11 @@ from sublime import set_timeout_async
 import sublime_plugin
 
 
+# When you see something you like and would like to use it, open an issue about
+# abstracting it out into a reusable package, possibly installable via Package
+# Control.
+
+
 def _error_message(msg):
     print('Tree:', msg)
     error_message(msg)

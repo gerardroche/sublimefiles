@@ -1,5 +1,4 @@
 {
-	"adaptive_dividers": true,
 	"added_words":
 	[
 		"Changelog",
@@ -50,9 +49,9 @@
 	"docblockr.return_description": false,
 	"docblockr.short_primitives": true,
 	"docblockr.spacer_between_sections": true,
-	"docblockr.tests_php_syntax_file": "Packages/php-grammar/PHP.sublime-syntax",
 	"draw_minimap_border": true,
 	"draw_white_space": "selection",
+	"draw_white_space_disabled_default": "none",
 	"enable_telemetry": false,
 	"fade_fold_buttons": false,
 	"file_exclude_patterns":
@@ -164,15 +163,17 @@
 		"libsource/sublime_text_3/Packages",
 		"logs",
 		"nbproject",
-		"sublime_text_3/Icon"
+		"sublime_text_3/Icon",
+		"tmp"
 	],
 	"font_face": "Source Code Pro",
 	"font_facex": "Fira Code",
 	"font_size": 11,
+	"font_size_default": 11,
 	"git_gutter_enable_hover_diff_popup": false,
 	"git_gutter_next_prev_change_wrap": false,
 	"git_gutter_show_in_minimap": 0,
-	"git_gutter_show_markers_on_untracked_file": false,
+	"git_gutter_show_markers_on_untracked_file": true,
 	"git_gutter_show_status_bar_text": true,
 	"git_gutter_status_bar_text":
 	[
@@ -205,23 +206,31 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
+		"AutoWrap",
 		"LSP",
+		"SASS",
 		"Six",
+		"SublimeLinter",
+		"SublimeLinter-contrib-php-cs-fixer",
+		"SublimeLinter-phpcs",
 		"Vintage",
 		"Vintageous"
 	],
 	"ignored_words":
 	[
 		"Alt",
+		"Args",
 		"Ctrl",
 		"Esc",
 		"Github",
 		"Goto",
 		"Keybindings",
+		"Laravel",
 		"Modeline",
 		"Monokai",
 		"Mylyn",
 		"Polyfill",
+		"Sass",
 		"Ubuntu",
 		"Uppercase",
 		"Username",
@@ -261,6 +270,7 @@
 		"hyperlinks",
 		"img",
 		"ini",
+		"int",
 		"io",
 		"jisaacks",
 		"json",
@@ -277,9 +287,11 @@
 		"modeline",
 		"molokai",
 		"monokai",
+		"msg",
 		"nmap",
 		"nnoremap",
 		"nohlsearch",
+		"noqa",
 		"noremap",
 		"omap",
 		"onoremap",
@@ -302,6 +314,7 @@
 		"splitright",
 		"sqlite",
 		"src",
+		"str",
 		"subl",
 		"sublimetext",
 		"svg",
@@ -313,6 +326,7 @@
 		"textarea",
 		"todo",
 		"travis",
+		"tuple",
 		"txt",
 		"uninstall",
 		"uppercase",
@@ -330,6 +344,10 @@
 	],
 	"indent_guide_options":
 	[
+	],
+	"indent_guide_options_default":
+	[
+		"draw_normal"
 	],
 	"index_exclude_patterns":
 	[
@@ -381,9 +399,10 @@
 		"no-coverage": true
 	},
 	"polyfill.experimental_features": true,
-	"preview_on_click": false,
+	"preview_on_click": true,
 	"remember_full_screen": true,
 	"remember_open_files": true,
+	"ruler_column": 80,
 	"rulers":
 	[
 	],
@@ -416,18 +435,17 @@
 	"ui_sidebar_highlight_row": true,
 	"ui_wide_scrollbars": true,
 	"update_check": false,
-	"user.debug.neovintageous":
-	{
-		"level": "debug"
-	},
 	"vintage_ctrl_keys": true,
 	"vintage_start_in_command_mode": false,
 	"vintageous_hlsearch": true,
+	"vintageous_magic": true,
+	"vintageous_modeline": true,
 	"vintageous_reset_mode_when_switching_tabs": true,
 	"vintageous_use_ctrl_keys": true,
+	"vintageous_use_super_keys": true,
 	"vintageous_use_sys_clipboard": false,
 	"vintageous_verbose": true,
-	"vintageous_visualbell": false,
-	"vintageous_visualyank": false,
+	"vintageous_visualbell": true,
+	"vintageous_visualyank": true,
 	"word_wrap": false
 }

@@ -4,46 +4,47 @@
 # operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile ~/.gitignore_global
 
-/.logs/
-/NeoVintageous/
-/User/Package Control.*-ca-bundle
-/User/Package Control.cache/
-/User/Package Control.last-run
-/User/UnitTesting.sublime-settings
-/User/UnitTesting/*/coverage
-/User/UnitTesting/schedule.json
+# ST dependencies.
 /coverage/
+/jsonschema/
 /markupsafe/
 /mdpopups/
 /pygments/
+/pymdownx/
 /python-jinja2/
 /python-markdown/
 /pyyaml/
-/tmp*/
-/zzz A File Icon zzz/
-/ayu/
-/Boxy Theme/
-/User/SublimeLinter/*.tmTheme
-/gruvbox/
-/PHP/
-/PHP
-/MonikaiTemp/
-/PackageDev/
-/ShellScript
-/XML
-/A File Icon/
+
+# Symlinked Packages
 /A File Icon
-/CSS
-/GitSyntaxes
-/pymdownx/
-/backrefs/
-/User/UnitTesting/
-/BracketHighlighter
-/Solarized Color Scheme
-/User/Color Highlighter/
-/Java
-/SublimeTests/
-/AceJump/
 /AceJump
-/LSP
-Syntax Highlighting for Sass
+/ShellScript
+
+# Packages
+/AutoWrap/
+/LSP/
+/SASS/
+/SublimeLinter-contrib-php-cs-fixer/
+/SublimeLinter-phpcs/
+/Syntax Highlighting for Sass/
+
+# PHP runtime generated (by php-snippets).
+/PHP/Snippets/
+
+# PHP runtime generated (by PHP Completions Kit)
+/PHP/PHP.sublime-completions
+
+# User
+/.logs/
+/tmp/
+/User/.neovintageous*
+/User/Color Highlighter/
+/User/Package Control.*-ca-bundle
+/User/Package Control.cache/
+/User/Package Control.last-run
+/User/SublimeLinter/*.tmTheme
+/User/UnitTesting.sublime-settings
+/User/UnitTesting/
+/User/UnitTesting/*/coverage
+/User/UnitTesting/schedule.json
+/zzz A File Icon zzz/

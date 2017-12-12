@@ -7,6 +7,12 @@ from sublime import status_message
 import sublime_plugin
 
 
+# When you see something you like and would like to use it, open an issue about
+# abstracting it out into a reusable package, possibly installable via Package
+# Control.
+
+
+
 def _man_path(window):
     view = window.active_view()
     settings = view.settings() if view else window.settings()
@@ -19,6 +25,7 @@ def _man_path(window):
     if env_projects_path:
         if not os.path.isdir(env_projects_path):
             raise RuntimeError('PROJECTS_PATH env is not a valid directory')
+
         path = path.replace('${PROJECTS_PATH}', env_projects_path)
 
     if not path:
@@ -48,7 +55,7 @@ class ManCommand(sublime_plugin.WindowCommand):
         manual_paths = []
         manual_names = []
         for manual_path in glob.glob(path + '/*/index.html'):
-            re_match_res = re.match('^.*\/([a-zA-Z0-9-_.]+)\/index.html$', manual_path)
+            re_match_res = re.match('^.*\\/([a-zA-Z0-9-_.]+)\\/index.html$', manual_path)
             if re_match_res:
                 manual_paths.append(manual_path)
                 manual_names.append(re_match_res.group(1))

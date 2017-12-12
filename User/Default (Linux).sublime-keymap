@@ -1,60 +1,69 @@
 [
+    // When you see something you like and would like to use it, open an issue
+    // about abstracting it out into a reusable package, possibly installable
+    // via Package Control.
 
-    // {"keys": ["ctrl+ñ"],
-    //     "command": "press_key", "args": {"key": "<C-ñ>"},
-    //     "context": [
-    //         {"key": "vi_command_mode_aware"},
-    //         {"key": "setting.vintageous_use_ctrl_keys"}
-    //     ]
-    // },
+    { "keys": ["ctrl+i"], "command": "user_input_panel" },
 
-    // {"keys": ["up"],        "command": "cycle_cmdline_history", "args": {"backwards": true},
-    // "context": [
-    //     {"key": "vi_is_cmdline"}
-    // ]},
+    { "keys": ["ctrl+c"], "command": "copy" },
 
-    // {   "keys": ["down"], "command": "_neovintageous_dev_cycle_history",
-    //     "args": {"type": "@", "backwards": false},
-    //     "context": [
-    //         {"key": "setting.cmdline-mode"}
-    //         // {"key": "vi_is_cmdline"}
-    //     ]},
-    // {   "keys": ["up"], "command": "_neovintageous_dev_cycle_history",
-    //     "args": {"type": "@", "backwards": true},
-    //     "context": [
-    //         {"key": "setting.cmdline-mode"}
-    //         // {"key": "vi_is_cmdline"}
-    //     ]},
-    // { "keys": ["ctrl+i"], "command": "_neovintageous_dev_command_line",
-    //     "args": {"type": "@"}
-    // },
-
-    // Custom
     { "keys": ["ctrl+'"], "command": "reveal_in_side_bar" },
-    { "keys": ["ctrl+s"], "command": "save" },
-    { "keys": ["shift+f10"], "command": "context_menu" }, // ST workaround/bugfix: fixes open content menu keymap
 
-    // Find
-    { "keys": ["ctrl+f3"], "command": "find_in_open_folders" },
-    { "keys": ["shift+f3"], "command": "find_all_in_open_folders" },
+    // Fix opening the context menu.
+    // See https://github.com/SublimeTextIssues/Core/issues/2128.
+    { "keys": ["shift+f10"], "command": "context_menu" },
 
-    // Open Sesame
-    { "keys": ["ctrl+alt+a"], "command": "sesame_add" },
-    { "keys": ["ctrl+alt+o"], "command": "sesame_open" },
-    { "keys": ["ctrl+alt+r"], "command": "sesame_remove" },
-    { "keys": ["ctrl+alt+s"], "command": "sesame_switch" },
-    { "keys": ["ctrl+alt+v"], "command": "sesame_open", "args": { "path": "~/vendor" } },
-
-    // Sesame
+    // Full screen tweaks.
     { "keys": ["f11"], "command": "toggle_full_screen" },
     { "keys": ["shift+f11"], "command": "toggle_distraction_free" },
 
-    // Man
+    // Initiative (User plugin).
+    {
+        "keys": [")"],
+        "command": "initiative",
+        "args": {"key": ")"},
+        "context": [
+            { "key": "initiative", "operator": "equal", "operand": true, "match_all": true },
+            { "key": "setting.command_mode", "operator": "equal", "operand": false },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
+            { "key": "has_prev_field", "operator": "equal", "operand": true, "match_all": true }
+        ]
+    },
+
+    // Find (User plugin).
+    { "keys": ["ctrl+f3"], "command": "find_in_open_folders" },
+    { "keys": ["shift+f3"], "command": "find_all_in_open_folders" },
+
+    // Man (User plugin).
     { "keys": ["f1"], "command": "goto_documentation", "context": [ { "key": "selector", "operator": "equal", "operand": "-embedding.php", "match_all": true } ]},
     { "keys": ["f1"], "command": "man_goto_php", "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
     { "keys": ["shift+f1"], "command": "man_goto_php", "args": {"remote": true},   "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
 
-    // Test
+    // Package: ColorSchemeUnit.
+    // See https://github.com/gerardroche/sublime-color-scheme-unit.
+    { "keys": ["ctrl+shift+alt+p"], "command": "color_scheme_unit_show_scope_name_and_styles" },
+
+    // Package: NeoVintageous.
+    // See https://github.com/NeoVintageous/NeoVintageous.
+    {
+        "keys": [",", "d"],
+        "command": "neovintageous_toggle_side_bar",
+        "context": [
+            { "key": "control", "operand": "sidebar_tree" }
+        ]
+    },
+
+    // Package: Sesame.
+    // See https://github.com/gerardroche/sublime-sesame.
+    { "keys": ["ctrl+alt+a"], "command": "sesame_add" },
+    { "keys": ["ctrl+alt+o"], "command": "sesame_open" },
+    { "keys": ["ctrl+alt+r"], "command": "sesame_remove" },
+    { "keys": ["ctrl+alt+s"], "command": "sesame_switch" },
+    // Custom ~/vendor directory commands.
+    { "keys": ["ctrl+alt+v"], "command": "sesame_open", "args": { "path": "~/vendor" } },
+
+    // Package: Test.
+    // See https://github.com/gerardroche/sublime-test.
     { "keys": ["ctrl+shift+a"], "command": "test_suite" },
     { "keys": ["ctrl+shift+c"], "command": "test_cancel" },
     { "keys": ["ctrl+shift+f"], "command": "test_file" },
@@ -64,24 +73,7 @@
     { "keys": ["ctrl+shift+s"], "command": "test_switch" },
     { "keys": ["ctrl+shift+v"], "command": "test_visit" },
 
-    // ColorSchemeUnit
-    { "keys": ["ctrl+shift+alt+p"], "command": "color_scheme_unit_show_scope_name_and_styles" },
-
-    // ToggleNeoVintageous
+    // Package: ToggleNeoVintageous.
+    // See https://github.com/NeoVintageous/ToggleNeoVintageous.
     { "keys": ["ctrl+alt+t"], "command": "toggle_neovintageous" },
-
-    // // ST workaround/bugfix: smarter insert newline on Enter
-    // {
-    //     "keys": ["enter"],
-    //     "command": "smarter_insert_newline",
-    //     "context": [
-    //         { "key": "setting.auto_indent", "operator": "equal", "operand": true },
-    //         { "key": "setting.command_mode", "operator": "equal", "operand": false },
-    //         { "key": "selector", "operator": "equal", "operand": "source.php", "match_all": true },
-    //         { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
-    //         { "key": "preceding_text", "operator": "regex_contains", "operand": "(\\{|\\[)\\s*$", "match_all": true },
-    //         { "key": "following_text", "operator": "regex_contains", "operand": "^\\s*$", "match_all": true }
-    //     ]
-    // },
-
 ]

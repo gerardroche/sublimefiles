@@ -3,6 +3,11 @@ import re
 import sublime_plugin
 
 
+# When you see something you like and would like to use it, open an issue about
+# abstracting it out into a reusable package, possibly installable via Package
+# Control.
+
+
 # https://stackoverflow.com/questions/1175208/elegant-python-function-to-convert-camelcase-to-snake-case
 def _convert_camelcase_to_underscore(word):
     s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', word)

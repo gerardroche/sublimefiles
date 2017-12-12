@@ -1,0 +1,18 @@
+{
+    "globals":
+    {
+        "background": "#1b1d1e",
+        "gutter": "#1b1d1e",
+        "gutter_foreground": "#7e8e919d",
+        "selection": "#e6db74",
+        "brackets_options": "foreground",
+        "bracket_contents_options": "foreground"
+    },
+    "rules":
+    [
+        {
+            "scope": "comment, punctuation.definition.comment",
+            "foreground": "#7e8e91"
+        }
+    ]
+}

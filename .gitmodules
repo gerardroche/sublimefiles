@@ -8,7 +8,7 @@
 	path = sensible
 	url = https://github.com/gerardroche/sublime-sensible.git
 [submodule "php-grammar"]
-	path = php-grammar
+	path = PHPGrammar
 	url = https://github.com/gerardroche/sublime-php-grammar.git
 [submodule "php-snippets"]
 	path = php-snippets
