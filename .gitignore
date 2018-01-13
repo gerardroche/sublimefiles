@@ -48,3 +48,6 @@
 /User/UnitTesting/*/coverage
 /User/UnitTesting/schedule.json
 /zzz A File Icon zzz/
+/SublimeLinter-contrib-mypy/
+*.pyi
+/SublimeLinter-annotations/

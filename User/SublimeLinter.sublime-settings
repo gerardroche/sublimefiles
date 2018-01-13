@@ -1,7 +1,11 @@
 {
-	"debug": true,
+	"lint_mode": "background",
 	"linters":
 	{
+		"annotations":
+		{
+			"disable": true
+		},
 		"flake8":
 		{
 			"excludes":
@@ -11,8 +15,18 @@
 			],
 			"executable": "~/.local/bin/flake8"
 		},
+		"mypy":
+		{
+			"excludes":
+			[
+				"*/vendor/*",
+				"*/sublime_text_3/*"
+			],
+			"executable": "~/.local/bin/mypy"
+		},
 		"php":
 		{
+			"disable": true,
 			"excludes":
 			[
 				"*/vendor/*"
@@ -20,19 +34,17 @@
 		},
 		"phpcs":
 		{
+			"disable": true,
 			"excludes":
 			[
 				"*/vendor/*"
-			]
+			],
+			"executable": "~/.phpenv/versions/7.2.0/bin"
 		}
 	},
 	"no_column_highlights_line": true,
 	"paths":
 	{
-		"linux":
-		[
-			"~/.phpenv/versions/7.x/bin"
-		]
 	},
 	"styles":
 	[
@@ -56,6 +68,5 @@
 				"error"
 			]
 		}
-	],
-	"wrap_find": false
+	]
 }

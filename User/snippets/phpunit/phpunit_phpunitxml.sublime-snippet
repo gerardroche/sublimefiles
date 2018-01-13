@@ -45,5 +45,5 @@
 ]]></content>
     <tabTrigger>phpunitxml</tabTrigger>
     <scope>text.xml, text.plain</scope>
-    <description>PHPUnit: xml configuration declaration</description>
+    <description>PHPUnit: xml configuration</description>
 </snippet>

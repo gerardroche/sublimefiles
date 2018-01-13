@@ -48,6 +48,12 @@ noremap <leader>yy "+Y
 nnoremap <leader>va ggvGg_
 nnoremap <leader>Va ggVG
 
+" Maintain Visual Mode after shifting > and <.
+" Notice that '<lt>' is used to represent a real '<', because like a
+" backslash, it needs to be escaped. See `:h <>`.
+vnoremap <lt> <lt>gv
+vnoremap > >gv
+
 " Goto to symbols.
 nnoremap <leader>f :GotoSymbolInFile<CR>
 nnoremap <leader>m :GotoSymbolInProject<CR>
@@ -75,11 +81,12 @@ nnoremap <leader>l :TestLast<CR>
 nnoremap <leader>gg :TestVisit<CR>
 
 " -----------------------------------------------------------------------------
-" Here be dragons!
+" !!! HERE BE DRAGONS !!!
 "
 " Everything beyond here is either experimental or very customised to my own
 " personal workflow. So DON'T JUST COPY AND PASTE THIS STUFF. Make sure you
 " understand the mappings.
+"
 " -----------------------------------------------------------------------------
 
 " Multiple cursors.
@@ -108,12 +115,12 @@ nnoremap zR :UnfoldAll<CR>
 
 " Sorting.
 " TODO Add `:sort u` Neovintageous ex command.
-nnoremap <leader>ss vip<F9>o^<Esc>^8<C-y>
+vnoremap <leader>sl <F9>o<Esc>
+nnoremap <leader>ss vip<F9>o<Esc>
 
 " It's a Bird... It's a Plane...
 nnoremap <D-n> :TestNearest<CR>
 nnoremap <D-i> :GotoSymbolInProject<CR>
-nnoremap <D-w>j <C-w>s<C-w>k<C-w>c<C-w>j<CR>
 
 " AceJump plugin
 " https://packagecontrol.io/packages/AceJump
@@ -133,6 +140,9 @@ nnoremap <leader>is :ColorSchemeUnitInsertSyntaxAssertions<CR>
 " Gimmie Shelter.
 nnoremap <leader>gi :FormatGithubUrl<CR>
 nnoremap <leader>go :GitOpen<CR>
+nnoremap <leader>gt :TaskList<CR>
 
 " Fuck it.
 nnoremap <leader>vd :VarDump<CR>
+
+nnoremap <leader><leader>f :FocusUnitTestingPanel<CR>

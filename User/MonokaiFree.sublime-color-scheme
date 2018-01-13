@@ -5,6 +5,7 @@
         "gutter": "#1b1d1e",
         "gutter_foreground": "#7e8e919d",
         "selection": "#e6db74",
+        "inactive_selection": "#e6db74",
         "brackets_options": "foreground",
         "bracket_contents_options": "foreground"
     },
@@ -13,6 +14,10 @@
         {
             "scope": "comment, punctuation.definition.comment",
             "foreground": "#7e8e91"
+        },
+        {
+            "scope": "output.sublime_linter markup.changed.sublime_linter markup.warning.sublime_linter, output.sublime_linter markup.deleted.sublime_linter markup.error.sublime_linter",
+            "background": "#1b1d1e"
         }
     ]
 }

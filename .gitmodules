@@ -5,13 +5,13 @@
 	path = polyfill
 	url = https://github.com/gerardroche/sublime-polyfill.git
 [submodule "sensible"]
-	path = sensible
+	path = Sensible
 	url = https://github.com/gerardroche/sublime-sensible.git
 [submodule "php-grammar"]
 	path = PHPGrammar
 	url = https://github.com/gerardroche/sublime-php-grammar.git
 [submodule "php-snippets"]
-	path = php-snippets
+	path = PHPSnippets
 	url = https://github.com/gerardroche/sublime-php-snippets.git
 [submodule "phpunit-completions"]
 	path = phpunit-completions
@@ -85,3 +85,6 @@
 [submodule "Python Completions"]
 	path = Python Completions
 	url = https://github.com/gerardroche/Python-Auto-Complete.git
+[submodule ".mypy_stubs"]
+	path = .mypy_stubs
+	url = https://github.com/gerardroche/sublime-mypy-stubs.git

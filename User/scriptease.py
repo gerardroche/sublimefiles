@@ -1,20 +1,13 @@
-import functools
-import logging
 import os
 import re
 import sys
 
 from sublime import active_window
-from sublime import load_resource
 from sublime import load_settings
-from sublime import log_build_systems
 from sublime import log_commands
-from sublime import log_indexing
 from sublime import log_input
-from sublime import log_result_regex
 from sublime import packages_path
 from sublime import save_settings
-from sublime import set_timeout_async
 from sublime import status_message
 import sublime_plugin
 
@@ -30,7 +23,7 @@ _DEBUG = bool(os.getenv('SUBLIME_DEBUG'))
 _DEBUG_EVENTS = False
 
 
-_DEBUGABLE_PLUGINS = [
+_debug_plugins_meta = [
     'autohide_sidebar_verbose_logging',
     'color_scheme_unit.debug',
     'docblockr.debug',
@@ -48,6 +41,9 @@ _DEBUGABLE_PLUGINS = [
 
 
 def _debug_indicator_file_name():
+    # We have to use a function to generate (rather than doing it at  module
+    # level) because the the Sublime Text API `sublime.package_path` is not
+    # available until all plugins are loaded.
     return os.path.join(packages_path(), 'User', '.debug')
 
 
@@ -55,56 +51,42 @@ def _debug_indicator_file_exists():
     return os.path.isfile(_debug_indicator_file_name())
 
 
-def _remove_debug_indicator_file():
-    os.remove(_debug_indicator_file_name())
-
-
-def _create_debug_indicator_file():
-    with open(_debug_indicator_file_name(), 'w+', encoding='utf8') as f:
-        f.write('')
-
-
-def _is_debug_mode():
-    global _DEBUG
-
-    if _DEBUG:
-        return True
-
-    if _debug_indicator_file_exists():
-        return True
-
-    return False
-
-
 def _set_debug_mode(flag):
     log_commands(flag)
     log_input(flag)
 
-    if flag:
-        if not _debug_indicator_file_exists():
-            _create_debug_indicator_file()
+    # Create or remove the debug indicator file.
+    if _debug_indicator_file_exists():
+        if not flag:
+            os.remove(_debug_indicator_file_name())
     else:
-        if _debug_indicator_file_exists():
-            _remove_debug_indicator_file()
+        if flag:
+            with open(_debug_indicator_file_name(), 'w+', encoding='utf8') as f:
+                f.write('')
 
     preferences = load_settings('Preferences.sublime-settings')
+
     plugins = {}
-
-    for debug_preference in _DEBUGABLE_PLUGINS:
-        print('DEBUG {} \'{}\' debug mode'.format('enable' if flag else 'disable', debug_preference))
-
-        if isinstance(debug_preference, tuple):
-            plugin_name = debug_preference[0]
+    for setting in _debug_plugins_meta:
+        if isinstance(setting, tuple):
+            plugin_name, settings = setting
             plugins[plugin_name] = load_settings(plugin_name + '.sublime-settings')
-            if flag:
-                plugins[plugin_name].set(debug_preference[1], True)
-            else:
-                plugins[plugin_name].erase(debug_preference[1])
+
+            if isinstance(settings, str):
+                settings = [settings]
+
+            for key in settings:
+                print('Scriptease: {} \'{}\''.format('enable' if flag else 'disable', setting))
+                if flag:
+                    plugins[plugin_name].set(key, True)
+                else:
+                    plugins[plugin_name].erase(key)
         else:
+            print('Scriptease: {} \'{}\''.format('enable' if flag else 'disable', setting))
             if flag:
-                preferences.set(debug_preference, True)
+                preferences.set(str(setting), True)
             else:
-                preferences.erase(debug_preference)
+                preferences.erase(str(setting))
 
     for plugin in plugins.keys():
         save_settings(plugin + '.sublime-settings')
@@ -140,64 +122,55 @@ def _toggle_debug_mode(setting=None):
 
 
 def plugin_loaded():
+    if _DEBUG or _debug_indicator_file_exists():
+        print('Scriptease: debug enabled')
 
-    # What do these even do?
-    log_result_regex(False)
-    log_build_systems(False)
-
-    # Can't disable log indexing.
-    # See https://github.com/SublimeTextIssues/Core/issues/2131.
-    log_indexing(False)
-
-    if _is_debug_mode():
-
-        print('DEBUG enabled')
-        print('DEBUG Python v{}.{}.{} {}{}'.format(
+        # Show some system information.
+        print('Scriptease: Python v{}.{}.{} {}{}'.format(
             sys.version_info[0],
             sys.version_info[1],
             sys.version_info[2],
             sys.version_info[3],
             sys.version_info[4]))
-        print('DEBUG {}'.format(sys.flags))
-        print('DEBUG sys.abiflags are {}'.format(sys.abiflags))
-        print('DEBUG sys.path is {}'.format(sys.path))
-        print('DEBUG __debug__ is {}'.format(__debug__))
+        print('Scriptease: {}'.format(sys.flags))
+        print('Scriptease: sys.abiflags are {}'.format(sys.abiflags))
+        print('Scriptease: sys.path is {}'.format(sys.path))
+        print('Scriptease: __debug__ is {}'.format(__debug__))
 
+        # Debug all the things.
         _set_debug_mode(True)
 
+        # Auto show the console.
         window = active_window()
         active_group = window.active_group()
         window.run_command('show_panel', {'panel': 'console'})
         window.focus_group(active_group)
 
 
-class DebugApplicationCommand(sublime_plugin.ApplicationCommand):
-    def run(self, action):
+class ScripteaseCommand(sublime_plugin.ApplicationCommand):
 
-        if action == 'toggle':
+    def run(self, action):
+        if action == 'toggle_debug_mode':
             status = _toggle_debug_mode()
             status_message('Debug is ' + 'enabled' if status else 'disabled')
-
-        elif action == 'enable':
+        elif action == 'enable_debug_mode':
             _set_debug_mode(True)
             status_message('Debug is enabled')
-
-        elif action == 'disable':
+        elif action == 'disable_debug_mode':
             _set_debug_mode(False)
-            status_message('Debug is enabled')
+            status_message('Debug is disabled')
+        elif action == 'toggle_plugin_debug_mode':
+            toggle_plugins = [str(p) for p in _debug_plugins_meta]
 
-        elif action == 'toggle_plugin':
-            self.toggle_plugins = [str(p) for p in _DEBUGABLE_PLUGINS]
-            self.window = active_window()
-            self.window.show_quick_panel(self.toggle_plugins, self._toggle_plugin_on_done)
+            def on_done(index):
+                if index >= 0:
+                    status = _toggle_debug_mode(_debug_plugins_meta[index])
+                    status_message('Debug is ' + 'enabled' if status else 'disabled')
 
+            active_window().show_quick_panel(toggle_plugins, on_done)
+        # elif action == 'open_plugin_readme':  # TODO open plugin readme
         else:
             raise Exception('unknown action')
-
-    def _toggle_plugin_on_done(self, index):
-        if index >= 0:
-            status = _toggle_debug_mode(_DEBUGABLE_PLUGINS[index])
-            status_message('Debug is ' + 'enabled' if status else 'disabled')
 
 
 class DebugViewToScopeCommand(sublime_plugin.TextCommand):
@@ -218,7 +191,7 @@ class DebugViewCommand(sublime_plugin.TextCommand):
     def run(self, edit=None):
         view = self.view
 
-        print('>>> DEBUG {} [id={}, file={}'
+        print('>>> Scriptease: {} [id={}, file={}'
               '\n buffer_id={: <5}        is_valid={: <5}     is_primary={: <5}   name={: <5}'
               '\n is_dirty={: <5}         is_read_only={: <5} is_scratch={: <5}   encoding={: <5}'
               '\n line_endings={: <5}     is_in_edit={: <5}   change_count={: <5} is_loading={: <5}'
@@ -262,220 +235,6 @@ class DebugViewCommand(sublime_plugin.TextCommand):
             #   i, view.substr(view.indented_region(sel.begin()))))
 
 
-class DumpNeovintageousViewCommand(sublime_plugin.TextCommand):
-    def run(self, edit):
-        view = self.view
-        settings = view.settings()
-
-        print('>>> DEBUG NeoVintageous View')
-
-        print('{} [id={}, file={}]'
-              '\n buffer_id={: <10}        is_valid={: <10}     is_primary={: <10}   name={: <5}'
-              '\n is_dirty={: <10}         is_read_only={: <10} is_scratch={: <10}   encoding={: <5}'
-              '\n line_endings={: <10}     is_in_edit={: <10}   change_count={: <10} is_loading={: <5}'
-              '\n line_height={: <10}      em_width={: <10}     is_popup_visible={: <10}'
-              '\n overwrite_status={: <10} size={: <10}         is_auto_complete_visible={: <10}'
-              '\n has_non_empty_selection_region={: <10}'
-              .format(
-                  str(view),
-                  str(view.id()), str(view.file_name()),
-                  str(view.buffer_id()), str(view.is_valid()), str(view.is_primary()), str(view.name()),
-                  str(view.is_dirty()), str(view.is_read_only()), str(view.is_scratch()), str(view.encoding()),
-                  str(view.line_endings()), str(view.is_in_edit()), str(view.change_count()), str(view.is_loading()),
-                  str(view.line_height()), str(view.em_width()), str(view.is_popup_visible()),
-                  str(view.overwrite_status()), str(view.size()), str(view.is_auto_complete_visible()),
-                  str(view.has_non_empty_selection_region())))
-
-        keys = [
-            'action',
-            'action_count',
-            'autoindent',
-            'cmdline_cd',
-            'cmdline_mode',
-            'command_mode',
-            'data',
-            'editor_setting',
-            'external_disable',
-            'external_disable_keys',
-            'glue_until_normal_mode',
-            'hlsearch',
-            'ignorecase',
-            'incsearch',
-            'inverse_caret_state',
-            'last_buffer_search',
-            'last_buffer_search_command',
-            'last_char_search_command',
-            'last_character_search',
-            'linux_shell',
-            'linux_terminal',
-            'magic',
-            'mode',
-            'motion',
-            'motion_count',
-            'must_capture_register_name',
-            'non_interactive',
-            'normal_insert_count',
-            'osx_shell',
-            'osx_terminal',
-            'partial_sequence',
-            'processing_notation',
-            'recording',
-            'register',
-            'repeat_data',
-            'reset_during_init',
-            'rulers',
-            'sequence',
-            'showsidebar',
-            'surround',
-            'surround_spaces',
-            'use_ctrl_keys',
-            'use_sys_clipboard',
-            'vi_editor_setting',
-            'vintage',
-            'visual_bloc',
-            'visual_block_direction',
-            'visualbell',
-            'widget',
-            'WrapPlus.include_line_ending',
-            'xpos',
-        ]
-
-        prefixes = (
-            '',
-            '_',
-            '__vi_',
-            '_vi_',
-            '_vintageous_',
-            'enable_',
-            'ex_',
-            'is_',
-            'is_vintageous_',
-            'vi_',
-            'vintageous_',
-            'VintageousEx_',
-        )
-
-        data = {}
-        for key in keys:
-            for prefix in prefixes:
-                _key = prefix + key
-                value = settings.get(_key)
-                if value is not None:
-                    data[_key] = value
-
-        print(' settings:')
-        for k in sorted(data.keys()):
-            v = data[k]
-            if isinstance(v, dict):
-                print('  {} {{'.format(k))
-                for k in sorted(v.keys()):
-                    print('    {:40} = {}'.format(k, v[k]))
-                print('  }')
-            else:
-                print('  {:30} = {}'.format(k, v))
-
-        print('<<<')
-
-
-class NeovintageousDevCommand(sublime_plugin.WindowCommand):
-
-    def run(self, action):
-        action_method = getattr(self, action + '_action', None)
-        if action_method:
-            print('NeoVintageousDev: ', action.replace('_', ' '))
-            action_method()
-        else:
-            raise Exception('action not found')
-
-    def edit_help_file_action(self):
-        docs_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            'NeoVintageous/res/doc')
-
-        resources = []
-        for f in os.listdir(docs_path):
-            if f.endswith('.txt'):
-                resource = 'res/doc/%s' % f
-                resources.append([f, resource])
-
-        def on_done(index=-1):
-            if index == -1:
-                return
-
-            resource = resources[index][1]
-
-            view = self.window.open_file(os.path.join(packages_path(), 'NeoVintageous', resource))
-            view.assign_syntax('Packages/NeoVintageous/res/Help.sublime-syntax')
-            view.settings().set('indent_guide_options', [])
-            view.settings().set('spell_check', True)
-            view.settings().set('rulers', [8, 24, 40, 80])
-
-        self.window.show_quick_panel(resources, on_done)
-
-    def fixup_docs_action(self):
-        docs_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            'NeoVintageous/res/doc')
-
-        for f in os.listdir(docs_path):
-            if f.endswith('.txt'):
-                resource = 'Packages/NeoVintageous/res/doc/%s' % f
-
-                exception = False
-                try:
-                    load_resource(resource)
-                except Exception as e:
-                    exception = e
-
-                if exception:
-                    print('  Error: ' + resource + ' ' + str(exception))
-
-                    file = packages_path() + '/NeoVintageous/res/doc/%s' % f
-                    print('    Fixing resource encoding for \'{}\''.format(file))
-
-                    view = self.window.open_file(file)
-
-                    def f(view):
-                        view.run_command('set_encoding', {'encoding': 'utf-8'})
-                        view.run_command('save')
-                        view.close()
-
-                    set_timeout_async(functools.partial(f, view), 200)
-
-    def set_log_level_action(self):
-        log_levels = [
-            'CRITICAL',  # 50
-            'ERROR',  # 40
-            'WARNING',  # 30
-            'INFO',  # 20
-            'DEBUG',  # 10
-            'NOTSET',  # 0
-        ]
-
-        def on_done(index):
-            if index == -1:
-                return
-
-            log_level = log_levels[index].strip().upper()
-            logging.getLogger('NeoVintageous').setLevel(getattr(
-                logging,
-                log_level,
-                logging.DEBUG
-            ))
-
-            indicator_file = os.path.join(packages_path(), 'User', '.neovintageous_log_level')
-            with open(indicator_file, 'w+', encoding='utf8') as f:
-                f.write(log_level)
-
-        self.window.show_quick_panel(log_levels, on_done)
-
-    def toggle_use_ctrl_keys_action(self):
-        preferences = load_settings('Preferences.sublime-settings')
-        use_ctrl_keys = preferences.get('vintageous_use_ctrl_keys')
-        preferences.set('vintageous_use_ctrl_keys', not use_ctrl_keys)
-        save_settings('Preferences.sublime-settings')
-
-
 class VarDumpCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         pt = self.view.sel()[0].b
@@ -514,89 +273,62 @@ if _DEBUG_EVENTS:
 
     class DebugEvents(sublime_plugin.EventListener):
 
-        def on_new(self, view):
-            print('*** EVENT *** on_new', view.id(), view.file_name())
+        def _debug_event(self, name, view, extra=None):
+            print('*** EVENT *** {} id = {} name = {} file = {}'.format(name, view.id(), view.name(), view.file_name()))
+            if extra:
+                print('   ', extra)
+            print('    sel() =', list(view.sel()))
+            print('    is_scratch() =', view.is_scratch())
+            print('    is_read_only() =', view.is_read_only())
+            print('    scope_name() =', view.scope_name(0))
 
-        def on_new_async(self, view):
-            print('*** EVENT *** on_new_async', view.id(), view.file_name())
+            settings = view.settings()
+            if settings:
+                get = settings.get
+                print('    setting is_widget =', get('is_widget'))
+                print('    setting result_file_regex =', get('result_file_regex'))
+            else:
+                print('    view has not settings object!')
 
-        def on_clone(self, view):
-            print('*** EVENT *** on_clone', view.id(), view.file_name())
-
-        def on_clone_async(self, view):
-            print('*** EVENT *** on_clone_async', view.id(), view.file_name())
-
-        def on_load(self, view):
-            print('*** EVENT *** on_load', view.id(), view.file_name())
-
-        def on_load_async(self, view):
-            print('*** EVENT *** on_load_async', view.id(), view.file_name())
-
-        def on_pre_close(self, view):
-            print('*** EVENT *** on_pre_close', view.id(), view.file_name())
-
-        def on_close(self, view):
-            print('*** EVENT *** on_close', view.id(), view.file_name())
-
-        def on_pre_save(self, view):
-            print('*** EVENT *** on_pre_save', view.id(), view.file_name())
-
-        def on_pre_save_async(self, view):
-            print('*** EVENT *** on_pre_save_async', view.id(), view.file_name())
-
-        def on_post_save(self, view):
-            print('*** EVENT *** on_post_save', view.id(), view.file_name())
-
-        def on_post_save_async(self, view):
-            print('*** EVENT *** on_post_save_async', view.id(), view.file_name())
-
-        def on_modified(self, view):
-            print('*** EVENT *** on_modified', view.id(), view.file_name())
-
-        def on_modified_async(self, view):
-            print('*** EVENT *** on_modified_async', view.id(), view.file_name())
-
-        def on_selection_modified(self, view):
-            print('*** EVENT *** on_selection_modified', view.id(), view.file_name())
-
-        def on_selection_modified_async(self, view):
-            print('*** EVENT *** on_selection_modified_async', view.id(), view.file_name())
-
-        def on_activated(self, view):
-            print('*** EVENT *** on_activated', view.id(), view.file_name())
-
-        def on_activated_async(self, view):
-            print('*** EVENT *** on_activated_async', view.id(), view.file_name())
-
-        def on_deactived(self, view):
-            print('*** EVENT *** on_deactivated', view.id(), view.file_name())
-
-        def on_deactivated_async(self, view):
-            print('*** EVENT *** on_deactivated_async', view.id(), view.file_name())
+        def on_new(self, view):                         self._debug_event('on_new', view) # noqa
+        def on_new_async(self, view):                   self._debug_event('on_new_async', view) # noqa
+        def on_clone(self, view):                       self._debug_event('on_clone', view) # noqa
+        def on_clone_async(self, view):                 self._debug_event('on_clone_async', view) # noqa
+        def on_load(self, view):                        self._debug_event('on_load', view) # noqa
+        def on_load_async(self, view):                  self._debug_event('on_load_async', view) # noqa
+        def on_pre_close(self, view):                   self._debug_event('on_pre_close', view) # noqa
+        def on_close(self, view):                       self._debug_event('on_close', view) # noqa
+        def on_pre_save(self, view):                    self._debug_event('on_pre_save', view) # noqa
+        def on_pre_save_async(self, view):              self._debug_event('on_pre_save_async', view) # noqa
+        def on_post_save(self, view):                   self._debug_event('on_post_save', view) # noqa
+        def on_post_save_async(self, view):             self._debug_event('on_post_save_async', view) # noqa
+        def on_modified(self, view):                    self._debug_event('on_modified', view) # noqa
+        def on_modified_async(self, view):              self._debug_event('on_modified_async', view) # noqa
+        def on_selection_modified(self, view):          self._debug_event('on_selection_modified', view) # noqa
+        def on_selection_modified_async(self, view):    self._debug_event('on_selection_modified_async', view) # noqa
+        def on_activated(self, view):                   self._debug_event('on_activated', view) # noqa
+        def on_activated_async(self, view):             self._debug_event('on_activated_async', view) # noqa
+        def on_deactived(self, view):                   self._debug_event('on_deactivated', view) # noqa
+        def on_deactivated_async(self, view):           self._debug_event('on_deactivated_async', view) # noqa
 
         def on_query_context(self, view, key, operator, operand, match_all):
-            print('*** EVENT *** on_query_context {} \'{}\' key={} operator={} operand={} match_all={}'
-                  .format(view.id(), view.file_name(), key, operator, operand, match_all))
+            self._debug_event('on_query_context', view, 'key = {} operator = {} operand = {} match_all = {}'.format(key, operator, operand, match_all)) # noqa
 
         def on_query_completions(self, view, prefix, locations):
-            print('*** EVENT *** on_query_completions {} \'{}\' prefix={} locations={}'
-                  .format(view.id(), view.file_name(), prefix, locations))
+            self._debug_event('on_query_completions', view, 'prefix = {} locations = {}'.format(prefix, locations)) # noqa
 
         # def on_hover(self, view, point, hover_zone):
-        #     print('*** EVENT *** on_hover', view.id(), view.file_name())
+        #     self._debug_event('on_hover', view)
+        #     print('*** EVENT *** on_hover point = {} hover_zone = {}'.format(point, hover_zone)) # noqa
 
         def on_text_command(self, view, name, args):
-            print('*** EVENT *** on_text_command {} \'{}\' {} args={}'
-                  .format(view.id(), view.file_name(), name, args))
-
-        def on_window_command(self, window, name, args):
-            print('*** EVENT *** on_window_command {} {} args={}'
-                  .format(window.id(), name, args))
+            self._debug_event('on_query_completions', view, 'name = {} args = {}'.format(name, args)) # noqa
 
         def on_post_text_command(self, view, name, args):
-            print('*** EVENT *** on_post_text_command {} \'{}\' {} args={}'
-                  .format(view.id(), view.file_name(), name, args))
+            self._debug_event('on_post_text_command', view, 'name = {} args = {}'.format(name, args)) # noqa
+
+        def on_window_command(self, window, name, args):
+            print('*** EVENT *** on_window_command id = {} name = {} args = {}'.format(window.id(), name, args)) # noqa
 
         def on_post_window_command(self, window, name, args):
-            print('*** EVENT *** on_post_window_command {} {} args={}'
-                  .format(window.id(), name, args))
+            print('*** EVENT *** on_post_window_command id = {} name = {} args = {}'.format(window.id(), name, args)) # noqa

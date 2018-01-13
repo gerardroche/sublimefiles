@@ -22,7 +22,7 @@ class Initiative(sublime_plugin.EventListener):
 
 class InitiativeCommand(sublime_plugin.TextCommand):
     def run(self, edit, key):
-        if key == ')' and _is_at_close_param(self.view):
+        if key in (')', 'backspace') and _is_at_close_param(self.view):
             for s in self.view.sel():
                 self.view.erase(edit, s)
 

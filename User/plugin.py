@@ -13,24 +13,44 @@ from Default.fold import UnfoldCommand as DefaultUnfoldCommand
 # abstracting it out into a reusable package, possibly installable via Package
 # Control.
 
-
 # TODO RenameFile() command
+
 # TODO ExtractVariable() command
+
 # TODO InlineVariable() command
+
 # TODO OpenChangedFiles() command
+
 # TODO SelectaFile("name") command
 
 
-def _find_in_open_folders(window, interactive=True):
+def _find_in_open_folders(window, interactive=True, default_filter=False):
     view = window.active_view()
     region = view.sel()[0]
     word = view.word(region)
     view.sel().clear()
     view.sel().add(word)
 
+    def get_default_filter():
+        include_filters = []
+
+        file_name = view.file_name()
+        if file_name:
+            include_filters.append('*' + os.path.splitext(file_name)[1])
+
+        if include_filters:
+            return ',' + ','.join(include_filters)
+        else:
+            return ''
+
     window.run_command('show_panel', {
         'panel': 'find_in_files',
-        'where': '<open folders>'
+        'where': '<open folders>' + get_default_filter() if default_filter else '',
+        'whole_word': True,
+        'case_sensitive': False,
+        'regex': False,
+        'use_buffer': True,
+        'show_context': True
     })
 
     view.sel().clear()
@@ -54,14 +74,85 @@ def _post_fold_command_fixes(view):
         view.sel().add_all(sels)
 
 
+# TODO Cleanup and submit a PR for this to be added to SublimeLinter core.
+class LintersCommand(sublime_plugin.WindowCommand):
+    def run(self, action):
+        settings = load_settings('SublimeLinter.sublime-settings')
+
+        if action == 'toggle_mode':
+            lint_mode = settings.get('lint_mode')
+            if lint_mode:
+                if lint_mode != 'load_save':
+                    lint_mode = 'load_save'
+                else:
+                    lint_mode = 'background'
+
+            settings.set('lint_mode', lint_mode)
+            save_settings('SublimeLinter.sublime-settings')
+
+            return
+
+        # TODO How to get a real list of installed linters?
+        linters = settings.get('linters')
+
+        items = []
+        for linter, linter_settings in linters.items():
+            is_disabled = linter_settings.get('disable', False)
+
+            if action == 'disable':
+                if not is_disabled:
+                    items.append(linter)
+            elif action == 'enable':
+                if is_disabled:
+                    items.append(linter)
+            elif action == 'toggle':
+                items.append(linter)
+            else:
+                raise RuntimeError('unknown action')
+
+        def on_done(index):
+            if index >= 0:
+                linter = items[index]
+
+                if action == 'disable':
+                    disable = True
+                elif action == 'enable':
+                    disable = False
+                elif action == 'toggle':
+                    if 'disable' in linters[linter]:
+                        disable = not linters[linter]['disable']
+                    else:
+                        disable = True
+
+                linters[linter]['disable'] = disable
+                settings.set('linters', linters)
+                save_settings('SublimeLinter.sublime-settings')
+
+        self.window.show_quick_panel(items, on_done)
+
+
 class FindInOpenFoldersCommand(sublime_plugin.WindowCommand):
-    def run(self):
-        _find_in_open_folders(self.window)
+    def run(self, interactive=True, default_filter=False):
+        _find_in_open_folders(self.window, interactive, default_filter)
 
 
-class FindAllInOpenFoldersCommand(sublime_plugin.WindowCommand):
-    def run(self):
-        _find_in_open_folders(self.window, interactive=False)
+class TaskListCommand(sublime_plugin.WindowCommand):
+    def run(self, interactive=True):
+        self.window.run_command('show_panel', {
+            'panel': 'find_in_files',
+            'where': '<open folders>,-.srcpath/,-.buildpath/,-vendor/,-res/doc/',
+            'whole_word': False,
+            'case_sensitive': False,
+            'preserve_case': False,
+            'regex': True,
+            'use_buffer': False,
+            'show_context': False,
+        })
+
+        self.window.run_command('insert', {'characters': '(#|//)\\s*(TODO|FIXME|XXX|IMPORTANT|DEPRECATED)'})
+
+        if not interactive:
+            self.window.run_command('find_all', {'close_panel': True})
 
 
 class FocusUnitTestingPanelCommand(sublime_plugin.WindowCommand):
@@ -74,7 +165,6 @@ class FocusUnitTestingPanelCommand(sublime_plugin.WindowCommand):
 
 
 class FoldCommand(DefaultFoldCommand):
-
     def run(self, edit):
         super().run(edit)
         _post_fold_command_fixes(self.view)
@@ -89,7 +179,6 @@ class GotoSymbolInFileCommand(sublime_plugin.WindowCommand):
 
 
 class HidePhantoms(sublime_plugin.WindowCommand):
-
     def run(self):
         self.window.run_command('exec', {
             'hide_phantoms_only': True
@@ -214,7 +303,6 @@ class ToggleTemporaryFolderCommand(sublime_plugin.WindowCommand):
 
 
 class UnfoldCommand(DefaultUnfoldCommand):
-
     def run(self, edit):
         super().run(edit)
         _post_fold_command_fixes(self.view)

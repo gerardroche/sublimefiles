@@ -3,10 +3,8 @@
     // about abstracting it out into a reusable package, possibly installable
     // via Package Control.
 
-    { "keys": ["ctrl+i"], "command": "user_input_panel" },
-
+    // Custom tweaks.
     { "keys": ["ctrl+c"], "command": "copy" },
-
     { "keys": ["ctrl+'"], "command": "reveal_in_side_bar" },
 
     // Fix opening the context menu.
@@ -29,10 +27,22 @@
             { "key": "has_prev_field", "operator": "equal", "operand": true, "match_all": true }
         ]
     },
+    {
+        "keys": ["backspace"],
+        "command": "initiative",
+        "args": {"key": "backspace"},
+        "context": [
+            { "key": "initiative", "operator": "equal", "operand": true, "match_all": true },
+            { "key": "setting.command_mode", "operator": "equal", "operand": false },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
+            { "key": "has_prev_field", "operator": "equal", "operand": true, "match_all": true }
+        ]
+    },
 
     // Find (User plugin).
     { "keys": ["ctrl+f3"], "command": "find_in_open_folders" },
-    { "keys": ["shift+f3"], "command": "find_all_in_open_folders" },
+    { "keys": ["shift+f3"], "command": "find_in_open_folders", "args": {"interactive": false} },
+    { "keys": ["ctrl+shift+f3"], "command": "find_in_open_folders", "args": {"default_filter": true} },
 
     // Man (User plugin).
     { "keys": ["f1"], "command": "goto_documentation", "context": [ { "key": "selector", "operator": "equal", "operand": "-embedding.php", "match_all": true } ]},
@@ -42,6 +52,9 @@
     // Package: ColorSchemeUnit.
     // See https://github.com/gerardroche/sublime-color-scheme-unit.
     { "keys": ["ctrl+shift+alt+p"], "command": "color_scheme_unit_show_scope_name_and_styles" },
+
+    // Package: LSP.
+    { "keys": ["shift+f12"], "command": "lsp_symbol_references" },
 
     // Package: NeoVintageous.
     // See https://github.com/NeoVintageous/NeoVintageous.
@@ -59,8 +72,11 @@
     { "keys": ["ctrl+alt+o"], "command": "sesame_open" },
     { "keys": ["ctrl+alt+r"], "command": "sesame_remove" },
     { "keys": ["ctrl+alt+s"], "command": "sesame_switch" },
-    // Custom ~/vendor directory commands.
+    // Custom Sesame commands for ~/vendor directory.
     { "keys": ["ctrl+alt+v"], "command": "sesame_open", "args": { "path": "~/vendor" } },
+
+    // Package: SublimeLinter.
+    { "keys": ["ctrl+alt+m"], "command": "sublime_linter_panel_toggle" },
 
     // Package: Test.
     // See https://github.com/gerardroche/sublime-test.

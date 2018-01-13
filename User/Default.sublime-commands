@@ -13,27 +13,33 @@
     { "caption": "NeoVintageous: Set Log Level", "command": "neovintageous_dev", "args": {"action": "set_log_level"}},
     { "caption": "NeoVintageous: Toggle Use CTRL Keys", "command": "neovintageous_dev", "args": {"action": "toggle_use_ctrl_keys"}},
 
-    // Package: Sesame (custom ~/vendor directory commands).
-    // See https://github.com/gerardroche/sublime-sesame.
-    { "caption": "Sesame: Add Vendor", "command": "sesame_add", "args": { "path": "~/vendor" } },
-    { "caption": "Sesame: Open Vendor", "command": "sesame_open", "args": { "path": "~/vendor" } },
-    { "caption": "Sesame: Switch Vendor", "command": "sesame_switch", "args": { "path": "~/vendor" } },
-
     // Refactor (User plugin).
     { "caption": "Refactor: Test - Coding Standard Fixer", "command": "refactor_test_coding_standard_fixer" },
     { "caption": "Refactor: Test Class - Underscore -> Camelcase", "command": "refactor_test_class_underscore_to_camelcase" },
     { "caption": "Refactor: Test Function - Camelcase -> Underscore", "command": "refactor_test_function_camelcase_to_underscore" },
 
     // Rulers (User plugin).
-    { "caption": "Add Ruler", "command": "rulers", "args": {"action": "add"}},
-    { "caption": "Remove Ruler", "command": "rulers", "args": {"action": "remove"}},
-    { "caption": "Clear Rulers", "command": "rulers", "args": {"action": "clear"}},
+    { "caption": "Rulers: Add Ruler", "command": "rulers", "args": {"action": "add"}},
+    { "caption": "Rulers: Remove Ruler", "command": "rulers", "args": {"action": "remove"}},
+    { "caption": "Rulers: Clear Rulers", "command": "rulers", "args": {"action": "clear"}},
 
     // Scriptease (User plugin).
-    { "caption": "Disable Debug Mode", "command": "debug_application", "args": {"action": "disable"} },
-    { "caption": "Enable Debug Mode", "command": "debug_application", "args": {"action": "enable"} },
-    { "caption": "Toggle Debug Mode", "command": "debug_application", "args": {"action": "toggle"} },
-    { "caption": "Toggle Plugin Debug Mode", "command": "debug_application", "args": {"action": "toggle_plugin"} },
+    { "caption": "Scriptease: Disable Debug Mode", "command": "scriptease", "args": {"action": "disable_debug_mode"} },
+    { "caption": "Scriptease: Enable Debug Mode", "command": "scriptease", "args": {"action": "enable_debug_mode"} },
+    { "caption": "Scriptease: Toggle Debug Mode", "command": "scriptease", "args": {"action": "toggle_debug_mode"} },
+    { "caption": "Scriptease: Toggle Plugin Debug Mode", "command": "scriptease", "args": {"action": "toggle_plugin_debug_mode"} },
+
+    // Package: Sesame (custom ~/vendor directory commands).
+    // See https://github.com/gerardroche/sublime-sesame.
+    { "caption": "Sesame: Add Vendor", "command": "sesame_add", "args": { "path": "~/vendor" } },
+    { "caption": "Sesame: Open Vendor", "command": "sesame_open", "args": { "path": "~/vendor" } },
+    { "caption": "Sesame: Switch Vendor", "command": "sesame_switch", "args": { "path": "~/vendor" } },
+
+    // SublimeLinter toggles (User plugin).
+    { "caption": "SublimeLinter: Disable Linter", "command": "linters", "args": {"action": "disable"} },
+    { "caption": "SublimeLinter: Enable Linter", "command": "linters", "args": {"action": "enable"} },
+    { "caption": "SublimeLinter: Toggle Linter", "command": "linters", "args": {"action": "toggle"} },
+    { "caption": "SublimeLinter: Toggle Mode", "command": "linters", "args": {"action": "toggle_mode"} },
 
     // Toggles (User plugin).
     { "caption": "Toggle Auto Hide Side Bar", "command": "toggle_setting", "args": {"setting": "auto_hide_side_bar"} },
@@ -42,5 +48,5 @@
     { "caption": "Toggle Temporary Folder", "command": "toggle_temporary_folder" },
 
     // Tree (User plugin).
-    { "caption": "New File", "command": "tree_new_file" },
+    { "caption": "Tree: New File", "command": "tree_new_file" },
 ]
