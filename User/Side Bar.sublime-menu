@@ -1,7 +1,8 @@
 [
+    { "caption": "Open", "command": "tree_open", "args": { "files": [] } },
     { "caption": "Duplicate...", "command": "tree_duplicate", "args": { "files": [] } },
     { "caption": "Move...", "command": "tree_move", "args": { "files": [] } },
-    { "caption": "New File", "command": "tree_new_file" },
+    { "caption": "New File (prompt)", "command": "tree_new_file" },
     { "caption": "New File - HTML", "command": "tree_new_html_file", "args": { "dirs": [] } },
     { "caption": "New File - Markdown", "command": "tree_new_markdown_file", "args": { "dirs": [] } },
     { "caption": "New File - PHP", "command": "tree_new_php_file", "args": { "dirs": [] } },

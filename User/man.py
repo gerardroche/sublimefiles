@@ -12,7 +12,6 @@ import sublime_plugin
 # Control.
 
 
-
 def _man_path(window):
     view = window.active_view()
     settings = view.settings() if view else window.settings()

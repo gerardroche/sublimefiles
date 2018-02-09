@@ -46,7 +46,7 @@ def _find_in_open_folders(window, interactive=True, default_filter=False):
     window.run_command('show_panel', {
         'panel': 'find_in_files',
         'where': '<open folders>' + get_default_filter() if default_filter else '',
-        'whole_word': True,
+        'whole_word': False,
         'case_sensitive': False,
         'regex': False,
         'use_buffer': True,

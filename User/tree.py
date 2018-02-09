@@ -19,36 +19,11 @@ def _error_message(msg):
     error_message(msg)
 
 
-class TreeMoveCommand(sublime_plugin.WindowCommand):
+def _move_file(window, file):
+    head, tail = os.path.split(file)
+    root, ext = os.path.splitext(tail)
 
-    def is_visible(self, files):
-        return len(files) == 1
-
-    def run(self, files):
-        if len(files) != 1:
-            return
-
-        if not os.path.isfile(files[0]):
-            _error_message('Unable to move: invalid file')
-            return
-
-        file = files[0]
-
-        head, tail = os.path.split(file)
-        root, ext = os.path.splitext(tail)
-
-        input_panel = self.window.show_input_panel(
-            'Move:',
-            file,
-            partial(self.on_done, file),
-            None,
-            None
-        )
-
-        input_panel.sel().clear()
-        input_panel.sel().add(Region(len(head) + 1, (len(head) + 1 + len(root))))
-
-    def on_done(self, file, new_file):
+    def on_done(file, new_file):
         try:
             if os.path.exists(new_file):
                 raise OSError('file already exists')
@@ -59,44 +34,35 @@ class TreeMoveCommand(sublime_plugin.WindowCommand):
 
             os.rename(file, new_file)
 
-            v = self.window.find_open_file(file)
+            v = window.find_open_file(file)
             if v:
                 v.retarget(new_file)
 
         except Exception as e:
-            _error_message('Unable to move: ' + str(e))
+            return _error_message('Unable to move file.\n\n' + str(e))
+
+    input_panel = window.show_input_panel(
+        'Move File:',
+        file,
+        partial(on_done, file),
+        None,
+        None
+    )
+
+    input_panel.sel().clear()
+    input_panel.sel().add(Region(len(head) + 1, (len(head) + 1 + len(root))))
 
 
-class TreeDuplicateCommand(sublime_plugin.WindowCommand):
+def _duplicate_file(window, file):
+    if not os.path.isfile(file):
+        return _error_message('Unable to duplicate file.\n\nInvalid file.')
 
-    def is_visible(self, files):
-        return len(files) == 1
+    head, tail = os.path.split(file)
+    root, ext = os.path.splitext(tail)
+    new_tail = root + ' (Copy)' + ext
+    duplicate_file = os.path.join(head, new_tail)
 
-    def run(self, files):
-        if len(files) != 1:
-            return
-
-        if not os.path.isfile(files[0]):
-            return _error_message('Unable to duplicate: invalid file')
-
-        file = files[0]
-        head, tail = os.path.split(file)
-        root, ext = os.path.splitext(tail)
-        new_tail = root + ' (Copy)' + ext
-        duplicate_file = os.path.join(head, new_tail)
-
-        input_panel = self.window.show_input_panel(
-            'Duplicate:',
-            duplicate_file,
-            partial(self.on_done, file),
-            None,
-            None)
-
-        sel = input_panel.sel()
-        sel.clear()
-        sel.add(Region(len(head) + 1, len(duplicate_file) - (len(ext))))
-
-    def on_done(self, file, duplicate_file):
+    def on_done(file, duplicate_file):
         try:
             duplicate_file_dirname = os.path.dirname(duplicate_file)
             if not os.path.exists(duplicate_file_dirname):
@@ -106,11 +72,77 @@ class TreeDuplicateCommand(sublime_plugin.WindowCommand):
                 raise OSError('file already exists')
 
             shutil.copy2(file, duplicate_file)
-
-            self.window.open_file(duplicate_file)
-
+            window.open_file(duplicate_file)
         except Exception as e:
-            _error_message('Unable to duplicate: ' + str(e))
+            return _error_message('Unable to duplicate file.\n\n' + str(e))
+
+    input_panel = window.show_input_panel(
+        'Duplicate File:',
+        duplicate_file,
+        partial(on_done, file),
+        None,
+        None
+    )
+
+    sel = input_panel.sel()
+    sel.clear()
+    sel.add(Region(len(head) + 1, len(duplicate_file) - (len(ext))))
+
+
+class TreeMoveCommand(sublime_plugin.WindowCommand):
+
+    def is_visible(self, files):
+        return len(files) == 1
+
+    def run(self, files):
+        if len(files) != 1:
+            return _error_message('Unable to move file\n\nMultiple files not supported.')
+
+        _move_file(self.window, files[0])
+
+
+class TreeMoveFileCommand(sublime_plugin.TextCommand):
+
+    def is_visible(self):
+        return bool(self.view.file_name())
+
+    def run(self, edit):
+        file_name = self.view.file_name()
+        if not file_name:
+            return _error_message('Unable to move file.\n\nNot a real file on disk.')
+
+        _move_file(self.view.window(), file_name)
+
+
+class TreeDuplicateCommand(sublime_plugin.WindowCommand):
+
+    def is_visible(self, files):
+        return len(files) == 1
+
+    def run(self, files):
+        if len(files) != 1:
+            return _error_message('Unable to duplicate file\n\nMultiple files not supported.')
+
+        _duplicate_file(self.window, files[0])
+
+
+class TreeDuplicateFileCommand(sublime_plugin.TextCommand):
+
+    def is_visible(self):
+        return bool(self.view.file_name())
+
+    def run(self, edit):
+        file_name = self.view.file_name()
+        if not file_name:
+            return _error_message('Unable duplicate file.\n\nNot a real file on disk.')
+
+        _duplicate_file(self.view.window(), file_name)
+
+
+class TreeOpenCommand(sublime_plugin.WindowCommand):
+    def run(self, files):
+        for file in files:
+            self.window.open_file(file)
 
 
 class NewFileMixin():

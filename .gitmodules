@@ -1,5 +1,5 @@
 [submodule "phpunitkit"]
-	path = phpunitkit
+	path = PHPUnitKit
 	url = https://github.com/gerardroche/sublime-phpunit.git
 [submodule "polyfill"]
 	path = polyfill

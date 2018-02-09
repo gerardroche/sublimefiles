@@ -1,4 +1,5 @@
 " The character " (the double quote mark) starts a comment
+" Type :h vintageousrc for help.
 
 let mapleader=,
 
@@ -48,12 +49,6 @@ noremap <leader>yy "+Y
 nnoremap <leader>va ggvGg_
 nnoremap <leader>Va ggVG
 
-" Maintain Visual Mode after shifting > and <.
-" Notice that '<lt>' is used to represent a real '<', because like a
-" backslash, it needs to be escaped. See `:h <>`.
-vnoremap <lt> <lt>gv
-vnoremap > >gv
-
 " Goto to symbols.
 nnoremap <leader>f :GotoSymbolInFile<CR>
 nnoremap <leader>m :GotoSymbolInProject<CR>
@@ -102,6 +97,9 @@ nnoremap zM :FoldAll<CR>
 nnoremap zo :Unfold<CR>
 nnoremap zR :UnfoldAll<CR>
 
+" Show me the registers.
+nnoremap <leader>r :reg<CR>
+
 " " Prestige.
 " nnoremap <leader>r :RevealInSideBar<CR>
 
@@ -114,7 +112,7 @@ nnoremap zR :UnfoldAll<CR>
 " nnoremap <leader>sr :ShowFindResults<CR>
 
 " Sorting.
-" TODO Add `:sort u` Neovintageous ex command.
+" TODO Implement `:sort u` Neovintageous ex command.
 vnoremap <leader>sl <F9>o<Esc>
 nnoremap <leader>ss vip<F9>o<Esc>
 
@@ -145,4 +143,8 @@ nnoremap <leader>gt :TaskList<CR>
 " Fuck it.
 nnoremap <leader>vd :VarDump<CR>
 
-nnoremap <leader><leader>f :FocusUnitTestingPanel<CR>
+" Maintain Visual Mode after shifting > and <.
+" Notice that '<lt>' is used to represent a real '<', because like a
+" backslash, it needs to be escaped. See `:h <>`.
+" vnoremap <lt> <lt>gv
+" vnoremap > >gv

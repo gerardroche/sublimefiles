@@ -7,33 +7,40 @@ import sublime_plugin
 # When you see something you like and would like to use it, open an issue about
 # abstracting it out into a reusable package, possibly installable via Package
 # Control.
-
+# TODO Refactor into its own Package Control package.
 
 def _extract_github_url(view):
     line = view.line(view.sel()[0].b)
     line = view.substr(line)
 
+    # Format: <githubdomain>/x/y, <githubdomain>/x/y/issues/#<number>
+
     match = re.match(
-        '^.*(?P<url>'
-        'https:\\/\\/github.com'
-        '\\/[a-zA-Z0-9_-]+'
-        '\\/[a-zA-Z0-9_-]+'
+        '^.*'
+        '(?P<url>https:\\/\\/github\\.com'
+        '\\/[a-zA-Z0-9_-]+\\/[a-zA-Z0-9_-]+'
         '(?:\\/issues\\/[0-9]+)?'
-        ')', line)
+        ')',
+        line
+    )
 
     if match:
         return match.group('url')
 
+    # Format: x/y, x/y#<number>
+
     match = re.findall(
-        '(?P<url>'
-        '[a-zA-Z0-9_-]+'
-        '\\/'
-        '[a-zA-Z0-9_-]+'
-        '(?:\\.[a-zA-Z0-9_-]+)?'
-        ')', line)
+        '[a-zA-Z0-9_-]+\\/[a-zA-Z0-9_-]+(?:#[0-9]+)?',
+        line
+    )
 
     if match:
-        return 'https://github.com/' + match[0]
+        return 'https://github.com/' + match[0].replace('#', '/issues/')
+
+    match = re.findall('#[0-9]+', line)
+    if match:
+        # TODO remove hardcoded package name.
+        return 'https://github.com/' + match[0].replace('#', 'NeoVintageous/NeoVintageous/issues/')
 
 
 class FormatGithubUrlCommand(sublime_plugin.TextCommand):

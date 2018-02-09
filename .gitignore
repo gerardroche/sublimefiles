@@ -23,10 +23,8 @@
 # Packages
 /AutoWrap/
 /LSP/
-/SASS/
 /SublimeLinter-contrib-php-cs-fixer/
 /SublimeLinter-phpcs/
-/Syntax Highlighting for Sass/
 
 # PHP runtime generated (by php-snippets).
 /PHP/Snippets/
@@ -51,3 +49,4 @@
 /SublimeLinter-contrib-mypy/
 *.pyi
 /SublimeLinter-annotations/
+/Sass/
