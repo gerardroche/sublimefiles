@@ -1,9 +1,9 @@
-from GitOpen.tests import unittest
+from User.tests import unittest
 
-from GitOpen.plugin import _extract_github_url
+from User.user_git import _extract_github_url
 
 
-class TestExtractGitUrl(unittest.ViewTestCase):
+class TestUserGitFormatGithubUrl(unittest.ViewTestCase):
 
     def test_should_not_choke_on_empty_view(self):
         self.fixture('|')

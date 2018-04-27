@@ -1,5 +1,7 @@
 import unittest
 
+from unittest import mock  # noqa: F401
+
 # Use aliases to indicate that they are not public testing APIs.
 from sublime import active_window as _active_window
 
@@ -17,7 +19,7 @@ class ViewTestCase(unittest.TestCase):
             self.view.close()
 
     def fixture(self, text):
-        self.view.run_command('_git_open_test_setup_fixture', {'text': text.replace('|', '')})
+        self.view.run_command('_user_setup_test_fixture', {'text': text.replace('|', '')})
         sels = [i for i, c in enumerate(text) if c == '|']
         if sels:
             self.view.sel().clear()
@@ -25,5 +27,4 @@ class ViewTestCase(unittest.TestCase):
                 self.view.sel().add(x - i)
 
     def content(self):
-        # type: () -> str
         return self.view.substr(Region(0, self.view.size()))

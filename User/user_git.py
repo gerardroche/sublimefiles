@@ -1,13 +1,12 @@
+# When you see something you like and would like to use it, open an issue about
+# abstracting it out into a reusable package, possibly installable via Package
+# Control.
+
 import re
 import webbrowser
 
 import sublime_plugin
 
-
-# When you see something you like and would like to use it, open an issue about
-# abstracting it out into a reusable package, possibly installable via Package
-# Control.
-# TODO Refactor into its own Package Control package.
 
 def _extract_github_url(view):
     line = view.line(view.sel()[0].b)
@@ -43,7 +42,7 @@ def _extract_github_url(view):
         return 'https://github.com/' + match[0].replace('#', 'NeoVintageous/NeoVintageous/issues/')
 
 
-class FormatGithubUrlCommand(sublime_plugin.TextCommand):
+class GitFormatGithubUrlCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
         line = self.view.line(self.view.sel()[0].b)
@@ -75,6 +74,7 @@ class FormatGithubUrlCommand(sublime_plugin.TextCommand):
                 url = self.view.substr(url_region)
                 url = 'https://github.com/' + url
                 url = url.replace('#', '/issues/')
+
                 self.view.replace(edit, url_region, url)
 
 

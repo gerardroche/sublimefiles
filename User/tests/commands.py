@@ -1,7 +1,8 @@
 from sublime import Region
-from sublime_plugin import TextCommand
+import sublime_plugin
 
 
-class _git_open_test_setup_fixture(TextCommand):
+class _user_setup_test_fixture(sublime_plugin.TextCommand):
+
     def run(self, edit, text):
         self.view.replace(edit, Region(0, self.view.size()), text)
