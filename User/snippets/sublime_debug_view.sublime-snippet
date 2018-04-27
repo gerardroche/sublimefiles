@@ -1,7 +1,0 @@
-<snippet>
-    <content><![CDATA[
-_logger.debug('view=[id=%d,file=\'%s\']'.format(view.id(), view.file_name()))
-]]></content>
-    <tabTrigger>sdv</tabTrigger>
-    <scope>source.python</scope>
-</snippet>
