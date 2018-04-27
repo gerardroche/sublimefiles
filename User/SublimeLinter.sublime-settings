@@ -1,12 +1,7 @@
 {
-	"delay": 3.0,
-	"lint_mode": "background",
+	"delay": 0.1,
 	"linters":
 	{
-		"annotations":
-		{
-			"disable": true
-		},
 		"flake8":
 		{
 			"disable": false,
@@ -29,31 +24,19 @@
 		},
 		"php":
 		{
-			"disable": true,
+			"disable": false,
 			"excludes":
 			[
 				"*/vendor/*"
 			]
-		},
-		"phpcs":
-		{
-			"disable": true,
-			"excludes":
-			[
-				"*/vendor/*"
-			],
-			"executable": "~/.phpenv/versions/7.2.0/bin"
 		}
 	},
 	"no_column_highlights_line": true,
-	"paths":
-	{
-	},
 	"styles":
 	[
 		{
 			"icon": "dot",
-			"mark_style": "fill",
+			"mark_style": "outline",
 			"priority": 1,
 			"scope": "region.yellowish markup.changed.sublime_linter markup.warning.sublime_linter",
 			"types":
@@ -63,7 +46,7 @@
 		},
 		{
 			"icon": "dot",
-			"mark_style": "fill",
+			"mark_style": "outline",
 			"priority": 1,
 			"scope": "region.redish markup.deleted.sublime_linter markup.error.sublime_linter",
 			"types":
