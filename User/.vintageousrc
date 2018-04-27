@@ -29,8 +29,8 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 
-" Clear highlighting. The :nohlsearch command is currently not supported.
-" Using the Esc key is a workaround.
+" Clear highlighting.
+" Using Esc is a workaround, because NeoVintageous doesn't yet support :nohlsearch.
 nnoremap <C-l> <Esc>
 
 " Saving.
@@ -49,13 +49,21 @@ noremap <leader>yy "+Y
 nnoremap <leader>va ggvGg_
 nnoremap <leader>Va ggVG
 
-" Goto to symbols.
-nnoremap <leader>f :GotoSymbolInFile<CR>
-nnoremap <leader>m :GotoSymbolInProject<CR>
+" Show me the registers.
+nnoremap <leader>r :reg<CR>
 
-" Edit preferences.
+" Show me the symbols.
+nnoremap <leader>f :ShowOverlay overlay=goto text=@<CR>
+nnoremap <D-i> :GotoSymbolInProject<CR>
+
+" Edit editor configs.
+nnoremap <leader>ek :OpenKeyBindings<CR>
 nnoremap <leader>ep :OpenPreferences<CR>
 nnoremap <leader>en :NeovintageousOpenMyRcFile<CR>
+
+" Sorting.
+" Using F9 is a workaround, because NeoVintageous doesn't yet support :sort u.
+nnoremap <leader>ss vip<F9>o<Esc>
 
 " Some window command aliases. This is especially useful if you don't like
 " to enable ctrl-key key bindings ('vintageous_use_ctrl_keys' setting).
@@ -64,41 +72,46 @@ nnoremap <leader>\| <C-w>\|
 nnoremap <leader>= <C-w>=
 nnoremap <leader>. <C-w>_<C-w>\|
 
-" Test plugin.
-" See https://github.com/gerardroche/sublime-test.
-" See https://github.com/gerardroche/sublime-phpunit.
-" See https://github.com/gerardroche/sublime-color-scheme-unit.
-" See https://github.com/randy3k/UnitTesting.
+" Test plugin (https://github.com/gerardroche/sublime-test).
+" Also see https://github.com/gerardroche/sublime-phpunit.
+" Also see https://github.com/gerardroche/sublime-color-scheme-unit.
+" Also see https://github.com/randy3k/UnitTesting.
 nnoremap <leader>t :TestNearest<CR>
 nnoremap <leader>T :TestFile<CR>
 nnoremap <leader>a :TestSuite<CR>
 nnoremap <leader>l :TestLast<CR>
 nnoremap <leader>gg :TestVisit<CR>
+nnoremap <D-n> :TestNearest<CR>
+
+" Gimmie Shelter.
+nnoremap <leader>gf :GitFormatGithubUrl<CR>
+nnoremap <leader>go :GitOpen<CR>
+nnoremap <leader>gt :Tasks<CR>
+
+" Debug.
+nnoremap <leader>vd :VarDump<CR>
+
+" Wrap Lines (https://github.com/ehuss/Sublime-Wrap-Plus).
+" Because gq in NeoVintageous doesn't work properly.
+nnoremap <D-q> :WrapLinesPlus<CR>
 
 " -----------------------------------------------------------------------------
-" !!! HERE BE DRAGONS !!!
-"
+" *** HERE BE DRAGONS *** DON'T JUST COPY AND PASTE THIS STUFF!
 " Everything beyond here is either experimental or very customised to my own
-" personal workflow. So DON'T JUST COPY AND PASTE THIS STUFF. Make sure you
-" understand the mappings.
-"
+" personal workflow: make sure you understand the mappings.
 " -----------------------------------------------------------------------------
 
-" Multiple cursors.
+" Make multiple cursors work more like vim's multiple cursors.
 nnoremap <C-n> gh
 snoremap <C-n> j
 snoremap <C-p> k
 snoremap <C-x> l
 snoremap i <Esc>i
 
-" Duece Seven.
-nnoremap zc :Fold<CR>
-nnoremap zM :FoldAll<CR>
-nnoremap zo :Unfold<CR>
-nnoremap zR :UnfoldAll<CR>
-
-" Show me the registers.
-nnoremap <leader>r :reg<CR>
+" Show me the files.
+nnoremap <leader>h :Exec hide_phantoms_only=true<CR>
+nnoremap <leader>sf :ShowPanel panel=find_in_files<CR>
+nnoremap <leader>sr :ShowFindResults<CR>
 
 " " Prestige.
 " nnoremap <leader>r :RevealInSideBar<CR>
@@ -106,45 +119,21 @@ nnoremap <leader>r :reg<CR>
 " " Roger.
 " nnoremap <C-c> :Copy<CR>
 
-" " Files.
-" nnoremap <leader>h :HidePhantoms<CR>
-" nnoremap <leader>sf :ShowFindInFiles<CR>
-" nnoremap <leader>sr :ShowFindResults<CR>
+" Duece Seven.
+" nnoremap zc :Fold<CR>
+" nnoremap zM :FoldAll<CR>
+" nnoremap zo :Unfold<CR>
+" nnoremap zR :UnfoldAll<CR>
 
-" Sorting.
-" TODO Implement `:sort u` Neovintageous ex command.
-vnoremap <leader>sl <F9>o<Esc>
-nnoremap <leader>ss vip<F9>o<Esc>
+" AceJump (https://packagecontrol.io/packages/AceJump).
+" nnoremap <leader><leader>a :AceJumpAfter<CR>
+" nnoremap <leader><leader>c :AceJumpChar<CR>
+" nnoremap <leader><leader>d :AceJumpAddCursor<CR>
+" nnoremap <leader><leader>i :AceJumpWithinLine<CR>
+" nnoremap <leader><leader>l :AceJumpLine<CR>
+" nnoremap <leader><leader>s :AceJumpSelect<CR>
+" nnoremap <leader><leader>w :AceJumpWord<CR>
 
-" It's a Bird... It's a Plane...
-nnoremap <D-n> :TestNearest<CR>
-nnoremap <D-i> :GotoSymbolInProject<CR>
-
-" AceJump plugin
-" https://packagecontrol.io/packages/AceJump
-nnoremap <leader><leader>a :AceJumpAfter<CR>
-nnoremap <leader><leader>c :AceJumpChar<CR>
-nnoremap <leader><leader>d :AceJumpAddCursor<CR>
-nnoremap <leader><leader>i :AceJumpWithinLine<CR>
-nnoremap <leader><leader>l :AceJumpLine<CR>
-nnoremap <leader><leader>s :AceJumpSelect<CR>
-nnoremap <leader><leader>w :AceJumpWord<CR>
-
-" ColorSchemeUnit plugin
-" https://github.com/gerardroche/sublime-color-scheme-unit
-nnoremap <leader>ia :ColorSchemeUnitInsertAssertions<CR>
-nnoremap <leader>is :ColorSchemeUnitInsertSyntaxAssertions<CR>
-
-" Gimmie Shelter.
-nnoremap <leader>gi :FormatGithubUrl<CR>
-nnoremap <leader>go :GitOpen<CR>
-nnoremap <leader>gt :TaskList<CR>
-
-" Fuck it.
-nnoremap <leader>vd :VarDump<CR>
-
-" Maintain Visual Mode after shifting > and <.
-" Notice that '<lt>' is used to represent a real '<', because like a
-" backslash, it needs to be escaped. See `:h <>`.
-" vnoremap <lt> <lt>gv
-" vnoremap > >gv
+" " ColorSchemeUnit (https://github.com/gerardroche/sublime-color-scheme-unit).
+" nnoremap <leader>ia :ColorSchemeUnitInsertAssertions<CR>
+" nnoremap <leader>is :ColorSchemeUnitInsertSyntaxAssertions<CR>
