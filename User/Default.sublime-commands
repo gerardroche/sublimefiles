@@ -24,6 +24,10 @@
     { "caption": "Scriptease: Toggle Debug Mode", "command": "scriptease", "args": {"action": "toggle_debug_mode"} },
     { "caption": "Scriptease: Toggle Plugin Debug Mode", "command": "scriptease", "args": {"action": "toggle_plugin_debug_mode"} },
 
+    // Syntastic (User plugin).
+    { "caption": "Syntastic: Check", "command": "syntastic_check" },
+    { "caption": "Syntastic: Check Project", "command": "syntastic_check", "args": {"action": "project"}},
+
     // Package: Sesame (custom ~/vendor directory commands).
     // See https://github.com/gerardroche/sublime-sesame.
     { "caption": "Sesame: Add Vendor", "command": "sesame_add", "args": { "path": "~/vendor" } },

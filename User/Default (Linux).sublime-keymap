@@ -21,6 +21,9 @@
     { "keys": ["f1"], "command": "man_goto_php", "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
     { "keys": ["shift+f1"], "command": "man_goto_php", "args": {"remote": true},   "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
 
+    // Syntastic (User plugin).
+    { "keys": ["ctrl+l"], "command": "syntastic_check"},
+
     // Package: ColorSchemeUnit.
     // See https://github.com/gerardroche/sublime-color-scheme-unit.
     // { "keys": ["ctrl+shift+alt+p"], "command": "color_scheme_unit_show_scope_name_and_styles" },

@@ -434,6 +434,8 @@
 	"show_line_endings": true,
 	"show_tab_close_buttons": false,
 	"submit_usage": false,
+	"syntastic_php_php_exec": "~/.phpenv/versions/7.x/bin/php",
+	"syntastic_python_flake8_exec": "~/.local/bin/flake8",
 	"theme": "Adaptive.sublime-theme",
 	"tree_animation_enabled": false,
 	"update_check": false,
