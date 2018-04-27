@@ -13,11 +13,6 @@
     { "caption": "NeoVintageous: Set Log Level", "command": "neovintageous_dev", "args": {"action": "set_log_level"}},
     { "caption": "NeoVintageous: Toggle Use CTRL Keys", "command": "neovintageous_dev", "args": {"action": "toggle_use_ctrl_keys"}},
 
-    // Refactor (User plugin).
-    { "caption": "Refactor: Test - Coding Standard Fixer", "command": "refactor_test_coding_standard_fixer" },
-    { "caption": "Refactor: Test Class - Underscore -> Camelcase", "command": "refactor_test_class_underscore_to_camelcase" },
-    { "caption": "Refactor: Test Function - Camelcase -> Underscore", "command": "refactor_test_function_camelcase_to_underscore" },
-
     // Rulers (User plugin).
     { "caption": "Rulers: Add Ruler", "command": "rulers", "args": {"action": "add"}},
     { "caption": "Rulers: Remove Ruler", "command": "rulers", "args": {"action": "remove"}},
