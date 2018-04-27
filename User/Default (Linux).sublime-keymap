@@ -15,30 +15,6 @@
     { "keys": ["f11"], "command": "toggle_full_screen" },
     { "keys": ["shift+f11"], "command": "toggle_distraction_free" },
 
-    // Initiative (User plugin).
-    {
-        "keys": [")"],
-        "command": "initiative",
-        "args": {"key": ")"},
-        "context": [
-            { "key": "initiative", "operator": "equal", "operand": true, "match_all": true },
-            { "key": "setting.command_mode", "operator": "equal", "operand": false },
-            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
-            { "key": "has_prev_field", "operator": "equal", "operand": true, "match_all": true }
-        ]
-    },
-    {
-        "keys": ["backspace"],
-        "command": "initiative",
-        "args": {"key": "backspace"},
-        "context": [
-            { "key": "initiative", "operator": "equal", "operand": true, "match_all": true },
-            { "key": "setting.command_mode", "operator": "equal", "operand": false },
-            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
-            { "key": "has_prev_field", "operator": "equal", "operand": true, "match_all": true }
-        ]
-    },
-
     // Finders (User plugin).
     { "keys": ["ctrl+f3"], "command": "find_in_open_folders" },
     { "keys": ["shift+f3"], "command": "find_in_open_folders", "args": {"interactive": false} },
