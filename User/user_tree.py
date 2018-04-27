@@ -1,3 +1,7 @@
+# When you see something you like and would like to use it, open an issue about
+# abstracting it out into a reusable package, possibly installable via Package
+# Control.
+
 from functools import partial
 import os
 import shutil
@@ -7,11 +11,6 @@ from sublime import error_message
 from sublime import Region
 from sublime import set_timeout_async
 import sublime_plugin
-
-
-# When you see something you like and would like to use it, open an issue about
-# abstracting it out into a reusable package, possibly installable via Package
-# Control.
 
 
 def _error_message(msg):

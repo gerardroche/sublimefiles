@@ -1,3 +1,7 @@
+# When you see something you like and would like to use it, open an issue about
+# abstracting it out into a reusable package, possibly installable via Package
+# Control.
+
 import glob
 import os
 import re
@@ -5,11 +9,6 @@ import webbrowser
 
 from sublime import status_message
 import sublime_plugin
-
-
-# When you see something you like and would like to use it, open an issue about
-# abstracting it out into a reusable package, possibly installable via Package
-# Control.
 
 
 def _man_path(window):

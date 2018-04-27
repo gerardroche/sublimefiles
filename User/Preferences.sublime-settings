@@ -215,16 +215,22 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
-		"AutoWrap",
+		"ColorSchemeUnit",
+		"GotoDocumentation",
 		"LSP",
-		"SASS",
+		"Markdown Preview",
+		"Pine",
+		"RulerColumn",
+		"Sass",
 		"Six",
-		"SublimeLinter-annotations",
+		"SublimeLinter-contrib-mypy",
 		"SublimeLinter-contrib-php-cs-fixer",
 		"SublimeLinter-php",
-		"SublimeLinter-phpcs",
+		"Tmux",
+		"ToggleNeoVintageous",
 		"Vintage",
-		"Vintageous"
+		"Vintageous",
+		"molokai"
 	],
 	"ignored_words":
 	[

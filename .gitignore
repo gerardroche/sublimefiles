@@ -15,16 +15,12 @@
 /python-markdown/
 /pyyaml/
 
-# Symlinked Packages
-/A File Icon
-/AceJump
-/ShellScript
-
 # Packages
-/AutoWrap/
-/LSP/
+/FileIcons/
+/Sass/
+/SublimeLinter-contrib-mypy/
 /SublimeLinter-contrib-php-cs-fixer/
-/SublimeLinter-phpcs/
+/Wrap Plus/
 
 # PHP runtime generated (by php-snippets).
 /PHP/Snippets/
@@ -33,8 +29,8 @@
 /PHP/PHP.sublime-completions
 
 # User
+*.pyi
 /.logs/
-/tmp/
 /User/.neovintageous*
 /User/Color Highlighter/
 /User/Package Control.*-ca-bundle
@@ -45,8 +41,4 @@
 /User/UnitTesting/
 /User/UnitTesting/*/coverage
 /User/UnitTesting/schedule.json
-/zzz A File Icon zzz/
-/SublimeLinter-contrib-mypy/
-*.pyi
-/SublimeLinter-annotations/
-/Sass/
+/tmp/

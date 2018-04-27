@@ -11,10 +11,6 @@
     // See https://github.com/SublimeTextIssues/Core/issues/2128.
     { "keys": ["shift+f10"], "command": "context_menu" },
 
-    // Full screen tweaks.
-    { "keys": ["f11"], "command": "toggle_full_screen" },
-    { "keys": ["shift+f11"], "command": "toggle_distraction_free" },
-
     // Finders (User plugin).
     { "keys": ["ctrl+f3"], "command": "find_in_open_folders" },
     { "keys": ["shift+f3"], "command": "find_in_open_folders", "args": {"interactive": false} },

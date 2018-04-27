@@ -37,9 +37,7 @@
     { "caption": "SublimeLinter: Toggle Mode", "command": "linters", "args": {"action": "toggle_mode"} },
 
     // Toggles (User plugin).
-    { "caption": "Toggle Auto Hide Side Bar", "command": "toggle_setting", "args": {"setting": "auto_hide_side_bar"} },
-    { "caption": "Toggle Distraction Free", "command": "toggle_distraction_free" },
-    { "caption": "Toggle Full Screen", "command": "toggle_full_screen" },
+    { "caption": "Toggle Hidden File and Folders", "command": "toggle_hidden_files_and_folders" },
     { "caption": "Toggle Temporary Folder", "command": "toggle_temporary_folder" },
 
     // Tree (User plugin).
