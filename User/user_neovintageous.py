@@ -1,3 +1,7 @@
+# When you see something you like and would like to use it, open an issue about
+# abstracting it out into a reusable package, possibly installable via Package
+# Control.
+
 import functools
 import logging
 import os
@@ -39,10 +43,11 @@ def _set_logger_log_level(level):
 
 
 def plugin_loaded():
-    log_level_file = _log_level_file()
-    if os.path.isfile(log_level_file):
-        with open(log_level_file, encoding='utf8') as f:
-            _set_logger_log_level(f.read().strip().upper())
+    if bool(os.getenv('SUBLIME_NEOVINTAGEOUS_DEBUG')):
+        log_level_file = _log_level_file()
+        if os.path.isfile(log_level_file):
+            with open(log_level_file, encoding='utf8') as f:
+                _set_logger_log_level(f.read().strip().upper())
 
 
 class NeovintageousDevCommand(sublime_plugin.WindowCommand):
@@ -50,7 +55,7 @@ class NeovintageousDevCommand(sublime_plugin.WindowCommand):
     def run(self, action):
         action_method = getattr(self, action + '_action', None)
         if action_method:
-            print('NeoVintageousDev: ', action.replace('_', ' '))
+            print('NeoVintageous: ', action.replace('_', ' '))
             action_method()
         else:
             raise Exception('action not found')
@@ -135,6 +140,7 @@ class NeovintageousDevCommand(sublime_plugin.WindowCommand):
 
 
 class NeovintageousDevDumpViewCommand(sublime_plugin.TextCommand):
+
     def run(self, edit):
         view = self.view
         settings = view.settings()
