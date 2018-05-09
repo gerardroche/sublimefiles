@@ -3,8 +3,8 @@
 
 let mapleader=,
 
-" Enter command line mode.
-nnoremap <space> :
+" " Enter command line mode.
+" nnoremap <space> :
 
 " Toggle the side bar.
 nnoremap <leader>d :NeovintageousToggleSideBar<CR>
@@ -30,7 +30,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 
 " Clear highlighting.
-" Using Esc is a workaround, because NeoVintageous doesn't yet support :nohlsearch.
+" Using Esc is a workaround, because :nohlsearch is not yet supported.
 nnoremap <C-l> <Esc>
 
 " Saving.
@@ -64,18 +64,17 @@ nnoremap <leader>en :NeovintageousOpenMyRcFile<CR>
 " Sorting.
 " Using F9 is a workaround, because NeoVintageous doesn't yet support :sort u.
 nnoremap <leader>ss vip<F9>o<Esc>
+nnoremap <leader>sp :ShowOverlay overlay=goto show_files=true<CR>
 
-" Some window command aliases. This is especially useful if you don't like
-" to enable ctrl-key key bindings ('vintageous_use_ctrl_keys' setting).
+" Some window command aliases.
+" This is especially useful if you don't like to enable ctrl-key key
+" bindings ('vintageous_use_ctrl_keys' setting).
 nnoremap <leader>_ <C-w>_
 nnoremap <leader>\| <C-w>\|
 nnoremap <leader>= <C-w>=
 nnoremap <leader>. <C-w>_<C-w>\|
 
 " Test plugin (https://github.com/gerardroche/sublime-test).
-" Also see https://github.com/gerardroche/sublime-phpunit.
-" Also see https://github.com/gerardroche/sublime-color-scheme-unit.
-" Also see https://github.com/randy3k/UnitTesting.
 nnoremap <leader>t :TestNearest<CR>
 nnoremap <leader>T :TestFile<CR>
 nnoremap <leader>a :TestSuite<CR>
@@ -137,3 +136,5 @@ nnoremap <leader>sr :ShowFindResults<CR>
 " " ColorSchemeUnit (https://github.com/gerardroche/sublime-color-scheme-unit).
 " nnoremap <leader>ia :ColorSchemeUnitInsertAssertions<CR>
 " nnoremap <leader>is :ColorSchemeUnitInsertSyntaxAssertions<CR>
+
+nnoremap <leader>op :ProfilePlugins<CR>

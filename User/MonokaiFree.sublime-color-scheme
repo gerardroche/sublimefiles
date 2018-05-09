@@ -4,6 +4,7 @@
     },
     "globals":
     {
+        "caret": "#ff0000",
         "background": "#1b1d1e",
         "gutter": "#1b1d1e",
         "gutter_foreground": "#7e8e919d",
