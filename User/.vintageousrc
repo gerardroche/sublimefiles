@@ -3,19 +3,11 @@
 
 let mapleader=,
 
-" " Enter command line mode.
-" nnoremap <space> :
-
 " Toggle the side bar.
 nnoremap <leader>d :NeovintageousToggleSideBar<CR>
 
-" " Make j and k work file linewise instead of screen linewise.
-" " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
-" " https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
-" nnoremap j gj
-" nnoremap k gk
-" nnoremap gj j
-" nnoremap gk k
+" Saving.
+nnoremap <C-s> :w<CR>
 
 " Scroll viewport faster.
 " http://items.sjbach.com/319/configuring-vim-right
@@ -30,11 +22,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 
 " Clear highlighting.
-" Using Esc is a workaround, because :nohlsearch is not yet supported.
+" Workaround, because :nohlsearch is not implemented.
 nnoremap <C-l> <Esc>
-
-" Saving.
-nnoremap <C-s> :w<CR>
 
 " Yank and paste using system clipboard.
 " http://www.drbunsen.org/the-text-triumvirate/
@@ -80,6 +69,22 @@ nnoremap <leader>l :TestLast<CR>
 nnoremap <leader>gg :TestVisit<CR>
 nnoremap <D-n> :TestNearest<CR>
 
+" Finders (User plugin).
+nnoremap <C-f3> :FindInOpenFolders<CR>
+nnoremap <S-f3> :FindInOpenFolders interactive=false<CR>
+nnoremap <C-S-f3> :FindInOpenFolders default_filter=true<CR>
+
+" Wrap Lines: https://github.com/ehuss/Sublime-Wrap-Plus.
+" Because gq{motion} doesn't work properly.
+nnoremap <D-q> :WrapLinesPlus<CR>
+
+" Syntastic (User  plugin).
+nnoremap <C-l> :SyntasticCheck<CR>
+
+" Show me the files.
+nnoremap <leader>sf :ShowPanel panel=find_in_files<CR>
+nnoremap <leader>sr :ShowFindResults<CR>
+
 " Gimmie Shelter.
 nnoremap <leader>gf :GitFormatGithubUrl<CR>
 nnoremap <leader>go :GitOpen<CR>
@@ -89,28 +94,20 @@ nnoremap <leader>gt :Tasks<CR>
 nnoremap <leader>vd :VarDump<CR>
 nnoremap <leader>vp :ProfilePlugins<CR>
 
-" Wrap Lines: https://github.com/ehuss/Sublime-Wrap-Plus.
-" Because gq{motion} doesn't work properly.
-nnoremap <D-q> :WrapLinesPlus<CR>
-
-" Syntastic (User  plugin).
-nnoremap <C-l> :SyntasticCheck<CR>
-
-" Finders (User plugin).
-nnoremap <C-f3> :FindInOpenFolders<CR>
-nnoremap <S-f3> :FindInOpenFolders interactive=false<CR>
-nnoremap <C-S-f3> :FindInOpenFolders default_filter=true<CR>
-
-" Show me the files.
-nnoremap <leader>sf :ShowPanel panel=find_in_files<CR>
-nnoremap <leader>sr :ShowFindResults<CR>
-
 " Make multiple cursors work more like Vim's multiple cursors.
 nnoremap <C-n> gh
 snoremap <C-n> j
 snoremap <C-p> k
 snoremap <C-x> l
 snoremap i <Esc>i
+
+" " Make j and k work file linewise instead of screen linewise.
+" " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+" " https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
+" nnoremap j gj
+" nnoremap k gk
+" nnoremap gj j
+" nnoremap gk k
 
 " " Duece Seven.
 " nnoremap zc :Fold<CR>
