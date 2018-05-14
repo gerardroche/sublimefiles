@@ -85,3 +85,9 @@
 [submodule "Python Completions"]
 	path = Python Completions
 	url = https://github.com/gerardroche/Python-Auto-Complete.git
+[submodule "Wrap Plus"]
+	path = Wrap Plus
+	url = https://github.com/ehuss/Sublime-Wrap-Plus
+[submodule "FileIcons"]
+	path = FileIcons
+	url = https://github.com/braver/FileIcons

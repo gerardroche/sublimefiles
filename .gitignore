@@ -16,11 +16,9 @@
 /pyyaml/
 
 # Packages
-/FileIcons/
 /Sass/
 /SublimeLinter-contrib-mypy/
 /SublimeLinter-contrib-php-cs-fixer/
-/Wrap Plus/
 
 # PHP runtime generated (by php-snippets).
 /PHP/Snippets/
