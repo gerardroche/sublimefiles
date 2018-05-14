@@ -1,16 +1,16 @@
-[submodule "phpunitkit"]
+[submodule "PHPUnitKit"]
 	path = PHPUnitKit
 	url = https://github.com/gerardroche/sublime-phpunit.git
 [submodule "polyfill"]
 	path = polyfill
 	url = https://github.com/gerardroche/sublime-polyfill.git
-[submodule "sensible"]
+[submodule "Sensible"]
 	path = Sensible
 	url = https://github.com/gerardroche/sublime-sensible.git
-[submodule "php-grammar"]
+[submodule "PHPGrammar"]
 	path = PHPGrammar
 	url = https://github.com/gerardroche/sublime-php-grammar.git
-[submodule "php-snippets"]
+[submodule "PHPSnippets"]
 	path = PHPSnippets
 	url = https://github.com/gerardroche/sublime-php-snippets.git
 [submodule "phpunit-completions"]
@@ -19,7 +19,7 @@
 [submodule "PHP Completions Kit"]
 	path = PHP Completions Kit
 	url = https://github.com/gerardroche/sublime-phpck.git
-[submodule "open-sesame"]
+[submodule "Sesame"]
 	path = Sesame
 	url = https://github.com/gerardroche/sublime-open-sesame.git
 [submodule "ColorSchemeUnit"]
