@@ -412,7 +412,6 @@
 	"match_brackets_angle": true,
 	"mouse_wheel_switches_tabs": false,
 	"neovintageous_disable_arrow_keys": false,
-	"overlay_scroll_bars": "enabled",
 	"phpunit.options":
 	{
 		"no-coverage": true
