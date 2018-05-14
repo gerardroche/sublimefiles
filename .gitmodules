@@ -30,7 +30,7 @@
 	url = https://github.com/gerardroche/sublime-jsdocs.git
 [submodule "UnitTesting"]
 	path = UnitTesting
-	url = https://github.com/randy3k/UnitTesting.git
+	url = https://github.com/gerardroche/UnitTesting.git
 [submodule "NeoVintageous"]
 	path = NeoVintageous
 	url = https://github.com/NeoVintageous/NeoVintageous.git
