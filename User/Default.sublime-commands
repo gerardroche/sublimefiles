@@ -6,6 +6,10 @@
     // Man (User plugin).
     { "caption": "Man", "command": "man" },
 
+    // Git (User plugin).
+    { "caption": "Git: Open", "command": "git_open" },
+    { "caption": "Git: Open Modified", "command": "git", "args": {"action": "open_modified"} },
+
     // Package: NeoVintageous.
     // See https://github.com/NeoVintageous/NeoVintageous.
     { "caption": "NeoVintageous: Edit Help File", "command": "neovintageous_dev", "args": {"action": "edit_help_file"}},

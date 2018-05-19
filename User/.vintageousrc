@@ -80,6 +80,7 @@ nnoremap <D-q> :WrapLinesPlus<CR>
 
 " Syntastic (User  plugin).
 nnoremap <C-l> :SyntasticCheck<CR>
+" nnoremap <C-l> :SublimeLinterLint<CR>
 
 " Show me the files.
 nnoremap <leader>sf :ShowPanel panel=find_in_files<CR>
@@ -124,3 +125,6 @@ snoremap i <Esc>i
 " nnoremap <leader><leader>s :AceJumpSelect<CR>
 " nnoremap <leader><leader>w :AceJumpWord<CR>
 
+" Temporary scrolling fixes.
+nnoremap <C-d> Lzz
+nnoremap <C-u> Hzz

@@ -321,6 +321,7 @@
 		"phtml",
 		"plugin",
 		"polyfill",
+		"pragma",
 		"rando",
 		"refactor",
 		"regex",

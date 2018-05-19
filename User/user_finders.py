@@ -17,12 +17,14 @@ def _find_in_open_folders(window, interactive=True, default_filter=False):
     def get_default_filter():
         include_filters = []
 
+        include_filters.append('-tmp/')
+
         file_name = view.file_name()
         if file_name:
             include_filters.append('*' + os.path.splitext(file_name)[1])
 
         if include_filters:
-            return ',-tmp/' + ','.join(include_filters)
+            return ',' + ','.join(include_filters)
         else:
             return ''
 

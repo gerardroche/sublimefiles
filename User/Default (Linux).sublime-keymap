@@ -28,5 +28,4 @@
     { "keys": ["ctrl+shift+r"], "command": "test_results" },
     { "keys": ["ctrl+shift+s"], "command": "test_switch" },
     { "keys": ["ctrl+shift+v"], "command": "test_visit" },
-
 ]
