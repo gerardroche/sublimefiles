@@ -81,7 +81,7 @@ class NeovintageousDevCommand(sublime_plugin.WindowCommand):
             view.assign_syntax('Packages/NeoVintageous/res/Help.sublime-syntax')
             view.settings().set('indent_guide_options', [])
             view.settings().set('spell_check', True)
-            view.settings().set('rulers', [8, 24, 40, 80])
+            view.settings().set('wrap_width', 78)
 
         self.window.show_quick_panel(resources, on_done)
 

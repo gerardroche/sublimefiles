@@ -122,6 +122,9 @@ def _toggle_debug_mode(setting=None):
 
 def plugin_loaded():
     if _DEBUG or _debug_indicator_file_exists():
+        # Debug all the things.
+        _set_debug_mode(True)
+
         print('Scriptease: debug enabled')
 
         # Show some system information.
@@ -136,9 +139,6 @@ def plugin_loaded():
         print('Scriptease: sys.path is {}'.format(sys.path))
         print('Scriptease: __debug__ is {}'.format(__debug__))
 
-        # Debug all the things.
-        _set_debug_mode(True)
-
         # Auto show the console.
         window = active_window()
         active_group = window.active_group()
@@ -149,28 +149,33 @@ def plugin_loaded():
 class ScripteaseCommand(sublime_plugin.ApplicationCommand):
 
     def run(self, action):
-        if action == 'toggle_debug_mode':
-            status = _toggle_debug_mode()
-            status_message('Debug is ' + 'enabled' if status else 'disabled')
-        elif action == 'enable_debug_mode':
-            _set_debug_mode(True)
-            status_message('Debug is enabled')
-        elif action == 'disable_debug_mode':
-            _set_debug_mode(False)
-            status_message('Debug is disabled')
-        elif action == 'toggle_plugin_debug_mode':
-            toggle_plugins = [str(p) for p in _debug_plugins_meta]
-
-            def on_done(index):
-                if index >= 0:
-                    status = _toggle_debug_mode(_debug_plugins_meta[index])
-                    status_message('Debug is ' + 'enabled' if status else 'disabled')
-
-            active_window().show_quick_panel(toggle_plugins, on_done)
-        # elif action == 'open_plugin_readme':  # TODO open plugin readme
+        action_method = getattr(self, action + '_action', None)
+        if action_method:
+            action_method()
         else:
-            raise Exception('unknown action')
+            raise Exception('action not found')
 
+    def enable_debug_mode_action(self):
+        _set_debug_mode(True)
+
+    def disable_debug_mode(self):
+        _set_debug_mode(False)
+
+    def enable_st_debug_mode_action(self):
+        log_commands(True)
+        log_input(True)
+
+    def disable_st_debug_mode_action(self):
+        log_commands(False)
+        log_input(False)
+
+    def toggle_plugin_debug_mode_action(self):
+        toggle_plugins = [str(p) for p in _debug_plugins_meta]
+        def on_done(index):
+            if index >= 0:
+                status = _toggle_debug_mode(_debug_plugins_meta[index])
+
+        active_window().show_quick_panel(toggle_plugins, on_done)
 
 class DebugViewToScopeCommand(sublime_plugin.TextCommand):
     def run(self, edit):

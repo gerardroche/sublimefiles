@@ -24,9 +24,9 @@
 
     // Scriptease (User plugin).
     { "caption": "Scriptease: Disable Debug Mode", "command": "scriptease", "args": {"action": "disable_debug_mode"} },
+    { "caption": "Scriptease: Disable Sublime Text Debug Mode", "command": "scriptease", "args": {"action": "disable_st_debug_mode"} },
     { "caption": "Scriptease: Enable Debug Mode", "command": "scriptease", "args": {"action": "enable_debug_mode"} },
-    { "caption": "Scriptease: Toggle Debug Mode", "command": "scriptease", "args": {"action": "toggle_debug_mode"} },
-    { "caption": "Scriptease: Toggle Plugin Debug Mode", "command": "scriptease", "args": {"action": "toggle_plugin_debug_mode"} },
+    { "caption": "Scriptease: Enable Sublime Text Debug Mode", "command": "scriptease", "args": {"action": "enable_st_debug_mode"} },
 
     // Syntastic (User plugin).
     { "caption": "Syntastic: Check", "command": "syntastic_check" },
