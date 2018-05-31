@@ -263,7 +263,7 @@ class VarDumpCommand(sublime_plugin.TextCommand):
         if 'php' in scope_name:
             dump_stmt = 'var_dump(' + word + ');'
         elif 'python' in scope_name:
-            dump_stmt = 'print(\'' + word.upper() + ' =\', ' + word + ')'
+            dump_stmt = 'print(\'' + word + ' =\', ' + word + ')'
         else:
             raise NotImplementedError('unknown scope')
 

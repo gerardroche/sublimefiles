@@ -23,7 +23,7 @@ nnoremap <C-k> <C-w>k
 
 " Clear highlighting.
 " Workaround, because :nohlsearch is not implemented.
-nnoremap <C-l> <Esc>
+" nnoremap <C-l> <Esc>
 
 " Yank and paste using system clipboard.
 " http://www.drbunsen.org/the-text-triumvirate/
