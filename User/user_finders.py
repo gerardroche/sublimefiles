@@ -18,6 +18,7 @@ def _find_in_open_folders(window, interactive=True, default_filter=False):
         include_filters = []
 
         include_filters.append('-tmp/')
+        include_filters.append('-.srcpath/')
 
         file_name = view.file_name()
         if file_name:

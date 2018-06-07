@@ -5,6 +5,7 @@
 import functools
 import logging
 import os
+import re
 
 from sublime import load_resource
 from sublime import load_settings
@@ -137,6 +138,63 @@ class NeovintageousDevCommand(sublime_plugin.WindowCommand):
         use_ctrl_keys = preferences.get('vintageous_use_ctrl_keys')
         preferences.set('vintageous_use_ctrl_keys', not use_ctrl_keys)
         save_settings('Preferences.sublime-settings')
+
+    def dump_ex_completions_action(self):
+        # Temporary hacky command to generate ex completions
+
+        from NeoVintageous.nv import ex_routes
+
+        routes = [r for r in ex_routes.ex_routes]
+
+        print('')
+        print('')
+        print('')
+
+        completions = []
+        for route in routes:
+            # print('route      =', route)
+            completion = route
+            completion = completion.replace('\\s', '')
+            completion = completion.replace('^a', '')
+            completion = completion.replace('^d', '')
+
+            completion = re.sub('[^a-zA-Z\\|]', '', completion)
+            completion = completion.strip('|')
+            if not completion:
+                print('completion not found in {}'.format(route))
+                continue
+
+            comps = completion.split('|')
+            if len(comps) > 1:
+
+                if comps == ['set', 's']:
+                    completions.append('set')
+                    print('completion {:>20} from {}'.format('set', route))
+                else:
+
+                    for comp in comps:
+                        completions.append(comp)
+                        print('completion {:>20} from {}'.format(comp, route))
+            else:
+
+                if completion == 'regead':
+                    completion = 'read'
+
+                if completion == 'registersaz':
+                    completion = 'registers'
+
+                if completion == 'qauit':
+                    completion = 'quit'
+
+                if completion == 'wqzAZ':
+                    completion = 'wq'
+
+                completions.append(completion)
+                print('completion {:>20} from {}'.format(completion, route))
+
+        print('')
+        print("'" + "', '".join(completions) + "'")
+        print('')
 
 
 class NeovintageousDevDumpViewCommand(sublime_plugin.TextCommand):

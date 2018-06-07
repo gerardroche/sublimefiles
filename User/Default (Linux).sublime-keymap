@@ -5,6 +5,11 @@
     // Copy in NeoVintageous INSERT mode.
     { "keys": ["ctrl+c"], "command": "copy" },
 
+    // Man (User plugin).
+    { "keys": ["f1"], "command": "goto_documentation", "context": [ { "key": "selector", "operator": "equal", "operand": "-embedding.php", "match_all": true } ]},
+    { "keys": ["f1"], "command": "man_goto_php", "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
+    { "keys": ["shift+f1"], "command": "man_goto_php", "args": {"remote": true},   "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
+
     // Fix opening the context menu.
     // See https://github.com/SublimeTextIssues/Core/issues/2128.
     { "keys": ["shift+f10"], "command": "context_menu" },

@@ -23,6 +23,6 @@
 
 ]]></content>
     <tabTrigger>gitattributes</tabTrigger>
-    <scope>text.plain, source.git, source.gitignore, source.shell</scope>
+    <scope>text.plain, text.git, source.git, source.gitignore, source.shell</scope>
     <description>Git: .gitattributes Template</description>
 </snippet>
