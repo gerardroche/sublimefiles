@@ -253,15 +253,18 @@ class VarDumpCommand(sublime_plugin.TextCommand):
             f = self.view.find('\\s*', pt)
             pt = f.end()
 
+        scope_name = self.view.scope_name(pt)
+
+        if 'php' in scope_name:
+            pt += 1
+
         word_region = self.view.word(pt)
         word = self.view.substr(word_region)
         if not re.match('^[a-zA-Z_][a-zA-Z0-9_]*$', word):
             return
 
-        scope_name = self.view.scope_name(pt)
-
         if 'php' in scope_name:
-            dump_stmt = 'var_dump(' + word + ');'
+            dump_stmt = 'var_dump($' + word + ');'
         elif 'python' in scope_name:
             dump_stmt = 'print(\'' + word + ' =\', ' + word + ')'
         else:

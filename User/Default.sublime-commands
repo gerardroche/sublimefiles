@@ -3,52 +3,62 @@
     // about abstracting it out into a reusable package, possibly installable
     // via Package Control.
 
-    // Man (User plugin).
+    // Man (User).
     { "caption": "Man", "command": "man" },
 
-    // Git (User plugin).
+    // Git (User).
     { "caption": "Git: Open", "command": "git_open" },
     { "caption": "Git: Open Modified", "command": "git", "args": {"action": "open_modified"} },
 
-    // Package: NeoVintageous.
-    // See https://github.com/NeoVintageous/NeoVintageous.
+    // NeoVintageous. See: https://github.com/NeoVintageous/NeoVintageous.
     { "caption": "NeoVintageous: Edit Help File", "command": "neovintageous_dev", "args": {"action": "edit_help_file"}},
     { "caption": "NeoVintageous: Fixup Docs", "command": "neovintageous_dev", "args": {"action": "fixup_docs"}},
     { "caption": "NeoVintageous: Set Log Level", "command": "neovintageous_dev", "args": {"action": "set_log_level"}},
     { "caption": "NeoVintageous: Toggle Use CTRL Keys", "command": "neovintageous_dev", "args": {"action": "toggle_use_ctrl_keys"}},
     { "caption": "NeoVintageous: Dump Ex Completions", "command": "neovintageous_dev", "args": {"action": "dump_ex_completions"}},
 
-    // Rulers (User plugin).
+    // Open (User)
+    { "caption": "Open: php.ini", "command": "user_open_file", "args": {"file": "$PROJECTS_PATH/lde/lde/etc/php/conf.d/90-lde.ini"} },
+    { "caption": "Open: .tmux.conf", "command": "user_open_file", "args": {"file": "~/.tmux.conf"} },
+
+    // Preferences (User).
+    { "caption": "Disable Exclude Patterns", "command": "exclude_patterns", "args": {"action": "disable"} },
+    { "caption": "Reset Exclude Patterns", "command": "exclude_patterns", "args": {"action": "reset"} },
+
+    // Open (User).
+    { "caption": "Open: php.ini", "command": "user_open_file", "args": {"file": "$PROJECTS_PATH/lde/lde/etc/php/conf.d/90-lde.ini"} },
+    { "caption": "Open: .tmux.conf", "command": "user_open_file", "args": {"file": "~/.tmux.conf"} },
+
+    // Rulers (User).
     { "caption": "Rulers: Add Ruler", "command": "rulers", "args": {"action": "add"}},
     { "caption": "Rulers: Remove Ruler", "command": "rulers", "args": {"action": "remove"}},
     { "caption": "Rulers: Clear Rulers", "command": "rulers", "args": {"action": "clear"}},
 
-    // Scriptease (User plugin).
+    // Scriptease (User).
     { "caption": "Scriptease: Disable Debug Mode", "command": "scriptease", "args": {"action": "disable_debug_mode"} },
     { "caption": "Scriptease: Disable Sublime Text Debug Mode", "command": "scriptease", "args": {"action": "disable_st_debug_mode"} },
     { "caption": "Scriptease: Enable Debug Mode", "command": "scriptease", "args": {"action": "enable_debug_mode"} },
     { "caption": "Scriptease: Enable Sublime Text Debug Mode", "command": "scriptease", "args": {"action": "enable_st_debug_mode"} },
 
-    // Syntastic (User plugin).
-    { "caption": "Syntastic: Check", "command": "syntastic_check" },
-    { "caption": "Syntastic: Check Project", "command": "syntastic_check", "args": {"action": "project"}},
-
-    // Package: Sesame (custom ~/vendor directory commands).
-    // See https://github.com/gerardroche/sublime-sesame.
+    // Sesame. See: https://github.com/gerardroche/sublime-sesame.
     { "caption": "Sesame: Add Vendor", "command": "sesame_add", "args": { "path": "~/vendor" } },
     { "caption": "Sesame: Open Vendor", "command": "sesame_open", "args": { "path": "~/vendor" } },
     { "caption": "Sesame: Switch Vendor", "command": "sesame_switch", "args": { "path": "~/vendor" } },
 
-    // SublimeLinter toggles (User plugin).
+    // Syntastic (User).
+    { "caption": "Syntastic: Check", "command": "syntastic_check" },
+    { "caption": "Syntastic: Check Project", "command": "syntastic_check", "args": {"action": "project"}},
+
+    // SublimeLinter toggles (User).
     { "caption": "SublimeLinter: Disable Linter", "command": "linters", "args": {"action": "disable"} },
     { "caption": "SublimeLinter: Enable Linter", "command": "linters", "args": {"action": "enable"} },
     { "caption": "SublimeLinter: Toggle Linter", "command": "linters", "args": {"action": "toggle"} },
     { "caption": "SublimeLinter: Toggle Mode", "command": "linters", "args": {"action": "toggle_mode"} },
 
-    // Toggles (User plugin).
+    // Toggles (User).
     { "caption": "Toggle Hidden File and Folders", "command": "toggle_hidden_files_and_folders" },
     { "caption": "Toggle Temporary Folder", "command": "toggle_temporary_folder" },
 
-    // Tree (User plugin).
+    // Tree (User).
     { "caption": "Tree: New File", "command": "tree_new_file" },
 ]

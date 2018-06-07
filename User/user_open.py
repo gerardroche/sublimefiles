@@ -30,3 +30,11 @@ class OpenPreferencesCommand(sublime_plugin.WindowCommand):
                 'Preferences.sublime-settings'
             )
         })
+
+
+class UserOpenFileCommand(sublime_plugin.WindowCommand):
+
+    def run(self, file):
+        self.window.run_command('open_file', {
+            'file': os.path.expandvars(os.path.expanduser((file)))
+        })
