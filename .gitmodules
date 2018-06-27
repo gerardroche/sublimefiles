@@ -91,3 +91,6 @@
 [submodule "FileIcons"]
 	path = FileIcons
 	url = https://github.com/braver/FileIcons
+[submodule "LaravelTestingCompletions"]
+	path = LaravelTestingCompletions
+	url = https://github.com/gerardroche/sublime-laravel-testing-completions.git

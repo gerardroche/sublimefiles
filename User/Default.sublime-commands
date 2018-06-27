@@ -48,6 +48,7 @@
     // Syntastic (User).
     { "caption": "Syntastic: Check", "command": "syntastic_check" },
     { "caption": "Syntastic: Check Project", "command": "syntastic_check", "args": {"action": "project"}},
+    { "caption": "Syntastic: Check (Phan)", "command": "phan_check" },
 
     // SublimeLinter toggles (User).
     { "caption": "SublimeLinter: Disable Linter", "command": "linters", "args": {"action": "disable"} },

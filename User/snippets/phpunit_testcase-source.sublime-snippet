@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-class ${1:${TM_FILENAME/([a-zA-Z][a-zA-Z0-9_]*).*/\u$1/}} extends \PHPUnit_Framework_TestCase
+class ${1:${TM_FILENAME/([a-zA-Z][a-zA-Z0-9_]*).*/\u$1/}}Test extends \PHPUnit\Framework\TestCase
 {
     $0
 }
