@@ -94,3 +94,6 @@
 [submodule "LaravelTestingCompletions"]
 	path = LaravelTestingCompletions
 	url = https://github.com/gerardroche/sublime-laravel-testing-completions.git
+[submodule "Laravel Blade Highlighter"]
+	path = Laravel Blade Highlighter
+	url = https://github.com/Medalink/laravel-blade.git
