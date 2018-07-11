@@ -265,6 +265,7 @@
 	[
 		"GotoDocumentation",
 		"LSP",
+		"molokai",
 		"Pine",
 		"RulerColumn",
 		"Sass",
@@ -274,8 +275,7 @@
 		"ToggleNeoVintageous",
 		"Vintage",
 		"Vintageous",
-		"Wrap Plus",
-		"molokai"
+		"Wrap Plus"
 	],
 	"ignored_words":
 	[
