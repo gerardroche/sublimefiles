@@ -97,3 +97,6 @@
 [submodule "Laravel Blade Highlighter"]
 	path = Laravel Blade Highlighter
 	url = https://github.com/Medalink/laravel-blade.git
+[submodule "SublimeLinter-php-cs-fixer"]
+	path = SublimeLinter-php-cs-fixer
+	url = https://github.com/jhoff/SublimeLinter-contrib-php-cs-fixer.git
