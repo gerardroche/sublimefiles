@@ -1,6 +1,5 @@
 {
 	"delay": 0.1,
-	"debug": false,
 	"lint_mode": "save",
 	"linters":
 	{

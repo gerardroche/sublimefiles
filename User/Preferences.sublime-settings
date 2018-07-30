@@ -186,9 +186,9 @@
 		"bower_components",
 		"build/coverage",
 		"build/logs",
+		"covhtml",
 		"lib/*/*/build",
 		"lib/*/*/vendor",
-		"covhtml",
 		"logs",
 		"nbproject",
 		"node_modules",
@@ -226,7 +226,7 @@
 		"Source Code Pro",
 		"Fira Code"
 	],
-	"font_size": 11,
+	"font_size": 12,
 	"font_size_default": 11,
 	"git_gutter_enable_hover_diff_popup": false,
 	"git_gutter_next_prev_change_wrap": false,
@@ -265,19 +265,23 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
+		"AutomaticPackageReloader",
+		"ColorSchemeUnit",
 		"GotoDocumentation",
 		"LSP",
-		"molokai",
+		"NeoVintageousTweaks",
 		"Pine",
 		"RulerColumn",
 		"Sass",
 		"Six",
 		"SublimeLinter-contrib-mypy",
-		"Tmux",
+		"SublimeLinter-flake8",
+		"SublimeTextAPICompletions",
 		"ToggleNeoVintageous",
+		"UnitTesting",
 		"Vintage",
 		"Vintageous",
-		"Wrap Plus"
+		"molokai"
 	],
 	"ignored_words":
 	[

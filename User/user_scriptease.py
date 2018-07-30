@@ -158,7 +158,7 @@ class ScripteaseCommand(sublime_plugin.ApplicationCommand):
     def enable_debug_mode_action(self):
         _set_debug_mode(True)
 
-    def disable_debug_mode(self):
+    def disable_debug_mode_action(self):
         _set_debug_mode(False)
 
     def enable_st_debug_mode_action(self):
