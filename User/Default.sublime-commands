@@ -20,6 +20,7 @@
     // Open (User)
     { "caption": "Open: php.ini", "command": "user_open_file", "args": {"file": "$PROJECTS_PATH/lde/lde/etc/php/conf.d/90-lde.ini"} },
     { "caption": "Open: .tmux.conf", "command": "user_open_file", "args": {"file": "~/.tmux.conf"} },
+    { "caption": "Open: dev", "command": "user_open_file", "args": {"file": "~/bin/_dev"} },
 
     // Preferences (User).
     { "caption": "Disable Exclude Patterns", "command": "exclude_patterns", "args": {"action": "disable"} },
