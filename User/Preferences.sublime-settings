@@ -226,7 +226,7 @@
 		"Source Code Pro",
 		"Fira Code"
 	],
-	"font_size": 12,
+	"font_size": 11,
 	"font_size_default": 11,
 	"git_gutter_enable_hover_diff_popup": false,
 	"git_gutter_next_prev_change_wrap": false,
@@ -269,6 +269,7 @@
 		"ColorSchemeUnit",
 		"GotoDocumentation",
 		"LSP",
+		"molokai",
 		"NeoVintageousTweaks",
 		"Pine",
 		"RulerColumn",
@@ -281,7 +282,7 @@
 		"UnitTesting",
 		"Vintage",
 		"Vintageous",
-		"molokai"
+		"Wrap Plus"
 	],
 	"ignored_words":
 	[
