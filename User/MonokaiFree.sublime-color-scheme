@@ -7,20 +7,5 @@
     },
     "rules":
     [
-        {
-            "scope": "nv_search_inc",
-            "background": "#a1efe4",
-            "foreground": "#272822"
-        },
-        {
-            "scope": "nv_search_current",
-            "background": "#a1efe4",
-            "foreground": "#272822"
-        },
-        {
-            "scope": "nv_search_occurrence",
-            "background": "#e6db74",
-            "foreground": "#272822"
-        }
     ]
 }
