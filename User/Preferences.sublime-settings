@@ -228,6 +228,7 @@
 	],
 	"font_size": 11,
 	"font_size_default": 11,
+	"git_gutter_show_line_annotation": false,
 	"git_gutter_enable_hover_diff_popup": false,
 	"git_gutter_next_prev_change_wrap": false,
 	"git_gutter_show_in_minimap": 0,
