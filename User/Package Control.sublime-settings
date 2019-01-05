@@ -10,6 +10,11 @@
 	],
 	"installed_packages":
 	[
+		"AutomaticPackageReloader",
+		"FileIcons",
+		"GitGutter",
+		"Laravel Blade Highlighter",
+		"Origami",
 		"Package Control",
 		"Sass",
 		"SublimeLinter-contrib-mypy",

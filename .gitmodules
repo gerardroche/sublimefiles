@@ -37,9 +37,6 @@
 [submodule "ToggleNeoVintageous"]
 	path = ToggleNeoVintageous
 	url = https://github.com/NeoVintageous/ToggleNeoVintageous.git
-[submodule "molokai"]
-	path = molokai
-	url = https://github.com/gerardroche/sublime-molokai.git
 [submodule "SublimeLinter-php"]
 	path = SublimeLinter-php
 	url = https://github.com/gerardroche/SublimeLinter-php.git
@@ -52,18 +49,9 @@
 [submodule "Package Control"]
 	path = Package Control
 	url = https://github.com/gerardroche/sublime_package_control.git
-[submodule "GitGutter"]
-	path = GitGutter
-	url = https://github.com/jisaacks/GitGutter.git
 [submodule "SublimeLinter-flake8"]
 	path = SublimeLinter-flake8
 	url = https://github.com/SublimeLinter/SublimeLinter-flake8.git
-[submodule "Origami"]
-	path = Origami
-	url = https://github.com/SublimeText/Origami.git
-[submodule "AutomaticPackageReloader"]
-	path = AutomaticPackageReloader
-	url = https://github.com/randy3k/AutomaticPackageReloader.git
 [submodule "Monokai Free"]
 	path = MonokaiFree
 	url = https://github.com/gerardroche/sublime-monokai-free.git
@@ -88,15 +76,9 @@
 [submodule "Wrap Plus"]
 	path = Wrap Plus
 	url = https://github.com/ehuss/Sublime-Wrap-Plus
-[submodule "FileIcons"]
-	path = FileIcons
-	url = https://github.com/braver/FileIcons
 [submodule "LaravelTestingCompletions"]
 	path = LaravelTestingCompletions
 	url = https://github.com/gerardroche/sublime-laravel-testing-completions.git
-[submodule "Laravel Blade Highlighter"]
-	path = Laravel Blade Highlighter
-	url = https://github.com/Medalink/laravel-blade.git
 [submodule "SublimeLinter-php-cs-fixer"]
 	path = SublimeLinter-php-cs-fixer
 	url = https://github.com/jhoff/SublimeLinter-contrib-php-cs-fixer.git
