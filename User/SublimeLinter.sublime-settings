@@ -29,6 +29,14 @@
 			[
 				"*/vendor/*"
 			]
+		},
+		"phpmd":
+		{
+			"disable": false,
+			"excludes":
+			[
+				"*/vendor/*"
+			]
 		}
 	},
 	"no_column_highlights_line": true,
