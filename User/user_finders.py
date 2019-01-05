@@ -17,9 +17,9 @@ def _find_in_open_folders(window, interactive=True, default_filter=False):
     def get_default_filter():
         include_filters = []
 
+        include_filters.append('-storage/')
         include_filters.append('-tmp/')
-        include_filters.append('-.srcpath/')
-        include_filters.append('-storage/framework/views')
+        include_filters.append('-vendor/')
 
         file_name = view.file_name()
         if file_name:

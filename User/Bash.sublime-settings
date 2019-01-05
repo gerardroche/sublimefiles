@@ -1,6 +1,14 @@
 {
 	"extensions":
 	[
-		".env"
+        ".env.dev.dist",
+        ".env.prod.dist",
+        ".env.testing.dist",
+        ".env.travis.dist",
+        ".env",
+        ".env.dev",
+        ".env.prod",
+        ".env.testing",
+        ".env.travis",
 	]
 }

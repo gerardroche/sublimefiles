@@ -3,29 +3,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit backupGlobals="false"
          backupStaticAttributes="false"
+         beStrictAboutCoversAnnotation="true"
          beStrictAboutOutputDuringTests="true"
-         beStrictAboutTestSize="true"
          beStrictAboutTestsThatDoNotTestAnything="true"
          beStrictAboutTodoAnnotatedTests="true"
-         checkForUnintentionallyCoveredCode="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
-         forceCoversAnnotation="true"
-         verbose="true"
+         failOnRisky="true"
+         stopOnFailure="false"
          >
 
-    <php>
-        <ini name="date.timezone" value="UTC" />
-        <ini name="display_errors" value="1" />
-        <ini name="display_startup_errors" value="1" />
-        <ini name="error_reporting" value="-1" />
-        <ini name="log_errors" value="0" />
-        <ini name="memory_limit" value="10M" />
-    </php>
-
     <testsuites>
-        <testsuite>
+        <testsuite name="unit">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
@@ -36,10 +26,21 @@
         </whitelist>
     </filter>
 
+    <!--
     <logging>
         <log type="coverage-html" target="build/coverage" />
         <log type="coverage-text" target="php://stdout" showUncoveredFiles="true" />
     </logging>
+    -->
+
+    <php>
+        <ini name="date.timezone" value="UTC" />
+        <ini name="display_errors" value="1" />
+        <ini name="display_startup_errors" value="1" />
+        <ini name="error_reporting" value="-1" />
+        <ini name="log_errors" value="0" />
+        <ini name="memory_limit" value="10M" />
+    </php>
 
 </phpunit>
 ]]></content>

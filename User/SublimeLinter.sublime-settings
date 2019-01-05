@@ -1,4 +1,5 @@
 {
+	"debug": false,
 	"delay": 0.1,
 	"lint_mode": "save",
 	"linters":
@@ -18,8 +19,6 @@
 			"disable": false,
 			"excludes":
 			[
-				"*/vendor/*",
-				"*/sublime_text_3/*"
 			],
 			"executable": "~/.local/bin/mypy"
 		},

@@ -10,7 +10,10 @@
 	],
 	"installed_packages":
 	[
-		"Package Control"
+		"Package Control",
+		"Sass",
+		"SublimeLinter-contrib-mypy",
+		"SublimeLinter-phpmd"
 	],
 	"submit_url": "",
 	"submit_usage": false

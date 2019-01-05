@@ -100,17 +100,17 @@ class ToggleProjectHiddenFilesAndFoldersCommand(sublime_plugin.WindowCommand):
         self.window.set_project_data(project_data)
 
 
-class ToggleTemporaryFolderCommand(sublime_plugin.WindowCommand):
+class ToggleFolderExcludePatternCommand(sublime_plugin.WindowCommand):
 
-    def run(self):
+    def run(self, pattern):
         preferences = load_settings('Preferences.sublime-settings')
 
         folder_exclude_patterns = preferences.get('folder_exclude_patterns', [])
 
-        if 'tmp' not in folder_exclude_patterns:
-            folder_exclude_patterns.append('tmp')
+        if pattern not in folder_exclude_patterns:
+            folder_exclude_patterns.append(pattern)
         else:
-            folder_exclude_patterns.remove('tmp')
+            folder_exclude_patterns.remove(pattern)
 
         folder_exclude_patterns.sort()
         preferences.set('folder_exclude_patterns', folder_exclude_patterns)

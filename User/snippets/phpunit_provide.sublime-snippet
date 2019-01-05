@@ -1,9 +1,6 @@
 <snippet>
     <content><![CDATA[
-/**
- * @return array
- */
-public function provide${1:Name}()
+public function provide${1:Name}(): array
 {
     return [
         [${3}]
@@ -11,8 +8,6 @@ public function provide${1:Name}()
 }
 
 /**
- * @covers ${4:Class::method}
- *
  * @dataProvider provide${1}
  */
 public function test${1}(${2})

@@ -6,39 +6,26 @@
 # operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile ~/.gitignore_global
 
-/*.log
-/bower_components/
+*.cache
+*.key
+*.log
+*.map
+*.sql
+*.sqlite
 /build/
 /node_modules/
-/phpunit.xml
-/public/assets/
 /tmp/
 /vendor/
+phpunit.xml
 
-# VIM
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-*.un~
-Session.vim
-.netrwhist
-*~
+# DotEnv
+.env*
+!.env.*.dist
 
-# Sublime Text
-*.sublime-workspace
-
-# Netbeans IDE
-nbproject/
-
-# Eclipse IDE
-.buildpath
-.project
-.settings/
-
-# Notepad++
-nppBackup
-
-# ctags
-tags
+# Laravel
+/public/css/app.css
+/public/js/app.js
+/public/mix-manifest.json
 
 ]]></content>
     <tabTrigger>gitignore</tabTrigger>
