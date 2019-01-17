@@ -26,8 +26,10 @@
 
     // Test: https://github.com/gerardroche/sublime-test.
     { "keys": ["ctrl+shift+a"], "command": "test_suite" },
+    { "keys": ["ctrl+shift+d"], "command": "test_suite_with_coverage" },
     { "keys": ["ctrl+shift+c"], "command": "test_cancel" },
     { "keys": ["ctrl+shift+f"], "command": "test_file" },
+    { "keys": ["ctrl+shift+g"], "command": "test_file_with_coverage" },
     { "keys": ["ctrl+shift+l"], "command": "test_last" },
     { "keys": ["ctrl+shift+n"], "command": "test_nearest" },
     { "keys": ["ctrl+shift+r"], "command": "test_results" },

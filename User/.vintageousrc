@@ -8,11 +8,12 @@ nnoremap <leader>d :NeovintageousToggleSideBar<CR>
 
 " Saving.
 nnoremap <C-s> :w<CR>
+vnoremap <C-s> :w<CR>
 
 " Scroll viewport faster.
 " http://items.sjbach.com/319/configuring-vim-right
-nnoremap <C-e> 3<C-e>
-nnoremap <C-y> 3<C-y>
+" nnoremap <C-e> 3<C-e>
+" nnoremap <C-y> 3<C-y>
 
 " Easy buffer navigation.
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
@@ -124,7 +125,3 @@ snoremap i <Esc>i
 " nnoremap <leader><leader>l :AceJumpLine<CR>
 " nnoremap <leader><leader>s :AceJumpSelect<CR>
 " nnoremap <leader><leader>w :AceJumpWord<CR>
-
-" Temporary scrolling fixes.
-nnoremap <C-d> Lzz
-nnoremap <C-u> Hzz
