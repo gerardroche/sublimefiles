@@ -204,7 +204,6 @@
 	"git_gutter_show_in_minimap": 0,
 	"git_gutter_show_line_annotation": false,
 	"git_gutter_show_markers_on_untracked_file": true,
-	"git_gutter_show_status_bar_text": true,
 	"git_gutter_show_status_bar_text": false,
 	"git_gutter_status_bar_text":
 	[
@@ -289,7 +288,7 @@
 		"resources",
 		"tags"
 	],
-	"line_numbers": true,
+	"line_numbers": false,
 	"line_padding_bottom": 0,
 	"line_padding_top": -1,
 	"man.path": "${PROJECTS_PATH}/.lde/man",
