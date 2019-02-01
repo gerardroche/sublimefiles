@@ -29,7 +29,6 @@
 # User
 *.pyi
 /.logs/
-/User/.neovintageous*
 /User/Color Highlighter/
 /User/Package Control.*-ca-bundle
 /User/Package Control.cache/

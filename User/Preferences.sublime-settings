@@ -1,13 +1,16 @@
 {
-	"always_show_minimap_viewport": false,
-	"animation_enabled": true,
+	"added_words":
+	[
+	],
+	"always_show_minimap_viewport": true,
+	"animation_enabled": false,
 	"auto_complete_delay": 0,
 	"auto_complete_with_fields": true,
 	"auto_upgrade": false,
 	"caret_extra_bottom": 1,
 	"caret_extra_top": 0,
-	"caret_extra_width": 1,
-	"caret_style": "blink",
+	"caret_extra_width": 0,
+	"caret_style": "solid",
 	"color_scheme": "Packages/MonokaiFree/MonokaiFree.tmTheme",
 	"color_scheme_unit.coverage": true,
 	"debug": false,
@@ -20,10 +23,9 @@
 	"docblockr.short_primitives": true,
 	"docblockr.spacer_between_sections": true,
 	"draw_minimap_border": true,
-	"draw_white_space": "none",
+	"draw_white_space": "selection",
 	"draw_white_space_disabled_default": "none",
 	"enable_telemetry": false,
-	"fade_fold_buttons": false,
 	"file_exclude_patterns":
 	[
 		"*.a",
@@ -161,7 +163,7 @@
 		"nbproject",
 		"node_modules",
 		"sublime_text_3/Icon",
-		"sublime_text_3/Packages"
+		"sxublime_text_3/Packages"
 	],
 	"folder_exclude_patterns_default":
 	[
@@ -197,7 +199,7 @@
 		"Source Code Pro",
 		"Fira Code"
 	],
-	"font_size": 13,
+	"font_size": 11,
 	"font_size_default": 11,
 	"git_gutter_enable_hover_diff_popup": false,
 	"git_gutter_next_prev_change_wrap": false,
@@ -236,12 +238,16 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
+		"GitGutter",
 		"NeoVintageousTweaks",
 		"Six",
 		"SublimeTextAPICompletions",
 		"Vintage",
 		"Vintageous",
 		"Wrap Plus"
+	],
+	"ignored_words":
+	[
 	],
 	"indent_guide_options":
 	[
@@ -301,6 +307,7 @@
 		"no-coverage": true,
 		"verbose": true
 	},
+	"phpunit.xstrategy": "iterm",
 	"polyfill.experimental_features": true,
 	"preview_on_click": true,
 	"remember_full_screen": true,
@@ -341,6 +348,5 @@
 	"vintage_start_in_command_mode": false,
 	"vintageous_use_ctrl_keys": true,
 	"vintageous_use_super_keys": true,
-	"vintageous_wip": true,
-	"word_wrap": false
+	"vintageous_wip": true
 }

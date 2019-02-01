@@ -1,6 +1,10 @@
 [
-    // Debug.
+    // Debugging.
     { "keys": ["super+r"], "command": "package_reloader_reload" },
+    // { "keys": ["ctrl+1"], "command": "sort_lines", "args": {"case_sensitive": false} },
+    // { "keys": ["ctrl+2"], "command": "sort_lines", "args": {"case_sensitive": true} },
+    // { "keys": ["ctrl+."], "command": "next_modification" },
+    // { "keys": ["ctrl+,"], "command": "prev_modification" },
 
     // Copy in NeoVintageous INSERT mode.
     { "keys": ["ctrl+c"], "command": "copy" },

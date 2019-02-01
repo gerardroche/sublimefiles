@@ -37,21 +37,24 @@
 [submodule "ToggleNeoVintageous"]
 	path = ToggleNeoVintageous
 	url = https://github.com/NeoVintageous/ToggleNeoVintageous.git
-[submodule "SublimeLinter-php"]
-	path = SublimeLinter-php
-	url = https://github.com/gerardroche/SublimeLinter-php.git
 [submodule "SublimeLinter"]
 	path = SublimeLinter
 	url = https://github.com/gerardroche/SublimeLinter3.git
+[submodule "SublimeLinter-flake8"]
+	path = SublimeLinter-flake8
+	url = https://github.com/SublimeLinter/SublimeLinter-flake8.git
+[submodule "SublimeLinter-php"]
+	path = SublimeLinter-php
+	url = https://github.com/gerardroche/SublimeLinter-php.git
+[submodule "SublimeLinter-php-cs-fixer"]
+	path = SublimeLinter-php-cs-fixer
+	url = https://github.com/jhoff/SublimeLinter-contrib-php-cs-fixer.git
 [submodule "Markdown Preview"]
 	path = Markdown Preview
 	url = https://github.com/revolunet/sublimetext-markdown-preview.git
 [submodule "Package Control"]
 	path = Package Control
 	url = https://github.com/gerardroche/sublime_package_control.git
-[submodule "SublimeLinter-flake8"]
-	path = SublimeLinter-flake8
-	url = https://github.com/SublimeLinter/SublimeLinter-flake8.git
 [submodule "Monokai Free"]
 	path = MonokaiFree
 	url = https://github.com/gerardroche/sublime-monokai-free.git
@@ -79,6 +82,3 @@
 [submodule "LaravelTestingCompletions"]
 	path = LaravelTestingCompletions
 	url = https://github.com/gerardroche/sublime-laravel-testing-completions.git
-[submodule "SublimeLinter-php-cs-fixer"]
-	path = SublimeLinter-php-cs-fixer
-	url = https://github.com/jhoff/SublimeLinter-contrib-php-cs-fixer.git

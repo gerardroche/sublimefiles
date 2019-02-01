@@ -1,5 +1,5 @@
 " The character " (the double quote mark) starts a comment
-" Type :h vintageousrc for help.
+" Type :h neovintageousrc for help.
 
 let mapleader=,
 
@@ -18,16 +18,14 @@ vnoremap <C-s> :w<CR>
 " Easy buffer navigation.
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 " https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
 
-" Clear highlighting.
-" Workaround, because :nohlsearch is not implemented.
-" nnoremap <C-l> <Esc>
+" Clear highlighting. Workaround, because :nohlsearch is not implemented.
+nnoremap <C-l> <Esc>
 
-" Yank and paste using system clipboard.
-" http://www.drbunsen.org/the-text-triumvirate/
+" Yank and paste using system clipboard. http://www.drbunsen.org/the-text-triumvirate/
 noremap <leader>y "+y
 noremap <leader>Y "+Y
 noremap <leader>p "+p
@@ -39,36 +37,42 @@ nnoremap <leader>r :reg<CR>
 
 " Show me the symbols.
 nnoremap <leader>f :ShowOverlay overlay=goto text=@<CR>
-nnoremap <D-i> :GotoSymbolInProject<CR>
-" For Windows, because I don't know how to disable windows-key+i, which opens
-" Window's Settings panel i.e. ST doesn't receive the key event for <D-i>.
 nnoremap <leader>i :GotoSymbolInProject<CR>
+" Or if you're using super-keys (disabled by default):
+nnoremap <D-i> :GotoSymbolInProject<CR>
 
 " Edit settings.
 nnoremap <leader>ek :OpenKeyBindings<CR>
 nnoremap <leader>ep :OpenPreferences<CR>
 nnoremap <leader>en :NeovintageousOpenMyRcFile<CR>
 
-" Sorting.
-" Workaround because :sort u is not implement.
-nnoremap <leader>ss vip<F9>o<Esc>
+nnoremap <leader>s] vi]<F9>o<Esc>$^
+nnoremap <leader>sp vip<F9>o<Esc>$^
+nnoremap <leader>ss vii<F9>o<Esc>$^
+vnoremap <leader>s :sort iu<CR>
 
-" Window command aliases.
-" Especially useful if you don't enable ctrl-keys keys.
+" Windowing aliases (especially useful if you don't enable ctrl-keys keys).
 nnoremap <leader>_ <C-w>_
-nnoremap <leader>\| <C-w>\|
+nnoremap <leader><bar> <C-w><bar>
 nnoremap <leader>= <C-w>=
-" Sets current view as high and as wide as possible, and redaws cursor line at
-" center of window: <C-w>_ will make all windows (almost) equal in size.
-nnoremap <leader>. <C-w>_<C-w>\|zz
 
-" Test: https://github.com/gerardroche/sublime-test.
+" Toggle Zoom. Requires the Origami plugin:
+" https://packagecontrol.io/packages/Origami.
+nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
+
+" Tests. Requires the Test plugin:
+" https://github.com/gerardroche/sublime-test.
 nnoremap <leader>t :TestNearest<CR>
 nnoremap <leader>T :TestFile<CR>
 nnoremap <leader>a :TestSuite<CR>
 nnoremap <leader>l :TestLast<CR>
 nnoremap <leader>gg :TestVisit<CR>
 nnoremap <D-n> :TestNearest<CR>
+
+" Git
+nnoremap <leader>hu :RevertModification<CR>
+vnoremap ]h :NextModification<CR>
+vnoremap [h :PrevModification<CR>
 
 " Finders (User plugin).
 nnoremap <C-f3> :FindInOpenFolders<CR>
@@ -80,7 +84,7 @@ nnoremap <C-S-f3> :FindInOpenFolders default_filter=true<CR>
 nnoremap <D-q> :WrapLinesPlus<CR>
 
 " Syntastic (User  plugin).
-nnoremap <C-l> :SyntasticCheck<CR>
+" nnoremap <C-l> :SyntasticCheck<CR>
 " nnoremap <C-l> :SublimeLinterLint<CR>
 
 " Show me the files.
@@ -94,30 +98,24 @@ nnoremap <leader>gt :Tasks<CR>
 
 " Debug.
 nnoremap <leader>vd :VarDump<CR>
-nnoremap <leader>vp :ProfilePlugins<CR>
 
 " Make multiple cursors work more like Vim's multiple cursors.
-nnoremap <C-n> gh
-snoremap <C-n> j
-snoremap <C-p> k
-snoremap <C-x> l
-snoremap i <Esc>i
+" nnoremap <C-n> gh
+" snoremap <C-n> j
+" snoremap <C-p> k
+" snoremap <C-x> l
+" snoremap i <Esc>i
 
-" " Make j and k work file linewise instead of screen linewise.
-" " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
-" " https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
+" IMPORTANT! Impacts performance of j and k keys.
+" Make j and k work file linewise instead of screen linewise.
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+" https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
 " nnoremap j gj
 " nnoremap k gk
 " nnoremap gj j
 " nnoremap gk k
 
-" " Duece Seven.
-" nnoremap zc :Fold<CR>
-" nnoremap zM :FoldAll<CR>
-" nnoremap zo :Unfold<CR>
-" nnoremap zR :UnfoldAll<CR>
-
-" " AceJump: https://packagecontrol.io/packages/AceJump.
+" AceJump: https://packagecontrol.io/packages/AceJump.
 " nnoremap <leader><leader>a :AceJumpAfter<CR>
 " nnoremap <leader><leader>c :AceJumpChar<CR>
 " nnoremap <leader><leader>d :AceJumpAddCursor<CR>
@@ -125,3 +123,10 @@ snoremap i <Esc>i
 " nnoremap <leader><leader>l :AceJumpLine<CR>
 " nnoremap <leader><leader>s :AceJumpSelect<CR>
 " nnoremap <leader><leader>w :AceJumpWord<CR>
+
+" Mapping brackets.
+" See: https://github.com/NeoVintageous/NeoVintageous/issues/426.
+" nnoremap > >>
+" nnoremap <lt> <lt><lt>
+" vnoremap <lt> <lt>gv
+" vnoremap > >gv
