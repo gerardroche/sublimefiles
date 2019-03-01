@@ -133,12 +133,6 @@ class NeovintageousDevCommand(sublime_plugin.WindowCommand):
 
         self.window.show_quick_panel(log_levels, on_done)
 
-    def toggle_use_ctrl_keys_action(self):
-        preferences = load_settings('Preferences.sublime-settings')
-        use_ctrl_keys = preferences.get('vintageous_use_ctrl_keys')
-        preferences.set('vintageous_use_ctrl_keys', not use_ctrl_keys)
-        save_settings('Preferences.sublime-settings')
-
     def dump_ex_completions_action(self):
         # Temporary hacky command to generate ex completions
 

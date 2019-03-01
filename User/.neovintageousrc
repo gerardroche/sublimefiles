@@ -4,7 +4,7 @@
 let mapleader=,
 
 " Toggle the side bar.
-nnoremap <leader>d :NeovintageousToggleSideBar<CR>
+nnoremap <leader>d :Neovintageous action=toggle_side_bar<cr>
 
 " Saving.
 nnoremap <C-s> :w<CR>
@@ -21,16 +21,19 @@ vnoremap <C-s> :w<CR>
 " nnoremap <C-h> <C-w>h
 " nnoremap <C-j> <C-w>j
 " nnoremap <C-k> <C-w>k
+" nnoremap <C-l> <C-w>l
 
 " Clear highlighting. Workaround, because :nohlsearch is not implemented.
 nnoremap <C-l> <Esc>
 
-" Yank and paste using system clipboard. http://www.drbunsen.org/the-text-triumvirate/
+" Yank and paste using system clipboard.
+" http://www.drbunsen.org/the-text-triumvirate/
 noremap <leader>y "+y
 noremap <leader>Y "+Y
 noremap <leader>p "+p
 noremap <leader>P "+P
-noremap <leader>yy "+Y
+
+noremap <leader>hp :PasteFromHistory<CR>
 
 " Show me the registers.
 nnoremap <leader>r :reg<CR>
@@ -44,17 +47,26 @@ nnoremap <D-i> :GotoSymbolInProject<CR>
 " Edit settings.
 nnoremap <leader>ek :OpenKeyBindings<CR>
 nnoremap <leader>ep :OpenPreferences<CR>
-nnoremap <leader>en :NeovintageousOpenMyRcFile<CR>
+nnoremap <leader>en :Neovintageous action=open_rc_file<CR>
 
-nnoremap <leader>s] vi]<F9>o<Esc>$^
-nnoremap <leader>sp vip<F9>o<Esc>$^
-nnoremap <leader>ss vii<F9>o<Esc>$^
+" Sorted.
+nnoremap <leader>s) vi):sort iu<CR>
+nnoremap <leader>s] vi]:sort iu<CR>
+nnoremap <leader>si vii:sort iu<CR>
+nnoremap <leader>sp vip:sort iu<CR>
+nnoremap <leader>ss vii:sort iu<CR>
 vnoremap <leader>s :sort iu<CR>
 
-" Windowing aliases (especially useful if you don't enable ctrl-keys keys).
+" Windowing aliases (especially useful if you don't use ctrl-keys).
 nnoremap <leader>_ <C-w>_
 nnoremap <leader><bar> <C-w><bar>
 nnoremap <leader>= <C-w>=
+
+" Origami: https://packagecontrol.io/packages/Origami.
+nnoremap <leader>. :ToggleZoomPane<CR>
+nnoremap <leader>ws :CarryFileToPane direction=down<CR>
+nnoremap <leader>wv :CarryFileToPane direction=right<CR>
+nnoremap <leader>wd :DestroyPane direction=self<CR>
 
 " Toggle Zoom. Requires the Origami plugin:
 " https://packagecontrol.io/packages/Origami.
@@ -65,14 +77,14 @@ nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
 nnoremap <leader>t :TestNearest<CR>
 nnoremap <leader>T :TestFile<CR>
 nnoremap <leader>a :TestSuite<CR>
-nnoremap <leader>l :TestLast<CR>
+" nnoremap <leader>l :TestLast<CR>
 nnoremap <leader>gg :TestVisit<CR>
 nnoremap <D-n> :TestNearest<CR>
 
-" Git
+" Git.
 nnoremap <leader>hu :RevertModification<CR>
-vnoremap ]h :NextModification<CR>
-vnoremap [h :PrevModification<CR>
+" vnoremap ]h :NextModification<CR>
+" vnoremap [h :PrevModification<CR>
 
 " Finders (User plugin).
 nnoremap <C-f3> :FindInOpenFolders<CR>
@@ -82,10 +94,6 @@ nnoremap <C-S-f3> :FindInOpenFolders default_filter=true<CR>
 " Wrap Lines: https://github.com/ehuss/Sublime-Wrap-Plus.
 " Because gq{motion} doesn't work properly.
 nnoremap <D-q> :WrapLinesPlus<CR>
-
-" Syntastic (User  plugin).
-" nnoremap <C-l> :SyntasticCheck<CR>
-" nnoremap <C-l> :SublimeLinterLint<CR>
 
 " Show me the files.
 nnoremap <leader>sf :ShowPanel panel=find_in_files<CR>
@@ -98,6 +106,10 @@ nnoremap <leader>gt :Tasks<CR>
 
 " Debug.
 nnoremap <leader>vd :VarDump<CR>
+
+" Syntastic (User  plugin).
+" nnoremap <C-l> :SyntasticCheck<CR>
+" nnoremap <C-l> :SublimeLinterLint<CR>
 
 " Make multiple cursors work more like Vim's multiple cursors.
 " nnoremap <C-n> gh

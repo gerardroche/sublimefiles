@@ -26,6 +26,7 @@
 	"draw_white_space": "selection",
 	"draw_white_space_disabled_default": "none",
 	"enable_telemetry": false,
+	"fade_fold_buttons": false,
 	"file_exclude_patterns":
 	[
 		"*.a",
@@ -51,6 +52,7 @@
 		"*.pdb",
 		"*.pdf",
 		"*.phar",
+		"*.php-version",
 		"*.psd",
 		"*.pyc",
 		"*.pyo",
@@ -239,9 +241,10 @@
 	"ignored_packages":
 	[
 		"GitGutter",
+		"LaTeXTools",
 		"NeoVintageousTweaks",
 		"Six",
-		"SublimeTextAPICompletions",
+		"ToggleNeoVintageous",
 		"Vintage",
 		"Vintageous",
 		"Wrap Plus"
@@ -300,14 +303,12 @@
 	"man.path": "${PROJECTS_PATH}/.lde/man",
 	"match_brackets_angle": true,
 	"mouse_wheel_switches_tabs": false,
+	"neovintageous_build_version": 20000,
 	"overlay_scroll_bars": "enabled",
 	"phpunit.options":
 	{
-		"colors=never": true,
-		"no-coverage": true,
-		"verbose": true
+		"no-coverage": true
 	},
-	"phpunit.xstrategy": "iterm",
 	"polyfill.experimental_features": true,
 	"preview_on_click": true,
 	"remember_full_screen": true,
@@ -344,9 +345,9 @@
 	"unittesting_reload_package_on_testing": true,
 	"unittesting_show_reload_progress": false,
 	"update_check": false,
-	"vintage_ctrl_keys": true,
-	"vintage_start_in_command_mode": false,
 	"vintageous_use_ctrl_keys": true,
 	"vintageous_use_super_keys": true,
-	"vintageous_wip": true
+	"vintageous_wip": true,
+	"vxintageous_key_presets": "vwrapper",
+	"word_wrap": false
 }

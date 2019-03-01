@@ -1,10 +1,7 @@
 [
+
     // Debugging.
     { "keys": ["super+r"], "command": "package_reloader_reload" },
-    // { "keys": ["ctrl+1"], "command": "sort_lines", "args": {"case_sensitive": false} },
-    // { "keys": ["ctrl+2"], "command": "sort_lines", "args": {"case_sensitive": true} },
-    // { "keys": ["ctrl+."], "command": "next_modification" },
-    // { "keys": ["ctrl+,"], "command": "prev_modification" },
 
     // Copy in NeoVintageous INSERT mode.
     { "keys": ["ctrl+c"], "command": "copy" },
@@ -16,10 +13,15 @@
 
     // Fix opening the context menu.
     // See https://github.com/SublimeTextIssues/Core/issues/2128.
-    { "keys": ["shift+f10"], "command": "context_menu" },
+    // { "keys": ["shift+f10"], "command": "context_menu" },
 
     // NeoVintageous: https://github.com/NeoVintageous/NeoVintageous.
-    { "keys": [",", "d"], "command": "neovintageous_toggle_side_bar", "context": [{ "key": "control", "operand": "sidebar_tree" }] },
+    {
+        "keys": [",", "d"],
+        "command": "neovintageous",
+        "args": { "action": "toggle_side_bar" },
+        "context": [ { "key": "control", "operand": "sidebar_tree" } ]
+    },
 
     // Sesame: https://github.com/gerardroche/sublime-sesame.
     { "keys": ["ctrl+alt+a"], "command": "sesame_add" },
@@ -30,13 +32,14 @@
 
     // Test: https://github.com/gerardroche/sublime-test.
     { "keys": ["ctrl+shift+a"], "command": "test_suite" },
-    { "keys": ["ctrl+shift+d"], "command": "test_suite_with_coverage" },
+    { "keys": ["ctrl+shift+d"], "command": "test_suite", "args": {"coverage": true} },
     { "keys": ["ctrl+shift+c"], "command": "test_cancel" },
     { "keys": ["ctrl+shift+f"], "command": "test_file" },
-    { "keys": ["ctrl+shift+g"], "command": "test_file_with_coverage" },
+    { "keys": ["ctrl+shift+g"], "command": "test_file", "args": {"coverage": true}},
     { "keys": ["ctrl+shift+l"], "command": "test_last" },
     { "keys": ["ctrl+shift+n"], "command": "test_nearest" },
     { "keys": ["ctrl+shift+r"], "command": "test_results" },
     { "keys": ["ctrl+shift+s"], "command": "test_switch" },
     { "keys": ["ctrl+shift+v"], "command": "test_visit" },
+
 ]
