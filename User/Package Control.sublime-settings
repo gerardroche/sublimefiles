@@ -12,7 +12,6 @@
 	[
 		"AutomaticPackageReloader",
 		"FileIcons",
-		"GitGutter",
 		"Laravel Blade Highlighter",
 		"Origami",
 		"Package Control",

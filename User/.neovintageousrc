@@ -33,6 +33,8 @@ noremap <leader>Y "+Y
 noremap <leader>p "+p
 noremap <leader>P "+P
 
+" Paste.
+noremap <leader>]p :PasteAndIndent<CR>
 noremap <leader>hp :PasteFromHistory<CR>
 
 " Show me the registers.
@@ -63,21 +65,16 @@ nnoremap <leader><bar> <C-w><bar>
 nnoremap <leader>= <C-w>=
 
 " Origami: https://packagecontrol.io/packages/Origami.
-nnoremap <leader>. :ToggleZoomPane<CR>
+nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
 nnoremap <leader>ws :CarryFileToPane direction=down<CR>
 nnoremap <leader>wv :CarryFileToPane direction=right<CR>
 nnoremap <leader>wd :DestroyPane direction=self<CR>
 
-" Toggle Zoom. Requires the Origami plugin:
-" https://packagecontrol.io/packages/Origami.
-nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
-
-" Tests. Requires the Test plugin:
-" https://github.com/gerardroche/sublime-test.
+" Tests: https://github.com/gerardroche/sublime-test.
 nnoremap <leader>t :TestNearest<CR>
 nnoremap <leader>T :TestFile<CR>
 nnoremap <leader>a :TestSuite<CR>
-" nnoremap <leader>l :TestLast<CR>
+nnoremap <leader>l :TestLast<CR>
 nnoremap <leader>gg :TestVisit<CR>
 nnoremap <D-n> :TestNearest<CR>
 
@@ -85,6 +82,9 @@ nnoremap <D-n> :TestNearest<CR>
 nnoremap <leader>hu :RevertModification<CR>
 " vnoremap ]h :NextModification<CR>
 " vnoremap [h :PrevModification<CR>
+nnoremap <leader>ga :!git add %<CR>
+nnoremap <leader>go :GitOpen<CR>
+nnoremap <leader>gf :GitFormatGithubUrl<CR>
 
 " Finders (User plugin).
 nnoremap <C-f3> :FindInOpenFolders<CR>
@@ -94,15 +94,12 @@ nnoremap <C-S-f3> :FindInOpenFolders default_filter=true<CR>
 " Wrap Lines: https://github.com/ehuss/Sublime-Wrap-Plus.
 " Because gq{motion} doesn't work properly.
 nnoremap <D-q> :WrapLinesPlus<CR>
+nnoremap <leader>q gqip:w<CR>
 
 " Show me the files.
 nnoremap <leader>sf :ShowPanel panel=find_in_files<CR>
 nnoremap <leader>sr :ShowFindResults<CR>
-
-" Gimmie Shelter.
-nnoremap <leader>gf :GitFormatGithubUrl<CR>
-nnoremap <leader>go :GitOpen<CR>
-nnoremap <leader>gt :Tasks<CR>
+nnoremap <leader>st :Tasks<CR>
 
 " Debug.
 nnoremap <leader>vd :VarDump<CR>

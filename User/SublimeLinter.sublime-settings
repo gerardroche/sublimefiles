@@ -16,6 +16,8 @@
 		"mypy":
 		{
 			"disable": false,
+			"args": [],
+			"follow-imports": "silent",
 			"excludes":
 			[
 			],
@@ -38,28 +40,19 @@
 			]
 		}
 	},
+    "show_hover_line_report": false,
+    "show_hover_region_report": false,
+    "show_marks_in_minimap": false,
 	"no_column_highlights_line": true,
 	"styles":
 	[
 		{
-			"icon": "dot",
-			"mark_style": "outline",
-			"priority": 1,
-			"scope": "region.yellowish markup.changed.sublime_linter markup.warning.sublime_linter",
-			"types":
-			[
-				"warning"
-			]
+			"icon": "x",
+			"mark_style": "outline"
 		},
 		{
-			"icon": "dot",
-			"mark_style": "outline",
-			"priority": 1,
-			"scope": "region.redish markup.deleted.sublime_linter markup.error.sublime_linter",
-			"types":
-			[
-				"error"
-			]
+			"icon": "x",
+			"mark_style": "outline"
 		}
 	]
 }
