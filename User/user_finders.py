@@ -50,7 +50,7 @@ def _find_in_open_folders(window, interactive=True, default_filter=False):
 
 
 class FindInOpenFoldersCommand(sublime_plugin.WindowCommand):
-    def run(self, interactive=True, default_filter=False):
+    def run(self, interactive, default_filter=False):
         _find_in_open_folders(self.window, interactive, default_filter)
 
 

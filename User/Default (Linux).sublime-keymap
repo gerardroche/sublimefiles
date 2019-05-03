@@ -1,19 +1,14 @@
 [
-
     // Debugging.
     { "keys": ["super+r"], "command": "package_reloader_reload" },
-
-    // Copy in NeoVintageous INSERT mode.
-    { "keys": ["ctrl+c"], "command": "copy" },
 
     // Man (User plugin).
     { "keys": ["f1"], "command": "goto_documentation", "context": [ { "key": "selector", "operator": "equal", "operand": "-embedding.php", "match_all": true } ]},
     { "keys": ["f1"], "command": "man_goto_php", "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
     { "keys": ["shift+f1"], "command": "man_goto_php", "args": {"remote": true},   "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
 
-    // Fix opening the context menu.
-    // See https://github.com/SublimeTextIssues/Core/issues/2128.
-    // { "keys": ["shift+f10"], "command": "context_menu" },
+    // Copy in NeoVintageous INSERT mode.
+    // { "keys": ["ctrl+c"], "command": "copy" },
 
     // NeoVintageous: https://github.com/NeoVintageous/NeoVintageous.
     {
@@ -32,8 +27,8 @@
 
     // Test: https://github.com/gerardroche/sublime-test.
     { "keys": ["ctrl+shift+a"], "command": "test_suite" },
-    { "keys": ["ctrl+shift+d"], "command": "test_suite", "args": {"coverage": true} },
     { "keys": ["ctrl+shift+c"], "command": "test_cancel" },
+    { "keys": ["ctrl+shift+d"], "command": "test_suite", "args": {"coverage": true} },
     { "keys": ["ctrl+shift+f"], "command": "test_file" },
     { "keys": ["ctrl+shift+g"], "command": "test_file", "args": {"coverage": true}},
     { "keys": ["ctrl+shift+l"], "command": "test_last" },
@@ -41,5 +36,9 @@
     { "keys": ["ctrl+shift+r"], "command": "test_results" },
     { "keys": ["ctrl+shift+s"], "command": "test_switch" },
     { "keys": ["ctrl+shift+v"], "command": "test_visit" },
+
+    // Fix opening the context menu.
+    // See https://github.com/SublimeTextIssues/Core/issues/2128.
+    // { "keys": ["shift+f10"], "command": "context_menu" },
 
 ]

@@ -40,9 +40,6 @@
 [submodule "SublimeLinter"]
 	path = SublimeLinter
 	url = https://github.com/gerardroche/SublimeLinter3.git
-[submodule "SublimeLinter-flake8"]
-	path = SublimeLinter-flake8
-	url = https://github.com/SublimeLinter/SublimeLinter-flake8.git
 [submodule "SublimeLinter-php"]
 	path = SublimeLinter-php
 	url = https://github.com/gerardroche/SublimeLinter-php.git
@@ -67,9 +64,6 @@
 [submodule "Tmux"]
 	path = Tmux
 	url = https://github.com/gerardroche/sublime-tmux.git
-[submodule "GotoDocumentation"]
-	path = GotoDocumentation
-	url = https://github.com/kemayo/sublime-text-2-goto-documentation.git
 [submodule "SublimeTextAPICompletions"]
 	path = SublimeTextAPICompletions
 	url = https://github.com/gerardroche/sublime-api-completions.git

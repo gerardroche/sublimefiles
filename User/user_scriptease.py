@@ -12,7 +12,6 @@ from sublime import log_commands
 from sublime import log_input
 from sublime import packages_path
 from sublime import save_settings
-from sublime import status_message
 import sublime_plugin
 
 
@@ -121,6 +120,9 @@ def _toggle_debug_mode(setting=None):
 
 
 def plugin_loaded():
+    # log_input(True)
+    # log_commands(True)
+
     if _DEBUG or _debug_indicator_file_exists():
         # Debug all the things.
         _set_debug_mode(True)
@@ -171,11 +173,13 @@ class ScripteaseCommand(sublime_plugin.ApplicationCommand):
 
     def toggle_plugin_debug_mode_action(self):
         toggle_plugins = [str(p) for p in _debug_plugins_meta]
+
         def on_done(index):
             if index >= 0:
-                status = _toggle_debug_mode(_debug_plugins_meta[index])
+                _toggle_debug_mode(_debug_plugins_meta[index])
 
         active_window().show_quick_panel(toggle_plugins, on_done)
+
 
 class DebugViewToScopeCommand(sublime_plugin.TextCommand):
     def run(self, edit):
@@ -240,7 +244,7 @@ class DebugViewCommand(sublime_plugin.TextCommand):
 
 
 class VarDumpCommand(sublime_plugin.TextCommand):
-    def run(self, edit):
+    def run(self, edit, **kwargs):
         pt = self.view.sel()[0].b
         line = self.view.line(pt)
         if line.empty():
@@ -266,7 +270,13 @@ class VarDumpCommand(sublime_plugin.TextCommand):
         if 'php' in scope_name:
             dump_stmt = 'var_dump($' + word + ');'
         elif 'python' in scope_name:
-            dump_stmt = 'print(\'' + word + ' =\', ' + word + ')'
+            if kwargs.get('sublime_region_view_string') or kwargs.get('sublime_region_self_view_string'):
+                obj = 'view' if kwargs.get('sublime_region_view_string') else 'self.view'
+                dump_stmt = 'print(\'' + word + ' =\', ' + word + ', \'>>>\' + ' + obj + '.substr(' + word + ').replace(\'\\n\', \'\\\\n\').replace(\'\\x00\', \'EOF\') + \'<<<\')  # noqa: E501'  # noqa
+            elif kwargs.get('sublime_region_view_regions'):
+                dump_stmt = 'print(\'{0}\', len({0}), \'->\', \'\'.join([str(s) + \' >>>\' + view.substr(s).replace(\'\\n\', \'\\\\n\').replace(\'\\x00\', \'EOF\') + \'<<< \' for s in list({0})]))  # noqa: E501'.format(word)
+            else:
+                dump_stmt = 'print(\'{0} =\', {0})'.format(word)
         else:
             raise NotImplementedError('unknown scope')
 
@@ -276,76 +286,111 @@ class VarDumpCommand(sublime_plugin.TextCommand):
         self.view.run_command('save')
 
 
+_DEBUG_EVENTS = False
+_DEBUG_VIEW_EVENTS = False
+
+
+if _DEBUG_VIEW_EVENTS:
+
+    class DebugViewEvents(sublime_plugin.ViewEventListener):
+        def _debug_event(self, name, extra=None):
+            view = self.view
+            print('*** DEBUG VIEW EVENT *** {} view {}{}{}'.format(name, view.id(), ' {}'.format(view.name()) if view.name() else '', ' {}'.format(view.file_name()) if view.file_name() else ''))  # noqa
+            settings = view.settings()
+            if not settings:
+                print('*** NOTICE *** View has not settings object!')
+            print('                         scratch/readonly/widget = {}/{}/{}'.format(view.is_scratch(), view.is_read_only(), settings.get('is_widget') if settings else 'n/a' ))  # noqa
+            print('                         selection =', list(view.sel()))
+            print('                         scope =', view.scope_name(0))
+            if extra:
+                print('                   ', extra)
+
+        @classmethod
+        def is_applicable(cls, settings):
+            print('*** ViewEventListener.is_applicable?', cls, settings)
+            return True
+
+        @classmethod
+        def applies_to_primary_view_only(cls):
+            print('*** ViewEventListener.applies_to_primary_view_only?', cls)
+            return True
+
+        def on_activated(self):                   self._debug_event('on_activated') # noqa
+        def on_activated_async(self):             self._debug_event('on_activated_async') # noqa
+        def on_clone(self):                       self._debug_event('on_clone') # noqa
+        def on_clone_async(self):                 self._debug_event('on_clone_async') # noqa
+        def on_close(self):                       self._debug_event('on_close') # noqa
+        def on_deactivated_async(self):           self._debug_event('on_deactivated_async') # noqa
+        def on_deactived(self):                   self._debug_event('on_deactivated') # noqa
+        def on_load(self):                        self._debug_event('on_load') # noqa
+        def on_load_async(self):                  self._debug_event('on_load_async') # noqa
+        def on_modified(self):                    self._debug_event('on_modified') # noqa
+        def on_modified_async(self):              self._debug_event('on_modified_async') # noqa
+        def on_new(self):                         self._debug_event('on_new') # noqa
+        def on_new_async(self):                   self._debug_event('on_new_async') # noqa
+        def on_post_save(self):                   self._debug_event('on_post_save') # noqa
+        def on_post_save_async(self):             self._debug_event('on_post_save_async') # noqa
+        def on_post_text_command(self, name, args):                     self._debug_event('on_post_text_command', 'name = {} args = {}'.format(name, args)) # noqa
+        def on_post_window_command(self, window, name, args):           print('*** DEBUG VIEW EVENT *** on_post_window_command id = {} name = {} args = {}'.format(window.id(), name, args)) # noqa
+        def on_pre_close(self):                   self._debug_event('on_pre_close') # noqa
+        def on_pre_save(self):                    self._debug_event('on_pre_save') # noqa
+        def on_pre_save_async(self):              self._debug_event('on_pre_save_async') # noqa
+        def on_query_completions(self, prefix, locations):              self._debug_event('on_query_completions', 'prefix = {} locations = {}'.format(prefix, locations)) # noqa
+        def on_query_context(self, key, operator, operand, match_all):  self._debug_event('on_query_context', 'key = {} operator = {} operand = {} match_all = {}'.format(key, operator, operand, match_all)) # noqa
+        def on_selection_modified(self):          self._debug_event('on_selection_modified') # noqa
+        def on_selection_modified_async(self):    self._debug_event('on_selection_modified_async') # noqa
+        def on_text_command(self, name, args):                          self._debug_event('on_query_completions', 'name = {} args = {}'.format(name, args)) # noqa
+        def on_window_command(self, window, name, args):                print('*** DEBUG VIEW EVENT *** on_window_command id = {} name = {} args = {}'.format(window.id(), name, args)) # noqa
+
+        # def on_hover(self, view, point, hover_zone):
+        #     self._debug_event('on_hover', view)
+        #     print('*** EVENT *** on_hover point = {} hover_zone = {}'.format(point, hover_zone)) # noqa
+
 if _DEBUG_EVENTS:
 
     class DebugEvents(sublime_plugin.EventListener):
 
         def _debug_event(self, name, view, extra=None):
-            print('*** DEBUG EVENT *** {} view {}{}{}'.format(
-                name,
-                view.id(),
-                ' {}'.format(view.name()) if view.name() else '',
-                ' {}'.format(view.file_name()) if view.file_name() else '',
-            ))
+            print('*** DEBUG EVENT *** {} view {}{}{}'.format(name, view.id(), ' {}'.format(view.name()) if view.name() else '', ' {}'.format(view.file_name()) if view.file_name() else ''))  # noqa
 
             settings = view.settings()
             if not settings:
-                print('    View has not settings object!')
+                print('*** NOTICE *** View has not settings object!')
 
-            print('    scratch/readonly/widget = {}/{}/{}'.format(
-                view.is_scratch(),
-                view.is_read_only(),
-                settings.get('is_widget') if settings else 'n/a'
-            ))
-
-            print('    selection =', list(view.sel()))
-            print('    scope =', view.scope_name(0))
-            print('    result_file_regex =', settings.get('result_file_regex') if settings else 'n/a')
-
+            print('                    scratch/readonly/widget = {}/{}/{}'.format(view.is_scratch(), view.is_read_only(), settings.get('is_widget') if settings else 'n/a'))  # noqa
+            print('                    selection =', list(view.sel()))
+            print('                    scope =', view.scope_name(0))
+            print('                    result_file_regex =', settings.get('result_file_regex') if settings else 'n/a')
             if extra:
-                print('   ', extra)
+                print('                   ', extra)
 
-            # print('CONTENT =', self.view.substr(sublime.Region(0, self.view.size())))
-
-        def on_new(self, view):                         self._debug_event('on_new', view) # noqa
-        def on_new_async(self, view):                   self._debug_event('on_new_async', view) # noqa
-        def on_clone(self, view):                       self._debug_event('on_clone', view) # noqa
-        def on_clone_async(self, view):                 self._debug_event('on_clone_async', view) # noqa
-        def on_load(self, view):                        self._debug_event('on_load', view) # noqa
-        def on_load_async(self, view):                  self._debug_event('on_load_async', view) # noqa
-        def on_pre_close(self, view):                   self._debug_event('on_pre_close', view) # noqa
-        def on_close(self, view):                       self._debug_event('on_close', view) # noqa
-        def on_pre_save(self, view):                    self._debug_event('on_pre_save', view) # noqa
-        def on_pre_save_async(self, view):              self._debug_event('on_pre_save_async', view) # noqa
-        def on_post_save(self, view):                   self._debug_event('on_post_save', view) # noqa
-        def on_post_save_async(self, view):             self._debug_event('on_post_save_async', view) # noqa
-        # def on_modified(self, view):                    self._debug_event('on_modified', view) # noqa
-        # def on_modified_async(self, view):              self._debug_event('on_modified_async', view) # noqa
-        # def on_selection_modified(self, view):          self._debug_event('on_selection_modified', view) # noqa
-        # def on_selection_modified_async(self, view):    self._debug_event('on_selection_modified_async', view) # noqa
         def on_activated(self, view):                   self._debug_event('on_activated', view) # noqa
         def on_activated_async(self, view):             self._debug_event('on_activated_async', view) # noqa
-        def on_deactived(self, view):                   self._debug_event('on_deactivated', view) # noqa
+        def on_clone(self, view):                       self._debug_event('on_clone', view) # noqa
+        def on_clone_async(self, view):                 self._debug_event('on_clone_async', view) # noqa
+        def on_close(self, view):                       self._debug_event('on_close', view) # noqa
         def on_deactivated_async(self, view):           self._debug_event('on_deactivated_async', view) # noqa
+        def on_deactived(self, view):                   self._debug_event('on_deactivated', view) # noqa
+        def on_load(self, view):                        self._debug_event('on_load', view) # noqa
+        def on_load_async(self, view):                  self._debug_event('on_load_async', view) # noqa
+        def on_modified(self, view):                    self._debug_event('on_modified', view) # noqa
+        def on_modified_async(self, view):              self._debug_event('on_modified_async', view) # noqa
+        def on_new(self, view):                         self._debug_event('on_new', view) # noqa
+        def on_new_async(self, view):                   self._debug_event('on_new_async', view) # noqa
+        def on_post_save(self, view):                   self._debug_event('on_post_save', view) # noqa
+        def on_post_save_async(self, view):             self._debug_event('on_post_save_async', view) # noqa
+        def on_post_text_command(self, view, name, args): self._debug_event('on_post_text_command', view, 'name = {} args = {}'.format(name, args)) # noqa
+        def on_post_window_command(self, window, name, args): print('*** DEBUG EVENT *** on_post_window_command id = {} name = {} args = {}'.format(window.id(), name, args)) # noqa
+        def on_pre_close(self, view):                   self._debug_event('on_pre_close', view) # noqa
+        def on_pre_save(self, view):                    self._debug_event('on_pre_save', view) # noqa
+        def on_pre_save_async(self, view):              self._debug_event('on_pre_save_async', view) # noqa
+        def on_query_completions(self, view, prefix, locations):                self._debug_event('on_query_completions', view, 'prefix = {} locations = {}'.format(prefix, locations)) # noqa
+        def on_query_context(self, view, key, operator, operand, match_all):    self._debug_event('on_query_context', view, 'key = {} operator = {} operand = {} match_all = {}'.format(key, operator, operand, match_all)) # noqa
+        def on_selection_modified(self, view):          self._debug_event('on_selection_modified', view) # noqa
+        def on_selection_modified_async(self, view):    self._debug_event('on_selection_modified_async', view) # noqa
+        def on_text_command(self, view, name, args):    self._debug_event('on_query_completions', view, 'name = {} args = {}'.format(name, args)) # noqa
+        def on_window_command(self, window, name, args): print('*** DEBUG EVENT *** on_window_command id = {} name = {} args = {}'.format(window.id(), name, args)) # noqa
 
-        # def on_query_context(self, view, key, operator, operand, match_all):
-        #     self._debug_event('on_query_context', view, 'key = {} operator = {} operand = {} match_all = {}'.format(key, operator, operand, match_all)) # noqa
-
-        # def on_query_completions(self, view, prefix, locations):
-        #     self._debug_event('on_query_completions', view, 'prefix = {} locations = {}'.format(prefix, locations)) # noqa
-
-        # # def on_hover(self, view, point, hover_zone):
-        # #     self._debug_event('on_hover', view)
-        # #     print('*** EVENT *** on_hover point = {} hover_zone = {}'.format(point, hover_zone)) # noqa
-
-        # def on_text_command(self, view, name, args):
-        #     self._debug_event('on_query_completions', view, 'name = {} args = {}'.format(name, args)) # noqa
-
-        # def on_post_text_command(self, view, name, args):
-        #     self._debug_event('on_post_text_command', view, 'name = {} args = {}'.format(name, args)) # noqa
-
-        # def on_window_command(self, window, name, args):
-        #     print('*** EVENT *** on_window_command id = {} name = {} args = {}'.format(window.id(), name, args)) # noqa
-
-        # def on_post_window_command(self, window, name, args):
-        #     print('*** EVENT *** on_post_window_command id = {} name = {} args = {}'.format(window.id(), name, args)) # noqa
+        # def on_hover(self, view, point, hover_zone):
+        #     self._debug_event('on_hover', view)
+        #     print('*** EVENT *** on_hover point = {} hover_zone = {}'.format(point, hover_zone)) # noqa

@@ -1,9 +1,31 @@
 {
-    "globals":
-    {
+     "variables": {
+        "bg0": "#272822",
+        "bg1": "#3e3d32",
+        // "bg2": "???????",
+        // "bg3": "???????",
+
+        "fg0": "#f8f8f2",
+        "fg1": "#cfcfc2",
+        "fg2": "#75715e",
+        // "fg3": "???????",
+
+        "blue": "#66d9ef",
+        "cyan": "#a1efe4",
+        "green": "#a6e22e",
+        "magenta": "#fd5ff0",
+        "orange": "#fd971f",
+        "red": "#f92672",
+        "violet": "#ae81ff",
+        "yellow": "#e6db74",
+    },
+    "globals": {
         "caret": "yellow",
         "block_caret": "yellow",
         "selection_border_width": "0",
-        "selection_corner_style": "square"
-    }
+        "selection_corner_style": "square",
+    },
+    "rules": [
+
+    ]
 }

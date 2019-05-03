@@ -3,9 +3,10 @@
 	[
 	],
 	"always_show_minimap_viewport": true,
-	"animation_enabled": true,
-	"auto_complete_delay": 400,
+	"animation_enabled": false,
+	"auto_complete_delay": 600,
 	"auto_complete_with_fields": true,
+	"auto_match_enabled": true,
 	"auto_upgrade": false,
 	"caret_extra_bottom": 1,
 	"caret_extra_top": 0,
@@ -23,7 +24,7 @@
 	"docblockr.short_primitives": true,
 	"docblockr.spacer_between_sections": true,
 	"draw_minimap_border": true,
-	"draw_white_space": "none",
+	"draw_white_space": "selection",
 	"draw_white_space_disabled_default": "none",
 	"enable_telemetry": false,
 	"fade_fold_buttons": false,
@@ -52,7 +53,6 @@
 		"*.pdb",
 		"*.pdf",
 		"*.phar",
-		"*.php-version",
 		"*.psd",
 		"*.pyc",
 		"*.pyo",
@@ -164,8 +164,7 @@
 		"logs",
 		"nbproject",
 		"node_modules",
-		"sublime_text_3/Icon",
-		"sxublime_text_3/Packages"
+		"sublime_text_3/Icon"
 	],
 	"folder_exclude_patterns_default":
 	[
@@ -192,8 +191,7 @@
 		"logs",
 		"nbproject",
 		"node_modules",
-		"sublime_text_3/Icon",
-		"sublime_text_3/Packages"
+		"sublime_text_3/Icon"
 	],
 	"font_face": "Fira Code",
 	"font_faces":
@@ -201,7 +199,7 @@
 		"Source Code Pro",
 		"Fira Code"
 	],
-	"font_size": 12,
+	"font_size": 11,
 	"font_size_default": 11,
 	"git_gutter_enable_hover_diff_popup": false,
 	"git_gutter_next_prev_change_wrap": false,
@@ -233,9 +231,9 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
-		"LaTeXTools",
 		"NeoVintageousTweaks",
 		"Six",
+		"SublimeLinter-phpmd",
 		"ToggleNeoVintageous",
 		"Vintage",
 		"Vintageous",
@@ -295,7 +293,7 @@
 	"man.path": "${PROJECTS_PATH}/.lde/man",
 	"match_brackets_angle": true,
 	"mouse_wheel_switches_tabs": false,
-	"neovintageous_build_version": 20000,
+	"neovintageous_build_version": 11650,
 	"overlay_scroll_bars": "enabled",
 	"phpunit.options":
 	{
@@ -322,7 +320,7 @@
 	],
 	"show_definitions": true,
 	"show_encoding": true,
-	"show_errors_inline": false,
+	"show_errors_inline": true,
 	"show_full_path": true,
 	"show_legacy_color_schemes": false,
 	"show_line_endings": true,
@@ -339,9 +337,7 @@
 	"unittesting_show_reload_progress": false,
 	"update_check": false,
 	"vintageous_bell": "view",
+	"vintageous_multi_cursor_exit_from_visual_mode": false,
 	"vintageous_use_ctrl_keys": true,
-	"vintageous_use_super_keys": true,
-	"vxintageous_key_presets": "vwrapper",
-	"vxintageous_shell_silent": true,
-	"word_wrap": false
+	"vintageous_use_super_keys": true
 }

@@ -19,6 +19,7 @@
 /Sass/
 /SublimeLinter-contrib-mypy/
 /SublimeLinter-contrib-php-cs-fixer/
+/ToggleWords/
 
 # PHP runtime generated (by php-snippets).
 /PHP/Snippets/

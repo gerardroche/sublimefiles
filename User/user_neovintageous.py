@@ -8,9 +8,7 @@ import os
 import re
 
 from sublime import load_resource
-from sublime import load_settings
 from sublime import packages_path
-from sublime import save_settings
 from sublime import set_timeout_async
 import sublime_plugin
 
@@ -20,27 +18,27 @@ def _log_level_file():
 
 
 def _set_logger_log_level(level):
-        level = level.strip().upper()
+    level = level.strip().upper()
 
-        valid_levels = [
-            'CRITICAL',  # 50
-            'ERROR',  # 40
-            'WARNING',  # 30
-            'INFO',  # 20
-            'DEBUG',  # 10
-            'NOTSET',  # 0
-        ]
+    valid_levels = [
+        'CRITICAL',  # 50
+        'ERROR',  # 40
+        'WARNING',  # 30
+        'INFO',  # 20
+        'DEBUG',  # 10
+        'NOTSET',  # 0
+    ]
 
-        if level not in valid_levels:
-            raise ValueError('invalid log level')
+    if level not in valid_levels:
+        raise ValueError('invalid log level')
 
-        logging.getLogger('NeoVintageous').setLevel(getattr(
-            logging,
-            level,
-            logging.DEBUG
-        ))
+    logging.getLogger('NeoVintageous').setLevel(getattr(
+        logging,
+        level,
+        logging.DEBUG
+    ))
 
-        print('NeoVintageous: log level {}'.format(level))
+    print('NeoVintageous: log level {}'.format(level))
 
 
 def plugin_loaded():
@@ -82,7 +80,7 @@ class NeovintageousDevCommand(sublime_plugin.WindowCommand):
             view.assign_syntax('Packages/NeoVintageous/res/Help.sublime-syntax')
             view.settings().set('indent_guide_options', [])
             view.settings().set('spell_check', True)
-            view.settings().set('wrap_width', 78)
+            view.settings().set('wrap_width', 79)
 
         self.window.show_quick_panel(resources, on_done)
 

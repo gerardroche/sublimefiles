@@ -40,9 +40,9 @@
 			]
 		}
 	},
-    "show_hover_line_report": false,
-    "show_hover_region_report": false,
-    "show_marks_in_minimap": false,
+    "show_hover_line_report": true,
+    "show_hover_region_report": true,
+    "show_marks_in_minimap": true,
 	"no_column_highlights_line": true,
 	"styles":
 	[

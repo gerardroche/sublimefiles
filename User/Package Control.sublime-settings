@@ -8,6 +8,10 @@
 	"in_process_packages":
 	[
 	],
+	"install_prereleases":
+	[
+		"NeoVintageous"
+	],
 	"installed_packages":
 	[
 		"AutomaticPackageReloader",
@@ -17,7 +21,7 @@
 		"Package Control",
 		"Sass",
 		"SublimeLinter-contrib-mypy",
-		"SublimeLinter-phpmd"
+		"SublimeLinter-flake8"
 	],
 	"submit_url": "",
 	"submit_usage": false

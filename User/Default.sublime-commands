@@ -3,6 +3,10 @@
     // about abstracting it out into a reusable package, possibly installable
     // via Package Control.
 
+    // Missing sublime commands
+    { "caption": "Application: New Window", "command": "new_window" },
+    // { "caption": "Sandbox", "command": "sandbox" },
+
     // Man (User).
     { "caption": "Man", "command": "man" },
 

@@ -1,19 +1,88 @@
 " The character " (the double quote mark) starts a comment
 " Type :h neovintageousrc for help.
 
+" set belloff=
+" set magic
+" set modelines=7
+" set nohlsearch
+" set noincsearch
+" set nomenu
+" set nomodeline
+" set nostatusbar
+" set scrolloff=9
+" set sidescrolloff=9
+" set wrapscan
+set noignorecase
+set winaltkeys=menu
+
 let mapleader=,
 
-" Toggle the side bar.
 nnoremap <leader>d :Neovintageous action=toggle_side_bar<cr>
+nnoremap <leader>ek :OpenKeyBindings<CR>
+nnoremap <leader>en :Neovintageous action=open_rc_file<CR>
+nnoremap <leader>ep :OpenPreferences<CR>
+nnoremap <leader>f :ShowOverlay overlay=goto text=@<CR>
+nnoremap <leader>ga :silent !git add %<CR>
+nnoremap <leader>gf :GitFormatGithubUrl<CR>
+nnoremap <leader>go :GitOpen<CR>
+nnoremap <leader>gs :!git status<CR>
+nnoremap <leader>hp :PasteFromHistory<CR>
+nnoremap <leader>hu :RevertModification<CR>
+nnoremap <leader>q gqip:w<CR>
+nnoremap <leader>r :reg<CR>
 
-" Saving.
-nnoremap <C-s> :w<CR>
-vnoremap <C-s> :w<CR>
+noremap <C-l> :nohlsearch<CR>
+noremap <C-s> :w<CR>
 
-" Scroll viewport faster.
-" http://items.sjbach.com/319/configuring-vim-right
-" nnoremap <C-e> 3<C-e>
-" nnoremap <C-y> 3<C-y>
+" Yank and paste using system clipboard.
+noremap <leader>y "+y
+noremap <leader>Y "+Y
+noremap <leader>p "+p
+noremap <leader>P "+P
+
+noremap <D-i> :GotoSymbolInProject<CR>
+
+nnoremap <leader>s) vi):sort u<CR>
+nnoremap <leader>s] vi]:sort u<CR>
+nnoremap <leader>si vii:sort u<CR>
+nnoremap <leader>sp vip:sort u<CR>
+nnoremap <leader>ss vip:sort u<CR>
+vnoremap <leader>s :sort u<CR>
+
+noremap <C-S-f3> :FindInOpenFolders interactive=true default_filter=true<CR>
+noremap <C-f3> :FindInOpenFolders interactive=true<CR>
+noremap <S-f3> :FindInOpenFolders interactive=false<CR>
+
+nnoremap <leader><bar> <C-w><bar>
+nnoremap <leader>= <C-w>=
+nnoremap <leader>_ <C-w>_
+
+" Plugin: Origami: https://packagecontrol.io/packages/Origami.
+nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
+nnoremap <leader>wd :DestroyPane direction=self<CR>
+nnoremap <leader>ws :CarryFileToPane direction=down<CR>
+nnoremap <leader>wv :CarryFileToPane direction=right<CR>
+
+" Plugin: Test: https://github.com/gerardroche/sublime-test.
+nnoremap <leader>t :TestNearest<CR>
+nnoremap <leader>T :TestFile<CR>
+nnoremap <leader>a :TestSuite<CR>
+nnoremap <leader>l :TestLast<CR>
+nnoremap <leader>gg :TestVisit<CR>
+nnoremap <D-n> :TestNearest<CR>
+
+" Plugin: ToggleWord: https://github.com/gordio/ToggleWords.
+noremap <space>t :ToggleWord<CR>
+
+" Plugin (User): Debug
+nnoremap <leader>vd :VarDump<CR>
+nnoremap <leader>vr :VarDump sublime_region_view_regions=true<CR>
+nnoremap <leader>vs :VarDump sublime_region_self_view_string=true<CR>
+nnoremap <leader>vv :VarDump sublime_region_view_string=true<CR>
+
+" ------------------------------------------------------------------------------
+
+" nnoremap <Space> :
 
 " Easy buffer navigation.
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
@@ -23,115 +92,19 @@ vnoremap <C-s> :w<CR>
 " nnoremap <C-k> <C-w>k
 " nnoremap <C-l> <C-w>l
 
-" Clear highlighting. Workaround, because :nohlsearch is not implemented.
-nnoremap <C-l> <Esc>
+" Scroll viewport faster.
+" http://items.sjbach.com/319/configuring-vim-right
+" nnoremap <C-e> 3<C-e>
+" nnoremap <C-y> 3<C-y>
 
-" Yank and paste using system clipboard.
-" http://www.drbunsen.org/the-text-triumvirate/
-noremap <leader>y "+y
-noremap <leader>Y "+Y
-noremap <leader>p "+p
-noremap <leader>P "+P
-
-" Paste.
-noremap <leader>]p :PasteAndIndent<CR>
-noremap <leader>hp :PasteFromHistory<CR>
-
-" Show me the registers.
-nnoremap <leader>r :reg<CR>
-
-" Show me the symbols.
-nnoremap <leader>f :ShowOverlay overlay=goto text=@<CR>
-nnoremap <leader>i :GotoSymbolInProject<CR>
-" Or if you're using super-keys (disabled by default):
-nnoremap <D-i> :GotoSymbolInProject<CR>
-
-" Edit settings.
-nnoremap <leader>ek :OpenKeyBindings<CR>
-nnoremap <leader>ep :OpenPreferences<CR>
-nnoremap <leader>en :Neovintageous action=open_rc_file<CR>
-
-" Sorted.
-nnoremap <leader>s) vi):sort iu<CR>
-nnoremap <leader>s] vi]:sort iu<CR>
-nnoremap <leader>si vii:sort iu<CR>
-nnoremap <leader>sp vip:sort iu<CR>
-nnoremap <leader>ss vii:sort iu<CR>
-vnoremap <leader>s :sort iu<CR>
-
-" Windowing aliases (especially useful if you don't use ctrl-keys).
-nnoremap <leader>_ <C-w>_
-nnoremap <leader><bar> <C-w><bar>
-nnoremap <leader>= <C-w>=
-
-" Origami: https://packagecontrol.io/packages/Origami.
-nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
-nnoremap <leader>ws :CarryFileToPane direction=down<CR>
-nnoremap <leader>wv :CarryFileToPane direction=right<CR>
-nnoremap <leader>wd :DestroyPane direction=self<CR>
-
-" Tests: https://github.com/gerardroche/sublime-test.
-nnoremap <leader>t :TestNearest<CR>
-nnoremap <leader>T :TestFile<CR>
-nnoremap <leader>a :TestSuite<CR>
-nnoremap <leader>l :TestLast<CR>
-nnoremap <leader>gg :TestVisit<CR>
-nnoremap <D-n> :TestNearest<CR>
-
-" Git.
-nnoremap <leader>hu :RevertModification<CR>
-" vnoremap ]h :NextModification<CR>
-" vnoremap [h :PrevModification<CR>
-nnoremap <leader>ga :!git add %<CR>
-nnoremap <leader>go :GitOpen<CR>
-nnoremap <leader>gf :GitFormatGithubUrl<CR>
-
-" Finders (User plugin).
-nnoremap <C-f3> :FindInOpenFolders<CR>
-nnoremap <S-f3> :FindInOpenFolders interactive=false<CR>
-nnoremap <C-S-f3> :FindInOpenFolders default_filter=true<CR>
-
-" Wrap Lines: https://github.com/ehuss/Sublime-Wrap-Plus.
-" Because gq{motion} doesn't work properly.
-nnoremap <D-q> :WrapLinesPlus<CR>
-nnoremap <leader>q gqip:w<CR>
-
-" Show me the files.
-nnoremap <leader>sf :ShowPanel panel=find_in_files<CR>
-nnoremap <leader>sr :ShowFindResults<CR>
-nnoremap <leader>st :Tasks<CR>
-
-" Debug.
-nnoremap <leader>vd :VarDump<CR>
-
-" Syntastic (User  plugin).
-" nnoremap <C-l> :SyntasticCheck<CR>
-" nnoremap <C-l> :SublimeLinterLint<CR>
-
-" Make multiple cursors work more like Vim's multiple cursors.
-" nnoremap <C-n> gh
-" snoremap <C-n> j
-" snoremap <C-p> k
-" snoremap <C-x> l
-" snoremap i <Esc>i
-
-" IMPORTANT! Impacts performance of j and k keys.
 " Make j and k work file linewise instead of screen linewise.
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 " https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
+" IMPORTANT! This impacts the performance of j and k keys.
 " nnoremap j gj
 " nnoremap k gk
 " nnoremap gj j
 " nnoremap gk k
-
-" AceJump: https://packagecontrol.io/packages/AceJump.
-" nnoremap <leader><leader>a :AceJumpAfter<CR>
-" nnoremap <leader><leader>c :AceJumpChar<CR>
-" nnoremap <leader><leader>d :AceJumpAddCursor<CR>
-" nnoremap <leader><leader>i :AceJumpWithinLine<CR>
-" nnoremap <leader><leader>l :AceJumpLine<CR>
-" nnoremap <leader><leader>s :AceJumpSelect<CR>
-" nnoremap <leader><leader>w :AceJumpWord<CR>
 
 " Mapping brackets.
 " See: https://github.com/NeoVintageous/NeoVintageous/issues/426.
@@ -139,3 +112,12 @@ nnoremap <leader>vd :VarDump<CR>
 " nnoremap <lt> <lt><lt>
 " vnoremap <lt> <lt>gv
 " vnoremap > >gv
+nnoremap <D-[> <lt><lt>
+nnoremap <D-]> >>
+vnoremap <D-[> <lt>gv
+vnoremap <D-]> >gv
+
+" Workaround Emmet plugin issues
+" See: https://github.com/NeoVintageous/NeoVintageous/issues/571.
+" nnoremap <C-Up> :RunEmmetAction action=increment_number_by_1<CR><Esc>
+" nnoremap <C-Down> :RunEmmetAction action=increment_number_by_1<CR><Esc>
