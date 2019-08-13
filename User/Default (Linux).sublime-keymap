@@ -1,5 +1,6 @@
 [
     // Debugging.
+
     { "keys": ["super+r"], "command": "package_reloader_reload" },
 
     // Man (User plugin).

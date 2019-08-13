@@ -4,7 +4,8 @@
 	],
 	"always_show_minimap_viewport": true,
 	"animation_enabled": false,
-	"auto_complete_delay": 600,
+	"auto_complete_commit_on_tab": true,
+	"auto_complete_delay": 0,
 	"auto_complete_with_fields": true,
 	"auto_match_enabled": true,
 	"auto_upgrade": false,
@@ -231,9 +232,10 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
+		"Color Scheme - Legacy",
+		"ColorSchemeUnit",
 		"NeoVintageousTweaks",
 		"Six",
-		"SublimeLinter-phpmd",
 		"ToggleNeoVintageous",
 		"Vintage",
 		"Vintageous",
@@ -339,5 +341,6 @@
 	"vintageous_bell": "view",
 	"vintageous_multi_cursor_exit_from_visual_mode": false,
 	"vintageous_use_ctrl_keys": true,
-	"vintageous_use_super_keys": true
+	"vintageous_use_super_keys": true,
+	"vxintageous_use_sys_clipboard": true
 }

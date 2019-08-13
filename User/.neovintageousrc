@@ -25,6 +25,7 @@ nnoremap <leader>f :ShowOverlay overlay=goto text=@<CR>
 nnoremap <leader>ga :silent !git add %<CR>
 nnoremap <leader>gf :GitFormatGithubUrl<CR>
 nnoremap <leader>go :GitOpen<CR>
+nnoremap <leader>gr :ShowOverlay overlay=goto text=@<CR>
 nnoremap <leader>gs :!git status<CR>
 nnoremap <leader>hp :PasteFromHistory<CR>
 nnoremap <leader>hu :RevertModification<CR>

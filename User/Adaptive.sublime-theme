@@ -1,123 +1,131 @@
-[
+{
+   "variables":
     {
-        "class": "sidebar_container",
-        // Fix top margin off-by-one with top of view on hover alignment.
-        "content_margin": [0, 1, 0, 0]
-    },
-    {
-        "class": "sidebar_tree",
-        // Align the tree to left.
-        "indent_offset": 0
+        "bg0": "#272822",
+        "bg1": "#3e3d32",
+
+        "fg0": "#f8f8f2",
+        "fg1": "#cfcfc2",
+        "fg2": "#75715e",
+
+        "blue": "#66d9ef",
+        "cyan": "#a1efe4",
+        "green": "#a6e22e",
+        "magenta": "#fd5ff0",
+        "orange": "#fd971f",
+        "red": "#f92672",
+        "violet": "#ae81ff",
+        "yellow": "#e6db74",
     },
 
-    // VCS badges
-    {
-        "class": "vcs_status_badge",
-        "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}],
-        // "layer0.texture": "Theme - Default/common/status_untracked.png",
-        "layer0.tint": "color(var(--bluish) blend(rgb(255, 255, 255) 60%))",
-        // "layer0.opacity": 1.0,
-        // "content_margin": 6
-    },
-    {
-        "class": "vcs_status_badge",
-        "parents": [{"class": "file_system_entry", "attributes": ["modified"]}],
-        // "layer0.texture": "Theme - Default/common/status_modified.png",
-        "layer0.tint": "color(var(--orangish) min-contrast(var(--background) 2.5))",
-        // "layer0.opacity": 1.0,
-        // "content_margin": 6
-    },
-    {
-        "class": "vcs_status_badge",
-        "parents": [{"class": "file_system_entry", "attributes": ["staged"]}],
-        // "layer0.texture": "Theme - Default/common/status_staged.png",
-        "layer0.tint": "color(var(--greenish) min-contrast(var(--background) 2.5))",
-        // "layer0.opacity": 1.0,
-        // "content_margin": 6
-    },
-    {
-        "class": "vcs_status_badge",
-        "parents": [{"class": "file_system_entry", "attributes": ["added"]}],
-        // "layer0.texture": "Theme - Default/common/status_staged.png",
-        "layer0.tint": "color(var(--greenish) min-contrast(var(--background) 2.5))",
-        // "layer0.opacity": 1.0,
-        // "content_margin": 6
-    },
-    {
-        "class": "vcs_status_badge",
-        "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}],
-        // "layer0.texture": "Theme - Default/common/status_unmerged.png",
-        "layer0.tint": "color(var(--bluish) min-contrast(var(--background) 2.5))",
-        // "layer0.opacity": 1.0,
-        // "content_margin": 6
-    },
-    {
-        "class": "vcs_status_badge",
-        "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}],
-        // "layer0.texture": "Theme - Default/common/status_staged.png",
-        "layer0.tint": "color(var(--bluish) min-contrast(var(--background) 2.5))",
-        // "layer0.opacity": 1.0,
-        // "content_margin": 6
-    },
-    {
-        "class": "vcs_status_badge",
-        "parents": [{"class": "file_system_entry", "attributes": ["missing"]}],
-        // "layer0.texture": "Theme - Default/common/status_modified.png",
-        "layer0.tint": "color(var(--bluish) min-contrast(var(--background) 2.5))",
-        // "layer0.opacity": 1.0,
-        // "content_margin": 6
-    },
-    {
-        "class": "sidebar_label",
-        "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}],
-        "color": "color(var(--background) blend(rgb(255, 255, 255) 70%))"
-    },
-    {
-        "class": "sidebar_label",
-        "parents": [
-            {"class": "window", "attributes": ["file_light"]},
-            {"class": "file_system_entry", "attributes": ["ignored"]}
-        ],
-        "color": "color(var(--background) blend(rgb(0, 0, 0) 70%))"
-    },
+    "rules": [
 
+        // === Fixes ===
 
+        {
+            "class": "sidebar_container",
+            // Fix top margin off-by-one with top of view on hover alignment.
+            "content_margin": [0, 1, 0, 0]
+        },
+        {
+            "class": "sidebar_tree",
+            // Align the tree to left.
+            "indent_offset": 0
+        },
 
-    // VCS Filenames.
-    {
-        "class": "sidebar_label",
-        "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}],
-        "color": "color(var(--bluish) blend(rgb(255, 255, 255) 75%))"
-    },
-    {
-        "class": "sidebar_label",
-        "parents": [{"class": "file_system_entry", "attributes": ["modified"]}],
-        "color": "color(var(--orangish) blend(rgb(255, 255, 255) 75%))"
-    },
-    {
-        "class": "sidebar_label",
-        "parents": [{"class": "file_system_entry", "attributes": ["staged"]}],
-        "color": "color(var(--greenish) blend(rgb(255, 255, 255) 75%))"
-    },
-    {
-        "class": "sidebar_label",
-        "parents": [{"class": "file_system_entry", "attributes": ["added"]}],
-        "color": "color(var(--greenish) blend(rgb(255, 255, 255) 75%))"
-    },
-    {
-        "class": "sidebar_label",
-        "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}],
-        "color": "color(var(--bluish) blend(rgb(255, 255, 255) 75%))"
-    },
-    {
-        "class": "sidebar_label",
-        "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}],
-        "color": "color(var(--bluish) blend(rgb(255, 255, 255) 75%))"
-    },
-    {
-        "class": "sidebar_label",
-        "parents": [{"class": "file_system_entry", "attributes": ["missing"]}],
-        "color": "color(var(--bluish) blend(rgb(255, 255, 255) 75%))"
-    },
+        // === Git ===
 
-]
+        // Git badges
+
+        {
+            "class": "vcs_status_badge",
+            "parents": [{"class": "file_system_entry", "attributes": ["added"]}],
+            "layer0.tint": "color(var(green) blend(rgb(255, 255, 255) 100%))",
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}],
+            "layer0.tint": "color(var(red) blend(rgb(255, 255, 255) 100%))",
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}],
+            "layer0.tint": "color(var(bg0) blend(rgb(255, 255, 255) 100%))",
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [{"class": "file_system_entry", "attributes": ["missing"]}],
+            "layer0.tint": "color(var(red) blend(rgb(255, 255, 255) 100%))",
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [{"class": "file_system_entry", "attributes": ["modified"]}],
+            "layer0.tint": "color(var(orange) blend(rgb(255, 255, 255) 100%))",
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [{"class": "file_system_entry", "attributes": ["staged"]}],
+            "layer0.tint": "color(var(green) blend(rgb(255, 255, 255) 100%))",
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}],
+            "layer0.tint": "color(var(magenta) blend(rgb(255, 255, 255) 100%))",
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}],
+            "layer0.tint": "color(var(red) blend(rgb(255, 255, 255) 100%))",
+        },
+
+        // Git filenames
+
+        // {
+        //     "class": "sidebar_label",
+        //     "parents": [ {"class": "window", "attributes": ["file_light"]}, {"class": "file_system_entry", "attributes": ["ignored"]} ],
+        //     "color": "color(var(yellow)) blend(rgb(255, 255, 255) 100%))"
+        // },
+
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "file_system_entry", "attributes": ["added"]}],
+            "color": "color(var(green) blend(rgb(255, 255, 255) 100%))"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}],
+            "color": "color(var(red) blend(rgb(255, 255, 255) 100%))"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}],
+            "color": "color(var(bg0) blend(rgb(255, 255, 255) 70%))"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "file_system_entry", "attributes": ["missing"]}],
+            "color": "color(var(red) blend(rgb(255, 255, 255) 100%))"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "file_system_entry", "attributes": ["modified"]}],
+            "color": "color(var(orange) blend(rgb(255, 255, 255) 100%))"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "file_system_entry", "attributes": ["staged"]}],
+            "color": "color(var(green) blend(rgb(255, 255, 255) 100%))"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}],
+            "color": "color(var(magenta) blend(rgb(255, 255, 255) 100%))"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}],
+            "color": "color(var(red) blend(rgb(255, 255, 255) 100%))"
+        },
+
+    ]
+}
