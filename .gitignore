@@ -16,10 +16,9 @@
 /pyyaml/
 
 # Packages
-/Sass/
-/SublimeLinter-contrib-mypy/
-/SublimeLinter-contrib-php-cs-fixer/
-/ToggleWords/
+/AutomaticPackageReloader/
+/AutomaticPackageReloader33/
+/UnitTesting33/
 
 # PHP runtime generated (by php-snippets).
 /PHP/Snippets/
@@ -30,6 +29,8 @@
 # User
 *.pyi
 /.logs/
+/User/*sandbox.py
+/User/.neovintageous_log_level
 /User/Color Highlighter/
 /User/Package Control.*-ca-bundle
 /User/Package Control.cache/
@@ -40,5 +41,3 @@
 /User/UnitTesting/*/coverage
 /User/UnitTesting/schedule.json
 /tmp/
-/User/*sandbox.py
-Python

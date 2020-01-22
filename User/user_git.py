@@ -1,7 +1,3 @@
-# When you see something you like and would like to use it, open an issue about
-# abstracting it out into a reusable package, possibly installable via Package
-# Control.
-
 import os
 import re
 import subprocess
@@ -101,6 +97,7 @@ class GitOpenCommand(sublime_plugin.TextCommand):
                 cwd=cwd,
                 shell=False
             )
+
 
 class GitCommand(sublime_plugin.WindowCommand):
 

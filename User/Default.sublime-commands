@@ -1,49 +1,40 @@
 [
-    // When you see something you like and would like to use it, open an issue
-    // about abstracting it out into a reusable package, possibly installable
-    // via Package Control.
 
-    // Missing sublime commands
+    { "caption": "Application: Clear Window", "command": "clear_window" },
+    { "caption": "Application: Close Window", "command": "close_window" },
+    { "caption": "Application: New File", "command": "new_file" },
     { "caption": "Application: New Window", "command": "new_window" },
-    // { "caption": "Sandbox", "command": "sandbox" },
+    { "caption": "Application: Reset Window", "command": "reset_window" },
+    { "caption": "Preferences: Sort User Settings", "command": "sort_user_settings" },
+    { "caption": "Project: Open Recent", "command": "prompt_open_recent_project" },
+    { "caption": "Project: Open", "command": "prompt_open_project_or_workspace" },
+    { "caption": "Project: Switch", "command": "prompt_switch_project_or_workspace" },
 
     // Man (User).
     { "caption": "Man", "command": "man" },
 
     // Git (User).
-    { "caption": "Git: Open", "command": "git_open" },
     { "caption": "Git: Open Modified", "command": "git", "args": {"action": "open_modified"} },
+    { "caption": "Git: Open", "command": "git_open" },
 
     // NeoVintageous. See: https://github.com/NeoVintageous/NeoVintageous.
+    { "caption": "NeoVintageous: Dump Ex Completions", "command": "neovintageous_dev", "args": {"action": "dump_ex_completions"}},
     { "caption": "NeoVintageous: Edit Help File", "command": "neovintageous_dev", "args": {"action": "edit_help_file"}},
     { "caption": "NeoVintageous: Fixup Docs", "command": "neovintageous_dev", "args": {"action": "fixup_docs"}},
     { "caption": "NeoVintageous: Set Log Level", "command": "neovintageous_dev", "args": {"action": "set_log_level"}},
-    { "caption": "NeoVintageous: Dump Ex Completions", "command": "neovintageous_dev", "args": {"action": "dump_ex_completions"}},
-
-    // Open (User)
-    { "caption": "Open: php.ini", "command": "user_open_file", "args": {"file": "$PROJECTS_PATH/lde/lde/etc/php/conf.d/90-lde.ini"} },
-    { "caption": "Open: .tmux.conf", "command": "user_open_file", "args": {"file": "~/.tmux.conf"} },
-    { "caption": "Open: dev", "command": "user_open_file", "args": {"file": "~/bin/_dev"} },
-    { "caption": "Open: hosts", "command": "user_open_file", "args": {"file": "$PROJECTS_PATH/.lde/etc/hosts"} },
 
     // Preferences (User).
     { "caption": "Disable Exclude Patterns", "command": "exclude_patterns", "args": {"action": "disable"} },
     { "caption": "Reset Exclude Patterns", "command": "exclude_patterns", "args": {"action": "reset"} },
 
-    // Open (User).
-    { "caption": "Open: php.ini", "command": "user_open_file", "args": {"file": "$PROJECTS_PATH/lde/lde/etc/php/conf.d/90-lde.ini"} },
-    { "caption": "Open: .tmux.conf", "command": "user_open_file", "args": {"file": "~/.tmux.conf"} },
-
     // Rulers (User).
     { "caption": "Rulers: Add Ruler", "command": "rulers", "args": {"action": "add"}},
-    { "caption": "Rulers: Remove Ruler", "command": "rulers", "args": {"action": "remove"}},
     { "caption": "Rulers: Clear Rulers", "command": "rulers", "args": {"action": "clear"}},
+    { "caption": "Rulers: Remove Ruler", "command": "rulers", "args": {"action": "remove"}},
 
     // Scriptease (User).
-    { "caption": "Scriptease: Enable Debug Mode", "command": "scriptease", "args": {"action": "enable_debug_mode"} },
     { "caption": "Scriptease: Disable Debug Mode", "command": "scriptease", "args": {"action": "disable_debug_mode"} },
-    { "caption": "Scriptease: Enable Sublime Text Debug Mode", "command": "scriptease", "args": {"action": "enable_st_debug_mode"} },
-    { "caption": "Scriptease: Disable Sublime Text Debug Mode", "command": "scriptease", "args": {"action": "disable_st_debug_mode"} },
+    { "caption": "Scriptease: Enable Debug Mode", "command": "scriptease", "args": {"action": "enable_debug_mode"} },
 
     // Sesame. See: https://github.com/gerardroche/sublime-sesame.
     { "caption": "Sesame: Add Vendor", "command": "sesame_add", "args": { "path": "~/vendor" } },
@@ -51,9 +42,9 @@
     { "caption": "Sesame: Switch Vendor", "command": "sesame_switch", "args": { "path": "~/vendor" } },
 
     // Syntastic (User).
-    { "caption": "Syntastic: Check", "command": "syntastic_check" },
-    { "caption": "Syntastic: Check Project", "command": "syntastic_check", "args": {"action": "project"}},
     { "caption": "Syntastic: Check (Phan)", "command": "phan_check" },
+    { "caption": "Syntastic: Check Project", "command": "syntastic_check", "args": {"action": "project"}},
+    { "caption": "Syntastic: Check", "command": "syntastic_check" },
 
     // SublimeLinter toggles (User).
     { "caption": "SublimeLinter: Disable Linter", "command": "linters", "args": {"action": "disable"} },
@@ -62,12 +53,20 @@
     { "caption": "SublimeLinter: Toggle Mode", "command": "linters", "args": {"action": "toggle_mode"} },
 
     // Toggles (User).
+    { "caption": "Toggle Fold Buttons", "command": "toggle_fold_buttons" },
     { "caption": "Toggle Folder Exclude Pattern: build", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "build"} },
     { "caption": "Toggle Folder Exclude Pattern: logs", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "logs"} },
     { "caption": "Toggle Folder Exclude Pattern: node_modules", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "node_modules"} },
     { "caption": "Toggle Folder Exclude Pattern: tmp", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "tmp"} },
     { "caption": "Toggle Folder Exclude Pattern: vendor", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "vendor"} },
     { "caption": "Toggle Hidden File and Folders", "command": "toggle_hidden_files_and_folders" },
+    { "caption": "Toggle Highlight Line", "command": "toggle_highlight_line" },
+    { "caption": "Toggle Indent Guide", "command": "toggle_indent_guide" },
+    { "caption": "Toggle Invisibles", "command": "toggle_invisibles" },
+    { "caption": "Toggle Line Numbers", "command": "toggle_line_numbers" },
+    { "caption": "Toggle Preview on Click", "command": "toggle_preview_on_click" },
+    { "caption": "Toggle Rulers", "command": "toggle_rulers" },
+    { "caption": "Toggle Save on Focus Lost", "command": "toggle_save_on_focus_lost" },
 
     // Tree (User).
     { "caption": "Tree: New File", "command": "tree_new_file" },

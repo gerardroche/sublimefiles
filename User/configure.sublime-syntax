@@ -1,0 +1,51 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Configure
+file_extensions:
+  - ac
+  - in
+  - m4
+scope: source.configure
+
+contexts:
+  main:
+
+    - match: dnl.*
+      scope: comment.configure
+
+    - match: \b((end)?if(ndef)?|ifdef|else|fi|done|for|case|esac|then|do)\b
+      scope: keyword
+
+    - match: (echo|rm|test|set)
+      scope: support.function
+
+    - match: ''''
+      push: single-quoted-string
+    - match: '"'
+      push: double-quoted-string
+
+    - match: (\-|\+|\*|/|%)
+      scope: keyword.operator.arithmetic.pine
+    - match: (==|!=|<=|>=|<|>|\:=)
+      scope: keyword.operator.comparison.pine
+    - match: (\?|\:)
+      scope: keyword.operator.ternary.pine
+    - match: \b(and|or|not)\b
+      scope: keyword.operator.logical.pine
+    - match: "="
+      scope: keyword.operator.assignment.pine
+
+  single-quoted-string:
+    - meta_scope: string.quoted.single.pine
+    - match: \\.
+      scope: constant.character.escape.pine
+    - match: ''''
+      pop: true
+
+  double-quoted-string:
+    - meta_scope: string.quoted.double.pine
+    - match: \\.
+      scope: constant.character.escape.pine
+    - match: '"'
+      pop: true

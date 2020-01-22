@@ -1,5 +1,5 @@
 {
-	"delay": 0.1,
+	"debug": false,
 	"lint_mode": "load_save",
 	"linters":
 	{
@@ -11,7 +11,8 @@
 				"*/vendor/*",
 				"*/sublime_text_3/*"
 			],
-			"executable": "~/.local/bin/flake8"
+			"executablex": "~/.local/bin/flake8",
+			"executable": ["python3.8", "-m", "flake8"],
 		},
 		"mypy":
 		{
@@ -19,18 +20,23 @@
 			[
 			],
 			"disable": false,
+			"env":
+			{
+				"MYPYPATH": "${PROJECTS_PATH}/sublime/sublime-mypy-stubs"
+			},
 			"excludes":
 			[
 			],
-			"executable": "~/.local/bin/mypy",
-			"follow-imports": "silent"
+			"executablex": "~/.local/bin/mypy",
+			"executable": ["python3.8", "-m", "mypy"]
 		},
 		"php":
 		{
 			"disable": false,
 			"excludes":
 			[
-				"*/vendor/*"
+				"*/projects/**/vendor/*",
+				"*/vendor/**/vendor/*"
 			]
 		},
 		"phpmd":

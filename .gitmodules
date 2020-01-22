@@ -1,78 +1,81 @@
-[submodule "PHPUnitKit"]
-	path = PHPUnitKit
-	url = https://github.com/gerardroche/sublime-phpunit.git
-[submodule "polyfill"]
-	path = polyfill
-	url = https://github.com/gerardroche/sublime-polyfill.git
-[submodule "Sensible"]
-	path = Sensible
-	url = https://github.com/gerardroche/sublime-sensible.git
-[submodule "PHPGrammar"]
-	path = PHPGrammar
-	url = https://github.com/gerardroche/sublime-php-grammar.git
-[submodule "PHPSnippets"]
-	path = PHPSnippets
-	url = https://github.com/gerardroche/sublime-php-snippets.git
-[submodule "phpunit-completions"]
-	path = phpunit-completions
-	url = https://github.com/gerardroche/sublime-phpunit-completions.git
-[submodule "PHP Completions Kit"]
-	path = PHP Completions Kit
-	url = https://github.com/gerardroche/sublime-phpck.git
-[submodule "Sesame"]
-	path = Sesame
-	url = https://github.com/gerardroche/sublime-open-sesame.git
+[submodule "AutomaticPackageReloader"]
+	path = AutomaticPackageReloader
+	url = https://github.com/gerardroche/AutomaticPackageReloader.git
 [submodule "ColorSchemeUnit"]
 	path = ColorSchemeUnit
 	url = https://github.com/gerardroche/sublime-color-scheme-unit.git
 [submodule "DocBlockr"]
 	path = DocBlockr
 	url = https://github.com/gerardroche/sublime-jsdocs.git
-[submodule "UnitTesting"]
-	path = UnitTesting
-	url = https://github.com/gerardroche/UnitTesting.git
+[submodule "LaravelTestingCompletions"]
+	path = LaravelTestingCompletions
+	url = https://github.com/gerardroche/sublime-laravel-testing-completions.git
+[submodule "Markdown Preview"]
+	path = Markdown Preview
+	url = https://github.com/revolunet/sublimetext-markdown-preview.git
+[submodule "Monokai Free"]
+	path = MonokaiFree
+	url = https://github.com/gerardroche/sublime-monokai-free.git
 [submodule "NeoVintageous"]
 	path = NeoVintageous
 	url = https://github.com/NeoVintageous/NeoVintageous.git
-[submodule "ToggleNeoVintageous"]
-	path = ToggleNeoVintageous
-	url = https://github.com/NeoVintageous/ToggleNeoVintageous.git
+[submodule "PHPGrammar"]
+	path = PHPGrammar
+	url = https://github.com/gerardroche/sublime-php-grammar.git
+[submodule "PHPSnippets"]
+	path = PHPSnippets
+	url = https://github.com/gerardroche/sublime-php-snippets.git
+[submodule "PHPUnitKit"]
+	path = PHPUnitKit
+	url = https://github.com/gerardroche/sublime-phpunit.git
+[submodule "PHP Completions Kit"]
+	path = PHP Completions Kit
+	url = https://github.com/gerardroche/sublime-phpck.git
+[submodule "Package Control"]
+	path = Package Control
+	url = https://github.com/gerardroche/sublime_package_control.git
+[submodule "Pine"]
+	path = Pine
+	url = https://github.com/gerardroche/sublime-pine.git
+[submodule "Python Completions"]
+	path = Python Completions
+	url = https://github.com/gerardroche/Python-Auto-Complete.git
+[submodule "phpunit-completions"]
+	path = phpunit-completions
+	url = https://github.com/gerardroche/sublime-phpunit-completions.git
+[submodule "polyfill"]
+	path = polyfill
+	url = https://github.com/gerardroche/sublime-polyfill.git
+[submodule "Sensible"]
+	path = Sensible
+	url = https://github.com/gerardroche/sublime-sensible.git
+[submodule "Sesame"]
+	path = Sesame
+	url = https://github.com/gerardroche/sublime-open-sesame.git
 [submodule "SublimeLinter"]
 	path = SublimeLinter
 	url = https://github.com/gerardroche/SublimeLinter3.git
+[submodule "SublimeLinter-contrib-mypy"]
+	path = SublimeLinter-contrib-mypy
+	url = https://github.com/fredcallaway/SublimeLinter-contrib-mypy
 [submodule "SublimeLinter-php"]
 	path = SublimeLinter-php
 	url = https://github.com/gerardroche/SublimeLinter-php.git
 [submodule "SublimeLinter-php-cs-fixer"]
 	path = SublimeLinter-php-cs-fixer
 	url = https://github.com/jhoff/SublimeLinter-contrib-php-cs-fixer.git
-[submodule "Markdown Preview"]
-	path = Markdown Preview
-	url = https://github.com/revolunet/sublimetext-markdown-preview.git
-[submodule "Package Control"]
-	path = Package Control
-	url = https://github.com/gerardroche/sublime_package_control.git
-[submodule "Monokai Free"]
-	path = MonokaiFree
-	url = https://github.com/gerardroche/sublime-monokai-free.git
-[submodule "Pine"]
-	path = Pine
-	url = https://github.com/gerardroche/sublime-pine.git
+[submodule "SublimeTextAPICompletions"]
+	path = SublimeTextAPICompletions
+	url = https://github.com/gerardroche/sublime-api-completions.git
 [submodule "Test"]
 	path = Test
 	url = https://github.com/gerardroche/sublime-test.git
 [submodule "Tmux"]
 	path = Tmux
 	url = https://github.com/gerardroche/sublime-tmux.git
-[submodule "SublimeTextAPICompletions"]
-	path = SublimeTextAPICompletions
-	url = https://github.com/gerardroche/sublime-api-completions.git
-[submodule "Python Completions"]
-	path = Python Completions
-	url = https://github.com/gerardroche/Python-Auto-Complete.git
-[submodule "Wrap Plus"]
-	path = Wrap Plus
-	url = https://github.com/ehuss/Sublime-Wrap-Plus
-[submodule "LaravelTestingCompletions"]
-	path = LaravelTestingCompletions
-	url = https://github.com/gerardroche/sublime-laravel-testing-completions.git
+[submodule "ToggleNeoVintageous"]
+	path = ToggleNeoVintageous
+	url = https://github.com/NeoVintageous/ToggleNeoVintageous.git
+[submodule "UnitTesting"]
+	path = UnitTesting
+	url = https://github.com/gerardroche/UnitTesting.git

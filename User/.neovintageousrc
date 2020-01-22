@@ -2,6 +2,7 @@
 " Type :h neovintageousrc for help.
 
 " set belloff=
+" set ignorecase
 " set magic
 " set modelines=7
 " set nohlsearch
@@ -12,12 +13,12 @@
 " set scrolloff=9
 " set sidescrolloff=9
 " set wrapscan
-set noignorecase
 set winaltkeys=menu
 
 let mapleader=,
 
 nnoremap <leader>d :Neovintageous action=toggle_side_bar<cr>
+nnoremap <leader>ee :SublimeLinterPanelToggle<cr>
 nnoremap <leader>ek :OpenKeyBindings<CR>
 nnoremap <leader>en :Neovintageous action=open_rc_file<CR>
 nnoremap <leader>ep :OpenPreferences<CR>
@@ -76,10 +77,11 @@ nnoremap <D-n> :TestNearest<CR>
 noremap <space>t :ToggleWord<CR>
 
 " Plugin (User): Debug
-nnoremap <leader>vd :VarDump<CR>
-nnoremap <leader>vr :VarDump sublime_region_view_regions=true<CR>
-nnoremap <leader>vs :VarDump sublime_region_self_view_string=true<CR>
-nnoremap <leader>vv :VarDump sublime_region_view_string=true<CR>
+nnoremap <leader>vd :DumpVariable<CR>
+nnoremap <leader>vt :DumpVariable type=true<CR>
+nnoremap <leader>vr :DumpVariable sublime_region_view_regions=true<CR>
+nnoremap <leader>vs :DumpVariable sublime_region_self_view_string=true<CR>
+nnoremap <leader>vv :DumpVariable sublime_region_view_string=true<CR>
 
 " ------------------------------------------------------------------------------
 
@@ -113,10 +115,10 @@ nnoremap <leader>vv :VarDump sublime_region_view_string=true<CR>
 " nnoremap <lt> <lt><lt>
 " vnoremap <lt> <lt>gv
 " vnoremap > >gv
-nnoremap <D-[> <lt><lt>
-nnoremap <D-]> >>
-vnoremap <D-[> <lt>gv
-vnoremap <D-]> >gv
+" nnoremap <D-[> <lt><lt>
+" nnoremap <D-]> >>
+" vnoremap <D-[> <lt>gv
+" vnoremap <D-]> >gv
 
 " Workaround Emmet plugin issues
 " See: https://github.com/NeoVintageous/NeoVintageous/issues/571.

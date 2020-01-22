@@ -1,7 +1,3 @@
-# When you see something you like and would like to use it, open an issue about
-# abstracting it out into a reusable package, possibly installable via Package
-# Control.
-
 import functools
 import logging
 import os
@@ -53,13 +49,14 @@ class NeovintageousDevCommand(sublime_plugin.WindowCommand):
 
     def run(self, action):
         action_method = getattr(self, action + '_action', None)
-        if action_method:
-            print('NeoVintageous: ', action.replace('_', ' '))
-            action_method()
-        else:
-            raise Exception('action not found')
+        if not action_method:
+            raise ValueError('action not found')
+
+        print('NeoVintageous: ', action.replace('_', ' '))
+        action_method()
 
     def edit_help_file_action(self):
+        """Open up a NeoVintageous help file for editing."""
         docs_path = os.path.join(
             os.path.dirname(os.path.dirname(__file__)),
             'NeoVintageous/res/doc')
@@ -85,6 +82,7 @@ class NeovintageousDevCommand(sublime_plugin.WindowCommand):
         self.window.show_quick_panel(resources, on_done)
 
     def fixup_docs_action(self):
+        """Fix encoding issues with Vim doc files."""
         docs_path = os.path.join(
             os.path.dirname(os.path.dirname(__file__)),
             'NeoVintageous/res/doc')
@@ -132,16 +130,11 @@ class NeovintageousDevCommand(sublime_plugin.WindowCommand):
         self.window.show_quick_panel(log_levels, on_done)
 
     def dump_ex_completions_action(self):
-        # Temporary hacky command to generate ex completions
-
-        from NeoVintageous.nv import ex_routes
-
+        """Temporary hacky command to generate ex completions."""
+        from NeoVintageous.nv import ex_routes  # type: ignore
         routes = [r for r in ex_routes.ex_routes]
 
-        print('')
-        print('')
-        print('')
-
+        print("\n\n\n")
         completions = []
         for route in routes:
             # print('route      =', route)
@@ -184,54 +177,49 @@ class NeovintageousDevCommand(sublime_plugin.WindowCommand):
                 completions.append(completion)
                 print('completion {:>20} from {}'.format(completion, route))
 
-        print('')
-        print("'" + "', '".join(completions) + "'")
-        print('')
+        print("\n'" + "', '".join(completions) + "'\n")
 
 
-class NeovintageousDevDumpViewCommand(sublime_plugin.TextCommand):
+class NeovintageousDumpViewCommand(sublime_plugin.WindowCommand):
 
-    def run(self, edit):
-        view = self.view
+    def run(self):
+        view = self.window.active_view()
         settings = view.settings()
 
-        print('>>> Neointageous: view')
-
-        print('{} [id={}, file={}]'
-              '\n buffer_id={: <10}        is_valid={: <10}     is_primary={: <10}   name={: <5}'
-              '\n is_dirty={: <10}         is_read_only={: <10} is_scratch={: <10}   encoding={: <5}'
-              '\n line_endings={: <10}     is_in_edit={: <10}   change_count={: <10} is_loading={: <5}'
-              '\n line_height={: <10}      em_width={: <10}     is_popup_visible={: <10}'
-              '\n overwrite_status={: <10} size={: <10}         is_auto_complete_visible={: <10}'
-              '\n has_non_empty_selection_region={: <10}'
-              .format(
-                  str(view),
-                  str(view.id()), str(view.file_name()),
-                  str(view.buffer_id()), str(view.is_valid()), str(view.is_primary()), str(view.name()),
-                  str(view.is_dirty()), str(view.is_read_only()), str(view.is_scratch()), str(view.encoding()),
-                  str(view.line_endings()), str(view.is_in_edit()), str(view.change_count()), str(view.is_loading()),
-                  str(view.line_height()), str(view.em_width()), str(view.is_popup_visible()),
-                  str(view.overwrite_status()), str(view.size()), str(view.is_auto_complete_visible()),
-                  str(view.has_non_empty_selection_region())))
+        view.window().run_command('dump_view')
 
         keys = [
+            'WrapPlus.include_line_ending',
             'action',
             'action_count',
             'autoindent',
+            'bell',
+            'bell_color_scheme',
+            'clear_auto_indent_on_esc',
             'cmdline_cd',
             'cmdline_mode',
             'command_mode',
             'data',
+            'default_mode',
             'editor_setting',
+            'enable_abolish',
+            'enable_commentary',
+            'enable_multiple_cursors',
+            'enable_surround',
+            'enable_unimpaired',
             'external_disable',
             'external_disable_keys',
             'glue_until_normal_mode',
+            'highlightedyank',
+            'highlightedyank_duration',
+            'highlightedyank_style',
             'hlsearch',
             'ignorecase',
             'incsearch',
             'inverse_caret_state',
             'last_buffer_search',
             'last_buffer_search_command',
+            'last_char_search',
             'last_char_search_command',
             'last_character_search',
             'linux_shell',
@@ -240,6 +228,7 @@ class NeovintageousDevDumpViewCommand(sublime_plugin.TextCommand):
             'mode',
             'motion',
             'motion_count',
+            'multi_cursor_exit_from_visual_mode',
             'must_capture_register_name',
             'non_interactive',
             'normal_insert_count',
@@ -251,12 +240,18 @@ class NeovintageousDevDumpViewCommand(sublime_plugin.TextCommand):
             'register',
             'repeat_data',
             'reset_during_init',
+            'reset_mode_when_switching_tabs',
             'rulers',
+            'search_cur_style',
+            'search_inc_style',
+            'search_occ_style',
             'sequence',
+            'shell_silent',
             'showsidebar',
             'surround',
             'surround_spaces',
             'use_ctrl_keys',
+            'use_super_keys',
             'use_sys_clipboard',
             'vi_editor_setting',
             'vintage',
@@ -264,23 +259,27 @@ class NeovintageousDevDumpViewCommand(sublime_plugin.TextCommand):
             'visual_block_direction',
             'visualbell',
             'widget',
-            'WrapPlus.include_line_ending',
             'xpos',
         ]
 
         prefixes = (
             '',
+            'VintageousEx_',
             '_',
+            '__nv_',
             '__vi_',
+            '_neovintageous_',
+            '_nv_',
             '_vi_',
             '_vintageous_',
             'enable_',
             'ex_',
             'is_',
             'is_vintageous_',
+            'neovintageous_',
+            'nv_',
             'vi_',
             'vintageous_',
-            'VintageousEx_',
         )
 
         data = {}
@@ -291,15 +290,14 @@ class NeovintageousDevDumpViewCommand(sublime_plugin.TextCommand):
                 if value is not None:
                     data[_key] = value
 
-        print(' settings:')
         for k in sorted(data.keys()):
             v = data[k]
             if isinstance(v, dict):
-                print('  {} {{'.format(k))
+                print(' {}'.format(k))
                 for k in sorted(v.keys()):
-                    print('    {:40} = {}'.format(k, v[k]))
-                print('  }')
+                    append = ''
+                    if str(type(v)) not in ('<class \'int\'>', '<class \'str\'>', '<class \'bool\'>', '<class \'dict\'>'):
+                        append += ' ' + str(type(v))
+                    print('%40s = %s %s' % (k, v[k], append))
             else:
-                print('  {:30} = {}'.format(k, v))
-
-        print('<<<')
+                print(' {:50} = {}'.format(k, v))

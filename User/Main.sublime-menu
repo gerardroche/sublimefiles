@@ -1,0 +1,26 @@
+[
+    {
+        "id": "view",
+        "children":
+        [
+            { "id": "side_bar" },
+            { "command": "toggle_indent_guide" },
+            { "command": "toggle_invisibles" },
+            { "command": "toggle_highlight_line" },
+            { "command": "toggle_line_numbers" },
+            { "command": "toggle_preview_on_click" },
+            { "command": "toggle_rulers" }
+        ]
+    },
+    { "id": "help" },
+    {
+        "caption": "Developer Tools",
+        "children": [
+            { "command": "toggle_debug" },
+            { "command": "dump_view" },
+            { "command": "dump_info" },
+            { "command": "neovintageous_dump_view" },
+        ]
+    }
+
+]

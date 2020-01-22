@@ -14,13 +14,9 @@
 	],
 	"installed_packages":
 	[
-		"AutomaticPackageReloader",
 		"FileIcons",
-		"Laravel Blade Highlighter",
 		"Origami",
 		"Package Control",
-		"Sass",
-		"SublimeLinter-contrib-mypy",
 		"SublimeLinter-flake8"
 	],
 	"submit_url": "",

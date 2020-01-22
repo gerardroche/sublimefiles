@@ -41,5 +41,4 @@
     // Fix opening the context menu.
     // See https://github.com/SublimeTextIssues/Core/issues/2128.
     // { "keys": ["shift+f10"], "command": "context_menu" },
-
 ]
