@@ -231,7 +231,7 @@
 	"mouse_wheel_switches_tabs": false,
 	"neovintageous_build_version": 11100,
 	"overlay_scroll_bars": "enabled",
-	"phpunit.on_post_save":
+	"phpunitx.on_post_save":
 	[
 		"run_test_file"
 	],
