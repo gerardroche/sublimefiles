@@ -1,5 +1,17 @@
 {
     "enable_autoreload": true,
     "enable_highlight": true,
-    "enabled_parsers": ["markdown"]
+    "enabled_parsers": ["markdown"],
+
+
+    // "markdown_extensions": [
+    //     // Python Markdown Extra with SuperFences.
+    //     // You can't include "extra" and "superfences"
+    //     // as "fenced_code" can not be included with "superfences",
+    //     // so we include the pieces separately.
+    //     "markdown.extensions.footnotes",
+    //     "markdown.extensions.attr_list",
+    //     "markdown.extensions.def_list",
+    //     "markdown.extensions.tables",
+    // ]
 }

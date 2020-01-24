@@ -10,9 +10,6 @@
 [submodule "LaravelTestingCompletions"]
 	path = LaravelTestingCompletions
 	url = https://github.com/gerardroche/sublime-laravel-testing-completions.git
-[submodule "Markdown Preview"]
-	path = Markdown Preview
-	url = https://github.com/revolunet/sublimetext-markdown-preview.git
 [submodule "Monokai Free"]
 	path = MonokaiFree
 	url = https://github.com/gerardroche/sublime-monokai-free.git
