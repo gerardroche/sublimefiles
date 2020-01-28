@@ -1,6 +1,6 @@
 # NeoVintageousTweaks
 
-[![Minimum Sublime Version](https://img.shields.io/badge/sublime-%3E%3D%203.0-brightgreen.svg?style=flat-square)](https://sublimetext.com) [![Latest Stable Version](https://img.shields.io/github/tag/NeoVintageous/NeoVintageousTweaks.svg?style=flat-square&label=stable)](https://github.com/NeoVintageous/NeoVintageousTweaks/tags) [![GitHub stars](https://img.shields.io/github/stars/NeoVintageous/NeoVintageousTweaks.svg?style=flat-square)](https://github.com/NeoVintageous/NeoVintageousTweaks/stargazers) [![Downloads](https://img.shields.io/packagecontrol/dt/NeoVintageousTweaks.svg?style=flat-square)](https://packagecontrol.io/packages/NeoVintageousTweaks)
+[![Minimum Sublime Version](https://img.shields.io/badge/sublime-%3E%3D%203.0-brightgreen.svg?style=flat-square)](https://sublimetext.com) [![Latest Version](https://img.shields.io/github/tag/NeoVintageous/NeoVintageousTweaks.svg?style=flat-square&label=version)](https://github.com/NeoVintageous/NeoVintageousTweaks/tags) [![GitHub stars](https://img.shields.io/github/stars/NeoVintageous/NeoVintageousTweaks.svg?style=flat-square)](https://github.com/NeoVintageous/NeoVintageousTweaks/stargazers) [![Downloads](https://img.shields.io/packagecontrol/dt/NeoVintageousTweaks.svg?style=flat-square)](https://packagecontrol.io/packages/NeoVintageousTweaks)
 
 * Map `jj` to `Esc`
 * Map `ctrl+[` to `Esc`

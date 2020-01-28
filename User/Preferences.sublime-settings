@@ -25,7 +25,12 @@
 	"docblockr.short_primitives": true,
 	"docblockr.spacer_between_sections": true,
 	"draw_minimap_border": true,
-	"draw_white_space": "selection",
+	"draw_white_space":
+	[
+		"selection",
+		"trailing",
+		"isolated"
+	],
 	"draw_white_space_disabled_default": "none",
 	"enable_telemetry": false,
 	"fade_fold_buttons": false,
@@ -130,14 +135,15 @@
 		"sublime_text_3/Icon",
 		"vendor/composer"
 	],
-	"font_face": "Fira Code",
-	"font_faces":
+	"font_size": 11,
+	"font_size_default": 11,
+	"fxont_face": "Fira Code",
+	"fxont_faces":
 	[
 		"Source Code Pro",
 		"Fira Code"
 	],
-	"font_size": 11,
-	"font_size_default": 11,
+	"git_diff_target": "head",
 	"git_gutter_enable_hover_diff_popup": false,
 	"git_gutter_next_prev_change_wrap": false,
 	"git_gutter_show_in_minimap": 0,
@@ -167,7 +173,6 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
-		"NeoVintageousTweaks",
 		"Six",
 		"SublimeLinter-php-cs-fixer",
 		"Vintage",
@@ -231,14 +236,14 @@
 	"mouse_wheel_switches_tabs": false,
 	"neovintageous_build_version": 11100,
 	"overlay_scroll_bars": "enabled",
-	"phpunitx.on_post_save":
-	[
-		"run_test_file"
-	],
 	"phpunit.options":
 	{
 		"no-coverage": true
 	},
+	"phpunitx.on_post_save":
+	[
+		"run_test_file"
+	],
 	"polyfill.experimental_features": true,
 	"preview_on_click": true,
 	"remember_full_screen": true,
@@ -264,8 +269,7 @@
 	"show_line_endings": true,
 	"show_rel_path": true,
 	"show_tab_close_buttons": false,
-	"spelling_selector": "source string.quoted - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, markup.raw.inline, meta.tag)",
-	"spelling_selectorx": "",
+	"spelling_selector": "markup.raw, source string.quoted - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.raw.inline)",
 	"submit_usage": false,
 	"syntastic_php_php_execx": "~/.phpenv/versions/7.x/bin/php",
 	"syntastic_python_flake8_exec": "~/.local/bin/flake8",

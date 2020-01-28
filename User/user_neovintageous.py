@@ -3,14 +3,12 @@ import logging
 import os
 import re
 
-from sublime import load_resource
-from sublime import packages_path
-from sublime import set_timeout_async
+import sublime
 import sublime_plugin
 
 
 def _log_level_file():
-    return os.path.join(packages_path(), 'User', '.neovintageous_log_level')
+    return os.path.join(sublime.packages_path(), 'User', '.neovintageous_log_level')
 
 
 def _set_logger_log_level(level):
@@ -33,6 +31,10 @@ def _set_logger_log_level(level):
         level,
         logging.DEBUG
     ))
+
+    if level == 'NOTSET':
+        sublime.log_input(False)
+        sublime.log_commands(False)
 
     print('NeoVintageous: log level {}'.format(level))
 
@@ -73,7 +75,7 @@ class NeovintageousDevCommand(sublime_plugin.WindowCommand):
 
             resource = resources[index][1]
 
-            view = self.window.open_file(os.path.join(packages_path(), 'NeoVintageous', resource))
+            view = self.window.open_file(os.path.join(sublime.packages_path(), 'NeoVintageous', resource))
             view.assign_syntax('Packages/NeoVintageous/res/Help.sublime-syntax')
             view.settings().set('indent_guide_options', [])
             view.settings().set('spell_check', True)
@@ -97,16 +99,16 @@ class NeovintageousDevCommand(sublime_plugin.WindowCommand):
                 resource = 'Packages/NeoVintageous/res/doc/%s' % f
 
                 try:
-                    load_resource(resource)
+                    sublime.load_resource(resource)
                 except Exception as e:
                     print('  Error: ' + resource + ' ' + str(e))
 
-                    file = packages_path() + '/NeoVintageous/res/doc/%s' % f
+                    file = sublime.packages_path() + '/NeoVintageous/res/doc/%s' % f
                     print('    Fixing resource encoding for \'{}\''.format(file))
 
                     view = self.window.open_file(file)
 
-                    set_timeout_async(functools.partial(set_utf8_encoding_save_and_close, view), 200)
+                    sublime.set_timeout_async(functools.partial(set_utf8_encoding_save_and_close, view), 200)
 
     def set_log_level_action(self):
         log_levels = [

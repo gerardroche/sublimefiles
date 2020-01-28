@@ -2,7 +2,6 @@
 " Type :h neovintageousrc for help.
 
 " set belloff=
-" set ignorecase
 " set magic
 " set modelines=7
 " set nohlsearch
@@ -13,6 +12,7 @@
 " set scrolloff=9
 " set sidescrolloff=9
 " set wrapscan
+set noignorecase
 set winaltkeys=menu
 
 let mapleader=,
@@ -22,19 +22,23 @@ nnoremap <leader>ee :SublimeLinterPanelToggle<cr>
 nnoremap <leader>ek :OpenKeyBindings<CR>
 nnoremap <leader>en :Neovintageous action=open_rc_file<CR>
 nnoremap <leader>ep :OpenPreferences<CR>
-nnoremap <leader>f :ShowOverlay overlay=goto text=@<CR>
+nnoremap <leader>f :RevealInSideBar<CR>
 nnoremap <leader>ga :silent !git add %<CR>
-nnoremap <leader>gf :GitFormatGithubUrl<CR>
+nnoremap <leader>gf :ShowOverlay overlay=goto text=@<CR>
 nnoremap <leader>go :GitOpen<CR>
 nnoremap <leader>gr :ShowOverlay overlay=goto text=@<CR>
 nnoremap <leader>gs :!git status<CR>
+nnoremap <leader>gu :GitFormatGithubUrl<CR>
 nnoremap <leader>hp :PasteFromHistory<CR>
 nnoremap <leader>hu :RevertModification<CR>
 nnoremap <leader>q gqip:w<CR>
 nnoremap <leader>r :reg<CR>
-
+noremap <C-S-f3> :FindInOpenFolders interactive=true default_filter=true<CR>
+noremap <C-f3> :FindInOpenFolders interactive=true<CR>
 noremap <C-l> :nohlsearch<CR>
 noremap <C-s> :w<CR>
+noremap <D-i> :GotoSymbolInProject<CR>
+noremap <S-f3> :FindInOpenFolders interactive=false<CR>
 
 " Yank and paste using system clipboard.
 noremap <leader>y "+y
@@ -42,8 +46,7 @@ noremap <leader>Y "+Y
 noremap <leader>p "+p
 noremap <leader>P "+P
 
-noremap <D-i> :GotoSymbolInProject<CR>
-
+" Sorting helpers.
 nnoremap <leader>s) vi):sort u<CR>
 nnoremap <leader>s] vi]:sort u<CR>
 nnoremap <leader>si vii:sort u<CR>
@@ -51,10 +54,7 @@ nnoremap <leader>sp vip:sort u<CR>
 nnoremap <leader>ss vip:sort u<CR>
 vnoremap <leader>s :sort u<CR>
 
-noremap <C-S-f3> :FindInOpenFolders interactive=true default_filter=true<CR>
-noremap <C-f3> :FindInOpenFolders interactive=true<CR>
-noremap <S-f3> :FindInOpenFolders interactive=false<CR>
-
+" Windowing leader aliases.
 nnoremap <leader><bar> <C-w><bar>
 nnoremap <leader>= <C-w>=
 nnoremap <leader>_ <C-w>_
@@ -85,6 +85,8 @@ nnoremap <leader>vv :DumpVariable sublime_region_view_string=true<CR>
 
 " ------------------------------------------------------------------------------
 
+" The following are sometimes used for testing NeoVintageous during development.
+
 " nnoremap <Space> :
 
 " Easy buffer navigation.
@@ -100,27 +102,23 @@ nnoremap <leader>vv :DumpVariable sublime_region_view_string=true<CR>
 " nnoremap <C-e> 3<C-e>
 " nnoremap <C-y> 3<C-y>
 
+" IMPORTANT! These mappings will obviously impact the performance of j and k keys.
 " Make j and k work file linewise instead of screen linewise.
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 " https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
-" IMPORTANT! This impacts the performance of j and k keys.
-" nnoremap j gj
-" nnoremap k gk
 " nnoremap gj j
 " nnoremap gk k
+" nnoremap j gj
+" nnoremap k gk
 
 " Mapping brackets.
 " See: https://github.com/NeoVintageous/NeoVintageous/issues/426.
-" nnoremap > >>
-" nnoremap <lt> <lt><lt>
-" vnoremap <lt> <lt>gv
-" vnoremap > >gv
 " nnoremap <D-[> <lt><lt>
 " nnoremap <D-]> >>
 " vnoremap <D-[> <lt>gv
 " vnoremap <D-]> >gv
 
-" Workaround Emmet plugin issues
+" Workaround Emmet plugin issues.
 " See: https://github.com/NeoVintageous/NeoVintageous/issues/571.
 " nnoremap <C-Up> :RunEmmetAction action=increment_number_by_1<CR><Esc>
 " nnoremap <C-Down> :RunEmmetAction action=increment_number_by_1<CR><Esc>

@@ -26,22 +26,32 @@ class ToggleDebugCommand(sublime_plugin.WindowCommand):
         # sublime.log_indexing(self.enabled)
         sublime.log_input(self.enabled)
         sublime.log_result_regex(self.enabled)
+        if int(sublime.version()) > 4064:
+            sublime.log_control_tree(self.enabled)
 
 
 class DumpInfoCommand(sublime_plugin.WindowCommand):
     def run(self):
-        print('Sublime Text v' + sublime.version())
-        print('Python v{}.{}.{} {}{}'.format(
+        print('+-------------------')
+        print('| Sublime Text:', 'v' + sublime.version())
+        print('| Python v{}.{}.{} {}{}'.format(
             sys.version_info[0],
             sys.version_info[1],
             sys.version_info[2],
             sys.version_info[3],
             sys.version_info[4]))
-
-        print('%-15s %s' % ('sys.flags', sys.flags))
-        print('%-15s %s' % ('sys.abiflags', sys.abiflags))
-        print('%-15s %s' % ('sys.path', sys.path))
-        print('%-15s %s' % ('__debug__', __debug__))
+        print('| Platform:', sublime.platform())
+        print('| Archetecture:', sublime.arch())
+        print('| Channel:', sublime.channel())
+        print('| Executable path:', sublime.executable_path())
+        print('| Packages path:', sublime.packages_path())
+        print('| Installed packages path:', sublime.installed_packages_path())
+        print('| Cache path:', sublime.cache_path())
+        print('| %-15s: %s' % ('sys.flags', sys.flags))
+        print('| %-15s: %s' % ('sys.abiflags', sys.abiflags))
+        print('| %-15s: %s' % ('sys.path', sys.path))
+        print('| %-15s: %s' % ('__debug__', __debug__))
+        print('+')
 
 
 class DumpScopeCommand(sublime_plugin.WindowCommand):
