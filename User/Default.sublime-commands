@@ -19,6 +19,7 @@
 
     // NeoVintageous. See: https://github.com/NeoVintageous/NeoVintageous.
     { "caption": "NeoVintageous: Dump Ex Completions", "command": "neovintageous_dev", "args": {"action": "dump_ex_completions"}},
+    { "caption": "NeoVintageous: Dump Mappings", "command": "neovintageous_dev", "args": {"action": "dump_mappings"}},
     { "caption": "NeoVintageous: Edit Help File", "command": "neovintageous_dev", "args": {"action": "edit_help_file"}},
     { "caption": "NeoVintageous: Fixup Docs", "command": "neovintageous_dev", "args": {"action": "fixup_docs"}},
     { "caption": "NeoVintageous: Set Log Level", "command": "neovintageous_dev", "args": {"action": "set_log_level"}},

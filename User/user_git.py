@@ -7,6 +7,10 @@ from sublime import status_message
 import sublime_plugin
 
 
+def _create_github_url(*args):
+    return 'https://github.com/%s' % ('/'.join(args))
+
+
 def _extract_github_url(view):
     line = view.line(view.sel()[0].b)
     line = view.substr(line)
@@ -33,12 +37,15 @@ def _extract_github_url(view):
     )
 
     if match:
-        return 'https://github.com/' + match[0].replace('#', '/issues/')
+        return _create_github_url(match[0].replace('#', '/issues/'))
+
+    match = re.findall('[a-f0-9]{40}', line)
+    if match:
+        return _create_github_url('NeoVintageous/NeoVintageous/commits', match[0])
 
     match = re.findall('#[0-9]+', line)
     if match:
-        # TODO remove hardcoded package name.
-        return 'https://github.com/' + match[0].replace('#', 'NeoVintageous/NeoVintageous/issues/')
+        return _create_github_url('NeoVintageous/NeoVintageous/issues', match[0].replace('#', ''))
 
 
 class GitFormatGithubUrlCommand(sublime_plugin.TextCommand):

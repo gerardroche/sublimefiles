@@ -29,6 +29,9 @@ class TestUserGitFormatGithubUrl(unittest.ViewTestCase):
         self.fixture('|#2')
         self.assertEqual('https://github.com/NeoVintageous/NeoVintageous/issues/2', _extract_github_url(self.view))
 
+        self.fixture('|See cf5da8040b32e532b3bacbb9485ae1e991b55a16')
+        self.assertEqual('https://github.com/NeoVintageous/NeoVintageous/commits/cf5da8040b32e532b3bacbb9485ae1e991b55a16', _extract_github_url(self.view))  # noqa: E501
+
     def test_extract_url_with_cursor_in_middle_of_url_string(self):
         self.fixture('https://g|ithub.com/x/y')
         self.assertEqual('https://github.com/x/y', _extract_github_url(self.view))

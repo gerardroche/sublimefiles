@@ -4,7 +4,7 @@
 	],
 	"always_show_minimap_viewport": true,
 	"animation_enabled": false,
-	"auto_complete_delay": 0,
+	"auto_complete_delay": 5,
 	"auto_complete_with_fields": true,
 	"auto_hide_menu": false,
 	"auto_match_enabled": true,
@@ -25,12 +25,7 @@
 	"docblockr.short_primitives": true,
 	"docblockr.spacer_between_sections": true,
 	"draw_minimap_border": true,
-	"draw_white_space":
-	[
-		"selection",
-		"trailing",
-		"isolated"
-	],
+	"draw_white_space": "none",
 	"draw_white_space_disabled_default": "none",
 	"enable_telemetry": false,
 	"fade_fold_buttons": false,
@@ -90,6 +85,7 @@
 		"php-src/generated_lists",
 		"php-src/php_lcov.info",
 		"php-src/tmp-php.ini",
+		"sublime_text/*",
 		"sublime_text_3/_dummy*",
 		"sublime_text_3/changelog.txt",
 		"sublime_text_3/crash_reporter",
@@ -132,6 +128,7 @@
 		"node_modules",
 		"php-src/autom4te.cache",
 		"pxrojects/*/*/build",
+		"sublime_text",
 		"sublime_text_3/Icon",
 		"vendor/composer"
 	],
@@ -143,7 +140,6 @@
 		"Source Code Pro",
 		"Fira Code"
 	],
-	"git_diff_target": "head",
 	"git_gutter_enable_hover_diff_popup": false,
 	"git_gutter_next_prev_change_wrap": false,
 	"git_gutter_show_in_minimap": 0,
@@ -170,9 +166,11 @@
 		"{% endif %}"
 	],
 	"git_gutter_theme": "Cohesion.gitgutter-theme",
+	"gitx_diff_target": "head",
 	"hot_exit": true,
 	"ignored_packages":
 	[
+		"LaTeXTools",
 		"Six",
 		"SublimeLinter-php-cs-fixer",
 		"Vintage",
@@ -282,8 +280,10 @@
 	"unittesting_show_reload_progress": false,
 	"update_check": false,
 	"vintageous_bell": "view",
+	"vintageous_terminal": "gnome-terminal",
 	"vintageous_use_ctrl_keys": true,
 	"vintageous_use_super_keys": true,
-	"vxintageous_use_sys_clipboard": true,
-	"word_wrap": false
+	"vxintageous_enable_multiple_cursors": false,
+	"vxintageous_enable_sublime": false,
+	"vxintageous_use_sys_clipboard": true
 }

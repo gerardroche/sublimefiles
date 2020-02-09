@@ -79,7 +79,14 @@ class NeovintageousDevCommand(sublime_plugin.WindowCommand):
             view.assign_syntax('Packages/NeoVintageous/res/Help.sublime-syntax')
             view.settings().set('indent_guide_options', [])
             view.settings().set('spell_check', True)
-            view.settings().set('wrap_width', 80)
+
+            if int(sublime.version()) < 4065:
+                view.settings().set('wrap_width', 78)
+            else:
+                view.settings().set('wrap_width', 78)
+
+            view.settings().set('word_wrap', False)
+            view.settings().set('line_numbers', True)
 
         self.window.show_quick_panel(resources, on_done)
 
@@ -180,6 +187,48 @@ class NeovintageousDevCommand(sublime_plugin.WindowCommand):
                 print('completion {:>20} from {}'.format(completion, route))
 
         print("\n'" + "', '".join(completions) + "'\n")
+
+    def dump_mappings_action(self):
+        from NeoVintageous.nv.vi import keys  # noqa
+        from NeoVintageous.nv import plugin  # noqa
+        from NeoVintageous.nv import mappings  # noqa
+
+        print("\n------------")
+        print("--- KEYS ---")
+        print("------------\n")
+
+        k = []
+        for mode, mapping in keys.mappings.items():
+            for seq, cmd in keys.mappings[mode].items():
+                k.append('{: <10} {: <35} {: <35}'.format(seq, mode, cmd))
+        k.sort()
+        print('\n'.join(k))
+
+        print("\n--------------")
+        print("--- PLUGIN ---")
+        print("--------------\n")
+
+        plugs = []
+        for mode, mapping in plugin.mappings.items():
+            for seq, cmd in plugin.mappings[mode].items():
+                plugs.append('{: <35} {: <10} {}'.format(cmd, seq, mode))
+        plugs.sort()
+        print('\n'.join(plugs))
+
+        print("\n\n")
+        for name, obj in plugin.classes.items():
+            print('    {: <35} {}'.format(name, obj))
+
+        print("\n---------------")
+        print("--- MAPPING ---")
+        print("---------------\n")
+
+        m = []
+        for mode, mapping in mappings._mappings.items():
+            for seq, cmd in mappings._mappings[mode].items():
+                m.append('{: <10} {: <35} {: <35}'.format(seq, mode, cmd))
+        m.sort()
+        print('\n'.join(m))
 
 
 class NeovintageousDumpViewCommand(sublime_plugin.WindowCommand):

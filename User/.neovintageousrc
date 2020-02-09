@@ -1,19 +1,32 @@
 " The character " (the double quote mark) starts a comment
 " Type :h neovintageousrc for help.
 
+
+" set autoindent
 " set belloff=
+" set expandtabs
+" set hlsearch
+" set incsearch
+" set list
 " set magic
+" set modeline
 " set modelines=7
-" set nohlsearch
-" set noincsearch
-" set nomenu
-" set nomodeline
-" set nostatusbar
+" set number
 " set scrolloff=9
+" set shell=/bin/bash
+" set sidebar
 " set sidescrolloff=9
+" set spell
+" set tabstop
+" set textwidth=80
+" set winaltkeys=menu
+" set wrap
 " set wrapscan
-set noignorecase
-set winaltkeys=menu
+set ignorecase
+set menu
+set nominimap
+set smartcase
+set statusbar
 
 let mapleader=,
 
@@ -25,20 +38,23 @@ nnoremap <leader>ep :OpenPreferences<CR>
 nnoremap <leader>f :RevealInSideBar<CR>
 nnoremap <leader>ga :silent !git add %<CR>
 nnoremap <leader>gf :ShowOverlay overlay=goto text=@<CR>
-nnoremap <leader>go :GitOpen<CR>
-nnoremap <leader>gr :ShowOverlay overlay=goto text=@<CR>
 nnoremap <leader>gs :!git status<CR>
 nnoremap <leader>gu :GitFormatGithubUrl<CR>
 nnoremap <leader>hp :PasteFromHistory<CR>
 nnoremap <leader>hu :RevertModification<CR>
+nnoremap <leader>o :ls<CR>
 nnoremap <leader>q gqip:w<CR>
 nnoremap <leader>r :reg<CR>
+nnoremap <leader>sp <C-w><C-s><C-w>k<C-w>q<C-w>j
+nnoremap <leader>sv <C-w><C-v><C-w>h<C-w>q<C-w>l
+nnoremap <leader>x :GitOpen<CR>
 noremap <C-S-f3> :FindInOpenFolders interactive=true default_filter=true<CR>
 noremap <C-f3> :FindInOpenFolders interactive=true<CR>
 noremap <C-l> :nohlsearch<CR>
 noremap <C-s> :w<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
 noremap <S-f3> :FindInOpenFolders interactive=false<CR>
+noremap <space> :
 
 " Yank and paste using system clipboard.
 noremap <leader>y "+y
@@ -78,9 +94,9 @@ noremap <space>t :ToggleWord<CR>
 
 " Plugin (User): Debug
 nnoremap <leader>vd :DumpVariable<CR>
-nnoremap <leader>vt :DumpVariable type=true<CR>
 nnoremap <leader>vr :DumpVariable sublime_region_view_regions=true<CR>
 nnoremap <leader>vs :DumpVariable sublime_region_self_view_string=true<CR>
+nnoremap <leader>vt :DumpVariable type=true<CR>
 nnoremap <leader>vv :DumpVariable sublime_region_view_string=true<CR>
 
 " ------------------------------------------------------------------------------
@@ -122,3 +138,16 @@ nnoremap <leader>vv :DumpVariable sublime_region_view_string=true<CR>
 " See: https://github.com/NeoVintageous/NeoVintageous/issues/571.
 " nnoremap <C-Up> :RunEmmetAction action=increment_number_by_1<CR><Esc>
 " nnoremap <C-Down> :RunEmmetAction action=increment_number_by_1<CR><Esc>
+
+" nnoremap <leader>gw :UserSandboxWindow<CR>
+" nnoremap <leader>gt :UserSandboxText<CR>
+
+" " :au[tocmd] [group] {event} {pat} [nested] {cmd}
+" autocmd FileType go nnoremap <leader>gd :UserSandboxText<CR>
+" autocmd Syntax source.go nnoremap <leader>gd :UserSandboxText<CR>
+
+" nnoremap <leader>m1 /([^0-9w# ])\1\1<CR>
+" nnoremap <leader>m2 /fizz<CR>
+
+" nnoremap <C-]> :GotoDefinition side_by_side=true<CR>
+" nnoremap <leader>r <C-r>
