@@ -1,41 +1,47 @@
 " The character " (the double quote mark) starts a comment
 " Type :h neovintageousrc for help.
 
-
 " set autoindent
 " set belloff=
 " set expandtabs
 " set hlsearch
+" set ignorecase
 " set incsearch
 " set list
 " set magic
 " set modeline
 " set modelines=7
+" set nomenu
+" set nominimap
 " set number
 " set scrolloff=9
 " set shell=/bin/bash
 " set sidebar
 " set sidescrolloff=9
+" set smartcase
 " set spell
+" set statusbar
 " set tabstop
 " set textwidth=80
 " set winaltkeys=menu
 " set wrap
 " set wrapscan
+
 set ignorecase
-set menu
 set nominimap
 set smartcase
-set statusbar
 
 let mapleader=,
 
+nnoremap <leader><leader> :RevealInSideBar<CR>
 nnoremap <leader>d :Neovintageous action=toggle_side_bar<cr>
 nnoremap <leader>ee :SublimeLinterPanelToggle<cr>
 nnoremap <leader>ek :OpenKeyBindings<CR>
 nnoremap <leader>en :Neovintageous action=open_rc_file<CR>
 nnoremap <leader>ep :OpenPreferences<CR>
 nnoremap <leader>f :RevealInSideBar<CR>
+nnoremap <leader>g/ :ToggleInlineDiff<CR>
+nnoremap <leader>g; :ToggleInlineDiff prefer_hide=true<CR>
 nnoremap <leader>ga :silent !git add %<CR>
 nnoremap <leader>gf :ShowOverlay overlay=goto text=@<CR>
 nnoremap <leader>gs :!git status<CR>
@@ -151,3 +157,6 @@ nnoremap <leader>vv :DumpVariable sublime_region_view_string=true<CR>
 
 " nnoremap <C-]> :GotoDefinition side_by_side=true<CR>
 " nnoremap <leader>r <C-r>
+
+" nnoremap . ma.`a
+" nnoremap . ma.`a

@@ -1,17 +1,20 @@
 {
 	"added_words":
 	[
+		"lowercase",
+		"uppercase"
 	],
 	"always_show_minimap_viewport": true,
-	"animation_enabled": false,
 	"auto_complete_delay": 5,
 	"auto_complete_with_fields": true,
 	"auto_hide_menu": false,
 	"auto_match_enabled": true,
 	"auto_upgrade": false,
-	"caret_extra_bottom": 1,
+	"axnimation_enabled": false,
+	"block_caret": false,
+	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,
-	"caret_extra_width": 0,
+	"caret_extra_width": 2,
 	"caret_style": "solid",
 	"color_scheme": "Packages/MonokaiFree/MonokaiFree.tmTheme",
 	"color_scheme_unit.coverage": true,
@@ -25,7 +28,7 @@
 	"docblockr.short_primitives": true,
 	"docblockr.spacer_between_sections": true,
 	"draw_minimap_border": true,
-	"draw_white_space": "none",
+	"draw_white_space": "selection",
 	"draw_white_space_disabled_default": "none",
 	"enable_telemetry": false,
 	"fade_fold_buttons": false,
@@ -85,7 +88,6 @@
 		"php-src/generated_lists",
 		"php-src/php_lcov.info",
 		"php-src/tmp-php.ini",
-		"sublime_text/*",
 		"sublime_text_3/_dummy*",
 		"sublime_text_3/changelog.txt",
 		"sublime_text_3/crash_reporter",
@@ -134,7 +136,7 @@
 	],
 	"font_size": 11,
 	"font_size_default": 11,
-	"fxont_face": "Fira Code",
+	"fxont_face": "Source Code Pro",
 	"fxont_faces":
 	[
 		"Source Code Pro",
@@ -166,16 +168,16 @@
 		"{% endif %}"
 	],
 	"git_gutter_theme": "Cohesion.gitgutter-theme",
-	"gitx_diff_target": "head",
+	"highlight_line": true,
 	"hot_exit": true,
 	"ignored_packages":
 	[
 		"LaTeXTools",
+		"polyfill",
 		"Six",
 		"SublimeLinter-php-cs-fixer",
 		"Vintage",
-		"Vintageous",
-		"polyfill"
+		"Vintageous"
 	],
 	"ignored_words":
 	[
@@ -261,7 +263,7 @@
 			"path": "~/.config/sublime-text-3/Packages"
 		}
 	],
-	"show_definitions": true,
+	"show_definitions": false,
 	"show_errors_inline": false,
 	"show_legacy_color_schemes": false,
 	"show_line_endings": true,
@@ -272,8 +274,7 @@
 	"syntastic_php_php_execx": "~/.phpenv/versions/7.x/bin/php",
 	"syntastic_python_flake8_exec": "~/.local/bin/flake8",
 	"theme": "Adaptive.sublime-theme",
-	"tree_animation_enabled": false,
-	"ui_scale": 1.0,
+	"txree_animation_enabled": false,
 	"unittesting_capture_package_loggers": true,
 	"unittesting_coverage_html_report": true,
 	"unittesting_reload_package_on_testing": true,
@@ -283,7 +284,11 @@
 	"vintageous_terminal": "gnome-terminal",
 	"vintageous_use_ctrl_keys": true,
 	"vintageous_use_super_keys": true,
+	"vxintageous_clear_auto_indent_on_esc": false,
 	"vxintageous_enable_multiple_cursors": false,
 	"vxintageous_enable_sublime": false,
-	"vxintageous_use_sys_clipboard": true
+	"vxintageous_enable_surround": false,
+	"vxintageous_i_escape_jk": true,
+	"vxintageous_use_sys_clipboard": true,
+	"word_wrap": false
 }

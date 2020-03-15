@@ -1,6 +1,8 @@
 [
     // Debugging.
 
+    // { "keys": ["ctrl+e"], "command": "user_sandbox_window" },
+    // { "keys": ["ctrl+r"], "command": "user_sandbox_text" },
     { "keys": ["super+r"], "command": "package_reloader_reload" },
 
     // Man (User plugin).

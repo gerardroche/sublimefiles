@@ -53,6 +53,11 @@
     { "caption": "SublimeLinter: Toggle Linter", "command": "linters", "args": {"action": "toggle"} },
     { "caption": "SublimeLinter: Toggle Mode", "command": "linters", "args": {"action": "toggle_mode"} },
 
+    // Debug (User).
+    { "caption": "Debug: Dump Info", "command": "dump_info" },
+    { "caption": "Debug: Dump View", "command": "dump_view" },
+    { "caption": "Debug: Dump Scope", "command": "dump_scope" },
+
     // Toggles (User).
     { "caption": "Toggle Fold Buttons", "command": "toggle_fold_buttons" },
     { "caption": "Toggle Folder Exclude Pattern: build", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "build"} },

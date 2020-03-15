@@ -11,8 +11,13 @@
 				"*/vendor/*",
 				"*/sublime_text_3/*"
 			],
-			"executablex": "~/.local/bin/flake8",
-			"executable": ["python3.8", "-m", "flake8"],
+			"executable":
+			[
+				"python3.8",
+				"-m",
+				"flake8"
+			],
+			"executablex": "~/.local/bin/flake8"
 		},
 		"mypy":
 		{
@@ -27,8 +32,13 @@
 			"excludes":
 			[
 			],
-			"executablex": "~/.local/bin/mypy",
-			"executable": ["python3.8", "-m", "mypy"]
+			"executable":
+			[
+				"python3.8",
+				"-m",
+				"mypy"
+			],
+			"executablex": "~/.local/bin/mypy"
 		},
 		"php":
 		{
@@ -48,19 +58,18 @@
 			]
 		}
 	},
-	"no_column_highlights_line": true,
-	"show_hover_line_report": true,
-	"show_hover_region_report": true,
-	"show_marks_in_minimap": true,
-	"styles":
-	[
-		{
-			"icon": "x",
-			"mark_style": "outline"
-		},
-		{
-			"icon": "x",
-			"mark_style": "outline"
-		}
-	]
+	"no_column_highlights_line": false,
+	"show_hover_line_report": false,
+	"show_hover_region_report": false,
+	"show_marks_in_minimap": false,
+    "styles": [
+        {
+            "icon": "x",
+            "mark_style": "outline"
+        },
+        {
+            "icon": "x",
+            "mark_style": "outline"
+        }
+    ]
 }

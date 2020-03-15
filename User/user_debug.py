@@ -8,7 +8,7 @@ import sublime_plugin
 class DebugEvents(sublime_plugin.EventListener):
 
     def on_activated_async(self, view):
-        view.set_status('version', sublime.version())
+        view.set_status('st_build', 'Build ' + sublime.version())
 
 
 class ToggleDebugCommand(sublime_plugin.WindowCommand):
@@ -26,31 +26,31 @@ class ToggleDebugCommand(sublime_plugin.WindowCommand):
         # sublime.log_indexing(self.enabled)
         sublime.log_input(self.enabled)
         sublime.log_result_regex(self.enabled)
-        if int(sublime.version()) > 4064:
+        if int(sublime.version()) >= 4064:
             sublime.log_control_tree(self.enabled)
 
 
 class DumpInfoCommand(sublime_plugin.WindowCommand):
     def run(self):
         print('+-------------------')
-        print('| Sublime Text:', 'v' + sublime.version())
-        print('| Python v{}.{}.{} {}{}'.format(
+        print('| Sublime Text version               ', sublime.version())
+        print('| Python version                      {}.{}.{} {}{}'.format(
             sys.version_info[0],
             sys.version_info[1],
             sys.version_info[2],
             sys.version_info[3],
             sys.version_info[4]))
-        print('| Platform:', sublime.platform())
-        print('| Archetecture:', sublime.arch())
-        print('| Channel:', sublime.channel())
-        print('| Executable path:', sublime.executable_path())
-        print('| Packages path:', sublime.packages_path())
-        print('| Installed packages path:', sublime.installed_packages_path())
-        print('| Cache path:', sublime.cache_path())
-        print('| %-15s: %s' % ('sys.flags', sys.flags))
-        print('| %-15s: %s' % ('sys.abiflags', sys.abiflags))
-        print('| %-15s: %s' % ('sys.path', sys.path))
-        print('| %-15s: %s' % ('__debug__', __debug__))
+        print('| %-35s %s' % ('sys.flags', sys.flags))
+        print('| %-35s %s' % ('sys.abiflags', sys.abiflags))
+        print('| %-35s %s' % ('sys.path', sys.path))
+        print('| %-35s %s' % ('__debug__', __debug__))
+        print('| sublime.platform()                 ', sublime.platform())
+        print('| sublime.arch()                     ', sublime.arch())
+        print('| sublime.channel()                  ', sublime.channel())
+        print('| sublime.executable_path()          ', sublime.executable_path())
+        print('| sublime.packages_path()            ', sublime.packages_path())
+        print('| sublime.installed_packages_path()  ', sublime.installed_packages_path())
+        print('| sublime.cache_path():              ', sublime.cache_path())
         print('+')
 
 
@@ -116,7 +116,7 @@ class DumpViewCommand(sublime_plugin.WindowCommand):
     def run(self):
         view = self.window.active_view()
 
-        print('{} [id={}, file={}]'
+        print('>>> *** Dump View ***\n{} [id={}, file={}]'
               '\n buffer_id={: <10}        is_valid={: <10}     is_primary={: <10}   name={: <5}'
               '\n is_dirty={: <10}         is_read_only={: <10} is_scratch={: <10}   encoding={: <5}'
               '\n line_endings={: <10}     is_in_edit={: <10}   change_count={: <10} is_loading={: <5}'
@@ -158,3 +158,4 @@ class DumpViewCommand(sublime_plugin.WindowCommand):
             # print('    sel[{}] indented region begin = {}'.format(i, view.indented_region(sel.begin())))
             # print('    sel[{}] indented region begin substr = >>{}<<'.format(
             #   i, view.substr(view.indented_region(sel.begin()))))
+        print('<<<')
