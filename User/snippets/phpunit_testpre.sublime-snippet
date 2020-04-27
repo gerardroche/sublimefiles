@@ -8,5 +8,5 @@ public function assertPreConditions()
     <tabTrigger>testpre</tabTrigger>
     <scopeAliases>language_construct</scopeAliases>
     <scope>source.php - comment - constant.other.class - entity.name - meta.catch - meta.class - meta.function.arguments - meta.use - string - variable.other - variable.parameter, source.php meta.class.php meta.block.php - comment - constant.other.class - entity.name - meta.catch - meta.function.arguments - meta.function.parameters - meta.use - string - variable.other - variable.parameter - meta.function.return-type</scope>
-    <description>PHPUnit: assert pre conditions</description>
+    <description>assert pre conditions</description>
 </snippet>

@@ -112,5 +112,5 @@ return Symfony\CS\Config\Config::create()
 ]]></content>
     <tabTrigger>phpcs</tabTrigger>
     <scope>text.plain, embedding.php - comment - variable - punctuation.section.embedded.begin - embedding.php text.html.basic meta.embedded.block.php punctuation.section.embedded.begin.php - embedding.php text.html.basic meta.embedded.block.php source.php</scope>
-    <description>PHP - PHP CS Fixer - .php_cs</description>
+    <description>php_cs</description>
 </snippet>

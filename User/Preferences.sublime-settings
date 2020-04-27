@@ -1,4 +1,5 @@
 {
+	"hardware_acceleration": "opengl",
 	"added_words":
 	[
 		"lowercase",
@@ -6,6 +7,7 @@
 	],
 	"always_show_minimap_viewport": true,
 	"auto_complete_delay": 5,
+	"auto_complete_trailing_symbols": false,
 	"auto_complete_with_fields": true,
 	"auto_hide_menu": false,
 	"auto_match_enabled": true,
@@ -130,8 +132,8 @@
 		"node_modules",
 		"php-src/autom4te.cache",
 		"pxrojects/*/*/build",
-		"sublime_text",
 		"sublime_text_3/Icon",
+		"sxublime_text",
 		"vendor/composer"
 	],
 	"font_size": 14,
@@ -175,9 +177,8 @@
 		"LaTeXTools",
 		"polyfill",
 		"Six",
-		"SublimeLinter-php-cs-fixer",
 		"Vintage",
-		"Vintageous"
+		"Vintageous",
 	],
 	"ignored_words":
 	[
@@ -238,7 +239,7 @@
 	"overlay_scroll_bars": "enabled",
 	"phpunit.options":
 	{
-		"no-coverage": true
+		"no-coverage": true,
 	},
 	"phpunitx.on_post_save":
 	[
@@ -256,11 +257,11 @@
 	"sesame.path":
 	[
 		{
-			"path": "~/projects"
+			"path": "~/projects",
 		},
 		{
 			"depth": 1,
-			"path": "~/.config/sublime-text-3/Packages"
+			"path": "~/.config/sublime-text-3/Packages",
 		}
 	],
 	"show_definitions": false,
@@ -290,5 +291,5 @@
 	"vxintageous_enable_surround": false,
 	"vxintageous_i_escape_jk": true,
 	"vxintageous_use_sys_clipboard": true,
-	"word_wrap": false
+	"word_wrap": false,
 }

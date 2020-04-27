@@ -11,5 +11,5 @@ class ${1:${TM_FILENAME/([a-zA-Z][a-zA-Z0-9_]*).*/\u$1/}} extends \PHPUnit\Frame
 ]]></content>
     <tabTrigger>testcase</tabTrigger>
     <scope>text.plain, embedding.php - source.php - comment - constant.other.class - entity.name - meta.catch - meta.function.arguments - meta.use - string - variable.other</scope>
-    <description>PHPUnit: test case</description>
+    <description>test case</description>
 </snippet>

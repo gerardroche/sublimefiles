@@ -6,5 +6,5 @@ def setUp(self):
 ]]></content>
     <tabTrigger>setup</tabTrigger>
     <scope>source.python - comment - constant.other.class - entity.name - meta.catch - meta.class - meta.function.arguments - meta.use - string - variable.other</scope>
-    <description>Python: setUp</description>
+    <description>test setUp</description>
 </snippet>

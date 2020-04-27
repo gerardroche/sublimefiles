@@ -26,5 +26,5 @@ phpunit.xml.dist    export-ignore
 ]]></content>
     <tabTrigger>gitattributes</tabTrigger>
     <scope>text.plain, text.git, source.git, source.gitignore, source.shell</scope>
-    <description>Git: .gitattributes Template</description>
+    <description>gitattributes</description>
 </snippet>

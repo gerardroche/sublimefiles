@@ -8,5 +8,5 @@ class Test${1}(${2:unittest.TestCase}):
     <tabTrigger>testcase</tabTrigger>
     <scopeAliases>language_construct</scopeAliases>
     <scope>source.python - comment - constant.other.class - entity.name - meta.catch - meta.function.arguments - meta.use - string - variable.other</scope>
-    <description>Python: test case</description>
+    <description>python</description>
 </snippet>

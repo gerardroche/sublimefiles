@@ -17,5 +17,5 @@
 ]]></content>
     <tabTrigger>composer</tabTrigger>
     <scope>text.plain, source.js</scope>
-    <description>Composer Template</description>
+    <description>composer.json</description>
 </snippet>
