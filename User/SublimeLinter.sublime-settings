@@ -1,6 +1,6 @@
 {
 	"debug": false,
-	"lint_mode": "load_save",
+	"lint_mode": "save",
 	"linters":
 	{
 		"flake8":

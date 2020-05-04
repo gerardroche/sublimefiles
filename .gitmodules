@@ -60,7 +60,7 @@
 	url = https://github.com/gerardroche/SublimeLinter-php.git
 [submodule "SublimeLinter-php-cs-fixer"]
 	path = SublimeLinter-php-cs-fixer
-	url = https://github.com/jhoff/SublimeLinter-contrib-php-cs-fixer.git
+	url = https://github.com/gerardroche/SublimeLinter-contrib-php-cs-fixer.git
 [submodule "SublimeTextAPICompletions"]
 	path = SublimeTextAPICompletions
 	url = https://github.com/gerardroche/sublime-api-completions.git

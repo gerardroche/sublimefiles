@@ -28,6 +28,7 @@
 " set wrapscan
 
 set ignorecase
+set nomenu
 set nominimap
 set smartcase
 

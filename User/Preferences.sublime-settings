@@ -1,18 +1,18 @@
 {
-	"hardware_acceleration": "opengl",
 	"added_words":
 	[
 		"lowercase",
 		"uppercase"
 	],
+	"index_exclude_gitignore": false,
 	"always_show_minimap_viewport": true,
 	"auto_complete_delay": 5,
-	"auto_complete_trailing_symbols": false,
 	"auto_complete_with_fields": true,
 	"auto_hide_menu": false,
 	"auto_match_enabled": true,
 	"auto_upgrade": false,
 	"axnimation_enabled": false,
+	"axuto_complete_trailing_symbols": false,
 	"block_caret": false,
 	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,
@@ -136,14 +136,18 @@
 		"sxublime_text",
 		"vendor/composer"
 	],
-	"font_size": 14,
-	"font_size_default": 11,
-	"fxont_face": "Source Code Pro",
-	"fxont_faces":
+	"font_face": "Fira Code",
+	"font_faces":
 	[
 		"Source Code Pro",
 		"Fira Code"
 	],
+	"font_options":
+	[
+		"gray_antialias",
+		"subpixel_antialias"
+	],
+	"font_size_default": 11,
 	"git_gutter_enable_hover_diff_popup": false,
 	"git_gutter_next_prev_change_wrap": false,
 	"git_gutter_show_in_minimap": 0,
@@ -170,15 +174,16 @@
 		"{% endif %}"
 	],
 	"git_gutter_theme": "Cohesion.gitgutter-theme",
+	"hardware_acceleration": "opengl",
 	"highlight_line": true,
 	"hot_exit": true,
 	"ignored_packages":
 	[
 		"LaTeXTools",
-		"polyfill",
 		"Six",
 		"Vintage",
 		"Vintageous",
+		"polyfill"
 	],
 	"ignored_words":
 	[
@@ -247,6 +252,7 @@
 	],
 	"polyfill.experimental_features": true,
 	"preview_on_click": true,
+	"relative_line_numbers": true,
 	"remember_full_screen": true,
 	"remember_open_files": true,
 	"ruler_column": 120,
@@ -287,9 +293,11 @@
 	"vintageous_use_super_keys": true,
 	"vxintageous_clear_auto_indent_on_esc": false,
 	"vxintageous_enable_multiple_cursors": false,
+	"vxintageous_enable_sneak": true,
 	"vxintageous_enable_sublime": false,
 	"vxintageous_enable_surround": false,
 	"vxintageous_i_escape_jk": true,
 	"vxintageous_use_sys_clipboard": true,
 	"word_wrap": false,
+	"font_size": 11,
 }
