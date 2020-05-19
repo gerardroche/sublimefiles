@@ -12,7 +12,6 @@
 	"auto_match_enabled": true,
 	"auto_upgrade": false,
 	"axnimation_enabled": false,
-	"axuto_complete_trailing_symbols": false,
 	"block_caret": false,
 	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,
@@ -80,10 +79,12 @@
 		"*.zip",
 		".DS_Store",
 		".buildpath",
+		".directory",
 		".git",
 		".project",
 		"Package Control.*-ca-bundle",
 		"cache.properties",
+		"desktop.ini",
 		"php-src/Makefile.fragments",
 		"php-src/Makefile.objects",
 		"php-src/buildmk.stamp",
@@ -97,11 +98,13 @@
 		"sublime_text_3/sublime_text",
 		"sublime_text_3/sublime_text.desktop",
 		"tags",
-		"vendor/autoload.php"
+		"vendor/autoload.php",
 	],
 	"fold_buttons": false,
 	"folder_exclude_patterns":
 	[
+		".Trash",
+		".Trash-*",
 		".git",
 		".hg",
 		".idea",
@@ -133,8 +136,9 @@
 		"php-src/autom4te.cache",
 		"pxrojects/*/*/build",
 		"sublime_text_3/Icon",
+		"sublime_text_3",
 		"sxublime_text",
-		"vendor/composer"
+		"vendor/composer",
 	],
 	"font_face": "Fira Code",
 	"font_faces":
@@ -147,7 +151,8 @@
 		"gray_antialias",
 		"subpixel_antialias"
 	],
-	"font_size_default": 11,
+	"font_size": 13,
+	"font_size_default": 13,
 	"git_gutter_enable_hover_diff_popup": false,
 	"git_gutter_next_prev_change_wrap": false,
 	"git_gutter_show_in_minimap": 0,
@@ -180,10 +185,10 @@
 	"ignored_packages":
 	[
 		"LaTeXTools",
+		"polyfill",
 		"Six",
 		"Vintage",
 		"Vintageous",
-		"polyfill"
 	],
 	"ignored_words":
 	[
@@ -260,6 +265,7 @@
 	[
 	],
 	"save_on_focus_lost": true,
+	"scroll_context_lines": 8,
 	"sesame.path":
 	[
 		{
@@ -299,5 +305,4 @@
 	"vxintageous_i_escape_jk": true,
 	"vxintageous_use_sys_clipboard": true,
 	"word_wrap": false,
-	"font_size": 11,
 }

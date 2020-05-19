@@ -28,13 +28,14 @@
 " set wrapscan
 
 set ignorecase
-set nomenu
+set menu
 set nominimap
 set smartcase
 
 let mapleader=,
 
 nnoremap <leader><leader> :RevealInSideBar<CR>
+nnoremap <leader>c :CopyRelativeFilePath<CR>
 nnoremap <leader>d :Neovintageous action=toggle_side_bar<cr>
 nnoremap <leader>ee :SublimeLinterPanelToggle<cr>
 nnoremap <leader>ek :OpenKeyBindings<CR>

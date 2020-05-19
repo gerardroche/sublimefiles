@@ -20,5 +20,5 @@
 		"SublimeLinter-flake8"
 	],
 	"submit_url": "",
-	"submit_usage": false
+	"submit_usage": false,
 }
