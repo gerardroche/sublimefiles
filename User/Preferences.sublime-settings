@@ -151,7 +151,7 @@
 		"gray_antialias",
 		"subpixel_antialias"
 	],
-	"font_size": 13,
+	"font_size": 11,
 	"font_size_default": 13,
 	"git_gutter_enable_hover_diff_popup": false,
 	"git_gutter_next_prev_change_wrap": false,
@@ -179,7 +179,7 @@
 		"{% endif %}"
 	],
 	"git_gutter_theme": "Cohesion.gitgutter-theme",
-	"hardware_acceleration": "opengl",
+	"hxardware_acceleration": "opengl",
 	"highlight_line": true,
 	"hot_exit": true,
 	"ignored_packages":
