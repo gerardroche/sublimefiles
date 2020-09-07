@@ -9,6 +9,7 @@
 " set incsearch
 " set list
 " set magic
+" set menu
 " set modeline
 " set modelines=7
 " set nomenu
@@ -28,7 +29,6 @@
 " set wrapscan
 
 set ignorecase
-set menu
 set nominimap
 set smartcase
 

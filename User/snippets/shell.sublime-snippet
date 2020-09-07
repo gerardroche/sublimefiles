@@ -1,0 +1,34 @@
+<snippet>
+    <content><![CDATA[
+
+#!/bin/sh
+
+set -e
+unset CDPATH
+unset IFS
+readonly SOURCE=\$(readlink -nf "\$0")
+readonly SOURCE_PATH=\$(dirname "\$SOURCE")
+readonly SOURCE_NAME=\$(basename "\$SOURCE")
+
+show_usage() {
+    echo "Usage: \$(basename "\$0") [-h|--help]"
+}
+
+test "\$#" = 0 && show_usage && exit 0
+
+while test "\$#" != 0; do
+    case "\$1" in
+        --user=*)       DB_USER=\${1#*=} ;; # Delete everything up till "="
+        --password=*)   DB_PASSWORD=\${1#*=} ;; # Delete everything up till "="
+        --dbname=*)     DB_NAME=\${1#*=} ;; # Delete everything up till "="
+        --help|-h) show_usage; exit 0 ;;
+        --) shift; break ;; # standard end of options list
+        -*) echo >&2 "\$(basename "\$0"): unknown option '\$1'"; exit 1 ;;
+        *)  echo >&2 "\$(basename "\$0"): unknown argument '\$1'"; exit 1 ;;
+    esac
+    shift
+done
+]]></content>
+    <tabTrigger>shell</tabTrigger>
+    <scope>text, source</scope>
+</snippet>
