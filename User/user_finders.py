@@ -3,19 +3,23 @@ import os
 import sublime_plugin
 
 
-def _find_in_open_folders(window, interactive=True, default_filter=False):
+def _find_in_open_folders(window, interactive=True, filter=False, include_vendor=False):
     view = window.active_view()
     region = view.sel()[0]
     word = view.word(region)
     view.sel().clear()
     view.sel().add(word)
 
-    def get_default_filter():
+    def _get_filter():
         include_filters = []
 
         include_filters.append('-storage/')
         include_filters.append('-tmp/')
-        include_filters.append('-vendor/')
+
+        if include_vendor:
+            include_filters.append('-vendor/')
+        else:
+            include_filters.append('-vendor/composer/')
 
         file_name = view.file_name()
         if file_name:
@@ -26,9 +30,15 @@ def _find_in_open_folders(window, interactive=True, default_filter=False):
         else:
             return ''
 
+    where = '<open folders>'
+
+    if filter:
+        if isinstance(filter, bool):
+            where += _get_filter()
+
     window.run_command('show_panel', {
         'panel': 'find_in_files',
-        'where': '<open folders>' + get_default_filter() if default_filter else '',
+        'where': where,
         'whole_word': False,
         'case_sensitive': False,
         'regex': False,
@@ -46,20 +56,20 @@ def _find_in_open_folders(window, interactive=True, default_filter=False):
 
 
 class FindInOpenFoldersCommand(sublime_plugin.WindowCommand):
-    def run(self, interactive, default_filter=False):
-        _find_in_open_folders(self.window, interactive, default_filter)
+
+    def run(self, **kwargs):
+        _find_in_open_folders(self.window, **kwargs)
 
 
 class FocusUnitTestingPanelCommand(sublime_plugin.WindowCommand):
-    def run(self):
-        name = 'output.UnitTesting'
-        self.window.run_command('show_panel', {'panel': name})
 
-        name = 'UnitTesting'
-        self.window.focus_view(self.window.find_output_panel(name))
+    def run(self):
+        self.window.run_command('show_panel', {'panel': 'output.UnitTesting'})
+        self.window.focus_view(self.window.find_output_panel('UnitTesting'))
 
 
 class ShowFindResultsCommand(sublime_plugin.WindowCommand):
+
     def run(self):
         for view in self.window.views():
             if view.name() == 'Find Results':

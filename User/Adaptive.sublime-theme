@@ -33,6 +33,16 @@
             "indent_offset": 0
         },
 
+        // --
+
+        {
+            "class": "tree_row",
+            "attributes": ["selected"],
+            "layer0.tint": [0, 0, 0],
+            "layer0.opacity": 1.0,
+
+        },
+
         // === Git ===
 
         // Git badges

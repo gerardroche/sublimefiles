@@ -41,7 +41,6 @@ nnoremap <leader>ee :SublimeLinterPanelToggle<cr>
 nnoremap <leader>ek :OpenKeyBindings<CR>
 nnoremap <leader>en :Neovintageous action=open_rc_file<CR>
 nnoremap <leader>ep :OpenPreferences<CR>
-nnoremap <leader>f :RevealInSideBar<CR>
 nnoremap <leader>g/ :ToggleInlineDiff<CR>
 nnoremap <leader>g; :ToggleInlineDiff prefer_hide=true<CR>
 nnoremap <leader>ga :silent !git add %<CR>
@@ -56,13 +55,16 @@ nnoremap <leader>r :reg<CR>
 nnoremap <leader>sp <C-w><C-s><C-w>k<C-w>q<C-w>j
 nnoremap <leader>sv <C-w><C-v><C-w>h<C-w>q<C-w>l
 nnoremap <leader>x :GitOpen<CR>
-noremap <C-S-f3> :FindInOpenFolders interactive=true default_filter=true<CR>
-noremap <C-f3> :FindInOpenFolders interactive=true<CR>
 noremap <C-l> :nohlsearch<CR>
 noremap <C-s> :w<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
-noremap <S-f3> :FindInOpenFolders interactive=false<CR>
 noremap <space> :
+
+" Finders/Locators
+nnoremap <leader>f  :FindInOpenFolders interactive=true filter=true include_vendor=true<CR>
+noremap <C-S-f3>    :FindInOpenFolders interactive=true filter=true<CR>
+noremap <C-f3>      :FindInOpenFolders interactive=true<CR>
+noremap <S-f3>      :FindInOpenFolders interactive=false<CR>
 
 " Yank and paste using system clipboard.
 noremap <leader>y "+y

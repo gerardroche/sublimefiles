@@ -88,6 +88,7 @@
 		"php-src/Makefile.fragments",
 		"php-src/Makefile.objects",
 		"php-src/buildmk.stamp",
+		"package-lock.json",
 		"php-src/generated_lists",
 		"php-src/php_lcov.info",
 		"php-src/tmp-php.ini",
@@ -276,7 +277,7 @@
 			"path": "~/.config/sublime-text-3/Packages",
 		}
 	],
-	"show_definitions": true,
+	"show_definitions": false,
 	"show_errors_inline": false,
 	"show_legacy_color_schemes": false,
 	"show_line_endings": true,
