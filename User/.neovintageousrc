@@ -158,8 +158,8 @@ nnoremap <leader>vv :DumpVariable sublime_region_view_string=true<CR>
 " autocmd Syntax source.go nnoremap <leader>gd :UserSandboxText<CR>
 
 
-autocmd FileType py nnoremap <leader>x iHelloPython
-autocmd FileType txt nnoremap <leader>x iHelloText
+" autocmd FileType py nnoremap <leader>x iHelloPython
+" autocmd FileType txt nnoremap <leader>x iHelloText
 
 " autocmd FileType go nnoremap <leader>gd :LspSymbolDefinition<CR>
 " autocmd FileType py nnoremap <leader>gd :LspSymbolDefinition<CR>
@@ -167,8 +167,8 @@ autocmd FileType txt nnoremap <leader>x iHelloText
 " autocmd FileType py nnoremap <leader>gf :LspSymbolDefinition<CR>
 " autocmd Syntax py nnoremap <leader>gf :LspSymbolDefinition<CR>
 
-autocmd Filetype gitcommit set spell textwidth=72
-autocmd Filetype gitcommit set spell textwidth=72
+" autocmd Filetype gitcommit set spell textwidth=72
+" autocmd Filetype gitcommit set spell textwidth=72
 
 " nnoremap <leader>m1 /([^0-9w# ])\1\1<CR>
 " nnoremap <leader>m2 /fizz<CR>
