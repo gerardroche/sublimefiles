@@ -48,7 +48,8 @@ nnoremap <leader>gf :ShowOverlay overlay=goto text=@<CR>
 nnoremap <leader>gs :!git status<CR>
 nnoremap <leader>gu :GitFormatGithubUrl<CR>
 nnoremap <leader>hp :PasteFromHistory<CR>
-nnoremap <leader>hu :RevertModification<CR>
+nnoremap <leader>hm :RevertModification<CR>
+nnoremap <leader>hu :RevertHunk<CR>
 nnoremap <leader>o :ls<CR>
 nnoremap <leader>q gqip:w<CR>
 nnoremap <leader>r :reg<CR>
@@ -59,6 +60,24 @@ noremap <C-l> :nohlsearch<CR>
 noremap <C-s> :w<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
 noremap <space> :
+
+" inoremap <C-[> :i[
+" nnoremap <C-[> :n[
+
+" inoremap <C-c> :ic
+" nnoremap <C-c> :nc
+
+" inoremap <C-u> :iu
+" nnoremap <C-u> :nu
+
+" inoremap <C-x> :ix
+" nnoremap <C-x> :nx
+
+" inoremap <C-w> :iw
+" nnoremap <C-w> :nw
+
+" inoremap <C-l> :il
+" nnoremap <C-l> :nl
 
 " Finders/Locators
 nnoremap <leader>f  :FindInOpenFolders interactive=true filter=true include_vendor=true<CR>

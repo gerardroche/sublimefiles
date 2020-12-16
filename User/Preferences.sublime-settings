@@ -6,6 +6,7 @@
 	],
 	"always_show_minimap_viewport": true,
 	"animation_enabled": false,
+	"draw_white_space": ["selection", "trailing", "isolated", "all_mixed"],
 	"auto_complete_delay": 5,
 	"auto_complete_with_fields": true,
 	"auto_hide_menu": false,
@@ -28,7 +29,6 @@
 	"docblockr.short_primitives": true,
 	"docblockr.spacer_between_sections": true,
 	"draw_minimap_border": true,
-	"draw_white_space": "selection",
 	"draw_white_space_disabled_default": "none",
 	"enable_telemetry": false,
 	"fade_fold_buttons": false,
@@ -250,31 +250,33 @@
 	"overlay_scroll_bars": "enabled",
 	"phpunit.options":
 	{
-		"no-coverage": true
+		"no-coverage": true,
 	},
 	"phpunitx.on_post_save":
 	[
 		"run_test_file"
 	],
 	"polyfill.experimental_features": true,
-	"preview_on_click": true,
+	"preview_on_click": "only_left",
 	"relative_line_numbers": true,
 	"remember_full_screen": true,
 	"remember_open_files": true,
 	"ruler_column": 120,
 	"rulers":
 	[
+		80,
+		120,
 	],
 	"save_on_focus_lost": true,
 	"scroll_context_lines": 8,
 	"sesame.path":
 	[
 		{
-			"path": "~/projects"
+			"path": "~/projects",
 		},
 		{
 			"depth": 1,
-			"path": "~/.config/sublime-text-3/Packages"
+			"path": "~/.config/sublime-text-3/Packages",
 		}
 	],
 	"show_definitions": false,
@@ -305,7 +307,32 @@
 	"vxintageous_enable_surround": false,
 	"vxintageous_i_escape_jk": true,
 	"vxintageous_use_ctrl_keys": true,
-    "vxintageous_handle_keys": {},
 	"vxintageous_use_sys_clipboard": true,
-	"word_wrap": false
+	"vintageous_handle_keys": {
+	    "i_<C-u>": false,
+	},
+	"vxintageous_handle_keys": {
+	    "<C-a>": false,
+	    "<C-b>": false,
+	    "<C-c>": false,
+	    "<C-e>": false,
+	    "<C-f>": false,
+	    "<C-g>": false,
+	    "<C-h>": false,
+	    "<C-i>": false,
+	    "<C-j>": false,
+	    "<C-l>": false,
+	    "<C-m>": false,
+	    "<C-n>": false,
+	    "<C-o>": false,
+	    "<C-p>": false,
+	    "<C-s>": false,
+	    "<C-t>": false,
+	    "<C-u>": false,
+	    "<C-v>": false,
+	    "<C-x>": false,
+	    "<C-y>": false,
+	    "<C-z>": false,
+	},
+	"word_wrap": false,
 }
