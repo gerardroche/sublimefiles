@@ -11,7 +11,9 @@ readonly SOURCE_PATH=\$(dirname "\$SOURCE")
 readonly SOURCE_NAME=\$(basename "\$SOURCE")
 
 show_usage() {
-    echo "Usage: \$(basename "\$0") [-h|--help]"
+    cat <<USAGE
+Usage: \$(basename "\$0") [-h|--help]
+USAGE
 }
 
 test "\$#" = 0 && show_usage && exit 0

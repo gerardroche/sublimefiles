@@ -67,7 +67,8 @@ class DumpScopeCommand(sublime_plugin.WindowCommand):
 
 
 class DumpVariableCommand(sublime_plugin.TextCommand):
-    def run(self, edit, **kwargs):
+
+    def get_vars(self) -> tuple:
         pt = self.view.sel()[0].b
         line = self.view.line(pt)
         if line.empty():
@@ -80,9 +81,14 @@ class DumpVariableCommand(sublime_plugin.TextCommand):
             f = self.view.find('\\s*', pt)
             pt = f.end()
 
-        scope_name = self.view.scope_name(pt)
+        scope = self.view.scope_name(pt)
 
-        if 'php' in scope_name:
+        return line, pt, scope
+
+    def run(self, edit, **kwargs):
+        line, pt, scope = self.get_vars()
+
+        if 'php' in scope:
             pt += 1
 
         word_region = self.view.word(pt)
@@ -90,9 +96,18 @@ class DumpVariableCommand(sublime_plugin.TextCommand):
         if not re.match('^[a-zA-Z_][a-zA-Z0-9_]*$', word):
             return
 
-        if 'php' in scope_name:
-            dump_stmt = 'echo "' + word + ':"; var_dump($' + word + ');'
-        elif 'python' in scope_name:
+        if 'php' in scope:
+            dump_func = kwargs.get('phpfunc', 'var_dump')
+
+            dump_stmt = ''
+            # if dump_func == 'dd':
+            #     dump_stmt = ''
+            # else:
+            #     dump_stmt = 'echo "' + word + ':"; '
+
+            dump_stmt += dump_func + '($' + word + ');'
+
+        elif 'python' in scope:
             if kwargs.get('sublime_region_view_string') or kwargs.get('sublime_region_self_view_string'):
                 obj = 'view' if kwargs.get('sublime_region_view_string') else 'self.view'
                 dump_stmt = 'print(\'' + word + ' =\', ' + word + ', \'>>>\' + ' + obj + '.substr(' + word + ').replace(\'\\n\', \'\\\\n\').replace(\'\\x00\', \'EOF\') + \'<<<\')  # noqa: E501'  # noqa

@@ -14,12 +14,15 @@
 	],
 	"installed_packages":
 	[
+		"ApacheConf",
 		"FileIcons",
 		"GitGutter",
 		"Origami",
 		"Package Control",
+		"Sass",
 		"SublimeLinter-flake8",
 		"Terraform",
+		"Vue Syntax Highlight",
 	],
 	"submit_url": "",
 	"submit_usage": false,

@@ -45,9 +45,11 @@ nnoremap <leader>g/ :ToggleInlineDiff<CR>
 nnoremap <leader>g; :ToggleInlineDiff prefer_hide=true<CR>
 nnoremap <leader>ga :silent !git add %<CR>
 nnoremap <leader>gf :ShowOverlay overlay=goto text=@<CR>
+nnoremap <leader>ga :!git add %<CR>
 nnoremap <leader>gs :!git status<CR>
 nnoremap <leader>gb :GitGutter action=blame<CR>
 nnoremap <leader>gu :GitFormatGithubUrl<CR>
+nnoremap <leader>gb :GitGutterBlame<CR>
 nnoremap <leader>hp :PasteFromHistory<CR>
 nnoremap <leader>hm :RevertModification<CR>
 nnoremap <leader>hu :RevertHunk<CR>
@@ -123,11 +125,15 @@ nnoremap <D-n> :TestNearest<CR>
 noremap <space>t :ToggleWord<CR>
 
 " Plugin (User): Debug
-nnoremap <leader>vd :DumpVariable<CR>
-nnoremap <leader>vr :DumpVariable sublime_region_view_regions=true<CR>
-nnoremap <leader>vs :DumpVariable sublime_region_self_view_string=true<CR>
-nnoremap <leader>vt :DumpVariable type=true<CR>
-nnoremap <leader>vv :DumpVariable sublime_region_view_string=true<CR>
+" nnoremap <leader>vd :DumpVariable<CR>
+nnoremap <leader>vp :DumpVariable phpfunc=print_r<CR>
+nnoremap <leader>vv :DumpVariable phpfunc=dd<CR>
+nnoremap <leader>vd :DumpVariable phpfunc=dump<CR>
+
+" nnoremap <leader>vt :DumpVariable type=true<CR>
+" nnoremap <leader>vr :DumpVariable sublime_region_view_regions=true<CR>
+" nnoremap <leader>vs :DumpVariable sublime_region_self_view_string=true<CR>
+" nnoremap <leader>vv :DumpVariable sublime_region_view_string=true<CR>
 
 " ------------------------------------------------------------------------------
 

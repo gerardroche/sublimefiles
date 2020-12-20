@@ -1,3 +1,6 @@
+import os
+import re
+
 from sublime import load_settings
 from sublime import save_settings
 import sublime_plugin

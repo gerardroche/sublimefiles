@@ -17,7 +17,7 @@
 				"-m",
 				"flake8"
 			],
-			"executablex": "~/.local/bin/flake8"
+			"executablex": "~/.local/bin/flake8",
 		},
 		"mypy":
 		{
@@ -27,7 +27,7 @@
 			"disable": false,
 			"env":
 			{
-				"MYPYPATH": "${PROJECTS_PATH}/sublime/sublime-mypy-stubs"
+				"MYPYPATH": "${PROJECTS_PATH}/sublime/sublime-mypy-stubs",
 			},
 			"excludes":
 			[
@@ -38,7 +38,11 @@
 				"-m",
 				"mypy"
 			],
-			"executablex": "~/.local/bin/mypy"
+			"executablex": "~/.local/bin/mypy",
+		},
+		"phpcsfixer":
+		{
+			"disable": false,
 		},
 		"php":
 		{
@@ -47,16 +51,16 @@
 			[
 				"*/projects/**/vendor/*",
 				"*/vendor/**/vendor/*"
-			]
+			],
 		},
 		"phpmd":
 		{
-			"disable": false,
+			"disable": true,
 			"excludes":
 			[
 				"*/vendor/*"
-			]
-		}
+			],
+		},
 	},
 	"no_column_highlights_line": false,
 	"show_hover_line_report": false,
@@ -65,11 +69,11 @@
     "styles": [
         {
             "icon": "x",
-            "mark_style": "outline"
+            "mark_style": "outline",
         },
         {
             "icon": "x",
-            "mark_style": "outline"
+            "mark_style": "outline",
         }
-    ]
+	],
 }

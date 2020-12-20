@@ -1,0 +1,30 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Log
+file_extensions:
+  - log
+scope: text.log
+
+contexts:
+  main:
+
+    - match: '([a-zA-Z0-9]+/(?:[a-zA-Z0-9]+/)*[a-zA-Z0-9]+\.[a-z]+)(:)([0-9]+)'
+      captures:
+        1: storage.type
+        2: keyword
+        3: constant
+
+    - match: '(\\)([a-zA-Z0-9]+)'
+      captures:
+        1: storage.type
+        2: storage.type
+
+    - match: '(Phan[a-zA-Z0-9]+)'
+      captures:
+        1: entity.name
+
+    - match: '(\|)'
+      captures:
+        1: keyword
+

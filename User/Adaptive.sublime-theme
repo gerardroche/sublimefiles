@@ -38,7 +38,7 @@
         {
             "class": "tree_row",
             "attributes": ["selected"],
-            "layer0.tint": [0, 0, 0],
+            "layer0.tint": [0, 70, 0],
             "layer0.opacity": 1.0,
 
         },

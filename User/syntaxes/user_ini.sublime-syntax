@@ -1,0 +1,32 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: User INI
+hidden: false
+scope: text.ini
+
+file_extensions:
+  - ini
+
+contexts:
+  main:
+
+    - match: '^;.*'
+      scope: comment
+
+    - match: '^\[.+\]'
+      scope: entity.name
+
+    - match: '='
+      scope: keyword.operator
+
+    - match: '[0-9]'
+      scope: constant.numeric.value
+
+    - match: 'On|Off'
+      scope: constant
+
+    - match: '".*"'
+      scope: string
+
+

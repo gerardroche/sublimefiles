@@ -15,15 +15,17 @@ def _find_in_open_folders(window, interactive=True, filter=False, include_vendor
 
         include_filters.append('-storage/')
         include_filters.append('-tmp/')
+        include_filters.append('-.phan/')
+        include_filters.append('-phan/stubs')
+
+        file_name = view.file_name()
+        if file_name:
+            include_filters.append('*' + os.path.splitext(file_name)[1])
 
         if include_vendor:
             include_filters.append('-vendor/')
         else:
             include_filters.append('-vendor/composer/')
-
-        file_name = view.file_name()
-        if file_name:
-            include_filters.append('*' + os.path.splitext(file_name)[1])
 
         if include_filters:
             return ',' + ','.join(include_filters)
