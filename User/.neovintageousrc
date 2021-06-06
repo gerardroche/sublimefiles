@@ -46,6 +46,7 @@ nnoremap <leader>g; :ToggleInlineDiff prefer_hide=true<CR>
 nnoremap <leader>ga :silent !git add %<CR>
 nnoremap <leader>gf :ShowOverlay overlay=goto text=@<CR>
 nnoremap <leader>gs :!git status<CR>
+nnoremap <leader>gb :GitGutter action=blame<CR>
 nnoremap <leader>gu :GitFormatGithubUrl<CR>
 nnoremap <leader>hp :PasteFromHistory<CR>
 nnoremap <leader>hm :RevertModification<CR>

@@ -6,7 +6,7 @@
 	],
 	"always_show_minimap_viewport": true,
 	"animation_enabled": false,
-	"draw_white_space": ["selection", "trailing", "isolated", "all_mixed"],
+	"draw_white_space": "none",
 	"auto_complete_delay": 5,
 	"auto_complete_with_fields": true,
 	"auto_hide_menu": false,
@@ -73,6 +73,7 @@
 		"*.sublime-project",
 		"*.sublime-workspace",
 		"*.suo",
+		"backup*.sql",
 		"*.tar",
 		"*.ttf",
 		"*.zip",
@@ -110,7 +111,7 @@
 		".idea",
 		".lde/man",
 		".mypy_cache",
-		".phan",
+		".xphan",
 		".ropeproject",
 		".sass-cache",
 		".settings",
@@ -138,7 +139,7 @@
 		"sublime_text_3",
 		"sublime_text_3/Icon",
 		"sxublime_text",
-		"vendor/composer"
+		"vxendor/composer"
 	],
 	"font_faces":
 	[
@@ -185,10 +186,10 @@
 	"ignored_packages":
 	[
 		"LaTeXTools",
+		"polyfill",
 		"Six",
 		"Vintage",
 		"Vintageous",
-		"polyfill"
 	],
 	"ignored_words":
 	[
@@ -264,10 +265,8 @@
 	"ruler_column": 120,
 	"rulers":
 	[
-		80,
-		120,
 	],
-	"save_on_focus_lost": true,
+	"save_on_focus_lost": false,
 	"scroll_context_lines": 8,
 	"sesame.path":
 	[

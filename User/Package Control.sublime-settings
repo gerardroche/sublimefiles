@@ -15,9 +15,10 @@
 	"installed_packages":
 	[
 		"FileIcons",
+		"GitGutter",
 		"Origami",
 		"Package Control",
-		"SublimeLinter-flake8"
+		"SublimeLinter-flake8",
 	],
 	"submit_url": "",
 	"submit_usage": false,
