@@ -12,6 +12,7 @@
 	"auto_hide_menu": false,
 	"auto_match_enabled": true,
 	"auto_upgrade": false,
+	"vintageous_exit_when_quiting_last_window": false,
 	"block_caret": false,
 	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,

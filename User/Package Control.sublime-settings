@@ -19,6 +19,7 @@
 		"Origami",
 		"Package Control",
 		"SublimeLinter-flake8",
+		"Terraform",
 	],
 	"submit_url": "",
 	"submit_usage": false,
