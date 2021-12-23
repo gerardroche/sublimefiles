@@ -2,7 +2,8 @@
 	"added_words":
 	[
 		"lowercase",
-		"uppercase"
+		"plugin",
+		"uppercase",
 	],
 	"always_show_minimap_viewport": true,
 	"animation_enabled": false,
@@ -17,7 +18,6 @@
 	"auto_hide_menu": false,
 	"auto_match_enabled": true,
 	"auto_upgrade": false,
-	"vintageous_exit_when_quiting_last_window": false,
 	"block_caret": false,
 	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,
@@ -105,26 +105,14 @@
 		"/home/*/*/*/vendor/*/*/Makefile",
 		"/home/*/*/*/vendor/*/*/NOTICE",
 		"/home/*/*/*/vendor/autoload.php",
-		"Package Control.*-ca-bundle",
 		"backup*.sql",
 		"cache.properties",
 		"desktop.ini",
 		"package-lock.json",
-		"php-src/Makefile.fragments",
-		"php-src/Makefile.objects",
-		"php-src/buildmk.stamp",
-		"php-src/generated_lists",
-		"php-src/php_lcov.info",
-		"php-src/tmp-php.ini",
-		"sublime_text_3/_dummy*",
-		"sublime_text_3/changelog.txt",
-		"sublime_text_3/crash_reporter",
-		"sublime_text_3/plugin_host",
-		"sublime_text_3/sublime_text",
-		"sublime_text_3/sublime_text.desktop",
 		"symlinks/*/*.php",
 		"symlinks/*/.env",
-		"tags"
+		"tags",
+		"vendor/autoload.php",
 	],
 	"fold_buttons": true,
 	"folder_exclude_patterns":
@@ -136,7 +124,6 @@
 		".idea",
 		".lde/man",
 		".mypy_cache",
-		".phan",
 		".ropeproject",
 		".sass-cache",
 		".settings",
@@ -151,7 +138,6 @@
 		"/home/*/*/*/vendor/*/*/tests",
 		"/home/*/*/*/vendor/composer",
 		"CVS",
-		"Package Control.cache",
 		"__pycache__",
 		"bower_components",
 		"build/coverage",
@@ -161,8 +147,6 @@
 		"htmlcov",
 		"lcov_data",
 		"lcov_html",
-		"lib/*/*/build",
-		"lib/*/*/vendor",
 		"logs",
 		"nbproject",
 		"node_modules",
@@ -185,8 +169,7 @@
 		"sublime_text",
 		"sublime_text_3",
 		"sublime_text_3/Icon",
-		"sxublime_text",
-		"vendor/composer"
+		"vendor/composer",
 	],
 	"font_faces":
 	[
@@ -230,10 +213,10 @@
 	"ignored_packages":
 	[
 		"LaTeXTools",
+		"polyfill",
 		"Six",
 		"Vintage",
 		"Vintageous",
-		"polyfill",
 	],
 	"ignored_words":
 	[
@@ -311,7 +294,7 @@
 	"rulers":
 	[
 	],
-	"save_on_focus_lost": false,
+	"save_on_focus_lost": true,
 	"scroll_context_lines": 8,
 	"sesame.path":
 	[
@@ -342,10 +325,6 @@
 	"update_check": false,
 	"vintageous_bell": "view",
 	"vintageous_enable_sneak": true,
-	"vintageous_handle_keys":
-	{
-		"i_<C-u>": false,
-	},
 	"vintageous_sneak_use_ic_scs": 1,
 	"vintageous_terminal": "gnome-terminal",
 	"vintageous_use_super_keys": true,
@@ -372,6 +351,7 @@
 		"<C-x>": false,
 		"<C-y>": false,
 		"<C-z>": false,
+		"i_<C-u>": false,
 	},
 	"word_wrap": false,
 	"font_size": 13,

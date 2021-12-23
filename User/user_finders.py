@@ -5,8 +5,10 @@ import sublime_plugin
 
 def _find_in_open_folders(window, interactive=True, filter=False, include_vendor=False):
     view = window.active_view()
-    region = view.sel()[0]
-    word = view.word(region)
+    word = view.sel()[0]
+    if word.empty():
+        word = view.word(word)
+
     view.sel().clear()
     view.sel().add(word)
 
@@ -33,10 +35,8 @@ def _find_in_open_folders(window, interactive=True, filter=False, include_vendor
             return ''
 
     where = '<open folders>'
-
-    if filter:
-        if isinstance(filter, bool):
-            where += _get_filter()
+    if filter and isinstance(filter, bool):
+        where += _get_filter()
 
     window.run_command('show_panel', {
         'panel': 'find_in_files',
@@ -49,7 +49,7 @@ def _find_in_open_folders(window, interactive=True, filter=False, include_vendor
     })
 
     view.sel().clear()
-    view.sel().add(region)
+    view.sel().add(word)
 
     if not interactive:
         window.run_command('find_all', {
