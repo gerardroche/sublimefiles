@@ -10,7 +10,7 @@ public function provide${1:Name}(): array
 /**
  * @dataProvider provide${1}
  */
-public function test${1}(${2})
+public function test${1}(${2}): void
 {
     $0
 }

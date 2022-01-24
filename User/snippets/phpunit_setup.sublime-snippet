@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-protected function setUp()
+protected function setUp(): void
 {
     $0
 }

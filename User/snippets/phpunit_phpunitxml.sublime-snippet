@@ -11,22 +11,20 @@
 
     <testsuites>
         <testsuite name="unit">
-            <directory>tests</directory>
+            <directory suffix="Test.php">tests/Unit</directory>
         </testsuite>
     </testsuites>
 
-    <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory>src</directory>
-        </whitelist>
-    </filter>
-
-    <!--
-    <logging>
-        <log type="coverage-html" target="build/coverage" />
-        <log type="coverage-text" target="php://stdout" showUncoveredFiles="true" />
-    </logging>
-    -->
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">app</directory>
+        </include>
+        <!--
+        <report>
+            <html outputDirectory="build/coverage" />
+        </report>
+        -->
+    </coverage>
 
     <php>
         <ini name="date.timezone" value="UTC" />

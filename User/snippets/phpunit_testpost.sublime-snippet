@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-public function assertPostConditions()
+public function assertPostConditions(): void
 {
     $0
 }

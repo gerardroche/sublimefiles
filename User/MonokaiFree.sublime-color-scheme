@@ -19,15 +19,11 @@
     "globals": {
         "block_caret": "yellow",
         "caret": "yellow",
+        "line_highlight": "#66d9ef44",
         "selection_corner_style": "square",
-        // "selection_border_width": "1",
+        "selection_border_width": "1",
     },
     "rules": [
-        // {
-        //     "scope": "neovintageous_search_occ",
-        //     "background": "var(orange)",
-        //     "foreground": "black"
-        // },
-
+        // ...
     ]
 }

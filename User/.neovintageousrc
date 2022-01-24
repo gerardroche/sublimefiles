@@ -85,6 +85,7 @@ noremap <space> :
 " Finders/Locators
 nnoremap <leader>f  :FindInOpenFolders interactive=true filter=true include_vendor=true<CR>
 noremap <C-S-f3>    :FindInOpenFolders interactive=true filter=true<CR>
+noremap <C-S-f4>    :FindInOpenFolders interactive=true filter=true include_vendor=true<CR>
 noremap <C-f3>      :FindInOpenFolders interactive=true<CR>
 noremap <S-f3>      :FindInOpenFolders interactive=false<CR>
 

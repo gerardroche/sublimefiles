@@ -2,7 +2,7 @@
     <content><![CDATA[
 class Test${1}(${2:unittest.TestCase}):
 
-    def test_${3}(self):
+    def test_${3}(self): void
         $0
 ]]></content>
     <tabTrigger>testcase</tabTrigger>

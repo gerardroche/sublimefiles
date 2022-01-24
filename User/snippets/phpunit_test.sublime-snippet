@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-public function test${1}()
+public function test${1}(): void
 {
     $0
 }

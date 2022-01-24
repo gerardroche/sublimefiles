@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-class ${1:${TM_FILENAME/([a-zA-Z][a-zA-Z0-9_]*).*/\u$1/}}Test extends TestCase
+final class ${1:${TM_FILENAME/([a-zA-Z][a-zA-Z0-9_]*).*/\u$1/}}Test extends TestCase
 {
     $0
 }

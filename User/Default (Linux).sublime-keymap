@@ -40,6 +40,9 @@
     { "keys": ["ctrl+shift+s"], "command": "test_switch" },
     { "keys": ["ctrl+shift+v"], "command": "test_visit" },
 
+    { "keys": ["f4"], "command": "prev_result" },
+    { "keys": ["shift+f4"], "command": "next_result" },
+
     // Fix opening the context menu.
     // See https://github.com/SublimeTextIssues/Core/issues/2128.
     // { "keys": ["shift+f10"], "command": "context_menu" },

@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-${1/.+/\/**\n * @depends test/}${1:methodName}${1/.+/\n *\/\n//}public function test${3:Name}()
+${1/.+/\/**\n * @depends test/}${1:methodName}${1/.+/\n *\/\n//}public function test${3:Name}(): void
 {
     $0
 }

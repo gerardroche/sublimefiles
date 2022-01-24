@@ -1,0 +1,34 @@
+// GitGutter Settings - User
+{
+
+    "debounce_delay": 5000,
+    "enable_hover_diff_popup": false,
+    "enable": false,
+    "live_mode": false,
+    "focus_change_mode": false,
+    "next_prev_change_wrap": false,
+    "show_in_minimap": 0,
+    "show_line_annotation": false,
+    "show_markers_on_untracked_file": false,
+    "show_status_bar_text": false,
+    // "status_bar_text":
+    // [
+    //     "+{{inserted}} ",
+    //     "~{{modified}} ",
+    //     "-{{deleted}} ",
+    //     "⎇ {{branch}}",
+    //     "{% if modified_files or added_files or deleted_files or staged_files %} ",
+    //     "{% if modified_files %}*{% elif deleted_files %}*{% endif %}",
+    //     "{% if staged_files %}+{% endif %}",
+    //     "{% if added_files %}%{% endif %}",
+    //     "{% endif %}",
+    //     "{% if remote %}",
+    //     "{% if ahead > 0 %} u+{{ahead}}",
+    //     "{% elif behind > 0 %} u-{{behind}}",
+    //     "{% elif ahead == 0 and behind == 0 %} u=",
+    //     "{% endif %}",
+    //     " {{remote}}",
+    //     "{% endif %}"
+    // ],
+    // "theme": "Cohesion.gitgutter-theme",
+}

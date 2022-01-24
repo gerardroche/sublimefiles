@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-public function assertPreConditions()
+public function assertPreConditions(): void
 {
     $0
 }
