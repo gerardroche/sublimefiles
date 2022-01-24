@@ -45,7 +45,12 @@
 	"docblockr.short_primitives": true,
 	"docblockr.spacer_between_sections": true,
 	"draw_minimap_border": true,
-	"draw_white_space_disabled_default": "none",
+	"draw_white_space_disabled_default": [
+		"leading_mixed",
+		"selection",
+		"trailing",
+		"isolated"
+	],
 	"enable_telemetry": false,
 	"fade_fold_buttons": true,
 	"file_exclude_patterns":
@@ -283,7 +288,7 @@
 		"storage/",
 		"tmp/",
 	],
-	"line_numbers": true,
+	"line_numbers": false,
 	"line_padding_bottom": 0,
 	"line_padding_top": -1,
 	"man.path": "${PROJECTS_PATH}/.lde/man",
@@ -368,5 +373,5 @@
 		"i_<C-u>": false,
 	},
 	"word_wrap": false,
-	"font_size": 11,
+	"font_size": 13,
 }
