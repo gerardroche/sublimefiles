@@ -19,6 +19,7 @@ def _find_in_open_folders(window, interactive=True, filter=False, include_vendor
         include_filters.append('-tmp/')
         include_filters.append('-.phan/')
         include_filters.append('-phan/stubs')
+        include_filters.append('-Sandbox*')
 
         file_name = view.file_name()
         if file_name:

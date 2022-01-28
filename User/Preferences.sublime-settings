@@ -373,5 +373,5 @@
 		"i_<C-u>": false,
 	},
 	"word_wrap": false,
-	"font_size": 13,
+	"font_size": 11,
 }
