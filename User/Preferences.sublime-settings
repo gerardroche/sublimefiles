@@ -1,28 +1,12 @@
 {
-	"added_words":
-	[
-		"lowercase",
-		"plugin",
-		"uppercase",
-	],
+	"always_show_minimap_viewport": true,
+	"animation_enabled": false,
 	"auto_complete_cycle": true,
-	"auto_complete_use_index": true,
-	"auto_complete_use_history": true,
+	"auto_complete_delay": 5,
 	"auto_complete_include_snippets": true,
 	"auto_complete_trailing_symbols": true,
-	"always_show_minimap_viewport": true,
-	"ignored_snippets": [
-		"PHP/*"
-	],
-	"animation_enabled": false,
-	"ui_scale": 1.3,
-	"draw_white_space": [
-		"leading_mixed",
-		"selection",
-		"trailing",
-		"isolated"
-	],
-	"auto_complete_delay": 5,
+	"auto_complete_use_history": true,
+	"auto_complete_use_index": true,
 	"auto_complete_with_fields": true,
 	"auto_hide_menu": false,
 	"auto_match_enabled": true,
@@ -33,7 +17,6 @@
 	"caret_extra_width": 1,
 	"caret_style": "solid",
 	"color_scheme": "Packages/MonokaiFree/MonokaiFree.tmTheme",
-	"highlight_line": true,
 	"color_scheme_unit.coverage": true,
 	"debug": false,
 	"docblockr.development_mode": false,
@@ -45,7 +28,22 @@
 	"docblockr.short_primitives": true,
 	"docblockr.spacer_between_sections": true,
 	"draw_minimap_border": true,
-	"draw_white_space_disabled_default": [
+	"draw_white_space":
+	[
+		"leading_mixed",
+		"selection",
+		"trailing",
+		"isolated",
+	],
+	"draw_white_space_default":
+	[
+		"leading_mixed",
+		"selection",
+		"trailing",
+		"isolated"
+	],
+	"draw_white_space_disabled_default":
+	[
 		"leading_mixed",
 		"selection",
 		"trailing",
@@ -206,9 +204,9 @@
 		"storage/testing",
 		"storage/testing/disks",
 		"storage/views",
-		"sublime_text",
 		"sublime_text_3",
 		"sublime_text_3/Icon",
+		"sxublime_text",
 		"vendor/composer",
 	],
 	"font_faces":
@@ -222,24 +220,31 @@
 		"no_italic",
 		"no_bold"
 	],
-	"font_size_default": 13,
-	"hxardware_acceleration": "opengl",
+	"font_size_default": 10,
+	"git_gutter_enable": false,
+	"highlight_line": true,
 	"hot_exit": true,
+	"hxardware_acceleration": "opengl",
 	"ignored_packages":
 	[
+		"LaTeX",
 		"LaTeXTools",
 		"Six",
 		"Vintage",
 		"Vintageous",
 		"polyfill",
 	],
-	"ignored_words":
+	"ignored_snippets":
 	[
+		"PHP/*"
 	],
+	"ignored_words": [],
 	"indent_guide_options":
 	[
+		"draw_normal",
+		"solid",
+		"draw_active",
 	],
-    "git_gutter_enable": false,
 	"indent_guide_options_default":
 	[
 		"draw_normal",
@@ -296,8 +301,7 @@
 	"mouse_wheel_switches_tabs": false,
 	"neovintageous_build_version": 11100,
 	"overlay_scroll_bars": "enabled",
-	"phpunit.options":
-	{
+	"phpunit.options": {
 		"no-coverage": true,
 	},
 	"phpunitx.on_post_save":
@@ -310,10 +314,8 @@
 	"remember_full_screen": true,
 	"remember_open_files": true,
 	"ruler_column": 120,
-	"rulers":
-	[
-	],
-	"save_on_focus_lost": true,
+	"rulers": [],
+	"save_on_focus_lost": false,
 	"scroll_context_lines": 8,
 	"sesame.path":
 	[
@@ -337,6 +339,7 @@
 	"syntastic_python_flake8_exec": "~/.local/bin/flake8",
 	"theme": "Adaptive.sublime-theme",
 	"tree_animation_enabled": false,
+	"ui_scale": 1.3,
 	"unittesting_capture_package_loggers": true,
 	"unittesting_coverage_html_report": true,
 	"unittesting_reload_package_on_testing": true,
@@ -347,8 +350,7 @@
 	"vintageous_sneak_use_ic_scs": 1,
 	"vintageous_terminal": "gnome-terminal",
 	"vintageous_use_super_keys": true,
-	"vxintageous_handle_keys":
-	{
+	"vxintageous_handle_keys": {
 		"<C-a>": false,
 		"<C-b>": false,
 		"<C-c>": false,
@@ -372,6 +374,5 @@
 		"<C-z>": false,
 		"i_<C-u>": false,
 	},
-	"word_wrap": false,
-	"font_size": 11,
+	"font_size": 10,
 }

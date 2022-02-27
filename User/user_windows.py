@@ -11,6 +11,15 @@ def save_preferences():
     save_settings('Preferences.sublime-settings')
 
 
+def set_default_preference(preferences, name, default=None):
+    value = preferences.get(name + '_default')
+    if not value and default is not None:
+        value = default
+
+    if value:
+        preferences.set(name, value)
+
+
 class ClearWindowCommand(sublime_plugin.WindowCommand):
 
     def run(self):
@@ -29,10 +38,10 @@ class ClearWindowCommand(sublime_plugin.WindowCommand):
         _resize_groups_almost_equally(self.window)
 
         with save_preferences() as preferences:
-            preferences.set('indent_guide_options', [])
-            preferences.set('line_numbers', False)
-            preferences.set('draw_white_space', 'selection')
-            preferences.set('rulers', [])
+            set_default_preference(preferences, 'draw_white_space')
+            set_default_preference(preferences, 'indent_guide_options', [])
+            set_default_preference(preferences, 'line_numbers', False)
+            set_default_preference(preferences, 'rulers', [])
 
         self.window.run_command('sort_user_settings')
 
@@ -42,12 +51,9 @@ class ResetWindowCommand(sublime_plugin.WindowCommand):
     def run(self):
         self.window.run_command('reset_font_size')
 
-        view = self.window.active_view()
-
-        font_size = view.settings().get('font_size_default') if view else None
-        if font_size:
-            with save_preferences() as preferences:
-                preferences.set('font_size', font_size)
+        with save_preferences() as preferences:
+            set_default_preference(preferences, 'draw_white_space')
+            set_default_preference(preferences, 'font_size')
 
         if not self.window.is_sidebar_visible():
             self.window.set_sidebar_visible(True)
