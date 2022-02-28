@@ -241,9 +241,6 @@
 	"ignored_words": [],
 	"indent_guide_options":
 	[
-		"draw_normal",
-		"solid",
-		"draw_active",
 	],
 	"indent_guide_options_default":
 	[
@@ -315,7 +312,7 @@
 	"remember_open_files": true,
 	"ruler_column": 120,
 	"rulers": [],
-	"save_on_focus_lost": false,
+	"save_on_focus_lost": true,
 	"scroll_context_lines": 8,
 	"sesame.path":
 	[
@@ -374,5 +371,6 @@
 		"<C-z>": false,
 		"i_<C-u>": false,
 	},
+	"word_wrap": false,
 	"font_size": 10,
 }
