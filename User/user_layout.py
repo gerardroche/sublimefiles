@@ -31,3 +31,20 @@ class UserSetLayoutCommand(sublime_plugin.WindowCommand):
         view = self.window.active_view_in_group(active_group_before)
 
         self.window.set_view_index(view, self.window.active_group(), 0)
+
+
+class UserSetLayout6Command(sublime_plugin.WindowCommand):
+
+    def run(self):
+        cols = [0.0, 0.33, 0.66, 1.0]
+        rows = [0.0, 0.5, 1.0]
+        cells = [
+            [0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1],
+            [0, 1, 1, 2], [1, 1, 2, 2], [2, 1, 3, 2],
+        ]
+
+        self.window.run_command('user_set_layout', {
+            'cols': cols,
+            'rows': rows,
+            'cells': cells
+        })

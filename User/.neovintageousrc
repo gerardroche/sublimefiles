@@ -36,7 +36,7 @@ let mapleader=,
 
 nnoremap <leader><leader> :RevealInSideBar<CR>
 nnoremap <leader>c :CopyRelativeFilePath<CR>
-nnoremap <leader>d :Neovintageous action=toggle_side_bar<cr>
+nnoremap <leader>d :Neovintageous action=toggle_side_bar<CR>
 nnoremap <leader>ee :SublimeLinterPanelToggle<cr>
 nnoremap <leader>ek :OpenKeyBindings<CR>
 nnoremap <leader>en :Neovintageous action=open_rc_file<CR>
@@ -113,6 +113,7 @@ nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
 nnoremap <leader>wd :DestroyPane direction=self<CR>
 nnoremap <leader>ws :CarryFileToPane direction=down<CR>
 nnoremap <leader>wv :CarryFileToPane direction=right<CR>
+nnoremap <leader>w6 :UserSetLayout6<CR>
 
 " Plugin: Test: https://github.com/gerardroche/sublime-test.
 nnoremap <leader>t :TestNearest<CR>
