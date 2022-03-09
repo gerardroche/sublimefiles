@@ -43,9 +43,8 @@ nnoremap <leader>en :Neovintageous action=open_rc_file<CR>
 nnoremap <leader>ep :OpenPreferences<CR>
 nnoremap <leader>g/ :ToggleInlineDiff<CR>
 nnoremap <leader>g; :ToggleInlineDiff prefer_hide=true<CR>
-nnoremap <leader>ga :silent !git add %<CR>
 nnoremap <leader>gf :ShowOverlay overlay=goto text=@<CR>
-nnoremap <leader>ga :!git add %<CR>
+nnoremap <leader>ga :silent !git add %<CR>
 nnoremap <leader>gs :!git status<CR>
 nnoremap <leader>gb :GitGutter action=blame<CR>
 nnoremap <leader>gu :GitFormatGithubUrl<CR>
