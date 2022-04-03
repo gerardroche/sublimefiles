@@ -130,6 +130,7 @@ noremap <space>t :ToggleWord<CR>
 nnoremap <leader>vp :DumpVariable phpfunc=print_r<CR>
 nnoremap <leader>vv :DumpVariable phpfunc=dd<CR>
 nnoremap <leader>vd :DumpVariable phpfunc=dump<CR>
+nnoremap <leader>vm :DumpVariable phpfunc=dump content=__METHOD__<CR>
 
 " nnoremap <leader>vt :DumpVariable type=true<CR>
 " nnoremap <leader>vr :DumpVariable sublime_region_view_regions=true<CR>

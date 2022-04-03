@@ -66,67 +66,6 @@ class DumpScopeCommand(sublime_plugin.WindowCommand):
         print(">>>\n".join(scopes) + '<<<')
 
 
-class DumpVariableCommand(sublime_plugin.TextCommand):
-
-    def get_vars(self) -> tuple:
-        pt = self.view.sel()[0].b
-        line = self.view.line(pt)
-        if line.empty():
-            row, col = self.view.rowcol(pt)
-            prev_row = max(row - 1, 0)
-            if prev_row != row:
-                pt = self.view.text_point(prev_row, 0)
-
-        if self.view.substr(pt) == ' ':
-            f = self.view.find('\\s*', pt)
-            pt = f.end()
-
-        scope = self.view.scope_name(pt)
-
-        return line, pt, scope
-
-    def run(self, edit, **kwargs):
-        line, pt, scope = self.get_vars()
-
-        if 'php' in scope:
-            pt += 1
-
-        word_region = self.view.word(pt)
-        word = self.view.substr(word_region)
-        if not re.match('^[a-zA-Z_][a-zA-Z0-9_]*$', word):
-            return
-
-        if 'php' in scope:
-            dump_func = kwargs.get('phpfunc', 'var_dump')
-
-            dump_stmt = ''
-            # if dump_func == 'dd':
-            #     dump_stmt = ''
-            # else:
-            #     dump_stmt = 'echo "' + word + ':"; '
-
-            dump_stmt += dump_func + '($' + word + ');'
-
-        elif 'python' in scope:
-            if kwargs.get('sublime_region_view_string') or kwargs.get('sublime_region_self_view_string'):
-                obj = 'view' if kwargs.get('sublime_region_view_string') else 'self.view'
-                dump_stmt = 'print(\'' + word + ' =\', ' + word + ', \'>>>\' + ' + obj + '.substr(' + word + ').replace(\'\\n\', \'\\\\n\').replace(\'\\x00\', \'EOF\') + \'<<<\')  # noqa: E501'  # noqa
-            elif kwargs.get('sublime_region_view_regions'):
-                dump_stmt = 'print(\'{0}\', len({0}), \'->\', \'\'.join([str(s) + \' >>>\' + view.substr(s).replace(\'\\n\', \'\\\\n\').replace(\'\\x00\', \'EOF\') + \'<<< \' for s in list({0})]))  # noqa: E501'.format(word)
-            else:
-                if kwargs.get('type'):
-                    dump_stmt = 'print(\'{0} =\', {0}, type({0}))'.format(word)
-                else:
-                    dump_stmt = 'print(\'{0} =\', {0})'.format(word)
-        else:
-            raise NotImplementedError('unknown scope')
-
-        self.view.insert(edit, line.end(), '\n' + dump_stmt)
-        self.view.run_command('move', {'by': 'lines', 'forward': True})
-        self.view.run_command('reindent', {'single_line': True})
-        self.view.run_command('save')
-
-
 class DumpViewCommand(sublime_plugin.WindowCommand):
     def run(self):
         view = self.window.active_view()
