@@ -112,7 +112,7 @@ nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
 nnoremap <leader>wd :DestroyPane direction=self<CR>
 nnoremap <leader>ws :CarryFileToPane direction=down<CR>
 nnoremap <leader>wv :CarryFileToPane direction=right<CR>
-nnoremap <leader>w6 :UserSetLayout6<CR>
+nnoremap <leader>ww :UserDefaultSetLayout<CR>
 
 " Plugin: Test: https://github.com/gerardroche/sublime-test.
 nnoremap <leader>t :TestNearest<CR>

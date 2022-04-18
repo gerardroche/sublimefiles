@@ -33,7 +33,7 @@ class UserSetLayoutCommand(sublime_plugin.WindowCommand):
         self.window.set_view_index(view, self.window.active_group(), 0)
 
 
-class UserSetLayout6Command(sublime_plugin.WindowCommand):
+class UserDefaultSetLayoutCommand(sublime_plugin.WindowCommand):
 
     def run(self):
         cols = [0.0, 0.33, 0.66, 1.0]

@@ -359,5 +359,5 @@
 		"i_<C-u>": false,
 	},
 	"word_wrap": false,
-	"font_size": 10,
+	"font_size": 12,
 }
