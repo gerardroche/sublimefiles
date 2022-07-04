@@ -126,7 +126,6 @@
 		"desktop.ini",
 		"package-lock.json",
 		"tags",
-		"vendor/autoload.php",
 	],
 	"fold_buttons": false,
 	"folder_exclude_patterns":
@@ -138,6 +137,11 @@
 		".idea",
 		".lde/man",
 		".mypy_cache",
+		".phan",
+		".phan/stubs",
+		".phpunit.cache",
+		".psalm/cache",
+		".psalm/stubs",
 		".ropeproject",
 		".sass-cache",
 		".settings",
@@ -162,6 +166,7 @@
 		"//storage/testing",
 		"//storage/testing/disks",
 		"//storage/views",
+		"//tools",
 		"//vendor/*/*/.github",
 		"//vendor/*/*/.github/",
 		"//vendor/*/*/.phan",
@@ -182,6 +187,7 @@
 		"CVS",
 		"__pycache__",
 		"bower_components",
+		"build",
 		"build/coverage",
 		"build/html",
 		"covhtml",
@@ -215,10 +221,10 @@
 	[
 		"LaTeX",
 		"LaTeXTools",
+		"polyfill",
 		"Six",
 		"Vintage",
 		"Vintageous",
-		"polyfill",
 	],
 	"ignored_snippets":
 	[
@@ -359,5 +365,5 @@
 		"i_<C-u>": false,
 	},
 	"word_wrap": false,
-	"font_size": 12,
+	"font_size": 10,
 }
