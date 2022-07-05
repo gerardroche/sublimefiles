@@ -48,7 +48,6 @@ nnoremap <leader>ga :silent !git add %<CR>
 nnoremap <leader>gs :!git status<CR>
 nnoremap <leader>gb :GitGutter action=blame<CR>
 nnoremap <leader>gu :GitFormatGithubUrl<CR>
-nnoremap <leader>gb :GitGutterBlame<CR>
 nnoremap <leader>hp :PasteFromHistory<CR>
 nnoremap <leader>hm :RevertModification<CR>
 nnoremap <leader>hu :RevertHunk<CR>

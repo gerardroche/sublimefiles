@@ -3,7 +3,7 @@
 
     "debounce_delay": 5000,
     "enable_hover_diff_popup": false,
-    "enable": false,
+    "enable": true,
     "live_mode": false,
     "focus_change_mode": false,
     "next_prev_change_wrap": false,
@@ -11,6 +11,7 @@
     "show_line_annotation": false,
     "show_markers_on_untracked_file": false,
     "show_status_bar_text": false,
+
     // "status_bar_text":
     // [
     //     "+{{inserted}} ",
