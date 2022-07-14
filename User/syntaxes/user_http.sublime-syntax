@@ -1,0 +1,32 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: User HTTP
+hidden: false
+scope: text.http
+
+file_extensions:
+  - http
+
+contexts:
+  main:
+
+    - match: '^https?\:\/\/.+'
+      scope: storage.type
+
+    - match: '^([A-Z]+) (\/.+) (.+)'
+      captures:
+        1: keyword
+        2: storage.type
+        3: text
+
+    # - match: '^(HTTP\/.+) (.+) (.+)'
+    #   captures:
+    #     1: constant
+    #     2: constant
+    #     3: constant
+
+    - match: '^\{'
+      embed: scope:source.json
+      escape: '^\}'
+

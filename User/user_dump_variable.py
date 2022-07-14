@@ -12,7 +12,6 @@ class DumpVariableCommand(sublime_plugin.TextCommand):
             pt += 1
 
         word = self.get_word_under_caret(pt)
-        print('word =', word)
 
         if 'php' in scope:
             dump_str = self.get_php_dump(word, **kwargs)
