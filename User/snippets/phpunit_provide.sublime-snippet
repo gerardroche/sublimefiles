@@ -3,7 +3,7 @@
 public function provide${1:Name}(): array
 {
     return [
-        [${3}]
+        [${3}],
     ];
 }
 

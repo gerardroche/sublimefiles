@@ -12,9 +12,9 @@
 	"auto_match_enabled": true,
 	"auto_upgrade": false,
 	"block_caret": false,
-	"caret_extra_bottom": 0,
-	"caret_extra_top": 0,
-	"caret_extra_width": 1,
+	"cxaret_extra_bottom": 0,
+	"cxaret_extra_top": 0,
+	"cxaret_extra_width": 1,
 	"caret_style": "solid",
 	"color_scheme": "Packages/MonokaiFree/MonokaiFree.tmTheme",
 	"color_scheme_unit.coverage": true,
@@ -202,6 +202,7 @@
 		"Source Code Pro",
 		"Fira Code"
 	],
+	"fxont_face": "Fira Code",
 	"font_options":
 	[
 		"gray_antialias",
@@ -281,8 +282,8 @@
 		"tmp/",
 	],
 	"line_numbers": false,
-	"line_padding_bottom": 0,
-	"line_padding_top": -1,
+	"line_padding_bottom": 5,
+	"line_padding_top": 5,
 	"man.path": "${PROJECTS_PATH}/.lde/man",
 	"match_brackets_angle": true,
 	"mouse_wheel_switches_tabs": false,
@@ -362,5 +363,5 @@
 		"i_<C-u>": false,
 	},
 	"word_wrap": false,
-	"font_size": 13,
+	"font_size": 12,
 }
