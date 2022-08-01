@@ -231,6 +231,9 @@
 	"ignored_words": [],
 	"indent_guide_options":
 	[
+		"draw_normal",
+		"solid",
+		"draw_active",
 	],
 	"indent_guide_options_default":
 	[
