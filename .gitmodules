@@ -28,9 +28,6 @@
 [submodule "PHP Completions Kit"]
 	path = PHP Completions Kit
 	url = https://github.com/gerardroche/sublime-phpck.git
-[submodule "Package Control"]
-	path = Package Control
-	url = https://github.com/gerardroche/sublime_package_control.git
 [submodule "Pine"]
 	path = Pine
 	url = https://github.com/gerardroche/sublime-pine.git
