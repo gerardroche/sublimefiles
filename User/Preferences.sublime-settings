@@ -216,7 +216,6 @@
 	"ignored_packages":
 	[
 		"LaTeX",
-		"LaTeXTools",
 		"polyfill",
 		"Six",
 		"SublimeLinter-contrib-mypy",
