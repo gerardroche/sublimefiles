@@ -21,6 +21,7 @@
 		"Origami",
 		"Package Control",
 		"Sass",
+		"SublimeLinter",
 		"SublimeLinter-eslint",
 		"SublimeLinter-flake8",
 		"Terraform",

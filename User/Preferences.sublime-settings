@@ -216,12 +216,12 @@
 	"ignored_packages":
 	[
 		"LaTeX",
+		"polyfill",
 		"Six",
 		"SublimeLinter-contrib-mypy",
 		"SublimeLinter-flake8",
 		"Vintage",
 		"Vintageous",
-		"polyfill",
 	],
 	"ignored_snippets":
 	[
