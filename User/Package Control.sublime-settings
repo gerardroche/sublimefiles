@@ -20,6 +20,7 @@
 		"Origami",
 		"Package Control",
 		"Sass",
+		"SublimeLinter-eslint",
 		"SublimeLinter-flake8",
 		"Terraform",
 		"Vue Syntax Highlight",
