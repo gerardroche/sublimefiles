@@ -76,6 +76,3 @@
 [submodule "UnitTesting"]
 	path = UnitTesting
 	url = https://github.com/gerardroche/UnitTesting.git
-[submodule "MarkdownPreview"]
-	path = MarkdownPreview
-	url = https://github.com/facelessuser/MarkdownPreview
