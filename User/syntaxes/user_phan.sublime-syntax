@@ -14,7 +14,7 @@ contexts:
     - match: '^(.+):([0-9]+)'
       captures:
         1: markup.underline.link
-        2: constant.numeric.line-number.syntastic
+        2: constant.numeric.line-number.phan
 
     - match: \@[a-z]+
       scope: keyword
@@ -27,6 +27,6 @@ contexts:
 
     - match: '(Parse error): syntax error, .* in ([^\s]+) on line ([0-9]+)$'
       captures:
-        1: markup.error.syntastic
-        2: markup.underline.link.syntastic
-        3: constant.numeric.line-number.syntastic
+        1: markup.error.phan
+        2: markup.underline.link.phan
+        3: constant.numeric.line-number.phan

@@ -42,11 +42,6 @@
     { "caption": "Sesame: Open Vendor", "command": "sesame_open", "args": { "path": "~/vendor" } },
     { "caption": "Sesame: Switch Vendor", "command": "sesame_switch", "args": { "path": "~/vendor" } },
 
-    // Syntastic (User).
-    { "caption": "Syntastic: Check (Phan)", "command": "phan_check" },
-    { "caption": "Syntastic: Check Project", "command": "syntastic_check", "args": {"action": "project"}},
-    { "caption": "Syntastic: Check", "command": "syntastic_check" },
-
     // SublimeLinter toggles (User).
     { "caption": "SublimeLinter: Disable Linter", "command": "linters", "args": {"action": "disable"} },
     { "caption": "SublimeLinter: Enable Linter", "command": "linters", "args": {"action": "enable"} },

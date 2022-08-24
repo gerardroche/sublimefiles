@@ -34,6 +34,7 @@ set smartcase
 
 let mapleader=,
 
+" nnoremap <leader>gg :GitFormatGithubUrl<CR>
 nnoremap <leader><leader> :RevealInSideBar<CR>
 nnoremap <leader>c :CopyRelativeFilePath<CR>
 nnoremap <leader>d :Neovintageous action=toggle_side_bar<CR>
@@ -43,13 +44,13 @@ nnoremap <leader>en :Neovintageous action=open_rc_file<CR>
 nnoremap <leader>ep :OpenPreferences<CR>
 nnoremap <leader>g/ :ToggleInlineDiff<CR>
 nnoremap <leader>g; :ToggleInlineDiff prefer_hide=true<CR>
-nnoremap <leader>gf :ShowOverlay overlay=goto text=@<CR>
 nnoremap <leader>ga :silent !git add %<CR>
-nnoremap <leader>gs :!git status<CR>
 nnoremap <leader>gb :GitGutter action=blame<CR>
-nnoremap <leader>gu :GitFormatGithubUrl<CR>
-nnoremap <leader>hp :PasteFromHistory<CR>
+nnoremap <leader>gf :ShowOverlay overlay=goto text=@<CR>
+nnoremap <leader>gs :!git status<CR>
+nnoremap <leader>gu :GenerateUnitTest<CR>
 nnoremap <leader>hm :RevertModification<CR>
+nnoremap <leader>hp :PasteFromHistory<CR>
 nnoremap <leader>hu :RevertHunk<CR>
 nnoremap <leader>o :ls<CR>
 nnoremap <leader>q gqip:w<CR>
