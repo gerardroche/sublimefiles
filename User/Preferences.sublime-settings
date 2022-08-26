@@ -319,7 +319,7 @@
 	"show_errors_inline": false,
 	"show_legacy_color_schemes": false,
 	"show_line_endings": true,
-	"show_rel_path": true,
+	"sxhow_rel_path": true,
 	"show_tab_close_buttons": false,
 	"spelling_selector": "markup.raw, source string.quoted - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.raw.inline)",
 	"submit_usage": false,
@@ -361,5 +361,5 @@
 		"i_<C-u>": false,
 	},
 	"word_wrap": false,
-	"font_size": 10,
+	"font_size": 14,
 }
