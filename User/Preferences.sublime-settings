@@ -215,11 +215,9 @@
 	"hxardware_acceleration": "opengl",
 	"ignored_packages":
 	[
-		"LaTeX",
 		"polyfill",
 		"Six",
 		"SublimeLinter-contrib-mypy",
-		"SublimeLinter-eslint",
 		"SublimeLinter-flake8",
 		"Vintage",
 		"Vintageous",
