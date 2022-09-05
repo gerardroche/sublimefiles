@@ -217,7 +217,6 @@
 	[
 		"polyfill",
 		"Six",
-		"SublimeLinter-contrib-mypy",
 		"SublimeLinter-flake8",
 		"Vintage",
 		"Vintageous",
