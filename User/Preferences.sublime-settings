@@ -215,9 +215,12 @@
 	"hxardware_acceleration": "opengl",
 	"ignored_packages":
 	[
+		"GitGutter",
 		"polyfill",
+		"Python Completions",
 		"Six",
 		"SublimeLinter-flake8",
+		"SublimeTextAPICompletions",
 		"Vintage",
 		"Vintageous",
 	],

@@ -15,6 +15,13 @@
 /python-markdown/
 /pyyaml/
 
+/backrefs/
+/bracex/
+/lsp_utils/
+/pathlib/
+/sublime_lib/
+/wcmatch/
+
 # Packages
 /AutomaticPackageReloader/
 /AutomaticPackageReloader33/
