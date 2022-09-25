@@ -26,7 +26,7 @@
 " set textwidth=80
 " set winaltkeys=menu
 " set wrap
-" set wrapscan
+" set nowrapscan
 
 set ignorecase
 set nominimap
@@ -61,7 +61,7 @@ nnoremap <leader>x :GitOpen<CR>
 noremap <C-l> :nohlsearch<CR>
 noremap <C-s> :w<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
-noremap <space> :
+" noremap <space> /fizz<CR>
 
 " inoremap <C-[> :i[
 " nnoremap <C-[> :n[
@@ -135,7 +135,7 @@ nnoremap <leader>vm :DumpVariable phpfunc=dump content=__METHOD__<CR>
 " nnoremap <leader>vt :DumpVariable type=true<CR>
 " nnoremap <leader>vr :DumpVariable sublime_region_view_regions=true<CR>
 " nnoremap <leader>vs :DumpVariable sublime_region_self_view_string=true<CR>
-" nnoremap <leader>vv :DumpVariable sublime_region_view_string=true<CR>
+nnoremap <leader>vr :DumpVariable sublime_region_view_string=true<CR>
 
 " ------------------------------------------------------------------------------
 

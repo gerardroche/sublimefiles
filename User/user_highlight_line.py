@@ -2,7 +2,7 @@ import sublime_plugin
 
 
 def is_normal(view) -> bool:
-    return view.element() is None
+    return view and getattr(view, 'element', None) and view.element() is None
 
 
 class LineHighlightEvents(sublime_plugin.EventListener):

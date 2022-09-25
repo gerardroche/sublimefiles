@@ -26,8 +26,8 @@
 		"SublimeLinter-flake8",
 		"SublimeLinter-mypy",
 		"Terraform",
-		"Vue Syntax Highlight",
+		"Vue Syntax Highlight"
 	],
 	"submit_url": "",
-	"submit_usage": false,
+	"submit_usage": false
 }
