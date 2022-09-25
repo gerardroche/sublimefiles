@@ -216,12 +216,12 @@
 	"ignored_packages":
 	[
 		"GitGutter",
-		"polyfill",
 		"Python Completions",
 		"Six",
 		"SublimeTextAPICompletions",
 		"Vintage",
 		"Vintageous",
+		"polyfill",
 	],
 	"ignored_snippets":
 	[
@@ -340,6 +340,7 @@
 	"vintageous_handle_keys":
 	{
 		"i_<C-u>": false,
+		"<S-tab>": false,
 	},
 	"vintageous_sneak_use_ic_scs": 1,
 	"vintageous_terminal": "gnome-terminal",

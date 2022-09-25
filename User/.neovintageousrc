@@ -61,7 +61,7 @@ nnoremap <leader>x :GitOpen<CR>
 noremap <C-l> :nohlsearch<CR>
 noremap <C-s> :w<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
-" noremap <space> /fizz<CR>
+noremap <space> :
 
 " inoremap <C-[> :i[
 " nnoremap <C-[> :n[
