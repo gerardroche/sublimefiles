@@ -208,6 +208,7 @@
 		"no_italic",
 		"no_bold"
 	],
+	"font_size": 10,
 	"highlight_line": true,
 	"hxardware_acceleration": "opengl",
 	"ignored_packages":
@@ -218,7 +219,7 @@
 		"SublimeTextAPICompletions",
 		"Vintage",
 		"Vintageous",
-		"polyfill",
+		"polyfill"
 	],
 	"ignored_snippets":
 	[
@@ -336,8 +337,8 @@
 	"vintageous_enable_sneak": true,
 	"vintageous_handle_keys":
 	{
-		"i_<C-u>": false,
 		"<S-tab>": false,
+		"i_<C-u>": false,
 	},
 	"vintageous_sneak_use_ic_scs": 1,
 	"vintageous_terminal": "gnome-terminal",
