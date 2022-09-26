@@ -37,9 +37,6 @@ class ClearWindowCommand(sublime_plugin.WindowCommand):
         if self.window.is_menu_visible():
             self.window.set_menu_visible(False)
 
-        if self.window.is_status_bar_visible():
-            self.window.set_status_bar_visible(False)
-
         _resize_groups_almost_equally(self.window)
 
         with save_preferences() as preferences:
@@ -54,8 +51,6 @@ class ClearWindowCommand(sublime_plugin.WindowCommand):
 class ResetWindowCommand(sublime_plugin.WindowCommand):
 
     def run(self):
-        self.window.run_command('reset_font_size')
-
         with save_preferences() as preferences:
             set_default_preference(preferences, 'draw_white_space')
             set_default_preference(preferences, 'indent_guide_options', [
@@ -64,7 +59,6 @@ class ResetWindowCommand(sublime_plugin.WindowCommand):
                 "draw_active",
             ])
             clear_preference(preferences, 'line_numbers', True)
-            set_default_preference(preferences, 'font_size')
 
         if not self.window.is_sidebar_visible():
             self.window.set_sidebar_visible(True)

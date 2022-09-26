@@ -70,11 +70,11 @@
 	"styles": [
 		{
 			"icon": "x",
-			"mark_style": "outline",
+			"mark_style": "fill",
 		},
 		{
 			"icon": "x",
-			"mark_style": "outline",
+			"mark_style": "fill",
 		}
 	],
 }

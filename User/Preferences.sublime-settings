@@ -127,7 +127,7 @@
 		"package-lock.json",
 		"tags"
 	],
-	"fold_buttons": true,
+	"fold_buttons": false,
 	"folder_exclude_patterns":
 	[
 		".Trash",
@@ -208,9 +208,6 @@
 		"no_italic",
 		"no_bold"
 	],
-	"font_size": 10,
-	"font_size_default": 10,
-	"fxont_face": "Fira Code",
 	"highlight_line": true,
 	"hxardware_acceleration": "opengl",
 	"ignored_packages":
@@ -282,13 +279,13 @@
 		"storage/",
 		"tmp/"
 	],
-	"line_numbers": true,
+	"line_numbers": false,
 	"line_padding_bottom": 0,
 	"line_padding_top": 0,
 	"man.path": "${PROJECTS_PATH}/.lde/man",
 	"match_brackets_angle": true,
 	"mouse_wheel_switches_tabs": false,
-	"neovintageous_build_version": 11100,
+	"neovintageous_build_version": 12700,
 	"overlay_scroll_bars": "enabled",
 	"phpunit.options":
 	{
