@@ -208,7 +208,7 @@
 		"no_italic",
 		"no_bold"
 	],
-	"font_size": 10,
+	"font_size": 8,
 	"highlight_line": true,
 	"hxardware_acceleration": "opengl",
 	"ignored_packages":
@@ -297,7 +297,7 @@
 		"run_test_file"
 	],
 	"polyfill.experimental_features": true,
-	"preview_on_click": "only_left",
+	"preview_on_click": true,
 	"relative_line_numbers": true,
 	"remember_full_screen": true,
 	"remember_open_files": true,
