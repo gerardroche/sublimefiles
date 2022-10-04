@@ -127,7 +127,7 @@
 		"package-lock.json",
 		"tags"
 	],
-	"fold_buttons": false,
+	"fold_buttons": true,
 	"folder_exclude_patterns":
 	[
 		".Trash",
@@ -214,12 +214,12 @@
 	"ignored_packages":
 	[
 		"GitGutter",
+		"polyfill",
 		"Python Completions",
 		"Six",
 		"SublimeTextAPICompletions",
 		"Vintage",
 		"Vintageous",
-		"polyfill"
 	],
 	"ignored_snippets":
 	[
