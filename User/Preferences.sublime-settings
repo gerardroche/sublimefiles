@@ -214,12 +214,12 @@
 	"ignored_packages":
 	[
 		"GitGutter",
-		"polyfill",
 		"Python Completions",
 		"Six",
 		"SublimeTextAPICompletions",
 		"Vintage",
 		"Vintageous",
+		"polyfill",
 	],
 	"ignored_snippets":
 	[

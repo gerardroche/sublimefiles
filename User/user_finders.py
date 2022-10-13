@@ -3,6 +3,50 @@ import os
 import sublime_plugin
 
 
+class FindInOpenFoldersCommand(sublime_plugin.WindowCommand):
+
+    def run(self, **kwargs):
+        _find_in_open_folders(self.window, **kwargs)
+
+
+class FocusUnitTestingPanelCommand(sublime_plugin.WindowCommand):
+
+    def run(self):
+        self.window.run_command('show_panel', {'panel': 'output.UnitTesting'})
+        self.window.focus_view(self.window.find_output_panel('UnitTesting'))
+
+
+class ShowFindResultsCommand(sublime_plugin.WindowCommand):
+
+    def run(self):
+        for view in self.window.views():
+            if view.name() == 'Find Results':
+                # Clear any visual selection.
+                sel = view.sel()[0].begin()
+                view.sel().clear()
+                view.sel().add(sel)
+
+                return self.window.focus_view(view)
+
+
+class FindFileUnderCursorCommand(sublime_plugin.TextCommand):
+
+    def run(self, edit):
+        self.view.window().run_command('show_overlay', {
+            'overlay': 'goto',
+            'show_files': True,
+            'text': self.getWordUnderCursor(),
+        })
+
+    def getWordUnderCursor(self) -> str:
+        sel = self.view.sel()[0]
+        pt = sel.b - 1 if sel.b > sel.a else sel.a
+        region = self.view.word(pt)
+        word = self.view.substr(region)
+
+        return word
+
+
 def _find_in_open_folders(window, interactive=True, filter=False, include_vendor=False):
     view = window.active_view()
     word = view.sel()[0]
@@ -56,29 +100,3 @@ def _find_in_open_folders(window, interactive=True, filter=False, include_vendor
         window.run_command('find_all', {
             'close_panel': True
         })
-
-
-class FindInOpenFoldersCommand(sublime_plugin.WindowCommand):
-
-    def run(self, **kwargs):
-        _find_in_open_folders(self.window, **kwargs)
-
-
-class FocusUnitTestingPanelCommand(sublime_plugin.WindowCommand):
-
-    def run(self):
-        self.window.run_command('show_panel', {'panel': 'output.UnitTesting'})
-        self.window.focus_view(self.window.find_output_panel('UnitTesting'))
-
-
-class ShowFindResultsCommand(sublime_plugin.WindowCommand):
-
-    def run(self):
-        for view in self.window.views():
-            if view.name() == 'Find Results':
-                # Clear any visual selection.
-                sel = view.sel()[0].begin()
-                view.sel().clear()
-                view.sel().add(sel)
-
-                return self.window.focus_view(view)

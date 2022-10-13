@@ -5,6 +5,9 @@
     // { "keys": ["ctrl+r"], "command": "user_sandbox_text" },
     { "keys": ["super+r"], "command": "package_reloader_reload" },
 
+    { "keys": ["f4"], "command": "goto_result", "args": {"action": "next"}},
+    { "keys": ["shift+f4"], "command": "goto_result", "args": {"action": "prev"}},
+
     // Man (User plugin).
     { "keys": ["f1"], "command": "goto_documentation", "context": [ { "key": "selector", "operator": "equal", "operand": "-embedding.php", "match_all": true } ]},
     { "keys": ["f1"], "command": "man_goto_php", "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},

@@ -49,6 +49,7 @@ nnoremap <leader>gb :GitGutter action=blame<CR>
 nnoremap <leader>gf :ShowOverlay overlay=goto text=@<CR>
 nnoremap <leader>gs :!git status<CR>
 nnoremap <leader>gu :GenerateUnitTest<CR>
+nnoremap <leader>gv :FindFileUnderCursor<CR>
 nnoremap <leader>hm :RevertModification<CR>
 nnoremap <leader>hp :PasteFromHistory<CR>
 nnoremap <leader>hu :RevertHunk<CR>
