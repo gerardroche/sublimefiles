@@ -67,3 +67,6 @@
 [submodule "UnitTesting"]
 	path = UnitTesting
 	url = https://github.com/gerardroche/UnitTesting.git
+[submodule "Vue Syntax Highlight"]
+	path = Vue Syntax Highlight
+	url = https://github.com/deathaxe/vue-syntax-highlight.git
