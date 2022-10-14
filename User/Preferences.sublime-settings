@@ -8,6 +8,7 @@
 	"auto_complete_use_history": true,
 	"auto_complete_use_index": true,
 	"auto_complete_with_fields": true,
+	"show_git_status_in_status_bar": false,
 	"auto_hide_menu": false,
 	"auto_match_enabled": true,
 	"auto_upgrade": false,
@@ -204,7 +205,7 @@
 	],
 	"font_options":
 	[
-		"gray_antialias",
+		"xgray_antialias",
 		"no_italic",
 		"no_bold"
 	],
@@ -214,12 +215,12 @@
 	"ignored_packages":
 	[
 		"GitGutter",
+		"polyfill",
 		"Python Completions",
 		"Six",
 		"SublimeTextAPICompletions",
 		"Vintage",
 		"Vintageous",
-		"polyfill",
 	],
 	"ignored_snippets":
 	[

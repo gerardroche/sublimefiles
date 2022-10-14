@@ -69,7 +69,8 @@
 	"show_marks_in_minimap": false,
 	"styles": [
 		{
-			"codes": ["syntax"],
+
+			// "codes": ["syntax"],
 			"icon": "cog",
 			"phantom": "",
 			"annotation": "{msg}",
