@@ -8,7 +8,6 @@
 	"auto_complete_use_history": true,
 	"auto_complete_use_index": true,
 	"auto_complete_with_fields": true,
-	"show_git_status_in_status_bar": false,
 	"auto_hide_menu": false,
 	"auto_match_enabled": true,
 	"auto_upgrade": false,
@@ -220,7 +219,7 @@
 		"Six",
 		"SublimeTextAPICompletions",
 		"Vintage",
-		"Vintageous",
+		"Vintageous"
 	],
 	"ignored_snippets":
 	[
@@ -291,7 +290,7 @@
 	"overlay_scroll_bars": "enabled",
 	"phpunit.options":
 	{
-		"no-coverage": true,
+		"no-coverage": true
 	},
 	"phpunitx.on_post_save":
 	[
@@ -306,20 +305,21 @@
 	"rulers":
 	[
 	],
-	"save_on_focus_lost": true,
+	"save_on_focus_lost": false,
 	"scroll_context_lines": 8,
 	"sesame.path":
 	[
 		{
-			"path": "~/projects",
+			"path": "~/projects"
 		},
 		{
 			"depth": 1,
-			"path": "~/.config/sublime-text-3/Packages",
+			"path": "~/.config/sublime-text-3/Packages"
 		}
 	],
 	"show_definitions": false,
 	"show_errors_inline": false,
+	"show_git_status_in_status_bar": false,
 	"show_legacy_color_schemes": false,
 	"show_line_endings": true,
 	"show_tab_close_buttons": false,
@@ -339,11 +339,11 @@
 	"vintageous_handle_keys":
 	{
 		"<S-tab>": false,
-		"i_<C-u>": false,
+		"i_<C-u>": false
 	},
 	"vintageous_sneak_use_ic_scs": 1,
 	"vintageous_terminal": "gnome-terminal",
 	"vintageous_use_super_keys": true,
 	"word_wrap": false,
-	"xgit_gutter_enable": false,
+	"xgit_gutter_enable": false
 }

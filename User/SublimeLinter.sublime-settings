@@ -2,6 +2,7 @@
 	"debug": false,
 	"highlights.demote_while_editing": "all",
 	"lint_mode": "save",
+    "delay": 3,
 	"linters":
 	{
 		"flake8":
@@ -68,16 +69,16 @@
 	"show_hover_region_report": false,
 	"show_marks_in_minimap": false,
 	"styles": [
-		{
+		// {
 
-			// "codes": ["syntax"],
-			"icon": "cog",
-			"phantom": "",
-			"annotation": "{msg}",
-		},
-		{
-			"phantom": "{msg}",
-		},
+		// 	// "codes": ["syntax"],
+		// 	"icon": "cog",
+		// 	"phantom": "",
+		// 	"annotation": "{msg}",
+		// },
+		// {
+		// 	"phantom": "{msg}",
+		// },
 		{
 			"icon": "x",
 			"mark_style": "fill",

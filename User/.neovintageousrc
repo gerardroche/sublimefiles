@@ -34,8 +34,8 @@ set smartcase
 
 let mapleader=,
 
-" nnoremap <leader>gg :GitFormatGithubUrl<CR>
 nnoremap <leader><leader> :RevealInSideBar<CR>
+nnoremap <leader>G :GsShowStatus<CR>
 nnoremap <leader>c :CopyRelativeFilePath<CR>
 nnoremap <leader>d :Neovintageous action=toggle_side_bar<CR>
 nnoremap <leader>ee :SublimeLinterPanelToggle<cr>
@@ -64,38 +64,13 @@ noremap <C-s> :w<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
 noremap <space> :
 
-" inoremap <C-[> :i[
-" nnoremap <C-[> :n[
-
-" inoremap <C-c> :ic
-" nnoremap <C-c> :nc
-
-" inoremap <C-u> :iu
-" nnoremap <C-u> :nu
-
-" inoremap <C-x> :ix
-" nnoremap <C-x> :nx
-
-" inoremap <C-w> :iw
-" nnoremap <C-w> :nw
-
-" inoremap <C-l> :il
-" nnoremap <C-l> :nl
-
-" Finders/Locators
-nnoremap <leader>f  :FindInOpenFolders interactive=true filter=true include_vendor=true<CR>
-noremap <C-S-f3>    :FindInOpenFolders interactive=true filter=true<CR>
-noremap <C-S-f4>    :FindInOpenFolders interactive=true filter=true include_vendor=true<CR>
-noremap <C-f3>      :FindInOpenFolders interactive=true<CR>
-noremap <S-f3>      :FindInOpenFolders interactive=false<CR>
-
 " Yank and paste using system clipboard.
 noremap <leader>y "+y
 noremap <leader>Y "+Y
 noremap <leader>p "+p
 noremap <leader>P "+P
 
-" Sorting helpers.
+" Sorting.
 nnoremap <leader>s) vi):sort u<CR>
 nnoremap <leader>s] vi]:sort u<CR>
 nnoremap <leader>si vii:sort u<CR>
@@ -103,42 +78,43 @@ nnoremap <leader>sp vip:sort u<CR>
 nnoremap <leader>ss vip:sort u<CR>
 vnoremap <leader>s :sort u<CR>
 
-" Windowing leader aliases.
-nnoremap <leader><bar> <C-w><bar>
-nnoremap <leader>= <C-w>=
-nnoremap <leader>_ <C-w>_
+" Finders.
+nnoremap <leader>f  :FindInOpenFolders interactive=true filter=true include_vendor=true<CR>
+noremap <C-S-f3>    :FindInOpenFolders interactive=true filter=true<CR>
+noremap <C-S-f4>    :FindInOpenFolders interactive=true filter=true include_vendor=true<CR>
+noremap <C-f3>      :FindInOpenFolders interactive=true<CR>
+noremap <S-f3>      :FindInOpenFolders interactive=false<CR>
 
-" Plugin: Origami: https://packagecontrol.io/packages/Origami.
+" Plugin: Origami
+" https://packagecontrol.io/packages/Origami
+nnoremap <C-w>z :ToggleZoomPane fraction=0.98<CR>
 nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
 nnoremap <leader>wd :DestroyPane direction=self<CR>
 nnoremap <leader>ws :CarryFileToPane direction=down<CR>
 nnoremap <leader>wv :CarryFileToPane direction=right<CR>
 nnoremap <leader>ww :UserDefaultSetLayout<CR>
 
-" Plugin: Test: https://github.com/gerardroche/sublime-test.
-nnoremap <leader>t :TestNearest<CR>
+" Plugin: Test
+" https://github.com/gerardroche/sublime-test
+nnoremap <D-n> :TestNearest<CR>
 nnoremap <leader>T :TestFile<CR>
 nnoremap <leader>a :TestSuite<CR>
-nnoremap <leader>l :TestLast<CR>
 nnoremap <leader>gg :TestVisit<CR>
-nnoremap <D-n> :TestNearest<CR>
+nnoremap <leader>l :TestLast<CR>
+nnoremap <leader>t :TestNearest<CR>
 
-" Plugin: ToggleWord: https://github.com/gordio/ToggleWords.
-noremap <space>t :ToggleWord<CR>
-
-" Plugin (User): Debug
-" nnoremap <leader>vd :DumpVariable<CR>
-nnoremap <leader>vp :DumpVariable phpfunc=print_r<CR>
-nnoremap <leader>vv :DumpVariable phpfunc=dd<CR>
+" Plugin: User Debug
 nnoremap <leader>vd :DumpVariable phpfunc=dump<CR>
 nnoremap <leader>vm :DumpVariable phpfunc=dump content=__METHOD__<CR>
-
-" nnoremap <leader>vt :DumpVariable type=true<CR>
-" nnoremap <leader>vr :DumpVariable sublime_region_view_regions=true<CR>
-" nnoremap <leader>vs :DumpVariable sublime_region_self_view_string=true<CR>
+nnoremap <leader>vp :DumpVariable phpfunc=print_r<CR>
 nnoremap <leader>vr :DumpVariable sublime_region_view_string=true<CR>
+nnoremap <leader>vv :DumpVariable phpfunc=dd<CR>
 
-" ------------------------------------------------------------------------------
+" Plugin: ToggleWord
+" https://github.com/gordio/ToggleWords
+noremap <space>t :ToggleWord<CR>
+
+" ==============================================================================
 
 " The following are sometimes used for testing NeoVintageous during development.
 
@@ -207,3 +183,26 @@ nnoremap <leader>vr :DumpVariable sublime_region_view_string=true<CR>
 
 " nnoremap . ma.`a
 " nnoremap . ma.`a
+
+" inoremap <C-[> :i[
+" nnoremap <C-[> :n[
+
+" inoremap <C-c> :ic
+" nnoremap <C-c> :nc
+
+" inoremap <C-u> :iu
+" nnoremap <C-u> :nu
+
+" inoremap <C-x> :ix
+" nnoremap <C-x> :nx
+
+" inoremap <C-w> :iw
+" nnoremap <C-w> :nw
+
+" inoremap <C-l> :il
+" nnoremap <C-l> :nl
+
+" " Windowing leader aliases.
+" nnoremap <leader><bar> <C-w><bar>
+" nnoremap <leader>= <C-w>=
+" nnoremap <leader>_ <C-w>_

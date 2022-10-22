@@ -53,6 +53,9 @@
     { "caption": "Debug: Dump View", "command": "dump_view" },
     { "caption": "Debug: Dump Scope", "command": "dump_scope" },
 
+    // Tasks
+    { "caption": "Tasks", "command": "tasks" },
+
     // Toggles (User).
     { "caption": "Toggle Fold Buttons", "command": "toggle_fold_buttons" },
     { "caption": "Toggle Folder Exclude Pattern: build", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "build"} },

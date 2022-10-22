@@ -1,0 +1,6 @@
+// Settings in here override those in "GitSavvy/GitSavvy.sublime-settings",
+
+{
+    "git_status_in_status_bar": false,
+    "vintageous_friendly": true,
+}

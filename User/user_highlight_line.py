@@ -1,8 +1,18 @@
+from sublime import version
 import sublime_plugin
 
 
-def is_normal_view(view) -> bool:
-    return view and getattr(view, 'element', None) and view.element() is None
+if int(version()) >= 4050:
+    def is_normal_view(view) -> bool:
+        return view and view.element() is None
+else:
+    def is_normal_view(view) -> bool:
+        if not view:
+            return False
+
+        settings = view.settings()
+
+        return settings and not settings.get('is_widget', False)
 
 
 class LineHighlightEvents(sublime_plugin.EventListener):
