@@ -127,7 +127,7 @@
 		"package-lock.json",
 		"tags"
 	],
-	"fold_buttons": true,
+	"fold_buttons": false,
 	"folder_exclude_patterns":
 	[
 		".Trash",
@@ -290,7 +290,7 @@
 	"overlay_scroll_bars": "enabled",
 	"phpunit.options":
 	{
-		"no-coverage": true
+		"no-coverage": true,
 	},
 	"phpunitx.on_post_save":
 	[
@@ -305,16 +305,16 @@
 	"rulers":
 	[
 	],
-	"save_on_focus_lost": false,
+	"save_on_focus_lost": true,
 	"scroll_context_lines": 8,
 	"sesame.path":
 	[
 		{
-			"path": "~/projects"
+			"path": "~/projects",
 		},
 		{
 			"depth": 1,
-			"path": "~/.config/sublime-text-3/Packages"
+			"path": "~/.config/sublime-text-3/Packages",
 		}
 	],
 	"show_definitions": false,
@@ -339,11 +339,11 @@
 	"vintageous_handle_keys":
 	{
 		"<S-tab>": false,
-		"i_<C-u>": false
+		"i_<C-u>": false,
 	},
 	"vintageous_sneak_use_ic_scs": 1,
 	"vintageous_terminal": "gnome-terminal",
 	"vintageous_use_super_keys": true,
 	"word_wrap": false,
-	"xgit_gutter_enable": false
+	"xgit_gutter_enable": false,
 }
