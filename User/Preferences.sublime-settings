@@ -127,7 +127,7 @@
 		"package-lock.json",
 		"tags"
 	],
-	"fold_buttons": false,
+	"fold_buttons": true,
 	"folder_exclude_patterns":
 	[
 		".Trash",
@@ -208,7 +208,7 @@
 		"no_italic",
 		"no_bold"
 	],
-	"font_size": 11,
+	"font_size": 8,
 	"highlight_line": true,
 	"hxardware_acceleration": "opengl",
 	"ignored_packages":
@@ -219,7 +219,7 @@
 		"Six",
 		"SublimeTextAPICompletions",
 		"Vintage",
-		"Vintageous"
+		"Vintageous",
 	],
 	"ignored_snippets":
 	[
@@ -328,7 +328,7 @@
 	"sxhow_rel_path": true,
 	"theme": "Adaptive.sublime-theme",
 	"tree_animation_enabled": false,
-	"xui_scale": 1.5,
+	"ui_scale": 1.4,
 	"unittesting_capture_package_loggers": true,
 	"unittesting_coverage_html_report": true,
 	"unittesting_reload_package_on_testing": true,

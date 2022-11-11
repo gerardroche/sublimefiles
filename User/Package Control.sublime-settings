@@ -18,6 +18,7 @@
 		"FileIcons",
 		"GitGutter",
 		"GitSavvy",
+		"GotoDocumentation",
 		"MarkdownPreview",
 		"Origami",
 		"Package Control",
@@ -26,8 +27,8 @@
 		"SublimeLinter-eslint",
 		"SublimeLinter-flake8",
 		"SublimeLinter-mypy",
-		"Terraform"
+		"Terraform",
 	],
 	"submit_url": "",
-	"submit_usage": false
+	"submit_usage": false,
 }
