@@ -78,24 +78,21 @@ nnoremap <leader>sp vip:sort u<CR>
 nnoremap <leader>ss vip:sort u<CR>
 vnoremap <leader>s :sort u<CR>
 
-" Finders.
+" Plugin: User - Finders
 nnoremap <leader>f  :FindInOpenFolders interactive=true filter=true include_vendor=true<CR>
 noremap <C-S-f3>    :FindInOpenFolders interactive=true filter=true<CR>
 noremap <C-S-f4>    :FindInOpenFolders interactive=true filter=true include_vendor=true<CR>
 noremap <C-f3>      :FindInOpenFolders interactive=true<CR>
 noremap <S-f3>      :FindInOpenFolders interactive=false<CR>
 
-" Plugin: Origami
-" https://packagecontrol.io/packages/Origami
-nnoremap <C-w>z :ToggleZoomPane fraction=0.98<CR>
-nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
-nnoremap <leader>wd :DestroyPane direction=self<CR>
-nnoremap <leader>ws :CarryFileToPane direction=down<CR>
-nnoremap <leader>wv :CarryFileToPane direction=right<CR>
-nnoremap <leader>ww :UserDefaultSetLayout<CR>
+" Plugin: User - Debug
+nnoremap <leader>vd :DumpVariable phpfunc=dump<CR>
+nnoremap <leader>vm :DumpVariable phpfunc=dump content=__METHOD__<CR>
+nnoremap <leader>vp :DumpVariable phpfunc=print_r<CR>
+nnoremap <leader>vr :DumpVariable sublime_region_view_string=true<CR>
+nnoremap <leader>vv :DumpVariable phpfunc=dd<CR>
 
-" Plugin: Test
-" https://github.com/gerardroche/sublime-test
+" Plugin: Test https://github.com/gerardroche/sublime-test
 nnoremap <D-n> :TestNearest<CR>
 nnoremap <leader>T :TestFile<CR>
 nnoremap <leader>a :TestSuite<CR>
@@ -103,106 +100,10 @@ nnoremap <leader>gg :TestVisit<CR>
 nnoremap <leader>l :TestLast<CR>
 nnoremap <leader>t :TestNearest<CR>
 
-" Plugin: User Debug
-nnoremap <leader>vd :DumpVariable phpfunc=dump<CR>
-nnoremap <leader>vm :DumpVariable phpfunc=dump content=__METHOD__<CR>
-nnoremap <leader>vp :DumpVariable phpfunc=print_r<CR>
-nnoremap <leader>vr :DumpVariable sublime_region_view_string=true<CR>
-nnoremap <leader>vv :DumpVariable phpfunc=dd<CR>
-
-" Plugin: ToggleWord
-" https://github.com/gordio/ToggleWords
-noremap <space>t :ToggleWord<CR>
-
-" ==============================================================================
-
-" The following are sometimes used for testing NeoVintageous during development.
-
-" nnoremap <Space> :
-
-" Easy buffer navigation.
-" http://stevelosh.com/blog/2010/09/coming-home-to-vim/
-" https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
-" nnoremap <C-h> <C-w>h
-" nnoremap <C-j> <C-w>j
-" nnoremap <C-k> <C-w>k
-" nnoremap <C-l> <C-w>l
-
-" Scroll viewport faster.
-" http://items.sjbach.com/319/configuring-vim-right
-" nnoremap <C-e> 3<C-e>
-" nnoremap <C-y> 3<C-y>
-
-" IMPORTANT! These mappings will obviously impact the performance of j and k keys.
-" Make j and k work file linewise instead of screen linewise.
-" http://stevelosh.com/blog/2010/09/coming-home-to-vim/
-" https://bitbucket.org/sjl/dotfiles/src/b89b95f1cb1d06596c0c46bfb5a9e7e95ce71913/vim/vimrc?at=default
-" nnoremap gj j
-" nnoremap gk k
-" nnoremap j gj
-" nnoremap k gk
-
-" Mapping brackets.
-" See: https://github.com/NeoVintageous/NeoVintageous/issues/426.
-" nnoremap <D-[> <lt><lt>
-" nnoremap <D-]> >>
-" vnoremap <D-[> <lt>gv
-" vnoremap <D-]> >gv
-
-" Workaround Emmet plugin issues.
-" See: https://github.com/NeoVintageous/NeoVintageous/issues/571.
-" nnoremap <C-Up> :RunEmmetAction action=increment_number_by_1<CR><Esc>
-" nnoremap <C-Down> :RunEmmetAction action=increment_number_by_1<CR><Esc>
-
-" nnoremap <leader>gw :UserSandboxWindow<CR>
-" nnoremap <leader>gt :UserSandboxText<CR>
-
-" :au[tocmd] [group] {event} {pat} [++once] [++nested] {cmd}
-"
-" autocmd FileType go nnoremap <leader>gd :UserSandboxText<CR>
-" autocmd Syntax source.go nnoremap <leader>gd :UserSandboxText<CR>
-
-
-" autocmd FileType py nnoremap <leader>x iHelloPython
-" autocmd FileType txt nnoremap <leader>x iHelloText
-
-" autocmd FileType go nnoremap <leader>gd :LspSymbolDefinition<CR>
-" autocmd FileType py nnoremap <leader>gd :LspSymbolDefinition<CR>
-
-" autocmd FileType py nnoremap <leader>gf :LspSymbolDefinition<CR>
-" autocmd Syntax py nnoremap <leader>gf :LspSymbolDefinition<CR>
-
-" autocmd Filetype gitcommit set spell textwidth=72
-" autocmd Filetype gitcommit set spell textwidth=72
-
-" nnoremap <leader>m1 /([^0-9w# ])\1\1<CR>
-" nnoremap <leader>m2 /fizz<CR>
-
-" nnoremap <C-]> :GotoDefinition side_by_side=true<CR>
-" nnoremap <leader>r <C-r>
-
-" nnoremap . ma.`a
-" nnoremap . ma.`a
-
-" inoremap <C-[> :i[
-" nnoremap <C-[> :n[
-
-" inoremap <C-c> :ic
-" nnoremap <C-c> :nc
-
-" inoremap <C-u> :iu
-" nnoremap <C-u> :nu
-
-" inoremap <C-x> :ix
-" nnoremap <C-x> :nx
-
-" inoremap <C-w> :iw
-" nnoremap <C-w> :nw
-
-" inoremap <C-l> :il
-" nnoremap <C-l> :nl
-
-" " Windowing leader aliases.
-" nnoremap <leader><bar> <C-w><bar>
-" nnoremap <leader>= <C-w>=
-" nnoremap <leader>_ <C-w>_
+" Plugin: Origami https://packagecontrol.io/packages/Origami
+nnoremap <C-w>z :ToggleZoomPane fraction=0.98<CR>
+nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
+nnoremap <leader>wd :DestroyPane direction=self<CR>
+nnoremap <leader>ws :CarryFileToPane direction=down<CR>
+nnoremap <leader>wv :CarryFileToPane direction=right<CR>
+nnoremap <leader>ww :UserDefaultSetLayout<CR>
