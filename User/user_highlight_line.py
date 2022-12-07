@@ -25,7 +25,7 @@ class LineHighlightEvents(sublime_plugin.EventListener):
         if is_normal_view(view):
             view.settings().set('highlight_line', True)
 
-    def on_selection_modified(self, view):
+    def on_post_text_command(self, view, command_name, args):
         if is_normal_view(view):
             settings = view.settings()
             highlight_line = settings.get('highlight_line')
