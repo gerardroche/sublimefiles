@@ -1,4 +1,6 @@
 {
+  	// "lsp_format_on_save": true,
+
 	// "auto_show_diagnostics_panel": false,
 	// "clients":
 	// {

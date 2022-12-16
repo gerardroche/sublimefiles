@@ -208,7 +208,7 @@
 		"no_italic",
 		"no_bold"
 	],
-	"font_size": 8,
+	"font_size": 9,
 	"highlight_line": true,
 	"hxardware_acceleration": "opengl",
 	"ignored_packages":
