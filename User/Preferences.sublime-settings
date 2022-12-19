@@ -127,7 +127,7 @@
 		"package-lock.json",
 		"tags"
 	],
-	"fold_buttons": true,
+	"fold_buttons": false,
 	"folder_exclude_patterns":
 	[
 		".Trash",
@@ -208,7 +208,7 @@
 		"no_italic",
 		"no_bold"
 	],
-	"font_size": 11,
+	"font_size": 10,
 	"highlight_line": true,
 	"hxardware_acceleration": "opengl",
 	"ignored_packages":
@@ -314,7 +314,7 @@
 		},
 		{
 			"depth": 1,
-			"path": "~/.config/sublime-text-3/Packages",
+			"path": "~/.config/sublime-text/Packages",
 		}
 	],
 	"show_definitions": false,

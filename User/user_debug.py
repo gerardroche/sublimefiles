@@ -51,6 +51,8 @@ class DumpInfoCommand(sublime_plugin.WindowCommand):
         print('| sublime.packages_path()            ', sublime.packages_path())
         print('| sublime.installed_packages_path()  ', sublime.installed_packages_path())
         print('| sublime.cache_path():              ', sublime.cache_path())
+        print(sublime.ui_info())
+        print(sublime.get_macro())
         print('+')
 
 

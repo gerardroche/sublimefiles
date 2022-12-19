@@ -280,6 +280,7 @@ class NeovintageousDumpViewCommand(sublime_plugin.WindowCommand):
             'motion',
             'motion_count',
             'multi_cursor_exit_from_visual_mode',
+            'capture_register',
             'must_capture_register_name',
             'non_interactive',
             'normal_insert_count',
