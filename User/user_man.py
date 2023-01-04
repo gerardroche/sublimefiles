@@ -26,6 +26,7 @@ def _man_path(window):
         return None
 
     if not os.path.isdir(path):
+        status_message('man path does not exist or is not a valid directory: ' + path)
         return None
 
     return path
