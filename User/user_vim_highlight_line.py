@@ -1,8 +1,8 @@
-from sublime import version
+import sublime
 import sublime_plugin
 
 
-if int(version()) >= 4050:
+if int(sublime.version()) >= 4050:
     def is_normal_view(view) -> bool:
         return view and view.element() is None
 else:

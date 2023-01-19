@@ -207,18 +207,18 @@
 		"no_italic",
 		"no_bold"
 	],
-	"font_size": 10,
+	"font_size": 14,
 	"highlight_line": true,
 	"hxardware_acceleration": "opengl",
 	"ignored_packages":
 	[
 		"GitGutter",
-		"polyfill",
 		"Python Completions",
 		"Six",
 		"SublimeTextAPICompletions",
 		"Vintage",
 		"Vintageous",
+		"polyfill"
 	],
 	"ignored_snippets":
 	[

@@ -1,10 +1,20 @@
 # Relative line numbers is only supported in builds versions >= 4074.
 
+import sublime
 import sublime_plugin
 
 
-def is_normal_view(view) -> bool:
-    return view and view.element() is None
+if int(sublime.version()) >= 4050:
+    def is_normal_view(view) -> bool:
+        return view and view.element() is None
+else:
+    def is_normal_view(view) -> bool:
+        if not view:
+            return False
+
+        settings = view.settings()
+
+        return settings and not settings.get('is_widget', False)
 
 
 def is_command_mode(view) -> bool:
