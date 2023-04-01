@@ -4,7 +4,7 @@
 # operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile ~/.gitignore_global
 
-# ST dependencies.
+# Dependencies.
 /coverage/
 /jsonschema/
 /markupsafe/
@@ -15,39 +15,26 @@
 /python-markdown/
 /pyyaml/
 
-/backrefs/
-/bracex/
-/lsp_utils/
-/pathlib/
-/sublime_lib/
-/wcmatch/
+# /_dummy_package.py
 
-# Packages
-/AutomaticPackageReloader/
+# Generated files.
 /AutomaticPackageReloader33/
-/UnitTesting33/
-/LaTeXTools/
-
-/_dummy_package.py
-
-# PHP runtime generated (by php-snippets).
-/PHP/Snippets/
-
-# PHP runtime generated (by PHP Completions Kit)
 /PHP/PHP.sublime-completions
+/PHP/Snippets/
+/UnitTesting33/
 
-# User
-*.pyi
-/.logs/
-/User/*sandbox.py
-/User/.neovintageous_log_level
-/User/Color Highlighter/
-/User/Package Control.*-ca-bundle
-/User/Package Control.cache/
-/User/Package Control.last-run
-/User/SublimeLinter/*.tmTheme
-/User/UnitTesting.sublime-settings
-/User/UnitTesting/
-/User/UnitTesting/*/coverage
-/User/UnitTesting/schedule.json
-/tmp/
+# # User
+# *.pyi
+# /.logs/
+# /User/*sandbox.py
+# /User/.neovintageous_log_level
+# /User/Color Highlighter/
+# /User/Package Control.*-ca-bundle
+# /User/Package Control.cache/
+# /User/Package Control.last-run
+# /User/SublimeLinter/*.tmTheme
+# /User/UnitTesting.sublime-settings
+# /User/UnitTesting/
+# /User/UnitTesting/*/coverage
+# /User/UnitTesting/schedule.json
+# /tmp/
