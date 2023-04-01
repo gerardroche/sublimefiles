@@ -22,6 +22,7 @@
 /PHP/PHP.sublime-completions
 /PHP/Snippets/
 /UnitTesting33/
+/User/Package Control.*-ca-bundle
 
 # # User
 # *.pyi
@@ -29,7 +30,6 @@
 # /User/*sandbox.py
 # /User/.neovintageous_log_level
 # /User/Color Highlighter/
-# /User/Package Control.*-ca-bundle
 # /User/Package Control.cache/
 # /User/Package Control.last-run
 # /User/SublimeLinter/*.tmTheme
