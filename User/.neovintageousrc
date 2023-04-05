@@ -109,4 +109,5 @@ nnoremap <leader>wv :CarryFileToPane direction=right<CR>
 nnoremap <leader>ww :UserDefaultSetLayout<CR>
 
 " LSP
-nnoremap FileType go gd :LspSymbolDefinition<CR>
+nnoremap FileType php gd :LspSymbolDefinition<CR>
+nnoremap FileType go,html gd :LspSymbolDefinition<CR>

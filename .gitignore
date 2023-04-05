@@ -15,14 +15,13 @@
 /python-markdown/
 /pyyaml/
 
-# /_dummy_package.py
-
 # Generated files.
 /AutomaticPackageReloader33/
 /PHP/PHP.sublime-completions
 /PHP/Snippets/
 /UnitTesting33/
 /User/Package Control.*-ca-bundle
+/User/UnitTesting/*/coverage
 
 # # User
 # *.pyi
@@ -35,6 +34,6 @@
 # /User/SublimeLinter/*.tmTheme
 # /User/UnitTesting.sublime-settings
 # /User/UnitTesting/
-# /User/UnitTesting/*/coverage
 # /User/UnitTesting/schedule.json
+# /_dummy_package.py
 # /tmp/
