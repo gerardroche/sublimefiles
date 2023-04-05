@@ -207,7 +207,7 @@
 		"no_italic",
 		"no_bold"
 	],
-	"font_size": 11,
+	"font_size": 10,
 	"highlight_line": true,
 	"hxardware_acceleration": "opengl",
 	"ignored_packages":
@@ -345,4 +345,5 @@
 	"vintageous_use_super_keys": true,
 	"word_wrap": false,
 	"xgit_gutter_enable": false,
+	"vintageous_use_ctrl_keys": true,
 }

@@ -107,3 +107,6 @@ nnoremap <leader>wd :DestroyPane direction=self<CR>
 nnoremap <leader>ws :CarryFileToPane direction=down<CR>
 nnoremap <leader>wv :CarryFileToPane direction=right<CR>
 nnoremap <leader>ww :UserDefaultSetLayout<CR>
+
+" LSP
+nnoremap FileType go gd :LspSymbolDefinition<CR>
