@@ -213,12 +213,12 @@
 	"ignored_packages":
 	[
 		"GitGutter",
-		"polyfill",
 		"Python Completions",
 		"Six",
 		"SublimeTextAPICompletions",
 		"Vintage",
 		"Vintageous",
+		"polyfill",
 	],
 	"ignored_snippets":
 	[
@@ -287,14 +287,14 @@
 	"mouse_wheel_switches_tabs": false,
 	"neovintageous_build_version": 12700,
 	"overlay_scroll_bars": "enabled",
+	// "phpunit.executable": "vendor/bin/phpunit",
+	// "phpunit.executable": ["vendor/bin/phpunit"],
+	// "phpunit.executable": ["artisan", "test"],
 	"phpunit.options":
 	{
+		// "colors=never": true,
 		"no-coverage": true,
 	},
-	"phpunitx.on_post_save":
-	[
-		"run_test_file"
-	],
 	"polyfill.experimental_features": true,
 	"preview_on_click": true,
 	"relative_line_numbers": true,
