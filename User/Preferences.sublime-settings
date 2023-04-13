@@ -213,12 +213,12 @@
 	"ignored_packages":
 	[
 		"GitGutter",
+		"polyfill",
 		"Python Completions",
 		"Six",
 		"SublimeTextAPICompletions",
 		"Vintage",
 		"Vintageous",
-		"polyfill",
 	],
 	"ignored_snippets":
 	[
@@ -290,11 +290,20 @@
 	// "phpunit.executable": "vendor/bin/phpunit",
 	// "phpunit.executable": ["vendor/bin/phpunit"],
 	// "phpunit.executable": ["artisan", "test"],
+	// "phpunit.executable": ["vendor/bin/pest"],
+
+	// "phpunit.debug": true,
+	// "phpunit.artisan": true,
+	// "phpunit.executable": ["artisan", "test"],
+	// "phpunit.executable": ["vendor/bin/pest"],
+	// "phpunit.executable": "vendor/bin/pest",
 	"phpunit.options":
 	{
-		// "colors=never": true,
+		// "colors=always": true,
 		"no-coverage": true,
 	},
+	// "phpunit.pest": true,
+	// "phpunit.debug": true,
 	"polyfill.experimental_features": true,
 	"preview_on_click": true,
 	"relative_line_numbers": true,
