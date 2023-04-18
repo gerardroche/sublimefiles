@@ -2,7 +2,7 @@
 	"always_show_minimap_viewport": true,
 	"animation_enabled": false,
 	"auto_complete_cycle": true,
-	"auto_complete_delay": 5,
+	"auto_complete_delay": 300,
 	"auto_complete_include_snippets": true,
 	"auto_complete_trailing_symbols": true,
 	"auto_complete_use_history": true,
@@ -14,7 +14,7 @@
 	"block_caret": false,
 	"caret_style": "solid",
 	"color_scheme": "Packages/MonokaiFree/MonokaiFree.tmTheme",
-	"color_scheme_unit.coverage": true,
+	"color_scheme_unit.coverage": false,
 	"cxaret_extra_bottom": 0,
 	"cxaret_extra_top": 0,
 	"cxaret_extra_width": 1,
@@ -203,11 +203,10 @@
 	],
 	"font_options":
 	[
-		"xgray_antialias",
-		"no_italic",
-		"no_bold"
+		// "xgray_antialias",
+		// "no_italic",
+		// "no_bold"
 	],
-	"font_size": 10,
 	"highlight_line": true,
 	"hxardware_acceleration": "opengl",
 	"ignored_packages":
@@ -288,22 +287,19 @@
 	"neovintageous_build_version": 12700,
 	"overlay_scroll_bars": "enabled",
 	// "phpunit.executable": "vendor/bin/phpunit",
-	// "phpunit.executable": ["vendor/bin/phpunit"],
-	// "phpunit.executable": ["artisan", "test"],
-	// "phpunit.executable": ["vendor/bin/pest"],
-
-	// "phpunit.debug": true,
-	// "phpunit.artisan": true,
-	// "phpunit.executable": ["artisan", "test"],
-	// "phpunit.executable": ["vendor/bin/pest"],
-	// "phpunit.executable": "vendor/bin/pest",
+	// "phpunit.font_size": 15,
 	"phpunit.options":
 	{
-		// "colors=always": true,
+		// "colors=never": true,
 		"no-coverage": true,
 	},
-	// "phpunit.pest": true,
 	// "phpunit.debug": true,
+	// "phpunit.artisan": true,
+	// "phpunit.strategy": "vimux",
+	// "phpunit.strategy": "kitty",
+	// "phpunit.artisan": true,
+	// "phpunit.paratest": true,
+	"phpunit.pest": true,
 	"polyfill.experimental_features": true,
 	"preview_on_click": true,
 	"relative_line_numbers": true,
@@ -355,4 +351,5 @@
 	"word_wrap": false,
 	"xgit_gutter_enable": false,
 	"vintageous_use_ctrl_keys": true,
+	"font_size": 10,
 }
