@@ -29,10 +29,12 @@
     { "keys": ["ctrl+alt+v"], "command": "sesame_open", "args": { "path": "~/vendor" } },
 
     // Test: https://github.com/gerardroche/sublime-test.
-    { "keys": ["ctrl+shift+a"], "command": "test_suite" },
+    // { "keys": ["ctrl+shift+a"], "command": "test_suite" },
+    { "keys": ["ctrl+shift+a"], "command": "unit_testing_current_package" },
     { "keys": ["ctrl+shift+c"], "command": "test_cancel" },
     { "keys": ["ctrl+shift+d"], "command": "test_suite", "args": {"coverage": true} },
     { "keys": ["ctrl+shift+f"], "command": "test_file" },
+    // { "keys": ["ctrl+shift+f"], "command": "unit_testing_current_file" },
     { "keys": ["ctrl+shift+g"], "command": "test_file", "args": {"coverage": true}},
     { "keys": ["ctrl+shift+l"], "command": "test_last" },
     { "keys": ["ctrl+shift+n"], "command": "test_nearest" },
