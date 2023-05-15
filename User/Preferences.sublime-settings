@@ -212,12 +212,12 @@
 	"ignored_packages":
 	[
 		"GitGutter",
-		"polyfill",
 		"Python Completions",
 		"Six",
 		"SublimeTextAPICompletions",
 		"Vintage",
 		"Vintageous",
+		"polyfill",
 	],
 	"ignored_snippets":
 	[
@@ -286,21 +286,18 @@
 	"mouse_wheel_switches_tabs": false,
 	"neovintageous_build_version": 12700,
 	"overlay_scroll_bars": "enabled",
-	// "phpunit.executable": "vendor/bin/phpunit",
-	// "phpunit.font_size": 15,
 	"phpunit.options":
 	{
 		// "colors=never": true,
 		"no-coverage": true,
 	},
-	// "phpunit.artisan": true,
 	// "phpunit.strategy": "vimux",
 	// "phpunit.strategy": "kitty",
 	// "phpunit.strategy": "gnome-terminal",
-	"phpunit.end_to_end_tests": true,
-	// "phpunit.artisan": true,
+	// "phpunit.end_to_end_tests": true,
 	// "phpunit.paratest": true,
 	// "phpunit.debug": true,
+	// "phpunit.artisan": true,
 	// "phpunit.pest": true,
 	"polyfill.experimental_features": true,
 	"preview_on_click": true,
@@ -351,7 +348,6 @@
 	"vintageous_terminal": "gnome-terminal",
 	"vintageous_use_super_keys": true,
 	"word_wrap": false,
-	"xgit_gutter_enable": false,
 	"vintageous_use_ctrl_keys": true,
 	"font_size": 9,
 }
