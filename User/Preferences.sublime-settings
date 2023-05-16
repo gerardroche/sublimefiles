@@ -1,4 +1,5 @@
 {
+	"show_full_path": false,
 	"always_show_minimap_viewport": true,
 	"animation_enabled": false,
 	"auto_complete_cycle": true,
