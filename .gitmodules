@@ -73,3 +73,9 @@
 [submodule "Tailwind CSS Completions"]
 	path = Tailwind CSS Completions
 	url = https://github.com/gerardroche/sublime-tailwind-css-completions.git
+[submodule "NeoVintageousLineNumbers"]
+	path = NeoVintageousLineNumbers
+	url = https://github.com/gerardroche/NeoVintageousLineNumbers.git
+[submodule "NeoVintageousHighlightLine"]
+	path = NeoVintageousHighlightLine
+	url = https://github.com/gerardroche/NeoVintageousHighlightLine.git
