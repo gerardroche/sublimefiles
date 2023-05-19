@@ -350,5 +350,12 @@
 	"vintageous_use_super_keys": true,
 	"word_wrap": false,
 	"vintageous_use_ctrl_keys": true,
-	"font_size": 9,
+	"font_size": 12,
+	"added_words":
+	[
+		"color",
+		"Monokai",
+		"plugin",
+		"neovintageousrc",
+	],
 }

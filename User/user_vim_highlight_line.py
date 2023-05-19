@@ -15,23 +15,26 @@ else:
         return settings and not settings.get('is_widget', False)
 
 
+def _set_highlight(view, flag: bool) -> None:
+    view.settings().set('highlight_line', flag)
+    view.settings().set('highlight_gutter', flag)
+
+
 class LineHighlightEvents(sublime_plugin.EventListener):
 
     def on_deactivated(self, view):
         if is_normal_view(view):
-            view.settings().set('highlight_line', False)
+            _set_highlight(view, False)
 
     def on_activated(self, view):
         if is_normal_view(view):
-            view.settings().set('highlight_line', True)
+            _set_highlight(view, True)
 
     def on_post_text_command(self, view, command_name, args):
         if is_normal_view(view):
-            settings = view.settings()
-            highlight_line = settings.get('highlight_line')
-            if settings.get('command_mode'):
+            highlight_line = view.settings().get('highlight_line')
+            if view.settings().get('command_mode'):
                 if highlight_line is False:
-                    settings.set('highlight_line', True)
-            else:
-                if highlight_line is True:
-                    settings.set('highlight_line', False)
+                    _set_highlight(view, True)
+            elif highlight_line is True:
+                _set_highlight(view, False)

@@ -35,10 +35,9 @@ set smartcase
 let mapleader=,
 
 nnoremap <leader><leader> :RevealInSideBar<CR>
-nnoremap <leader>G :GsShowStatus<CR>
+nnoremap <leader>G :GsShowStatus<CRl
 nnoremap <leader>c :CopyRelativeFilePath<CR>
 nnoremap <leader>d :Neovintageous action=toggle_side_bar<CR>
-nnoremap <leader>ee :SublimeLinterPanelToggle<cr>
 nnoremap <leader>ek :OpenKeyBindings<CR>
 nnoremap <leader>en :Neovintageous action=open_rc_file<CR>
 nnoremap <leader>ep :OpenPreferences<CR>
@@ -56,12 +55,15 @@ nnoremap <leader>hu :RevertHunk<CR>
 nnoremap <leader>o :ls<CR>
 nnoremap <leader>q gqip:w<CR>
 nnoremap <leader>r :reg<CR>
-nnoremap <leader>sp <C-w><C-s><C-w>k<C-w>q<C-w>j
+nnoremap <leader>sr :SublimeLinterLineReport<CR>
+nnoremap <leader>st :SublimeLinterPanelToggle<CR>
 nnoremap <leader>sv <C-w><C-v><C-w>h<C-w>q<C-w>l
 nnoremap <leader>x :GitOpen<CR>
 noremap <C-l> :nohlsearch<CR>
 noremap <C-s> :w<CR>
+noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
+noremap <leader>/ :ToggleInlineDiff<CR>
 noremap <space> :
 
 " Yank and paste using system clipboard.
