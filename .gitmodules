@@ -85,3 +85,6 @@
 [submodule "ToggleDebugMode"]
 	path = ToggleDebugMode
 	url = https://github.com/gerardroche/sublime-toggle-debug-mode.git
+[submodule "NeoVintageousColemak"]
+	path = NeoVintageousColemak
+	url = https://github.com/gerardroche/NeoVintageousColemak.git
