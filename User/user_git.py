@@ -43,51 +43,42 @@ class GitFormatGithubUrlCommand(sublime_plugin.TextCommand):
                 self.view.replace(edit, url_region, url)
 
 
-# class GitOpenCommand(sublime_plugin.TextCommand):
+class GitOpenUrlCommand(sublime_plugin.WindowCommand):
 
-#     def run(self, edit, event=None):
-#         url = _extract_github_url(self.view)
-#         if url:
-#             webbrowser.open_new_tab(url)
-#         else:
-#             file_name = self.view.file_name()
-#             if not file_name:
-#                 raise ValueError('expected file name')
+    def run(self):
+        view = self.window.active_view()
+        if not view:
+            return
 
-#             cwd = os.path.dirname(self.view.file_name())
-#             if not os.path.isdir(cwd):
-#                 raise ValueError('cwd is not a valid directory')
+        url = _extract_github_url(view)
+        if not url:
+            return
 
-#             subprocess.Popen(
-#                 ["/usr/bin/env", "bash", "-c", "git-open"],
-#                 cwd=cwd,
-#                 shell=False
-#             )
+        webbrowser.open_new_tab(url)
 
 
-class GitCommand(sublime_plugin.WindowCommand):
+class GitOpenModifiedCommand(sublime_plugin.WindowCommand):
 
-    def run(self, action):
-        if action == 'open_modified':
-            working_dir = _find_working_dir(self.window)
-            print('Git: working directory is', working_dir)
-            if not working_dir:
-                return status_message('Git: working directory not found')
+    def run(self):
+        working_dir = _find_working_dir(self.window)
+        print('Git: working directory is', working_dir)
+        if not working_dir:
+            status_message('Git: working directory not found')
+            return
 
-            output = subprocess.check_output(
-                ["/usr/bin/env", "bash", "-c", "git status --short"],
-                cwd=working_dir,
-                shell=False
-            ).decode('utf8')
+        output = subprocess.check_output(
+            ["/usr/bin/env", "bash", "-c", "git status --short"],
+            cwd=working_dir,
+            shell=False).decode('utf8')
 
-            matches = re.findall('\\sM\\s(.+)\n', output)
-            print('Git: opening {} modified files...'.format(len(matches)))
-            for match in matches:
-                match = match.strip('"')
-                abs_path = os.path.join(working_dir, match)
-                if not os.path.isdir(abs_path):
-                    print('Git: opening', match, '...')
-                    self.window.open_file(abs_path)
+        matches = re.findall('\\sM\\s(.+)\n', output)
+        print('Git: opening {} modified files...'.format(len(matches)))
+        for match in matches:
+            match = match.strip('"')
+            abs_path = os.path.join(working_dir, match)
+            if not os.path.isdir(abs_path):
+                print('Git: opening', match, '...')
+                self.window.open_file(abs_path)
 
 
 def _find_working_dir(window):

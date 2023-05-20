@@ -14,8 +14,7 @@
     { "caption": "User - Man", "command": "man" },
 
     // Git (User).
-    { "caption": "User - Git: Open Modified", "command": "git", "args": {"action": "open_modified"} },
-    { "caption": "User - Git: Open", "command": "git_open" },
+    { "caption": "User - Git Open Modified", "command": "git_open_modified" },
 
     // NeoVintageous. See: https://github.com/NeoVintageous/NeoVintageous.
     { "caption": "User - NeoVintageous: Dump Ex Completions", "command": "neovintageous_dev", "args": {"action": "dump_ex_completions"}},
