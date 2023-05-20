@@ -1,21 +1,20 @@
 {
-
     "scope": "text.phpunit-result",
     "completions": [
 
         {"trigger": "bg0", "contents": "#272822", "annotation": "#272822"},
         {"trigger": "bg1", "contents": "#3e3d32", "annotation": "#3e3d32"},
+        {"trigger": "blue", "contents": "#66d9ef", "annotation": "#66d9ef"},
+        {"trigger": "cyan", "contents": "#a1efe4", "annotation": "#a1efe4"},
         {"trigger": "fg0", "contents": "#f8f8f2", "annotation": "#f8f8f2"},
         {"trigger": "fg1", "contents": "#cfcfc2", "annotation": "#cfcfc2"},
         {"trigger": "fg2", "contents": "#75715e", "annotation": "#75715e"},
-        {"trigger": "yellow", "contents": "#e6db74", "annotation": "#e6db74"},
+        {"trigger": "green", "contents": "#a6e22e", "annotation": "#a6e22e"},
+        {"trigger": "magenta", "contents": "#fd5ff0", "annotation": "#fd5ff0"},
         {"trigger": "orange", "contents": "#fd971f", "annotation": "#fd971f"},
         {"trigger": "red", "contents": "#f92672", "annotation": "#f92672"},
-        {"trigger": "magenta", "contents": "#fd5ff0", "annotation": "#fd5ff0"},
         {"trigger": "violet", "contents": "#ae81ff", "annotation": "#ae81ff"},
-        {"trigger": "blue", "contents": "#66d9ef", "annotation": "#66d9ef"},
-        {"trigger": "cyan", "contents": "#a1efe4", "annotation": "#a1efe4"},
-        {"trigger": "green", "contents": "#a6e22e", "annotation": "#a6e22e"},
+        {"trigger": "yellow", "contents": "#e6db74", "annotation": "#e6db74"},
 
     ]
 }

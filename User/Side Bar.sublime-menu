@@ -1,14 +1,14 @@
 [
-    { "caption": "Open", "command": "tree_open", "args": { "files": [] } },
-    { "caption": "Duplicate...", "command": "tree_duplicate", "args": { "files": [] } },
-    { "caption": "Move...", "command": "tree_move", "args": { "files": [] } },
-    { "caption": "New File --interactive", "command": "tree_new_file", "args": { "dirs": [] } },
-    { "caption": "New File (HTML)", "command": "tree_new_html_file", "args": { "dirs": [] } },
-    { "caption": "New File (Markdown)", "command": "tree_new_markdown_file", "args": { "dirs": [] } },
-    { "caption": "New File (PHP)", "command": "tree_new_php_file", "args": { "dirs": [] } },
-    { "caption": "New File (PHPUnit) TestCase", "command": "tree_new_phpunit_test_case_file", "args": { "dirs": [] } },
-    { "caption": "New File (PHTML)", "command": "tree_new_phtml_file", "args": { "dirs": [] } },
-    { "caption": "New File (Python)", "command": "tree_new_python_file", "args": { "dirs": [] } },
+    { "caption": "User Open", "command": "tree_open", "args": { "files": [] } },
+    { "caption": "User Duplicate...", "command": "tree_duplicate", "args": { "files": [] } },
+    { "caption": "User Move...", "command": "tree_move", "args": { "files": [] } },
+    { "caption": "User New File --interactive", "command": "tree_new_file", "args": { "dirs": [] } },
+    { "caption": "User New File (HTML)", "command": "tree_new_html_file", "args": { "dirs": [] } },
+    { "caption": "User New File (Markdown)", "command": "tree_new_markdown_file", "args": { "dirs": [] } },
+    { "caption": "User New File (PHP)", "command": "tree_new_php_file", "args": { "dirs": [] } },
+    { "caption": "User New File (PHPUnit) TestCase", "command": "tree_new_phpunit_test_case_file", "args": { "dirs": [] } },
+    { "caption": "User New File (PHTML)", "command": "tree_new_phtml_file", "args": { "dirs": [] } },
+    { "caption": "User New File (Python)", "command": "tree_new_python_file", "args": { "dirs": [] } },
     { "caption": "-", "id": "folder_commands" },
-    { "caption": "Refresh Folders", "command": "refresh_folder_list" }
+    { "caption": "User Refresh Folders", "command": "refresh_folder_list" }
 ]

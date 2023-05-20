@@ -82,3 +82,6 @@
 [submodule "GitOpen"]
 	path = GitOpen
 	url = https://github.com/gerardroche/sublime-git-open.git
+[submodule "ToggleDebugMode"]
+	path = ToggleDebugMode
+	url = https://github.com/gerardroche/sublime-toggle-debug-mode.git

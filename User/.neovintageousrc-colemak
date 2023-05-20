@@ -38,20 +38,16 @@
 " noremap X dd
 " noremap C yy
 " noremap V P
-" noremap gv gp
 " noremap gV gP
 
 nnoremap z u
-vnoremap z :<C-U>undo<CR>
 nnoremap gz U
-vnoremap gz :<C-U>undo<CR>
 nnoremap Z <C-R>
-vnoremap Z :<C-U>redo<CR>
 
 " " Undo/redo
-" " nnoremap z u|xnoremap z :<C-U>undo<CR>|
-" " nnoremap gz U|xnoremap gz :<C-U>undo<CR>|
-" " nnoremap Z <C-R>|xnoremap Z :<C-U>redo<CR>|
+" " nnoremap z u
+" " nnoremap gz U
+" " nnoremap Z <C-R>
 
 " " Visual mode
 " noremap a v

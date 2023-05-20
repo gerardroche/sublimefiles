@@ -1,50 +1,9 @@
 import functools
-import logging
 import os
 import re
 
 import sublime
 import sublime_plugin
-
-
-def _log_level_file():
-    return os.path.join(sublime.packages_path(), 'User', '.neovintageous_log_level')
-
-
-def _set_logger_log_level(level):
-    level = level.strip().upper()
-
-    valid_levels = [
-        'CRITICAL',  # 50
-        'ERROR',  # 40
-        'WARNING',  # 30
-        'INFO',  # 20
-        'DEBUG',  # 10
-        'NOTSET',  # 0
-    ]
-
-    if level not in valid_levels:
-        raise ValueError('invalid log level')
-
-    logging.getLogger('NeoVintageous').setLevel(getattr(
-        logging,
-        level,
-        logging.DEBUG
-    ))
-
-    if level == 'NOTSET':
-        sublime.log_input(False)
-        sublime.log_commands(False)
-
-    print('NeoVintageous: log level {}'.format(level))
-
-
-def plugin_loaded():
-    if bool(os.getenv('SUBLIME_NEOVINTAGEOUS_DEBUG')):
-        log_level_file = _log_level_file()
-        if os.path.isfile(log_level_file):
-            with open(log_level_file, encoding='utf8') as f:
-                _set_logger_log_level(f.read().strip().upper())
 
 
 class NeovintageousDevCommand(sublime_plugin.WindowCommand):
@@ -116,27 +75,6 @@ class NeovintageousDevCommand(sublime_plugin.WindowCommand):
                     view = self.window.open_file(file)
 
                     sublime.set_timeout_async(functools.partial(set_utf8_encoding_save_and_close, view), 200)
-
-    def set_log_level_action(self):
-        log_levels = [
-            'CRITICAL',  # 50
-            'ERROR',  # 40
-            'WARNING',  # 30
-            'INFO',  # 20
-            'DEBUG',  # 10
-            'NOTSET',  # 0
-        ]
-
-        def on_done(index):
-            if index == -1:
-                return
-
-            log_level = log_levels[index].strip().upper()
-            _set_logger_log_level(log_level)
-            with open(_log_level_file(), 'w+', encoding='utf8') as f:
-                f.write(log_level)
-
-        self.window.show_quick_panel(log_levels, on_done)
 
     def dump_ex_completions_action(self):
         """Temporary hacky command to generate ex completions."""

@@ -21,7 +21,6 @@
     { "caption": "User - NeoVintageous: Dump Mappings", "command": "neovintageous_dev", "args": {"action": "dump_mappings"}},
     { "caption": "User - NeoVintageous: Edit Help File", "command": "neovintageous_dev", "args": {"action": "edit_help_file"}},
     { "caption": "User - NeoVintageous: Fixup Docs", "command": "neovintageous_dev", "args": {"action": "fixup_docs"}},
-    { "caption": "User - NeoVintageous: Set Log Level", "command": "neovintageous_dev", "args": {"action": "set_log_level"}},
 
     // Preferences (User).
     { "caption": "User - Disable Exclude Patterns", "command": "exclude_patterns", "args": {"action": "disable"} },

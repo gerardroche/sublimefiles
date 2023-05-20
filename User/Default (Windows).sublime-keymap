@@ -1,17 +1,4 @@
 [
-    // Debug.
-    { "keys": ["super+r"], "command": "package_reloader_reload" },
-
-    // Copy in NeoVintageous INSERT mode.
-    { "keys": ["ctrl+c"], "command": "copy" },
-
-    // Fix opening the context menu.
-    // See https://github.com/SublimeTextIssues/Core/issues/2128.
-    { "keys": ["shift+f10"], "command": "context_menu" },
-
-    // NeoVintageous: https://github.com/NeoVintageous/NeoVintageous.
-    { "keys": [",", "d"], "command": "neovintageous_toggle_side_bar", "context": [{ "key": "control", "operand": "sidebar_tree" }] },
-
     // Sesame: https://github.com/gerardroche/sublime-sesame.
     { "keys": ["ctrl+alt+a"], "command": "sesame_add" },
     { "keys": ["ctrl+alt+o"], "command": "sesame_open" },
@@ -28,5 +15,4 @@
     { "keys": ["ctrl+shift+r"], "command": "test_results" },
     { "keys": ["ctrl+shift+s"], "command": "test_switch" },
     { "keys": ["ctrl+shift+v"], "command": "test_visit" },
-
 ]

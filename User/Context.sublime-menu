@@ -1,7 +1,7 @@
 [
     { "caption": "-", "id": "file" },
-    { "command": "tree_duplicate_file", "caption": "Duplicate File" },
-    { "command": "tree_move_file", "caption": "Move File" },
+    { "command": "tree_duplicate_file", "caption": "User - Duplicate File" },
+    { "command": "tree_move_file", "caption": "User - Move File" },
     { "caption": "-", "id": "project" },
-    { "command": "refresh_folder_list", "caption": "Refresh Folders" },
+    { "command": "refresh_folder_list", "caption": "User - Refresh Folders" },
 ]
