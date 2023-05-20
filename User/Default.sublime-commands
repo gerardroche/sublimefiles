@@ -10,43 +10,35 @@
     { "caption": "User - Project: Open", "command": "prompt_open_project_or_workspace" },
     { "caption": "User - Project: Switch", "command": "prompt_switch_project_or_workspace" },
 
-    // Man (User).
+    // Man
     { "caption": "User - Man", "command": "man" },
 
-    // Git (User).
+    // Git
     { "caption": "User - Git Open Modified", "command": "git_open_modified" },
 
-    // NeoVintageous. See: https://github.com/NeoVintageous/NeoVintageous.
-    { "caption": "User - NeoVintageous: Dump Ex Completions", "command": "neovintageous_dev", "args": {"action": "dump_ex_completions"}},
-    { "caption": "User - NeoVintageous: Dump Mappings", "command": "neovintageous_dev", "args": {"action": "dump_mappings"}},
-    { "caption": "User - NeoVintageous: Edit Help File", "command": "neovintageous_dev", "args": {"action": "edit_help_file"}},
-    { "caption": "User - NeoVintageous: Fixup Docs", "command": "neovintageous_dev", "args": {"action": "fixup_docs"}},
+    // Rulers
+    { "caption": "User - Rulers: Add", "command": "rulers", "args": {"action": "add"}},
+    { "caption": "User - Rulers: Remove", "command": "rulers", "args": {"action": "remove"}},
+    { "caption": "User - Rulers: Clear", "command": "rulers", "args": {"action": "clear"}},
 
-    // Preferences (User).
-    { "caption": "User - Disable Exclude Patterns", "command": "exclude_patterns", "args": {"action": "disable"} },
-    { "caption": "User - Reset Exclude Patterns", "command": "exclude_patterns", "args": {"action": "reset"} },
-
-    // Rulers (User).
-    { "caption": "User - Rulers: Add Ruler", "command": "rulers", "args": {"action": "add"}},
-    { "caption": "User - Rulers: Clear Rulers", "command": "rulers", "args": {"action": "clear"}},
-    { "caption": "User - Rulers: Remove Ruler", "command": "rulers", "args": {"action": "remove"}},
-
-    // Scriptease (User).
-    { "caption": "User - Scriptease: Disable Debug Mode", "command": "scriptease", "args": {"action": "disable_debug_mode"} },
-    { "caption": "User - Scriptease: Enable Debug Mode", "command": "scriptease", "args": {"action": "enable_debug_mode"} },
-
-    // Sesame. See: https://github.com/gerardroche/sublime-sesame.
+    // Sesame
     { "caption": "User - Sesame: Add Vendor", "command": "sesame_add", "args": { "path": "~/vendor" } },
     { "caption": "User - Sesame: Open Vendor", "command": "sesame_open", "args": { "path": "~/vendor" } },
     { "caption": "User - Sesame: Switch Vendor", "command": "sesame_switch", "args": { "path": "~/vendor" } },
 
-    // SublimeLinter toggles (User).
+    // SublimeLinter
     { "caption": "User - SublimeLinter: Disable Linter", "command": "linters", "args": {"action": "disable"} },
     { "caption": "User - SublimeLinter: Enable Linter", "command": "linters", "args": {"action": "enable"} },
     { "caption": "User - SublimeLinter: Toggle Linter", "command": "linters", "args": {"action": "toggle"} },
     { "caption": "User - SublimeLinter: Toggle Mode", "command": "linters", "args": {"action": "toggle_mode"} },
 
-    // Debug (User).
+    // NeoVintageous
+    { "caption": "User - NeoVintageous: Dump Completions", "command": "neovintageous_dev", "args": {"action": "dump_ex_completions"}},
+    { "caption": "User - NeoVintageous: Dump Mappings", "command": "neovintageous_dev", "args": {"action": "dump_mappings"}},
+    { "caption": "User - NeoVintageous: Edit Help File", "command": "neovintageous_dev", "args": {"action": "edit_help_file"}},
+    { "caption": "User - NeoVintageous: Fixup Docs", "command": "neovintageous_dev", "args": {"action": "fixup_docs"}},
+
+    // Debug
     { "caption": "User - Debug: Dump Info", "command": "dump_info" },
     { "caption": "User - Debug: Dump View", "command": "dump_view" },
     { "caption": "User - Debug: Dump Scope", "command": "dump_scope" },
@@ -54,7 +46,7 @@
     // Tasks
     { "caption": "User - Tasks", "command": "tasks" },
 
-    // Toggles (User).
+    // Toggles
     { "caption": "User - Toggle Fold Buttons", "command": "toggle_fold_buttons" },
     { "caption": "User - Toggle Folder Exclude Pattern: build", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "build"} },
     { "caption": "User - Toggle Folder Exclude Pattern: logs", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "logs"} },
@@ -70,6 +62,6 @@
     { "caption": "User - Toggle Rulers", "command": "toggle_rulers" },
     { "caption": "User - Toggle Save on Focus Lost", "command": "toggle_save_on_focus_lost" },
 
-    // Tree (User).
+    // Tree
     { "caption": "User - Tree: New File", "command": "tree_new_file" },
 ]

@@ -88,3 +88,6 @@
 [submodule "NeoVintageousColemak"]
 	path = NeoVintageousColemak
 	url = https://github.com/gerardroche/NeoVintageousColemak.git
+[submodule "GotoPhpManual"]
+	path = GotoPhpManual
+	url = https://github.com/gerardroche/sublime-goto-php-manual.git
