@@ -1,9 +1,45 @@
 [
 
     // Man
-    { "keys": ["f1"], "command": "goto_documentation", "context": [ { "key": "selector", "operator": "equal", "operand": "-embedding.php", "match_all": true } ]},
-    { "keys": ["f1"], "command": "man_goto_php", "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
-    { "keys": ["shift+f1"], "command": "man_goto_php", "args": {"remote": true},   "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php", "match_all": true } ]},
+    {
+        "keys": ["f1"],
+        "command": "goto_documentation",
+        "context": [
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "-embedding.php",
+                "match_all": true
+            }
+        ]
+    },
+
+    // GotoPhpMan
+    {
+        "keys": ["f1"],
+        "command": "goto_php_manual",
+        "context": [
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "embedding.php",
+                "match_all": true
+            }
+        ]
+    },
+    {
+        "keys": ["shift+f1"],
+        "command": "goto_php_manual",
+        "args": {"remote": true},
+        "context": [
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "embedding.php",
+                "match_all": true
+            }
+         ]
+    },
 
     // NeoVintageous
     {

@@ -283,6 +283,7 @@
 	"line_padding_bottom": 0,
 	"line_padding_top": 0,
 	"man.path": "${PROJECTS_PATH}/.man",
+	"goto_php_manual.path": "${PROJECTS_PATH}/.man",
 	"match_brackets_angle": true,
 	"mouse_wheel_switches_tabs": false,
 	"neovintageous_build_version": 12700,
