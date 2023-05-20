@@ -43,26 +43,26 @@ class GitFormatGithubUrlCommand(sublime_plugin.TextCommand):
                 self.view.replace(edit, url_region, url)
 
 
-class GitOpenCommand(sublime_plugin.TextCommand):
+# class GitOpenCommand(sublime_plugin.TextCommand):
 
-    def run(self, edit, event=None):
-        url = _extract_github_url(self.view)
-        if url:
-            webbrowser.open_new_tab(url)
-        else:
-            file_name = self.view.file_name()
-            if not file_name:
-                raise ValueError('expected file name')
+#     def run(self, edit, event=None):
+#         url = _extract_github_url(self.view)
+#         if url:
+#             webbrowser.open_new_tab(url)
+#         else:
+#             file_name = self.view.file_name()
+#             if not file_name:
+#                 raise ValueError('expected file name')
 
-            cwd = os.path.dirname(self.view.file_name())
-            if not os.path.isdir(cwd):
-                raise ValueError('cwd is not a valid directory')
+#             cwd = os.path.dirname(self.view.file_name())
+#             if not os.path.isdir(cwd):
+#                 raise ValueError('cwd is not a valid directory')
 
-            subprocess.Popen(
-                ["/usr/bin/env", "bash", "-c", "git-open"],
-                cwd=cwd,
-                shell=False
-            )
+#             subprocess.Popen(
+#                 ["/usr/bin/env", "bash", "-c", "git-open"],
+#                 cwd=cwd,
+#                 shell=False
+#             )
 
 
 class GitCommand(sublime_plugin.WindowCommand):

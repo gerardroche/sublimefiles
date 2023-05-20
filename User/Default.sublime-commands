@@ -1,77 +1,77 @@
 [
 
-    { "caption": "Application: Clear Window", "command": "clear_window" },
-    { "caption": "Application: Close Window", "command": "close_window" },
-    { "caption": "Application: New File", "command": "new_file" },
-    { "caption": "Application: New Window", "command": "new_window" },
-    { "caption": "Application: Reset Window", "command": "reset_window" },
-    { "caption": "Preferences: Sort User Settings", "command": "sort_user_settings" },
-    { "caption": "Project: Open Recent", "command": "prompt_open_recent_project" },
-    { "caption": "Project: Open", "command": "prompt_open_project_or_workspace" },
-    { "caption": "Project: Switch", "command": "prompt_switch_project_or_workspace" },
+    { "caption": "User - Application: Clear Window", "command": "clear_window" },
+    { "caption": "User - Application: Close Window", "command": "close_window" },
+    { "caption": "User - Application: New File", "command": "new_file" },
+    { "caption": "User - Application: New Window", "command": "new_window" },
+    { "caption": "User - Application: Reset Window", "command": "reset_window" },
+    { "caption": "User - Preferences: Sort User Settings", "command": "sort_user_settings" },
+    { "caption": "User - Project: Open Recent", "command": "prompt_open_recent_project" },
+    { "caption": "User - Project: Open", "command": "prompt_open_project_or_workspace" },
+    { "caption": "User - Project: Switch", "command": "prompt_switch_project_or_workspace" },
 
     // Man (User).
-    { "caption": "Man", "command": "man" },
+    { "caption": "User - Man", "command": "man" },
 
     // Git (User).
-    { "caption": "Git: Open Modified", "command": "git", "args": {"action": "open_modified"} },
-    { "caption": "Git: Open", "command": "git_open" },
+    { "caption": "User - Git: Open Modified", "command": "git", "args": {"action": "open_modified"} },
+    { "caption": "User - Git: Open", "command": "git_open" },
 
     // NeoVintageous. See: https://github.com/NeoVintageous/NeoVintageous.
-    { "caption": "NeoVintageous: Dump Ex Completions", "command": "neovintageous_dev", "args": {"action": "dump_ex_completions"}},
-    { "caption": "NeoVintageous: Dump Mappings", "command": "neovintageous_dev", "args": {"action": "dump_mappings"}},
-    { "caption": "NeoVintageous: Edit Help File", "command": "neovintageous_dev", "args": {"action": "edit_help_file"}},
-    { "caption": "NeoVintageous: Fixup Docs", "command": "neovintageous_dev", "args": {"action": "fixup_docs"}},
-    { "caption": "NeoVintageous: Set Log Level", "command": "neovintageous_dev", "args": {"action": "set_log_level"}},
+    { "caption": "User - NeoVintageous: Dump Ex Completions", "command": "neovintageous_dev", "args": {"action": "dump_ex_completions"}},
+    { "caption": "User - NeoVintageous: Dump Mappings", "command": "neovintageous_dev", "args": {"action": "dump_mappings"}},
+    { "caption": "User - NeoVintageous: Edit Help File", "command": "neovintageous_dev", "args": {"action": "edit_help_file"}},
+    { "caption": "User - NeoVintageous: Fixup Docs", "command": "neovintageous_dev", "args": {"action": "fixup_docs"}},
+    { "caption": "User - NeoVintageous: Set Log Level", "command": "neovintageous_dev", "args": {"action": "set_log_level"}},
 
     // Preferences (User).
-    { "caption": "Disable Exclude Patterns", "command": "exclude_patterns", "args": {"action": "disable"} },
-    { "caption": "Reset Exclude Patterns", "command": "exclude_patterns", "args": {"action": "reset"} },
+    { "caption": "User - Disable Exclude Patterns", "command": "exclude_patterns", "args": {"action": "disable"} },
+    { "caption": "User - Reset Exclude Patterns", "command": "exclude_patterns", "args": {"action": "reset"} },
 
     // Rulers (User).
-    { "caption": "Rulers: Add Ruler", "command": "rulers", "args": {"action": "add"}},
-    { "caption": "Rulers: Clear Rulers", "command": "rulers", "args": {"action": "clear"}},
-    { "caption": "Rulers: Remove Ruler", "command": "rulers", "args": {"action": "remove"}},
+    { "caption": "User - Rulers: Add Ruler", "command": "rulers", "args": {"action": "add"}},
+    { "caption": "User - Rulers: Clear Rulers", "command": "rulers", "args": {"action": "clear"}},
+    { "caption": "User - Rulers: Remove Ruler", "command": "rulers", "args": {"action": "remove"}},
 
     // Scriptease (User).
-    { "caption": "Scriptease: Disable Debug Mode", "command": "scriptease", "args": {"action": "disable_debug_mode"} },
-    { "caption": "Scriptease: Enable Debug Mode", "command": "scriptease", "args": {"action": "enable_debug_mode"} },
+    { "caption": "User - Scriptease: Disable Debug Mode", "command": "scriptease", "args": {"action": "disable_debug_mode"} },
+    { "caption": "User - Scriptease: Enable Debug Mode", "command": "scriptease", "args": {"action": "enable_debug_mode"} },
 
     // Sesame. See: https://github.com/gerardroche/sublime-sesame.
-    { "caption": "Sesame: Add Vendor", "command": "sesame_add", "args": { "path": "~/vendor" } },
-    { "caption": "Sesame: Open Vendor", "command": "sesame_open", "args": { "path": "~/vendor" } },
-    { "caption": "Sesame: Switch Vendor", "command": "sesame_switch", "args": { "path": "~/vendor" } },
+    { "caption": "User - Sesame: Add Vendor", "command": "sesame_add", "args": { "path": "~/vendor" } },
+    { "caption": "User - Sesame: Open Vendor", "command": "sesame_open", "args": { "path": "~/vendor" } },
+    { "caption": "User - Sesame: Switch Vendor", "command": "sesame_switch", "args": { "path": "~/vendor" } },
 
     // SublimeLinter toggles (User).
-    { "caption": "SublimeLinter: Disable Linter", "command": "linters", "args": {"action": "disable"} },
-    { "caption": "SublimeLinter: Enable Linter", "command": "linters", "args": {"action": "enable"} },
-    { "caption": "SublimeLinter: Toggle Linter", "command": "linters", "args": {"action": "toggle"} },
-    { "caption": "SublimeLinter: Toggle Mode", "command": "linters", "args": {"action": "toggle_mode"} },
+    { "caption": "User - SublimeLinter: Disable Linter", "command": "linters", "args": {"action": "disable"} },
+    { "caption": "User - SublimeLinter: Enable Linter", "command": "linters", "args": {"action": "enable"} },
+    { "caption": "User - SublimeLinter: Toggle Linter", "command": "linters", "args": {"action": "toggle"} },
+    { "caption": "User - SublimeLinter: Toggle Mode", "command": "linters", "args": {"action": "toggle_mode"} },
 
     // Debug (User).
-    { "caption": "Debug: Dump Info", "command": "dump_info" },
-    { "caption": "Debug: Dump View", "command": "dump_view" },
-    { "caption": "Debug: Dump Scope", "command": "dump_scope" },
+    { "caption": "User - Debug: Dump Info", "command": "dump_info" },
+    { "caption": "User - Debug: Dump View", "command": "dump_view" },
+    { "caption": "User - Debug: Dump Scope", "command": "dump_scope" },
 
     // Tasks
-    { "caption": "Tasks", "command": "tasks" },
+    { "caption": "User - Tasks", "command": "tasks" },
 
     // Toggles (User).
-    { "caption": "Toggle Fold Buttons", "command": "toggle_fold_buttons" },
-    { "caption": "Toggle Folder Exclude Pattern: build", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "build"} },
-    { "caption": "Toggle Folder Exclude Pattern: logs", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "logs"} },
-    { "caption": "Toggle Folder Exclude Pattern: node_modules", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "node_modules"} },
-    { "caption": "Toggle Folder Exclude Pattern: tmp", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "tmp"} },
-    { "caption": "Toggle Folder Exclude Pattern: vendor", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "vendor"} },
-    { "caption": "Toggle Hidden File and Folders", "command": "toggle_hidden_files_and_folders" },
-    { "caption": "Toggle Highlight Line", "command": "toggle_highlight_line" },
-    { "caption": "Toggle Indent Guide", "command": "toggle_indent_guide" },
-    { "caption": "Toggle Invisibles", "command": "toggle_invisibles" },
-    { "caption": "Toggle Line Numbers", "command": "toggle_line_numbers" },
-    { "caption": "Toggle Preview on Click", "command": "toggle_preview_on_click" },
-    { "caption": "Toggle Rulers", "command": "toggle_rulers" },
-    { "caption": "Toggle Save on Focus Lost", "command": "toggle_save_on_focus_lost" },
+    { "caption": "User - Toggle Fold Buttons", "command": "toggle_fold_buttons" },
+    { "caption": "User - Toggle Folder Exclude Pattern: build", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "build"} },
+    { "caption": "User - Toggle Folder Exclude Pattern: logs", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "logs"} },
+    { "caption": "User - Toggle Folder Exclude Pattern: node_modules", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "node_modules"} },
+    { "caption": "User - Toggle Folder Exclude Pattern: tmp", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "tmp"} },
+    { "caption": "User - Toggle Folder Exclude Pattern: vendor", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "vendor"} },
+    { "caption": "User - Toggle Hidden File and Folders", "command": "toggle_hidden_files_and_folders" },
+    { "caption": "User - Toggle Highlight Line", "command": "toggle_highlight_line" },
+    { "caption": "User - Toggle Indent Guide", "command": "toggle_indent_guide" },
+    { "caption": "User - Toggle Invisibles", "command": "toggle_invisibles" },
+    { "caption": "User - Toggle Line Numbers", "command": "toggle_line_numbers" },
+    { "caption": "User - Toggle Preview on Click", "command": "toggle_preview_on_click" },
+    { "caption": "User - Toggle Rulers", "command": "toggle_rulers" },
+    { "caption": "User - Toggle Save on Focus Lost", "command": "toggle_save_on_focus_lost" },
 
     // Tree (User).
-    { "caption": "Tree: New File", "command": "tree_new_file" },
+    { "caption": "User - Tree: New File", "command": "tree_new_file" },
 ]

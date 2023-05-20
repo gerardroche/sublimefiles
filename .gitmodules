@@ -79,3 +79,6 @@
 [submodule "NeoVintageousHighlightLine"]
 	path = NeoVintageousHighlightLine
 	url = https://github.com/gerardroche/NeoVintageousHighlightLine.git
+[submodule "GitOpen"]
+	path = GitOpen
+	url = https://github.com/gerardroche/sublime-git-open.git
