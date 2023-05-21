@@ -14,6 +14,7 @@
 " set modelines=7
 " set nomenu
 " set nominimap
+" set nowrapscan
 " set number
 " set scrolloff=9
 " set shell=/bin/bash
@@ -26,16 +27,16 @@
 " set textwidth=80
 " set winaltkeys=menu
 " set wrap
-" set nowrapscan
 
 set ignorecase
+set nomenu
 set nominimap
 set smartcase
 
 let mapleader=,
 
 nnoremap <leader><leader> :RevealInSideBar<CR>
-nnoremap <leader>G :GsShowStatus<CRl
+nnoremap <leader>G :GsShowStatus<CR>
 nnoremap <leader>c :CopyRelativeFilePath<CR>
 nnoremap <leader>d :Neovintageous action=toggle_side_bar<CR>
 nnoremap <leader>ek :OpenKeyBindings<CR>

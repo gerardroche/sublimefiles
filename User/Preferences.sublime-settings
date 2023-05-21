@@ -134,6 +134,7 @@
 		".Trash",
 		".Trash-*",
 		".git",
+		"_site",
 		".hg",
 		".idea",
 		".mypy_cache",
