@@ -5,8 +5,7 @@ import webbrowser
 
 import sublime_plugin
 
-
-from GotoPhpManual.plugin import _man_path
+from GotoPhpManual.plugin import _get_path  # type: ignore
 
 
 class ManCommand(sublime_plugin.WindowCommand):
@@ -16,7 +15,7 @@ class ManCommand(sublime_plugin.WindowCommand):
         if not view:
             return
 
-        path = _man_path(self.window)
+        path = _get_path(view)
         if not path:
             return
 

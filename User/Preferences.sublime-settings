@@ -91,7 +91,7 @@
 		"*.so",
 		"*.so.*",
 		"*.sqlite",
-		"*.sublime-package",
+		"*.xsublime-package",
 		"*.sublime-project",
 		"*.sublime-workspace",
 		"*.suo",
