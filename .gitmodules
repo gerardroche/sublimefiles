@@ -91,3 +91,6 @@
 [submodule "GotoPhpManual"]
 	path = GotoPhpManual
 	url = https://github.com/gerardroche/sublime-goto-php-manual.git
+[submodule "NeoVintageousDvorak"]
+	path = NeoVintageousDvorak
+	url = https://github.com/gerardroche/NeoVintageousDvorak.git
