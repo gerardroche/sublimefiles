@@ -62,7 +62,7 @@
 	path = Tmux
 	url = https://github.com/gerardroche/sublime-tmux.git
 [submodule "ToggleNeoVintageous"]
-	path = ToggleNeoVintageous
+	path = NeoVintageousToggle
 	url = https://github.com/NeoVintageous/NeoVintageousToggle.git
 [submodule "UnitTesting"]
 	path = UnitTesting
