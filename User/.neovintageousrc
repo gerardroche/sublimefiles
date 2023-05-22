@@ -16,7 +16,7 @@
 " set nominimap
 " set nowrapscan
 " set number
-" set scrolloff=9
+" set scrolloff=8
 " set shell=/bin/bash
 " set sidebar
 " set sidescrolloff=9
