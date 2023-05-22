@@ -37,9 +37,6 @@
 [submodule "phpunit-completions"]
 	path = phpunit-completions
 	url = https://github.com/gerardroche/sublime-phpunit-completions.git
-[submodule "polyfill"]
-	path = polyfill
-	url = https://github.com/gerardroche/sublime-polyfill.git
 [submodule "Sensible"]
 	path = Sensible
 	url = https://github.com/gerardroche/sublime-sensible.git
