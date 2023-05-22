@@ -73,4 +73,35 @@
     // Sublime Text.
     { "keys": ["super+r"], "command": "package_reloader_reload" },
 
+    /////////////
+    // Overlay //
+    /////////////
+
+    // {
+    //     "keys": ["ctrl+s"],
+    //     "command": "overlay_open_file",
+    //     "args": { "split": true },
+    //     "context": [
+    //         { "key": "overlay_visible" },
+    //         { "key": "control", "operand": "overlay_control" }
+    //     ]
+    // },
+    // {
+    //     "keys": ["ctrl+t"],
+    //     "command": "overlay_open_file",
+    //     "args": { "tab": true },
+    //     "context": [
+    //         { "key": "overlay_visible" },
+    //         { "key": "control", "operand": "overlay_control" }
+    //     ]
+    // },
+    // {
+    //     "keys": ["ctrl+v"],
+    //     "command": "overlay_open_file",
+    //     "args": { "vsplit": true },
+    //     "context": [
+    //         { "key": "overlay_visible" },
+    //         { "key": "control", "operand": "overlay_control" }
+    //     ]
+    // },
 ]
