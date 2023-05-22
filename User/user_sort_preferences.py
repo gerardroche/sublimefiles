@@ -10,7 +10,7 @@ def save_preferences():
     sublime.save_settings('Preferences.sublime-settings')
 
 
-class SortUserSettingsCommand(sublime_plugin.WindowCommand):
+class UserSortPreferences(sublime_plugin.WindowCommand):
 
     def run(self):
         with save_preferences() as preferences:

@@ -6,7 +6,6 @@
     { "caption": "User - Application: New Window", "command": "new_window" },
     { "caption": "User - Application: Reset Window", "command": "reset_window" },
     { "caption": "User - Preferences: Sort User Settings", "command": "sort_user_settings" },
-    { "caption": "User - Project: Open Recent", "command": "prompt_open_recent_project" },
     { "caption": "User - Project: Open", "command": "prompt_open_project_or_workspace" },
     { "caption": "User - Project: Switch", "command": "prompt_switch_project_or_workspace" },
 
@@ -38,13 +37,13 @@
     { "caption": "User - NeoVintageous: Edit Help File", "command": "neovintageous_dev", "args": {"action": "edit_help_file"}},
     { "caption": "User - NeoVintageous: Fixup Docs", "command": "neovintageous_dev", "args": {"action": "fixup_docs"}},
 
-    // Debug
-    { "caption": "User - Debug: Dump Info", "command": "dump_info" },
-    { "caption": "User - Debug: Dump View", "command": "dump_view" },
-    { "caption": "User - Debug: Dump Scope", "command": "dump_scope" },
+    // Dump.
+    { "caption": "User - Dump Info", "command": "user_dump_info" },
+    { "caption": "User - Dump View", "command": "user_dump_view" },
+    { "caption": "User - Dump Scope", "command": "user_dump_scope" },
 
-    // Tasks
-    { "caption": "User - Tasks", "command": "tasks" },
+    // Tasks.
+    { "caption": "User - Tasks", "command": "user_tasks" },
 
     // Toggles
     { "caption": "User - Toggle Fold Buttons", "command": "toggle_fold_buttons" },

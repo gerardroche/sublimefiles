@@ -17,8 +17,8 @@
         "id": "developer-tools",
         "caption": "Developer Tools",
         "children": [
-            { "command": "dump_view" },
-            { "command": "dump_info" },
+            { "command": "user_dump_info" },
+            { "command": "user_dump_view" },
             { "command": "neovintageous_dump_view" },
         ]
     }

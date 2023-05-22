@@ -1,7 +1,7 @@
 import sublime_plugin
 
 
-class TasksCommand(sublime_plugin.WindowCommand):
+class Tasks(sublime_plugin.WindowCommand):
 
     def run(self, interactive=True):
         self.window.run_command('show_panel', {

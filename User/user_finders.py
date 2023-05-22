@@ -9,26 +9,6 @@ class FindInOpenFoldersCommand(sublime_plugin.WindowCommand):
         _find_in_open_folders(self.window, **kwargs)
 
 
-class FocusUnitTestingPanelCommand(sublime_plugin.WindowCommand):
-
-    def run(self):
-        self.window.run_command('show_panel', {'panel': 'output.UnitTesting'})
-        self.window.focus_view(self.window.find_output_panel('UnitTesting'))
-
-
-class ShowFindResultsCommand(sublime_plugin.WindowCommand):
-
-    def run(self):
-        for view in self.window.views():
-            if view.name() == 'Find Results':
-                # Clear any visual selection.
-                sel = view.sel()[0].begin()
-                view.sel().clear()
-                view.sel().add(sel)
-
-                return self.window.focus_view(view)
-
-
 class FindFileUnderCursorCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):

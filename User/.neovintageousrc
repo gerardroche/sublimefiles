@@ -37,7 +37,9 @@ let mapleader=,
 
 nnoremap <leader><leader> :RevealInSideBar<CR>
 nnoremap <leader>G :GsShowStatus<CR>
-nnoremap <leader>c :CopyRelativeFilePath<CR>
+nnoremap <leader>ca :SideBarCopyAbsolutePath<CR>
+nnoremap <leader>cn :SideBarCopyName<CR>
+nnoremap <leader>cr :SideBarCopyRelativePath<CR>
 nnoremap <leader>d :Neovintageous action=toggle_side_bar<CR>
 nnoremap <leader>ek :OpenKeyBindings<CR>
 nnoremap <leader>en :Neovintageous action=open_rc_file<CR>
@@ -81,21 +83,21 @@ nnoremap <leader>sp vip:sort u<CR>
 nnoremap <leader>ss vip:sort u<CR>
 vnoremap <leader>s :sort u<CR>
 
-" Plugin: User - Finders
+" Finders.
 nnoremap <leader>f  :FindInOpenFolders interactive=true filter=true include_vendor=true<CR>
 noremap <C-S-f3>    :FindInOpenFolders interactive=true filter=true<CR>
 noremap <C-S-f4>    :FindInOpenFolders interactive=true filter=true include_vendor=true<CR>
 noremap <C-f3>      :FindInOpenFolders interactive=true<CR>
 noremap <S-f3>      :FindInOpenFolders interactive=false<CR>
 
-" Plugin: User - Debug
-nnoremap <leader>vd :DumpVariable phpfunc=dump<CR>
-nnoremap <leader>vm :DumpVariable phpfunc=dump content=__METHOD__<CR>
-nnoremap <leader>vp :DumpVariable phpfunc=print_r<CR>
-nnoremap <leader>vr :DumpVariable sublime_region_view_string=true<CR>
-nnoremap <leader>vv :DumpVariable phpfunc=dd<CR>
+" Dump Variable.
+nnoremap <leader>vd :UserDumpVariable phpfunc=dump<CR>
+nnoremap <leader>vm :UserDumpVariable phpfunc=dump content=__METHOD__<CR>
+nnoremap <leader>vp :UserDumpVariable phpfunc=print_r<CR>
+nnoremap <leader>vr :UserDumpVariable sublime_region_view_string=true<CR>
+nnoremap <leader>vv :UserDumpVariable phpfunc=dd<CR>
 
-" Plugin: Test https://github.com/gerardroche/sublime-test
+" Test: https://github.com/gerardroche/sublime-test
 nnoremap <D-n> :TestNearest<CR>
 nnoremap <leader>T :TestFile<CR>
 nnoremap <leader>a :TestSuite<CR>
@@ -103,13 +105,9 @@ nnoremap <leader>gg :TestVisit<CR>
 nnoremap <leader>l :TestLast<CR>
 nnoremap <leader>t :TestNearest<CR>
 
-" Plugin: Origami https://packagecontrol.io/packages/Origami
+" Origami: https://packagecontrol.io/packages/Origami
 nnoremap <C-w>z :ToggleZoomPane fraction=0.98<CR>
 nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
-nnoremap <leader>wd :DestroyPane direction=self<CR>
-nnoremap <leader>ws :CarryFileToPane direction=down<CR>
-nnoremap <leader>wv :CarryFileToPane direction=right<CR>
-nnoremap <leader>ww :UserDefaultSetLayout<CR>
 
 " LSP
 nnoremap FileType php gd :LspSymbolDefinition<CR>
