@@ -1,9 +1,5 @@
-import os
 import re
-import subprocess
-import webbrowser
 
-from sublime import status_message
 import sublime_plugin
 
 
@@ -41,77 +37,6 @@ class GitFormatGithubUrlCommand(sublime_plugin.TextCommand):
                 url = url.replace('#', '/issues/')
 
                 self.view.replace(edit, url_region, url)
-
-
-class GitOpenUrlCommand(sublime_plugin.WindowCommand):
-
-    def run(self):
-        view = self.window.active_view()
-        if not view:
-            return
-
-        url = _extract_github_url(view)
-        if not url:
-            return
-
-        webbrowser.open_new_tab(url)
-
-
-class GitOpenModifiedCommand(sublime_plugin.WindowCommand):
-
-    def run(self):
-        working_dir = _find_working_dir(self.window)
-        print('Git: working directory is', working_dir)
-        if not working_dir:
-            status_message('Git: working directory not found')
-            return
-
-        output = subprocess.check_output(
-            ["/usr/bin/env", "bash", "-c", "git status --short"],
-            cwd=working_dir,
-            shell=False).decode('utf8')
-
-        matches = re.findall('\\sM\\s(.+)\n', output)
-        print('Git: opening {} modified files...'.format(len(matches)))
-        for match in matches:
-            match = match.strip('"')
-            abs_path = os.path.join(working_dir, match)
-            if not os.path.isdir(abs_path):
-                print('Git: opening', match, '...')
-                self.window.open_file(abs_path)
-
-
-def _find_working_dir(window):
-    if not window:
-        return None
-
-    folders = window.folders()
-    if not folders:
-        return None
-
-    view = window.active_view()
-    file_name = view.file_name() if view else None
-
-    if not file_name and len(folders) == 1:
-        return folders[0]
-
-    if not file_name:
-        return
-
-    ancestor_folders = []
-    common_prefix = os.path.commonprefix(folders)
-    parent = os.path.dirname(file_name)
-    while parent not in ancestor_folders and parent.startswith(common_prefix):
-        ancestor_folders.append(parent)
-        parent = os.path.dirname(parent)
-
-    ancestor_folders.sort(reverse=True)
-
-    for folder in ancestor_folders:
-        if os.path.exists(os.path.join(folder, '.git')):
-            return folder
-
-    return None
 
 
 def _create_github_url(*args):

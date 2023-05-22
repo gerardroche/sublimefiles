@@ -214,6 +214,7 @@
 	"ignored_packages":
 	[
 		"GitGutter",
+		"NeoVintageousHighlightLine",
 		"polyfill",
 		"Python Completions",
 		"Six",

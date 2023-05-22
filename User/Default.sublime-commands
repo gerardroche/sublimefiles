@@ -12,9 +12,6 @@
     // Man
     { "caption": "User - Man", "command": "man" },
 
-    // Git
-    { "caption": "User - Git Open Modified", "command": "git_open_modified" },
-
     // Rulers
     { "caption": "User - Rulers: Add", "command": "rulers", "args": {"action": "add"}},
     { "caption": "User - Rulers: Remove", "command": "rulers", "args": {"action": "remove"}},
@@ -61,6 +58,4 @@
     { "caption": "User - Toggle Rulers", "command": "toggle_rulers" },
     { "caption": "User - Toggle Save on Focus Lost", "command": "toggle_save_on_focus_lost" },
 
-    // Tree
-    { "caption": "User - Tree: New File", "command": "tree_new_file" },
 ]

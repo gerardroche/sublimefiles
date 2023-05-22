@@ -4,7 +4,7 @@ import sublime
 import sublime_plugin
 
 
-class DumpInfoCommand(sublime_plugin.WindowCommand):
+class UserDumpInfo(sublime_plugin.WindowCommand):
 
     def run(self):
         print('+-------------------')

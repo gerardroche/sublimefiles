@@ -29,7 +29,7 @@
 " set wrap
 
 set ignorecase
-set nomenu
+" set nomenu
 set nominimap
 set smartcase
 
