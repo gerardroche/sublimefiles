@@ -93,7 +93,7 @@
 	url = https://github.com/gerardroche/NeoVintageousDvorak.git
 [submodule "NeoVintageousTree"]
 	path = NeoVintageousTree
-	url = https://github.com/gerardroche/NeoVintageousTree.git
+	url = https://github.com/gerardroche/NeoVintageousFiles.git
 [submodule "GitOpenModified"]
 	path = GitOpenModified
 	url = https://github.com/gerardroche/sublime-git-open-modified.git

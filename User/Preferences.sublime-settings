@@ -304,7 +304,7 @@
 	// "phpunit.artisan": true,
 	// "phpunit.pest": true,
 	"polyfill.experimental_features": true,
-	"preview_on_click": true,
+	"preview_on_click": false,
 	"relative_line_numbers": true,
 	"remember_full_screen": true,
 	"remember_open_files": true,
