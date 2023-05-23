@@ -92,7 +92,7 @@
 	path = NeoVintageousDvorak
 	url = https://github.com/gerardroche/NeoVintageousDvorak.git
 [submodule "NeoVintageousTree"]
-	path = NeoVintageousTree
+	path = NeoVintageousFiles
 	url = https://github.com/gerardroche/NeoVintageousFiles.git
 [submodule "GitOpenModified"]
 	path = GitOpenModified
