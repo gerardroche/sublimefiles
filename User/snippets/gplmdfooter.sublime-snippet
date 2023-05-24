@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+## License
+
+Released under the [GPL-3.0-or-later License](LICENSE).
+$0
+]]></content>
+    <tabTrigger>gplmdfooter</tabTrigger>
+    <description>GPL md footer</description>
+</snippet>
