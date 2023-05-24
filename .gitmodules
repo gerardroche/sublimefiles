@@ -97,3 +97,6 @@
 [submodule "GitOpenModified"]
 	path = GitOpenModified
 	url = https://github.com/gerardroche/sublime-git-open-modified.git
+[submodule "ShowAsciiValue"]
+	path = ShowAsciiValue
+	url = https://github.com/gerardroche/sublime-show-ascii-value.git
