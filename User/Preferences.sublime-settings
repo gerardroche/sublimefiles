@@ -216,6 +216,7 @@
 		"GitGutter",
 		"polyfill",
 		"Python Completions",
+		"ShowAsciiValue",
 		"Six",
 		"SublimeLinter-eslint",
 		"SublimeTextAPICompletions",
@@ -345,6 +346,7 @@
 	"vintageous_enable_sneak": true,
 	"vintageous_handle_keys":
 	{
+		"<C-f12>": false,
 		"<S-tab>": false,
 		"i_<C-u>": false,
 	},
@@ -353,7 +355,7 @@
 	"vintageous_use_super_keys": true,
 	"word_wrap": false,
 	"vintageous_use_ctrl_keys": true,
-	"font_size": 12,
+	"font_size": 11,
 	"added_words":
 	[
 		"Monokai",

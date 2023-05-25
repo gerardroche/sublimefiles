@@ -100,3 +100,6 @@
 [submodule "ShowAsciiValue"]
 	path = ShowAsciiValue
 	url = https://github.com/gerardroche/sublime-show-ascii-value.git
+[submodule "GotoDefinitionSplit"]
+	path = GotoDefinitionSplit
+	url = https://github.com/gerardroche/sublime-goto-definition-split.git

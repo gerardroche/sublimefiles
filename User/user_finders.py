@@ -3,6 +3,29 @@ import os
 import sublime_plugin
 
 
+class TestCommand(sublime_plugin.WindowCommand):
+    def run(self, **kwargs):
+        print('1kwargs =', kwargs)
+
+
+class TestAgainCommand(sublime_plugin.WindowCommand):
+    def run(self, **kwargs):
+        print('2kwargs =', kwargs)
+
+
+class TestChainCommand(sublime_plugin.WindowCommand):
+    def run(self, **kwargs):
+        print('chain..')
+
+        commands = [
+            ('test', {'k': 'x'}),
+            ('test_again', {'y': 'z'})
+        ]
+
+        for command, args in commands:
+            self.window.run_command(command, args)
+
+
 class FindInOpenFoldersCommand(sublime_plugin.WindowCommand):
 
     def run(self, **kwargs):
