@@ -5,44 +5,30 @@
     { "caption": "User - Application: New File", "command": "new_file" },
     { "caption": "User - Application: New Window", "command": "new_window" },
     { "caption": "User - Application: Reset Window", "command": "reset_window" },
-    { "caption": "User - Preferences: Sort User Settings", "command": "sort_user_settings" },
-    { "caption": "User - Project: Open", "command": "prompt_open_project_or_workspace" },
-    { "caption": "User - Project: Switch", "command": "prompt_switch_project_or_workspace" },
-
-    // Man
+    { "caption": "User - Dump Info", "command": "user_dump_info" },
+    { "caption": "User - Dump Scope", "command": "user_dump_scope" },
+    { "caption": "User - Dump View", "command": "user_dump_view" },
+    { "caption": "User - Generate PHPUnit Test", "command": "generate_phpunit_test" },
     { "caption": "User - Man", "command": "man" },
-
-    // Rulers
-    { "caption": "User - Rulers: Add", "command": "rulers", "args": {"action": "add"}},
-    { "caption": "User - Rulers: Remove", "command": "rulers", "args": {"action": "remove"}},
-    { "caption": "User - Rulers: Clear", "command": "rulers", "args": {"action": "clear"}},
-
-    // Sesame
-    { "caption": "User - Sesame: Add Vendor", "command": "sesame_add", "args": { "path": "~/vendor" } },
-    { "caption": "User - Sesame: Open Vendor", "command": "sesame_open", "args": { "path": "~/vendor" } },
-    { "caption": "User - Sesame: Switch Vendor", "command": "sesame_switch", "args": { "path": "~/vendor" } },
-
-    // SublimeLinter
-    { "caption": "User - SublimeLinter: Disable Linter", "command": "linters", "args": {"action": "disable"} },
-    { "caption": "User - SublimeLinter: Enable Linter", "command": "linters", "args": {"action": "enable"} },
-    { "caption": "User - SublimeLinter: Toggle Linter", "command": "linters", "args": {"action": "toggle"} },
-    { "caption": "User - SublimeLinter: Toggle Mode", "command": "linters", "args": {"action": "toggle_mode"} },
-
-    // NeoVintageous
     { "caption": "User - NeoVintageous: Dump Completions", "command": "neovintageous_dev", "args": {"action": "dump_ex_completions"}},
     { "caption": "User - NeoVintageous: Dump Mappings", "command": "neovintageous_dev", "args": {"action": "dump_mappings"}},
     { "caption": "User - NeoVintageous: Edit Help File", "command": "neovintageous_dev", "args": {"action": "edit_help_file"}},
     { "caption": "User - NeoVintageous: Fixup Docs", "command": "neovintageous_dev", "args": {"action": "fixup_docs"}},
-
-    // Dump.
-    { "caption": "User - Dump Info", "command": "user_dump_info" },
-    { "caption": "User - Dump View", "command": "user_dump_view" },
-    { "caption": "User - Dump Scope", "command": "user_dump_scope" },
-
-    // Tasks.
+    { "caption": "User - Preferences: Sort User Settings", "command": "sort_user_settings" },
+    { "caption": "User - Project: Open", "command": "prompt_open_project_or_workspace" },
+    { "caption": "User - Project: Switch", "command": "prompt_switch_project_or_workspace" },
+    { "caption": "User - Rulers: Add", "command": "rulers", "args": {"action": "add"}},
+    { "caption": "User - Rulers: Clear", "command": "rulers", "args": {"action": "clear"}},
+    { "caption": "User - Rulers: Remove", "command": "rulers", "args": {"action": "remove"}},
+    { "caption": "User - Sesame: Add Vendor", "command": "sesame_add", "args": { "path": "~/vendor" } },
+    { "caption": "User - Sesame: Open Vendor", "command": "sesame_open", "args": { "path": "~/vendor" } },
+    { "caption": "User - Sesame: Switch Vendor", "command": "sesame_switch", "args": { "path": "~/vendor" } },
+    { "caption": "User - Sort Preferences", "command": "user_sort_preferences" },
+    { "caption": "User - SublimeLinter: Disable Linter", "command": "linters", "args": {"action": "disable"} },
+    { "caption": "User - SublimeLinter: Enable Linter", "command": "linters", "args": {"action": "enable"} },
+    { "caption": "User - SublimeLinter: Toggle Linter", "command": "linters", "args": {"action": "toggle"} },
+    { "caption": "User - SublimeLinter: Toggle Mode", "command": "linters", "args": {"action": "toggle_mode"} },
     { "caption": "User - Tasks", "command": "user_tasks" },
-
-    // Toggles
     { "caption": "User - Toggle Fold Buttons", "command": "toggle_fold_buttons" },
     { "caption": "User - Toggle Folder Exclude Pattern: build", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "build"} },
     { "caption": "User - Toggle Folder Exclude Pattern: logs", "command": "toggle_folder_exclude_pattern", "args": {"pattern": "logs"} },

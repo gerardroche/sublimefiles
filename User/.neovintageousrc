@@ -29,7 +29,6 @@
 " set wrap
 
 set ignorecase
-" set nomenu
 set nominimap
 set smartcase
 
@@ -55,19 +54,20 @@ nnoremap <leader>gv :FindFileUnderCursor<CR>
 nnoremap <leader>hm :RevertModification<CR>
 nnoremap <leader>hp :PasteFromHistory<CR>
 nnoremap <leader>hu :RevertHunk<CR>
+nnoremap <leader>oc :GitOpen commit=true<CR>
+nnoremap <leader>oi :GitOpen issue=true<CR>
+nnoremap <leader>oo :GitOpen<CR>
 nnoremap <leader>q gqip:w<CR>
 nnoremap <leader>r :reg<CR>
 nnoremap <leader>sr :SublimeLinterLineReport<CR>
 nnoremap <leader>st :SublimeLinterPanelToggle<CR>
 nnoremap <leader>sv <C-w><C-v><C-w>h<C-w>q<C-w>l
-nnoremap <leader>o :GitOpen<CR>
 noremap <C-l> :nohlsearch<CR>
 noremap <C-s> :w<CR>
 noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
 noremap <leader>/ :ToggleInlineDiff<CR>
-" noremap <space> :
-noremap <space> :TestChain<CR>
+noremap <space> :
 
 " noremap m <C-e>
 

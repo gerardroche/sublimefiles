@@ -4,6 +4,8 @@
 # operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile ~/.gitignore_global
 
+*.sublime-project
+
 # Dependencies.
 /coverage/
 /jsonschema/
@@ -15,25 +17,10 @@
 /python-markdown/
 /pyyaml/
 
-# Generated files.
+# Generated.
 /AutomaticPackageReloader33/
 /PHP/PHP.sublime-completions
 /PHP/Snippets/
 /UnitTesting33/
 /User/Package Control.*-ca-bundle
 /User/UnitTesting/*/coverage
-
-# # User
-# *.pyi
-# /.logs/
-# /User/*sandbox.py
-# /User/.neovintageous_log_level
-# /User/Color Highlighter/
-# /User/Package Control.cache/
-# /User/Package Control.last-run
-# /User/SublimeLinter/*.tmTheme
-# /User/UnitTesting.sublime-settings
-# /User/UnitTesting/
-# /User/UnitTesting/schedule.json
-# /_dummy_package.py
-# /tmp/

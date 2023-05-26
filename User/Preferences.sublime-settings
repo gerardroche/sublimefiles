@@ -1,5 +1,5 @@
 {
-	"show_full_path": false,
+
 	"always_show_minimap_viewport": true,
 	"animation_enabled": false,
 	"auto_complete_cycle": true,
@@ -91,7 +91,7 @@
 		"*.so",
 		"*.so.*",
 		"*.sqlite",
-		"*.xsublime-package",
+		"*.sublime-package",
 		"*.sublime-project",
 		"*.sublime-workspace",
 		"*.suo",
@@ -205,16 +205,13 @@
 	],
 	"font_options":
 	[
-		// "xgray_antialias",
-		// "no_italic",
-		// "no_bold"
 	],
-	"highlight_line": true,
+	"font_size": 11,
+	"goto_php_manual.path": "${PROJECTS_PATH}/.man",
 	"hxardware_acceleration": "opengl",
 	"ignored_packages":
 	[
 		"GitGutter",
-		"polyfill",
 		"Python Completions",
 		"ShowAsciiValue",
 		"Six",
@@ -222,6 +219,7 @@
 		"SublimeTextAPICompletions",
 		"Vintage",
 		"Vintageous",
+		"polyfill",
 	],
 	"ignored_snippets":
 	[
@@ -239,6 +237,8 @@
 		"solid",
 		"draw_active"
 	],
+	"show_encoding": false,
+	"show_line_endings": false,
 	"index_exclude_gitignore": false,
 	"index_exclude_patterns":
 	[
@@ -286,24 +286,14 @@
 	"line_padding_bottom": 0,
 	"line_padding_top": 0,
 	"man.path": "${PROJECTS_PATH}/.man",
-	"goto_php_manual.path": "${PROJECTS_PATH}/.man",
 	"match_brackets_angle": true,
 	"mouse_wheel_switches_tabs": false,
 	"neovintageous_build_version": 12700,
 	"overlay_scroll_bars": "enabled",
 	"phpunit.options":
 	{
-		// "colors=never": true,
 		"no-coverage": true,
 	},
-	// "phpunit.strategy": "vimux",
-	// "phpunit.strategy": "kitty",
-	// "phpunit.strategy": "gnome-terminal",
-	// "phpunit.end_to_end_tests": true,
-	// "phpunit.paratest": true,
-	// "phpunit.debug": true,
-	// "phpunit.artisan": true,
-	// "phpunit.pest": true,
 	"polyfill.experimental_features": true,
 	"preview_on_click": true,
 	"relative_line_numbers": true,
@@ -327,13 +317,13 @@
 	],
 	"show_definitions": false,
 	"show_errors_inline": false,
+	"show_full_path": true,
 	"show_git_status_in_status_bar": false,
 	"show_legacy_color_schemes": false,
-	"show_line_endings": true,
+	"show_rel_path": false,
 	"show_tab_close_buttons": false,
 	"spelling_selector": "markup.raw, source string.quoted - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.raw.inline)",
 	"submit_usage": false,
-	"show_rel_path": true,
 	"theme": "Adaptive.sublime-theme",
 	"tree_animation_enabled": false,
 	"ui_scale": 1.4,
@@ -352,15 +342,7 @@
 	},
 	"vintageous_sneak_use_ic_scs": 1,
 	"vintageous_terminal": "gnome-terminal",
+	"vintageous_use_ctrl_keys": true,
 	"vintageous_use_super_keys": true,
 	"word_wrap": false,
-	"vintageous_use_ctrl_keys": true,
-	"font_size": 11,
-	"added_words":
-	[
-		"Monokai",
-		"color",
-		"neovintageousrc",
-		"plugin",
-	],
 }

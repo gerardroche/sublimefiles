@@ -70,7 +70,14 @@
     { "keys": ["ctrl+shift+s"], "command": "test_switch" },
     { "keys": ["ctrl+shift+v"], "command": "test_visit" },
 
-    // Sublime Text.
-    { "keys": ["super+r"], "command": "package_reloader_reload" },
+    {
+        "keys": ["super+r"],
+        "command": "package_reloader_reload"
+    },
+
+    // {
+    //     "keys": ["alt+ctrl+p"],
+    //     "command": "color_scheme_unit_show_styles"
+    // },
 
 ]

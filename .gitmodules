@@ -35,7 +35,7 @@
 	path = Python Completions
 	url = https://github.com/gerardroche/Python-Auto-Complete.git
 [submodule "phpunit-completions"]
-	path = phpunit-completions
+	path = PHPUnitCompletions
 	url = https://github.com/gerardroche/sublime-phpunit-completions.git
 [submodule "Sensible"]
 	path = Sensible
@@ -68,7 +68,7 @@
 	path = Vue Syntax Highlight
 	url = https://github.com/deathaxe/vue-syntax-highlight.git
 [submodule "Tailwind CSS Completions"]
-	path = Tailwind CSS Completions
+	path = TailwindCSSCompletions
 	url = https://github.com/gerardroche/sublime-tailwind-css-completions.git
 [submodule "NeoVintageousLineNumbers"]
 	path = NeoVintageousLineNumbers
