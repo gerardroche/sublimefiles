@@ -103,3 +103,6 @@
 [submodule "GotoDefinitionSplit"]
 	path = GotoDefinitionSplit
 	url = https://github.com/gerardroche/sublime-goto-definition-split.git
+[submodule "GenerateSyntaxTestAssertions"]
+	path = GenerateSyntaxTestAssertions
+	url = https://github.com/gerardroche/sublime-generate-syntax-test-assertions.git
