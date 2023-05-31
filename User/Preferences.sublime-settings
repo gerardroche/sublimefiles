@@ -205,7 +205,7 @@
 	"font_options":
 	[
 	],
-	"font_size": 11,
+	"font_size": 10,
 	"goto_php_manual.path": "${PROJECTS_PATH}/.man",
 	"hxardware_acceleration": "opengl",
 	"ignored_packages":
