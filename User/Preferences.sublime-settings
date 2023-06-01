@@ -213,6 +213,8 @@
 	"ignored_packages":
 	[
 		"GitGutter",
+		"NeoVintageousHighlightLine",
+		"polyfill",
 		"Python Completions",
 		"ShowAsciiValue",
 		"Six",
@@ -220,7 +222,6 @@
 		"SublimeTextAPICompletions",
 		"Vintage",
 		"Vintageous",
-		"polyfill",
 	],
 	"ignored_snippets":
 	[
