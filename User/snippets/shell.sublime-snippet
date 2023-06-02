@@ -1,7 +1,6 @@
 <snippet>
     <content><![CDATA[
-
-#!/bin/sh
+$0#!/bin/sh
 
 set -e
 unset CDPATH
