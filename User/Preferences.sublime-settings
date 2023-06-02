@@ -14,7 +14,7 @@
 	"auto_upgrade": false,
 	"block_caret": false,
 	"caret_style": "solid",
-	"color_scheme": "Packages/MonokaiFree/MonokaiFree.tmTheme",
+	"color_scheme": "MonokaiFree.sublime-color-scheme",
 	"color_scheme_unit.debug": false,
 	"color_scheme_unit.coverage": true,
 	"cxaret_extra_bottom": 0,
@@ -213,7 +213,6 @@
 	"ignored_packages":
 	[
 		"GitGutter",
-		"NeoVintageousHighlightLine",
 		"polyfill",
 		"Python Completions",
 		"ShowAsciiValue",
@@ -338,6 +337,8 @@
 	"vintageous_enable_sneak": true,
 	"vintageous_handle_keys":
 	{
+		"<f1>": false,
+		"<S-f1>": false,
 		"<C-f12>": false,
 		"<S-tab>": false,
 		"i_<C-u>": false,
