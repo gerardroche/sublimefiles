@@ -1,7 +1,7 @@
 %YAML 1.2
 ---
 # http://www.sublimetext.com/docs/3/syntax.html
-name: Configure
+name: User Configure
 file_extensions:
   - ac
   - in

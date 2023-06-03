@@ -1,166 +1,100 @@
 {
-   "variables": {
+   "variables":
+   {
+        "bg0": "#272822",
 
-      // Palette
-      "bg0": "#272822",
-      "bg1": "#3e3d32",
-      "fg0": "#f8f8f2",
-      "fg1": "#cfcfc2",
-      "fg2": "#75715e",
-      "blue": "#66d9ef",
-      "cyan": "#a1efe4",
-      "green": "#2da44e",
-      "magenta": "#fd5ff0",
-      "orange": "#fd971f",
-      "red": "#f92672",
-      "violet": "#ae81ff",
-      "yellow": "#e6db74",
+        "fg0": "#f8f8f2",
+        "fg1": "#cfcfc2",
+        "fg2": "#75715e",
 
-      // Highlight
-      // "highlight_sidebar_bg": "#000000",
-      // "highlight_sidebar_fg": "#cfcfc2",
+        "yellow": "#e6db74",
+        "orange": "#fd971f",
+        "red": "#f92672",
+        "violet": "#ae81ff",
+        "blue": "#66d9ef",
+        "cyan": "#a1efe4",
+        "green": "#2da44e",
+        "magenta": "#fd5ff0",
 
-      "highlight_sidebar_bg": "#66d9ef55",
-      "highlight_sidebar_fg": "#66d9ef",
+        "vcs_added": "var(green)",
+        "vcs_deleted": "var(red)",
+        "vcs_ignored": "var(fg2)",
+        "vcs_missing": "var(red)",
+        "vcs_modified": "var(orange)",
+        "vcs_staged": "var(green)",
+        "vcs_unmerged": "var(orange)",
+        "vcs_untracked": "var(red)",
 
-      // Git,,
-      "added": "#3c926c",
-      "deleted": "#99464b",
-      "ignored": "#272822",
-      "missing": "#99464b",
-      "modified": "#e6db74",
-      "staged": "#2da44e",
-      "unmerged": "#fd5ff0",
-      "untracked": "#ff6087",
+        // "highlight_sidebar_bg": "#000000",
+        // "highlight_sidebar_fg": "#cfcfc2",
 
     },
 
     "rules": [
 
+        ///////////
+        // Fixes //
+        ///////////
+
+        { "class": "sidebar_container", "content_margin": [0, 1, 0, 0] }, // Fix top margin off-by-one with top of view on hover alignment.
+        { "class": "sidebar_tree", "indent_offset": 0 }, // Align the tree to left.
+
+        /////////
+        // VCS //
+        /////////
+
+        // // modified
+        // { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["modified"]}], "color": "var(vcs_modified)" },
+        // { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["modified"]}], "layer0.tint": "var(vcs_modified)" },
+
+        // // missing
+        // { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["missing"]}], "color": "var(vcs_missing)" },
+        // { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["missing"]}], "layer0.tint": "var(vcs_missing)" },
+
+        // // staged
+        // { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["staged"]}], "layer0.tint": "var(vcs_staged)" },
+        // { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["staged"]}], "color": "var(vcs_staged)" },
+
+        // // added
+        // { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["added"]}], "color": "var(vcs_added)" },
+        // { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["added"]}], "layer0.tint": "var(vcs_added)" },
+
+        // // deleted
+        // { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}], "color": "var(vcs_deleted)" },
+        // { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}], "layer0.tint": "var(vcs_deleted)" },
+
+        // // unmerged
+        // { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}], "color": "var(vcs_unmerged)" },
+        // { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}], "layer0.tint": "var(vcs_unmerged)" },
+
+        // // ignored
+        // { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}], "color": "var(vcs_ignored)" },
+        // { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}], "layer0.tint": "var(vcs_ignored)" },
+
+        // // untracked
+        // { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}], "layer0.tint": "var(vcs_untracked)" },
+        // { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}], "color": "var(vcs_untracked)" },
+
+        ///////////////////////
+        // Highlight Sidebar //
+        ///////////////////////
+
         // {
-        //     "class": "sidebar_container",
-        //     // Fix top margin off-by-one with top of view on hover alignment.
-        //     "content_margin": [0, 1, 0, 0]
+        //     "class": "tree_row",
+        //     "attributes": ["hover"],
+        //     "layer0.tint": "var(highlight_sidebar_bg)",
+        //     "layer0.opacity": 1.0,
         // },
         // {
-        //     "class": "sidebar_tree",
-        //     // Align the tree to left.
-        //     "indent_offset": 0
+        //     "class": "tree_row",
+        //     "attributes": ["selected"],
+        //     "layer0.tint": "var(highlight_sidebar_bg)",
+        //     "layer0.opacity": 1.0,
         // },
-
-        // git: added
-        {
-            "class": "sidebar_label",
-            "parents": [{"class": "file_system_entry", "attributes": ["added"]}],
-            "color": "color(var(added) blend(rgb(255, 255, 255) 100%))"
-        },
-        {
-            "class": "vcs_status_badge",
-            "parents": [{"class": "file_system_entry", "attributes": ["added"]}],
-            "layer0.tint": "color(var(added) blend(rgb(255, 255, 255) 100%))",
-        },
-
-        // git: deleted
-        {
-            "class": "sidebar_label",
-            "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}],
-            "color": "color(var(deleted) blend(rgb(255, 255, 255) 100%))"
-        },
-        {
-            "class": "vcs_status_badge",
-            "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}],
-            "layer0.tint": "color(var(deleted) blend(rgb(255, 255, 255) 100%))",
-        },
-
-        // git: ignored
-        {
-            "class": "sidebar_label",
-            "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}],
-            "color": "color(var(ignored) blend(rgb(255, 255, 255) 70%))"
-        },
-        {
-            "class": "vcs_status_badge",
-            "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}],
-            "layer0.tint": "color(var(ignored) blend(rgb(255, 255, 255) 100%))",
-        },
-
-        // git: missing
-        {
-            "class": "sidebar_label",
-            "parents": [{"class": "file_system_entry", "attributes": ["missing"]}],
-            "color": "color(var(missing) blend(rgb(255, 255, 255) 100%))"
-        },
-        {
-            "class": "vcs_status_badge",
-            "parents": [{"class": "file_system_entry", "attributes": ["missing"]}],
-            "layer0.tint": "color(var(missing) blend(rgb(255, 255, 255) 100%))",
-        },
-
-        // git: modified
-        {
-            "class": "sidebar_label",
-            "parents": [{"class": "file_system_entry", "attributes": ["modified"]}],
-            "color": "color(var(modified) blend(rgb(255, 255, 255) 100%))",
-        },
-        {
-            "class": "vcs_status_badge",
-            "parents": [{"class": "file_system_entry", "attributes": ["modified"]}],
-            "layer0.tint": "color(var(modified) blend(rgb(255, 255, 255) 100%))",
-        },
-
-        // git: staged
-        {
-            "class": "sidebar_label",
-            "parents": [{"class": "file_system_entry", "attributes": ["staged"]}],
-            "color": "color(var(staged) blend(rgb(255, 255, 255) 100%))"
-        },
-        {
-            "class": "vcs_status_badge",
-            "parents": [{"class": "file_system_entry", "attributes": ["staged"]}],
-            "layer0.tint": "color(var(staged) blend(rgb(255, 255, 255) 100%))",
-        },
-
-        // git: unmerged
-        {
-            "class": "sidebar_label",
-            "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}],
-            "color": "color(var(unmerged) blend(rgb(255, 255, 255) 100%))"
-        },
-        {
-            "class": "vcs_status_badge",
-            "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}],
-            "layer0.tint": "color(var(unmerged) blend(rgb(255, 255, 255) 100%))",
-        },
-
-        // git: untracked
-        {
-            "class": "vcs_status_badge",
-            "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}],
-            "layer0.tint": "color(var(untracked) blend(rgb(255, 255, 255) 100%))",
-        },
-        {
-            "class": "sidebar_label",
-            "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}],
-            "color": "color(var(untracked) blend(rgb(255, 255, 255) 100%))"
-        },
-
-        // highlight
-        {
-            "class": "tree_row",
-            "attributes": ["hover"],
-            "layer0.tint": "var(highlight_sidebar_bg)",
-            "layer0.opacity": 1.0,
-        },
-        {
-            "class": "tree_row",
-            "attributes": ["selected"],
-            "layer0.tint": "var(highlight_sidebar_bg)",
-            "layer0.opacity": 1.0,
-        },
-        {
-            "class": "sidebar_label",
-            "parents": [{"attributes": ["selected"]}],
-            "color": "var(highlight_sidebar_fg)",
-        }
+        // {
+        //     "class": "sidebar_label",
+        //     "parents": [{"attributes": ["selected"]}],
+        //     "color": "var(highlight_sidebar_fg)",
+        // }
     ]
 }

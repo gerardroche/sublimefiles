@@ -1,6 +1,7 @@
 {
 
-	"always_show_minimap_viewport": true,
+	"always_show_minimap_viewport": false,
+	"draw_minimap_border": true,
 	"animation_enabled": false,
 	"auto_complete_cycle": true,
 	"auto_complete_delay": 300,
@@ -12,14 +13,14 @@
 	"auto_hide_menu": false,
 	"auto_match_enabled": true,
 	"auto_upgrade": false,
-	"block_caret": false,
+
+	"caret_extra_bottom": 0,
+	"caret_extra_top": 0,
 	"caret_style": "solid",
+
 	"color_scheme": "MonokaiFree.sublime-color-scheme",
 	"color_scheme_unit.debug": false,
 	"color_scheme_unit.coverage": true,
-	"cxaret_extra_bottom": 0,
-	"cxaret_extra_top": 0,
-	"cxaret_extra_width": 1,
 	"debug": false,
 	"docblockr.development_mode": false,
 	"docblockr.function_description": false,
@@ -29,7 +30,6 @@
 	"docblockr.return_description": false,
 	"docblockr.short_primitives": true,
 	"docblockr.spacer_between_sections": true,
-	"draw_minimap_border": true,
 	"draw_white_space":
 	[
 		"leading_mixed",
@@ -52,7 +52,7 @@
 		"isolated"
 	],
 	"enable_telemetry": false,
-	"fade_fold_buttons": true,
+	"fade_fold_buttons": false,
 	"file_exclude_patterns":
 	[
 		"*.*#",
@@ -217,7 +217,6 @@
 		"Python Completions",
 		"ShowAsciiValue",
 		"Six",
-		"SublimeLinter-eslint",
 		"SublimeTextAPICompletions",
 		"Vintage",
 		"Vintageous",
