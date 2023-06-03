@@ -207,7 +207,7 @@
 	"font_options":
 	[
 	],
-	"font_size": 10,
+	"font_size": 12,
 	"goto_php_manual.path": "${PROJECTS_PATH}/.man",
 	"hxardware_acceleration": "opengl",
 	"ignored_packages":
@@ -230,6 +230,9 @@
 	],
 	"indent_guide_options":
 	[
+		"draw_normal",
+		"solid",
+		"draw_active",
 	],
 	"indent_guide_options_default":
 	[

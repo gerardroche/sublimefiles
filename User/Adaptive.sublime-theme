@@ -43,37 +43,37 @@
         // VCS //
         /////////
 
-        // // modified
-        // { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["modified"]}], "color": "var(vcs_modified)" },
-        // { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["modified"]}], "layer0.tint": "var(vcs_modified)" },
+        // modified
+        { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["modified"]}], "color": "var(vcs_modified)" },
+        { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["modified"]}], "layer0.tint": "var(vcs_modified)" },
 
-        // // missing
-        // { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["missing"]}], "color": "var(vcs_missing)" },
-        // { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["missing"]}], "layer0.tint": "var(vcs_missing)" },
+        // missing
+        { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["missing"]}], "color": "var(vcs_missing)" },
+        { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["missing"]}], "layer0.tint": "var(vcs_missing)" },
 
-        // // staged
-        // { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["staged"]}], "layer0.tint": "var(vcs_staged)" },
-        // { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["staged"]}], "color": "var(vcs_staged)" },
+        // staged
+        { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["staged"]}], "layer0.tint": "var(vcs_staged)" },
+        { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["staged"]}], "color": "var(vcs_staged)" },
 
-        // // added
-        // { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["added"]}], "color": "var(vcs_added)" },
-        // { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["added"]}], "layer0.tint": "var(vcs_added)" },
+        // added
+        { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["added"]}], "color": "var(vcs_added)" },
+        { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["added"]}], "layer0.tint": "var(vcs_added)" },
 
-        // // deleted
-        // { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}], "color": "var(vcs_deleted)" },
-        // { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}], "layer0.tint": "var(vcs_deleted)" },
+        // deleted
+        { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}], "color": "var(vcs_deleted)" },
+        { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}], "layer0.tint": "var(vcs_deleted)" },
 
-        // // unmerged
-        // { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}], "color": "var(vcs_unmerged)" },
-        // { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}], "layer0.tint": "var(vcs_unmerged)" },
+        // unmerged
+        { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}], "color": "var(vcs_unmerged)" },
+        { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}], "layer0.tint": "var(vcs_unmerged)" },
 
-        // // ignored
-        // { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}], "color": "var(vcs_ignored)" },
-        // { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}], "layer0.tint": "var(vcs_ignored)" },
+        // ignored
+        { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}], "color": "var(vcs_ignored)" },
+        { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}], "layer0.tint": "var(vcs_ignored)" },
 
-        // // untracked
-        // { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}], "layer0.tint": "var(vcs_untracked)" },
-        // { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}], "color": "var(vcs_untracked)" },
+        // untracked
+        { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}], "layer0.tint": "var(vcs_untracked)" },
+        { "class": "sidebar_label", "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}], "color": "var(vcs_untracked)" },
 
         ///////////////////////
         // Highlight Sidebar //
