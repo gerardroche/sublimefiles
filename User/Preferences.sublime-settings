@@ -1,7 +1,5 @@
 {
-
 	"always_show_minimap_viewport": false,
-	"draw_minimap_border": true,
 	"animation_enabled": false,
 	"auto_complete_cycle": true,
 	"auto_complete_delay": 300,
@@ -13,14 +11,12 @@
 	"auto_hide_menu": false,
 	"auto_match_enabled": true,
 	"auto_upgrade": false,
-
 	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,
 	"caret_style": "solid",
-
 	"color_scheme": "MonokaiFree.sublime-color-scheme",
-	"color_scheme_unit.debug": false,
 	"color_scheme_unit.coverage": true,
+	"color_scheme_unit.debug": false,
 	"debug": false,
 	"docblockr.development_mode": false,
 	"docblockr.function_description": false,
@@ -30,6 +26,7 @@
 	"docblockr.return_description": false,
 	"docblockr.short_primitives": true,
 	"docblockr.spacer_between_sections": true,
+	"draw_minimap_border": true,
 	"draw_white_space":
 	[
 		"leading_mixed",
@@ -217,7 +214,6 @@
 		"Python Completions",
 		"ShowAsciiValue",
 		"Six",
-		"SublimeTextAPICompletions",
 		"Vintage",
 		"Vintageous",
 	],
@@ -237,8 +233,6 @@
 		"solid",
 		"draw_active"
 	],
-	"show_encoding": false,
-	"show_line_endings": false,
 	"index_exclude_gitignore": false,
 	"index_exclude_patterns":
 	[
@@ -316,10 +310,12 @@
 		}
 	],
 	"show_definitions": false,
+	"show_encoding": false,
 	"show_errors_inline": false,
 	"show_full_path": true,
 	"show_git_status_in_status_bar": false,
 	"show_legacy_color_schemes": false,
+	"show_line_endings": false,
 	"show_rel_path": false,
 	"show_tab_close_buttons": false,
 	"spelling_selector": "markup.raw, source string.quoted - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.raw.inline)",
@@ -336,10 +332,10 @@
 	"vintageous_enable_sneak": true,
 	"vintageous_handle_keys":
 	{
-		"<f1>": false,
-		"<S-f1>": false,
 		"<C-f12>": false,
+		"<S-f1>": false,
 		"<S-tab>": false,
+		"<f1>": false,
 		"i_<C-u>": false,
 	},
 	"vintageous_sneak_use_ic_scs": 1,
