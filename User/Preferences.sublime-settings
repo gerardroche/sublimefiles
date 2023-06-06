@@ -1,15 +1,10 @@
 {
-	"always_show_minimap_viewport": false,
 	"animation_enabled": false,
 	"auto_complete_cycle": true,
-	"auto_complete_delay": 300,
-	"auto_complete_include_snippets": true,
+	"auto_complete_delay": 50,
 	"auto_complete_trailing_symbols": true,
 	"auto_complete_use_history": true,
-	"auto_complete_use_index": true,
 	"auto_complete_with_fields": true,
-	"auto_hide_menu": false,
-	"auto_match_enabled": true,
 	"auto_upgrade": false,
 	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,
@@ -277,8 +272,6 @@
 		"tmp/"
 	],
 	"line_numbers": false,
-	"line_padding_bottom": 0,
-	"line_padding_top": 0,
 	"man.path": "${PROJECTS_PATH}/.man",
 	"match_brackets_angle": true,
 	"mouse_wheel_switches_tabs": false,
@@ -292,7 +285,6 @@
 	"preview_on_click": true,
 	"relative_line_numbers": true,
 	"remember_full_screen": true,
-	"remember_open_files": true,
 	"ruler_column": 120,
 	"rulers":
 	[
@@ -310,13 +302,9 @@
 		}
 	],
 	"show_definitions": false,
-	"show_encoding": false,
 	"show_errors_inline": false,
-	"show_full_path": true,
 	"show_git_status_in_status_bar": false,
 	"show_legacy_color_schemes": false,
-	"show_line_endings": false,
-	"show_rel_path": false,
 	"show_tab_close_buttons": false,
 	"spelling_selector": "markup.raw, source string.quoted - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.raw.inline)",
 	"submit_usage": false,

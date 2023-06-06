@@ -27,6 +27,7 @@
 		"SublimeLinter-eslint",
 		"SublimeLinter-flake8",
 		"SublimeLinter-mypy",
+		"SublimeLinter-php",
 		"Terraform",
 	],
 	"submit_url": "",
