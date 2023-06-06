@@ -43,9 +43,6 @@
 [submodule "Sesame"]
 	path = Sesame
 	url = https://github.com/gerardroche/sublime-open-sesame.git
-[submodule "SublimeLinter-php"]
-	path = SublimeLinter-php
-	url = https://github.com/gerardroche/SublimeLinter-php.git
 [submodule "SublimeLinter-php-cs-fixer"]
 	path = SublimeLinter-php-cs-fixer
 	url = https://github.com/gerardroche/SublimeLinter-contrib-php-cs-fixer.git
