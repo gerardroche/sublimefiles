@@ -69,8 +69,6 @@ noremap <D-i> :GotoSymbolInProject<CR>
 noremap <leader>/ :ToggleInlineDiff<CR>
 noremap <space> :
 
-" noremap m <C-e>
-
 " Yank and paste using system clipboard.
 noremap <leader>y "+y
 noremap <leader>Y "+Y
