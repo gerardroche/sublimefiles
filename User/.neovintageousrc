@@ -34,8 +34,7 @@ set smartcase
 
 let mapleader=,
 
-nnoremap <leader><leader> :RevealInSideBar<CR>
-nnoremap <leader>G :GsShowStatus<CR>
+nnoremap <leader><leader> :Neovintageous action=reveal_side_bar<CR>
 nnoremap <leader>ca :SideBarCopyAbsolutePath<CR>
 nnoremap <leader>cn :SideBarCopyName<CR>
 nnoremap <leader>cr :SideBarCopyRelativePath<CR>
@@ -62,6 +61,10 @@ nnoremap <leader>r :reg<CR>
 nnoremap <leader>sr :SublimeLinterLineReport<CR>
 nnoremap <leader>st :SublimeLinterPanelToggle<CR>
 nnoremap <leader>sv <C-w><C-v><C-w>h<C-w>q<C-w>l
+nnoremap <leader>wh :CarryFileToPane direction=left<CR>
+nnoremap <leader>wj :CarryFileToPane direction=down<CR>
+nnoremap <leader>wk :CarryFileToPane direction=up<CR>
+nnoremap <leader>wl :CarryFileToPane direction=right<CR>
 noremap <C-l> :nohlsearch<CR>
 noremap <C-s> :w<CR>
 noremap <D-I> :ShowOverlay overlay=goto text=@<CR>

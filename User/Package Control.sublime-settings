@@ -28,8 +28,8 @@
 		"SublimeLinter-flake8",
 		"SublimeLinter-mypy",
 		"SublimeLinter-php",
-		"Terraform",
+		"Terraform"
 	],
 	"submit_url": "",
-	"submit_usage": false,
+	"submit_usage": false
 }
