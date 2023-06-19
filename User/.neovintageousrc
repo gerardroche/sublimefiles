@@ -109,7 +109,6 @@ nnoremap <leader>l :TestLast<CR>
 nnoremap <leader>t :TestNearest<CR>
 
 " Origami: https://packagecontrol.io/packages/Origami
-nnoremap <C-w>z :ToggleZoomPane fraction=0.98<CR>
 nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
 
 " LSP
