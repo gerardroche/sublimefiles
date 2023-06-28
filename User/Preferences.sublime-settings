@@ -201,7 +201,6 @@
 	],
 	"font_size": 11,
 	"goto_php_manual.path": "${PROJECTS_PATH}/.man",
-	"hxardware_acceleration": "opengl",
 	"ignored_packages":
 	[
 		"GitGutter",
@@ -299,6 +298,10 @@
 		{
 			"depth": 1,
 			"path": "~/.config/sublime-text/Packages",
+		},
+		{
+			"depth": 1,
+			"path": "~/sesamelinks",
 		}
 	],
 	"show_definitions": false,
