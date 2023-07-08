@@ -3,5 +3,5 @@
     // { "caption": "Duplicate... (User)", "command": "tree_duplicate", "args": { "files": [] } },
     // { "caption": "Move... (User)", "command": "tree_move", "args": { "files": [] } },
     // { "caption": "New File --interactive (User)", "command": "tree_new_file", "args": { "dirs": [] } },
-    // { "caption": "Refresh Folders (User)", "command": "refresh_folder_list" }
+    { "caption": "Refresh Folders (User)", "command": "refresh_folder_list" }
 ]
