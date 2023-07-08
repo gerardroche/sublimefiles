@@ -1,5 +1,4 @@
 {
-	"animation_enabled": false,
 	"auto_complete_cycle": true,
 	"auto_complete_delay": 50,
 	"auto_complete_trailing_symbols": true,
@@ -199,7 +198,7 @@
 	"font_options":
 	[
 	],
-	"font_size": 11,
+	"font_size": 17,
 	"goto_php_manual.path": "${PROJECTS_PATH}/.man",
 	"ignored_packages":
 	[
@@ -304,7 +303,7 @@
 			"path": "~/sesamelinks",
 		}
 	],
-	"show_definitions": false,
+	"show_definitions": true,
 	"show_errors_inline": false,
 	"show_git_status_in_status_bar": false,
 	"show_legacy_color_schemes": false,
@@ -312,8 +311,7 @@
 	"spelling_selector": "markup.raw, source string.quoted - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.raw.inline)",
 	"submit_usage": false,
 	"theme": "Adaptive.sublime-theme",
-	"tree_animation_enabled": false,
-	"ui_scale": 1.4,
+	"xui_scale": 1.4,
 	"unittesting_capture_package_loggers": true,
 	"unittesting_coverage_html_report": true,
 	"unittesting_reload_package_on_testing": true,
