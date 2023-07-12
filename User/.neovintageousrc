@@ -87,11 +87,9 @@ nnoremap <leader>ss vip:sort u<CR>
 vnoremap <leader>s :sort u<CR>
 
 " Finders.
-nnoremap <leader>f  :FindInOpenFolders interactive=true filter=true include_vendor=true<CR>
-noremap <C-S-f3>    :FindInOpenFolders interactive=true filter=true<CR>
-noremap <C-S-f4>    :FindInOpenFolders interactive=true filter=true include_vendor=true<CR>
-noremap <C-f3>      :FindInOpenFolders interactive=true<CR>
-noremap <S-f3>      :FindInOpenFolders interactive=false<CR>
+noremap <leader>f   :UserFindInFiles<CR>
+noremap <C-f3>      :UserFindInFiles<CR>
+noremap <S-f3>      :UserFindInFiles interactive=false<CR>
 
 " Dump Variable.
 nnoremap <leader>vd :UserDumpVariable phpfunc=dump<CR>

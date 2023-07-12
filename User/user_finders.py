@@ -3,10 +3,10 @@ import os
 import sublime_plugin
 
 
-class FindInOpenFoldersCommand(sublime_plugin.WindowCommand):
+class UserFindInFilesCommand(sublime_plugin.WindowCommand):
 
     def run(self, **kwargs):
-        _find_in_open_folders(self.window, **kwargs)
+        _find_in_files(self.window, **kwargs)
 
 
 class FindFileUnderCursorCommand(sublime_plugin.TextCommand):
@@ -27,44 +27,24 @@ class FindFileUnderCursorCommand(sublime_plugin.TextCommand):
         return word
 
 
-def _find_in_open_folders(window, interactive=True, filter=False, include_vendor=False):
+def _find_in_files(window, interactive: bool = True, use_filter: bool = True):
     view = window.active_view()
+
+    # Set word under cursor.
     word = view.sel()[0]
     if word.empty():
         word = view.word(word)
-
     view.sel().clear()
     view.sel().add(word)
 
-    def _get_filter():
-        include_filters = []
-
-        include_filters.append('-storage/')
-        include_filters.append('-tmp/')
-        include_filters.append('-.phan/')
-        include_filters.append('-.psalm/')
-        include_filters.append('-Sandbox*')
-
-        file_name = view.file_name()
-        if file_name:
-            include_filters.append('*' + os.path.splitext(file_name)[1])
-
-        if include_vendor:
-            include_filters.append('-vendor/')
-        else:
-            include_filters.append('-vendor/composer/')
-
-        if include_filters:
-            return ',' + ','.join(include_filters)
-        else:
-            return ''
-
+    # Build where field.
     where = '<open folders>'
-    if filter and isinstance(filter, bool):
-        where += _get_filter()
+    if use_filter and isinstance(use_filter, bool):
+        where += _get_where(view)
 
     window.run_command('show_panel', {
         'panel': 'find_in_files',
+        'use_gitignore': use_filter,
         'where': where,
         'whole_word': False,
         'case_sensitive': False,
@@ -73,10 +53,30 @@ def _find_in_open_folders(window, interactive=True, filter=False, include_vendor
         'show_context': True
     })
 
-    view.sel().clear()
-    view.sel().add(word)
-
     if not interactive:
         window.run_command('find_all', {
             'close_panel': True
         })
+
+
+def _get_where(view, vendor: bool = True) -> str:
+    where = []
+
+    where.append('-.phan/')
+    where.append('-.psalm/')
+    where.append('-Sandbox*')
+    where.append('-storage/')
+    where.append('-tmp/')
+    where.append('-vendor/composer/')
+
+    if not vendor:
+        where.append('-vendor/')
+
+    file_name = view.file_name()
+    if file_name:
+        where.append('*' + os.path.splitext(file_name)[1])
+
+    if where:
+        return ',' + ','.join(where)
+
+    return ''
