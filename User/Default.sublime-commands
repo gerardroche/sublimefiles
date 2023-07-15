@@ -15,6 +15,7 @@
     { "caption": "User - NeoVintageous: Dump Mappings", "command": "neovintageous_dev", "args": {"action": "dump_mappings"}},
     { "caption": "User - NeoVintageous: Edit Help File", "command": "neovintageous_dev", "args": {"action": "edit_help_file"}},
     { "caption": "User - NeoVintageous: Fixup Docs", "command": "neovintageous_dev", "args": {"action": "fixup_docs"}},
+    { "caption": "User - Side Bar: Toggle Metadata", "command": "user_toggle_side_bar_metadata" },
     { "caption": "User - Preferences: Sort User Settings", "command": "sort_user_settings" },
     { "caption": "User - Project: Open", "command": "prompt_open_project_or_workspace" },
     { "caption": "User - Project: Switch", "command": "prompt_switch_project_or_workspace" },

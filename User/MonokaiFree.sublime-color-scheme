@@ -20,6 +20,10 @@
             "font_style": "italic underline"
         },
         {
+            "scope": "meta.use.php entity.other.inherited-class.php",
+            "font_style": "italic"
+        },
+        {
             "scope": "meta.class.php meta.path.php variable.namespace.php",
             "font_style": "italic underline"
         },
