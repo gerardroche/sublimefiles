@@ -1,13 +1,12 @@
 {
+	"animation_enabled": false,
 	"auto_complete_cycle": true,
-	"auto_complete_delay": 50,
 	"auto_complete_trailing_symbols": true,
 	"auto_complete_use_history": true,
 	"auto_complete_with_fields": true,
 	"auto_upgrade": false,
 	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,
-	"caret_style": "solid",
 	"color_scheme": "MonokaiFree.sublime-color-scheme",
 	"color_scheme_unit.coverage": true,
 	"color_scheme_unit.debug": false,
@@ -190,6 +189,7 @@
 		"sublime_text_3",
 		"sublime_text_3/Icon"
 	],
+	"font_face": "Fira Code",
 	"font_faces":
 	[
 		"Source Code Pro",
@@ -197,6 +197,8 @@
 	],
 	"font_options":
 	[
+		"no_italic",
+		"subpixel_antialias",
 	],
 	"font_size": 17,
 	"goto_php_manual.path": "${PROJECTS_PATH}/.man",
@@ -208,7 +210,7 @@
 		"ShowAsciiValue",
 		"Six",
 		"Vintage",
-		"Vintageous"
+		"Vintageous",
 	],
 	"ignored_snippets":
 	[
@@ -280,13 +282,9 @@
 		"no-coverage": true,
 	},
 	"polyfill.experimental_features": true,
-	"preview_on_click": true,
 	"relative_line_numbers": true,
 	"remember_full_screen": true,
 	"ruler_column": 120,
-	"rulers":
-	[
-	],
 	"save_on_focus_lost": true,
 	"scroll_context_lines": 8,
 	"sesame.path":
@@ -304,14 +302,13 @@
 		}
 	],
 	"show_definitions": true,
-	"show_errors_inline": false,
+	"show_errors_inline": true,
 	"show_git_status_in_status_bar": false,
 	"show_legacy_color_schemes": false,
 	"show_tab_close_buttons": false,
 	"spelling_selector": "markup.raw, source string.quoted - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.raw.inline)",
 	"submit_usage": false,
 	"theme": "Adaptive.sublime-theme",
-	"xui_scale": 1.4,
 	"unittesting_capture_package_loggers": true,
 	"unittesting_coverage_html_report": true,
 	"unittesting_reload_package_on_testing": true,
@@ -332,4 +329,7 @@
 	"vintageous_use_ctrl_keys": true,
 	"vintageous_use_super_keys": true,
 	"word_wrap": false,
+	"rulers":
+	[
+	],
 }

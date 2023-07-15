@@ -15,11 +15,13 @@
 	"installed_packages":
 	[
 		"ApacheConf",
+		"Dracula Color Scheme",
 		"FileIcons",
 		"GitGutter",
 		"GitSavvy",
 		"GotoDocumentation",
 		"MarkdownPreview",
+		"Material Monokai",
 		"Origami",
 		"Package Control",
 		"Sass",

@@ -5,6 +5,7 @@
     { "caption": "User - Application: New File", "command": "new_file" },
     { "caption": "User - Application: New Window", "command": "new_window" },
     { "caption": "User - Application: Reset Window", "command": "reset_window" },
+    { "caption": "User - Clean Preferences", "command": "user_clean_preferences" },
     { "caption": "User - Dump Info", "command": "user_dump_info" },
     { "caption": "User - Dump Scope", "command": "user_dump_scope" },
     { "caption": "User - Dump View", "command": "user_dump_view" },

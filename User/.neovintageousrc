@@ -87,9 +87,8 @@ nnoremap <leader>ss vip:sort u<CR>
 vnoremap <leader>s :sort u<CR>
 
 " Finders.
-noremap <leader>f   :UserFindInFiles<CR>
-noremap <C-f3>      :UserFindInFiles<CR>
-noremap <S-f3>      :UserFindInFiles interactive=false<CR>
+noremap <leader>ff  :UserFindInFiles<CR>
+noremap <leader>fi  :UserFindInFiles use_filter=false<CR>
 
 " Dump Variable.
 nnoremap <leader>vd :UserDumpVariable phpfunc=dump<CR>
@@ -109,6 +108,6 @@ nnoremap <leader>t :TestNearest<CR>
 " Origami: https://packagecontrol.io/packages/Origami
 nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
 
-" LSP
-nnoremap FileType php gd :LspSymbolDefinition<CR>
-nnoremap FileType go,html gd :LspSymbolDefinition<CR>
+" " LSP
+" nnoremap FileType php gd :LspSymbolDefinition<CR>
+" nnoremap FileType go,html gd :LspSymbolDefinition<CR>
