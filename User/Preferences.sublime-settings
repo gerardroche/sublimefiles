@@ -232,7 +232,7 @@
 		"build",
 		"storage",
 	],
-	"font_size": 11,
+	"font_size": 16,
 	"goto_php_manual.path": "${PROJECTS_PATH}/.man",
 	"ignored_packages":
 	[
