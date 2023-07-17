@@ -225,17 +225,17 @@
 		"no_italic",
 		"subpixel_antialias",
 	],
-	"font_size": 17,
+	"font_size": 10,
 	"goto_php_manual.path": "${PROJECTS_PATH}/.man",
 	"ignored_packages":
 	[
 		"GitGutter",
+		"polyfill",
 		"Python Completions",
 		"ShowAsciiValue",
 		"Six",
 		"Vintage",
 		"Vintageous",
-		"polyfill",
 	],
 	"ignored_snippets":
 	[
