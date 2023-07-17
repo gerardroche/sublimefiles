@@ -53,10 +53,26 @@ class ToggleCommand(sublime_plugin.WindowCommand):
         return self.get_preference_name().replace('_', ' ').title()
 
     def get_disable_value(self):
-        return False
+        return self.get_toggle_off_value(False)
 
     def get_enabled_value(self):
-        return True
+        return self.get_toggle_on_value(True)
+
+    def get_toggle_off_value(self, default=None):
+        return self.get_setting('%s_toggle_off' % self.get_preference_name(), default)
+
+    def get_toggle_on_value(self, default=None):
+        return self.get_setting('%s_toggle_on' % self.get_preference_name(), default)
+
+    def get_setting(self, name: str, default=None):
+        view = self.window.active_view()
+        if view:
+            value = view.settings().get(name)
+            if value:
+                return value
+
+        if default is not None:
+            return default
 
 
 class ToggleFoldButtonsCommand(ToggleCommand):
@@ -76,18 +92,10 @@ class ToggleIndentGuideCommand(ToggleCommand):
         return 'Indent Guide'
 
     def get_disable_value(self):
-        return []
+        return self.get_toggle_off_value([])
 
     def get_enabled_value(self):
-        view = self.window.active_view()
-        indent_guide_options = view.settings().get('indent_guide_options_default') if view else None
-        if indent_guide_options:
-            return indent_guide_options
-        else:
-            return [
-                'draw_normal',
-                'draw_active'
-            ]
+        return self.get_toggle_on_value(['draw_normal', 'draw_active'])
 
 
 class ToggleInvisiblesCommand(ToggleCommand):
@@ -96,15 +104,10 @@ class ToggleInvisiblesCommand(ToggleCommand):
         return 'draw_white_space'
 
     def get_disable_value(self):
-        view = self.window.active_view()
-        draw_white_space = view.settings().get('draw_white_space_disabled_default') if view else None
-        if draw_white_space:
-            return draw_white_space
-
-        return 'selection'
+        return self.get_toggle_on_value('selection')
 
     def get_enabled_value(self):
-        return 'all'
+        return self.get_toggle_off_value('all')
 
 
 class ToggleLineNumbersCommand(ToggleCommand):
@@ -120,10 +123,10 @@ class TogglePreviewOnClickCommand(ToggleCommand):
 class ToggleRulersCommand(ToggleCommand):
 
     def get_disable_value(self):
-        return []
+        return self.get_toggle_off_value([])
 
     def get_enabled_value(self):
-        return [80, 120]
+        return self.get_toggle_on_value([80, 120])
 
 
 class ToggleSaveOnFocusLostCommand(ToggleCommand):

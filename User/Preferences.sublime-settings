@@ -20,21 +20,13 @@
 	"docblockr.short_primitives": true,
 	"docblockr.spacer_between_sections": true,
 	"draw_minimap_border": true,
-	"draw_white_space":
-	[
+	"draw_white_space": [
 		"leading_mixed",
 		"selection",
 		"trailing",
 		"isolated"
 	],
-	"draw_white_space_default":
-	[
-		"leading_mixed",
-		"selection",
-		"trailing",
-		"isolated"
-	],
-	"draw_white_space_disabled_default":
+	"draw_white_space_toggle_off":
 	[
 		"leading_mixed",
 		"selection",
@@ -95,22 +87,11 @@
 		".*-ca-bundle",
 		".DS_Store",
 		".buildpath",
-		".coveragerc",
 		".directory",
-		".editorconfig",
-		".env*",
-		".eslintrc.json",
-		".flake8",
 		".git",
-		".gitattributes",
-		".gitignore",
-		".lderc",
 		".neon",
-		".nvmrc",
-		".php-cs-fixer.dist.php",
+		".php-version",
 		".project",
-		".python-version",
-		".tmux",
 		"//bootstrap/cache/*.php",
 		"//vendor/*/*/*.dist",
 		"//vendor/*/*/*.md",
@@ -125,22 +106,10 @@
 		"//vendor/*/*/Makefile",
 		"//vendor/*/*/NOTICE",
 		"//vendor/autoload.php",
-		"LICENSE",
-		"Makefile",
-		"artisan",
 		"backup*.sql",
-		"composer.json",
 		"desktop.ini",
-		"mypy.ini",
 		"package-lock.json",
-		"package.json",
-		"phpmd.xml",
-		"phpunit.xml",
-		"phpunit.xml.dist",
-		"psalm.xml",
 		"tags",
-		"tailwind.config.js",
-		"webpack.mix.js",
 	],
 	"file_exclude_patterns_toggle": [
 		".coveragerc",
@@ -175,13 +144,10 @@
 		".Trash",
 		".Trash-*",
 		".git",
-		".github",
 		".hg",
 		".idea",
 		".mypy_cache",
-		".phive",
 		".phpunit.cache",
-		".psalm",
 		".psalm/cache",
 		".ropeproject",
 		".sass-cache",
@@ -227,9 +193,7 @@
 		"CVS",
 		"__pycache__",
 		"_site",
-		"bootstrap/cache",
 		"bower_components",
-		"build",
 		"build/coverage",
 		"build/html",
 		"covhtml",
@@ -240,7 +204,6 @@
 		"logs",
 		"nbproject",
 		"node_modules",
-		"storage",
 		"sublime_text_3",
 	],
 	"folder_exclude_patterns_toggle": [
@@ -281,10 +244,9 @@
 	"ignored_words":
 	[
 	],
-	"indent_guide_options":
-	[
+	"indent_guide_options": [
 	],
-	"indent_guide_options_default":
+	"indent_guide_options_toggle_on":
 	[
 		"draw_normal",
 		"solid",
@@ -337,7 +299,6 @@
 	"man.path": "${PROJECTS_PATH}/.man",
 	"match_brackets_angle": true,
 	"mouse_wheel_switches_tabs": false,
-	"neovintageous_build_version": 12700,
 	"overlay_scroll_bars": "enabled",
 	"phpunit.options":
 	{
@@ -390,6 +351,7 @@
 	"vintageous_terminal": "gnome-terminal",
 	"vintageous_use_ctrl_keys": true,
 	"vintageous_use_super_keys": true,
+	"neovintageous_build_version": 13200,
 	"word_wrap": false,
 	"rulers":
 	[

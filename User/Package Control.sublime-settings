@@ -1,8 +1,7 @@
 {
 	"auto_upgrade": false,
-	"auto_upgrade_frequency": 72,
+	"auto_upgrade_frequency": 48,
 	"bootstrapped": true,
-	"cache_length": 10800,
 	"debug": false,
 	"ignore_vcs_packages": true,
 	"in_process_packages":
