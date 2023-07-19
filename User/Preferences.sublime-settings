@@ -6,22 +6,40 @@
 	"color_scheme": "MonokaiFree.sublime-color-scheme",
 	"fade_fold_buttons": false,
 	"fold_buttons": false,
+	"font_face": "Cascadia Code",
 	"inactive_sheet_dimming": false,
-	"monokaifree.theme": true,
-	"monokaifree.vcs_status_badges": false,
 	"mouse_wheel_switches_tabs": false,
 	"show_tab_close_buttons": false,
 	"theme": "Adaptive.sublime-theme",
-	"xfont_face": "Fira Code",
+	"xmonokaifree.vcs_status_badges": false,
+
 	"font_faces":
-	[
-		"Source Code Pro",
-		"Fira Code"
-	],
+	{
+		"1": "Fira Code",
+		"2": "Cascadia Code",
+		"3": "Cascadia Mono",
+		"4": "Source Code Pro",
+		"5": "Inconsolata",
+		"6": "Hack",
+		"7": "Jetbrains Mono",
+		"8": "Monoid",
+		"9": "Hasklig",
+	},
 	"font_options":
 	[
-		"no_italic",
-		"subpixel_antialias",
+		"ss01",
+		"ss02",
+		"ss03",
+		"ss04",
+		"ss05",
+		"ss06",
+		"ss07",
+		"ss08",
+		"ss09",
+		"ss10",
+		"ss19",
+		"ss20",
+		"gray_antialias",
 	],
 
 	"auto_complete_cycle": true,
@@ -232,17 +250,17 @@
 		"build",
 		"storage",
 	],
-	"font_size": 16,
+	"font_size": 11,
 	"goto_php_manual.path": "${PROJECTS_PATH}/.man",
 	"ignored_packages":
 	[
 		"GitGutter",
+		"polyfill",
 		"Python Completions",
 		"ShowAsciiValue",
 		"Six",
 		"Vintage",
 		"Vintageous",
-		"polyfill",
 	],
 	"ignored_snippets":
 	[

@@ -1,7 +1,10 @@
 {
     "variables": {
+
         // "bg0": "#292C3F",
         // "bg0": "#212121",
+        // "bg0": "#1c1c1c"
+
     },
     "globals": {
         "caret": "yellow",
