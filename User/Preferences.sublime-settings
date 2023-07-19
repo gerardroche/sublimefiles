@@ -367,6 +367,7 @@
 		"<S-tab>": false,
 		"<f1>": false,
 		"i_<C-u>": false,
+		"i_<C-d>": false,
 	},
 	"vintageous_sneak_use_ic_scs": 1,
 	"vintageous_terminal": "gnome-terminal",
