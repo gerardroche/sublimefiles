@@ -103,3 +103,6 @@
 [submodule "GenerateSyntaxTestAssertions"]
 	path = GenerateSyntaxTestAssertions
 	url = https://github.com/gerardroche/sublime-generate-syntax-test-assertions.git
+[submodule "NeoVintageousInsertModeKeymaps"]
+	path = NeoVintageousInsertModeKeymaps
+	url = https://github.com/gerardroche/NeoVintageousInsertModeKeymaps
