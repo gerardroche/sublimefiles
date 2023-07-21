@@ -106,3 +106,6 @@
 [submodule "NeoVintageousInsertModeKeymaps"]
 	path = NeoVintageousInsertModeKeymaps
 	url = https://github.com/gerardroche/NeoVintageousInsertModeKeymaps
+[submodule "Khan"]
+	path = Khan
+	url = https://github.com/gerardroche/sublime-khan.git
