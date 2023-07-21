@@ -28,14 +28,6 @@
     { "caption": "SublimeLinter: Toggle Linter (User)", "command": "linters", "args": {"action": "toggle"} },
     { "caption": "SublimeLinter: Toggle Mode (User)", "command": "linters", "args": {"action": "toggle_mode"} },
     { "caption": "Tasks (User)", "command": "user_tasks" },
-    { "caption": "Toggle Fold Buttons (User)", "command": "toggle_fold_buttons" },
-    { "caption": "Toggle Highlight Line (User)", "command": "toggle_highlight_line" },
-    { "caption": "Toggle Indent Guide (User)", "command": "toggle_indent_guide" },
-    { "caption": "Toggle Invisibles (User)", "command": "toggle_invisibles" },
-    { "caption": "Toggle Line Numbers (User)", "command": "toggle_line_numbers" },
-    { "caption": "Toggle Preview on Click (User)", "command": "toggle_preview_on_click" },
-    { "caption": "Toggle Rulers (User)", "command": "toggle_rulers" },
-    { "caption": "Toggle Save on Focus Lost (User)", "command": "toggle_save_on_focus_lost" },
-    { "caption": "Toggle Show Build (User)", "command": "toggle", "args": {"name": "show_build"}},
+    { "caption": "Toggle Show Build (User)", "command": "toggler", "args": {"setting": "show_build"} },
 
 ]

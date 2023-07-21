@@ -36,6 +36,35 @@
 	},
 	"font_options": ["gray_antialias", "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09", "ss10", "ss19", "ss20"],
 
+	"draw_white_space": [
+		"leading_mixed",
+		"selection",
+		"trailing",
+		"isolated"
+	],
+
+	"draw_white_space_toggle_off":
+	[
+		"leading_mixed",
+		"selection",
+		"trailing",
+		"isolated"
+	],
+
+	"indent_guide_options": [
+	],
+
+	"indent_guide_options_toggle_on":
+	[
+		"draw_normal",
+		"solid",
+		"draw_active"
+	],
+
+	"rulers":
+	[
+	],
+
 	"auto_complete_cycle": true,
 	"auto_complete_trailing_symbols": true,
 	"auto_complete_use_history": true,
@@ -52,19 +81,6 @@
 	"docblockr.return_description": false,
 	"docblockr.short_primitives": true,
 	"docblockr.spacer_between_sections": true,
-	"draw_white_space": [
-		"leading_mixed",
-		"selection",
-		"trailing",
-		"isolated"
-	],
-	"draw_white_space_toggle_off":
-	[
-		"leading_mixed",
-		"selection",
-		"trailing",
-		"isolated"
-	],
 	"enable_telemetry": false,
 	"file_exclude_patterns":
 	[
@@ -263,14 +279,6 @@
 	"ignored_words":
 	[
 	],
-	"indent_guide_options": [
-	],
-	"indent_guide_options_toggle_on":
-	[
-		"draw_normal",
-		"solid",
-		"draw_active"
-	],
 	"index_exclude_gitignore": false,
 	"index_exclude_patterns":
 	[
@@ -366,7 +374,4 @@
 	"vintageous_use_super_keys": true,
 	"neovintageous_build_version": 13200,
 	"word_wrap": false,
-	"rulers":
-	[
-	],
 }
