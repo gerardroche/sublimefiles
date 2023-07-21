@@ -158,7 +158,7 @@
 		"package-lock.json",
 		"tags",
 	],
-	"file_exclude_patterns_toggle": [
+	"file_exclude_patterns_focus": [
 		".coveragerc",
 		".editorconfig",
 		".env*",
@@ -252,7 +252,7 @@
 		"node_modules",
 		"sublime_text_3",
 	],
-	"folder_exclude_patterns_toggle": [
+	"folder_exclude_patterns_focus": [
 		".github",
 		".phive",
 		".psalm",
@@ -325,11 +325,11 @@
 	"line_numbers": false,
 	"man.path": "${PROJECTS_PATH}/.man",
 	"match_brackets_angle": true,
+	"phpunit.debug": false,
 	"phpunit.options":
 	{
 		"no-coverage": true,
 	},
-	"polyfill.experimental_features": true,
 	"relative_line_numbers": true,
 	"remember_full_screen": true,
 	"ruler_column": 120,

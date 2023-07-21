@@ -62,18 +62,4 @@
 			],
 		},
 	},
-	"no_column_highlights_line": false,
-	"show_hover_line_report": false,
-	"show_hover_region_report": false,
-	"show_marks_in_minimap": false,
-	"styles": [
-		{
-			"icon": "x",
-			"mark_style": "fill",
-		},
-		{
-			"icon": "x",
-			"mark_style": "fill",
-		}
-	],
 }
