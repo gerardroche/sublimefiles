@@ -7,24 +7,17 @@ from sublime import windows
 import sublime_plugin
 
 
-@contextmanager
-def save_preferences():
-    yield load_settings('Preferences.sublime-settings')
-    save_settings('Preferences.sublime-settings')
-
-
 class ToggleCommand(sublime_plugin.WindowCommand):
 
-    def run(self):
+    def run(self, name=None):
         with save_preferences() as preferences:
-            preference_name = self.get_preference_name()
+            preference_name = name if name else self.get_preference_name()
 
-            if preferences.get(preference_name) != self.get_enabled_value():
-                setting_value = self.get_enabled_value()
-            else:
-                setting_value = self.get_disable_value()
+            value = self.get_on_value()
+            if preferences.get(preference_name) == value:
+                value = self.get_off_value()
 
-            preferences.set(preference_name, setting_value)
+            preferences.set(preference_name, value)
 
             for window in windows():
                 for view in window.views():
@@ -32,16 +25,16 @@ class ToggleCommand(sublime_plugin.WindowCommand):
 
         status_message('{} is {}'.format(
             self.get_preference_description(),
-            'enabled' if setting_value == self.get_enabled_value() else 'disabled'
+            'enabled' if value == self.get_on_value() else 'disabled'
         ))
 
     def description(self):
         view = self.window.active_view()
         if view:
             current_value = view.settings().get(self.get_preference_name())
-            if current_value == self.get_disable_value():
+            if current_value == self.get_off_value():
                 return 'Show ' + self.get_preference_description()
-            if current_value == self.get_enabled_value():
+            if current_value == self.get_on_value():
                 return 'Hide ' + self.get_preference_description()
 
         return 'Toggle ' + self.get_preference_description()
@@ -52,16 +45,16 @@ class ToggleCommand(sublime_plugin.WindowCommand):
     def get_preference_description(self):
         return self.get_preference_name().replace('_', ' ').title()
 
-    def get_disable_value(self):
-        return self.get_toggle_off_value(False)
+    def get_off_value(self):
+        return self.get_off_value_or(False)
 
-    def get_enabled_value(self):
-        return self.get_toggle_on_value(True)
+    def get_on_value(self):
+        return self.get_on_value_or(True)
 
-    def get_toggle_off_value(self, default=None):
+    def get_off_value_or(self, default=None):
         return self.get_setting('%s_toggle_off' % self.get_preference_name(), default)
 
-    def get_toggle_on_value(self, default=None):
+    def get_on_value_or(self, default=None):
         return self.get_setting('%s_toggle_on' % self.get_preference_name(), default)
 
     def get_setting(self, name: str, default=None):
@@ -91,11 +84,11 @@ class ToggleIndentGuideCommand(ToggleCommand):
     def get_preference_description(self):
         return 'Indent Guide'
 
-    def get_disable_value(self):
-        return self.get_toggle_off_value([])
+    def get_off_value(self):
+        return self.get_off_value_or([])
 
-    def get_enabled_value(self):
-        return self.get_toggle_on_value(['draw_normal', 'draw_active'])
+    def get_on_value(self):
+        return self.get_on_value_or(['draw_normal', 'draw_active'])
 
 
 class ToggleInvisiblesCommand(ToggleCommand):
@@ -103,11 +96,11 @@ class ToggleInvisiblesCommand(ToggleCommand):
     def get_preference_name(self):
         return 'draw_white_space'
 
-    def get_disable_value(self):
-        return self.get_toggle_on_value('selection')
+    def get_off_value(self):
+        return self.get_on_value_or('selection')
 
-    def get_enabled_value(self):
-        return self.get_toggle_off_value('all')
+    def get_on_value(self):
+        return self.get_off_value_or('all')
 
 
 class ToggleLineNumbersCommand(ToggleCommand):
@@ -122,19 +115,25 @@ class TogglePreviewOnClickCommand(ToggleCommand):
 
 class ToggleRulersCommand(ToggleCommand):
 
-    def get_disable_value(self):
-        return self.get_toggle_off_value([])
+    def get_off_value(self):
+        return self.get_off_value_or([])
 
-    def get_enabled_value(self):
-        return self.get_toggle_on_value([80, 120])
+    def get_on_value(self):
+        return self.get_on_value_or([80, 120])
 
 
 class ToggleSaveOnFocusLostCommand(ToggleCommand):
     pass
 
 
-class ToggleUserSettingCommand(sublime_plugin.ApplicationCommand):
+# class ToggleUserSettingCommand(sublime_plugin.ApplicationCommand):
 
-    def run(self, key):
-        with save_preferences() as preferences:
-            preferences = preferences.set(key, not bool(preferences.get(key, False)))
+#     def run(self, key):
+#         with save_preferences() as preferences:
+#             preferences = preferences.set(key, not bool(preferences.get(key, False)))
+
+
+@contextmanager
+def save_preferences():
+    yield load_settings('Preferences.sublime-settings')
+    save_settings('Preferences.sublime-settings')

@@ -39,5 +39,6 @@
     { "caption": "Toggle Preview on Click (User)", "command": "toggle_preview_on_click" },
     { "caption": "Toggle Rulers (User)", "command": "toggle_rulers" },
     { "caption": "Toggle Save on Focus Lost (User)", "command": "toggle_save_on_focus_lost" },
+    { "caption": "Toggle Show Build (User)", "command": "toggle", "args": {"name": "show_build"}},
 
 ]

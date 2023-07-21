@@ -72,6 +72,9 @@ noremap <D-i> :GotoSymbolInProject<CR>
 noremap <leader>/ :ToggleInlineDiff<CR>
 noremap <space> :
 
+" Easy insertion of a trailing ;
+nnoremap ;; <Esc>A;<Esc>;
+
 " Yank and paste using system clipboard.
 noremap <leader>y "+y
 noremap <leader>Y "+Y

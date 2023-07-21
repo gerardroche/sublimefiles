@@ -1,17 +1,4 @@
 [
-    {
-        "id": "view",
-        "children":
-        [
-            { "id": "side_bar" },
-            { "command": "toggle_indent_guide" },
-            { "command": "toggle_invisibles" },
-            { "command": "toggle_highlight_line" },
-            { "command": "toggle_line_numbers" },
-            { "command": "toggle_preview_on_click" },
-            { "command": "toggle_rulers" }
-        ]
-    },
     { "id": "help" },
     {
         "id": "developer-tools",

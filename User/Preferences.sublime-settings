@@ -5,14 +5,23 @@
 	"caret_extra_top": 0,
 	"color_scheme": "MonokaiFree.sublime-color-scheme",
 	"fade_fold_buttons": false,
+	"file_tab_style": "square",
 	"fold_buttons": false,
-	"font_face": "Cascadia Code",
 	"inactive_sheet_dimming": false,
-	"mouse_wheel_switches_tabs": false,
-	"show_tab_close_buttons": false,
-	"theme": "Adaptive.sublime-theme",
 	"xmonokaifree.vcs_status_badges": false,
+	"mouse_wheel_switches_tabs": false,
+	"show_build": true,
+	"show_git_status_in_status_bar": false,
+	"show_indentation": false,
+	"show_line_column": "compact",
+	"show_rel_path": true,
+	"show_sidebar_button": false,
+	"show_syntax": false,
+	"show_tab_close_buttons": false,
 
+	"theme": "Adaptive.sublime-theme",
+
+	"font_face": "Cascadia Code",
 	"font_faces":
 	{
 		"1": "Fira Code",
@@ -25,22 +34,7 @@
 		"8": "Monoid",
 		"9": "Hasklig",
 	},
-	"font_options":
-	[
-		"ss01",
-		"ss02",
-		"ss03",
-		"ss04",
-		"ss05",
-		"ss06",
-		"ss07",
-		"ss08",
-		"ss09",
-		"ss10",
-		"ss19",
-		"ss20",
-		"gray_antialias",
-	],
+	"font_options": ["gray_antialias", "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09", "ss10", "ss19", "ss20"],
 
 	"auto_complete_cycle": true,
 	"auto_complete_trailing_symbols": true,
@@ -255,12 +249,12 @@
 	"ignored_packages":
 	[
 		"GitGutter",
-		"polyfill",
 		"Python Completions",
 		"ShowAsciiValue",
 		"Six",
 		"Vintage",
 		"Vintageous",
+		"polyfill",
 	],
 	"ignored_snippets":
 	[
@@ -347,9 +341,6 @@
 			"path": "~/sesamelinks",
 		}
 	],
-	"show_definitions": true,
-	"show_errors_inline": true,
-	"show_git_status_in_status_bar": false,
 	"show_legacy_color_schemes": false,
 	"spelling_selector": "markup.raw, source string.quoted - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.raw.inline)",
 	"submit_usage": false,
@@ -377,5 +368,7 @@
 	"word_wrap": false,
 	"rulers":
 	[
+		80,
+		120,
 	],
 }
