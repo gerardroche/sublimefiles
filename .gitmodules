@@ -109,3 +109,6 @@
 [submodule "Khan"]
 	path = Khan
 	url = https://github.com/gerardroche/sublime-khan.git
+[submodule "Toggler"]
+	path = Toggler
+	url = https://github.com/gerardroche/sublime-toggler.git

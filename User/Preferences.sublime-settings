@@ -368,7 +368,5 @@
 	"word_wrap": false,
 	"rulers":
 	[
-		80,
-		120,
 	],
 }
