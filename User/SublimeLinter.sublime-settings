@@ -29,7 +29,6 @@
 			"env":
 			{
 				"MYPYPATH": "${MYPYPATH_SUBLIME}"
-
 			},
 			"excludes":
 			[

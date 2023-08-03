@@ -24,5 +24,6 @@
 /UnitTesting33/
 /User/Package Control.*-ca-bundle
 /User/UnitTesting/*/coverage
-/UserDesktop/*
-/UserLaptop/*
+/User/tmp/
+/UserDesktop/
+/UserLaptop/
