@@ -1,38 +1,11 @@
-" The character " (the double quote mark) starts a comment
-" Type :h neovintageousrc for help.
-
-" set autoindent
-" set belloff=
-" set expandtabs
-" set hlsearch
-" set ignorecase
-" set incsearch
-" set list
-" set magic
-" set menu
-" set modeline
-" set modelines=7
-" set nomenu
-" set nominimap
-" set nowrapscan
-" set number
-" set scrolloff=8
-" set shell=/bin/bash
-" set sidebar
-" set sidescrolloff=9
-" set smartcase
-" set spell
-" set statusbar
-" set tabstop
-" set textwidth=80
-" set winaltkeys=menu
-" set wrap
+" A double quote character starts a comment.
 
 set ignorecase
 set nominimap
 set smartcase
 
 let mapleader=,
+let maplocalleader=/
 
 nnoremap <leader><leader> :Neovintageous action=reveal_side_bar<CR>
 nnoremap <leader>ca :SideBarCopyAbsolutePath<CR>
@@ -42,14 +15,10 @@ nnoremap <leader>d :Neovintageous action=toggle_side_bar<CR>
 nnoremap <leader>ek :OpenKeyBindings<CR>
 nnoremap <leader>en :Neovintageous action=open_rc_file<CR>
 nnoremap <leader>ep :OpenPreferences<CR>
-nnoremap <leader>g/ :ToggleInlineDiff<CR>
-nnoremap <leader>g; :ToggleInlineDiff prefer_hide=true<CR>
 nnoremap <leader>ga :silent !git add %<CR>
-nnoremap <leader>gb :GitGutter action=blame<CR>
-nnoremap <leader>gf :ShowOverlay overlay=goto text=@<CR>
-nnoremap <leader>gs :!git status<CR>
+nnoremap <leader>gd :ToggleInlineDiff<CR>
+nnoremap <leader>gr :silent !git reset<CR>
 nnoremap <leader>gu :GenerateUnitTest<CR>
-nnoremap <leader>gv :FindFileUnderCursor<CR>
 nnoremap <leader>hm :RevertModification<CR>
 nnoremap <leader>hp :PasteFromHistory<CR>
 nnoremap <leader>hu :RevertHunk<CR>
@@ -60,7 +29,6 @@ nnoremap <leader>q gqip:w<CR>
 nnoremap <leader>r :reg<CR>
 nnoremap <leader>sr :SublimeLinterLineReport<CR>
 nnoremap <leader>st :SublimeLinterPanelToggle<CR>
-nnoremap <leader>sv <C-w><C-v><C-w>h<C-w>q<C-w>l
 nnoremap <leader>wh :CarryFileToPane direction=left<CR>
 nnoremap <leader>wj :CarryFileToPane direction=down<CR>
 nnoremap <leader>wk :CarryFileToPane direction=up<CR>
@@ -69,11 +37,16 @@ noremap <C-l> :nohlsearch<CR>
 noremap <C-s> :w<CR>
 noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
-noremap <leader>/ :ToggleInlineDiff<CR>
-noremap <space> :
+
+noremap <leader>ga :reg
 
 " Easy insertion of a trailing ;
 nnoremap ;; <Esc>A;<Esc>;
+
+nnoremap <space> :UserFormatLink<CR>
+
+" The "Q" command formerly performed this function.
+nnoremap Q gq
 
 " Yank and paste using system clipboard.
 noremap <leader>y "+y
@@ -102,7 +75,7 @@ nnoremap <leader>vv :UserDumpVariable phpfunc=dd<CR>
 
 " Test: https://github.com/gerardroche/sublime-test
 nnoremap <D-n> :TestNearest<CR>
-nnoremap <leader>T :TestFile<CR>
+nnoremap <leader>ff :TestFile<CR>
 nnoremap <leader>a :TestSuite<CR>
 nnoremap <leader>gg :TestVisit<CR>
 nnoremap <leader>l :TestLast<CR>
@@ -111,6 +84,8 @@ nnoremap <leader>t :TestNearest<CR>
 " Origami: https://packagecontrol.io/packages/Origami
 nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
 
-" " LSP
-" nnoremap FileType php gd :LspSymbolDefinition<CR>
+" Dev testing
 " nnoremap FileType go,html gd :LspSymbolDefinition<CR>
+" nnoremap FileType php gd :LspSymbolDefinition<CR>
+nnoremap ø :marks
+nnoremap → :registers

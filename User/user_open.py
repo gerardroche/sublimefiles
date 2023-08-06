@@ -11,7 +11,7 @@ class OpenKeyBindingsCommand(sublime_plugin.WindowCommand):
             'file': os.path.join(
                 packages_path(),
                 'User',
-                'Default (Linux).sublime-keymap'
+                'Default.sublime-keymap'
             )
         })
 

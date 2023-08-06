@@ -1,15 +1,12 @@
 {
-	"auto_upgrade": false,
 	"auto_upgrade_frequency": 48,
 	"bootstrapped": true,
-	"debug": false,
 	"ignore_vcs_packages": true,
 	"in_process_packages":
 	[
 	],
 	"install_prereleases":
 	[
-		"NeoVintageous"
 	],
 	"installed_packages":
 	[
@@ -30,8 +27,8 @@
 		"SublimeLinter-flake8",
 		"SublimeLinter-mypy",
 		"SublimeLinter-php",
-		"Terraform"
+		"Terraform",
 	],
 	"submit_url": "",
-	"submit_usage": false
+	"submit_usage": false,
 }

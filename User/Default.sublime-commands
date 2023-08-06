@@ -8,9 +8,12 @@
     { "caption": "Clean Preferences (User)", "command": "user_clean_preferences" },
     { "caption": "Dump Info (User)", "command": "user_dump_info" },
     { "caption": "Dump Scope (User)", "command": "user_dump_scope" },
+    { "caption": "Dump Settings (User)", "command": "user_dump_settings" },
     { "caption": "Dump View (User)", "command": "user_dump_view" },
     { "caption": "Focus (User)", "command": "focus" },
+    { "caption": "Format Link (User)", "command": "user_format_link" },
     { "caption": "Generate PHPUnit Test (User)", "command": "generate_phpunit_test" },
+    { "caption": "Lumber: Set Log Level", "command": "lumber" },
     { "caption": "Man (User)", "command": "man" },
     { "caption": "NeoVintageous: Dump Completions (User)", "command": "neovintageous_dev", "args": {"action": "dump_ex_completions"}},
     { "caption": "NeoVintageous: Dump Mappings (User)", "command": "neovintageous_dev", "args": {"action": "dump_mappings"}},
@@ -29,5 +32,26 @@
     { "caption": "SublimeLinter: Toggle Mode (User)", "command": "linters", "args": {"action": "toggle_mode"} },
     { "caption": "Tasks (User)", "command": "user_tasks" },
     { "caption": "Toggle Show Build (User)", "command": "toggler", "args": {"setting": "show_build"} },
+
+    { "caption": "Dump NeoVintageous Settings (User)", "command": "user_dump_settings", "args": {
+        "prefixes": [
+            "VintageousEx",
+            "_",
+            "__nv",
+            "__vi",
+            "_neovintageous",
+            "_nv",
+            "_vi",
+            "_vintageous",
+            "enable",
+            "ex",
+            "is",
+            "is_vintageous",
+            "neovintageous",
+            "nv",
+            "vi",
+            "vintageous",
+        ]
+    }},
 
 ]

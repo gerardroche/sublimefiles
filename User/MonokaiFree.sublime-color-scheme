@@ -5,13 +5,24 @@
         // "bg0": "#292C3F",
     },
     "globals": {
+
+        // Caret
         "caret": "yellow",
         "block_caret": "yellow",
         "block_caret_border": "yellow",
         "block_caret_corner_style": "square",
+
+        // Selections
         "selection_corner_style": "square",
     },
     "rules": [
+
+        // code fences
+        // {"scope": "markup.raw.code-fence", "background": "color(var(bg0) blend(#111 66%))"},
+        // {"scope": "punctuation.definition.raw.code-fence", "foreground": "color(var(bg0) blend(#111 66%))"},
+        // {"scope": "text.html.markdown meta.code-fence.definition", "background": "color(var(bg0) blend(#111 66%))"},
+        // {"scope": "text.html.markdown meta.code-fence.definition.begin.javascript.markdown-gfm constant.other.language-name.markdown", "foreground": "color(var(bg0) blend(#111 66%))"},
+        // {"scope": "text.html.markdown meta.code-fence.definition.begin.text.markdown-gfm constant.other.language-name.markdown", "foreground": "color(var(bg0) blend(#111 66%))"},
 
     ]
 }
