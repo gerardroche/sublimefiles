@@ -5,7 +5,7 @@ set nominimap
 set smartcase
 
 let mapleader=,
-let maplocalleader=/
+let maplocalleader=<bslash>
 
 nnoremap <leader><leader> :Neovintageous action=reveal_side_bar<CR>
 nnoremap <leader>ca :SideBarCopyAbsolutePath<CR>
@@ -33,17 +33,14 @@ nnoremap <leader>wh :CarryFileToPane direction=left<CR>
 nnoremap <leader>wj :CarryFileToPane direction=down<CR>
 nnoremap <leader>wk :CarryFileToPane direction=up<CR>
 nnoremap <leader>wl :CarryFileToPane direction=right<CR>
+nnoremap <localleader><space> :UserFormatLink<CR>
+nnoremap <space> :
 noremap <C-l> :nohlsearch<CR>
-noremap <C-s> :w<CR>
 noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
 
-noremap <leader>ga :reg
-
 " Easy insertion of a trailing ;
 nnoremap ;; <Esc>A;<Esc>;
-
-nnoremap <space> :UserFormatLink<CR>
 
 " The "Q" command formerly performed this function.
 nnoremap Q gq
@@ -76,16 +73,29 @@ nnoremap <leader>vv :UserDumpVariable phpfunc=dd<CR>
 " Test: https://github.com/gerardroche/sublime-test
 nnoremap <D-n> :TestNearest<CR>
 nnoremap <leader>ff :TestFile<CR>
-nnoremap <leader>a :TestSuite<CR>
-nnoremap <leader>gg :TestVisit<CR>
-nnoremap <leader>l :TestLast<CR>
-nnoremap <leader>t :TestNearest<CR>
+nnoremap <leader>ta :TestSuite<CR>
+nnoremap <leader>ts :TestSwitch<CR>
+nnoremap <leader>tf :TestFile<CR>
+nnoremap <leader>tl :TestLast<CR>
+nnoremap <leader>tn :TestNearest<CR>
+nnoremap <leader>tv :TestVisit<CR>
 
 " Origami: https://packagecontrol.io/packages/Origami
 nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
 
-" Dev testing
+" The following mappings are temporary mappings I'm using during development
+" e.g., feature testing, reproducing bug reports, experiments, etc.
+
 " nnoremap FileType go,html gd :LspSymbolDefinition<CR>
 " nnoremap FileType php gd :LspSymbolDefinition<CR>
 nnoremap ø :marks
 nnoremap → :registers
+
+noremap <left> :Noop<CR>
+noremap <right> :Noop<CR>
+noremap <down> :Noop<CR>
+noremap <up> :Noop<CR>
+
+noremap <leader>k :nohlsearch<CR>
+" noremap <Space> :
+" noremap <C-s> :w<CR>

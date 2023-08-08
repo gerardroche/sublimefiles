@@ -21,10 +21,12 @@ def _format_link(line_string: str):
 
         ws_count = 0
         ws = re.match('\\s*[#]+', label)
-        print('ws =', ws)
         if ws:
-            print(len(ws.group(0)))
-            ws_count = len(ws.group(0)) - 2
+            ws_count = len(ws.group(0))
+            if ws_count == 3:
+                ws_count = 2
+            elif ws_count == 4:
+                ws_count = 4
 
         label = label.strip()
         label = re.sub('^[^a-zA-Z0-9\\.]*', '', label)
@@ -37,6 +39,6 @@ def _format_link(line_string: str):
         anchor = anchor.strip('-')
 
         link = '[%s](#%s)' % (label, anchor)
-        link = (' ' * ws_count) + ' - ' + link
+        link = (' ' * (ws_count - 1)) + ' - ' + link
 
         return link

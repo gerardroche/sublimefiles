@@ -15,22 +15,48 @@
         // Selections
         "selection_corner_style": "square",
 
-        "selection": "color(var(yellow))",
-        "selection_border": "color(var(yellow))",
-        "selection_foreground": "",
+        // "selection": "color(var(yellow))",
+        // "selection_border": "color(var(yellow))",
 
         "selection": "color(var(yellow) alpha(0.1))",
         "selection_border": "color(var(yellow) alpha(0.9))",
 
+        // "selection": "color(var(fg1) alpha(0.1))",
+        // "selection_border": "color(var(fg1) alpha(0.9))",
+
+
+        "selection_foreground": "",
+
+
     },
     "rules": [
 
+        // {
+        //     "scope": "highlightedyank",
+        //     "background": "yellow",
+        //     "foreground": "blue"
+        // },
+
+        // {
+        //     "scope": "neovintageous.mark",
+        //     "foreground": "yellow",
+        // }
+
+        // {
+        //     "scope": "markup.raw.code-fence",
+        //     // "background": "color(var(fg1) blend(#000 10%))"
+        //     // "background": "color(var(bg0) s(+ 10%))"
+        //     "background": "color(var(bg0) blend(#000 70%))"
+        // },
+
+
         // code fences
-        // {"scope": "markup.raw.code-fence", "background": "color(var(bg0) blend(#111 66%))"},
-        // {"scope": "punctuation.definition.raw.code-fence", "foreground": "color(var(bg0) blend(#111 66%))"},
-        // {"scope": "text.html.markdown meta.code-fence.definition", "background": "color(var(bg0) blend(#111 66%))"},
-        // {"scope": "text.html.markdown meta.code-fence.definition.begin.javascript.markdown-gfm constant.other.language-name.markdown", "foreground": "color(var(bg0) blend(#111 66%))"},
-        // {"scope": "text.html.markdown meta.code-fence.definition.begin.text.markdown-gfm constant.other.language-name.markdown", "foreground": "color(var(bg0) blend(#111 66%))"},
+        // {"scope": "markup.raw.code-fence", "background": "color(var(bg0) blend(#111 60%))"},
+        // {"scope": "punctuation.definition.raw.code-fence", "foreground": "color(var(bg0) blend(#111 60%))"},
+        // {"scope": "text.html.markdown meta.code-fence.definition", "background": "color(var(bg0) blend(#111 60%))"},
+        // {"scope": "text.html.markdown meta.code-fence.definition.begin.javascript.markdown-gfm constant.other.language-name.markdown", "foreground": "color(var(bg0) blend(#111 60%))"},
+        // {"scope": "text.html.markdown meta.code-fence.definition.begin.text.markdown-gfm constant.other.language-name.markdown", "foreground": "color(var(bg0) blend(#111 60%))"},
+        // {"scope": "punctuation.definition.raw.code-fence", "foreground": "var(violet)"},
 
     ]
 }

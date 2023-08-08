@@ -1,18 +1,19 @@
 {
 
+	"adaptive_dividers": false,
 	"animation_enabled": false,
 	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,
 	"fade_fold_buttons": false,
 	"file_tab_style": "square",
-	"fold_buttons": false,
 	"inactive_sheet_dimming": false,
-	"line_numbers": true,
 	"mouse_wheel_switches_tabs": false,
 	"relative_line_numbers": true,
+	"ruler_style": "stippled",
 	"save_on_focus_lost": true,
 	"scroll_context_lines": 8,
 	"show_build": false,
+	"show_definitions": false,
 	"show_git_status_in_status_bar": false,
 	"show_indentation": false,
 	"show_legacy_color_schemes": false,
@@ -22,10 +23,33 @@
 	"show_syntax": false,
 	"show_tab_close_buttons": false,
 
-	"spelling_selector": "markup.raw, source string.quoted - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.raw.inline)",
+	"auto_complete_cycle": true,
+	"auto_complete_delay": 1000,
+	"auto_complete_trailing_symbols": true,
+	"auto_complete_use_history": true,
+	"auto_complete_with_fields": true,
 
-	"color_scheme": "MonokaiFreeDark.sublime-color-scheme",
+	"spelling_selector": "source string.quoted - markup.raw - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.raw)",
+
+	"auto_upgrade": false,
+	"debug": false,
+	"enable_telemetry": false,
+	"submit_usage": false,
+	"update_check": false,
+
+	"fold_buttons": false,
+	"font_size": 10,
+	"gutter": true,
+	"line_numbers": false,
+	"spell_check": false,
+	"word_wrap": false,
+
+	"rulers":
+	[
+	],
+
 	"theme": "Adaptive.sublime-theme",
+	"color_scheme": "MonokaiFreeYaruDark.sublime-color-scheme",
 
 	"font_face": "Fira Code",
 	"font_faces":
@@ -56,7 +80,12 @@
 		"ss20"
 	],
 
-	"draw_white_space": "selection",
+	"draw_white_space": [
+		"leading_mixed",
+		"selection",
+		"trailing",
+		"isolated"
+	],
 
 	"draw_white_space_toggle_off": [
 		"leading_mixed",
@@ -75,18 +104,6 @@
 		"solid",
 		"draw_active"
 	],
-
-	"auto_complete_cycle": true,
-	"auto_complete_delay": 1000,
-	"auto_complete_trailing_symbols": true,
-	"auto_complete_use_history": true,
-	"auto_complete_with_fields": true,
-
-	"auto_upgrade": false,
-	"debug": false,
-	"enable_telemetry": false,
-	"submit_usage": false,
-	"update_check": false,
 
 	"file_exclude_patterns":
 	[
@@ -321,15 +338,27 @@
 
 	// Volitile
 
-	"font_size": 9,
-	"word_wrap": false,
-
-	"rulers":
-	[
-	],
-
 	"added_words":
 	[
+		"Capslock",
+		"Cmdline",
+		"Colemak",
+		"Monokai",
+		"Plugin",
+		"Plugins",
+		"Vintageous",
+		"color",
+		"colors",
+		"etc",
+		"neovintageousrc",
+		"plugin",
+		"plugins",
+		"vimrc",
+		"vintageous",
+		"Dict",
+		"mapleader",
+		"maplocalleader",
+		"nohlsearch",
 	],
 
 	"ignored_words":
@@ -340,8 +369,6 @@
 	[
 		"GitGutter",
 		"GitSavvy",
-		"NeoVintageousBuzz",
-		"NeoVintageousFizz",
 		"ShowAsciiValue",
 		"Six",
 		"Vintage",
@@ -419,7 +446,10 @@
 	},
 	"vintageous_sneak_use_ic_scs": 1,
 	"vintageous_terminal": "gnome-terminal",
-	"vintageous_use_ctrl_keys": true,
-	"vintageous_use_super_keys": true,
 
+	// Testing: NeoVintageous - Input Method
+    // "vintageous_auto_switch_input_method": true,
+    // "vintageous_auto_switch_input_method_default": "1",
+    // "vintageous_auto_switch_input_method_get_cmd": "im-get",
+    // "vintageous_auto_switch_input_method_set_cmd": "im-set {im}",
 }

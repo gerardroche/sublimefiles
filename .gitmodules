@@ -115,3 +115,6 @@
 [submodule "MarkdownPreview"]
 	path = MarkdownPreview
 	url = https://github.com/gerardroche/MarkdownPreview.git
+[submodule "Color Scheme - Dracula"]
+	path = Color Scheme - Dracula
+	url = https://github.com/facelessuser/sublime-dracula-scheme.git

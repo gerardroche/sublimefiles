@@ -28,7 +28,7 @@
 			"disable": false,
 			"env":
 			{
-				"MYPYPATH": "${MYPYPATH_SUBLIME}"
+				"MYPYPATH": "${MYPYPATH_SUBLIME}:$HOME/.config/sublime-text/Packages"
 			},
 			"excludes":
 			[
