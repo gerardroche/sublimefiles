@@ -28,7 +28,8 @@
 			"disable": false,
 			"env":
 			{
-				"MYPYPATH": "${PROJECTS_PATH}/gerardroche/sublime-mypy-stubs",
+				"MYPYPATH": "${MYPYPATH_SUBLIME}"
+
 			},
 			"excludes":
 			[

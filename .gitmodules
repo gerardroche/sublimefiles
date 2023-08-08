@@ -112,3 +112,6 @@
 [submodule "Toggler"]
 	path = Toggler
 	url = https://github.com/gerardroche/sublime-toggler.git
+[submodule "MarkdownPreview"]
+	path = MarkdownPreview
+	url = https://github.com/gerardroche/MarkdownPreview.git

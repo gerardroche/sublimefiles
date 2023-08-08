@@ -1,5 +1,6 @@
 {
     "enable_autoreload": true,
     "enable_highlight": true,
-    "enabled_parsers": ["markdown"]
+    "enabled_parsers": ["markdown"],
+    "python_markdown_tab_length": 3
 }

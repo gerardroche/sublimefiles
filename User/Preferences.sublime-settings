@@ -24,7 +24,7 @@
 
 	"spelling_selector": "markup.raw, source string.quoted - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.raw.inline)",
 
-	"color_scheme": "MonokaiFree.sublime-color-scheme",
+	"color_scheme": "MonokaiFreeDark.sublime-color-scheme",
 	"theme": "Adaptive.sublime-theme",
 
 	"font_face": "Fira Code",
@@ -360,6 +360,7 @@
 
 	// Plugin - PHPUnitKit
 
+	// "phpunit.debug": true,
 	"phpunit.options": {
 		"no-coverage": true,
 	},

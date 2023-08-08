@@ -1,0 +1,46 @@
+{
+    "variables": {
+        // "bg0": "#1c1c1c"
+        // "bg0": "#212121",
+        // "bg0": "#292C3F",
+    },
+    "globals": {
+
+        // Caret
+        "caret": "yellow",
+        "block_caret": "yellow",
+        "block_caret_border": "yellow",
+        "block_caret_corner_style": "square",
+
+        // Selections
+        "selection_corner_style": "square",
+
+        "selection": "color(var(yellow))",
+        "selection_border": "color(var(yellow))",
+        "selection_foreground": "",
+
+        "selection": "color(var(yellow) alpha(0.1))",
+        "selection_border": "color(var(yellow) alpha(0.9))",
+
+    },
+    "rules": [
+
+
+        // {
+        //     "scope": "markup.raw.code-fence",
+        //     // "background": "color(var(fg1) blend(#000 10%))"
+        //     // "background": "color(var(bg0) s(+ 10%))"
+        //     "background": "color(var(bg0) blend(#000 70%))"
+        // },
+
+
+        // code fences
+        // {"scope": "markup.raw.code-fence", "background": "color(var(bg0) blend(#111 60%))"},
+        // {"scope": "punctuation.definition.raw.code-fence", "foreground": "color(var(bg0) blend(#111 60%))"},
+        // {"scope": "text.html.markdown meta.code-fence.definition", "background": "color(var(bg0) blend(#111 60%))"},
+        // {"scope": "text.html.markdown meta.code-fence.definition.begin.javascript.markdown-gfm constant.other.language-name.markdown", "foreground": "color(var(bg0) blend(#111 60%))"},
+        // {"scope": "text.html.markdown meta.code-fence.definition.begin.text.markdown-gfm constant.other.language-name.markdown", "foreground": "color(var(bg0) blend(#111 60%))"},
+        // {"scope": "punctuation.definition.raw.code-fence", "foreground": "var(violet)"},
+
+    ]
+}
