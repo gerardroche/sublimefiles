@@ -1,3 +1,4 @@
+import sublime
 import sublime_plugin
 
 
@@ -48,4 +49,8 @@ class UserDumpView(sublime_plugin.WindowCommand):
             # print('    sel[{}] indented region begin = {}'.format(i, view.indented_region(sel.begin())))
             # print('    sel[{}] indented region begin substr = >>{}<<'.format(
             #   i, view.substr(view.indented_region(sel.begin()))))
+
+            for name, value in sublime.active_window().active_view().settings().to_dict().items():
+                print('    ', name, value)
+
         print('<<<')

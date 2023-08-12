@@ -32,6 +32,7 @@
     { "caption": "SublimeLinter: Toggle Mode (User)", "command": "linters", "args": {"action": "toggle_mode"} },
     { "caption": "Tasks (User)", "command": "user_tasks" },
     { "caption": "Toggle Show Build (User)", "command": "toggler", "args": {"setting": "show_build"} },
+    { "caption": "User: Sandbox", "command": "user_sandbox" },
 
     { "caption": "Dump NeoVintageous Settings (User)", "command": "user_dump_settings", "args": {
         "prefixes": [

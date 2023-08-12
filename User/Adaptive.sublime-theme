@@ -21,6 +21,18 @@
             "indent_offset": 0
         },
 
+        // Fix tab alignment.
+        {
+            "class": "tabset_control",
+            "content_margin": [-5, 0, 0, 0]
+        },
+
+        // Fix tab spacing.
+        {
+            "class": "tab_control",
+            "content_margin": [14, 4, 9, 4],
+        },
+
         ///////////////////////
         // Highlight Sidebar //
         ///////////////////////

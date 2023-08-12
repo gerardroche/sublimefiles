@@ -39,6 +39,8 @@ noremap <C-l> :nohlsearch<CR>
 noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
 
+noremap [[ ?^c<CR>
+
 " Easy insertion of a trailing ;
 nnoremap ;; <Esc>A;<Esc>;
 
@@ -83,19 +85,33 @@ nnoremap <leader>tv :TestVisit<CR>
 " Origami: https://packagecontrol.io/packages/Origami
 nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
 
-" The following mappings are temporary mappings I'm using during development
-" e.g., feature testing, reproducing bug reports, experiments, etc.
-
-" nnoremap FileType go,html gd :LspSymbolDefinition<CR>
-" nnoremap FileType php gd :LspSymbolDefinition<CR>
-nnoremap ø :marks
-nnoremap → :registers
+" ============================================================================
+"           Dev stuff
+"
+" The following mappings are temporary mappings.
+"
+" I use these during development of packages e.g., to reproduce reported
+" issues, feature testing, xperiments, etc.
 
 noremap <left> :Noop<CR>
 noremap <right> :Noop<CR>
 noremap <down> :Noop<CR>
 noremap <up> :Noop<CR>
 
-noremap <leader>k :nohlsearch<CR>
-" noremap <Space> :
+" noremap <leader>k :nohlsearch<CR>
+" " noremap <Space> :
 " noremap <C-s> :w<CR>
+" " set noequalalways
+" noremap <leader>gs :UserSandbox<CR>
+
+" nnoremap ¥ :registers<CR>
+" nnoremap É :registers<CR>
+" nnoremap é :registers<CR>
+" nnoremap ø :registers<CR>
+" nnoremap Ċ :registers<CR>
+" nnoremap Œ :registers<CR>
+" nnoremap œ :registers<CR>
+" nnoremap → :registers<CR>
+
+" nnoremap FileType go,html gd :LspSymbolDefinition<CR>
+" nnoremap FileType php gd :LspSymbolDefinition<CR>

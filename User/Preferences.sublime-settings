@@ -1,18 +1,20 @@
 {
 
-	"adaptive_dividers": false,
 	"animation_enabled": false,
 	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,
+	"enable_tab_scrolling": false,
 	"fade_fold_buttons": false,
 	"file_tab_style": "square",
+	"hide_new_tab_button": true,
+	"hide_tab_scrolling_buttons": true,
+	"highlight_modified_tabs": true,
 	"inactive_sheet_dimming": false,
 	"mouse_wheel_switches_tabs": false,
 	"relative_line_numbers": true,
 	"ruler_style": "stippled",
 	"save_on_focus_lost": true,
 	"scroll_context_lines": 8,
-	"show_build": false,
 	"show_definitions": false,
 	"show_git_status_in_status_bar": false,
 	"show_indentation": false,
@@ -37,21 +39,11 @@
 	"submit_usage": false,
 	"update_check": false,
 
-	"fold_buttons": false,
-	"font_size": 10,
-	"gutter": true,
-	"line_numbers": false,
-	"spell_check": false,
-	"word_wrap": false,
-
-	"rulers":
-	[
-	],
-
 	"theme": "Adaptive.sublime-theme",
-	"color_scheme": "MonokaiFreeYaruDark.sublime-color-scheme",
+	"color_scheme": "MonokaiFreeDark.sublime-color-scheme",
+	"monokaifree.vcs_status_badges": false,
 
-	"font_face": "Fira Code",
+	"font_face": "Cascadia Code",
 	"font_faces":
 	{
 		"1": "Fira Code",
@@ -64,27 +56,36 @@
 		"8": "Monoid",
 		"9": "Hasklig",
 	},
+
 	"font_options": [
-		"gray_antialias",
-		"ss01",
-		"ss02",
-		"ss03",
-		"ss04",
-		"ss05",
-		"ss06",
-		"ss07",
-		"ss08",
-		"ss09",
-		"ss10",
-		"ss19",
-		"ss20"
+		"dlig",
+		// "gray_antialias",
+		"ss01", "ss02", "ss03", "ss04", "ss05",
+		"ss06", "ss07", "ss08", "ss09", "ss10",
+		"ss11", "ss12", "ss13", "ss14", "ss15",
+		"ss16", "ss17", "ss18", "ss19", "ss20",
+	],
+
+	// These change a lot.
+
+	"fold_buttons": false,
+	"font_size": 8,
+	"gutter": true,
+	"line_numbers": true,
+	"show_build": false,
+	"spell_check": false,
+	"word_wrap": false,
+
+	"rulers":
+	[
 	],
 
 	"draw_white_space": [
-		"leading_mixed",
 		"selection",
-		"trailing",
-		"isolated"
+	],
+
+	"draw_white_space_toggle_on": [
+		"selection"
 	],
 
 	"draw_white_space_toggle_off": [
@@ -359,10 +360,18 @@
 		"mapleader",
 		"maplocalleader",
 		"nohlsearch",
+		"Markology",
+		"Laravel",
+		"toggleable",
+		"regexes",
+		"Regex",
+		"regex",
 	],
 
 	"ignored_words":
 	[
+		"im",
+		"wq",
 	],
 
 	"ignored_packages":
@@ -441,15 +450,19 @@
 		"<S-f1>": false,
 		"<S-tab>": false,
 		"<f1>": false,
-		"i_<C-d>": false,
+		// "i_<C-d>": false,
 		"i_<C-u>": false,
 	},
 	"vintageous_sneak_use_ic_scs": 1,
 	"vintageous_terminal": "gnome-terminal",
 
+	// "vintageous_auto_nohlsearch_on_normal_enter": false,
+	// "vintageous_highlighted_yank_style": "outline",
+
 	// Testing: NeoVintageous - Input Method
-    // "vintageous_auto_switch_input_method": true,
-    // "vintageous_auto_switch_input_method_default": "1",
-    // "vintageous_auto_switch_input_method_get_cmd": "im-get",
-    // "vintageous_auto_switch_input_method_set_cmd": "im-set {im}",
+	// "vintageous_auto_switch_input_method": true,
+	// "vintageous_auto_switch_input_method_default": "1",
+	// "vintageous_auto_switch_input_method_get_cmd": "im-get",
+	// "vintageous_auto_switch_input_method_set_cmd": "im-set {im}",
+
 }

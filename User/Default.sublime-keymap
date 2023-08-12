@@ -1,6 +1,7 @@
 [
 
     // Man
+
     {
         "keys": ["f1"],
         "command": "goto_documentation",
@@ -15,6 +16,7 @@
     },
 
     // NeoVintageous
+
     {
         "keys": [",", "d"],
         "command": "neovintageous",
@@ -37,27 +39,24 @@
 
     // Test
     { "keys": ["ctrl+shift+a"], "command": "test_suite" },
-    // { "keys": ["ctrl+shift+a"], "command": "unit_testing_current_package" },
     { "keys": ["ctrl+shift+c"], "command": "test_cancel" },
     { "keys": ["ctrl+shift+d"], "command": "test_suite", "args": {"coverage": true} },
-    // { "keys": ["ctrl+shift+f"], "command": "phpunit_test_file" },
     { "keys": ["ctrl+shift+f"], "command": "test_file" },
-    // { "keys": ["ctrl+shift+f"], "command": "unit_testing_current_file" },
-    // { "keys": ["ctrl+shift+g"], "command": "test_file", "args": {"coverage": true}},
     { "keys": ["ctrl+shift+l"], "command": "test_last" },
     { "keys": ["ctrl+shift+n"], "command": "test_nearest" },
     { "keys": ["ctrl+shift+r"], "command": "test_results" },
     { "keys": ["ctrl+shift+s"], "command": "test_switch" },
     { "keys": ["ctrl+shift+v"], "command": "test_visit" },
 
-    {
-        "keys": ["super+r"],
-        "command": "package_reloader_reload"
-    },
+    // dev ...
 
-    // {
-    //     "keys": ["alt+ctrl+p"],
-    //     "command": "color_scheme_unit_show_styles"
-    // },
+    // { "keys": ["ctrl+r"], "command": "user_sandbox", },
+    { "keys": ["super+r"], "command": "package_reloader_reload" },
+    // { "keys": ["alt+ctrl+p"], "command": "color_scheme_unit_show_styles" },
+
+    // { "keys": ["ctrl+shift+a"], "command": "noop" },
+    // { "keys": ["ctrl+shift+f"], "command": "phpunit_test_file" },
+    // { "keys": ["ctrl+shift+f"], "command": "unit_testing_current_file" },
+    // { "keys": ["ctrl+shift+g"], "command": "test_file", "args": {"coverage": true}},
 
 ]
