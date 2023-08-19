@@ -15,7 +15,7 @@
             "content_margin": [0, 1, 0, 0]
         },
 
-        // Align the tree to left.
+        // Fix sidebar alignment.
         {
             "class": "sidebar_tree",
             "indent_offset": 0
@@ -30,7 +30,13 @@
         // Fix tab spacing.
         {
             "class": "tab_control",
-            "content_margin": [14, 4, 9, 4],
+            "content_margin": [14, 4, 9, 4]
+        },
+
+        // Fix tabset alignment.
+        {
+            "class": "tabset_control",
+            "connector_height": 1
         },
 
         ///////////////////////

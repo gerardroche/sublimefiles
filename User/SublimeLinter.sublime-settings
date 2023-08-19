@@ -62,4 +62,5 @@
 			],
 		},
 	},
+	"statusbar.show_active_linters": false
 }

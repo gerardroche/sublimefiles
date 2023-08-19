@@ -38,6 +38,7 @@ nnoremap <space> :
 noremap <C-l> :nohlsearch<CR>
 noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
+noremap <C-s> :w<CR>
 
 noremap [[ ?^c<CR>
 
@@ -100,7 +101,6 @@ noremap <up> :Noop<CR>
 
 " noremap <leader>k :nohlsearch<CR>
 " " noremap <Space> :
-" noremap <C-s> :w<CR>
 " " set noequalalways
 " noremap <leader>gs :UserSandbox<CR>
 
