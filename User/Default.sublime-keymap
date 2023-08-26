@@ -50,7 +50,7 @@
 
     // dev ...
 
-    { "keys": ["ctrl+r"], "command": "user_sandbox", },
+    // { "keys": ["ctrl+r"], "command": "user_sandbox", },
     { "keys": ["super+r"], "command": "package_reloader_reload" },
     // { "keys": ["alt+ctrl+p"], "command": "color_scheme_unit_show_styles" },
 

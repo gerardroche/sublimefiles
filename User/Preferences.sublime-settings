@@ -75,7 +75,7 @@
 	"fold_buttons": false,
 	"font_size": 12,
 	"gutter": true,
-	"line_numbers": true,
+	"line_numbers": false,
 	"show_build": false,
 	"spell_check": false,
 	"word_wrap": false,
@@ -375,6 +375,10 @@
 		"toggleable",
 		"vimrc",
 		"vintageous",
+		"readonly",
+		"characterwise",
+		"linewise",
+		"blockwise",
 	],
 
 	"ignored_words":
@@ -478,5 +482,5 @@
 	// "vintageous_auto_switch_input_method_get_cmd": "im-get",
 	// "vintageous_auto_switch_input_method_set_cmd": "im-set {im}",
 
-	"preview_on_click": false,
+	"preview_on_click": true,
 }
