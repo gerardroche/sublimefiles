@@ -1,0 +1,65 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Nginx
+scope: source.nginx
+version: 2
+
+first_line_match: nginx
+
+variables:
+  keywords: |-
+    (?x:
+        add_header
+
+      | charset
+      | etag
+      | expires
+      | fastcgi_(param|pass)
+      | gzip
+      | gzip_types
+      | include
+      | index
+      | listen
+      | location
+      | root
+      | server(_(name|tokens))?
+      | try_files
+
+      )
+
+  constants: |-
+    (?x:
+        SCRIPT_FILENAME
+
+      | fastcgi_params
+      | off
+      | on
+      | utf-8
+
+      )
+
+contexts:
+  main:
+
+    - match: '(#).*'
+      scope: comment
+      captures:
+        1: punctuation.definition.comment.begin
+
+    - match: '\$[a-zA-Z_]+'
+      scope: variable.parameter
+
+    - match: '{{keywords}}\s'
+      scope: keyword
+
+    - match: '\b{{constants}}\b'
+      scope: constant
+
+    - match: '[0-9]+'
+      scope: constant.numeric
+
+    - match: '".*"'
+      scope: string
+
+

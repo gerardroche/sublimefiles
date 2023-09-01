@@ -73,7 +73,7 @@
 	// These change a lot.
 
 	"fold_buttons": false,
-	"font_size": 9,
+	"font_size": 15,
 	"gutter": true,
 	"line_numbers": false,
 	"show_build": false,
@@ -82,6 +82,8 @@
 
 	"rulers":
 	[
+		80,
+		120,
 	],
 
 	"draw_white_space": [
