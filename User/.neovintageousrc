@@ -40,8 +40,6 @@ noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
 noremap <C-s> :w<CR>
 
-noremap [[ ?^c<CR>
-
 " Easy insertion of a trailing ;
 nnoremap ;; <Esc>A;<Esc>;
 
@@ -93,6 +91,8 @@ nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
 "
 " I use these during development of packages e.g., to reproduce reported
 " issues, feature testing, xperiments, etc.
+
+noremap [[ ?^c<CR>
 
 noremap <left> :Noop<CR>
 noremap <right> :Noop<CR>
