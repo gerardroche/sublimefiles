@@ -41,7 +41,7 @@ noremap <D-i> :GotoSymbolInProject<CR>
 noremap <C-s> :w<CR>
 
 " Easy insertion of a trailing ;
-nnoremap ;; <Esc>A;<Esc>;
+nnoremap <leader>; <Esc>A;<Esc>;
 
 " The "Q" command formerly performed this function.
 nnoremap Q gq

@@ -474,6 +474,7 @@
 	"vintageous_terminal": "gnome-terminal",
 
 	"vintageous_search_occ_style": "outline",
+	"vintageous_enable_sneak": true,
 	// "vintageous_search_inc_style": "underline",
 
 	// "vintageous_auto_nohlsearch_on_normal_enter": false,
