@@ -385,6 +385,7 @@
 
 	"ignored_words":
 	[
+		"dialog",
 		"im",
 		"wq",
 	],
