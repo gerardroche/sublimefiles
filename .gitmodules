@@ -118,3 +118,6 @@
 [submodule "Color Scheme - Dracula"]
 	path = Color Scheme - Dracula
 	url = https://github.com/facelessuser/sublime-dracula-scheme.git
+[submodule "Gitk"]
+	path = Gitk
+	url = https://github.com/gerardroche/sublime-gitk.git
