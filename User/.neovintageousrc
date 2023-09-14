@@ -7,7 +7,7 @@ set smartcase
 let mapleader=,
 let maplocalleader=<bslash>
 
-nnoremap <leader>; <Esc>A;<Esc>;
+nnoremap <leader>; <Esc>A;<Esc>2<C-o>
 nnoremap <leader><leader> :Neovintageous action=reveal_side_bar<CR>
 nnoremap <leader>ca :SideBarCopyAbsolutePath<CR>
 nnoremap <leader>cn :SideBarCopyName<CR>
@@ -23,8 +23,10 @@ nnoremap <leader>gu :GenerateUnitTest<CR>
 nnoremap <leader>hm :RevertModification<CR>
 nnoremap <leader>hp :PasteFromHistory<CR>
 nnoremap <leader>hu :RevertHunk<CR>
+nnoremap <leader>oa :Gitk all=true<CR>
 nnoremap <leader>oc :GitOpen commit=true<CR>
 nnoremap <leader>oi :GitOpen issue=true<CR>
+nnoremap <leader>ok :Gitk max-count=200 all=true date-order=true<CR>
 nnoremap <leader>oo :GitOpen<CR>
 nnoremap <leader>q gqip:w<CR>
 nnoremap <leader>r :reg<CR>
@@ -96,11 +98,12 @@ nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
 
 noremap [[ ?^c<CR>
 
-noremap <left> :Noop<CR>
-noremap <right> :Noop<CR>
-noremap <down> :Noop<CR>
-noremap <up> :Noop<CR>
+" noremap <left> :Noop<CR>
+" noremap <right> :Noop<CR>
+" noremap <down> :Noop<CR>
+" noremap <up> :Noop<CR>
 
+" inoremap <right> <Esc>li
 " noremap <leader>k :nohlsearch<CR>
 " " noremap <Space> :
 " " set noequalalways

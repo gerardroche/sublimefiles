@@ -1,7 +1,5 @@
 [
 
-    // Man
-
     {
         "keys": ["f1"],
         "command": "goto_documentation",
@@ -30,6 +28,12 @@
         "context": [{"key": "control", "operand": "sidebar_tree"}]
     },
 
+    // Vim hard mode
+    { "keys": ["down"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
+    { "keys": ["left"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
+    { "keys": ["right"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
+    { "keys": ["up"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
+
     // Sesame
     { "keys": ["ctrl+alt+a"], "command": "sesame_add" },
     { "keys": ["ctrl+alt+o"], "command": "sesame_open" },
@@ -52,11 +56,5 @@
 
     // { "keys": ["ctrl+r"], "command": "user_sandbox", },
     { "keys": ["super+r"], "command": "package_reloader_reload" },
-    // { "keys": ["alt+ctrl+p"], "command": "color_scheme_unit_show_styles" },
-
-    // { "keys": ["ctrl+shift+a"], "command": "noop" },
-    // { "keys": ["ctrl+shift+f"], "command": "phpunit_test_file" },
-    // { "keys": ["ctrl+shift+f"], "command": "unit_testing_current_file" },
-    // { "keys": ["ctrl+shift+g"], "command": "test_file", "args": {"coverage": true}},
 
 ]

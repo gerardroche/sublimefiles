@@ -73,10 +73,10 @@
 	// These change a lot.
 
 	"fold_buttons": false,
-	"font_size": 10,
+	"font_size": 9,
 	"gutter": true,
 	"line_numbers": false,
-	"show_build": false,
+	"show_build": true,
 	"spell_check": false,
 	"word_wrap": false,
 
