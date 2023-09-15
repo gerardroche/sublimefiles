@@ -121,3 +121,6 @@
 [submodule "Gitk"]
 	path = Gitk
 	url = https://github.com/gerardroche/sublime-gitk.git
+[submodule "NeoVintageousHardMode"]
+	path = NeoVintageousHardMode
+	url = git@github.com:gerardroche/NeoVintageousHardMode.git

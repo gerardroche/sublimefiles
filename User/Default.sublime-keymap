@@ -29,10 +29,16 @@
     },
 
     // Vim hard mode
+
     { "keys": ["down"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
     { "keys": ["left"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
     { "keys": ["right"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
     { "keys": ["up"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
+
+    { "keys": ["shift+down"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
+    { "keys": ["shift+left"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
+    { "keys": ["shift+right"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
+    { "keys": ["shift+up"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
 
     // Sesame
     { "keys": ["ctrl+alt+a"], "command": "sesame_add" },
