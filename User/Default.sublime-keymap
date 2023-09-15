@@ -1,4 +1,5 @@
 [
+    // GotoDocumentation
 
     {
         "keys": ["f1"],
@@ -28,18 +29,6 @@
         "context": [{"key": "control", "operand": "sidebar_tree"}]
     },
 
-    // Vim hard mode
-
-    { "keys": ["down"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
-    { "keys": ["left"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
-    { "keys": ["right"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
-    { "keys": ["up"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
-
-    { "keys": ["shift+down"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
-    { "keys": ["shift+left"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
-    { "keys": ["shift+right"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
-    { "keys": ["shift+up"], "command": "noop", "context": [{"key": "nv_command_or_insert"}]},
-
     // Sesame
     { "keys": ["ctrl+alt+a"], "command": "sesame_add" },
     { "keys": ["ctrl+alt+o"], "command": "sesame_open" },
@@ -58,8 +47,7 @@
     { "keys": ["ctrl+shift+s"], "command": "test_switch" },
     { "keys": ["ctrl+shift+v"], "command": "test_visit" },
 
-    // dev ...
-
+    // Package Development
     // { "keys": ["ctrl+r"], "command": "user_sandbox", },
     { "keys": ["super+r"], "command": "package_reloader_reload" },
 

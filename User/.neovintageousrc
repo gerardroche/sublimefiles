@@ -103,6 +103,16 @@ noremap [[ ?^c<CR>
 " noremap <down> :Noop<CR>
 " noremap <up> :Noop<CR>
 
+" nnoremap h :Noop<CR>
+" nnoremap j :Noop<CR>
+" nnoremap l :Noop<CR>
+" nnoremap k :Noop<CR>
+
+" vnoremap h :Noop<CR>
+" vnoremap j :Noop<CR>
+" vnoremap l :Noop<CR>
+" vnoremap k :Noop<CR>
+
 " inoremap <right> <Esc>li
 " noremap <leader>k :nohlsearch<CR>
 " " noremap <Space> :
