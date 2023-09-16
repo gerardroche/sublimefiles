@@ -22,6 +22,7 @@
     { "caption": "Preferences: Sort User Settings (User)", "command": "sort_user_settings" },
     { "caption": "Project: Open (User)", "command": "prompt_open_project_or_workspace" },
     { "caption": "Project: Switch (User)", "command": "prompt_switch_project_or_workspace" },
+    { "caption": "Select Font (User)", "command": "user_select_font" },
     { "caption": "Sesame: Add Vendor (User)", "command": "sesame_add", "args": { "path": "~/vendor" } },
     { "caption": "Sesame: Open Vendor (User)", "command": "sesame_open", "args": { "path": "~/vendor" } },
     { "caption": "Sesame: Switch Vendor (User)", "command": "sesame_switch", "args": { "path": "~/vendor" } },

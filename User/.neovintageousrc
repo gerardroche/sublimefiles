@@ -37,17 +37,18 @@ nnoremap <leader>wj :CarryFileToPane direction=down<CR>
 nnoremap <leader>wk :CarryFileToPane direction=up<CR>
 nnoremap <leader>wl :CarryFileToPane direction=right<CR>
 
-nnoremap <localleader><space> :UserFormatLink<CR>
-
 nnoremap <space> :
-
+nnoremap J mzJ`z
+nnoremap Q gq
+noremap <C-d> <C-d>zz
 noremap <C-l> :nohlsearch<CR>
 noremap <C-s> :w<CR>
+noremap <C-u> <C-u>zz
 noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
-
-" The "Q" command formerly performed this function.
-nnoremap Q gq
+noremap N Nzz
+noremap n nzz
+xnoremap <localleader>p "_dp
 
 " Yank and paste using system clipboard.
 noremap <leader>y "+y
@@ -56,17 +57,14 @@ noremap <leader>p "+p
 noremap <leader>P "+P
 
 " Sorting.
-nnoremap <leader>s) vi):sort u<CR>
-nnoremap <leader>s] vi]:sort u<CR>
 nnoremap <leader>si vii:sort u<CR>
-nnoremap <leader>sp vip:sort u<CR>
 nnoremap <leader>ss vip:sort u<CR>
 vnoremap <leader>s :sort u<CR>
 
 " Telescope
-noremap <leader>ff  :ShowOverlay overlay=goto show_files=true<CR>
-noremap <leader>fg  :UserFindInFiles<CR>
-noremap <leader>fi  :UserFindInFiles use_filter=false<CR>
+noremap <leader>ff :ShowOverlay overlay=goto show_files=true<CR>
+noremap <leader>fg :UserFindInFiles<CR>
+noremap <leader>fi :UserFindInFiles use_filter=false<CR>
 
 " Dumper Truck.
 nnoremap <leader>vd :UserDumpVariable phpfunc=dump<CR>
@@ -75,7 +73,9 @@ nnoremap <leader>vp :UserDumpVariable phpfunc=print_r<CR>
 nnoremap <leader>vr :UserDumpVariable sublime_region_view_string=true<CR>
 nnoremap <leader>vv :UserDumpVariable phpfunc=dd<CR>
 
-" Test: https://github.com/gerardroche/sublime-test
+" Testing.
+" https://github.com/gerardroche/sublime-test
+nnoremap <D-n> :TestNearest<CR>
 nnoremap <leader>ta :TestSuite<CR>
 nnoremap <leader>tf :TestFile<CR>
 nnoremap <leader>tl :TestLast<CR>
@@ -83,20 +83,18 @@ nnoremap <leader>tn :TestNearest<CR>
 nnoremap <leader>ts :TestSwitch<CR>
 nnoremap <leader>tv :TestVisit<CR>
 
-nnoremap <D-n> :TestNearest<CR>
-
-" Origami: https://packagecontrol.io/packages/Origami
+" Origami.
+" https://packagecontrol.io/packages/Origami
 nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
 
-" ============================================================================
-"           Dev stuff
-"
-" The following mappings are temporary mappings.
-"
-" I use these during development of packages e.g., to reproduce reported
-" issues, feature testing, xperiments, etc.
+" -----------------------------------------------------------------------
+" NeoVintageous developement stuff
+" The following mappings are temporary. I use these during development of
+" Sublime Text packages, e.g., reproducing issues, feature testing, etc.
+"------------------------------------------------------------------------
 
-noremap [[ ?^c<CR>
+" nnoremap <localleader><space> :UserFormatLink<CR>
+" noremap [[ ?^c<CR>
 
 " noremap <left> :Noop<CR>
 " noremap <right> :Noop<CR>

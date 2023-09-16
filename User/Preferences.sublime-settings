@@ -1,30 +1,37 @@
 {
 
 	"animation_enabled": false,
+	"block_caret": true,
 	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,
 	"enable_tab_scrolling": false,
 	"fade_fold_buttons": false,
 	"file_tab_style": "square",
+	"gutter": true,
 	"hide_new_tab_button": true,
 	"hide_tab_scrolling_buttons": true,
 	"highlight_modified_tabs": true,
-	"inactive_sheet_dimming": false,
+	"inactive_sheet_dimming": true,
 	"line_padding_bottom": 3,
 	"line_padding_top": 2,
 	"margin": 0,
 	"mouse_wheel_switches_tabs": false,
+	"preview_on_click": true,
 	"relative_line_numbers": true,
 	"ruler_style": "stippled",
 	"save_on_focus_lost": true,
 	"scroll_context_lines": 8,
+	"show_build": false,
 	"show_definitions": false,
+	"show_file_name": false,
 	"show_git_status_in_status_bar": false,
 	"show_indentation": false,
 	"show_legacy_color_schemes": false,
 	"show_line_column": "compact",
-	"show_rel_path": true,
+	"show_point": false,
+	"show_rel_path": false,
 	"show_sidebar_button": false,
+	"show_spell": false,
 	"show_syntax": false,
 	"show_tab_close_buttons": false,
 
@@ -37,46 +44,42 @@
 
 	"spelling_selector": "source string.quoted - markup.raw - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.raw)",
 
-	"auto_upgrade": false,
-	"debug": false,
-	"enable_telemetry": false,
-	"submit_usage": false,
-	"update_check": false,
-
 	"theme": "Adaptive.sublime-theme",
 	"color_scheme": "MonokaiFree.sublime-color-scheme",
 	"monokaifree.vcs_status_badges": false,
 
 	"font_face": "Cascadia Code",
-	"font_faces":
-	{
-		"1": "Fira Code",
-		"2": "Cascadia Code",
-		"3": "Cascadia Mono",
-		"4": "Source Code Pro",
-		"5": "Inconsolata",
-		"6": "Hack",
-		"7": "Jetbrains Mono",
-		"8": "Monoid",
-		"9": "Hasklig",
-	},
-
+	"fonts":
+	[
+		"Fira Code",
+		"Cascadia Code",
+		"Cascadia Mono",
+		"Source Code Pro",
+		"Inconsolata",
+		"Hack",
+		"Jetbrains Mono",
+		"Monoid",
+		"Hasklig",
+	],
 	"font_options": [
 		"dlig",
-		// "gray_antialias",
 		"ss01", "ss02", "ss03", "ss04", "ss05",
 		"ss06", "ss07", "ss08", "ss09", "ss10",
 		"ss11", "ss12", "ss13", "ss14", "ss15",
 		"ss16", "ss17", "ss18", "ss19", "ss20",
 	],
 
-	// These change a lot.
+	"auto_upgrade": false,
+	"debug": false,
+	"enable_telemetry": false,
+	"submit_usage": false,
+	"update_check": false,
+
+	// These change a lot:
 
 	"fold_buttons": false,
-	"font_size": 8,
-	"gutter": true,
-	"line_numbers": false,
-	"show_build": true,
+	"font_size": 10,
+	"line_numbers": true,
 	"spell_check": false,
 	"word_wrap": false,
 
@@ -85,7 +88,10 @@
 	],
 
 	"draw_white_space": [
+		"leading_mixed",
 		"selection",
+		"trailing",
+		"isolated",
 	],
 
 	"draw_white_space_toggle_on": [
@@ -348,8 +354,6 @@
 		"tmp/"
 	],
 
-	// Volitile
-
 	"added_words":
 	[
 		"Capslock",
@@ -365,11 +369,14 @@
 		"Regex",
 		"Vintageous",
 		"Win32",
+		"blockwise",
+		"characterwise",
 		"color",
 		"colors",
 		"etc",
 		"gerardroche",
 		"keybindings",
+		"linewise",
 		"mapleader",
 		"maplocalleader",
 		"markology",
@@ -377,15 +384,12 @@
 		"nohlsearch",
 		"plugin",
 		"plugins",
+		"readonly",
 		"regex",
 		"regexes",
 		"toggleable",
 		"vimrc",
 		"vintageous",
-		"readonly",
-		"characterwise",
-		"linewise",
-		"blockwise",
 	],
 
 	"ignored_words":
@@ -466,7 +470,7 @@
 	// Plugin - NeoVintageous
 
 	"neovintageous_build_version": 13200,
-	"vintageous_bell": "view",
+
 	"vintageous_handle_keys": {
 		"<C-f12>": false,
 		"<S-f1>": false,
@@ -475,23 +479,20 @@
 		"i_<C-d>": false,
 		"i_<C-u>": false,
 	},
-	"vintageous_sneak_use_ic_scs": 1,
-	// "vintageous_default_mode": "visual",
-	"vintageous_terminal": "gnome-terminal",
 
-	"vintageous_search_occ_style": "outline",
+	"vintageous_bell": "view",
 	"vintageous_enable_sneak": true,
-	// "vintageous_search_inc_style": "underline",
-
+	"vintageous_highlighted_yank_duration": 200,
+	"vintageous_search_occ_style": "outline",
+	"vintageous_sneak_use_ic_scs": 1,
+	"vintageous_terminal": "gnome-terminal",
 	// "vintageous_auto_nohlsearch_on_normal_enter": false,
-	// "vintageous_highlighted_yank_style": "outline",
-
-	// Testing: NeoVintageous - Input Method
 	// "vintageous_auto_switch_input_method": true,
 	// "vintageous_auto_switch_input_method_default": "1",
 	// "vintageous_auto_switch_input_method_get_cmd": "im-get",
 	// "vintageous_auto_switch_input_method_set_cmd": "im-set {im}",
+	// "vintageous_default_mode": "visual",
+	// "vintageous_highlighted_yank_style": "outline",
+	// "vintageous_search_inc_style": "underline",
 
-	"preview_on_click": true,
-	"show_point": true,
 }

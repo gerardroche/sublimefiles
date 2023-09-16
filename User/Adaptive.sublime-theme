@@ -39,6 +39,16 @@
             "connector_height": 1
         },
 
+        {
+            "class": "sheet_contents",
+            "settings": {
+                "inactive_sheet_dimming": true,
+                "file_tab_style": ["", "rounded", "square"],
+            },
+            "attributes": ["file_medium_dark", "!highlighted"],
+            "background_modifier": "blend(#000000 80%)"
+        },
+
         ///////////////////////
         // Highlight Sidebar //
         ///////////////////////
