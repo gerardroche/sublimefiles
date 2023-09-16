@@ -73,7 +73,7 @@
 	// These change a lot.
 
 	"fold_buttons": false,
-	"font_size": 10,
+	"font_size": 8,
 	"gutter": true,
 	"line_numbers": false,
 	"show_build": true,
@@ -493,4 +493,5 @@
 	// "vintageous_auto_switch_input_method_set_cmd": "im-set {im}",
 
 	"preview_on_click": true,
+	"show_point": true,
 }
