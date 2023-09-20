@@ -396,6 +396,7 @@
 	[
 		"dialog",
 		"im",
+		"whitespace",
 		"wq",
 	],
 
