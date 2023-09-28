@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+<dict>
+    <key>scope</key>
+    <string>text.html.vue</string>
+    <key>settings</key>
+    <dict>
+        <key>foldScopes</key>
+        <array>
+            <dict>
+                <key>begin</key>
+                <string>punctuation.definition.string.begin.html</string>
+                <key>end</key>
+                <string>punctuation.definition.string.end.html</string>
+                <key>excludeTrailingNewlines</key>
+                <false/>
+            </dict>
+        </array>
+    </dict>
+</dict>
+</plist>

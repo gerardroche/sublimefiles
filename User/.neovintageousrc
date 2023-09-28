@@ -36,7 +36,9 @@ nnoremap <leader>wh :CarryFileToPane direction=left<CR>
 nnoremap <leader>wj :CarryFileToPane direction=down<CR>
 nnoremap <leader>wk :CarryFileToPane direction=up<CR>
 nnoremap <leader>wl :CarryFileToPane direction=right<CR>
+nnoremap <leader>zc :FoldAllCssClasses<CR>
 
+nnoremap FileType go,html,php <C-w>gd :LspSymbolDefinitionSplit<CR>
 nnoremap FileType go,html,php gd :LspSymbolDefinition<CR>
 
 nnoremap <space> :
