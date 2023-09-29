@@ -1,7 +1,7 @@
 {
 
 	"animation_enabled": false,
-	"block_caret": true,
+	"block_caret": false,
 	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,
 	"enable_tab_scrolling": false,
@@ -22,7 +22,7 @@
 	"save_on_focus_lost": true,
 	"scroll_context_lines": 8,
 	"show_build": false,
-	"show_definitions": false,
+	"show_definitions": true,
 	"show_file_name": false,
 	"show_git_status_in_status_bar": false,
 	"show_indentation": false,
@@ -30,14 +30,14 @@
 	"show_line_column": "compact",
 	"show_point": false,
 	"show_rel_path": false,
-	"show_sidebar_button": false,
+	"show_sidebar_button": true,
 	"show_spell": false,
 	"show_syntax": false,
 	"show_tab_close_buttons": false,
 
-	"auto_complete": false,
+	"xauto_complete": true,
 	"auto_complete_cycle": true,
-	"auto_complete_delay": 1000,
+	"xauto_complete_delay": 1000,
 	"auto_complete_trailing_symbols": true,
 	"auto_complete_use_history": true,
 	"auto_complete_with_fields": true,
@@ -79,7 +79,7 @@
 
 	"fold_buttons": false,
 	"font_size": 10,
-	"line_numbers": true,
+	"line_numbers": false,
 	"spell_check": false,
 	"word_wrap": false,
 
@@ -404,6 +404,8 @@
 	[
 		"GitGutter",
 		"GitSavvy",
+		"LSP",
+		"NeoVintageousHardMode",
 		"NeoVintageousInsertModeKeymaps",
 		"ShowAsciiValue",
 		"Six",
@@ -473,6 +475,8 @@
 	"neovintageous_build_version": 13200,
 
 	"vintageous_handle_keys": {
+		// "i_<Left>": false,
+		// "i_<Right>": false,
 		"<C-f12>": false,
 		"<S-f1>": false,
 		"<S-tab>": false,

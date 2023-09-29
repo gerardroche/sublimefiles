@@ -1,66 +1,67 @@
 {
-  	// "lsp_format_on_save": true,
 
-	// "auto_show_diagnostics_panel": false,
-	// "clients":
-	// {
-	// 	"phpls":
-	// 	{
-	// 		"command":
-	// 		[
-	// 			"php",
-	// 			"~/vendor/felixfbecker/php-language-server/bin/php-language-server.php",
-	// 			"--memory-limit=256M"
-	// 		],
-	// 		"languageId": "php",
-	// 		"scopes":
-	// 		[
-	// 			"source.php",
-	// 			"embedding.php"
-	// 		],
-	// 		"syntaxes":
-	// 		[
-	// 			"Packages/PHP/PHP.sublime-syntax"
-	// 		]
-	// 	},
-	// 	"pyls":
-	// 	{
-	// 		"command":
-	// 		[
-	// 			"python3",
-	// 			"~/.local/bin/pyls"
-	// 		],
-	// 		"enabled": true,
-	// 		"languageId": "python",
-	// 		"scopes":
-	// 		[
-	// 			"source.python"
-	// 		],
-	// 		"settings":
-	// 		{
-	// 			"pyls":
-	// 			{
-	// 				"configurationSources":
-	// 				[
-	// 					"flake8",
-	// 					"pycodestyle"
-	// 				]
-	// 			}
-	// 		},
-	// 		"syntaxes":
-	// 		[
-	// 			"Packages/Python/Python.sublime-syntax"
-	// 		]
-	// 	}
-	// },
-	// "complete_all_chars": true,
-	// "completion_hint_type": "auto",
-	// "diagnostics_highlight_style": "underline",
-	// "document_highlight_style": "underline",
-	// "log_debug": false,
-	// "log_payloads": false,
-	// "log_stderr": false,
-	// "only_show_lsp_completions": false,
-	// "resolve_completion_for_snippets": false,
-	// "show_diagnostics_phantoms": false
+    "log_debug": false,
+    "log_server": false,
+    "show_code_actions": "bulb",
+    "show_diagnostics_in_view_status": false,
+    "show_view_status": false,
+
+    "clients": {
+
+        "phpactor": {
+            "command": [
+                "phpactor",
+                "language-server",
+            ],
+            "enabled": true,
+            "languageId": "php",
+            "scopes": [
+                "source.php",
+                "embedding.php"
+            ],
+            "syntaxes": [
+                "Packages/PHP/PHP.sublime-syntax"
+            ]
+        },
+
+        // "phpls": {
+        //     "command": [
+        //         "php",
+        //         "~/vendor/felixfbecker/php-language-server/bin/php-language-server.php",
+        //         "--memory-limit=256M"
+        //     ],
+        //     "languageId": "php",
+        //     "scopes": [
+        //         "source.php",
+        //         "embedding.php"
+        //     ],
+        //     "syntaxes": [
+        //         "Packages/PHP/PHP.sublime-syntax"
+        //     ]
+        // },
+
+        // "pyls": {
+        //     "command": [
+        //         "python3",
+        //         "~/.local/bin/pyls"
+        //     ],
+        //     "enabled": true,
+        //     "languageId": "python",
+        //     "scopes": [
+        //         "source.python"
+        //     ],
+        //     "settings": {
+        //         "pyls": {
+        //             "configurationSources": [
+        //                 "flake8",
+        //                 "pycodestyle"
+        //             ]
+        //         }
+        //     },
+        //     "syntaxes": [
+        //         "Packages/Python/Python.sublime-syntax"
+        //     ]
+        // },
+
+    }
 }

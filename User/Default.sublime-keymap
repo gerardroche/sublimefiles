@@ -1,4 +1,7 @@
 [
+
+    { "keys": ["super+p"], "command": "test_phantoms" },
+
     // GotoDocumentation
 
     {

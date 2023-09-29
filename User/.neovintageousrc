@@ -23,15 +23,16 @@ nnoremap <leader>gu :GenerateUnitTest<CR>
 nnoremap <leader>hm :RevertModification<CR>
 nnoremap <leader>hp :PasteFromHistory<CR>
 nnoremap <leader>hu :RevertHunk<CR>
+nnoremap <leader>li :LspCodeActions<CR>
 nnoremap <leader>oa :Gitk all=true<CR>
 nnoremap <leader>oc :GitOpen commit=true<CR>
+nnoremap <leader>od :ShowPanel panel=output.diagnostics<CR>
 nnoremap <leader>oi :GitOpen issue=true<CR>
 nnoremap <leader>ok :Gitk max-count=200 all=true date-order=true<CR>
 nnoremap <leader>oo :GitOpen<CR>
+nnoremap <leader>os :ShowPanel panel=output.SublimeLinter<CR>
 nnoremap <leader>q gqip:w<CR>
 nnoremap <leader>r :reg<CR>
-nnoremap <leader>sr :SublimeLinterLineReport<CR>
-nnoremap <leader>st :SublimeLinterPanelToggle<CR>
 nnoremap <leader>wh :CarryFileToPane direction=left<CR>
 nnoremap <leader>wj :CarryFileToPane direction=down<CR>
 nnoremap <leader>wk :CarryFileToPane direction=up<CR>

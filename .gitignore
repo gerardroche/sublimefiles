@@ -7,15 +7,19 @@
 *.sublime-project
 
 # Dependencies.
+/backrefs/
+/bracex/
 /coverage/
 /jsonschema/
 /markupsafe/
 /mdpopups/
+/pathlib/
 /pygments/
 /pymdownx/
 /python-jinja2/
 /python-markdown/
 /pyyaml/
+/wcmatch/
 
 # Generated.
 /AutomaticPackageReloader33/
