@@ -1,16 +1,12 @@
 import sublime
 import sublime_plugin
 
-PREFS_FILE = 'Preferences.sublime-settings'
-
-CURRENT_KIND = (sublime.KIND_ID_COLOR_GREENISH, "✓", "Current")
-
 
 class FontInputHandler(sublime_plugin.ListInputHandler):
 
     def __init__(self):
         super().__init__()
-        self.prefs = sublime.load_settings(PREFS_FILE)
+        self.prefs = sublime.load_settings('Preferences.sublime-settings')
         self.original = self.prefs.get("font_face", "")
 
     def placeholder(self):
@@ -18,10 +14,10 @@ class FontInputHandler(sublime_plugin.ListInputHandler):
 
     def cancel(self):
         self.prefs.set('font_face', self.original)
-        sublime.save_settings(PREFS_FILE)
+        sublime.save_settings('Preferences.sublime-settings')
 
     def confirm(self):
-        sublime.save_settings(PREFS_FILE)
+        sublime.save_settings('Preferences.sublime-settings')
 
     def preview(self, font_face):
         if font_face is None:
@@ -50,7 +46,7 @@ class FontInputHandler(sublime_plugin.ListInputHandler):
         for font in sorted(fonts):
             kind_info = sublime.KIND_AMBIGUOUS
             if self.original and self.original == font:
-                kind_info = CURRENT_KIND
+                kind_info = (sublime.KIND_ID_COLOR_GREENISH, "✓", "Current")
                 selected = len(items)
 
             items.append(sublime.ListInputItem(font, font, kind=kind_info))
@@ -67,6 +63,6 @@ class SelectFontCommand(sublime_plugin.WindowCommand):
         return FontInputHandler()
 
     def run(self, font_face):
-        settings = sublime.load_settings(PREFS_FILE)
+        settings = sublime.load_settings('Preferences.sublime-settings')
         settings.set('font_face', font_face)
-        sublime.save_settings(PREFS_FILE)
+        sublime.save_settings('Preferences.sublime-settings')

@@ -2,7 +2,8 @@
 
     "log_debug": false,
     "log_server": false,
-    "show_code_actions": "bulb",
+    "show_code_actions": "",
+    "show_diagnostics_count_in_view_status": false,
     "show_diagnostics_in_view_status": false,
     "show_view_status": false,
 

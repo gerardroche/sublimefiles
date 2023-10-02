@@ -1,6 +1,6 @@
 [
-    // { "caption": "-", "id": "end" },
-    // { "command": "refresh_folder_list", "caption": "Refresh Folders (User)" },
-    // { "command": "tree_duplicate_file", "caption": "User - Duplicate File" },
-    // { "command": "tree_move_file", "caption": "User - Move File" },
+    {
+        "caption": "Refresh Folders [U]",
+        "command": "refresh_folder_list"
+    }
 ]
