@@ -14,7 +14,7 @@
                 "phpactor",
                 "language-server",
             ],
-            "enabled": true,
+            "enabled": false,
             "languageId": "php",
             "scopes": [
                 "source.php",
@@ -24,8 +24,8 @@
                 "Packages/PHP/PHP.sublime-syntax"
             ],
             "disabled_capabilities": {
-                "hoverProvider": true
-            }
+                "hoverProvider": true,
+            },
         },
 
         // "phpls": {
@@ -67,5 +67,5 @@
         //     ]
         // },
 
-    }
+    },
 }
