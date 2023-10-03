@@ -12,8 +12,8 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"ApacheConf",
-		"FileIcons",
 		"GitGutter",
 		"GitSavvy",
 		"GotoDocumentation",
