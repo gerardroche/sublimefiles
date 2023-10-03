@@ -22,7 +22,10 @@
             ],
             "syntaxes": [
                 "Packages/PHP/PHP.sublime-syntax"
-            ]
+            ],
+            "disabled_capabilities": {
+                "hoverProvider": true
+            }
         },
 
         // "phpls": {
