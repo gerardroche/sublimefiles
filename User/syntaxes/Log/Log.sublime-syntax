@@ -1,7 +1,8 @@
 %YAML 1.2
 ---
 # http://www.sublimetext.com/docs/3/syntax.html
-name: User Log
+name: Log
+version: 2
 file_extensions:
   - log
 scope: text.log

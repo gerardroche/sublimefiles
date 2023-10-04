@@ -1,12 +1,11 @@
 %YAML 1.2
 ---
 # http://www.sublimetext.com/docs/3/syntax.html
-name: User HTTP
-hidden: false
-scope: text.http
-
+name: HTTP
+version: 2
 file_extensions:
   - http
+scope: text.http
 
 contexts:
   main:

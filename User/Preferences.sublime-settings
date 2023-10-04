@@ -7,11 +7,14 @@
 	"enable_tab_scrolling": false,
 	"fade_fold_buttons": false,
 	"file_tab_style": "square",
+	"fold_buttons": false,
+	"font_size": 10,
 	"gutter": true,
 	"hide_new_tab_button": true,
 	"hide_tab_scrolling_buttons": true,
 	"highlight_modified_tabs": true,
 	"inactive_sheet_dimming": true,
+	"line_numbers": true,
 	"line_padding_bottom": 3,
 	"line_padding_top": 2,
 	"margin": 0,
@@ -32,67 +35,56 @@
 	"show_rel_path": false,
 	"show_sidebar_button": true,
 	"show_spell": false,
-	"show_syntax": false,
+	"show_syntax": true,
 	"show_tab_close_buttons": false,
+	"spell_check": false,
+	"word_wrap": false,
 
-	"xauto_complete": true,
+	"spelling_selector": "source string.quoted - markup.raw - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.raw)",
+
+	"auto_complete": true,
 	"auto_complete_cycle": true,
-	"xauto_complete_delay": 1000,
+	"auto_complete_delayx": 1000,
 	"auto_complete_trailing_symbols": true,
 	"auto_complete_use_history": true,
 	"auto_complete_with_fields": true,
 
-	"spelling_selector": "source string.quoted - markup.raw - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.raw)",
-
-	"theme": "Adaptive.sublime-theme",
 	"color_scheme": "MonokaiFree.sublime-color-scheme",
 	"monokaifree.vcs_status_badges": false,
+	"theme": "Adaptive.sublime-theme",
 
 	"font_face": "Cascadia Code",
 	"fonts":
 	[
-		"Fira Code",
 		"Cascadia Code",
 		"Cascadia Mono",
-		"Source Code Pro",
-		"Inconsolata",
+		"Fira Code",
 		"Hack",
+		"Hasklig",
+		"Inconsolata",
 		"Jetbrains Mono",
 		"Monoid",
-		"Hasklig",
+		"Source Code Pro"
 	],
 	"font_options": [
-		"no_italic", "no_bold",
 		"dlig",
+		"no_bold",
+		"no_italic",
 		"ss01", "ss02", "ss03", "ss04", "ss05",
 		"ss06", "ss07", "ss08", "ss09", "ss10",
 		"ss11", "ss12", "ss13", "ss14", "ss15",
 		"ss16", "ss17", "ss18", "ss19", "ss20",
 	],
 
-	"auto_upgrade": false,
-	"debug": false,
-	"enable_telemetry": false,
-	"submit_usage": false,
-	"update_check": false,
-
-	// These change a lot:
-
-	"fold_buttons": false,
-	"font_size": 10,
-	"line_numbers": true,
-	"spell_check": false,
-	"word_wrap": false,
-
 	"rulers":
 	[
 	],
 
 	"draw_white_space": [
+		"isolated",
 		"leading_mixed",
 		"selection",
 		"trailing",
-		"isolated",
 	],
 
 	"draw_white_space_toggle_on": [
@@ -418,15 +410,28 @@
 
 	"ignored_packages":
 	[
+		"AutomaticPackageReloader",
+		"AutomaticPackageReloader33",
+		"ColorSchemeUnit",
+		"GenerateSyntaxTestAssertions",
 		"GitGutter",
 		"GitSavvy",
 		"NeoVintageousHardMode",
 		"NeoVintageousInsertModeKeymaps",
+		"Sandbox",
 		"ShowAsciiValue",
 		"Six",
+		"UnitTesting",
 		"Vintage",
 		"Vintageous",
 	],
+
+	// Data collection.
+	"auto_upgrade": false,
+	"debug": false,
+	"enable_telemetry": false,
+	"submit_usage": false,
+	"update_check": false,
 
 	// Plugins
 

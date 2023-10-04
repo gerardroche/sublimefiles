@@ -46,6 +46,7 @@ nnoremap J mzJ`z
 nnoremap N Nzz
 nnoremap Q gq
 nnoremap n nzz
+nnoremap zc jzc
 noremap <C-d> <C-d>zz
 noremap <C-l> :nohlsearch<CR>
 noremap <C-s> :w<CR>

@@ -2,10 +2,9 @@
 ---
 # http://www.sublimetext.com/docs/3/syntax.html
 name: Nginx
-scope: source.nginx
 version: 2
-
 first_line_match: nginx
+scope: source.nginx
 
 variables:
   keywords: |-

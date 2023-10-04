@@ -1,7 +1,7 @@
 {
-    "extensions":
-    [
-        "vue"
-    ],
-    "tab_size": 4
+	"extensions":
+	[
+		"vue"
+	],
+	"tab_size": 4
 }

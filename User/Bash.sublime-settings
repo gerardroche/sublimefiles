@@ -1,14 +1,15 @@
 {
 	"extensions":
 	[
-        ".env.dev.dist",
-        ".env.prod.dist",
-        ".env.testing.dist",
-        ".env.travis.dist",
-        ".env",
-        ".env.dev",
-        ".env.prod",
-        ".env.testing",
-        ".env.travis"
-  ]
+		".env",
+		".env.dev",
+		".env.dev.dist",
+		".env.example",
+		".env.prod",
+		".env.prod.dist",
+		".env.testing",
+		".env.testing.dist",
+		".env.travis",
+		".env.travis.dist"
+	]
 }

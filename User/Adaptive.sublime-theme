@@ -1,10 +1,6 @@
 {
     "variables":
     {
-
-        // "highlight_sidebar_bg": "#000000",
-        // "highlight_sidebar_fg": "#cfcfc2",
-
     },
 
     "rules": [
@@ -39,36 +35,15 @@
             "connector_height": 1
         },
 
-        {
-            "class": "sheet_contents",
-            "settings": {
-                "inactive_sheet_dimming": true,
-                "file_tab_style": ["", "rounded", "square"],
-            },
-            "attributes": ["file_medium_dark", "!highlighted"],
-            "background_modifier": "blend(#000000 80%)"
-        },
-
-        ///////////////////////
-        // Highlight Sidebar //
-        ///////////////////////
-
         // {
-        //     "class": "tree_row",
-        //     "attributes": ["hover"],
-        //     "layer0.tint": "var(highlight_sidebar_bg)",
-        //     "layer0.opacity": 1.0,
+        //     "class": "sheet_contents",
+        //     "settings": {
+        //         "inactive_sheet_dimming": true,
+        //         "file_tab_style": ["", "rounded", "square"],
+        //     },
+        //     "attributes": ["file_medium_dark", "!highlighted"],
+        //     "background_modifier": "blend(#000000 80%)"
         // },
-        // {
-        //     "class": "tree_row",
-        //     "attributes": ["selected"],
-        //     "layer0.tint": "var(highlight_sidebar_bg)",
-        //     "layer0.opacity": 1.0,
-        // },
-        // {
-        //     "class": "sidebar_label",
-        //     "parents": [{"attributes": ["selected"]}],
-        //     "color": "var(highlight_sidebar_fg)",
-        // }
+
     ]
 }

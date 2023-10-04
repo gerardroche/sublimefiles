@@ -34,6 +34,7 @@
     { "caption": "Toggler: Toggle Show Build [U]", "command": "toggler", "args": {"setting": "show_build"} },
     { "caption": "Toggler: Toggle Show Point [U]", "command": "toggler", "args": {"setting": "show_point"} },
     { "caption": "Toggler: Toggle Show Spell [U]", "command": "toggler", "args": {"setting": "show_spell"} },
+    { "caption": "Toggler: Toggle Show Syntax [U]", "command": "toggler", "args": {"setting": "show_syntax"} },
     { "caption": "User: Sandbox", "command": "user_sandbox" },
 
     { "caption": "Dump NeoVintageous Settings [U]", "command": "user_dump_settings", "args": {
