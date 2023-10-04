@@ -411,7 +411,6 @@
 	"ignored_packages":
 	[
 		"AutomaticPackageReloader",
-		"AutomaticPackageReloader33",
 		"ColorSchemeUnit",
 		"GenerateSyntaxTestAssertions",
 		"GitGutter",
