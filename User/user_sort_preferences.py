@@ -1,19 +1,12 @@
-from contextlib import contextmanager
-
-import sublime
 import sublime_plugin
 
-
-@contextmanager
-def save_preferences():
-    yield sublime.load_settings('Preferences.sublime-settings')
-    sublime.save_settings('Preferences.sublime-settings')
+from User import sublime_ext
 
 
 class UserSortPreferences(sublime_plugin.WindowCommand):
 
     def run(self):
-        with save_preferences() as preferences:
+        with sublime_ext.save_preferences() as preferences:
             self.sort_added_words(preferences)
             self.sort_ignored_packages(preferences)
             self.sort_ignored_words(preferences)

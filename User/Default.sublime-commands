@@ -1,16 +1,13 @@
 [
 
-    { "caption": "Application: Clear Window [U]", "command": "clear_window" },
     { "caption": "Application: Close Window [U]", "command": "close_window" },
     { "caption": "Application: New File [U]", "command": "new_file" },
     { "caption": "Application: New Window [U]", "command": "new_window" },
-    { "caption": "Application: Reset Window [U]", "command": "reset_window" },
     { "caption": "Audit Preferences [U]", "command": "user_audit_preferences" },
     { "caption": "Dump Info [U]", "command": "user_dump_info" },
     { "caption": "Dump Scope [U]", "command": "user_dump_scope" },
     { "caption": "Dump Settings [U]", "command": "user_dump_settings" },
     { "caption": "Dump View [U]", "command": "user_dump_view" },
-    { "caption": "Focus [U]", "command": "focus" },
     { "caption": "Format Link [U]", "command": "user_format_link" },
     { "caption": "Generate PHPUnit Test [U]", "command": "generate_phpunit_test" },
     { "caption": "Lumber: Set Log Level", "command": "lumber" },

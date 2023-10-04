@@ -78,7 +78,7 @@ class NeovintageousDevCommand(sublime_plugin.WindowCommand):
 
     def dump_ex_completions_action(self):
         """Temporary hacky command to generate ex completions."""
-        from NeoVintageous.nv import ex_routes  # type: ignore
+        from NeoVintageous.nv import ex_routes
         routes = [r for r in ex_routes.ex_routes]
 
         print("\n\n\n")
@@ -286,7 +286,7 @@ class NeovintageousDumpViewCommand(sublime_plugin.WindowCommand):
                 print(' {}'.format(k))
                 for k in sorted(v.keys()):
                     append = ''
-                    if str(type(v)) not in ('<class \'int\'>', '<class \'str\'>', '<class \'bool\'>', '<class \'dict\'>'):
+                    if str(type(v)) not in ('<class \'int\'>', '<class \'str\'>', '<class \'bool\'>', '<class \'dict\'>'):  # noqa: E501
                         append += ' ' + str(type(v))
                     print('%40s = %s %s' % (k, v[k], append))
             else:

@@ -1,0 +1,14 @@
+[
+    {
+        "caption": "Limitless: Clear",
+        "command": "limitless_clear"
+    },
+    {
+        "caption": "Limitless: Focus",
+        "command": "limitless_focus"
+    },
+    {
+        "caption": "Limitless: Reset",
+        "command": "limitless_reset"
+    },
+]
