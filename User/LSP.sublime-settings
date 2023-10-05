@@ -5,6 +5,7 @@
     "show_code_actions": "",
     "show_diagnostics_count_in_view_status": false,
     "show_diagnostics_in_view_status": false,
+    "show_inlay_hints": true,
     "show_view_status": false,
 
     "clients": {
@@ -14,7 +15,7 @@
                 "phpactor",
                 "language-server",
             ],
-            "enabled": false,
+            "enabled": true,
             "languageId": "php",
             "scopes": [
                 "source.php",
