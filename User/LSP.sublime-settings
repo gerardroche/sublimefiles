@@ -15,7 +15,7 @@
                 "phpactor",
                 "language-server",
             ],
-            "enabled": true,
+            "enabled": false,
             "languageId": "php",
             "scopes": [
                 "source.php",
