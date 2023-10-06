@@ -32,15 +32,14 @@ nnoremap <leader>oo :GitOpen<CR>
 nnoremap <leader>os :ShowPanel panel=output.SublimeLinter<CR>
 nnoremap <leader>q gqip:w<CR>
 nnoremap <leader>r :reg<CR>
+nnoremap <leader>sp :ShowOverlay overlay=command_palette<CR>
 nnoremap <leader>wh :CarryFileToPane direction=left<CR>
 nnoremap <leader>wj :CarryFileToPane direction=down<CR>
 nnoremap <leader>wk :CarryFileToPane direction=up<CR>
 nnoremap <leader>wl :CarryFileToPane direction=right<CR>
 nnoremap <leader>zc :FoldAllCssClasses<CR>
 
-nnoremap FileType go,html,php <C-w>gd :LspSymbolDefinitionSplit<CR>
-nnoremap FileType go,html,php gd :LspSymbolDefinition<CR>
-
+" Quirks.
 nnoremap <space> :
 nnoremap J mzJ`z
 nnoremap N Nzz
@@ -51,9 +50,6 @@ noremap <C-d> <C-d>zz
 noremap <C-l> :nohlsearch<CR>
 noremap <C-s> :w<CR>
 noremap <C-u> <C-u>zz
-noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
-noremap <D-i> :GotoSymbolInProject<CR>
-xnoremap <localleader>p "_dp
 
 " Yank and paste using system clipboard.
 noremap <leader>y "+y
@@ -66,10 +62,23 @@ nnoremap <leader>si vii:sort u<CR>
 nnoremap <leader>ss vip:sort u<CR>
 vnoremap <leader>s :sort u<CR>
 
-" Telescope
+" Telescope.
+noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
+noremap <D-i> :GotoSymbolInProject<CR>
 noremap <leader>ff :ShowOverlay overlay=goto show_files=true<CR>
 noremap <leader>fg :UserFindInFiles<CR>
 noremap <leader>fi :UserFindInFiles use_filter=false<CR>
+
+" LSP.
+" nnoremap FileType go,html,php <C-w>gd :LspSymbolDefinitionSplit<CR>
+" nnoremap FileType go,html,php gd :LspSymbolDefinition<CR>
+nnoremap K :LspHover<CR>
+nnoremap [d :LspPrevDiagnostic<CR>
+nnoremap ]d :LspNextDiagnostic<CR>
+nnoremap ga :LspCodeActions<CR>
+nnoremap gd :LspSymbolDefinition<CR>
+nnoremap gi :LspSymbolImplementation<CR>
+nnoremap gr :LspSymbolReferences<CR>
 
 " Dumper Truck.
 nnoremap <leader>vd :UserDumpVariable phpfunc=dump<CR>
@@ -100,7 +109,8 @@ nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
 
 " nnoremap <localleader><space> :UserFormatLink<CR>
 " noremap [[ ?^c<CR>
-nnoremap <leader>; <Esc>A;<Esc>2<C-o>
+" nnoremap <leader>; <Esc>A;<Esc>2<C-o>
+" xnoremap <localleader>p "_dp
 
 " inoremap <right> <Esc>li
 " noremap <leader>k :nohlsearch<CR>
