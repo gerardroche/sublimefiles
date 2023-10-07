@@ -18,6 +18,7 @@
 		"GitSavvy",
 		"GotoDocumentation",
 		"LSP",
+		"LSP-pylsp",
 		"LSP-tailwindcss",
 		"LSP-volar",
 		"Material Monokai",

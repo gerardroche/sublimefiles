@@ -1,0 +1,9 @@
+{
+    "settings": {
+        "pylsp.configurationSources": ["flake8"],
+        "pylsp.plugins.flake8.enabled": true,
+        "pylsp.plugins.pycodestyle.enabled": true,
+        "pylsp.plugins.pydocstyle.enabled": true,
+        "pylsp.plugins.pyflakes.enabled": true
+    }
+}

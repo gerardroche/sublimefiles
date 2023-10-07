@@ -29,44 +29,5 @@
             },
         },
 
-        // "phpls": {
-        //     "command": [
-        //         "php",
-        //         "~/vendor/felixfbecker/php-language-server/bin/php-language-server.php",
-        //         "--memory-limit=256M"
-        //     ],
-        //     "languageId": "php",
-        //     "scopes": [
-        //         "source.php",
-        //         "embedding.php"
-        //     ],
-        //     "syntaxes": [
-        //         "Packages/PHP/PHP.sublime-syntax"
-        //     ]
-        // },
-
-        // "pyls": {
-        //     "command": [
-        //         "python3",
-        //         "~/.local/bin/pyls"
-        //     ],
-        //     "enabled": true,
-        //     "languageId": "python",
-        //     "scopes": [
-        //         "source.python"
-        //     ],
-        //     "settings": {
-        //         "pyls": {
-        //             "configurationSources": [
-        //                 "flake8",
-        //                 "pycodestyle"
-        //             ]
-        //         }
-        //     },
-        //     "syntaxes": [
-        //         "Packages/Python/Python.sublime-syntax"
-        //     ]
-        // },
-
     },
 }

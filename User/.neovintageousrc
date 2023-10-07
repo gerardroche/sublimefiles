@@ -70,15 +70,21 @@ noremap <leader>fg :UserFindInFiles<CR>
 noremap <leader>fi :UserFindInFiles use_filter=false<CR>
 
 " LSP.
-" nnoremap FileType go,html,php <C-w>gd :LspSymbolDefinitionSplit<CR>
-" nnoremap FileType go,html,php gd :LspSymbolDefinition<CR>
+" nnoremap gd :LspSymbolDefinition<CR>
 nnoremap K :LspHover<CR>
 nnoremap [d :LspPrevDiagnostic<CR>
 nnoremap ]d :LspNextDiagnostic<CR>
 nnoremap ga :LspCodeActions<CR>
-nnoremap gd :LspSymbolDefinition<CR>
 nnoremap gi :LspSymbolImplementation<CR>
 nnoremap gr :LspSymbolReferences<CR>
+
+nnoremap FileType css,go,html,js,php,vue <C-w>gd :LspSymbolDefinitionSplit<CR>
+nnoremap FileType css,go,html,js,php,vue gd :LspSymbolDefinition<CR>
+
+" Linter.
+nnoremap <leader>K :SublimeLinterLineReport<CR>
+nnoremap [l [l:SublimeLinterLineReport<CR>
+nnoremap ]l ]l:SublimeLinterLineReport<CR>
 
 " Dumper Truck.
 nnoremap <leader>vd :UserDumpVariable phpfunc=dump<CR>
