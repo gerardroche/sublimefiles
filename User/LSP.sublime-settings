@@ -12,7 +12,10 @@
 
         "phpactor": {
             "command": [
-                "phpactor",
+                "php",
+                "-d",
+                "xdebug.mode=off",
+                "/usr/local/bin/phpactor",
                 "language-server",
             ],
             "enabled": false,
