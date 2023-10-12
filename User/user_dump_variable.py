@@ -6,6 +6,14 @@ import sublime_plugin
 class UserDumpVariable(sublime_plugin.TextCommand):
 
     def run(self, edit, **kwargs):
+        insertion_point, dump_statement = self.get_dump_statement(**kwargs)
+        if dump_statement:
+            self.view.insert(edit, insertion_point, '\n' + dump_statement)
+            self.view.run_command('move', {'by': 'lines', 'forward': True})
+            self.view.run_command('reindent', {'single_line': True})
+            self.view.run_command('save')
+
+    def get_dump_statement(self, **kwargs):
         line, pt, scope = self.get_variables()
 
         if 'php' in scope:
@@ -14,23 +22,21 @@ class UserDumpVariable(sublime_plugin.TextCommand):
         word = self.get_word_under_caret(pt)
 
         if 'php' in scope:
-            dump_str = self.get_php_dump(word, **kwargs)
+            return (line.end(), self.get_php_dump_statement(word, **kwargs))
         elif 'python' in scope:
-            dump_str = self.get_python_dump(word, **kwargs)
+            return (line.end(), self.get_python_dump_statement(word, **kwargs))
 
-        if dump_str:
-            self.view.insert(edit, line.end(), '\n' + dump_str)
-            self.view.run_command('move', {'by': 'lines', 'forward': True})
-            self.view.run_command('reindent', {'single_line': True})
-            self.view.run_command('save')
+    def get_php_dump_statement(self, word, **kwargs):
+        func = kwargs.get('phpfunc', 'var_dump')
 
-    def get_php_dump(self, word, **kwargs):
-        dump_func = kwargs.get('phpfunc', 'var_dump')
-        dump_content = kwargs.get('content', '$' + str(word))
+        if kwargs.get('name') == 'method':
+            content = '__METHOD__.\' \'.get_class($this)'
+        else:
+            content = kwargs.get('content', '$' + str(word))
 
-        return dump_func + '(' + dump_content + ');'
+        return func + '(' + content + ');'
 
-    def get_python_dump(self, word, **kwargs):
+    def get_python_dump_statement(self, word, **kwargs):
         if kwargs.get('sublime_region_view_string') or kwargs.get('sublime_region_self_view_string'):
             obj = 'view' if kwargs.get('sublime_region_view_string') else 'self.view'
             dump_stmt = 'print(\'' + word + ' =\', ' + word + ', \'>>>\' + ' + obj + '.substr(' + word + ').replace(\'\\n\', \'\\\\n\').replace(\'\\x00\', \'EOF\') + \'<<<\')  # noqa: E501'  # noqa

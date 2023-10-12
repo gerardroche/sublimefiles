@@ -74,9 +74,9 @@ noremap <leader>fi :UserFindInFiles use_filter=false<CR>
 nnoremap K :LspHover<CR>
 nnoremap [d :LspPrevDiagnostic<CR>
 nnoremap ]d :LspNextDiagnostic<CR>
-nnoremap ga :LspCodeActions<CR>
-nnoremap gi :LspSymbolImplementation<CR>
-nnoremap gr :LspSymbolReferences<CR>
+noremap ga :LspCodeActions<CR>
+noremap gi :LspSymbolImplementation<CR>
+noremap gr :LspSymbolReferences<CR>
 
 nnoremap FileType css,go,html,js,php,vue <C-w>gd :LspSymbolDefinitionSplit<CR>
 nnoremap FileType css,go,html,js,php,vue gd :LspSymbolDefinition<CR>
@@ -88,7 +88,7 @@ nnoremap ]l ]l:SublimeLinterLineReport<CR>
 
 " Dumper Truck.
 nnoremap <leader>vd :UserDumpVariable phpfunc=dump<CR>
-nnoremap <leader>vm :UserDumpVariable phpfunc=dump content=__METHOD__<CR>
+nnoremap <leader>vm :UserDumpVariable phpfunc=dump name=method<CR>
 nnoremap <leader>vp :UserDumpVariable phpfunc=print_r<CR>
 nnoremap <leader>vr :UserDumpVariable sublime_region_view_string=true<CR>
 nnoremap <leader>vv :UserDumpVariable phpfunc=dd<CR>
