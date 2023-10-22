@@ -15,5 +15,5 @@
     "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
     "typescript.inlayHints.variableTypes.enabled": true,
   },
-  "enabled": false,
+  "enabled": true,
 }

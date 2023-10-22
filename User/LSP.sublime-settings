@@ -5,7 +5,7 @@
     "show_code_actions": "",
     "show_diagnostics_count_in_view_status": false,
     "show_diagnostics_in_view_status": false,
-    "show_inlay_hints": true,
+    "show_inlay_hints": false,
     "show_view_status": false,
 
     "clients": {
@@ -18,7 +18,7 @@
                 "/usr/local/bin/phpactor",
                 "language-server",
             ],
-            "enabled": false,
+            "enabled": true,
             "languageId": "php",
             "scopes": [
                 "source.php",
@@ -28,6 +28,8 @@
                 "Packages/PHP/PHP.sublime-syntax"
             ],
             "disabled_capabilities": {
+                // "referencesProvider": true,
+                // "documentHighlightProvider": true,
                 "hoverProvider": true,
             },
         },

@@ -23,62 +23,55 @@ from User import sublime_ext
 class LimitlessClear(sublime_plugin.WindowCommand):
 
     def run(self):
-        if self.window.is_sidebar_visible():
-            self.window.set_sidebar_visible(False)
-
-        if self.window.is_minimap_visible():
-            self.window.set_minimap_visible(False)
-
-        if self.window.is_menu_visible():
-            self.window.set_menu_visible(False)
-
-        _resize_groups_equally(self.window)
-
-        with sublime_ext.save_preferences() as preferences:
-            _set_clear_preference(preferences, 'draw_white_space')
-            _set_clear_preference(preferences, 'indent_guide_options', [])
-            _set_clear_preference(preferences, 'line_numbers', False)
-            _set_clear_preference(preferences, 'rulers', [])
-
-        self.window.run_command('sort_user_settings')
-
-
-class LimitlessFocus(sublime_plugin.WindowCommand):
-
-    def run(self):
-        with sublime_ext.save_preferences() as preferences:
-            files = preferences.get('file_exclude_patterns_focus')
-            _update_patterns(preferences, 'file_exclude_patterns', files)
-            folders = preferences.get('folder_exclude_patterns_focus')
-            _update_patterns(preferences, 'folder_exclude_patterns', folders)
+        _clear(self.window)
 
 
 class LimitlessReset(sublime_plugin.WindowCommand):
 
     def run(self):
-        print('reset')
-        with sublime_ext.save_preferences() as preferences:
-            _set_default_preference(preferences, 'draw_white_space')
-            _set_default_preference(preferences, 'indent_guide_options', [
-                "draw_normal",
-                "solid",
-                "draw_active",
-            ])
-            _set_clear_preference(preferences, 'line_numbers', True)
+        _reset(self.window)
 
-        if not self.window.is_sidebar_visible():
-            self.window.set_sidebar_visible(True)
 
-        if not self.window.is_minimap_visible():
-            self.window.set_minimap_visible(True)
+class LimitlessFocus(sublime_plugin.WindowCommand):
 
-        if not self.window.is_menu_visible():
-            self.window.set_menu_visible(True)
+    def run(self):
+        _focus(self.window)
 
-        if not self.window.is_status_bar_visible():
-            self.window.set_status_bar_visible(True)
 
-        _resize_groups_equally(self.window)
+def _set_preference(settings, name: str, suffix: str, default=None) -> None:
+    value = settings.get("{}_{}".format(name, suffix), default)
+    if value is not None:
+        settings.set(name, value)
+
+
+def _set_preference_on_clear(settings, name: str, default=None) -> None:
+    _set_preference(settings, name, 'on_clear', default)
+
+
+def _set_preference_on_reset(settings, name: str, default=None) -> None:
+    _set_preference(settings, name, 'on_reset', default)
+
+
+def _set_patterns_on_focus(settings, name: str) -> None:
+    patterns = settings.get(name)
+    if not isinstance(patterns, list):
+        return
+
+    on_focus_patterns = settings.get("{}_{}".format(name, 'on_focus'), [])
+    if not isinstance(on_focus_patterns, list) or not on_focus_patterns:
+        return
+
+    should_remove_patterns = all(p in patterns for p in on_focus_patterns)
+    for pattern in on_focus_patterns:
+        if should_remove_patterns:
+            patterns.remove(pattern)
+        else:
+            patterns.append(pattern)
+
+    patterns = list(set(patterns))
+    patterns.sort()
+    if patterns:
+        settings.set(name, patterns)
 
 
 def _resize_groups_equally(window) -> None:
@@ -105,33 +98,49 @@ def _equalise_count(count: int) -> list:
     return vals
 
 
-def _set_preference(preferences, name, suffix, default=None):
-    value = preferences.get(name + '_' + suffix, default)
-    if value is not None:
-        preferences.set(name, value)
+def _clear(window) -> None:
+    with sublime_ext.save_preferences() as preferences:
+        _set_preference_on_clear(preferences, 'draw_indent_guides', False)
+        _set_preference_on_clear(preferences, 'draw_white_space', ['selection'])
+        _set_preference_on_clear(preferences, 'line_numbers', False)
+        _set_preference_on_clear(preferences, 'rulers', [])
+
+    if window.is_minimap_visible():
+        window.set_minimap_visible(False)
+
+    if window.is_menu_visible():
+        window.set_menu_visible(False)
+
+    _resize_groups_equally(window)
+    window.run_command('sort_user_settings')
 
 
-def _set_clear_preference(preferences, name, default=None):
-    _set_preference(preferences, name, 'clear', default)
+def _reset(window) -> None:
+    with sublime_ext.save_preferences() as preferences:
+        _set_preference_on_clear(preferences, 'line_numbers', True)
+        _set_preference_on_clear(preferences, 'rulers', [[80, "stippled"], [120, "solid"]])
+        _set_preference_on_reset(preferences, 'draw_indent_guides', True)
+        _set_preference_on_reset(preferences, 'draw_white_space')
+
+    if not window.is_sidebar_visible():
+        window.set_sidebar_visible(True)
+
+    if not window.is_minimap_visible():
+        window.set_minimap_visible(True)
+
+    if not window.is_menu_visible():
+        window.set_menu_visible(True)
+
+    if not window.is_status_bar_visible():
+        window.set_status_bar_visible(True)
+
+    _resize_groups_equally(window)
+    window.run_command('sort_user_settings')
 
 
-def _set_default_preference(preferences, name, default=None):
-    _set_preference(preferences, name, 'default', default)
+def _focus(window) -> None:
+    _clear(window)
 
-
-def _update_patterns(preferences, name: str, items: list) -> None:
-    exclude_patterns = preferences.get(name)
-    if not isinstance(exclude_patterns, list):
-        return
-
-    for item in items:
-        if item in exclude_patterns:
-            exclude_patterns.remove(item)
-        else:
-            exclude_patterns.append(item)
-
-        exclude_patterns = list(set(exclude_patterns))
-        exclude_patterns.sort()
-
-        if exclude_patterns:
-            preferences.set(name, exclude_patterns)
+    with sublime_ext.save_preferences() as preferences:
+        _set_patterns_on_focus(preferences, 'file_exclude_patterns')
+        _set_patterns_on_focus(preferences, 'folder_exclude_patterns')
