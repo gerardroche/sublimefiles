@@ -1,3 +1,6 @@
 {
 	"enabled": true,
+    "disabled_capabilities": {
+
+    }
 }

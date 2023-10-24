@@ -28,9 +28,7 @@
                 "Packages/PHP/PHP.sublime-syntax"
             ],
             "disabled_capabilities": {
-                // "referencesProvider": true,
-                // "documentHighlightProvider": true,
-                "hoverProvider": true,
+
             },
         },
 

@@ -124,3 +124,6 @@
 [submodule "NeoVintageousHardMode"]
 	path = NeoVintageousHardMode
 	url = git@github.com:gerardroche/NeoVintageousHardMode.git
+[submodule "LSP"]
+	path = LSP
+	url = https://github.com/gerardroche/LSP.git

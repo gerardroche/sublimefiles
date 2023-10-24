@@ -8,7 +8,7 @@
     "fade_fold_buttons": false,
     "file_tab_style": "square",
     "fold_buttons": false,
-    "font_size": 9,
+    "font_size": 10,
     "gutter": true,
     "hide_new_tab_button": true,
     "hide_tab_scrolling_buttons": true,
@@ -285,6 +285,7 @@
         "toggleable",
         "vimrc",
         "vintageous",
+        "nvm",
     ],
 
     "ignored_words":
@@ -326,10 +327,6 @@
     // Plugin - GotoPhpManual
 
     "goto_php_manual.path": "${PROJECTS_PATH}/.man",
-
-    // Plugin - Man
-
-    "man.path": "${PROJECTS_PATH}/.man",
 
     // Plugin - PHPUnitKit
 

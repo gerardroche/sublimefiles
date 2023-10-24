@@ -16,4 +16,7 @@
     "typescript.inlayHints.variableTypes.enabled": true,
   },
   "enabled": true,
+  "disabled_capabilities": {
+
+  }
 }
