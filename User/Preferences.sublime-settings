@@ -4,6 +4,7 @@
     "block_caret": false,
     "caret_extra_bottom": 0,
     "caret_extra_top": 0,
+    "debug": false,
     "detect_indentation": false,
     "enable_tab_scrolling": false,
     "fade_fold_buttons": false,
@@ -324,7 +325,6 @@
 
     // Data collection.
     "auto_upgrade": false,
-    "debug": false,
     "enable_telemetry": false,
     "submit_usage": false,
     "update_check": false,
