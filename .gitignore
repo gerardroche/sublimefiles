@@ -11,6 +11,7 @@
 /bracex/
 /coverage/
 /jsonschema/
+/lsp_utils/
 /markupsafe/
 /mdpopups/
 /pathlib/
@@ -19,6 +20,7 @@
 /python-jinja2/
 /python-markdown/
 /pyyaml/
+/sublime_lib/
 /wcmatch/
 
 # Generated.
@@ -32,6 +34,4 @@
 /User/user_sandbox.py
 /UserDesktop/
 /UserLaptop/
-/lsp_utils/
-/sublime_lib/
 /zzz A File Icon zzz/
