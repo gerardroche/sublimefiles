@@ -299,17 +299,12 @@
 
     "ignored_packages":
     [
-        "NeoVintageousHardMode",
-        "NeoVintageousInsertModeKeymaps",
-        "Sandbox",
-        "ShowAsciiValue",
         "SublimeLinter",
         "SublimeLinter-eslint",
         "SublimeLinter-flake8",
         "SublimeLinter-mypy",
         "SublimeLinter-php",
         "SublimeLinter-php-cs-fixer",
-        "TailwindCSSCompletions",
         "Vintage",
     ],
 

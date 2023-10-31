@@ -10,21 +10,38 @@
 	],
 	"install_prereleases":
 	[
+		"NeoVintageous"
 	],
 	"installed_packages":
 	[
 		"A File Icon",
 		"ApacheConf",
+		"Gitk",
+		"GitOpen",
+		"GotoDefinitionSplit",
 		"GotoDocumentation",
+		"GotoPhpManual",
+		"Khan",
 		"Laravel Blade Highlighter",
+		"LaravelTestingCompletions",
 		"LSP-eslint",
 		"LSP-pylsp",
 		"LSP-tailwindcss",
 		"LSP-volar",
+		"MarkdownPreview",
 		"Material Monokai",
+		"MonokaiFree",
+		"NeoVintageous",
+		"NeoVintageousFiles",
+		"NeoVintageousHighlightLine",
+		"NeoVintageousLineNumbers",
 		"Origami",
 		"Package Control",
+		"PHP Completions Kit",
+		"PHPGrammar",
+		"PHPSnippets",
 		"Sass",
+		"Sesame",
 		"SideBarTools",
 		"SublimeLinter",
 		"SublimeLinter-eslint",
@@ -33,8 +50,13 @@
 		"SublimeLinter-php",
 		"Tailwind CSS",
 		"Terraform",
+		"Test",
+		"ToggleDebugMode",
 		"Vue Syntax Highlight",
 	],
 	"submit_url": "",
 	"submit_usage": false,
+	"repositories":
+	[
+	],
 }
