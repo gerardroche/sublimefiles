@@ -34,7 +34,7 @@
 [submodule "Python Completions"]
 	path = Python Completions
 	url = https://github.com/gerardroche/Python-Auto-Complete.git
-[submodule "phpunit-completions"]
+[submodule "PHPUnitCompletions"]
 	path = PHPUnitCompletions
 	url = https://github.com/gerardroche/sublime-phpunit-completions.git
 [submodule "Sensible"]
@@ -55,7 +55,7 @@
 [submodule "Tmux"]
 	path = Tmux
 	url = https://github.com/gerardroche/sublime-tmux.git
-[submodule "ToggleNeoVintageous"]
+[submodule "NeoVintageousToggle"]
 	path = NeoVintageousToggle
 	url = https://github.com/NeoVintageous/NeoVintageousToggle.git
 [submodule "UnitTesting"]
@@ -64,7 +64,7 @@
 [submodule "Vue Syntax Highlight"]
 	path = Vue Syntax Highlight
 	url = https://github.com/deathaxe/vue-syntax-highlight.git
-[submodule "Tailwind CSS Completions"]
+[submodule "TailwindCSSCompletions"]
 	path = TailwindCSSCompletions
 	url = https://github.com/gerardroche/sublime-tailwind-css-completions.git
 [submodule "NeoVintageousLineNumbers"]
