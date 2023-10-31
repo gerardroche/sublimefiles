@@ -172,6 +172,7 @@
         "//webpack.mix.js",
         "desktop.ini",
         "package-lock.json",
+        "tags",
     ],
 
     "file_exclude_patterns_on_focus": [
