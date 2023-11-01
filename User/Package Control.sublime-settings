@@ -14,8 +14,9 @@
 	[
 		"A File Icon",
 		"ApacheConf",
-		"GitGutter",
-		"GitSavvy",
+		"Gitk",
+		"GitOpen",
+		"GotoDefinitionSplit",
 		"GotoDocumentation",
 		"Laravel Blade Highlighter",
 		"LaravelTestingCompletions",
