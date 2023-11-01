@@ -1,8 +1,8 @@
 {
 
     "diagnostics_delay_ms": 1000,
-    "log_debug": true,
-    "log_server": true,
+    "log_debug": false,
+    "log_server": false,
     "show_code_actions": "bulb",
     "show_diagnostics_count_in_view_status": false,
     "show_diagnostics_in_view_status": false,
