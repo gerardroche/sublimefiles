@@ -70,19 +70,18 @@ noremap <leader>fg :UserFindInFiles<CR>
 noremap <leader>fi :UserFindInFiles use_filter=false<CR>
 
 " LSP.
-" nnoremap gd :LspSymbolDefinition<CR>
-nnoremap K :LspHover<CR>
+nnoremap FileType css,go,html,js,php,vue <C-w>gd :LspSymbolDefinitionSplit<CR>
+nnoremap FileType css,go,html,js,php,vue gd :LspSymbolDefinition<CR>
 nnoremap [d :LspPrevDiagnostic<CR>
 nnoremap ]d :LspNextDiagnostic<CR>
+noremap <leader>K :LspHover only_diagnostics=true<CR>
+noremap K :LspHover<CR>
 noremap ga :LspCodeActions<CR>
 noremap gi :LspSymbolImplementation<CR>
 noremap gr :LspSymbolReferences<CR>
 
-nnoremap FileType css,go,html,js,php,vue <C-w>gd :LspSymbolDefinitionSplit<CR>
-nnoremap FileType css,go,html,js,php,vue gd :LspSymbolDefinition<CR>
-
 " Linter.
-nnoremap <leader>K :SublimeLinterLineReport<CR>
+" nnoremap <leader>K :SublimeLinterLineReport<CR>
 nnoremap [l [l:SublimeLinterLineReport<CR>
 nnoremap ]l ]l:SublimeLinterLineReport<CR>
 
