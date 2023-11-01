@@ -29,6 +29,7 @@
     { "caption": "SublimeLinter: Toggle Mode [U]", "command": "linters", "args": {"action": "toggle_mode"} },
     { "caption": "Tasks [U]", "command": "user_tasks" },
     { "caption": "Toggler: Toggle Show Build [U]", "command": "toggler", "args": {"setting": "show_build"} },
+    { "caption": "Toggler: Toggle Show File [U]", "command": "toggler", "args": {"setting": "show_file"} },
     { "caption": "Toggler: Toggle Show Indentation [U]", "command": "toggler", "args": {"setting": "show_indentation"} },
     { "caption": "Toggler: Toggle Show Point [U]", "command": "toggler", "args": {"setting": "show_point"} },
     { "caption": "Toggler: Toggle Show Spell [U]", "command": "toggler", "args": {"setting": "show_spell"} },
