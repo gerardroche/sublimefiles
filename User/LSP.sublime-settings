@@ -1,15 +1,15 @@
 {
 
-    "log_debug": false,
-    "log_server": false,
-    "show_code_actions": "",
+    "diagnostics_delay_ms": 1000,
+    "log_debug": true,
+    "log_server": true,
+    "show_code_actions": "bulb",
     "show_diagnostics_count_in_view_status": false,
     "show_diagnostics_in_view_status": false,
     "show_inlay_hints": false,
     "show_view_status": false,
 
     "clients": {
-
         "phpactor": {
             "command": [
                 "php",
@@ -31,6 +31,5 @@
 
             },
         },
-
     },
 }

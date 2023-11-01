@@ -18,6 +18,8 @@
 		"GitSavvy",
 		"GotoDocumentation",
 		"Laravel Blade Highlighter",
+		"LaravelTestingCompletions",
+		"LSP-eslint",
 		"LSP-pylsp",
 		"LSP-tailwindcss",
 		"LSP-volar",
