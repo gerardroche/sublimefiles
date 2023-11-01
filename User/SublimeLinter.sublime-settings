@@ -1,38 +1,46 @@
 {
 	"debug": false,
+	"delay": 3,
 	"highlights.demote_while_editing": "all",
 	"lint_mode": "save",
-    "delay": 3,
+	"statusbar.show_active_linters": false,
+	"show_marks_in_minimap": false,
 	"linters":
 	{
 		"flake8":
 		{
 			"disable": false,
-			"excludes":
-			[
+			"excludes": [
 				"*/vendor/*",
-				"*/sublime_text*/*"
+				"*/node_modules/*"
 			],
 			"executable":
 			[
 				"python3",
 				"-m",
-				"flake8"
+				"flake"
+			],
+		},
+		"eslint":
+		{
+			"disable": false,
+			"excludes": [
+				"*/vendor/*",
+				"*/node_modules/*"
 			],
 		},
 		"mypy":
 		{
-			"args":
-			[
-			],
 			"disable": false,
-			"env":
-			{
-				"MYPYPATH": "${MYPYPATH_SUBLIME}:$HOME/.config/sublime-text/Packages"
-			},
 			"excludes":
 			[
+				"*/vendor/*",
+				"*/node_modules/*"
 			],
+			"env":
+			{
+				"MYPYPATH": "${MYPYPATH_SUBLIME}:$HOME/.config/sublime-text/Packages",
+			},
 			"executable":
 			[
 				"python3",
@@ -40,17 +48,22 @@
 				"mypy"
 			],
 		},
-		"phpcsfixer":
-		{
-			"disable": false,
-		},
 		"php":
 		{
 			"disable": false,
 			"excludes":
 			[
-				"*/projects/**/vendor/*",
-				"*/vendor/**/vendor/*"
+				"*/vendor/*",
+				"*/node_modules/*"
+			],
+		},
+		"phpcsfixer":
+		{
+			"disable": false,
+			"excludes":
+			[
+				"*/vendor/*",
+				"*/node_modules/*"
 			],
 		},
 		"phpmd":
@@ -58,9 +71,9 @@
 			"disable": true,
 			"excludes":
 			[
-				"*/vendor/*"
+				"*/vendor/*",
+				"*/node_modules/*"
 			],
 		},
 	},
-	"statusbar.show_active_linters": false
 }
