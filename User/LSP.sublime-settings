@@ -1,6 +1,5 @@
 {
 
-    "diagnostics_delay_ms": 1000,
     "log_debug": false,
     "log_server": false,
     "show_code_actions": "bulb",
