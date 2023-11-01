@@ -28,6 +28,7 @@
     "scroll_context_lines": 8,
     "show_build": false,
     "show_definitions": false,
+    "show_file": true,
     "show_file_name": true,
     "show_git_status_in_status_bar": false,
     "show_indentation": false,
