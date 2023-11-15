@@ -104,7 +104,7 @@ nnoremap <leader>tv :TestVisit<CR>
 
 " Origami.
 " https://packagecontrol.io/packages/Origami
-nnoremap <leader>. :ToggleZoomPane fraction=0.98<CR>
+nnoremap <C-w>z :ToggleZoomPane fraction=0.98<CR>
 
 " -----------------------------------------------------------------------
 " NeoVintageous developement stuff
