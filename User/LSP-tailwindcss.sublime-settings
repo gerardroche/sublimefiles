@@ -1,6 +1,9 @@
 {
 	"enabled": true,
-    "disabled_capabilities": {
+	"settings": {
+		"tailwindCSS.colorDecorators": false,
+	},
+	"disabled_capabilities": {
 
-    }
+	}
 }
