@@ -148,6 +148,7 @@
         "*cache",
         ".DS_Store",
         ".directory",
+        "//*.sublime-project",
         "//.*-version",
         "//.*rc",
         "//.editorconfig",
@@ -177,6 +178,7 @@
     ],
 
     "file_exclude_patterns_on_focus": [
+        "//*.sublime-project",
         "//.*-version",
         "//.*rc",
         "//.editorconfig",
