@@ -7,6 +7,7 @@ first_line_match: nginx
 scope: source.nginx
 
 variables:
+
   keywords: |-
     (?x:
         add_header
@@ -21,6 +22,8 @@ variables:
       | index
       | listen
       | location
+      | return
+      | ssl_(certificate(?:_key)?|ciphers|early_data|prefer_server_ciphers|protocols|quic)
       | root
       | server(_(name|tokens))?
       | try_files
@@ -32,8 +35,10 @@ variables:
         SCRIPT_FILENAME
 
       | fastcgi_params
+      | http(?:2|3)
       | off
       | on
+      | ssl
       | utf-8
 
       )
