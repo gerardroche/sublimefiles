@@ -18,14 +18,15 @@ variables:
       | fastcgi_(param|pass)
       | gzip
       | gzip_types
+      | http(?:2|3)
       | include
-      | index
+      | (?:auto)?index
       | listen
       | location
       | return
-      | ssl_(certificate(?:_key)?|ciphers|early_data|prefer_server_ciphers|protocols|quic)
       | root
       | server(_(name|tokens))?
+      | ssl_(certificate(?:_key)?|ciphers|early_data|prefer_server_ciphers|protocols|quic)
       | try_files
 
       )
@@ -35,7 +36,6 @@ variables:
         SCRIPT_FILENAME
 
       | fastcgi_params
-      | http(?:2|3)
       | off
       | on
       | ssl
