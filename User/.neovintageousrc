@@ -66,8 +66,9 @@ vnoremap <leader>s :sort u<CR>
 noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
 noremap <leader>ff :ShowOverlay overlay=goto show_files=true<CR>
-noremap <leader>fg :UserFindInFiles<CR>
-noremap <leader>fi :UserFindInFiles use_filter=false<CR>
+noremap <leader>fp :UserFindInFiles where=project<CR>
+noremap <leader>fg :UserFindInFiles where=default<CR>
+noremap <leader>fa :UserFindInFiles<CR>
 
 " LSP.
 nnoremap FileType css,go,html,js,php,vue <C-w>gd :LspSymbolDefinitionSplit<CR>
