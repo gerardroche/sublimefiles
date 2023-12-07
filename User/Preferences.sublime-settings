@@ -446,4 +446,5 @@
     // "vintageous_search_inc_style": "underline",
 
     "draw_indent_guides": false,
+    "index_files": true,
 }
