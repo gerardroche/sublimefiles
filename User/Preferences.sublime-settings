@@ -93,9 +93,6 @@
 
     "indent_guide_options":
     [
-        "draw_normal",
-        "solid",
-        "draw_active"
     ],
 
     "indent_guide_options_toggle_on": ["draw_normal", "solid", "draw_active"],
