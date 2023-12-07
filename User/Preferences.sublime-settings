@@ -331,7 +331,6 @@
 
     "ignored_packages":
     [
-        "AutomaticPackageReloader",
         "AutomaticPackageReloader33",
         "ColorSchemeUnit",
         "GenerateSyntaxTestAssertions",
@@ -340,7 +339,6 @@
         "NeoVintageousInsertModeKeymaps",
         "Sandbox",
         "ShowAsciiValue",
-        "Six",
         "SublimeLinter",
         "SublimeLinter-eslint",
         "SublimeLinter-flake8",
@@ -348,9 +346,7 @@
         "SublimeLinter-php",
         "SublimeLinter-php-cs-fixer",
         "TailwindCSSCompletions",
-        "UnitTesting",
         "Vintage",
-        "Vintageous",
     ],
 
     // Data collection.
