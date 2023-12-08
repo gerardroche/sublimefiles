@@ -60,6 +60,7 @@ noremap <leader>P "+P
 " Sorting.
 nnoremap <leader>si vii:sort u<CR>
 nnoremap <leader>ss vip:sort u<CR>
+nnoremap <leader>st vithow:sort u<CR>
 vnoremap <leader>s :sort u<CR>
 
 " Telescope.
