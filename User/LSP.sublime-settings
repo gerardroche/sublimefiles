@@ -1,12 +1,27 @@
 {
 
+    "diagnostics_delay_ms": 5000,
     "log_debug": false,
     "log_server": false,
-    "show_code_actions": "bulb",
+    "show_code_actions": "",
     "show_diagnostics_count_in_view_status": false,
     "show_diagnostics_in_view_status": false,
     "show_inlay_hints": false,
     "show_view_status": false,
+
+    "diagnostics_highlight_style": {
+        "error": "",
+        "warning": "",
+        "info": "stippled",
+        "hint": "stippled"
+    },
+    "diagnostics_gutter_marker": "dot",
+    "show_multiline_diagnostics_highlights": false,
+
+    // "lsp_code_actions_on_save": {
+    //     // "source.fixAll": true,
+    //     // "source.organizeImports": true,
+    // },
 
     "clients": {
         "phpactor": {
