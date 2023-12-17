@@ -16,7 +16,7 @@
     "hide_tab_scrolling_buttons": true,
     "highlight_modified_tabs": true,
     "inactive_sheet_dimming": false,
-    "line_numbers": false,
+    "line_numbers": true,
     "line_padding_bottom": 3,
     "line_padding_top": 2,
     "margin": 0,
