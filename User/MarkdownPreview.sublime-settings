@@ -1,4 +1,5 @@
 {
+    "path_tempfile": "~/tmp/markdownpreview",
     "enable_autoreload": true,
     "enable_highlight": true,
     "enabled_parsers": ["markdown"],
