@@ -1,6 +1,7 @@
 {
     "variables":
     {
+        "bg0": "#272822",
     },
 
     "rules": [
@@ -33,6 +34,12 @@
         {
             "class": "tabset_control",
             "connector_height": 1
+        },
+
+        {
+            "class": "tree_row",
+            "attributes": ["highlighted"],
+            "layer0.tint": "var(bg0)",
         },
 
         // {
