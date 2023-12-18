@@ -1,79 +1,20 @@
 {
     "variables": {
-
-        // "bg0": "#1c1c1c"
-        // "bg0": "#212121",
-        // "bg0": "#292C3F",
-
         "selection": "color(var(bg2) alpha(0.5))",
     },
     "globals": {
-        "selection_corner_style": "square",
-
         "line_diff_added": "color(var(green) alpha(0.6))",
         "line_diff_deleted": "color(var(red) alpha(0.6))",
         "line_diff_modified": "color(var(yellow) alpha(0.6))",
-
+        "selection_corner_style": "square",
     },
     "rules": [
 
-        // make use traits white (prev green)
-        // { "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.class.php meta.block.php meta.use.php entity.other.inherited-class.php", "foreground": "var(fg0)" },
-
-        // Change inherited classes (prev green like the class name)
-        // { "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.class.php entity.other.inherited-class.php", "foreground": "var(fg0)", "font_style": "", },
-
-        // Make vue function declarations green
-        // { "scope": "text.html.vue source.js.embedded.html meta.binding.name.js entity.name.function.js variable.other.readwrite.js", "foreground": "var(green)" },
-
-        // Make vue const red
-        // { "scope": "text.html.vue source.js.embedded.html keyword.declaration.js", "foreground": "var(red)" },
-
-        // Make vue variables like $attrs.* and $slot.* orange
-        // { "scope": "text.html.vue meta.tag.block.any.html meta.attribute-with-value.directive.html meta.string.html meta.interpolation.vue source.js.embedded.vue variable.other.dollar.js", "foreground": "var(orange)" },
-
         // Make vue variables like $page.* orange
-        // { "scope": "text.html.vue meta.tag.inline.any.html meta.attribute-with-value.directive.html meta.string.html meta.interpolation.vue source.js.embedded.vue variable.other.dollar.js", "foreground": "var(orange)" },
         // {
         //     "scope": "text.html.vue meta.interpolation.vue source.js.embedded.vue variable.other.dollar.js",
         //     "foreground": "var(orange)"
         // },
-
-        // {"scope": "neovintageous_search_cur", "foreground": "var(red)", "background": "var(red)"},
-        // {"scope": "neovintageous_search_inc", "foreground": "var(red)", "background": "var(red)"},
-        // {"scope": "xneovintageous_search_occ", "foreground": "var(blue)", "background": "var(yellow)"},
-
-        // {"scope": "highlightedyank", "background": "color(var(selection) lightness(35%))"},
-        // {"scope": "highlightedyank", "foreground": "var(bg0)", "background": "var(yellow)"},
-        // {"scope": "highlightedyank", "foreground":"var(blue)"},
-
-        // {"scope": "neovintageous.mark", "foreground": "var(yellow)" },
-
-        // { "scope": "text.html.markdown markup.heading entity.name.section.markdown", "foreground": "var(fg0)" },
-        // { "scope": "meta.link.inline.description.markdown", "foreground": "var(fg0)" },
-        // { "scope": "markup.underline.link", "foreground": "var(blue)", "font_style": "underline" },
-        // { "scope": "markup.list.unnumbered.bullet.markdown punctuation.definition.list_item.markdown", "foreground": "var(violet)" },
-        // { "scope": "markup.raw punctuation.definition.raw", "foreground": "var(violet)" }
-
-        // { "scope": "markup.underline.link punctuation", "foreground": "var(blue)", "font_style": "underline" },
-        // { "scope": "punctuation.definition.link", "foreground": "var(violet)" },
-        // { "scope": "text.html.markdown markup.heading punctuation.definition.heading.begin.markdown", "foreground": "var(violet)" },
-
-        // {
-        //     "scope": "markup.raw.code-fence",
-        //     // "background": "color(var(fg1) blend(#000 10%))"
-        //     // "background": "color(var(bg0) s(+ 10%))"
-        //     "background": "color(var(bg0) blend(#000 70%))"
-        // },
-
-        // code fences
-        // {"scope": "markup.raw.code-fence", "background": "color(var(bg0) blend(#111 60%))"},
-        // {"scope": "text.html.markdown meta.code-fence.definition", "background": "color(var(bg0) blend(#111 60%))"},
-
-        // {"scope": "punctuation.definition.raw.code-fence", "foreground": "color(var(bg0) blend(#111 60%))"},
-        // {"scope": "text.html.markdown meta.code-fence.definition.begin.javascript.markdown-gfm constant.other.language-name.markdown", "foreground": "color(var(bg0) blend(#111 60%))"},
-        // {"scope": "text.html.markdown meta.code-fence.definition.begin.text.markdown-gfm constant.other.language-name.markdown", "foreground": "color(var(bg0) blend(#111 60%))"},
-        // {"scope": "punctuation.definition.raw.code-fence", "foreground": "var(violet)"},
 
     ]
 }
