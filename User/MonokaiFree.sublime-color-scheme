@@ -10,6 +10,10 @@
     },
     "rules": [
 
+        {"scope": "markup.highlight.read.lsp",  "foreground": "color(var(green))",    "background": "color(var(green) min-contrast(var(green) 3))"},
+        {"scope": "markup.highlight.text.lsp",  "foreground": "var(magenta)",   "background": "var(magenta)"},
+        {"scope": "markup.highlight.write.lsp", "foreground": "color(var(cyan))",     "background": "color(var(cyan) min-contrast(var(cyan) 3))"},
+
         // Make vue variables like $page.* orange
         // {
         //     "scope": "text.html.vue meta.interpolation.vue source.js.embedded.vue variable.other.dollar.js",
