@@ -10,9 +10,9 @@
     },
     "rules": [
 
-        {"scope": "markup.highlight.read.lsp",  "foreground": "color(var(green))",    "background": "color(var(green) min-contrast(var(green) 3))"},
-        {"scope": "markup.highlight.text.lsp",  "foreground": "var(magenta)",   "background": "var(magenta)"},
-        {"scope": "markup.highlight.write.lsp", "foreground": "color(var(cyan))",     "background": "color(var(cyan) min-contrast(var(cyan) 3))"},
+        // {"scope": "markup.highlight.text.lsp",  "foreground": "color(var(blue))",    "background": "color(var(blue) min-contrast(var(blue) 3))"},
+        // {"scope": "markup.highlight.read.lsp",  "foreground": "color(var(green))",    "background": "color(var(green) min-contrast(var(green) 3))"},
+        // {"scope": "markup.highlight.write.lsp", "foreground": "color(var(yellow))",     "background": "color(var(yellow) min-contrast(var(yellow) 3))"},
 
         // Make vue variables like $page.* orange
         // {
