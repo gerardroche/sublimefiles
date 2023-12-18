@@ -332,7 +332,6 @@
     "ignored_packages":
     [
         "AutomaticPackageReloader33",
-        "ColorSchemeUnit",
         "GenerateSyntaxTestAssertions",
         "NeoVintageousHardMode",
         "NeoVintageousInsertModeKeymaps",

@@ -24,22 +24,16 @@
         // { "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.class.php entity.other.inherited-class.php", "foreground": "var(fg0)", "font_style": "", },
 
         // Make vue function declarations green
-        // {
-        //     "scope": "text.html.vue source.js.embedded.html meta.binding.name.js entity.name.function.js variable.other.readwrite.js",
-        //     "foreground": "var(green)"
-        // },
+        // { "scope": "text.html.vue source.js.embedded.html meta.binding.name.js entity.name.function.js variable.other.readwrite.js", "foreground": "var(green)" },
 
-        // // Make vue const red
+        // Make vue const red
         // { "scope": "text.html.vue source.js.embedded.html keyword.declaration.js", "foreground": "var(red)" },
 
         // Make vue variables like $attrs.* and $slot.* orange
         // { "scope": "text.html.vue meta.tag.block.any.html meta.attribute-with-value.directive.html meta.string.html meta.interpolation.vue source.js.embedded.vue variable.other.dollar.js", "foreground": "var(orange)" },
 
-        // // Make vue variables like $page.* orange
-        // {
-        //     "scope": "text.html.vue meta.tag.inline.any.html meta.attribute-with-value.directive.html meta.string.html meta.interpolation.vue source.js.embedded.vue variable.other.dollar.js",
-        //     "foreground": "var(orange)"
-        // },
+        // Make vue variables like $page.* orange
+        // { "scope": "text.html.vue meta.tag.inline.any.html meta.attribute-with-value.directive.html meta.string.html meta.interpolation.vue source.js.embedded.vue variable.other.dollar.js", "foreground": "var(orange)" },
         // {
         //     "scope": "text.html.vue meta.interpolation.vue source.js.embedded.vue variable.other.dollar.js",
         //     "foreground": "var(orange)"
