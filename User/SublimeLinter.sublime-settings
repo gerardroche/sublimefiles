@@ -18,7 +18,7 @@
 			[
 				"python3",
 				"-m",
-				"flake"
+				"flake8"
 			],
 		},
 		"eslint":
