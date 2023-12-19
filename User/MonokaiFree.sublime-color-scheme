@@ -10,15 +10,28 @@
     },
     "rules": [
 
+        // php: remove under line from inherited class
+        {
+            "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.class.php entity.other.inherited-class.php",
+            "font_style": ""
+        },
+
+        // vue: directives like @click @submit.*
+        {
+            "scope": "text.html.vue meta.tag.block.form.html meta.attribute-with-value.directive.html entity.other.attribute-name.html",
+            "foreground": "var(violet)"
+        },
+
+        // vue: function declaration
+        {
+            "scope": "text.html.vue source.js.embedded.html meta.binding.name.js entity.name.function.js variable.other.readwrite.js",
+            "foreground": "var(green)"
+        },
+
+        // LSP
         // {"scope": "markup.highlight.text.lsp",  "foreground": "color(var(blue))",    "background": "color(var(blue) min-contrast(var(blue) 3))"},
         // {"scope": "markup.highlight.read.lsp",  "foreground": "color(var(green))",    "background": "color(var(green) min-contrast(var(green) 3))"},
         // {"scope": "markup.highlight.write.lsp", "foreground": "color(var(yellow))",     "background": "color(var(yellow) min-contrast(var(yellow) 3))"},
-
-        // Make vue variables like $page.* orange
-        // {
-        //     "scope": "text.html.vue meta.interpolation.vue source.js.embedded.vue variable.other.dollar.js",
-        //     "foreground": "var(orange)"
-        // },
 
     ]
 }
