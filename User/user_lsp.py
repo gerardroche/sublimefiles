@@ -9,11 +9,9 @@ class LspSymbolDefinitionSplit(sublime_plugin.WindowCommand):
             'side_by_side': True
         })
 
-        # Why is the cork on the fork?
-        # side-by-side crap.
-        sublime.set_timeout(self.fart, 30)
+        sublime.set_timeout(self.fix_side_by_side_issue, 30)
 
-    def fart(self):
+    def fix_side_by_side_issue(self):
         self.window.run_command('carry_file_to_pane', {
             'direction': 'right'
         })
