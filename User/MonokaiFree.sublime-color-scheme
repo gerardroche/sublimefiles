@@ -3,12 +3,24 @@
         "selection": "color(var(bg2) alpha(0.5))",
     },
     "globals": {
-        "line_diff_added": "color(var(green) alpha(0.6))",
-        "line_diff_deleted": "color(var(red) alpha(0.6))",
-        "line_diff_modified": "color(var(yellow) alpha(0.6))",
+        "line_diff_added": "color(var(green) alpha(0.8))",
+        "line_diff_deleted": "color(var(red) alpha(0.8))",
+        "line_diff_modified": "color(var(yellow) alpha(0.8))",
         "selection_corner_style": "square",
     },
     "rules": [
+
+        // extended classes
+        {
+            "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.class.php meta.path.php variable.namespace.php",
+            "foreground": "var(fg0)",
+            "font_style": ""
+        },
+        {
+            "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.class.php meta.path.php punctuation.accessor.namespace.php",
+            "foreground": "var(fg0)",
+            "font_style": ""
+        },
 
         // php: remove under line from inherited class
         {
