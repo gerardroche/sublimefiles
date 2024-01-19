@@ -10,6 +10,19 @@
     },
     "rules": [
 
+        // phpdoc annotation
+        {
+            "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html comment.block.documentation.phpdoc.php entity.name.tag.documentation.phpdoc.php",
+            "foreground": "var(red)",
+            "font_style": ""
+        },
+
+        // double colon accessor e.g. self::CONSTANT
+        {
+            "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.function.php punctuation.accessor.double-colon.php",
+            "foreground": "var(fg0)"
+        },
+
         // extended classes
         {
             "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.class.php meta.path.php variable.namespace.php",
