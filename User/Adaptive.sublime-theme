@@ -7,16 +7,17 @@
     "rules": [
 
         // Fix top margin off-by-one with top of view on hover alignment.
-        {
-            "class": "sidebar_container",
-            "content_margin": [0, 1, 0, 0]
-        },
-
         // Fix sidebar alignment.
         {
-            "class": "sidebar_tree",
-            "indent_offset": 0
+            "class": "sidebar_container",
+            "content_margin": [-11, 1, 0, 0]
         },
+
+        // // Fix sidebar alignment.
+        // {
+        //     "class": "sidebar_tree",
+        //     "indent_offset": 0
+        // },
 
         // Fix tab alignment.
         {
