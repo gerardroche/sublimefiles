@@ -1,8 +1,8 @@
 {
 
-    "diagnostics_delay_ms": 5000,
+    "diagnostics_delay_ms": 50,
     "diagnostics_gutter_marker": "dot",
-    "document_highlight_style": "background",
+    "xdocument_highlight_style": "background",
     "log_debug": false,
     "log_server": false,
     "show_code_actions": "",
@@ -21,7 +21,7 @@
 
     // "lsp_code_actions_on_save": {
     //     // "source.fixAll": true,
-    //     // "source.organizeImports": true,
+    //     "source.organizeImports": true,
     // },
 
     "clients": {
@@ -42,9 +42,6 @@
             "syntaxes": [
                 "Packages/PHP/PHP.sublime-syntax"
             ],
-            "disabled_capabilities": {
-
-            },
         },
     },
 }
