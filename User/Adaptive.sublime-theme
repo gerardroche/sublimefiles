@@ -1,7 +1,25 @@
 {
     "variables":
     {
+
         "bg0": "#272822",
+        "bg1": "#3e3d32",
+        "bg2": "#43443b",
+
+        "fg0": "#f8f8f2",
+        "fg1": "#cfcfc2",
+        "fg2": "#75715e",
+
+        "yellow": "#e6db74",
+        "orange": "#fd971f",
+        "red": "#f92672",
+        "violet": "#ae81ff", // purple
+        "blue": "#66d9ef",
+        "cyan": "#a1efe4",
+        "green": "#a6e22e",
+        "magenta": "#fd5ff0", // pink
+
+
     },
 
     "rules": [

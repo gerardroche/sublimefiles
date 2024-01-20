@@ -3,41 +3,38 @@
         "selection": "color(var(bg2) alpha(0.5))",
     },
     "globals": {
-        // "line_diff_added": "color(var(green) alpha(0.8))",
-        // "line_diff_deleted": "color(var(red) alpha(0.8))",
-        // "line_diff_modified": "color(var(yellow) alpha(0.8))",
         "selection_corner_style": "square",
     },
     "rules": [
 
-        // phpdoc annotation
-        // { "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html comment.block.documentation.phpdoc.php entity.name.tag.documentation.phpdoc.php", "foreground": "var(red)", "font_style": "" },
+        // feat(php): annotation
+        {
+            "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.class.php meta.block.php meta.annotation.php punctuation.definition.annotation",
+            "foreground": "var(fg1)",
+        },
+        {
+            "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.class.php meta.block.php meta.annotation.identifier.php variable.annotation.php",
+            "foreground": "var(fg1)",
+        },
 
-        // double colon accessor e.g. self::CONSTANT
-        // { "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.function.php punctuation.accessor.double-colon.php", "foreground": "var(fg0)" },
+        // feat(phpunit): file names
+        {
+            "scope": "text.phpunit-result markup.changed markup.warning,text.phpunit-result entity.name.filename,text.phpunit-result constant.numeric.line-number",
+            "foreground": "var(fg0)"
+        },
 
-        // // extended classes
-        // // php: remove under line from inherited class
-        // { "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.class.php meta.path.php variable.namespace.php", "foreground": "var(fg0)", "font_style": "" },
-        // { "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.class.php meta.path.php punctuation.accessor.namespace.php", "foreground": "var(fg0)", "font_style": "" },
-        // { "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.class.php entity.other.inherited-class.php", "font_style": "" },
-
-        // vue: directives like @click @submit.*
+        // feat(vue): directives like @click @submit.*
         {
             "scope": "text.html.vue meta.tag.block.form.html meta.attribute-with-value.directive.html entity.other.attribute-name.html",
             "foreground": "var(violet)"
         },
 
-        // vue: function declaration
+        // feat(vue): function declaration
         {
             "scope": "text.html.vue source.js.embedded.html meta.binding.name.js entity.name.function.js variable.other.readwrite.js",
             "foreground": "var(green)"
         },
 
-        // LSP
-        // {"scope": "markup.highlight.text.lsp",  "foreground": "color(var(blue))",    "background": "color(var(blue) min-contrast(var(blue) 3))"},
-        // {"scope": "markup.highlight.read.lsp",  "foreground": "color(var(green))",    "background": "color(var(green) min-contrast(var(green) 3))"},
-        // {"scope": "markup.highlight.write.lsp", "foreground": "color(var(yellow))",     "background": "color(var(yellow) min-contrast(var(yellow) 3))"},
 
     ]
 }
