@@ -7,14 +7,39 @@
     },
     "rules": [
 
+        // {
+        //     "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.php punctuation.definition.annotation.begin.php",
+        //     "foreground": "var(fg1)"
+        // },
+
         // feat(php): annotation
+        // {
+        //     "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.php punctuation.definition.annotation.begin.php",
+        //     "font_style": "",
+        // },
+        // {
+        //     "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.php punctuation.definition.annotation.end.php",
+        //     "font_style": "",
+        // },
         {
-            "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.class.php meta.block.php meta.annotation.php punctuation.definition.annotation",
-            "foreground": "var(fg1)",
+            "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.arguments.php meta.group.php punctuation.section.group.begin.php",
+            "foreground": "color(var(fg0) alpha(0.7))",
+            "font_style": "bold"
         },
         {
-            "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.class.php meta.block.php meta.annotation.identifier.php variable.annotation.php",
-            "foreground": "var(fg1)",
+            "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.arguments.php meta.group.php punctuation.section.group.end.php",
+            "foreground": "color(var(fg0) alpha(0.7))",
+            "font_style": "bold"
+        },
+        {
+            "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.php punctuation.definition.annotation",
+            "foreground": "color(var(fg0) alpha(0.7))",
+            "font_style": "bold"
+        },
+        {
+            "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.identifier.php variable.annotation.php",
+            "foreground": "color(var(fg0) alpha(0.7))",
+            "font_style": "bold"
         },
 
         // feat(phpunit): file names
