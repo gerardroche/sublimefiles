@@ -97,6 +97,8 @@ nnoremap <leader>vv :UserDumpVariable phpfunc=dd<CR>
 " Testing.
 " https://github.com/gerardroche/sublime-test
 nnoremap <D-n> :TestNearest<CR>
+nnoremap <D-o> :TestFile<CR>
+nnoremap <D-w> :TestFile<CR>
 nnoremap <leader>ta :TestSuite<CR>
 nnoremap <leader>tf :TestFile<CR>
 nnoremap <leader>tl :TestLast<CR>
