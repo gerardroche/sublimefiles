@@ -106,6 +106,10 @@ nnoremap <leader>tv :TestVisit<CR>
 
 " Origami.
 " https://packagecontrol.io/packages/Origami
+nnoremap <C-w><C-h> :CarryFileToPane direction=left<CR>
+nnoremap <C-w><C-j> :CarryFileToPane direction=down<CR>
+nnoremap <C-w><C-k> :CarryFileToPane direction=up<CR>
+nnoremap <C-w><C-l> :CarryFileToPane direction=right<CR>
 nnoremap <C-w>z :ToggleZoomPane fraction=0.98<CR>
 
 " -----------------------------------------------------------------------
