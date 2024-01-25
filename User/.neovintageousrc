@@ -64,23 +64,28 @@ nnoremap <leader>st vithow:sort u<CR>
 vnoremap <leader>s :sort u<CR>
 
 " Telescope.
-noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
-noremap <D-i> :GotoSymbolInProject<CR>
 noremap <leader>ff :ShowOverlay overlay=goto show_files=true<CR>
 noremap <leader>fp :UserFindInFiles where=project<CR>
 noremap <leader>fg :UserFindInFiles where=default<CR>
 noremap <leader>fa :UserFindInFiles<CR>
 
+" Goto symbol.
+noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
+noremap <D-i> :GotoSymbolInProject<CR>
+noremap gS :GotoSymbolInProject<CR>
+noremap gs :ShowOverlay overlay=goto text=@<CR>
+
 " LSP.
-nnoremap FileType css,go,html,js,php,vue <C-w>gd :LspSymbolDefinitionSplit<CR>
-nnoremap FileType css,go,html,js,php,vue gd :LspSymbolDefinition<CR>
 nnoremap [d :LspPrevDiagnostic<CR>
 nnoremap ]d :LspNextDiagnostic<CR>
 noremap <leader>K :LspHover only_diagnostics=true<CR>
-noremap K :LspHover<CR>
-noremap ga :LspCodeActions<CR>
-noremap gi :LspSymbolImplementation<CR>
-noremap gr :LspSymbolReferences<CR>
+noremap FileType css,go,html,js,php,vue <C-w>gd :LspSymbolDefinitionSplit<CR>
+noremap FileType css,go,html,js,php,vue csd :LspSymbolRename<CR>
+noremap FileType css,go,html,js,php,vue gA :LspSymbolReferences<CR>
+noremap FileType css,go,html,js,php,vue gD :LspSymbolTypeDefinition<CR>
+noremap FileType css,go,html,js,php,vue ga :LspCodeActions<CR>
+noremap FileType css,go,html,js,php,vue gd :LspSymbolDefinition<CR>
+noremap FileType css,go,html,js,php,vue gd K :LspHover<CR>
 
 " Linter.
 " nnoremap <leader>K :SublimeLinterLineReport<CR>
