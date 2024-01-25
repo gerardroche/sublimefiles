@@ -371,12 +371,12 @@
 
     // Plugin - PHPUnitKit
 
-    "phpunit.tmux_target": ":.{top}",
     "phpunit.debug": false,
-    "phpunit.options": { "colors": true, "no-coverage": true, },
-    // "phpunit.paratest": true,
+    "phpunit.options": { "colors": true, "no-progress": true, "no-coverage": true, },
     "phpunit.strategy": "tmux",
-    // "phpunit.tmux_clear_scrollback": true,
+    "phpunit.tmux_clear_scrollback": false,
+    "phpunit.tmux_target": ":.{top}",
+    "phpunit.paratest": true,
 
     // Plugin - Sesame
 
