@@ -28,7 +28,11 @@ class AsyncProcess:
     def __init__(self, cmd, shell_cmd, env, listener, path="", shell=False):
         """ "path" and "shell" are options in build systems """
 
-        # print('AsyncProcess =======================================')
+        print('cmd =', cmd)
+        print('shell_cmd =', shell_cmd)
+        print('path =', path)
+        print('shell =', shell)
+
         if not shell_cmd and not cmd:
             raise ValueError("shell_cmd or cmd is required")
 
@@ -76,12 +80,18 @@ class AsyncProcess:
                 cmd = ["/usr/bin/env", "bash", "-l", "-c", shell_cmd]
                 shell = False
             elif sys.platform == "linux":
+                print('LINUX')
                 # Explicitly use /bin/bash on Linux, to keep Linux and OSX as
                 # similar as possible. A login shell is explicitly not used for
                 # linux, as it's not required
                 cmd = ["/usr/bin/env", "bash", "-c", shell_cmd]
+                print('cmd =', cmd)
                 shell = False
+                print('shell =', shell)
 
+        print('RUNNING cmd =', cmd)
+        print('env =', env)
+        print('shell =', shell)
         self.proc = subprocess.Popen(
             cmd,
             bufsize=0,
@@ -102,11 +112,9 @@ class AsyncProcess:
         )
 
     def start(self):
-        # print('    AsyncProcess START')
         self.stdout_thread.start()
 
     def kill(self):
-        # print('    AsyncProcess KILL')
         if not self.killed:
             self.killed = True
             if sys.platform == "win32":
@@ -122,15 +130,12 @@ class AsyncProcess:
                 self.proc.terminate()
 
     def poll(self):
-        # print('    AsyncProcess POLL')
         return self.proc.poll() is None
 
     def exit_code(self):
-        # print('    AsyncProcess EXIT CODE')
         return self.proc.poll()
 
     def read_fileno(self, file, execute_finished):
-        # print('    AsyncProcess READ FILENO')
         decoder = \
             codecs.getincrementaldecoder(self.listener.encoding)('replace')
 
@@ -177,7 +182,6 @@ class ExecCommand(sublime_plugin.WindowCommand, ProcessListener):
             # Catches "path" and "shell"
             **kwargs):
 
-        # print('ExecCommand run() ============================================')
         if update_annotations_only:
             if self.show_errors_inline:
                 self.update_annotations()
@@ -191,18 +195,10 @@ class ExecCommand(sublime_plugin.WindowCommand, ProcessListener):
         if kill_previous and self.proc and self.proc.poll():
             self.proc.kill()
 
-        # print('  output_view xxx1=', self.output_view)
+        self.output_view = self.window.find_output_panel("exec")
         if self.output_view is None:
-            # print('  *************************** IS NONE')
-            # print('  *************************** IS NONE')
-            # print('  *************************** IS NONE')
             # Try not to call get_output_panel until the regexes are assigned
             self.output_view = self.window.create_output_panel("exec")
-        # print('  output_view 2=', self.output_view)
-        # if self.output_view:
-        #     print('    >>>')
-        #     print(self.output_view.substr(sublime.Region(0, self.output_view.size())))
-        #     print('    <<<')
 
         # Default the to the current files directory if no working directory
         # was given
@@ -219,13 +215,10 @@ class ExecCommand(sublime_plugin.WindowCommand, ProcessListener):
         self.output_view.settings().set("gutter", False)
         self.output_view.settings().set("scroll_past_end", False)
         self.output_view.assign_syntax(syntax)
-        # print('  output_view 3=', self.output_view)
+
         # Call create_output_panel a second time after assigning the above
         # settings, so that it'll be picked up as a result buffer
-        # ov = self.window.create_output_panel("exec")
-        # print('ov =', ov)
-        # self.window.create_output_panel("exec")
-        self.output_view = self.window.create_output_panel("exec")
+        self.window.create_output_panel("exec")
 
         self.encoding = encoding
         self.quiet = quiet
@@ -289,29 +282,16 @@ class ExecCommand(sublime_plugin.WindowCommand, ProcessListener):
             if not self.quiet:
                 self.write("[Finished]")
 
-        # print('FINISHED')
-
     def is_enabled(self, kill=False, **kwargs):
-        # print('    EXEC IS ENABLED')
         if kill:
             return (self.proc is not None) and self.proc.poll()
         else:
             return True
 
     def write(self, characters):
-        # print('    EXEC WRITE')
-        # print('output_view A=', self.output_view, self.output_view.size())
-        # characters = characters.replace('/home/gerard/projects/gerardroche', '/home/code')
-
         self.output_view.run_command(
             'append',
             {'characters': characters, 'force': True, 'scroll_to_end': True})
-        # print('output_view B=', self.output_view, self.output_view.size())
-        # print('characters =', characters)
-        # if self.output_view:
-        #     print('    >>>')
-        #     print(self.output_view.substr(sublime.Region(0, self.output_view.size())))
-        #     print('    <<<')
 
         # Updating annotations is expensive, so batch it to the main thread
         def annotations_check():
@@ -333,33 +313,24 @@ class ExecCommand(sublime_plugin.WindowCommand, ProcessListener):
                 sublime.set_timeout(lambda: annotations_check())
 
     def on_data(self, proc, data):
-        # print('    EXEC ON DATA')
         if proc != self.proc:
-            # print('  RET')
             return
 
         # Truncate past the limit
         if self.output_size >= self.OUTPUT_LIMIT:
-            # print('  OUTPUT SIZE >=')
             return
 
-        # print('data =', data)
         self.write(data)
         self.output_size += len(data)
-        # print('output_size =', self.output_size)
 
         if self.output_size >= self.OUTPUT_LIMIT:
-            # print('TRUNCATED')
             self.write('\n[Output Truncated]\n')
 
     def on_finished(self, proc):
-        # print('    EXEC ON FINISHED')
         if proc != self.proc:
-            # print('  RET')
             return
 
         if proc.killed:
-            # print('  KILL proc')
             self.write("\n[Cancelled]")
         elif not self.quiet:
             elapsed = time.time() - proc.start_time
