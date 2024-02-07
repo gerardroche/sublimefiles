@@ -143,3 +143,9 @@ nnoremap <C-w>z :ToggleZoomPane fraction=0.98<CR>
 " nnoremap Œ :registers<CR>
 " nnoremap œ :registers<CR>
 " nnoremap → :registers<CR>
+
+" " https://neovim.io/doc/user/cmdline.html#%3Acomment
+" set ignorecase "
+" set modelines=5 " comment
+" set winaltkeys=menu
+" set winaltkeys=menu455
