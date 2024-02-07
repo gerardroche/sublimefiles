@@ -6,5 +6,5 @@
         "pylsp.plugins.pydocstyle.enabled": true,
         "pylsp.plugins.pyflakes.enabled": true,
     },
-    "enabled": false,
+    "enabled": true,
 }
