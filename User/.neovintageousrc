@@ -80,12 +80,12 @@ nnoremap [d :LspPrevDiagnostic<CR>
 nnoremap ]d :LspNextDiagnostic<CR>
 noremap <leader>K :LspHover only_diagnostics=true<CR>
 noremap FileType css,go,html,js,php,vue <C-w>gd :LspSymbolDefinitionSplit<CR>
-noremap FileType css,go,html,js,php,vue csd :LspSymbolRename<CR>
+noremap FileType css,go,html,js,php,vue <leader>cs :LspSymbolRename<CR>
 noremap FileType css,go,html,js,php,vue gA :LspSymbolReferences<CR>
 noremap FileType css,go,html,js,php,vue gD :LspSymbolTypeDefinition<CR>
 noremap FileType css,go,html,js,php,vue ga :LspCodeActions<CR>
 noremap FileType css,go,html,js,php,vue gd :LspSymbolDefinition<CR>
-noremap FileType css,go,html,js,php,vue gd K :LspHover<CR>
+noremap FileType css,go,html,js,php,vue K :LspHover<CR>
 
 " Linter.
 " nnoremap <leader>K :SublimeLinterLineReport<CR>
