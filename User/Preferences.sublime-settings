@@ -438,7 +438,7 @@
     "vintageous_highlighted_yank_duration": 200,
     "vintageous_search_occ_style": "outline",
     "vintageous_sneak_use_ic_scs": 1,
-    "vintageous_terminal": "gnome-terminal",
+    "vintageous_terminal": "kitty",
     // "vintageous_auto_nohlsearch_on_normal_enter": false,
     // "vintageous_auto_switch_input_method": true,
     // "vintageous_auto_switch_input_method_default": "1",

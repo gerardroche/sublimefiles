@@ -35,6 +35,7 @@
     { "keys": ["ctrl+alt+o"], "command": "sesame_open" },
     { "keys": ["ctrl+alt+r"], "command": "sesame_remove" },
     { "keys": ["ctrl+alt+s"], "command": "sesame_switch" },
+
     { "keys": ["ctrl+alt+v"], "command": "sesame_open", "args": { "path": "~/vendor" } },
 
     // Test
