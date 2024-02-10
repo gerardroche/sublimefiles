@@ -7,37 +7,37 @@ set smartcase
 let mapleader=,
 let maplocalleader=<bslash>
 
-nnoremap <leader><leader> :Neovintageous action=reveal_side_bar<CR>
-nnoremap <leader>ca :SideBarCopyAbsolutePath<CR>
-nnoremap <leader>cn :SideBarCopyName<CR>
-nnoremap <leader>cr :SideBarCopyRelativePath<CR>
-nnoremap <leader>d :Neovintageous action=toggle_side_bar<CR>
-nnoremap <leader>ek :OpenKeyBindings<CR>
-nnoremap <leader>en :Neovintageous action=open_rc_file<CR>
-nnoremap <leader>ep :OpenPreferences<CR>
-nnoremap <leader>ga :silent !git add %<CR>
-nnoremap <leader>gd :ToggleInlineDiff<CR>
-nnoremap <leader>gr :silent !git reset<CR>
-nnoremap <leader>gu :GenerateUnitTest<CR>
-nnoremap <leader>hm :RevertModification<CR>
-nnoremap <leader>hp :PasteFromHistory<CR>
-nnoremap <leader>hu :RevertHunk<CR>
-nnoremap <leader>li :LspCodeActions<CR>
-nnoremap <leader>oa :Gitk all=true<CR>
-nnoremap <leader>oc :GitOpen commit=true<CR>
-nnoremap <leader>od :ShowPanel panel=output.diagnostics<CR>
-nnoremap <leader>oi :GitOpen issue=true<CR>
-nnoremap <leader>ok :Gitk max-count=200 all=true date-order=true<CR>
-nnoremap <leader>oo :GitOpen<CR>
-nnoremap <leader>os :ShowPanel panel=output.SublimeLinter<CR>
-nnoremap <leader>q gqip:w<CR>
-nnoremap <leader>r :reg<CR>
-nnoremap <leader>sp :ShowOverlay overlay=command_palette<CR>
-nnoremap <leader>wh :CarryFileToPane direction=left<CR>
-nnoremap <leader>wj :CarryFileToPane direction=down<CR>
-nnoremap <leader>wk :CarryFileToPane direction=up<CR>
-nnoremap <leader>wl :CarryFileToPane direction=right<CR>
-nnoremap <leader>zc :FoldAllCssClasses<CR>
+nnoremap <Leader><Leader> :Neovintageous action=reveal_side_bar<CR>
+nnoremap <Leader>ca :SideBarCopyAbsolutePath<CR>
+nnoremap <Leader>cn :SideBarCopyName<CR>
+nnoremap <Leader>cr :SideBarCopyRelativePath<CR>
+nnoremap <Leader>d :Neovintageous action=toggle_side_bar<CR>
+nnoremap <Leader>ek :OpenKeyBindings<CR>
+nnoremap <Leader>en :Neovintageous action=open_rc_file<CR>
+nnoremap <Leader>ep :OpenPreferences<CR>
+nnoremap <Leader>ga :silent !git add %<CR>
+nnoremap <Leader>gd :ToggleInlineDiff<CR>
+nnoremap <Leader>gr :silent !git reset<CR>
+nnoremap <Leader>gu :GenerateUnitTest<CR>
+nnoremap <Leader>hm :RevertModification<CR>
+nnoremap <Leader>hp :PasteFromHistory<CR>
+nnoremap <Leader>hu :RevertHunk<CR>
+nnoremap <Leader>li :LspCodeActions<CR>
+nnoremap <Leader>oa :Gitk all=true<CR>
+nnoremap <Leader>oc :GitOpen commit=true<CR>
+nnoremap <Leader>od :ShowPanel panel=output.diagnostics<CR>
+nnoremap <Leader>oi :GitOpen issue=true<CR>
+nnoremap <Leader>ok :Gitk max-count=200 all=true date-order=true<CR>
+nnoremap <Leader>oo :GitOpen<CR>
+nnoremap <Leader>os :ShowPanel panel=output.SublimeLinter<CR>
+nnoremap <Leader>q gqip:w<CR>
+nnoremap <Leader>r :reg<CR>
+nnoremap <Leader>sp :ShowOverlay overlay=command_palette<CR>
+nnoremap <Leader>wh :CarryFileToPane direction=left<CR>
+nnoremap <Leader>wj :CarryFileToPane direction=down<CR>
+nnoremap <Leader>wk :CarryFileToPane direction=up<CR>
+nnoremap <Leader>wl :CarryFileToPane direction=right<CR>
+nnoremap <Leader>zc :FoldAllCssClasses<CR>
 
 " Quirks.
 nnoremap <Space> :
@@ -52,22 +52,22 @@ noremap <C-s> :w<CR>
 noremap <C-u> <C-u>zz
 
 " Yank and paste using system clipboard.
-noremap <leader>y "+y
-noremap <leader>Y "+Y
-noremap <leader>p "+p
-noremap <leader>P "+P
+noremap <Leader>y "+y
+noremap <Leader>Y "+Y
+noremap <Leader>p "+p
+noremap <Leader>P "+P
 
 " Sorting.
-nnoremap <leader>si vii:sort u<CR>
-nnoremap <leader>ss vip:sort u<CR>
-nnoremap <leader>st vithow:sort u<CR>
-vnoremap <leader>s :sort u<CR>
+nnoremap <Leader>si vii:sort u<CR>
+nnoremap <Leader>ss vip:sort u<CR>
+nnoremap <Leader>st vithow:sort u<CR>
+vnoremap <Leader>s :sort u<CR>
 
 " Telescope.
-noremap <leader>ff :ShowOverlay overlay=goto show_files=true<CR>
-noremap <leader>fp :UserFindInFiles where=project<CR>
-noremap <leader>fg :UserFindInFiles where=default<CR>
-noremap <leader>fa :UserFindInFiles<CR>
+noremap <Leader>ff :ShowOverlay overlay=goto show_files=true<CR>
+noremap <Leader>fp :UserFindInFiles where=project<CR>
+noremap <Leader>fg :UserFindInFiles where=default<CR>
+noremap <Leader>fa :UserFindInFiles<CR>
 
 " Goto symbol.
 noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
@@ -78,9 +78,9 @@ noremap gs :ShowOverlay overlay=goto text=@<CR>
 " LSP.
 nnoremap [d :LspPrevDiagnostic<CR>
 nnoremap ]d :LspNextDiagnostic<CR>
-noremap <leader>K :LspHover only_diagnostics=true<CR>
+noremap <Leader>K :LspHover only_diagnostics=true<CR>
 noremap FileType css,go,html,js,php,vue <C-w>gd :LspSymbolDefinitionSplit<CR>
-noremap FileType css,go,html,js,php,vue <leader>cs :LspSymbolRename<CR>
+noremap FileType css,go,html,js,php,vue <Leader>cs :LspSymbolRename<CR>
 noremap FileType css,go,html,js,php,vue gA :LspSymbolReferences<CR>
 noremap FileType css,go,html,js,php,vue gD :LspSymbolTypeDefinition<CR>
 noremap FileType css,go,html,js,php,vue ga :LspCodeActions<CR>
@@ -88,28 +88,28 @@ noremap FileType css,go,html,js,php,vue gd :LspSymbolDefinition<CR>
 noremap FileType css,go,html,js,php,vue K :LspHover<CR>
 
 " Linter.
-" nnoremap <leader>K :SublimeLinterLineReport<CR>
+" nnoremap <Leader>K :SublimeLinterLineReport<CR>
 nnoremap [l [l:SublimeLinterLineReport<CR>
 nnoremap ]l ]l:SublimeLinterLineReport<CR>
 
 " Dumper Truck.
-nnoremap <leader>vd :UserDumpVariable phpfunc=dump<CR>
-nnoremap <leader>vm :UserDumpVariable phpfunc=dump name=method<CR>
-nnoremap <leader>vp :UserDumpVariable phpfunc=print_r<CR>
-nnoremap <leader>vr :UserDumpVariable sublime_region_view_string=true<CR>
-nnoremap <leader>vv :UserDumpVariable phpfunc=dd<CR>
+nnoremap <Leader>vd :UserDumpVariable phpfunc=dump<CR>
+nnoremap <Leader>vm :UserDumpVariable phpfunc=dump name=method<CR>
+nnoremap <Leader>vp :UserDumpVariable phpfunc=print_r<CR>
+nnoremap <Leader>vr :UserDumpVariable sublime_region_view_string=true<CR>
+nnoremap <Leader>vv :UserDumpVariable phpfunc=dd<CR>
 
 " Testing.
 " https://github.com/gerardroche/sublime-test
 nnoremap <D-n> :TestNearest<CR>
 nnoremap <D-o> :TestFile<CR>
 nnoremap <D-w> :TestFile<CR>
-nnoremap <leader>ta :TestSuite<CR>
-nnoremap <leader>tf :TestFile<CR>
-nnoremap <leader>tl :TestLast<CR>
-nnoremap <leader>tn :TestNearest<CR>
-nnoremap <leader>ts :TestSwitch<CR>
-nnoremap <leader>tv :TestVisit<CR>
+nnoremap <Leader>ta :TestSuite<CR>
+nnoremap <Leader>tf :TestFile<CR>
+nnoremap <Leader>tl :TestLast<CR>
+nnoremap <Leader>tn :TestNearest<CR>
+nnoremap <Leader>ts :TestSwitch<CR>
+nnoremap <Leader>tv :TestVisit<CR>
 
 " Origami.
 " https://packagecontrol.io/packages/Origami
@@ -127,13 +127,13 @@ nnoremap <C-w>z :ToggleZoomPane fraction=0.98<CR>
 
 " nnoremap <LocalLeader><space> :UserFormatLink<CR>
 " noremap [[ ?^c<CR>
-" nnoremap <leader>; <Esc>A;<Esc>2<C-o>
+" nnoremap <Leader>; <Esc>A;<Esc>2<C-o>
 " xnoremap <LocalLeader>p "_dp
 
 " inoremap <right> <Esc>li
-" noremap <leader>k :nohlsearch<CR>
+" noremap <Leader>k :nohlsearch<CR>
 " noremap <Space> :
-" noremap <leader>gs :UserSandbox<CR>
+" noremap <Leader>gs :UserSandbox<CR>
 
 " nnoremap ¥ :registers<CR>
 " nnoremap É :registers<CR>
