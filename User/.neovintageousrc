@@ -40,7 +40,7 @@ nnoremap <leader>wl :CarryFileToPane direction=right<CR>
 nnoremap <leader>zc :FoldAllCssClasses<CR>
 
 " Quirks.
-nnoremap <space> :
+nnoremap <Space> :
 nnoremap J mzJ`z
 nnoremap N Nzz
 nnoremap Q gq
@@ -125,10 +125,10 @@ nnoremap <C-w>z :ToggleZoomPane fraction=0.98<CR>
 " Sublime Text packages, e.g., reproducing issues, feature testing, etc.
 "------------------------------------------------------------------------
 
-" nnoremap <localleader><space> :UserFormatLink<CR>
+" nnoremap <LocalLeader><space> :UserFormatLink<CR>
 " noremap [[ ?^c<CR>
 " nnoremap <leader>; <Esc>A;<Esc>2<C-o>
-" xnoremap <localleader>p "_dp
+" xnoremap <LocalLeader>p "_dp
 
 " inoremap <right> <Esc>li
 " noremap <leader>k :nohlsearch<CR>
