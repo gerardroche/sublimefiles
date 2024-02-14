@@ -343,7 +343,10 @@
         "NeoVintageousInsertModeKeymaps",
         "Sandbox",
         "ShowAsciiValue",
+        "SublimeLinter",
         "SublimeLinter-eslint",
+        "SublimeLinter-flake8",
+        "SublimeLinter-mypy",
         "SublimeLinter-php",
         "SublimeLinter-php-cs-fixer",
         "TailwindCSSCompletions",
@@ -439,6 +442,7 @@
     "vintageous_search_occ_style": "outline",
     "vintageous_sneak_use_ic_scs": 1,
     "vintageous_terminal": "kitty",
+
     // "vintageous_auto_nohlsearch_on_normal_enter": false,
     // "vintageous_auto_switch_input_method": true,
     // "vintageous_auto_switch_input_method_default": "1",
@@ -446,8 +450,9 @@
     // "vintageous_auto_switch_input_method_set_cmd": "im-set {im}",
     // "vintageous_default_mode": "visual",
     // "vintageous_highlighted_yank_style": "outline",
+    // "vintageous_multi_cursor_exit_from_visual_mode": false,
+    // "vintageous_multi_cursor_exit_from_visual_mode": true,
     // "vintageous_search_inc_style": "underline",
 
-    "draw_indent_guides": false,
     "index_files": true,
 }
