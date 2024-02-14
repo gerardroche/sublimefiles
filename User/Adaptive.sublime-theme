@@ -1,75 +1,34 @@
 {
-    "variables":
-    {
-
+    "variables": {
         "bg0": "#272822",
-        "bg1": "#3e3d32",
-        "bg2": "#43443b",
-
-        "fg0": "#f8f8f2",
-        "fg1": "#cfcfc2",
-        "fg2": "#75715e",
-
-        "yellow": "#e6db74",
-        "orange": "#fd971f",
-        "red": "#f92672",
-        "violet": "#ae81ff", // purple
-        "blue": "#66d9ef",
-        "cyan": "#a1efe4",
-        "green": "#a6e22e",
-        "magenta": "#fd5ff0", // pink
-
-
     },
-
     "rules": [
-
-        // Fix top margin off-by-one with top of view on hover alignment.
-        // Fix sidebar alignment.
+        // Sidebar alignment
+        // Top margin off-by-one with top of view on hover
         {
             "class": "sidebar_container",
             "content_margin": [-11, 1, 0, 0]
         },
-
-        // // Fix sidebar alignment.
-        // {
-        //     "class": "sidebar_tree",
-        //     "indent_offset": 0
-        // },
-
-        // Fix tab alignment.
+        // Tab alignment
         {
             "class": "tabset_control",
             "content_margin": [-5, 0, 0, 0]
         },
-
-        // Fix tab spacing.
+        // Tab spacing
         {
             "class": "tab_control",
             "content_margin": [14, 4, 9, 4]
         },
-
-        // Fix tabset alignment.
+        // Tabset alignment
         {
             "class": "tabset_control",
             "connector_height": 1
         },
-
+        // Sidebar row bg
         {
             "class": "tree_row",
             "attributes": ["highlighted"],
             "layer0.tint": "var(bg0)",
-        },
-
-        // {
-        //     "class": "sheet_contents",
-        //     "settings": {
-        //         "inactive_sheet_dimming": true,
-        //         "file_tab_style": ["", "rounded", "square"],
-        //     },
-        //     "attributes": ["file_medium_dark", "!highlighted"],
-        //     "background_modifier": "blend(#000000 80%)"
-        // },
-
+        }
     ]
 }
