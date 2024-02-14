@@ -8,38 +8,23 @@ let mapleader=,
 let maplocalleader=<bslash>
 
 nnoremap <Leader><Leader> :Neovintageous action=reveal_side_bar<CR>
-nnoremap <Leader>ca :SideBarCopyAbsolutePath<CR>
-nnoremap <Leader>cn :SideBarCopyName<CR>
-nnoremap <Leader>cr :SideBarCopyRelativePath<CR>
 nnoremap <Leader>d :Neovintageous action=toggle_side_bar<CR>
 nnoremap <Leader>ek :OpenKeyBindings<CR>
 nnoremap <Leader>en :Neovintageous action=open_rc_file<CR>
 nnoremap <Leader>ep :OpenPreferences<CR>
 nnoremap <Leader>ga :silent !git add %<CR>
-nnoremap <Leader>gd :ToggleInlineDiff<CR>
 nnoremap <Leader>gr :silent !git reset<CR>
-nnoremap <Leader>gu :GenerateUnitTest<CR>
-nnoremap <Leader>hm :RevertModification<CR>
 nnoremap <Leader>hp :PasteFromHistory<CR>
 nnoremap <Leader>hu :RevertHunk<CR>
 nnoremap <Leader>li :LspCodeActions<CR>
 nnoremap <Leader>oa :Gitk all=true<CR>
-nnoremap <Leader>oc :GitOpen commit=true<CR>
-nnoremap <Leader>od :ShowPanel panel=output.diagnostics<CR>
-nnoremap <Leader>oi :GitOpen issue=true<CR>
 nnoremap <Leader>ok :Gitk max-count=200 all=true date-order=true<CR>
 nnoremap <Leader>oo :GitOpen<CR>
-nnoremap <Leader>os :ShowPanel panel=output.SublimeLinter<CR>
 nnoremap <Leader>q gqip:w<CR>
 nnoremap <Leader>r :reg<CR>
-nnoremap <Leader>sp :ShowOverlay overlay=command_palette<CR>
-nnoremap <Leader>wh :CarryFileToPane direction=left<CR>
-nnoremap <Leader>wj :CarryFileToPane direction=down<CR>
-nnoremap <Leader>wk :CarryFileToPane direction=up<CR>
-nnoremap <Leader>wl :CarryFileToPane direction=right<CR>
 nnoremap <Leader>zc :FoldAllCssClasses<CR>
 
-" Quirks.
+" Quirks
 nnoremap <Space> :
 nnoremap J mzJ`z
 nnoremap N Nzz
@@ -51,56 +36,36 @@ noremap <C-l> :nohlsearch<CR>
 noremap <C-s> :w<CR>
 noremap <C-u> <C-u>zz
 
-" Yank and paste using system clipboard.
+" Yank and paste using system clipboard
 noremap <Leader>y "+y
 noremap <Leader>Y "+Y
 noremap <Leader>p "+p
 noremap <Leader>P "+P
 
-" Sorting.
+" Sort
 nnoremap <Leader>si vii:sort u<CR>
 nnoremap <Leader>ss vip:sort u<CR>
 nnoremap <Leader>st vithow:sort u<CR>
 vnoremap <Leader>s :sort u<CR>
 
-" Telescope.
-noremap <Leader>ff :ShowOverlay overlay=goto show_files=true<CR>
-noremap <Leader>fp :UserFindInFiles where=project<CR>
-noremap <Leader>fg :UserFindInFiles where=default<CR>
-noremap <Leader>fa :UserFindInFiles<CR>
-
-" Goto symbol.
+" Goto
 noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
+noremap <Leader>fa :UserFindInFiles<CR>
+noremap <Leader>ff :ShowOverlay overlay=goto show_files=true<CR>
+noremap <Leader>fg :UserFindInFiles where=default<CR>
+noremap <Leader>fp :UserFindInFiles where=project<CR>
 noremap gS :GotoSymbolInProject<CR>
 noremap gs :ShowOverlay overlay=goto text=@<CR>
 
-" LSP.
-nnoremap [d :LspPrevDiagnostic<CR>
-nnoremap ]d :LspNextDiagnostic<CR>
-noremap <Leader>K :LspHover only_diagnostics=true<CR>
-noremap FileType css,go,html,js,php,vue <C-w>gd :LspSymbolDefinitionSplit<CR>
-noremap FileType css,go,html,js,php,vue <Leader>cs :LspSymbolRename<CR>
-noremap FileType css,go,html,js,php,vue gA :LspSymbolReferences<CR>
-noremap FileType css,go,html,js,php,vue gD :LspSymbolTypeDefinition<CR>
-noremap FileType css,go,html,js,php,vue ga :LspCodeActions<CR>
-noremap FileType css,go,html,js,php,vue gd :LspSymbolDefinition<CR>
-noremap FileType css,go,html,js,php,vue K :LspHover<CR>
-
-" Linter.
-" nnoremap <Leader>K :SublimeLinterLineReport<CR>
-nnoremap [l [l:SublimeLinterLineReport<CR>
-nnoremap ]l ]l:SublimeLinterLineReport<CR>
-
-" Dumper Truck.
+" Dump
 nnoremap <Leader>vd :UserDumpVariable phpfunc=dump<CR>
 nnoremap <Leader>vm :UserDumpVariable phpfunc=dump name=method<CR>
 nnoremap <Leader>vp :UserDumpVariable phpfunc=print_r<CR>
 nnoremap <Leader>vr :UserDumpVariable sublime_region_view_string=true<CR>
 nnoremap <Leader>vv :UserDumpVariable phpfunc=dd<CR>
 
-" Testing.
-" https://github.com/gerardroche/sublime-test
+" See https://github.com/gerardroche/sublime-test
 nnoremap <D-n> :TestNearest<CR>
 nnoremap <D-o> :TestFile<CR>
 nnoremap <D-w> :TestFile<CR>
@@ -111,13 +76,28 @@ nnoremap <Leader>tn :TestNearest<CR>
 nnoremap <Leader>ts :TestSwitch<CR>
 nnoremap <Leader>tv :TestVisit<CR>
 
-" Origami.
-" https://packagecontrol.io/packages/Origami
+" See https://packagecontrol.io/packages/Origami
 nnoremap <C-w><C-h> :CarryFileToPane direction=left<CR>
 nnoremap <C-w><C-j> :CarryFileToPane direction=down<CR>
 nnoremap <C-w><C-k> :CarryFileToPane direction=up<CR>
 nnoremap <C-w><C-l> :CarryFileToPane direction=right<CR>
 nnoremap <C-w>z :ToggleZoomPane fraction=0.98<CR>
+
+" See https://github.com/sublimelsp/LSP
+nnoremap [d :LspPrevDiagnostic<CR>
+nnoremap ]d :LspNextDiagnostic<CR>
+noremap <Leader>K :LspHover only_diagnostics=true<CR>
+noremap FileType css,go,html,js,php,vue <C-w>gd :LspSymbolDefinitionSplit<CR>
+noremap FileType css,go,html,js,php,vue <Leader>cs :LspSymbolRename<CR>
+noremap FileType css,go,html,js,php,vue gA :LspSymbolReferences<CR>
+noremap FileType css,go,html,js,php,vue gD :LspSymbolTypeDefinition<CR>
+noremap FileType css,go,html,js,php,vue ga :LspCodeActions<CR>
+noremap FileType css,go,html,js,php,vue gd :LspSymbolDefinition<CR>
+
+" See https://github.com/SublimeLinter/SublimeLinter
+" nnoremap <Leader>K :SublimeLinterLineReport<CR>
+nnoremap [l [l:SublimeLinterLineReport<CR>
+nnoremap ]l ]l:SublimeLinterLineReport<CR>
 
 " -----------------------------------------------------------------------
 " NeoVintageous developement stuff
