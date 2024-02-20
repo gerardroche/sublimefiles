@@ -16,7 +16,7 @@
         "error": "",
         "warning": "",
         "info": "stippled",
-        "hint": "stippled"
+        "hint": "stippled",
     },
 
     // "lsp_code_actions_on_save": {

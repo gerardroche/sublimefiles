@@ -20,8 +20,12 @@
     {
         "keys": [",", "d"],
         "command": "neovintageous",
-        "args": {"action": "toggle_side_bar"},
-        "context": [{"key": "control", "operand": "sidebar_tree"}]
+        "args": {
+            "action": "toggle_side_bar"
+        },
+        "context": [
+            {"key": "control", "operand": "sidebar_tree"}
+        ]
     },
     {
         "keys": [",", ","],
