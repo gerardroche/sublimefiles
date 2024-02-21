@@ -4,6 +4,7 @@
 	"bootstrapped": true,
 	"debug": false,
 	"ignore_vcs_packages": true,
+	"install_missing": false,
 	"in_process_packages":
 	[
 	],
