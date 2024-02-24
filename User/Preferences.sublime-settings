@@ -455,4 +455,5 @@
     // "vintageous_search_inc_style": "underline",
 
     "index_files": true,
+    "draw_indent_guides": false,
 }
