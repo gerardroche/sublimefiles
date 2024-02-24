@@ -11,7 +11,7 @@ check_updates() {
         git branch -a
         git fetch upstream 2>/dev/null && git merge --ff-only "upstream/$(git branch --show-current)" || true
 
-        sleep 3
+        sleep 1
     )
 }
 
