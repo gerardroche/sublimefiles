@@ -4,6 +4,7 @@
     },
     "globals": {
         "selection_corner_style": "square",
+        "line_highlight": "color(var(blue) alpha(0.3))",
     },
     "rules": [
 
