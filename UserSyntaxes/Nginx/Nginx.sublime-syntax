@@ -52,6 +52,17 @@ contexts:
       captures:
         1: punctuation.definition.comment.begin
 
+    - match: '(server_name) (.*)'
+      captures:
+        1: keyword
+        2: constant
+
+    - match: '(add_header) ([^ ]+) (.*)'
+      captures:
+        1: keyword
+        2: constant
+        3: string
+
     - match: '\$[a-zA-Z0-9_]+'
       scope: variable.parameter
 
