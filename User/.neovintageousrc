@@ -13,10 +13,8 @@ nnoremap <Leader>ek :OpenKeyBindings<CR>
 nnoremap <Leader>en :Neovintageous action=open_rc_file<CR>
 nnoremap <Leader>ep :OpenPreferences<CR>
 nnoremap <Leader>ga :silent !git add %<CR>
-nnoremap <Leader>gr :silent !git reset<CR>
 nnoremap <Leader>hp :PasteFromHistory<CR>
 nnoremap <Leader>hu :RevertHunk<CR>
-nnoremap <Leader>li :LspCodeActions<CR>
 nnoremap <Leader>oa :Gitk all=true<CR>
 nnoremap <Leader>ok :Gitk max-count=200 all=true date-order=true<CR>
 nnoremap <Leader>oo :GitOpen<CR>
