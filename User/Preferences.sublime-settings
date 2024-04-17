@@ -54,7 +54,7 @@
     "auto_complete_use_history": true,
     "auto_complete_with_fields": true,
 
-    "color_scheme": "MonokaiFreeYaruDark.sublime-color-scheme",
+    "color_scheme": "MonokaiFree.sublime-color-scheme",
     "monokaifree.vcs_status_badges": false,
     "theme": "Adaptive.sublime-theme",
 
@@ -191,7 +191,6 @@
         ".Trash",
         ".Trash-*",
         ".git",
-        ".github",
         ".phan",
         ".phive",
         ".psalm",
@@ -326,10 +325,6 @@
             "depth": 1,
             "path": "~/.config/sublime-text/Packages",
         },
-        {
-            "depth": 1,
-            "path": "~/sesamelinks",
-        }
     ],
 
     // Plugin - ColorSchemeUnit
