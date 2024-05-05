@@ -22,6 +22,7 @@
         //     "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.php punctuation.definition.annotation.end.php",
         //     "font_style": "",
         // },
+
         {
             "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.arguments.php meta.group.php punctuation.section.group.begin.php",
             "foreground": "color(var(fg0) alpha(0.7))",
