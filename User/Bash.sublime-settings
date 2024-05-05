@@ -8,8 +8,6 @@
 		".env.prod",
 		".env.prod.dist",
 		".env.testing",
-		".env.testing.dist",
-		".env.travis",
-		".env.travis.dist"
+		".env.testing.dist"
 	]
 }
