@@ -82,15 +82,22 @@ nnoremap <C-w><C-l> :CarryFileToPane direction=right<CR>
 nnoremap <C-w>z :ToggleZoomPane fraction=0.98<CR>
 
 " See https://github.com/sublimelsp/LSP
+nnoremap <Leader>K :LspHover<CR>
+nnoremap FileType css,go,html,js,php,vue <C-w>gd :LspSymbolDefinitionSplit<CR>
+nnoremap FileType css,go,html,js,php,vue <Leader>cs :LspSymbolRename<CR>
+nnoremap FileType css,go,html,js,php,vue gA :LspSymbolReferences<CR>
+nnoremap FileType css,go,html,js,php,vue gD :LspSymbolTypeDefinition<CR>
+nnoremap FileType css,go,html,js,php,vue ga :LspCodeActions<CR>
+nnoremap FileType css,go,html,js,php,vue gd :LspSymbolDefinition<CR>
+nnoremap FileType css,go,html,js,php,vue gr :LspSymbolReferences<CR>
 nnoremap [d :LspPrevDiagnostic<CR>
 nnoremap ]d :LspNextDiagnostic<CR>
-noremap <Leader>K :LspHover only_diagnostics=true<CR>
-noremap FileType css,go,html,js,php,vue <C-w>gd :LspSymbolDefinitionSplit<CR>
-noremap FileType css,go,html,js,php,vue <Leader>cs :LspSymbolRename<CR>
-noremap FileType css,go,html,js,php,vue gA :LspSymbolReferences<CR>
-noremap FileType css,go,html,js,php,vue gD :LspSymbolTypeDefinition<CR>
-noremap FileType css,go,html,js,php,vue ga :LspCodeActions<CR>
-noremap FileType css,go,html,js,php,vue gd :LspSymbolDefinition<CR>
+
+" WIP
+" inoremap <C-s> :LspNextDiagnostic<CR>
+" nnoremap FileType css,go,html,js,php,vue crn :LspSymbolRename<CR>
+" nnoremap FileType css,go,html,js,php,vue crr :LspCodeActions<CR>
+" vnoremap FileType css,go,html,js,php,vue <C-r> :LspCodeActions<CR>
 
 " See https://github.com/SublimeLinter/SublimeLinter
 " nnoremap <Leader>K :SublimeLinterLineReport<CR>
