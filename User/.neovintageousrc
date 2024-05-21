@@ -4,11 +4,11 @@ set ignorecase
 set nominimap
 set smartcase
 
-let mapleader=,
+let mapleader=<space>
 let maplocalleader=<bslash>
 
 nnoremap <Leader><Leader> :Neovintageous action=reveal_side_bar<CR>
-nnoremap <Leader>d :Neovintageous action=toggle_side_bar<CR>
+nnoremap <Leader>E :Neovintageous action=toggle_side_bar<CR>
 nnoremap <Leader>ek :OpenKeyBindings<CR>
 nnoremap <Leader>en :Neovintageous action=open_rc_file<CR>
 nnoremap <Leader>ep :OpenPreferences<CR>
@@ -23,8 +23,9 @@ nnoremap <Leader>r :reg<CR>
 nnoremap <Leader>zc :FoldAllCssClasses<CR>
 
 " Quirks
-nnoremap <Space> :
+nnoremap H :bprevious<CR>
 nnoremap J mzJ`z
+nnoremap L :bnext<CR>
 nnoremap N Nzz
 nnoremap Q gq
 nnoremap n nzz

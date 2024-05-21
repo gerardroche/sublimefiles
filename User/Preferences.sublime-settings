@@ -1,5 +1,6 @@
 {
 
+    "adaptive_dividers": true,
     "animation_enabled": false,
     "block_caret": false,
     "caret_extra_bottom": 0,
@@ -11,7 +12,7 @@
     "fade_fold_buttons": false,
     "file_tab_style": "square",
     "fold_buttons": false,
-    "font_size": 8,
+    "font_size": 10,
     "gutter": true,
     "hide_new_tab_button": true,
     "hide_tab_scrolling_buttons": true,
@@ -19,7 +20,7 @@
     "highlight_line": false,
     "highlight_modified_tabs": true,
     "inactive_sheet_dimming": false,
-    "line_numbers": true,
+    "line_numbers": false,
     "line_padding_bottom": 0,
     "line_padding_top": 0,
     "margin": 0,
@@ -57,15 +58,15 @@
     "auto_complete_use_history": true,
     "auto_complete_with_fields": true,
 
-    "color_scheme": "MonokaiFreeGruvboxDark.sublime-color-scheme",
+    "color_scheme": "Packages/User/tokyonight_night.tmTheme",
     "monokaifree.no_vcs_status_badge": true,
     // "xmonokaifree.vcs_status_badges": false,
-    "theme": "Zed.sublime-theme",
+    "theme": "Adaptive.sublime-theme",
 
-    "font_face": "Cascadia Code",
+    "font_face": "CaskaydiaMono Nerd Font",
     "font_options": [
         "dlig",
-        "no_italic",
+        // "no_italic",
         "ss01", "ss02", "ss03", "ss04", "ss05",
         "ss06", "ss07", "ss08", "ss09", "ss10",
         "ss11", "ss12", "ss13", "ss14", "ss15",
@@ -75,6 +76,8 @@
     [
         "Cascadia Code",
         "Cascadia Mono",
+        "CaskaydiaMono Nerd Font Mono",
+        "CaskaydiaMono Nerd Font",
         "Fira Code",
         "Hack",
         "Hasklig",

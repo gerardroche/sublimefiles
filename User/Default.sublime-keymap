@@ -18,7 +18,7 @@
     // NeoVintageous
 
     {
-        "keys": [",", "d"],
+        "keys": [" ", "E"],
         "command": "neovintageous",
         "args": {
             "action": "toggle_side_bar"
@@ -28,7 +28,7 @@
         ]
     },
     {
-        "keys": [",", ","],
+        "keys": [" ", ","],
         "command": "focus_group",
         "args": {"group": 0},
         "context": [{"key": "control", "operand": "sidebar_tree"}]
