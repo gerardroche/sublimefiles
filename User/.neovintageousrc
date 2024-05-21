@@ -110,6 +110,15 @@ nnoremap ]l ]l:SublimeLinterLineReport<CR>
 " Sublime Text packages, e.g., reproducing issues, feature testing, etc.
 "------------------------------------------------------------------------
 
+" " AceJump: https://packagecontrol.io/packages/AceJump.
+" nnoremap <leader><leader>a :AceJumpAfter<CR>
+" nnoremap <leader><leader>c :AceJumpChar<CR>
+" nnoremap <leader><leader>d :AceJumpAddCursor<CR>
+" nnoremap <leader><leader>i :AceJumpWithinLine<CR>
+" nnoremap <leader><leader>l :AceJumpLine<CR>
+" nnoremap <leader><leader>s :AceJumpSelect<CR>
+" nnoremap <leader><leader>w :AceJumpWord<CR>
+
 " nnoremap <LocalLeader><space> :UserFormatLink<CR>
 " noremap [[ ?^c<CR>
 " nnoremap <Leader>; <Esc>A;<Esc>2<C-o>
