@@ -57,10 +57,10 @@
     "auto_complete_use_history": true,
     "auto_complete_with_fields": true,
 
-    "color_scheme": "MonokaiFree.sublime-color-scheme",
+    "color_scheme": "MonokaiFreeGruvboxDark.sublime-color-scheme",
     "monokaifree.no_vcs_status_badge": true,
     // "xmonokaifree.vcs_status_badges": false,
-    "theme": "Adaptive.sublime-theme",
+    "theme": "Zed.sublime-theme",
 
     "font_face": "Cascadia Code",
     "font_options": [
