@@ -1,13 +1,17 @@
+from sublime import decode_value
+from sublime import load_resource
 import sublime_plugin
 
-from User import sublime_ext
+
+def decode_resource(name: str):
+    return decode_value(load_resource(name))
 
 
 class UserAuditPreferences(sublime_plugin.WindowCommand):
 
     def run(self):
-        defaults = sublime_ext.decode_resource('Packages/Default/Preferences.sublime-settings')
-        user = sublime_ext.decode_resource('Packages/User/Preferences.sublime-settings')
+        defaults = decode_resource('Packages/Default/Preferences.sublime-settings')
+        user = decode_resource('Packages/User/Preferences.sublime-settings')
 
         for name, value in defaults.items():
             if user.get(name) == value:

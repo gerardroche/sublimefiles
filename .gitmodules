@@ -109,18 +109,12 @@
 [submodule "Toggler"]
 	path = Toggler
 	url = https://github.com/gerardroche/sublime-toggler.git
-[submodule "MarkdownPreview"]
-	path = MarkdownPreview
-	url = https://github.com/gerardroche/MarkdownPreview.git
 [submodule "Color Scheme - Dracula"]
 	path = Color Scheme - Dracula
 	url = https://github.com/facelessuser/sublime-dracula-scheme.git
 [submodule "Gitk"]
 	path = Gitk
 	url = https://github.com/gerardroche/sublime-gitk.git
-[submodule "NeoVintageousHardMode"]
-	path = NeoVintageousHardMode
-	url = git@github.com:gerardroche/NeoVintageousHardMode.git
 [submodule "LSP"]
 	path = LSP
 	url = https://github.com/gerardroche/LSP.git

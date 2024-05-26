@@ -15,9 +15,17 @@
 # You should have received a copy of the GNU General Public License
 # along with Limitless.  If not, see <https://www.gnu.org/licenses/>.
 
+from contextlib import contextmanager
+
+from sublime import load_settings
+from sublime import save_settings
 import sublime_plugin
 
-from User import sublime_ext
+
+@contextmanager
+def save_preferences():
+    yield load_settings('Preferences.sublime-settings')
+    save_settings('Preferences.sublime-settings')
 
 
 class LimitlessClear(sublime_plugin.WindowCommand):
@@ -99,7 +107,7 @@ def _equalise_count(count: int) -> list:
 
 
 def _clear(window) -> None:
-    with sublime_ext.save_preferences() as preferences:
+    with save_preferences() as preferences:
         _set_preference_on_clear(preferences, 'draw_indent_guides', False)
         _set_preference_on_clear(preferences, 'draw_white_space', ['selection'])
         _set_preference_on_clear(preferences, 'line_numbers', False)
@@ -116,7 +124,7 @@ def _clear(window) -> None:
 
 
 def _reset(window) -> None:
-    with sublime_ext.save_preferences() as preferences:
+    with save_preferences() as preferences:
         _set_preference_on_clear(preferences, 'line_numbers', True)
         _set_preference_on_clear(preferences, 'rulers', [[80, "stippled"], [120, "solid"]])
         _set_preference_on_reset(preferences, 'draw_indent_guides', True)
@@ -141,6 +149,6 @@ def _reset(window) -> None:
 def _focus(window) -> None:
     _clear(window)
 
-    with sublime_ext.save_preferences() as preferences:
+    with save_preferences() as preferences:
         _set_patterns_on_focus(preferences, 'file_exclude_patterns')
         _set_patterns_on_focus(preferences, 'folder_exclude_patterns')

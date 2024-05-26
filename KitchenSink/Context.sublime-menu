@@ -1,6 +1,6 @@
 [
     {
-        "caption": "Refresh Folders [U]",
+        "caption": "Refresh Folders [KU]",
         "command": "refresh_folder_list"
     }
 ]

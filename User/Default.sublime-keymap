@@ -55,6 +55,6 @@
 
     // Package Development
     // { "keys": ["ctrl+r"], "command": "user_sandbox", },
-    { "keys": ["super+r"], "command": "package_reloader_reload" },
+    // { "keys": ["super+r"], "command": "package_reloader_reload" },
 
 ]

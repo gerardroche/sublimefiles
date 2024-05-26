@@ -2,7 +2,7 @@ import sublime
 import sublime_plugin
 
 
-class FontInputHandler(sublime_plugin.ListInputHandler):
+class FontFaceInputHandler(sublime_plugin.ListInputHandler):
 
     def __init__(self):
         super().__init__()
@@ -16,7 +16,7 @@ class FontInputHandler(sublime_plugin.ListInputHandler):
         self.prefs.set('font_face', self.original)
         sublime.save_settings('Preferences.sublime-settings')
 
-    def confirm(self):
+    def confirm(self, font_face):
         sublime.save_settings('Preferences.sublime-settings')
 
     def preview(self, font_face):
@@ -54,13 +54,13 @@ class FontInputHandler(sublime_plugin.ListInputHandler):
         return (items, selected)
 
 
-class SelectFontCommand(sublime_plugin.WindowCommand):
+class UserSelectFontCommand(sublime_plugin.WindowCommand):
 
     def input_description(self):
         return "Font:"
 
     def input(self, args):
-        return FontInputHandler()
+        return FontFaceInputHandler()
 
     def run(self, font_face):
         settings = sublime.load_settings('Preferences.sublime-settings')

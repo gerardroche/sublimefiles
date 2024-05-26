@@ -12,8 +12,9 @@
     "fade_fold_buttons": false,
     "file_tab_style": "square",
     "fold_buttons": false,
-    "font_size": 10,
+    "font_size": 14,
     "gutter": true,
+    "hardware_acceleration": "opengl",
     "hide_new_tab_button": true,
     "hide_tab_scrolling_buttons": true,
     "highlight_gutter": false,
@@ -30,20 +31,20 @@
     "ruler_style": "stippled",
     "save_on_focus_lost": true,
     "scroll_context_lines": 8,
-    "show_build": false,
+    "show_build": true,
     "show_definitions": false,
     "show_errors_inline": false,
     "show_file": true,
     "show_file_name": true,
     "show_git_status_in_status_bar": false,
-    "show_indentation": false,
+    "show_indentation": true,
     "show_legacy_color_schemes": false,
     "show_line_column": "compact",
     "show_point": false,
     "show_rel_path": false,
     "show_sidebar_button": true,
     "show_spell": false,
-    "show_syntax": false,
+    "show_syntax": true,
     "show_tab_close_buttons": false,
     "show_word_count": false,
     "spell_check": false,
@@ -58,33 +59,30 @@
     "auto_complete_use_history": true,
     "auto_complete_with_fields": true,
 
-    "color_scheme": "Packages/User/tokyonight_night.tmTheme",
+    "color_scheme": "MonokaiFreeGruvboxDark.sublime-color-scheme",
     "monokaifree.no_vcs_status_badge": true,
-    // "xmonokaifree.vcs_status_badges": false,
-    "theme": "Adaptive.sublime-theme",
+    "theme": "Zed.sublime-theme",
 
-    "font_face": "CaskaydiaMono Nerd Font",
+    "font_face": "CaskaydiaCove Nerd Font",
     "font_options": [
         "dlig",
-        // "no_italic",
         "ss01", "ss02", "ss03", "ss04", "ss05",
         "ss06", "ss07", "ss08", "ss09", "ss10",
         "ss11", "ss12", "ss13", "ss14", "ss15",
         "ss16", "ss17", "ss18", "ss19", "ss20",
     ],
-    "fonts":
-    [
-        "Cascadia Code",
-        "Cascadia Mono",
-        "CaskaydiaMono Nerd Font Mono",
+
+    "fonts": [
+        "CaskaydiaCove Nerd Font",
         "CaskaydiaMono Nerd Font",
-        "Fira Code",
-        "Hack",
-        "Hasklig",
-        "Inconsolata",
-        "Jetbrains Mono",
-        "Monoid",
-        "Source Code Pro"
+        "FiraCode Nerd Font",
+        "FiraMono Nerd Font",
+        "Hack Nerd Font",
+        "Hasklug Nerd Font",
+        "JetbrainsMono Nerd Font",
+        "MesloLGSDZ Nerd Font",
+        "Monoid Nerd Font",
+        "ZedMono Nerd Font",
     ],
 
     "rulers":
@@ -99,6 +97,8 @@
     "draw_white_space_on_reset": ["leading_mixed", "selection", "trailing", "isolated"],
     "draw_white_space_toggle_off": ["leading_mixed", "selection", "trailing", "isolated"],
     "draw_white_space_toggle_on": ["selection"],
+
+    "draw_indent_guides": false,
 
     "indent_guide_options":
     [
@@ -279,10 +279,13 @@
 
     "ignored_packages":
     [
-        "NeoVintageousHardMode",
+        "LSP",
+        "LSP-eslint",
+        "LSP-pylsp",
+        "LSP-tailwindcss",
+        "LSP-volar",
         "NeoVintageousHighlightLine",
         "NeoVintageousInsertModeKeymaps",
-        "Sandbox",
         "ShowAsciiValue",
         "SublimeLinter",
         "SublimeLinter-eslint",
@@ -392,5 +395,4 @@
     // "vintageous_search_inc_style": "underline",
 
     "index_files": true,
-    "draw_indent_guides": false,
 }
