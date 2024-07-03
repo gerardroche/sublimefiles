@@ -63,7 +63,7 @@
     "monokaifree.no_vcs_status_badge": true,
     "theme": "Zed.sublime-theme",
 
-    "font_face": "CaskaydiaCove Nerd Font",
+    "font_face": "CaskaydiaCove Nerd Font Mono",
     "font_options": [
         "dlig",
         "ss01", "ss02", "ss03", "ss04", "ss05",
@@ -72,17 +72,19 @@
         "ss16", "ss17", "ss18", "ss19", "ss20",
     ],
 
-    "fonts": [
+    "font_faces": [
         "CaskaydiaCove Nerd Font",
+        "CaskaydiaCove Nerd Font Mono",
         "CaskaydiaMono Nerd Font",
+        "CaskaydiaMono Nerd Font Mono",
         "FiraCode Nerd Font",
+        "FiraCode Nerd Font Mono",
         "FiraMono Nerd Font",
-        "Hack Nerd Font",
+        "FiraMono Nerd Font Mono",
         "Hasklug Nerd Font",
+        "Hasklug Nerd Font Mono",
         "JetbrainsMono Nerd Font",
-        "MesloLGSDZ Nerd Font",
-        "Monoid Nerd Font",
-        "ZedMono Nerd Font",
+        "JetbrainsMono Nerd Font Mono",
     ],
 
     "rulers":

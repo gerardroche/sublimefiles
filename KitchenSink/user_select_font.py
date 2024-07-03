@@ -37,13 +37,13 @@ class FontFaceInputHandler(sublime_plugin.ListInputHandler):
         sublime.set_timeout(update, 250)
 
     def list_items(self):
-        fonts = self.prefs.get('fonts')
-        fonts = set(fonts) if isinstance(fonts, list) else set()
-        fonts.add(self.prefs.get("font_face"))
+        font_faces = self.prefs.get('font_faces')
+        font_faces = set(font_faces) if isinstance(font_faces, list) else set()
+        font_faces.add(self.prefs.get("font_face"))
 
         items = []
         selected = -1
-        for font in sorted(fonts):
+        for font in sorted(font_faces):
             kind_info = sublime.KIND_AMBIGUOUS
             if self.original and self.original == font:
                 kind_info = (sublime.KIND_ID_COLOR_GREENISH, "✓", "Current")
