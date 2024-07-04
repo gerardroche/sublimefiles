@@ -73,18 +73,18 @@
     ],
 
     "font_faces": [
-        "CaskaydiaCove Nerd Font",
         "CaskaydiaCove Nerd Font Mono",
-        "CaskaydiaMono Nerd Font",
+        "CaskaydiaCove Nerd Font",
         "CaskaydiaMono Nerd Font Mono",
-        "FiraCode Nerd Font",
+        "CaskaydiaMono Nerd Font",
         "FiraCode Nerd Font Mono",
-        "FiraMono Nerd Font",
+        "FiraCode Nerd Font",
         "FiraMono Nerd Font Mono",
-        "Hasklug Nerd Font",
+        "FiraMono Nerd Font",
         "Hasklug Nerd Font Mono",
-        "JetbrainsMono Nerd Font",
+        "Hasklug Nerd Font",
         "JetbrainsMono Nerd Font Mono",
+        "JetbrainsMono Nerd Font",
     ],
 
     "rulers":

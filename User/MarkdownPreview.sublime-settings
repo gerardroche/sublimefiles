@@ -1,7 +1,7 @@
 {
-    "path_tempfile": "~/sublime_text_md_preview",
     "enable_autoreload": true,
     "enable_highlight": true,
     "enabled_parsers": ["markdown"],
+    "path_tempfile": "~/tmp/sublime_text",
     "python_markdown_tab_length": 3
 }
