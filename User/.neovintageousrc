@@ -4,8 +4,8 @@ set ignorecase
 set nominimap
 set smartcase
 
-let mapleader=<space>
-let maplocalleader=<bslash>
+let mapleader=","
+let maplocalleader="<Bslash>"
 
 nnoremap <Leader><Leader> :Neovintageous action=reveal_side_bar<CR>
 nnoremap <Leader>E :Neovintageous action=toggle_side_bar<CR>
