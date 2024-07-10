@@ -61,7 +61,7 @@
 
     "color_scheme": "MonokaiFreeGruvboxDark.sublime-color-scheme",
     "monokaifree.no_vcs_status_badge": true,
-    "theme": "Zed.sublime-theme",
+    "theme": "BladeRunner.sublime-theme",
 
     "font_face": "CaskaydiaCove Nerd Font Mono",
     "font_options": [
