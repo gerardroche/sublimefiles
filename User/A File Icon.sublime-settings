@@ -1,3 +1,6 @@
 {
-    "color": "color(var(--background) blend(white 60%))"
+    "color": "color(var(--background) blend(white 60%))",
+    "opacity": 0.9,
+    "opacity_on_hover": 1.0,
+    "opacity_on_select": 0.3,
 }
