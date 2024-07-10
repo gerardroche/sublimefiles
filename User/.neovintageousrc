@@ -1,53 +1,57 @@
-" A double quote character starts a comment.
-
 set ignorecase
-set nominimap
 set smartcase
 
 let mapleader=","
 let maplocalleader="<Bslash>"
-
+nnoremap <C-d> <C-d>zz
+nnoremap <C-l> :noh<CR>
+nnoremap <C-s> :w<CR>
+nnoremap <C-u> <C-u>zz
+nnoremap <C-w>z <C-w>\|<C-w>_
 nnoremap <Leader><Leader> :Neovintageous action=reveal_side_bar<CR>
-nnoremap <Leader>E :Neovintageous action=toggle_side_bar<CR>
+nnoremap <Leader>d :Neovintageous action=toggle_side_bar<CR>
 nnoremap <Leader>ek :OpenKeyBindings<CR>
 nnoremap <Leader>en :Neovintageous action=open_rc_file<CR>
 nnoremap <Leader>ep :OpenPreferences<CR>
-nnoremap <Leader>ga :silent !git add %<CR>
-nnoremap <Leader>hp :PasteFromHistory<CR>
-nnoremap <Leader>hu :RevertHunk<CR>
-nnoremap <Leader>oa :Gitk all=true<CR>
-nnoremap <Leader>ok :Gitk max-count=200 all=true date-order=true<CR>
-nnoremap <Leader>oo :GitOpen<CR>
-nnoremap <Leader>q gqip:w<CR>
-nnoremap <Leader>r :reg<CR>
-nnoremap <Leader>zc :FoldAllCssClasses<CR>
-
-" Quirks
-nnoremap H :bprevious<CR>
-nnoremap J mzJ`z
-nnoremap L :bnext<CR>
-nnoremap N Nzz
-nnoremap Q gq
-nnoremap n nzz
-nnoremap zc jzc
-noremap <C-d> <C-d>zz
-noremap <C-l> :nohlsearch<CR>
-noremap <C-s> :w<CR>
-noremap <C-u> <C-u>zz
-
-" Yank and paste using system clipboard
-noremap <Leader>y "+y
-noremap <Leader>Y "+Y
-noremap <Leader>p "+p
-noremap <Leader>P "+P
-
-" Sort
+nnoremap <Leader>r :Neovintageous action=reload_rc_file<CR>
 nnoremap <Leader>si vii:sort u<CR>
 nnoremap <Leader>ss vip:sort u<CR>
-nnoremap <Leader>st vithow:sort u<CR>
-vnoremap <Leader>s :sort u<CR>
+nnoremap <Space> :
+nnoremap J mzJ`z
+nnoremap N Nzz
+nnoremap Q :Nop<CR>
+nnoremap n nzz
+noremap <Leader>P "+P
+noremap <Leader>Y "+Y
+noremap <Leader>p "+p
+noremap <Leader>y "+y
+vnoremap <Leader>ss :sort u<CR>
 
-" Goto
+nnoremap <C-w><C-h> :CarryFileToPane direction=left<CR>
+nnoremap <C-w><C-j> :CarryFileToPane direction=down<CR>
+nnoremap <C-w><C-k> :CarryFileToPane direction=up<CR>
+nnoremap <C-w><C-l> :CarryFileToPane direction=right<CR>
+nnoremap <C-w>p :ToggleZoomPane fraction=0.98<CR>
+nnoremap <D-n> :TestNearest<CR>
+nnoremap <D-o> :TestFile<CR>
+nnoremap <D-w> :TestFile<CR>
+nnoremap <Leader>ga :silent !git add %<CR>
+nnoremap <Leader>hu :RevertHunk<CR>
+nnoremap <Leader>q gqip:w<CR>
+nnoremap <Leader>ta :TestSuite<CR>
+nnoremap <Leader>tf :TestFile<CR>
+nnoremap <Leader>tl :TestLast<CR>
+nnoremap <Leader>tn :TestNearest<CR>
+nnoremap <Leader>ts :TestSwitch<CR>
+nnoremap <Leader>tv :TestVisit<CR>
+nnoremap <Leader>vd :UserDumpVariable phpfunc=dump<CR>
+nnoremap <Leader>vm :UserDumpVariable phpfunc=dump name=method<CR>
+nnoremap <Leader>vp :UserDumpVariable phpfunc=print_r<CR>
+nnoremap <Leader>vr :UserDumpVariable sublime_region_view_string=true<CR>
+nnoremap <Leader>vv :UserDumpVariable phpfunc=dd<CR>
+nnoremap <Leader>zc :FoldAllCssClasses<CR>
+nnoremap H :bprevious<CR>
+nnoremap L :bnext<CR>
 noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
 noremap <Leader>fa :UserFindInFiles<CR>
@@ -57,32 +61,6 @@ noremap <Leader>fp :UserFindInFiles where=project<CR>
 noremap gS :GotoSymbolInProject<CR>
 noremap gs :ShowOverlay overlay=goto text=@<CR>
 
-" Dump
-nnoremap <Leader>vd :UserDumpVariable phpfunc=dump<CR>
-nnoremap <Leader>vm :UserDumpVariable phpfunc=dump name=method<CR>
-nnoremap <Leader>vp :UserDumpVariable phpfunc=print_r<CR>
-nnoremap <Leader>vr :UserDumpVariable sublime_region_view_string=true<CR>
-nnoremap <Leader>vv :UserDumpVariable phpfunc=dd<CR>
-
-" See https://github.com/gerardroche/sublime-test
-nnoremap <D-n> :TestNearest<CR>
-nnoremap <D-o> :TestFile<CR>
-nnoremap <D-w> :TestFile<CR>
-nnoremap <Leader>ta :TestSuite<CR>
-nnoremap <Leader>tf :TestFile<CR>
-nnoremap <Leader>tl :TestLast<CR>
-nnoremap <Leader>tn :TestNearest<CR>
-nnoremap <Leader>ts :TestSwitch<CR>
-nnoremap <Leader>tv :TestVisit<CR>
-
-" See https://packagecontrol.io/packages/Origami
-nnoremap <C-w><C-h> :CarryFileToPane direction=left<CR>
-nnoremap <C-w><C-j> :CarryFileToPane direction=down<CR>
-nnoremap <C-w><C-k> :CarryFileToPane direction=up<CR>
-nnoremap <C-w><C-l> :CarryFileToPane direction=right<CR>
-nnoremap <C-w>z :ToggleZoomPane fraction=0.98<CR>
-
-" See https://github.com/sublimelsp/LSP
 nnoremap <Leader>K :LspHover<CR>
 nnoremap FileType css,go,html,js,php,vue <C-w>gd :LspSymbolDefinitionSplit<CR>
 nnoremap FileType css,go,html,js,php,vue <Leader>cs :LspSymbolRename<CR>
@@ -93,54 +71,3 @@ nnoremap FileType css,go,html,js,php,vue gd :LspSymbolDefinition<CR>
 nnoremap FileType css,go,html,js,php,vue gr :LspSymbolReferences<CR>
 nnoremap [d :LspPrevDiagnostic<CR>
 nnoremap ]d :LspNextDiagnostic<CR>
-
-" WIP
-" inoremap <C-s> :LspNextDiagnostic<CR>
-" nnoremap FileType css,go,html,js,php,vue crn :LspSymbolRename<CR>
-" nnoremap FileType css,go,html,js,php,vue crr :LspCodeActions<CR>
-" vnoremap FileType css,go,html,js,php,vue <C-r> :LspCodeActions<CR>
-
-" See https://github.com/SublimeLinter/SublimeLinter
-" nnoremap <Leader>K :SublimeLinterLineReport<CR>
-nnoremap [l [l:SublimeLinterLineReport<CR>
-nnoremap ]l ]l:SublimeLinterLineReport<CR>
-
-" -----------------------------------------------------------------------
-" NeoVintageous developement stuff
-" The following mappings are temporary. I use these during development of
-" Sublime Text packages, e.g., reproducing issues, feature testing, etc.
-"------------------------------------------------------------------------
-
-" " AceJump: https://packagecontrol.io/packages/AceJump.
-" nnoremap <leader><leader>a :AceJumpAfter<CR>
-" nnoremap <leader><leader>c :AceJumpChar<CR>
-" nnoremap <leader><leader>d :AceJumpAddCursor<CR>
-" nnoremap <leader><leader>i :AceJumpWithinLine<CR>
-" nnoremap <leader><leader>l :AceJumpLine<CR>
-" nnoremap <leader><leader>s :AceJumpSelect<CR>
-" nnoremap <leader><leader>w :AceJumpWord<CR>
-
-" nnoremap <LocalLeader><space> :UserFormatLink<CR>
-" noremap [[ ?^c<CR>
-" nnoremap <Leader>; <Esc>A;<Esc>2<C-o>
-" xnoremap <LocalLeader>p "_dp
-
-" inoremap <right> <Esc>li
-" noremap <Leader>k :nohlsearch<CR>
-" noremap <Space> :
-" noremap <Leader>gs :UserSandbox<CR>
-
-" nnoremap ¥ :registers<CR>
-" nnoremap É :registers<CR>
-" nnoremap é :registers<CR>
-" nnoremap ø :registers<CR>
-" nnoremap Ċ :registers<CR>
-" nnoremap Œ :registers<CR>
-" nnoremap œ :registers<CR>
-" nnoremap → :registers<CR>
-
-" " https://neovim.io/doc/user/cmdline.html#%3Acomment
-" set ignorecase "
-" set modelines=5 " comment
-" set winaltkeys=menu
-" set winaltkeys=menu455
