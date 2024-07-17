@@ -1,4 +1,6 @@
 {
+    // *** Custom color scheme overrides. ***
+
     "variables": {
         "selection": "color(var(bg2) alpha(0.5))",
     },
