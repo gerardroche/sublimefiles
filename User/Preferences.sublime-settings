@@ -12,7 +12,7 @@
     "fade_fold_buttons": false,
     "file_tab_style": "square",
     "fold_buttons": false,
-    "font_size": 10,
+    "font_size": 13,
     "gutter": true,
     "hardware_acceleration": "opengl",
     "hide_new_tab_button": true,
