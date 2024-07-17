@@ -4,23 +4,27 @@ set smartcase
 let mapleader=","
 let maplocalleader="<Bslash>"
 nnoremap <C-d> <C-d>zz
-nnoremap <C-l> :noh<CR>
-nnoremap <C-s> :w<CR>
 nnoremap <C-u> <C-u>zz
 nnoremap <C-w>z <C-w>\|<C-w>_
 nnoremap <Leader><Leader> :Neovintageous action=reveal_side_bar<CR>
+nnoremap <Leader><Space> :ShowOverlay overlay=goto show_files=true<CR>
 nnoremap <Leader>d :Neovintageous action=toggle_side_bar<CR>
 nnoremap <Leader>ek :OpenKeyBindings<CR>
 nnoremap <Leader>en :Neovintageous action=open_rc_file<CR>
 nnoremap <Leader>ep :OpenPreferences<CR>
+nnoremap <Leader>ff :ShowOverlay overlay=goto show_files=true<CR>
+nnoremap <Leader>fg :ShowOverlay overlay=goto show_files=true<CR>
+nnoremap <Leader>qq :qa<CR>
 nnoremap <Leader>r :Neovintageous action=reload_rc_file<CR>
 nnoremap <Leader>si vii:sort u<CR>
 nnoremap <Leader>ss vip:sort u<CR>
+nnoremap <Leader>ur :noh<CR>
 nnoremap <Space> :
 nnoremap J mzJ`z
 nnoremap N Nzz
 nnoremap Q :Nop<CR>
 nnoremap n nzz
+noremap <C-s> :w<CR>
 noremap <Leader>P "+P
 noremap <Leader>Y "+Y
 noremap <Leader>p "+p
@@ -55,7 +59,6 @@ nnoremap L :bnext<CR>
 noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
 noremap <Leader>fa :UserFindInFiles<CR>
-noremap <Leader>ff :ShowOverlay overlay=goto show_files=true<CR>
 noremap <Leader>fg :UserFindInFiles where=default<CR>
 noremap <Leader>fp :UserFindInFiles where=project<CR>
 noremap gS :GotoSymbolInProject<CR>
