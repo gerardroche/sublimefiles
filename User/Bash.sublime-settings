@@ -17,5 +17,6 @@
 		".env.staging.dist",
 		".env.testing",
 		".env.testing.dist",
+		"packs",
 	],
 }

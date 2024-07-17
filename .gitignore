@@ -6,22 +6,22 @@
 
 *.sublime-project
 
-# Dependencies.
-/backrefs/
-/bracex/
-/coverage/
-/jsonschema/
-/lsp_utils/
-/markupsafe/
-/mdpopups/
-/pathlib/
-/pygments/
-/pymdownx/
-/python-jinja2/
-/python-markdown/
-/pyyaml/
-/sublime_lib/
-/wcmatch/
+# # Dependencies.
+# /backrefs/
+# /bracex/
+# /coverage/
+# /jsonschema/
+# /lsp_utils/
+# /markupsafe/
+# /mdpopups/
+# /pathlib/
+# /pygments/
+# /pymdownx/
+# /python-jinja2/
+# /python-markdown/
+# /pyyaml/
+# /sublime_lib/
+# /wcmatch/
 
 # Generated.
 /AutomaticPackageReloader33/
@@ -35,3 +35,44 @@
 /UserDesktop/
 /UserLaptop/
 /zzz A File Icon zzz/
+
+# Packs.
+/ApiCompletions/
+/AutomaticPackageReloader/
+/ColorSchemeUnit/
+/DocBlockr/
+/GenerateSyntaxTestAssertions/
+/GitOpen/
+/GitOpenModified/
+/Gitk/
+/GotoDefinitionSplit/
+/GotoPhpManual/
+/Khan/
+/LSP/
+/LaravelTestingCompletions/
+/MonokaiFree/
+/NeoVintageous/
+/NeoVintageousColemak/
+/NeoVintageousDvorak/
+/NeoVintageousFiles/
+/NeoVintageousHighlightLine/
+/NeoVintageousLineNumbers/
+/NeoVintageousToggle/
+/PHP Completions Kit/
+/PHP/PHP.sublime-completions
+/PHPGrammar/
+/PHPSnippets/
+/PHPUnitCompletions/
+/PHPUnitKit/
+/Pine/
+/Python-Auto-Complete/
+/Sensible/
+/Sesame/
+/ShowAsciiValue/
+/SublimeLinter-php-cs-fixer/
+/TailwindCssCompletions/
+/Test/
+/Tmux/
+/ToggleDebugMode/
+/Toggler/
+/UnitTesting/
