@@ -6,23 +6,6 @@
 
 *.sublime-project
 
-# # Dependencies.
-# /backrefs/
-# /bracex/
-# /coverage/
-# /jsonschema/
-# /lsp_utils/
-# /markupsafe/
-# /mdpopups/
-# /pathlib/
-# /pygments/
-# /pymdownx/
-# /python-jinja2/
-# /python-markdown/
-# /pyyaml/
-# /sublime_lib/
-# /wcmatch/
-
 # Generated.
 /AutomaticPackageReloader33/
 /PHP/PHP.sublime-completions
@@ -64,6 +47,7 @@
 /PHPSnippets/
 /PHPUnitCompletions/
 /PHPUnitKit/
+/Package Control/
 /Pine/
 /Python-Auto-Complete/
 /Sensible/

@@ -287,7 +287,6 @@
         "LSP-tailwindcss",
         "LSP-volar",
         "NeoVintageousHighlightLine",
-        "NeoVintageousInsertModeKeymaps",
         "ShowAsciiValue",
         "SublimeLinter",
         "SublimeLinter-eslint",
@@ -295,7 +294,7 @@
         "SublimeLinter-mypy",
         "SublimeLinter-php",
         "SublimeLinter-php-cs-fixer",
-        "TailwindCSSCompletions",
+        "TailwindCssCompletions",
         "Vintage",
     ],
 
