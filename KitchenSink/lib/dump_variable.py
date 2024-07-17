@@ -3,7 +3,7 @@ import re
 import sublime_plugin
 
 
-class UserDumpVariable(sublime_plugin.TextCommand):
+class KitchenSinkDumpVariable(sublime_plugin.TextCommand):
 
     def run(self, edit, **kwargs):
         insertion_point, dump_statement = self.get_dump_statement(**kwargs)

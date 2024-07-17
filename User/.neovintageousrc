@@ -48,19 +48,19 @@ nnoremap <Leader>tl :TestLast<CR>
 nnoremap <Leader>tn :TestNearest<CR>
 nnoremap <Leader>ts :TestSwitch<CR>
 nnoremap <Leader>tv :TestVisit<CR>
-nnoremap <Leader>vd :UserDumpVariable phpfunc=dump<CR>
-nnoremap <Leader>vm :UserDumpVariable phpfunc=dump name=method<CR>
-nnoremap <Leader>vp :UserDumpVariable phpfunc=print_r<CR>
-nnoremap <Leader>vr :UserDumpVariable sublime_region_view_string=true<CR>
-nnoremap <Leader>vv :UserDumpVariable phpfunc=dd<CR>
+nnoremap <Leader>vd :KitchenSinkDumpVariable phpfunc=dump<CR>
+nnoremap <Leader>vm :KitchenSinkDumpVariable phpfunc=dump name=method<CR>
+nnoremap <Leader>vp :KitchenSinkDumpVariable phpfunc=print_r<CR>
+nnoremap <Leader>vr :KitchenSinkDumpVariable sublime_region_view_string=true<CR>
+nnoremap <Leader>vv :KitchenSinkDumpVariable phpfunc=dd<CR>
 nnoremap <Leader>zc :FoldAllCssClasses<CR>
 nnoremap H :bprevious<CR>
 nnoremap L :bnext<CR>
 noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
-noremap <Leader>fa :UserFindInFiles<CR>
-noremap <Leader>fg :UserFindInFiles where=default<CR>
-noremap <Leader>fp :UserFindInFiles where=project<CR>
+noremap <Leader>fa :KitchenSinkFindInFiles<CR>
+noremap <Leader>fg :KitchenSinkFindInFiles where=default<CR>
+noremap <Leader>fp :KitchenSinkFindInFiles where=project<CR>
 noremap gS :GotoSymbolInProject<CR>
 noremap gs :ShowOverlay overlay=goto text=@<CR>
 

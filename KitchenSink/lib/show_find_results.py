@@ -1,7 +1,7 @@
 import sublime_plugin
 
 
-class UserShowFindResults(sublime_plugin.WindowCommand):
+class KitchenSinkShowFindResults(sublime_plugin.WindowCommand):
 
     def run(self):
         for view in self.window.views():

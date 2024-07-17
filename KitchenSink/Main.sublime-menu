@@ -4,8 +4,8 @@
         "id": "developer-tools",
         "caption": "Developer Tools",
         "children": [
-            { "command": "user_dump_info" },
-            { "command": "user_dump_view" },
+            { "command": "kitchen_sink_dump_info" },
+            { "command": "kitchen_sink_dump_view" },
             { "command": "neovintageous_dump_view" },
         ]
     }

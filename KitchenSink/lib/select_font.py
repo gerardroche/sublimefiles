@@ -54,7 +54,7 @@ class FontFaceInputHandler(sublime_plugin.ListInputHandler):
         return (items, selected)
 
 
-class UserSelectFontCommand(sublime_plugin.WindowCommand):
+class KitchenSinkSelectFontCommand(sublime_plugin.WindowCommand):
 
     def input_description(self):
         return "Font:"

@@ -3,7 +3,7 @@ import re
 import sublime_plugin
 
 
-class UserFormatLink(sublime_plugin.TextCommand):
+class KitchenSinkFormatLink(sublime_plugin.TextCommand):
 
     def run(self, edit):
         line = self.view.line(self.view.sel()[0].b)

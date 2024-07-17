@@ -12,7 +12,7 @@ class ToggleShowXpreview(sublime_plugin.WindowCommand):
         settings.set('show_x_preview', not flag)
 
 
-class UserStatusEventListener(sublime_plugin.EventListener):
+class KitchenSinkStatusEventListener(sublime_plugin.EventListener):
 
     def on_activated_async(self, view):
         if view.settings().get('show_build'):

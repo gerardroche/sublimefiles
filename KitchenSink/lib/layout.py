@@ -1,7 +1,7 @@
 import sublime_plugin
 
 
-class UserSetLayoutCommand(sublime_plugin.WindowCommand):
+class KitchenSinkSetLayoutCommand(sublime_plugin.WindowCommand):
 
     def run(self, cols, rows, cells):
         num_groups_before = self.window.num_groups()
@@ -33,7 +33,7 @@ class UserSetLayoutCommand(sublime_plugin.WindowCommand):
         self.window.set_view_index(view, self.window.active_group(), 0)
 
 
-class UserDefaultSetLayoutCommand(sublime_plugin.WindowCommand):
+class KitchenSinkDefaultSetLayoutCommand(sublime_plugin.WindowCommand):
 
     def run(self):
         cols = [0.0, 0.33, 0.66, 1.0]

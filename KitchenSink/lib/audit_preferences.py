@@ -7,7 +7,7 @@ def decode_resource(name: str):
     return decode_value(load_resource(name))
 
 
-class UserAuditPreferences(sublime_plugin.WindowCommand):
+class KitchenSinkAuditPreferences(sublime_plugin.WindowCommand):
 
     def run(self):
         defaults = decode_resource('Packages/Default/Preferences.sublime-settings')

@@ -1,7 +1,7 @@
 import sublime_plugin
 
 
-class UserDumpScope(sublime_plugin.WindowCommand):
+class KitchenSinkDumpScope(sublime_plugin.WindowCommand):
 
     def run(self):
         view = self.window.active_view()

@@ -11,7 +11,7 @@ def save_preferences():
     save_settings('Preferences.sublime-settings')
 
 
-class UserSortPreferences(sublime_plugin.WindowCommand):
+class KitchenSinkSortPreferences(sublime_plugin.WindowCommand):
 
     def run(self):
         with save_preferences() as preferences:

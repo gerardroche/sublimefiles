@@ -4,7 +4,7 @@ import sublime
 import sublime_plugin
 
 
-class UserDumpInfo(sublime_plugin.WindowCommand):
+class KitchenSinkDumpInfo(sublime_plugin.WindowCommand):
 
     def run(self):
         print('+-------------------')

@@ -35,7 +35,7 @@ class OpenPreferencesCommand(sublime_plugin.WindowCommand):
             })
 
 
-class UserOpenFileCommand(sublime_plugin.WindowCommand):
+class KitchenSinkOpenFileCommand(sublime_plugin.WindowCommand):
 
     def run(self, file):
         self.window.run_command('open_file', {

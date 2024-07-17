@@ -21,7 +21,7 @@ class FindFileUnderCursorCommand(sublime_plugin.TextCommand):
         return word
 
 
-class UserFindInFilesCommand(sublime_plugin.WindowCommand):
+class KitchenSinkFindInFilesCommand(sublime_plugin.WindowCommand):
 
     def run(self, **kwargs):
         _find_in_files(self.window, **kwargs)

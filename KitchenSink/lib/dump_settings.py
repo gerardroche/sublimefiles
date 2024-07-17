@@ -1,7 +1,7 @@
 import sublime_plugin
 
 
-class UserDumpSettings(sublime_plugin.WindowCommand):
+class KitchenSinkDumpSettings(sublime_plugin.WindowCommand):
 
     def run(self, prefixes=None):
         print('\n\n')

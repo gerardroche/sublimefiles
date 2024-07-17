@@ -1,9 +1,9 @@
-from User.tests import unittest
+from KitchenSink.tests import unittest
 
-from User.user_git import _extract_github_url
+from KitchenSink.user_git import _extract_github_url
 
 
-class TestUserGitFormatGithubUrl(unittest.ViewTestCase):
+class TestKitchenSinkGitFormatGithubUrl(unittest.ViewTestCase):
 
     def test_should_not_choke_on_empty_view(self):
         self.fixture('|')
