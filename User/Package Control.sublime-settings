@@ -13,20 +13,12 @@
 	],
 	"installed_packages":
 	[
-		"A File Icon",
-		"Laravel Blade Highlighter",
 		"LSP-eslint",
 		"LSP-pylsp",
 		"LSP-tailwindcss",
 		"LSP-volar",
 		"MarkdownPreview",
-		"Origami",
 		"Package Control",
-		"Sass",
-		"SideBarTools",
-		"Tailwind CSS",
-		"Terraform",
-		"Vue Syntax Highlight",
 	],
 	"submit_usage": false,
 }

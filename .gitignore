@@ -20,6 +20,7 @@
 /zzz A File Icon zzz/
 
 # Packs.
+/A File Icon/
 /ApiCompletions/
 /AutomaticPackageReloader/
 /ColorSchemeUnit/
@@ -33,6 +34,7 @@
 /GotoPhpManual/
 /Khan/
 /LSP/
+/Laravel Blade Highlighter/
 /LaravelTestingCompletions/
 /MonokaiFree/
 /NeoVintageous/
@@ -52,13 +54,16 @@
 /Phpck/
 /Pine/
 /Python-Auto-Complete/
+/Sass/
 /Sensible/
 /Sesame/
 /ShowAsciiValue/
 /SublimeLinter-php-cs-fixer/
+/Tailwind CSS/
 /TailwindCssCompletions/
 /Test/
 /Tmux/
 /ToggleDebugMode/
 /Toggler/
 /UnitTesting/
+/Vue Syntax Highlight/
