@@ -1,6 +1,6 @@
 {
 	"auto_upgrade": false,
-	"auto_upgrade_frequency": 48,
+	"auto_upgrade_frequency": 120,
 	"bootstrapped": true,
 	"debug": false,
 	"ignore_vcs_packages": true,
@@ -14,8 +14,6 @@
 	"installed_packages":
 	[
 		"A File Icon",
-		"ApacheConf",
-		"GotoDocumentation",
 		"Laravel Blade Highlighter",
 		"LSP-eslint",
 		"LSP-pylsp",

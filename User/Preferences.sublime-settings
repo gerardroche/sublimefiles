@@ -281,12 +281,17 @@
 
     "ignored_packages":
     [
+        "ApiCompletions",
+        "GenerateSyntaxTestAssertions",
         "LSP",
         "LSP-eslint",
         "LSP-pylsp",
         "LSP-tailwindcss",
         "LSP-volar",
+        "NeoVintageousColemak",
+        "NeoVintageousDvorak",
         "NeoVintageousHighlightLine",
+        "NeoVintageousToggle",
         "ShowAsciiValue",
         "TailwindCssCompletions",
         "Vintage",
