@@ -22,7 +22,7 @@ pack "https://github.com/gerardroche/sublime-laravel-testing-completions.git" "n
 pack "https://github.com/gerardroche/sublime-monokai-free.git" "noshallow branch=new-theme"
 pack "https://github.com/gerardroche/sublime-php-grammar.git" --name "PHPGrammar" "noshallow"
 pack "https://github.com/gerardroche/sublime-php-snippets.git" --name "PHPSnippets" "noshallow"
-pack "https://github.com/gerardroche/sublime-phpck.git" --name "PHP Completions Kit" "noshallow"
+pack "https://github.com/gerardroche/sublime-phpck.git" "noshallow"
 pack "https://github.com/gerardroche/sublime-phpunit-completions.git" --name "PHPUnitCompletions" "noshallow"
 pack "https://github.com/gerardroche/sublime-phpunit.git" --name "PHPUnitKit" "noshallow"
 pack "https://github.com/gerardroche/sublime-pine.git" "noshallow"
