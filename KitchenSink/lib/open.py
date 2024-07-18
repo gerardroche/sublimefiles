@@ -21,7 +21,7 @@ class OpenPreferencesCommand(sublime_plugin.WindowCommand):
     def run(self, split: bool = True):
         if split:
             self.window.run_command('edit_settings', {
-                "base_file": "${packages}/NeoVintageous/Preferences.sublime-settings",
+                "base_file": "${packages}/Default/Preferences.sublime-settings",
                 "default": "{\n\t$0\n}\n",
                 "user_file": "${packages}/User/Preferences.sublime-settings"
             })
