@@ -1,6 +1,6 @@
 {
 	"auto_upgrade": false,
-	"auto_upgrade_frequency": 120,
+	"auto_upgrade_frequency": 168,
 	"bootstrapped": true,
 	"debug": false,
 	"ignore_vcs_packages": true,
@@ -13,11 +13,6 @@
 	],
 	"installed_packages":
 	[
-		"LSP-eslint",
-		"LSP-pylsp",
-		"LSP-tailwindcss",
-		"LSP-volar",
-		"MarkdownPreview",
 		"Package Control",
 	],
 	"submit_usage": false,
