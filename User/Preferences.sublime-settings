@@ -21,6 +21,7 @@
     "highlight_line": false,
     "highlight_modified_tabs": true,
     "inactive_sheet_dimming": false,
+    "index_files": true,
     "line_numbers": false,
     "line_padding_bottom": 0,
     "line_padding_top": 0,
@@ -50,6 +51,14 @@
     "spell_check": false,
     "word_wrap": false,
 
+    // Data collection.
+    "enable_telemetry": false,
+    "submit_usage": false,
+
+    // Updates.
+    "auto_upgrade": false,
+    "update_check": false,
+
     "spelling_selector": "source string.quoted - markup.raw - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.raw)",
 
     "auto_complete": true,
@@ -71,7 +80,6 @@
         "ss11", "ss12", "ss13", "ss14", "ss15",
         "ss16", "ss17", "ss18", "ss19", "ss20",
     ],
-
     "font_faces": [
         "CaskaydiaCove Nerd Font Mono",
         "CaskaydiaCove Nerd Font",
@@ -91,22 +99,20 @@
     [
     ],
 
-    "draw_white_space": [
-        "selection",
-    ],
-
     "draw_white_space_on_clear": ["selection"],
     "draw_white_space_on_reset": ["leading_mixed", "selection", "trailing", "isolated"],
     "draw_white_space_toggle_off": ["leading_mixed", "selection", "trailing", "isolated"],
     "draw_white_space_toggle_on": ["selection"],
+    "draw_white_space": [
+        "selection",
+    ],
 
     "draw_indent_guides": false,
-
+    "indent_guide_options_toggle_on": ["draw_normal", "solid", "draw_active"],
     "indent_guide_options":
     [
     ],
 
-    "indent_guide_options_toggle_on": ["draw_normal", "solid", "draw_active"],
 
     "file_exclude_patterns":
     [
@@ -223,7 +229,6 @@
     ],
 
     "index_exclude_gitignore": false,
-
     "index_exclude_patterns":
     [
         "*.a",
@@ -261,8 +266,8 @@
         ".psalm/",
         "build/",
         "covhtml/",
-        "htmlcov/",
         "data/",
+        "htmlcov/",
         "public/build/",
         "public/storage/",
         "storage/",
@@ -297,53 +302,8 @@
         "Vintage",
     ],
 
-    // Data collection.
-    "auto_upgrade": false,
-    "enable_telemetry": false,
-    "submit_usage": false,
-    "update_check": false,
-
-    // Plugins
-
-    // Plugin - GotoPhpManual
-
-    "goto_php_manual.path": "${PROJECTS_PATH}/.man",
-
-    // Plugin - LSP
-
-    "lsp.disable_on_hover": false,
-    "lsp.disable_on_hover_gutter": false,
-    "lsp.disable_on_hover_text": true,
-    "lsp.ignore_files_containing": ["/vendor/", "/node_modules/"],
-
-    // Plugin - PHPUnitKit
-
-    "phpunit.debug": false,
-    "phpunit.options": { "colors": true, "no-progress": true, "no-coverage": true, },
-    "phpunit.strategy": "tmux",
-    "phpunit.tmux_clear_scrollback": false,
-    "phpunit.tmux_target": ":.{top}",
-    "phpunit.paratest": true,
-
-    // Plugin - Sesame
-
-    "sesame.path":
-    [
-        {
-            "path": "~/projects",
-        },
-        {
-            "depth": 1,
-            "path": "~/.config/sublime-text/Packages",
-        },
-    ],
-
-    // Plugin - ColorSchemeUnit
-
     "color_scheme_unit.coverage": true,
     "color_scheme_unit.debug": false,
-
-    // Plugin - DocBlockr
 
     "docblockr.development_mode": false,
     "docblockr.function_description": false,
@@ -354,20 +314,35 @@
     "docblockr.short_primitives": true,
     "docblockr.spacer_between_sections": true,
 
-    // Plugin - UnitTesting
+    "goto_php_manual.path": "${PROJECTS_PATH}/.man",
+
+    "lsp.disable_on_hover": false,
+    "lsp.disable_on_hover_gutter": false,
+    "lsp.disable_on_hover_text": true,
+    "lsp.ignore_files_containing": ["/vendor/", "/node_modules/"],
+
+    "phpunit.debug": false,
+    "phpunit.options": {"colors": true, "no-progress": true, "no-coverage": true,},
+    "phpunit.paratest": true,
+    "phpunit.strategy": "tmux",
+    "phpunit.tmux_clear_scrollback": false,
+    "phpunit.tmux_target": ":.{top}",
+
+    "sesame.path": [{"path": "${PROJECTS_PATH}",}, {"path": "~/.config/sublime-text/Packages", "depth": 1,}],
 
     "unittesting_capture_package_loggers": true,
     "unittesting_coverage_html_report": true,
     "unittesting_reload_package_on_testing": true,
     "unittesting_show_reload_progress": false,
 
-    // Plugin - NeoVintageous
-
     "neovintageous_build_version": 13200,
-
+    "vintageous_bell": "view",
+    "vintageous_enable_sneak": true,
+    "vintageous_highlighted_yank_duration": 200,
+    "vintageous_search_occ_style": "outline",
+    "vintageous_sneak_use_ic_scs": 1,
+    "vintageous_terminal": "kitty",
     "vintageous_handle_keys": {
-        // "i_<Left>": false,
-        // "i_<Right>": false,
         "<C-f12>": false,
         "<S-f1>": false,
         "<S-tab>": false,
@@ -375,24 +350,4 @@
         "i_<C-d>": false,
         "i_<C-u>": false,
     },
-
-    "vintageous_bell": "view",
-    "vintageous_enable_sneak": true,
-    "vintageous_highlighted_yank_duration": 200,
-    "vintageous_search_occ_style": "outline",
-    "vintageous_sneak_use_ic_scs": 1,
-    "vintageous_terminal": "kitty",
-
-    // "vintageous_auto_nohlsearch_on_normal_enter": false,
-    // "vintageous_auto_switch_input_method": true,
-    // "vintageous_auto_switch_input_method_default": "1",
-    // "vintageous_auto_switch_input_method_get_cmd": "im-get",
-    // "vintageous_auto_switch_input_method_set_cmd": "im-set {im}",
-    // "vintageous_default_mode": "visual",
-    // "vintageous_highlighted_yank_style": "outline",
-    // "vintageous_multi_cursor_exit_from_visual_mode": false,
-    // "vintageous_multi_cursor_exit_from_visual_mode": true,
-    // "vintageous_search_inc_style": "underline",
-
-    "index_files": true,
 }
