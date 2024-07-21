@@ -1,12 +1,12 @@
 # Libraries
 pack "https://github.com/SublimeText/sublime_lib.git" "library"
 pack "https://github.com/facelessuser/sublime-bracex.git" "library"
-pack "https://github.com/facelessuser/sublime-markdown.git" "library"
 pack "https://github.com/facelessuser/sublime-markdown-popups.git" --name "mdpopups" "library"
+pack "https://github.com/facelessuser/sublime-markdown.git" "library"
 pack "https://github.com/facelessuser/sublime-pymdownx.git" "library"
 pack "https://github.com/facelessuser/sublime-wcmatch.git" "library"
 pack "https://github.com/packagecontrol/pygments.git" "library"
-pack "https://github.com/packagecontrol/pyyaml.git" "library"
+pack "https://github.com/packagecontrol/pyyaml.git" --name "yaml" "library"
 pack "https://github.com/sublimelsp/lsp_utils.git" "library"
 
 # Packages
