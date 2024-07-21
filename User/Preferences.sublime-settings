@@ -2,6 +2,12 @@
 
     "adaptive_dividers": true,
     "animation_enabled": false,
+    "auto_complete": true,
+    "auto_complete_cycle": true,
+    "auto_complete_delayx": 1000,
+    "auto_complete_trailing_symbols": true,
+    "auto_complete_use_history": true,
+    "auto_complete_with_fields": true,
     "block_caret": false,
     "caret_extra_bottom": 0,
     "caret_extra_top": 0,
@@ -12,7 +18,7 @@
     "fade_fold_buttons": false,
     "file_tab_style": "square",
     "fold_buttons": false,
-    "font_size": 14,
+    "font_size": 13,
     "gutter": true,
     "hardware_acceleration": "opengl",
     "hide_new_tab_button": true,
@@ -49,26 +55,19 @@
     "show_tab_close_buttons": false,
     "show_word_count": false,
     "spell_check": false,
+    "spelling_selector": "source string.quoted - markup.raw - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.raw)",
     "word_wrap": false,
 
-    // Data collection.
+    // Data collection
     "enable_telemetry": false,
     "submit_usage": false,
 
-    // Updates.
+    // Updates
     "auto_upgrade": false,
     "update_check": false,
 
-    "spelling_selector": "source string.quoted - markup.raw - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag, markup.raw)",
-
-    "auto_complete": true,
-    "auto_complete_cycle": true,
-    "auto_complete_delayx": 1000,
-    "auto_complete_trailing_symbols": true,
-    "auto_complete_use_history": true,
-    "auto_complete_with_fields": true,
-
-    "color_scheme": "MonokaiFreeGruvboxDark.sublime-color-scheme",
+    // Theme
+    "color_scheme": "GruvboxDark.sublime-color-scheme",
     "monokaifree.no_vcs_status_badge": true,
     "theme": "BladeRunner.sublime-theme",
 
@@ -112,7 +111,6 @@
     "indent_guide_options":
     [
     ],
-
 
     "file_exclude_patterns":
     [
