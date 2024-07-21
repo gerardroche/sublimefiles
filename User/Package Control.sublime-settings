@@ -1,19 +1,17 @@
 {
-	"auto_upgrade": false,
-	"auto_upgrade_frequency": 168,
-	"bootstrapped": true,
-	"debug": false,
-	"ignore_vcs_packages": true,
-	"install_missing": false,
-	"in_process_packages":
-	[
-	],
-	"install_prereleases":
-	[
-	],
-	"installed_packages":
-	[
-		"Package Control",
-	],
-	"submit_usage": false,
+    "auto_migrate": false,
+    "auto_upgrade": false,
+    "auto_upgrade_frequency": 168,
+    "bootstrapped": true,
+    "channels": [],
+    "debug": false,
+    "ignore_vcs_packages": true,
+    "in_process_packages": [],
+    "install_missing": false,
+    "install_prereleases": [],
+    "installed_packages": [],
+    "remove_orphaned": false,
+    "repositories": [],
+    "submit_url": "",
+    "submit_usage": false,
 }
