@@ -18,17 +18,14 @@
     // NeoVintageous
 
     {
-        "keys": [" ", "E"],
+        "keys": [",", "d"],
         "command": "neovintageous",
-        "args": {
-            "action": "toggle_side_bar"
-        },
-        "context": [
-            {"key": "control", "operand": "sidebar_tree"}
-        ]
+        "args": { "action": "toggle_side_bar" },
+        "context": [ {"key": "control", "operand": "sidebar_tree"} ]
     },
+
     {
-        "keys": [" ", ","],
+        "keys": [",", ","],
         "command": "focus_group",
         "args": {"group": 0},
         "context": [{"key": "control", "operand": "sidebar_tree"}]
