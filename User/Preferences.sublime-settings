@@ -99,17 +99,23 @@
     ],
 
     "draw_white_space_on_clear": ["selection"],
-    "draw_white_space_on_reset": ["leading_mixed", "selection", "trailing", "isolated"],
-    "draw_white_space_toggle_off": ["leading_mixed", "selection", "trailing", "isolated"],
+    "draw_white_space_on_reset": ["isolated", "leading_mixed", "selection", "trailing"],
+    "draw_white_space_toggle_off": ["isolated", "leading_mixed", "selection", "trailing"],
     "draw_white_space_toggle_on": ["selection"],
+    "draw_unicode_white_space": "all",
     "draw_white_space": [
+        "isolated",
+        "leading_mixed",
         "selection",
+        "trailing",
     ],
 
     "draw_indent_guides": false,
-    "indent_guide_options_toggle_on": ["draw_normal", "solid", "draw_active"],
     "indent_guide_options":
     [
+        "draw_normal",
+        "solid",
+        "draw_active",
     ],
 
     "file_exclude_patterns":
