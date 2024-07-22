@@ -40,8 +40,6 @@
     { "keys": ["ctrl+alt+r"], "command": "sesame_remove" },
     { "keys": ["ctrl+alt+s"], "command": "sesame_switch" },
 
-    { "keys": ["ctrl+alt+v"], "command": "sesame_open", "args": { "path": "~/vendor" } },
-
     // Test
     { "keys": ["ctrl+shift+a"], "command": "test_suite" },
     { "keys": ["ctrl+shift+c"], "command": "test_cancel" },

@@ -1,7 +1,17 @@
 [
-
-    { "caption": "Sesame: Add Vendor [U]", "command": "sesame_add", "args": { "path": "~/vendor" } },
-    { "caption": "Sesame: Open Vendor [U]", "command": "sesame_open", "args": { "path": "~/vendor" } },
-    { "caption": "Sesame: Switch Vendor [U]", "command": "sesame_switch", "args": { "path": "~/vendor" } },
-
+    {
+        "caption": "Sesame: Add Vendor [U]",
+        "command": "sesame_add",
+        "args": { "path": "~/vendor" }
+    },
+    {
+        "caption": "Sesame: Open Vendor [U]",
+        "command": "sesame_open",
+        "args": { "path": "~/vendor" }
+    },
+    {
+        "caption": "Sesame: Switch Vendor [U]",
+        "command": "sesame_switch",
+        "args": { "path": "~/vendor" }
+    }
 ]

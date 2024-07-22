@@ -1,4 +1,5 @@
 [
+
     { "caption": "Application: Close Window [KS]", "command": "close_window" },
     { "caption": "Application: New File [KS]", "command": "new_file" },
     { "caption": "Application: New Window [KS]", "command": "new_window" },
