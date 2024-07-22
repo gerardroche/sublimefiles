@@ -1,5 +1,7 @@
 [
 
+    { "keys": ["ctrl+7"], "command": "focus_group", "args": { "group": 0 } },
+
     // GotoDocumentation
 
     {

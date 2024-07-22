@@ -18,6 +18,7 @@ nnoremap <Leader>en :Neovintageous action=open_rc_file<CR>
 nnoremap <Leader>ep :OpenPreferences<CR>
 nnoremap <Leader>ff :ShowOverlay overlay=goto show_files=true<CR>
 nnoremap <Leader>fg :ShowOverlay overlay=goto show_files=true<CR>
+nnoremap <Leader>n :ShowScopeName<CR>
 nnoremap <Leader>qq :qa<CR>
 nnoremap <Leader>r :Neovintageous action=reload_rc_file<CR>
 nnoremap <Leader>si vii:sort u<CR>
@@ -45,6 +46,7 @@ nnoremap <D-o> :TestFile<CR>
 nnoremap <D-w> :TestFile<CR>
 nnoremap <Leader>ga :silent !git add %<CR>
 nnoremap <Leader>hu :RevertHunk<CR>
+nnoremap <Leader>l4 :KitchenSinkLayout name=grid:4<CR>
 nnoremap <Leader>q gqip:w<CR>
 nnoremap <Leader>ta :TestSuite<CR>
 nnoremap <Leader>tf :TestFile<CR>
