@@ -1,5 +1,4 @@
 [
-
     { "caption": "Application: Close Window [KS]", "command": "close_window" },
     { "caption": "Application: New File [KS]", "command": "new_file" },
     { "caption": "Application: New Window [KS]", "command": "new_window" },
@@ -10,6 +9,9 @@
     { "caption": "Dump Settings [KS]", "command": "kitchen_sink_dump_settings" },
     { "caption": "Dump View [KS]", "command": "kitchen_sink_dump_view" },
     { "caption": "Format Link [KS]", "command": "kitchen_sink_format_link" },
+    { "caption": "Limitless: Clear", "command": "limitless_clear" },
+    { "caption": "Limitless: Focus or Flow", "command": "limitless_focus" },
+    { "caption": "Limitless: Reset", "command": "limitless_reset" },
     { "caption": "Lumber: Set Log Level", "command": "lumber" },
     { "caption": "NeoVintageous: Dump Completions [KS]", "command": "neovintageous_dev", "args": {"action": "dump_ex_completions"}},
     { "caption": "NeoVintageous: Dump Mappings [KS]", "command": "neovintageous_dev", "args": {"action": "dump_mappings"}},
