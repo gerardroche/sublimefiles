@@ -1,0 +1,168 @@
+<?php /* COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" SKIP IF NOT "Laravel Blade Highlighter/blade"
+
+Laravel Blade Highlighter
+=========================
+https://packagecontrol.io/packages/Laravel%20Blade%20Highlighter
+*/
+
+?>
+
+<!-- comment -->
+<!-- ^ fg=#928374 fs=italic -->
+
+{{-- comment --}}
+<!-- ^ fg=#928374 fs=italic -->
+
+.... {{ $name }}
+<!-- ^^ fg=#83a598 fs= -->
+<!--    ^ fg=#fe8019 fs= -->
+<!--     ^ fg=#ebdbb2 fs= -->
+<!--          ^^ fg=#83a598 fs= -->
+
+.... {!! $name !!}
+<!-- ^^^ fg=#83a598 fs= -->
+<!--     ^ fg=#fe8019 fs= -->
+<!--      ^ fg=#ebdbb2 fs= -->
+<!--           ^^^ fg=#83a598 fs= -->
+
+.... {{{ $name }}}
+<!-- ^^^ fg=#83a598 fs= -->
+<!--     ^ fg=#fe8019 fs= -->
+<!--      ^ fg=#ebdbb2 fs= -->
+<!--           ^^^ fg=#83a598 fs= -->
+
+. {{ time() }}
+<!-- ^^^^ fg=#b8bb26 fs=bold -->
+<!--     ^^ fg=#83a598 fs= -->
+
+. {{ route() }}
+<!-- ^ fg=#ebdbb2 fs= -->
+<!--      ^^ fg=#83a598 fs= -->
+
+. {{ route('str') }}
+<!-- ^ fg=#ebdbb2 fs= -->
+<!--      ^ fg=#83a598 fs= -->
+<!--       ^^^^^ fg=#b8bb26 fs= -->
+<!--            ^ fg=#83a598 fs= -->
+
+<a href="{{ route('login') }}">x</a>
+<!--     ^^ fg=#83a598 fs= -->
+<!--        ^ fg=#f8f8f2 fs= -->
+<!--              ^^^^^^^ fg=#b8bb26 fs= -->
+<!--                     ^ fg=#83a598 fs= -->
+<!--                       ^^ fg=#83a598 fs= -->
+
+.... @custom_directive()
+<!-- ^^^^^^^^^^^^^^^^^ fg=#ebdbb2 fs= -->
+<!--                  ^^ fg=#83a598 fs= -->
+
+.... {{ isset($name) ? $name : 'Default' }}
+<!-- ^^ fg=#83a598 fs= -->
+<!--    ^^^^^ fg=#fe8019 fs= -->
+<!--         ^ fg=#83a598 fs= -->
+<!--          ^ fg=#fe8019 fs= -->
+<!--           ^ fg=#ebdbb2 fs= -->
+<!--               ^ fg=#83a598 fs= -->
+<!--                 ^ fg=#fe8019 fs= -->
+<!--                         ^ fg=#fe8019 fs= -->
+<!--                           ^^^^^^^^^ fg=#b8bb26 fs= -->
+<!--                                     ^^ fg=#83a598 fs= -->
+
+.... @{{ raw }}
+<!-- ^^^ fg=#83a598 fs= -->
+<!--     ^^^ fg=#ebdbb2 fs= -->
+<!--         ^^ fg=#83a598 fs= -->
+
+     <?php echo $name; ?>
+<!-- ^^^^^ fg=#83a598 fs= -->
+<!--       ^^^^ fg=#fe8019 fs= -->
+<!--            ^ fg=#fe8019 fs= -->
+<!--             ^ fg=#ebdbb2 fs= -->
+<!--                 ^ fg=#ebdbb2 fs= -->
+<!--                   ^^ fg=#83a598 fs= -->
+
+     <?= $name; ?>
+<!-- ^^^ fg=#83a598 fs= -->
+<!--     ^ fg=#fe8019 fs= -->
+<!--      ^ fg=#ebdbb2 fs= -->
+<!--          ^ fg=#ebdbb2 fs= -->
+<!--            ^^ fg=#83a598 fs= -->
+
+     @include('x')
+<!-- ^ fg=#fb4934 fs= -->
+<!--  ^ fg=#fb4934 fs= -->
+<!--         ^ fg=#83a598 fs= -->
+<!--          ^^^ fg=#b8bb26 fs= -->
+<!--             ^ fg=#83a598 fs= -->
+
+     @inject('x', 'A\B')
+<!-- ^ fg=#fb4934 fs= -->
+<!--  ^^^^^^ fg=#fb4934 fs= -->
+<!--        ^ fg=#83a598 fs= -->
+<!--         ^^^ fg=#b8bb26 fs= -->
+<!--            ^ fg=#ebdbb2 fs= -->
+<!--              ^^^^^ fg=#b8bb26 fs= -->
+<!--                   ^ fg=#83a598 fs= -->
+
+    @php
+//  ^^^^ fg=#fb4934 fs=
+        echo 'x';
+     @endphp
+<!-- ^^^^^^^ fg=#fb4934 fs= -->
+
+     @php(x())
+<!-- ^ fg=#fb4934 fs= -->
+<!--  ^^^ fg=#fb4934 fs= -->
+<!--     ^ fg=#83a598 fs= -->
+<!--      ^ fg=#ebdbb2 fs= -->
+<!--       ^^^ fg=#83a598 fs= -->
+
+        @hasSection('title')
+<!--    ^ fg=#fb4934 fs= -->
+<!--     ^ fg=#fb4934 fs= -->
+            @yield('title') - App Name
+<!--        ^ fg=#fb4934 fs= -->
+<!--         ^ fg=#fb4934 fs= -->
+        @else
+<!--    ^ fg=#fb4934 fs= -->
+<!--     ^ fg=#fb4934 fs= -->
+            App Name
+        @endif
+<!--    ^ fg=#fb4934 fs= -->
+<!--     ^ fg=#fb4934 fs= -->
+
+        @section('sidebar')
+<!--    ^ fg=#fb4934 fs= -->
+<!--     ^ fg=#fb4934 fs= -->
+            This is the master sidebar.
+        @stop
+<!--    ^ fg=#fb4934 fs= -->
+<!--     ^ fg=#fb4934 fs= -->
+
+        @extends('layouts.master')
+<!--    ^ fg=#fb4934 fs= -->
+<!--     ^ fg=#fb4934 fs= -->
+
+<ul class="list @if (count($records) === 1) extra-class @endif">
+<!--            ^ fg=#fb4934 fs= -->
+<!--             ^^ fg=#fb4934 fs= -->
+<!--                                                    ^ fg=#fb4934 fs= -->
+<!--                                                     ^^^^^ fg=#fb4934 fs= -->
+    <li>This is the first item</li>
+</ul>
+
+        @isset($name)
+<!--    ^ fg=#fb4934 fs= -->
+<!--     ^ fg=#fb4934 fs= -->
+            Hello, {{ $name }}.
+        @endisset
+<!--    ^ fg=#fb4934 fs= -->
+<!--     ^ fg=#fb4934 fs= -->
+
+        @unless (Auth::check())
+<!--    ^ fg=#fb4934 fs= -->
+<!--     ^ fg=#fb4934 fs= -->
+            You are not signed in.
+        @endunless
+<!--    ^ fg=#fb4934 fs= -->
+<!--     ^ fg=#fb4934 fs= -->

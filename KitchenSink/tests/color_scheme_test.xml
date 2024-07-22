@@ -1,0 +1,36 @@
+<!-- COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" "XML" -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!--^ fg=#8ec07c fs= -->
+<!--  ^^^^^^^ fg=#8ec07c fs= -->
+<!--         ^ fg=#fe8019 fs= -->
+<!--          ^^^^^ fg=#b8bb26 fs= -->
+<!--                ^^^^^^^^ fg=#8ec07c fs= -->
+<!--                        ^ fg=#fe8019 fs= -->
+<!--                         ^^^^^^^ fg=#b8bb26 fs= -->
+<!--                                ^^ fg=#83a598 fs= -->
+
+        <!-- preceding whitespace -->
+<!-- ^ fg=#ebdbb2 bg=#282828 fs= -->
+
+    <!-- x -->
+<!--^^^^^^^^^^ fg=#928374 bg=#282828 fs=italic -->
+
+<breakfast_menu>
+<!-- ^ fg=#b8bb26 fs= -->
+
+    <food>
+<!--^ fg=#83a598 fs= -->
+    <!--^ fg=#b8bb26 fs= -->
+    <!-- ^ fg=#83a598 fs= -->
+
+        <name>Belgian Waffles</name>
+    <!--^ fg=#83a598 fs= -->
+        <!--^ fg=#b8bb26 fs= -->
+        <!-- ^ fg=#83a598 fs= -->
+        <!--  ^ fg=#ebdbb2 fs= -->
+        <!--                 ^^ fg=#83a598 fs= -->
+        <!--                   ^ fg=#b8bb26 fs= -->
+        <!--                       ^ fg=#83a598 fs= -->
+    </food>
+
+</breakfast_menu>

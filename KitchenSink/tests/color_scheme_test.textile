@@ -1,0 +1,29 @@
+// COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" "Textile"
+
+h1. Heading
+#^^ fg=#8ec07c fs=
+<!--^^^^^^^ fg=#b8bb26 fs= build>=3127 -->
+
+bq. This is a block quotation
+#^^ fg=#8ec07c fs=
+<!-- ^^^ fg=#ebdbb2 fs= -->
+
+This paragraph contains a reference[1].
+<!-- ^ fg=#ebdbb2 fs= -->
+<!--                               ^^^ fg=#8ec07c fs= -->
+<!--                                  ^ fg=#ebdbb2 fs= -->
+
+This is a -deleted- word.
+<!-- ^^^^^ fg=#ebdbb2 fs= -->
+<!--      ^^^^^^^^^ fg=#fb4934 fs= -->
+<!--               ^^^^^^ fg=#ebdbb2 fs= -->
+
+This is an +added+ word.
+<!-- ^^^^^^ fg=#ebdbb2 fs= -->
+<!--       ^^^^^^^ fg=#b8bb26 fs= -->
+<!--              ^^^^^^ fg=#ebdbb2 fs= -->
+
+fn1. This is the footnote
+#^^^ fg=#8ec07c fs=
+<!-- ^^^^^^^^^^^^^^^^^^^^ fg=#ebdbb2 fs= -->
+

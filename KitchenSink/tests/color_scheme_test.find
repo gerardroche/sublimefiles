@@ -1,0 +1,54 @@
+# COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" "Find Results"
+
+Searching 27 files for "aaa"
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^ fg=#ebdbb2 fs=
+
+/path/to/file.py:
+# ^^^^^^^^^^^^^^ fg=#8ec07c fs=
+                ^ fg=#ebdbb2 fs=
+   13  xxx
+#  ^^ fg=#d3869b fs=
+#      ^^^ fg=#ebdbb2 fs=
+   14  xxx
+#  ^^ fg=#d3869b fs=
+#      ^^^ fg=#ebdbb2 fs=
+   15: aaa
+#  ^^ fg=#fabd2f fs=
+#    ^ fg=#ebdbb2 fs=
+#      ^^^ fg=#ebdbb2 fs=
+   16  xxx
+#  ^^ fg=#d3869b fs=
+#      ^^^ fg=#ebdbb2 fs=
+   17  xxx
+#  ^^ fg=#d3869b fs=
+#      ^^^ fg=#ebdbb2 fs=
+
+/path/to/other/file.py:
+^^^^^^^^^^^^^^^^^^^^^^ fg=#8ec07c fs=
+                      ^ fg=#ebdbb2 fs=
+   10  xxx
+#  ^^ fg=#d3869b fs=
+#      ^^^ fg=#ebdbb2 fs=
+   11  xxx
+#  ^^ fg=#d3869b fs=
+#      ^^^ fg=#ebdbb2 fs=
+   12: aaa
+#  ^^ fg=#fabd2f fs=
+#    ^ fg=#ebdbb2 fs=
+#      ^^^ fg=#ebdbb2 fs=
+   13  xxx
+#  ^^ fg=#d3869b fs=
+#      ^^^ fg=#ebdbb2 fs=
+   14: aaa
+#  ^^ fg=#fabd2f fs=
+#    ^ fg=#ebdbb2 fs=
+#      ^^^ fg=#ebdbb2 fs=
+   15  xxx
+#  ^^ fg=#d3869b fs=
+#      ^^^ fg=#ebdbb2 fs=
+   16  xxx
+#  ^^ fg=#d3869b fs=
+#      ^^^ fg=#ebdbb2 fs=
+
+3 matches across 2 files
+# ^^^^^^^^^^^^^^^^^^^^^^ fg=#ebdbb2 fs=

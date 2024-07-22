@@ -1,0 +1,91 @@
+// COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" "JSON"
+{
+    "name": "value"
+//  ^ fg=#b8bb26 fs=
+//   ^^^^ fg=#8ec07c fs=
+//       ^ fg=#b8bb26 fs=
+//        ^ fg=#83a598 fs=
+//          ^ fg=#b8bb26 fs=
+//           ^^^^^ fg=#b8bb26 fs=
+//                ^ fg=#b8bb26 fs=
+}
+
+[
+    {
+//  ^ fg=#83a598 fs=
+
+        // TODO should the keys be a alternate colour?
+        "title": "apples",
+    //  ^ fg=#b8bb26 fs=
+    //   ^^^^^ fg=#8ec07c fs=
+    //        ^ fg=#b8bb26 fs=
+    //         ^ fg=#83a598 fs=
+    //           ^ fg=#b8bb26 fs=
+    //            ^^^^^^ fg=#b8bb26 fs=
+    //                  ^ fg=#b8bb26 fs=
+    //                   ^ fg=#ebdbb2 fs=
+
+        "count": [12, 1.2, null, true, false, "abc"],
+    //  ^ fg=#b8bb26 fs=
+    //   ^^^^^ fg=#8ec07c fs=
+    //        ^ fg=#b8bb26 fs=
+    //         ^ fg=#83a598 fs=
+    //           ^ fg=#83a598 fs=
+    //            ^ fg=#d3869b fs=
+    //              ^ fg=#ebdbb2 fs=
+    //                  ^ fg=#d3869b fs=
+    //                   ^ fg=#ebdbb2 fs=
+    //                     ^ fg=#fabd2f fs=
+    //                         ^ fg=#ebdbb2 fs=
+    //                           ^ fg=#d3869b fs=
+    //                               ^ fg=#ebdbb2 fs=
+    //                                 ^ fg=#d3869b fs=
+    //                                      ^ fg=#ebdbb2 fs=
+    //                                        ^ fg=#b8bb26 fs=
+    //                                         ^^^ fg=#b8bb26 fs=
+    //                                            ^ fg=#b8bb26 fs=
+    //                                             ^ fg=#83a598 fs=
+    //                                              ^ fg=#ebdbb2 fs=
+
+        "x": {"a": "...", "b": true, "c": 42},
+    //  ^ fg=#b8bb26 fs=
+    //   ^ fg=#8ec07c fs=
+    //    ^ fg=#b8bb26 fs=
+    //     ^ fg=#83a598 fs=
+    //       ^ fg=#83a598 fs=
+    //        ^ fg=#b8bb26 fs=
+    //         ^ fg=#8ec07c fs=
+    //          ^ fg=#b8bb26 fs=
+    //           ^ fg=#83a598 fs=
+    //             ^ fg=#b8bb26 fs=
+    //              ^^^ fg=#b8bb26 fs=
+    //                 ^ fg=#b8bb26 fs=
+    //                  ^ fg=#ebdbb2 fs=
+    //                    ^ fg=#b8bb26 fs=
+    //                     ^ fg=#8ec07c fs=
+    //                      ^ fg=#b8bb26 fs=
+    //                       ^ fg=#83a598 fs=
+    //                         ^^^^ fg=#d3869b fs=
+    //                             ^ fg=#ebdbb2 fs=
+    //                               ^ fg=#b8bb26 fs=
+    //                                ^ fg=#8ec07c fs=
+    //                                 ^ fg=#b8bb26 fs=
+    //                                  ^ fg=#83a598 fs=
+    //                                    ^^ fg=#d3869b fs=
+    //                                      ^ fg=#83a598 fs=
+
+        "esc": "_\uD83D_\uDE02_"
+    //  ^ fg=#b8bb26 fs=
+    //   ^^^ fg=#8ec07c fs=
+    //      ^ fg=#b8bb26 fs=
+    //       ^ fg=#83a598 fs=
+    //         ^ fg=#b8bb26 fs=
+    //          ^ fg=#b8bb26 fs=
+    //           ^^^^^^ fg=#fe8019 fs=
+    //                 ^ fg=#b8bb26 fs=
+    //                  ^^^^^^ fg=#fe8019 fs=
+    //                        ^ fg=#b8bb26 fs=
+    //                         ^ fg=#b8bb26 fs=
+    }
+//  ^ fg=#83a598 fs=
+]

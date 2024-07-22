@@ -1,0 +1,16 @@
+/* COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" SKIP IF NOT "Tailwind CSS/Tailwind CSS" */
+
+.btn {
+    display: block;
+/*  ^ fg=#8ec07c fs= build>=4168 */
+/*           ^ fg=#d3869b build>=4168 */
+}
+
+.primary-btn {
+/*  ^ fg=#b8bb26 fs= build>=4168 */
+    @apply btn other;
+/*  ^ fg=#fb4934 fs= build>=4168 */
+/*   ^^^^^ fg=#fb4934 fs= build>=4168 */
+/*         ^^^ fg=#b8bb26 fs= build>=4168 */
+/*             ^^^^^ fg=#b8bb26 fs= build>=4168 */
+}

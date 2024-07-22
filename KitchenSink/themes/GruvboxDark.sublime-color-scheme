@@ -1,0 +1,348 @@
+{
+    "name": "Gruvbox Dark",
+    "variables":
+    {
+
+        "dark0_hard": "#1d2021",        // let s:gb.dark0_hard  = ['#1d2021', 234]     " 29-32-33
+        "dark0": "#282828",             // let s:gb.dark0       = ['#282828', 235]     " 40-40-40
+        "dark0_soft": "#32302f",        // let s:gb.dark0_soft  = ['#32302f', 236]     " 50-48-47
+        "dark1": "#3c3836",             // let s:gb.dark1       = ['#3c3836', 237]     " 60-56-54
+        "dark2": "#504945",             // let s:gb.dark2       = ['#504945', 239]     " 80-73-69
+        "dark3": "#665c54",             // let s:gb.dark3       = ['#665c54', 241]     " 102-92-84
+        "dark4": "#7c6f64",             // let s:gb.dark4       = ['#7c6f64', 243]     " 124-111-100
+        "dark4_256": "#7c6f64",         // let s:gb.dark4_256   = ['#7c6f64', 243]     " 124-111-100
+
+        "gray_245": "#928374",          // let s:gb.gray_245    = ['#928374', 245]     " 146-131-116
+        "gray_244": "#928374",          // let s:gb.gray_244    = ['#928374', 244]     " 146-131-116
+
+        "light0_hard": "#f9f5d7",       // let s:gb.light0_hard = ['#f9f5d7', 230]     " 249-245-215
+        "light0": "#fbf1c7",            // let s:gb.light0      = ['#fbf1c7', 229]     " 253-244-193
+        "light0_soft": "#f2e5bc",       // let s:gb.light0_soft = ['#f2e5bc', 228]     " 242-229-188
+        "light1": "#ebdbb2",            // let s:gb.light1      = ['#ebdbb2', 223]     " 235-219-178
+        "light2": "#d5c4a1",            // let s:gb.light2      = ['#d5c4a1', 250]     " 213-196-161
+        "light3": "#bdae93",            // let s:gb.light3      = ['#bdae93', 248]     " 189-174-147
+        "light4": "#a89984",            // let s:gb.light4      = ['#a89984', 246]     " 168-153-132
+        "light4_256": "#a89984",        // let s:gb.light4_256  = ['#a89984', 246]     " 168-153-132
+
+        // dark
+        "bright_red": "#fb4934",        // let s:gb.bright_red     = ['#fb4934', 167]     " 251-73-52
+        "bright_green": "#b8bb26",      // let s:gb.bright_green   = ['#b8bb26', 142]     " 184-187-38
+        "bright_yellow": "#fabd2f",     // let s:gb.bright_yellow  = ['#fabd2f', 214]     " 250-189-47
+        "bright_blue": "#83a598",       // let s:gb.bright_blue    = ['#83a598', 109]     " 131-165-152
+        "bright_purple": "#d3869b",     // let s:gb.bright_purple  = ['#d3869b', 175]     " 211-134-155
+        "bright_aqua": "#8ec07c",       // let s:gb.bright_aqua    = ['#8ec07c', 108]     " 142-192-124
+        "bright_orange": "#fe8019",     // let s:gb.bright_orange  = ['#fe8019', 208]     " 254-128-25
+
+        // Both dark and light
+        "neutral_red": "#cc241d",       // let s:gb.neutral_red    = ['#cc241d', 124]     " 204-36-29
+        "neutral_green": "#98971a",     // let s:gb.neutral_green  = ['#98971a', 106]     " 152-151-26
+        "neutral_yellow": "#d79921",    // let s:gb.neutral_yellow = ['#d79921', 172]     " 215-153-33
+        "neutral_blue": "#458588",      // let s:gb.neutral_blue   = ['#458588', 66]      " 69-133-136
+        "neutral_purple": "#b16286",    // let s:gb.neutral_purple = ['#b16286', 132]     " 177-98-134
+        "neutral_aqua": "#689d6a",      // let s:gb.neutral_aqua   = ['#689d6a', 72]      " 104-157-106
+        "neutral_orange": "#d65d0e",    // let s:gb.neutral_orange = ['#d65d0e', 166]     " 214-93-14
+
+        // light
+        "faded_red": "#9d0006",         // let s:gb.faded_red      = ['#9d0006', 88]      " 157-0-6
+        "faded_green": "#79740e",       // let s:gb.faded_green    = ['#79740e', 100]     " 121-116-14
+        "faded_yellow": "#b57614",      // let s:gb.faded_yellow   = ['#b57614', 136]     " 181-118-20
+        "faded_blue": "#076678",        // let s:gb.faded_blue     = ['#076678', 24]      " 7-102-120
+        "faded_purple": "#8f3f71",      // let s:gb.faded_purple   = ['#8f3f71', 96]      " 143-63-113
+        "faded_aqua": "#427b58",        // let s:gb.faded_aqua     = ['#427b58', 66]      " 66-123-88
+        "faded_orange": "#af3a03",      // let s:gb.faded_orange   = ['#af3a03', 130]     " 175-58-3
+
+        // is_dark
+
+        "bg0": "var(dark0)",
+        "bg1": "var(dark1)",
+        "bg2": "var(dark2)",
+        "bg3": "var(dark3)",
+        "bg4": "var(dark4)",
+
+        "gray": "var(gray_245)",
+
+        "fg0": "var(light0)",
+        "fg1": "var(light1)",
+        "fg2": "var(light2)",
+        "fg3": "var(light3)",
+        "fg4": "var(light4)",
+
+        "fg4_256": "var(light4_256)",
+
+        "red": "var(bright_red)",
+        "green": "var(bright_green)",
+        "yellow": "var(bright_yellow)",
+        "blue": "var(bright_blue)",
+        "purple": "var(bright_purple)",
+        "aqua": "var(bright_aqua)",
+        "orange": "var(bright_orange)",
+
+        "--yellowish": "var(yellow)",
+        "--orangish": "var(orange)",
+        "--redish": "var(red)",
+        "--purplish": "var(purple)",
+        "--bluish": "var(blue)",
+        "--cyanish": "var(aqua)",
+        "--greenish": "var(green)",
+        "--pinkish": "color(var(red) lightness(65%))",
+
+        "caret": "var(fg0)",
+
+    },
+    "globals":
+    {
+        "background": "var(bg0)",
+        "foreground": "var(fg1)",
+
+        "caret": "color(var(caret) alpha(0.9))",
+
+        "block_caret": "color(var(caret) alpha(0.2))",
+        "block_caret_border": "color(var(caret) alpha(0.8))",
+        "block_caret_corner_style": "square",
+        "block_caret_underline": "var(caret)",
+
+        // "accent": "var(aqua)",
+        // "fold_marker": "var(aqua)",
+        // "invisibles": "var(bg1)",
+        // "minimap_border": "var(aqua)",
+
+        "misspelling": "var(red)",
+
+        "popup_css": "html {background-color: var(--background);} body {color: #ebdbb2;} a {color: #83a598;} #show-definitions, #show-scope, #sublimelinter-tooltip {border: 1px solid #928374; background-color: color(var(--background) blend(fg0 98%)); padding: 10px; margin: 0;} #inline-error {font-family: \"Roboto Mono\", \"Segoe UI Symbol\", monospace; background-color: var(--background);} #inline-error .error {background-color: color(var(--redish) blend(var(--background) 30%));}",
+
+        "gutter": "var(bg0)",
+        "gutter_foreground": "var(bg4)",
+        "gutter_foreground_highlight": "var(yellow)",
+
+        "line_diff_added": "var(green)",
+        "line_diff_deleted": "var(red)",
+        "line_diff_modified": "var(aqua)",
+
+        "line_highlight": "var(bg1)",
+
+        "selection": "var(bg3)",
+        "selection_border": "var(bg3)",
+        "selection_corner_style": "square",
+
+        "find_highlight": "var(cyan)",
+        "find_highlight_foreground": "var(bg0)",
+        "highlight": "var(yellow)",
+
+        "rulers": "var(bg4)",
+
+        "active_guide": "var(bg4)",
+        "guide": "var(bg1)",
+        "stack_guide": "var(bg2)",
+
+        "bracket_contents_foreground": "var(blue)",
+        "bracket_contents_options": "underline",
+        "brackets_foreground": "var(fg3)",
+        "brackets_options": "underline bold",
+
+        "tags_foreground": "var(f3)",
+        "tags_options": "underline"
+    },
+    "rules":
+    [
+
+        {"scope": "comment", "foreground": "var(gray)", "font_style": "italic"},
+
+        {"scope": "constant", "foreground": "var(purple)"},
+        {"scope": "constant.character", "foreground": "var(orange)"},
+        {"scope": "constant.character.escape", "foreground": "var(orange)"}, //?
+        {"scope": "constant.language", "foreground": "var(purple)"}, //?
+        {"scope": "constant.language.null", "foreground": "var(yellow)"},
+        {"scope": "constant.numeric", "foreground": "var(purple)"}, //?
+        {"scope": "constant.numeric.line-number.match", "foreground": "var(yellow)"},
+        {"scope": "constant.other", "foreground": "var(fg1)"},
+        {"scope": "constant.other.color", "foreground": "var(purple)"},
+        {"scope": "constant.other.language-name", "foreground": "var(blue)"},
+        {"scope": "constant.other.placeholder", "foreground": "var(purple)"},
+        {"scope": "constant.other.symbol", "foreground": "var(purple)"},
+        {"scope": "constant.other.timestamp", "foreground": "var(purple)"},
+        {"scope": "constant.other.wildcard", "foreground": "var(red)"},
+
+        {"scope": "entity.name", "foreground": "var(fg1)"}, //?
+        {"scope": "entity.name.filename", "foreground": "var(aqua)"},
+        {"scope": "entity.name.function.shell", "foreground": "var(green)"},
+        {"scope": "entity.name.other", "foreground": "var(yellow)"},
+        {"scope": "entity.name.section", "foreground": "var(green)", "font_style": "bold"},
+        {"scope": "entity.name.tag", "foreground": "var(aqua)"},
+        {"scope": "entity.name.tag.block", "foreground": "var(green)"},
+        {"scope": "entity.name.tag.documentation", "font_style": ""},
+        {"scope": "entity.name.tag.heredoc", "foreground": "var(blue)"},
+        {"scope": "entity.name.tag.html", "foreground": "var(red)"},
+        {"scope": "entity.name.tag.inline", "foreground": "var(green)"},
+        {"scope": "entity.name.tag.localname", "foreground": "var(green)"},
+        {"scope": "entity.name.tag.purple", "foreground": "var(green)"},
+        {"scope": "entity.name.tag.script", "foreground": "var(orange)"},
+        {"scope": "entity.name.tag.structure", "foreground": "var(green)"},
+        {"scope": "entity.name.tag.style", "foreground": "var(orange)"},
+        {"scope": "entity.name.tag.template", "foreground": "var(green)"},
+        {"scope": "entity.other.attribute-name", "foreground": "var(aqua)"},
+        {"scope": "entity.other.attribute-name.class", "foreground": "var(green)"},
+        {"scope": "entity.other.inherited-class", "foreground": "var(fg1)"}, //?
+        {"scope": "entity.other.pseudo-class", "foreground": "var(green)"},
+        {"scope": "entity.other.pseudo-element", "foreground": "var(green)"},
+        {"scope": "meta.attribute-with-value.directive entity.other.attribute-name", "foreground": "var(blue)"},
+
+        {"scope": "invalid", "foreground": "var(fg1)", "background": "var(red)"},
+        {"scope": "invalid.deprecated", "foreground": "var(fg1)", "background": "var(purple)"},
+
+        {"scope": "keyword", "foreground": "var(red)"},
+        {"scope": "keyword.control", "foreground": "var(red)"}, //?
+        {"scope": "keyword.control.import", "foreground": "var(aqua)"},
+        {"scope": "keyword.declaration", "foreground": "var(yellow)"},
+        {"scope": "keyword.declaration.class.python", "foreground": "var(red)"},
+        {"scope": "keyword.declaration.constant", "foreground": "var(red)"},
+        {"scope": "keyword.declaration.function", "foreground": "var(aqua)"},
+        {"scope": "keyword.declaration.function.go", "foreground": "var(red)"},
+        {"scope": "keyword.declaration.function.js", "foreground": "var(green)", "font_style": "bold"},
+        {"scope": "keyword.declaration.function.python", "foreground": "var(red)"},
+        {"scope": "keyword.declaration.import", "foreground": "var(aqua)"},
+        {"scope": "keyword.declaration.namespace.go", "foreground": "var(red)"},
+        {"scope": "keyword.declaration.namespace.package", "foreground": "var(aqua)"},
+        {"scope": "keyword.declaration.struct.go", "foreground": "var(red)"},
+        {"scope": "keyword.declaration.type.go", "foreground": "var(red)"},
+        {"scope": "keyword.declaration.use", "foreground": "var(aqua)"},
+        {"scope": "keyword.declaration.var", "foreground": "var(red)"},
+        {"scope": "keyword.operator", "foreground": "var(red)"}, //?
+        {"scope": "keyword.operator.arithmetic", "foreground": "var(orange)"},
+        {"scope": "keyword.operator.assignment", "foreground": "var(orange)"},
+        {"scope": "keyword.operator.bitwise", "foreground": "var(orange)"},
+        {"scope": "keyword.operator.concatenation", "foreground": "var(orange)"},
+        {"scope": "keyword.operator.heredoc", "foreground": "var(orange)"},
+        {"scope": "keyword.operator.logical", "foreground": "var(orange)"},
+        {"scope": "keyword.operator.reference", "foreground": "var(orange)"},
+        {"scope": "keyword.operator.ternary", "foreground": "var(orange)"},
+        {"scope": "keyword.operator.variadic", "foreground": "var(orange)"},
+        {"scope": "keyword.other.clone", "foreground": "var(aqua)"},
+        {"scope": "keyword.other.import", "foreground": "var(aqua)"},
+        {"scope": "keyword.other.new", "foreground": "var(aqua)"},
+
+        {"scope": "markup.bold markup.italic", "font_style": "bold italic"},
+        {"scope": "markup.bold markup.underline ", "font_style": "bold underline"},
+        {"scope": "markup.bold", "foreground": "var(fg3)", "font_style": "bold"},
+        {"scope": "markup.changed", "foreground": "var(aqua)"},
+        {"scope": "markup.deleted", "foreground": "var(red)"},
+        {"scope": "markup.error", "foreground": "var(red)"},
+        {"scope": "markup.heading", "foreground": "var(green)"},
+        {"scope": "markup.hint", "foreground": "var(green)"},
+        {"scope": "markup.ignored", "foreground": "var(fg2)"},
+        {"scope": "markup.info", "foreground": "var(green)"},
+        {"scope": "markup.inserted", "foreground": "var(green)"},
+        {"scope": "markup.italic markup.bold", "font_style": "italic bold"},
+        {"scope": "markup.italic markup.underline ", "font_style": "italic underline"},
+        {"scope": "markup.italic", "foreground": "var(fg3)", "font_style": "italic"},
+        {"scope": "markup.list.numbered.bullet", "foreground": "var(blue)"},
+        {"scope": "markup.list.unnumbered.bullet", "foreground": "var(blue)"},
+        {"scope": "markup.raw", "foreground": "var(aqua)"},
+        {"scope": "markup.strikethrough", "foreground": "var(fg3)"},
+        {"scope": "markup.underline", "font_style": "underline", "foreground": "var(purple)"},
+        {"scope": "markup.untracked", "foreground": "var(fg2)"},
+        {"scope": "markup.warning", "foreground": "var(orange)"},
+
+        {"scope": "meta.diff.header", "foreground": "var(aqua)"},
+        {"scope": "meta.diff.header.from-file", "foreground": "var(orange)"},
+        {"scope": "meta.diff.header.to-file", "foreground": "var(yellow)"},
+        {"scope": "meta.diff.index", "foreground": "var(orange)"},
+        {"scope": "meta.diff.range", "foreground": "var(blue)"},
+        {"scope": "meta.diff.range.context", "foreground": "var(orange)"},
+
+        {"scope": "punctuation.accessor.arrow", "foreground": "var(yellow)"},
+        {"scope": "punctuation.accessor.c", "foreground": "var(yellow)"},
+        {"scope": "punctuation.accessor.double-colon", "foreground": "var(orange)"},
+        {"scope": "punctuation.accessor.nullsafe", "foreground": "var(yellow)"},
+        {"scope": "punctuation.definition.annotation", "foreground": "var(blue)"},
+        {"scope": "punctuation.definition.heredoc", "foreground": "var(red)"},
+        {"scope": "punctuation.definition.image", "foreground": "var(blue)"},
+        {"scope": "punctuation.definition.interpolation", "foreground": "var(blue)"},
+        {"scope": "punctuation.definition.link", "foreground": "var(blue)"},
+        {"scope": "punctuation.definition.metadata", "foreground": "var(blue)"},
+        {"scope": "punctuation.definition.parameter", "foreground": "var(red)"},
+        {"scope": "punctuation.definition.parameters", "foreground": "var(red)"},
+        {"scope": "punctuation.definition.pseudo-class", "foreground": "var(orange)"},
+        {"scope": "punctuation.definition.pseudo-class.css", "foreground": "var(blue)"},
+        {"scope": "punctuation.definition.pseudo-element", "foreground": "var(blue)"},
+        {"scope": "punctuation.definition.raw", "foreground": "var(blue)"},
+        {"scope": "punctuation.definition.reference", "foreground": "var(blue)"},
+        {"scope": "punctuation.definition.separator", "foreground": "var(blue)"},
+        {"scope": "punctuation.definition.tag", "foreground": "var(blue)"},
+        {"scope": "punctuation.definition.tag.begin", "foreground": "var(blue)"},
+        {"scope": "punctuation.definition.tag.end", "foreground": "var(blue)"},
+        {"scope": "punctuation.definition.thematic-break", "foreground": "var(fg3)"},
+        {"scope": "punctuation.definition.variable", "foreground": "var(orange)"},
+        {"scope": "punctuation.dollar", "foreground": "var(orange)"},
+        {"scope": "punctuation.section", "foreground": "var(blue)"},
+        {"scope": "punctuation.separator.colon", "foreground": "var(orange)"},
+        {"scope": "punctuation.separator.inheritance", "foreground": "var(orange)"},
+        {"scope": "punctuation.separator.key-value.css", "foreground": "var(blue)"},
+        {"scope": "punctuation.separator.key-value.html", "foreground": "var(orange)"},
+        {"scope": "punctuation.separator.key-value.json", "foreground": "var(blue)"},
+        {"scope": "punctuation.separator.key-value.mapping", "foreground": "var(orange)"},
+        {"scope": "punctuation.separator.key-value.markdown", "foreground": "var(blue)"},
+        {"scope": "punctuation.separator.key-value.php", "foreground": "var(orange)"},
+        {"scope": "punctuation.separator.key-value.ruby", "foreground": "var(yellow)"},
+        {"scope": "punctuation.separator.key-value.xml", "foreground": "var(orange)"},
+        {"scope": "punctuation.separator.type", "foreground": "var(orange)"},
+        {"scope": "punctuation.separator.type.intersection", "foreground": "var(orange)"},
+        {"scope": "punctuation.separator.type.union", "foreground": "var(orange)"},
+
+        {"scope": "storage.modifier", "foreground": "var(yellow)"},
+        {"scope": "storage.type", "foreground": "var(blue)"},
+        {"scope": "storage.type.primitive", "foreground": "var(yellow)"},
+        {"scope": "storage.type.string", "font_style": "italic"},
+
+        {"scope": "meta.mapping.key.json string.quoted.double.json punctuation.definition.string", "foreground": "var(green)"},
+        {"scope": "meta.mapping.key.json string.quoted.double.json", "foreground": "var(aqua)"},
+
+        {"scope": "string", "foreground": "var(green)"},
+
+        {"scope": "meta.use support.function", "foreground": "var(fg1)", "font_style": ""},
+        {"scope": "source.shell support.function", "foreground": "var(red)", "font_style": ""},
+        {"scope": "source.shell support.function.test", "foreground": "var(orange)"},
+        {"scope": "support", "foreground": "var(fg1)"}, //?
+        {"scope": "support.class.builtin", "foreground": "var(purple)"},
+        {"scope": "support.class.ruby", "foreground": "var(yellow)"},
+        {"scope": "support.constant", "foreground": "var(purple)"},
+        {"scope": "support.function", "foreground": "var(green)", "font_style": "bold"},
+        {"scope": "support.function.builtin", "foreground": "var(orange)", "font_style": ""}, //x
+        {"scope": "support.function.builtin.python", "foreground": "var(green)"},
+        {"scope": "support.function.magic", "foreground": "var(orange)", "font_style": ""},
+        {"scope": "support.type", "foreground": "var(green)"},
+        {"scope": "support.type.builtin", "foreground": "var(yellow)"},
+        {"scope": "support.type.property-name", "foreground": "var(aqua)"},
+        {"scope": "support.variable.magic", "foreground": "var(aqua)"},
+
+        {"scope": "meta.string meta.interpolation.vue variable.other.readwrite", "foreground": "var(green)"},
+        {"scope": "variable", "foreground": "var(fg1)"}, //?
+        {"scope": "variable.annotation", "foreground": "var(green)", "font_style": "bold"},
+        {"scope": "variable.function", "foreground": "var(fg1)"}, //?
+        {"scope": "variable.function.shell", "foreground": "var(red)"},
+        {"scope": "variable.language", "foreground": "var(yellow)"}, //?
+        {"scope": "variable.language.global", "foreground": "var(fg1)"},
+        {"scope": "variable.language.this", "foreground": "var(fg1)"},
+        {"scope": "variable.other.constant", "foreground": "var(purple)"},
+        {"scope": "variable.parameter", "foreground": "var(fg1)"}, //?
+        {"scope": "variable.parameter.option", "foreground": "var(red)"},
+
+        // NeoVintageous
+        // {"scope": "highlighted.yank", "foreground": "var(bg0)", "background": "var(yellow)"},
+        // {"scope": "highlightedyank", "foreground": "var(bg0)", "background": "var(yellow)"},
+        // {"scope": "nv_search_current", "foreground": "var(bg0)", "background": "var(red)"},
+        // {"scope": "nv_search_inc", "foreground": "var(bg0)", "background": "var(orange)"},
+        // {"scope": "nv_search_occurrence", "foreground": "var(bg0)", "background": "var(green)"},
+        {"scope": "neovintageous_search_cur", "foreground": "var(bg0)", "background": "var(gray)"},
+        {"scope": "neovintageous_search_inc", "foreground": "var(bg0)", "background": "var(orange)"},
+        {"scope": "neovintageous_search_occ", "foreground": "var(bg0)", "background": "var(yellow)"},
+
+        // PHPUnit
+        {"scope": "region.greenish phpunitkit", "foreground": "var(bg0)", "background": "var(green)"},
+        {"scope": "region.orangish phpunitkit", "foreground": "var(bg0)", "background": "var(orange)"},
+        {"scope": "region.redish phpunitkit", "foreground": "var(fg1)", "background": "var(red)"},
+        {"scope": "test.progress.deprecated,test.progress.incomplete,test.progress.notice,test.progress.risky,test.progress.skipped,test.progress.warning", "foreground": "var(orange)", "background": "var(bg0)"},
+        {"scope": "test.progress.error", "foreground": "var(red)", "background": "var(bg0)"},
+        {"scope": "test.progress.failure", "foreground": "var(fg1)", "background": "var(red)"},
+
+    ]
+}
