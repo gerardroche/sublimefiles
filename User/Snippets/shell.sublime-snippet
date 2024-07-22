@@ -5,9 +5,9 @@ $0#!/bin/sh
 set -e
 unset CDPATH
 unset IFS
-readonly SOURCE=\$(readlink -nf "\$0")
-readonly SOURCE_PATH=\$(dirname "\$SOURCE")
-readonly SOURCE_NAME=\$(basename "\$SOURCE")
+SOURCE=\$(readlink -nf "\$0")
+SOURCE_PATH=\$(dirname "\$SOURCE")
+SOURCE_NAME=\$(basename "\$SOURCE")
 
 show_usage() {
     cat <<USAGE
@@ -15,9 +15,9 @@ Usage: \$(basename "\$0") [-h|--help]
 USAGE
 }
 
-test "\$#" = 0 && show_usage && exit 0
+[ "\$#" = 0 ] && show_usage && exit 0
 
-while test "\$#" != 0; do
+while [ "\$#" != 0 ]; do
     case "\$1" in
         --user=*)       DB_USER=\${1#*=} ;; # Delete everything up till "="
         --password=*)   DB_PASSWORD=\${1#*=} ;; # Delete everything up till "="
