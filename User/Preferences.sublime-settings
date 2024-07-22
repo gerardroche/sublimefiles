@@ -18,7 +18,7 @@
     "fade_fold_buttons": false,
     "file_tab_style": "square",
     "fold_buttons": false,
-    "font_size": 13,
+    "font_size": 16,
     "gutter": true,
     "hardware_acceleration": "opengl",
     "hide_new_tab_button": true,
@@ -69,7 +69,7 @@
     // Theme
     "color_scheme": "GruvboxDark.sublime-color-scheme",
     "monokaifree.no_vcs_status_badge": true,
-    "theme": "BladeRunner.sublime-theme",
+    "theme": "AdaptiveBladeRunner.sublime-theme",
 
     "font_face": "CaskaydiaCove Nerd Font Mono",
     "font_options": [
@@ -343,7 +343,7 @@
     "vintageous_bell": "view",
     "vintageous_enable_sneak": true,
     "vintageous_highlighted_yank_duration": 200,
-    "vintageous_search_occ_style": "outline",
+    // "vintageous_search_occ_style": "outline",
     "vintageous_sneak_use_ic_scs": 1,
     "vintageous_terminal": "kitty",
     "vintageous_handle_keys": {
