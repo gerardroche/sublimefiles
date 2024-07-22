@@ -10,8 +10,7 @@ from KitchenSink.lib.finders import KitchenSinkFindInFilesCommand
 from KitchenSink.lib.fold import FoldAllCssClasses
 from KitchenSink.lib.format_link import KitchenSinkFormatLink
 from KitchenSink.lib.git_format_github_url import GitFormatGithubUrlCommand
-from KitchenSink.lib.layout import KitchenSinkDefaultSetLayoutCommand
-from KitchenSink.lib.layout import KitchenSinkSetLayoutCommand
+from KitchenSink.lib.layout import KitchenSinkLayout
 from KitchenSink.lib.limitless import LimitlessClear
 from KitchenSink.lib.limitless import LimitlessFocus
 from KitchenSink.lib.limitless import LimitlessReset
