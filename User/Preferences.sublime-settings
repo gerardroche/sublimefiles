@@ -1,6 +1,5 @@
 {
-
-    "adaptive_dividers": true,
+    "adaptive_dividers": false,
     "animation_enabled": false,
     "auto_complete": true,
     "auto_complete_cycle": true,
@@ -18,7 +17,7 @@
     "fade_fold_buttons": false,
     "file_tab_style": "square",
     "fold_buttons": false,
-    "font_size": 16,
+    "font_size": 12,
     "gutter": true,
     "hardware_acceleration": "opengl",
     "hide_new_tab_button": true,
@@ -69,6 +68,7 @@
     // Theme
     "color_scheme": "GruvboxDark.sublime-color-scheme",
     "monokaifree.no_vcs_status_badge": true,
+    "monokaifree.theme": false,
     "theme": "AdaptiveBladeRunner.sublime-theme",
 
     "font_face": "CaskaydiaCove Nerd Font Mono",

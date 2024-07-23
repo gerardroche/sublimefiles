@@ -3,9 +3,6 @@
 
     },
     "rules": [
-        {
-            "class": "grid_layout_control",
-            "border_size": 1,
-        },
+
     ]
 }

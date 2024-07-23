@@ -2,7 +2,6 @@
     "name": "Gruvbox Dark",
     "variables":
     {
-
         "dark0_hard": "#1d2021",        // let s:gb.dark0_hard  = ['#1d2021', 234]     " 29-32-33
         "dark0": "#282828",             // let s:gb.dark0       = ['#282828', 235]     " 40-40-40
         "dark0_soft": "#32302f",        // let s:gb.dark0_soft  = ['#32302f', 236]     " 50-48-47
@@ -50,8 +49,6 @@
         "faded_purple": "#8f3f71",      // let s:gb.faded_purple   = ['#8f3f71', 96]      " 143-63-113
         "faded_aqua": "#427b58",        // let s:gb.faded_aqua     = ['#427b58', 66]      " 66-123-88
         "faded_orange": "#af3a03",      // let s:gb.faded_orange   = ['#af3a03', 130]     " 175-58-3
-
-        // is_dark
 
         "bg0": "var(dark0)",
         "bg1": "var(dark1)",
