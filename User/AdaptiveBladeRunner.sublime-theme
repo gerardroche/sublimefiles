@@ -8,8 +8,8 @@
         "font_size_title": 24,
 
         "dark_bg": "color(var(--background) blend(white 85%))",
-        // "medium_dark_bg": "color(var(--background) blend(black 60%))",
-        "medium_dark_bg": "#393634", // updated
+        "medium_dark_bg": "color(var(--background) blend(black 60%))",
+        // "medium_dark_bg": "#393634", // updated
         "medium_bg": "color(var(--background) blend(black 80%))",
         "light_bg": "color(var(--background) blend(black 90%))",
 

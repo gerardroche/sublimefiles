@@ -17,7 +17,7 @@
     "fade_fold_buttons": false,
     "file_tab_style": "square",
     "fold_buttons": false,
-    "font_size": 12,
+    "font_size": 9,
     "gutter": true,
     "hardware_acceleration": "opengl",
     "hide_new_tab_button": true,
@@ -66,7 +66,7 @@
     "update_check": false,
 
     // Theme
-    "color_scheme": "GruvboxDark.sublime-color-scheme",
+    "color_scheme": "MonokaiFree.sublime-color-scheme",
     "monokaifree.no_vcs_status_badge": true,
     "monokaifree.theme": false,
     "theme": "AdaptiveBladeRunner.sublime-theme",
