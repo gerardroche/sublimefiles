@@ -292,7 +292,6 @@
     [
         "ApiCompletions",
         "GenerateSyntaxTestAssertions",
-        "LSP",
         "LSP-eslint",
         "LSP-pylsp",
         "LSP-tailwindcss",

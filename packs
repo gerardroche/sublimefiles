@@ -7,6 +7,7 @@ pack "https://github.com/facelessuser/sublime-pymdownx.git" "library"
 pack "https://github.com/facelessuser/sublime-wcmatch.git" "library"
 pack "https://github.com/packagecontrol/pygments.git" "library"
 pack "https://github.com/packagecontrol/pyyaml.git" --name "yaml" "library"
+pack "https://github.com/python/typing_extensions.git" "library"
 pack "https://github.com/sublimelsp/lsp_utils.git" "library"
 
 # Packages
