@@ -4,7 +4,7 @@ from sublime import packages_path
 import sublime_plugin
 
 
-class OpenKeyBindingsCommand(sublime_plugin.WindowCommand):
+class OpenKeyBindings(sublime_plugin.WindowCommand):
 
     def run(self):
         self.window.run_command('open_file', {
@@ -16,7 +16,7 @@ class OpenKeyBindingsCommand(sublime_plugin.WindowCommand):
         })
 
 
-class OpenPreferencesCommand(sublime_plugin.WindowCommand):
+class OpenPreferences(sublime_plugin.WindowCommand):
 
     def run(self, split: bool = True):
         if split:
@@ -33,11 +33,3 @@ class OpenPreferencesCommand(sublime_plugin.WindowCommand):
                     'Preferences.sublime-settings'
                 )
             })
-
-
-class KitchenSinkOpenFileCommand(sublime_plugin.WindowCommand):
-
-    def run(self, file):
-        self.window.run_command('open_file', {
-            'file': os.path.expandvars(os.path.expanduser((file)))
-        })

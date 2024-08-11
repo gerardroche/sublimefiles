@@ -46,7 +46,10 @@ nnoremap <D-o> :TestFile<CR>
 nnoremap <D-w> :TestFile<CR>
 nnoremap <Leader>ga :silent !git add %<CR>
 nnoremap <Leader>hu :RevertHunk<CR>
-nnoremap <Leader>l4 :KitchenSinkLayout name=grid:4<CR>
+nnoremap <Leader>l1 :Tiler name=single<CR>
+nnoremap <Leader>l2 :Tiler name=cols:2<CR>
+nnoremap <Leader>l3 :Tiler name=cols:3<CR>
+nnoremap <Leader>l4 :Tiler name=grid:4<CR>
 nnoremap <Leader>q gqip:w<CR>
 nnoremap <Leader>ta :TestSuite<CR>
 nnoremap <Leader>tf :TestFile<CR>

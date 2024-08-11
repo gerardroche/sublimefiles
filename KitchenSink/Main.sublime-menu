@@ -6,8 +6,7 @@
         "children": [
             { "command": "kitchen_sink_dump_info" },
             { "command": "kitchen_sink_dump_view" },
-            { "command": "neovintageous_dump_view" },
+            { "caption": "NeoVintageous: Dump view", "command": "neovintageous_debug", "args": {"action": "dump_view"} },
         ]
     }
-
 ]

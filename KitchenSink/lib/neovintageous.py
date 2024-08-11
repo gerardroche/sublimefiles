@@ -6,7 +6,7 @@ import sublime
 import sublime_plugin
 
 
-class NeovintageousDevCommand(sublime_plugin.WindowCommand):
+class NeovintageousDebug(sublime_plugin.WindowCommand):
 
     def run(self, action):
         action_method = getattr(self, action + '_action', None)
@@ -168,10 +168,7 @@ class NeovintageousDevCommand(sublime_plugin.WindowCommand):
         m.sort()
         print('\n'.join(m))
 
-
-class NeovintageousDumpViewCommand(sublime_plugin.WindowCommand):
-
-    def run(self):
+    def dump_view_action(self):
         view = self.window.active_view()
         settings = view.settings()
 

@@ -15,17 +15,9 @@
 # You should have received a copy of the GNU General Public License
 # along with Limitless.  If not, see <https://www.gnu.org/licenses/>.
 
-from contextlib import contextmanager
-
-from sublime import load_settings
-from sublime import save_settings
 import sublime_plugin
 
-
-@contextmanager
-def save_preferences():
-    yield load_settings('Preferences.sublime-settings')
-    save_settings('Preferences.sublime-settings')
+from KitchenSink.lib.utils import save_preferences
 
 
 class LimitlessClear(sublime_plugin.WindowCommand):

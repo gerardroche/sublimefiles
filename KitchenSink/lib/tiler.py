@@ -1,10 +1,10 @@
 import sublime_plugin
 
 
-class KitchenSinkLayout(sublime_plugin.WindowCommand):
+class Tiler(sublime_plugin.WindowCommand):
 
     def run(self, name):
-        layout = _NAMED_LAYOUTS.get(name)
+        layout = _LAYOUTS.get(name)
         if layout:
             # num_groups_before = self.window.num_groups()
             # active_group_before = self.window.active_group()
@@ -30,7 +30,8 @@ class KitchenSinkLayout(sublime_plugin.WindowCommand):
             # view = self.window.active_view_in_group(active_group_before)
             # self.window.set_view_index(view, self.window.active_group(), 0)
 
-_NAMED_LAYOUTS = {
+
+_LAYOUTS = {
     "single": {
         "cols": [0.0, 1.0],
         "rows": [0.0, 1.0],

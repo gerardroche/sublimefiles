@@ -2,6 +2,20 @@ import sublime
 import sublime_plugin
 
 
+class SelectFont(sublime_plugin.WindowCommand):
+
+    def input_description(self):
+        return "Font:"
+
+    def input(self, args):
+        return FontFaceInputHandler()
+
+    def run(self, font_face):
+        settings = sublime.load_settings('Preferences.sublime-settings')
+        settings.set('font_face', font_face)
+        sublime.save_settings('Preferences.sublime-settings')
+
+
 class FontFaceInputHandler(sublime_plugin.ListInputHandler):
 
     def __init__(self):
@@ -52,17 +66,3 @@ class FontFaceInputHandler(sublime_plugin.ListInputHandler):
             items.append(sublime.ListInputItem(font, font, kind=kind_info))
 
         return (items, selected)
-
-
-class KitchenSinkSelectFontCommand(sublime_plugin.WindowCommand):
-
-    def input_description(self):
-        return "Font:"
-
-    def input(self, args):
-        return FontFaceInputHandler()
-
-    def run(self, font_face):
-        settings = sublime.load_settings('Preferences.sublime-settings')
-        settings.set('font_face', font_face)
-        sublime.save_settings('Preferences.sublime-settings')

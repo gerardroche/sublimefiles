@@ -1,17 +1,9 @@
-from contextlib import contextmanager
-
-from sublime import load_settings
-from sublime import save_settings
 import sublime_plugin
 
-
-@contextmanager
-def save_preferences():
-    yield load_settings('Preferences.sublime-settings')
-    save_settings('Preferences.sublime-settings')
+from KitchenSink.lib.utils import save_preferences
 
 
-class KitchenSinkSortPreferences(sublime_plugin.WindowCommand):
+class SortPreferences(sublime_plugin.WindowCommand):
 
     def run(self):
         with save_preferences() as preferences:

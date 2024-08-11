@@ -4,14 +4,6 @@ import sublime
 import sublime_plugin
 
 
-class ToggleShowXpreview(sublime_plugin.WindowCommand):
-
-    def run(self):
-        settings = self.window.active_view().settings()
-        flag = settings.get('show_x_preview')
-        settings.set('show_x_preview', not flag)
-
-
 class KitchenSinkStatusEventListener(sublime_plugin.EventListener):
 
     def on_activated_async(self, view):
@@ -33,6 +25,14 @@ class KitchenSinkStatusEventListener(sublime_plugin.EventListener):
 
         if view.settings().get('show_word_count'):
             _show_word_count(view)
+
+
+class ToggleShowXpreview(sublime_plugin.WindowCommand):
+
+    def run(self):
+        settings = self.window.active_view().settings()
+        flag = settings.get('show_x_preview')
+        settings.set('show_x_preview', not flag)
 
 
 def _show_build(view) -> None:
