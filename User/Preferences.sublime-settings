@@ -314,10 +314,7 @@
     [
         "ApiCompletions",
         "GenerateSyntaxTestAssertions",
-        "LSP-eslint",
         "LSP-pylsp",
-        "LSP-tailwindcss",
-        "LSP-volar",
         "NeoVintageousColemak",
         "NeoVintageousDvorak",
         "NeoVintageousHighlightLine",
