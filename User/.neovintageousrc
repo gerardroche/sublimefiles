@@ -50,6 +50,7 @@ nnoremap <Leader>l1 :Tiler name=single<CR>
 nnoremap <Leader>l2 :Tiler name=cols:2<CR>
 nnoremap <Leader>l3 :Tiler name=cols:3<CR>
 nnoremap <Leader>l4 :Tiler name=grid:4<CR>
+nnoremap <Leader>l6 :Tiler name=grid:6<CR>
 nnoremap <Leader>q gqip:w<CR>
 nnoremap <Leader>ta :TestSuite<CR>
 nnoremap <Leader>tf :TestFile<CR>
@@ -67,19 +68,26 @@ nnoremap H :bprevious<CR>
 nnoremap L :bnext<CR>
 noremap <D-I> :ShowOverlay overlay=goto text=@<CR>
 noremap <D-i> :GotoSymbolInProject<CR>
-noremap <Leader>fa :KitchenSinkFindInFiles<CR>
-noremap <Leader>fg :KitchenSinkFindInFiles where=default<CR>
-noremap <Leader>fp :KitchenSinkFindInFiles where=project<CR>
+noremap <Leader>fa :FinderInFiles<CR>
+noremap <Leader>fg :FinderInFiles where=default<CR>
+noremap <Leader>fp :FinderInFiles where=project<CR>
 noremap gS :GotoSymbolInProject<CR>
 noremap gs :ShowOverlay overlay=goto text=@<CR>
 
-nnoremap <Leader>K :LspHover<CR>
-nnoremap FileType css,go,html,js,php,vue <C-w>gd :LspSymbolDefinitionSplit<CR>
+" http://www.lazyvim.org/keymaps#lsp
+nnoremap FileType css,go,html,js,php,vue <Leader>ca :LspCodeActions<CR>
+nnoremap FileType css,go,html,js,php,vue <Leader>cc :LspCodeLens<CR>
 nnoremap FileType css,go,html,js,php,vue <Leader>cs :LspSymbolRename<CR>
-nnoremap FileType css,go,html,js,php,vue gA :LspSymbolReferences<CR>
-nnoremap FileType css,go,html,js,php,vue gD :LspSymbolTypeDefinition<CR>
-nnoremap FileType css,go,html,js,php,vue ga :LspCodeActions<CR>
+nnoremap FileType css,go,html,js,php,vue K :LspHover<CR>
+nnoremap FileType css,go,html,js,php,vue [d :LspPrevDiagnostic<CR>
+nnoremap FileType css,go,html,js,php,vue ]d :LspNextDiagnostic<CR>
+nnoremap FileType css,go,html,js,php,vue gD :LspSymbolDeclaration<CR>
+nnoremap FileType css,go,html,js,php,vue gI :LspSymbolImplementation<CR>
+nnoremap FileType css,go,html,js,php,vue gK :LspSignatureHelpShow<CR>
 nnoremap FileType css,go,html,js,php,vue gd :LspSymbolDefinition<CR>
 nnoremap FileType css,go,html,js,php,vue gr :LspSymbolReferences<CR>
-nnoremap [d :LspPrevDiagnostic<CR>
-nnoremap ]d :LspNextDiagnostic<CR>
+nnoremap FileType css,go,html,js,php,vue gy :LspSymbolTypeDefinition<CR>
+
+" Require custom commands
+nnoremap FileType css,go,html,js,php,vue <C-w>gd :LspSymbolDefinitionSplit<CR>
+nnoremap FileType css,go,html,js,php,vue <Leader>cr :LspSourceActions<CR>

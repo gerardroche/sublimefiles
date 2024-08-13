@@ -1,5 +1,17 @@
+import functools
+import os
+import re
+
 import sublime
 import sublime_plugin
+
+
+class LspSourceActions(sublime_plugin.WindowCommand):
+
+    def run(self, action):
+        self.window.run_command('lsp_code_actions', {
+            'only_kinds': ['source']
+        })
 
 
 class LspSymbolDefinitionSplit(sublime_plugin.WindowCommand):

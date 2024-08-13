@@ -3,7 +3,13 @@ import os
 import sublime_plugin
 
 
-class FindFileUnderCursorCommand(sublime_plugin.TextCommand):
+class FinderInFiles(sublime_plugin.WindowCommand):
+
+    def run(self, **kwargs):
+        _find_in_files(self.window, **kwargs)
+
+
+class FinderUnderCursor(sublime_plugin.TextCommand):
 
     def run(self, edit):
         self.view.window().run_command('show_overlay', {
@@ -19,12 +25,6 @@ class FindFileUnderCursorCommand(sublime_plugin.TextCommand):
         word = self.view.substr(region)
 
         return word
-
-
-class KitchenSinkFindInFilesCommand(sublime_plugin.WindowCommand):
-
-    def run(self, **kwargs):
-        _find_in_files(self.window, **kwargs)
 
 
 def _find_in_files(window, interactive: bool = True, where: str = None):

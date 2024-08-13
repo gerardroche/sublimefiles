@@ -25,6 +25,27 @@
         //     "font_style": "",
         // },
 
+        // export const Secondary: Story = {
+        //                       ^
+        {
+            "scope": "source.ts meta.export.js punctuation.separator.type.js",
+            // "foreground": "var(red)"
+        },
+
+        // type Story = StoryObj<typeof meta>;
+        // ^^^^
+        {
+            "scope": "source.ts meta.type-alias.js keyword.declaration.type.js",
+            "foreground": "var(red)"
+        },
+
+        // type Story = StoryObj<typeof meta>;
+        //                      ^           ^
+        {
+            "scope": "meta.generic.js punctuation.definition.generic",
+            // "foreground": "var(red)"
+        },
+
         {
             "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.arguments.php meta.group.php punctuation.section.group.begin.php",
             "foreground": "color(var(fg0) alpha(0.7))",
