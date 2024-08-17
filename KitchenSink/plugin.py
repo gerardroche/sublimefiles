@@ -23,8 +23,6 @@ from KitchenSink.lib.dump_settings import KitchenSinkDumpSettings  # noqa: F401
 from KitchenSink.lib.dump_variable import KitchenSinkDumpVariable  # noqa: F401
 from KitchenSink.lib.dump_view import KitchenSinkDumpView  # noqa: F401
 from KitchenSink.lib.events import ToggleShowXpreview  # noqa: F401
-from KitchenSink.lib.exclude_patterns import FileExcludePatterns  # noqa: F401
-from KitchenSink.lib.exclude_patterns import FolderExcludePatterns  # noqa: F401
 from KitchenSink.lib.finders import FinderInFiles  # noqa: F401
 from KitchenSink.lib.finders import FinderUnderCursor  # noqa: F401
 from KitchenSink.lib.fold import FoldAllCssClasses  # noqa: F401
@@ -43,3 +41,5 @@ from KitchenSink.lib.select_font import SelectFont  # noqa: F401
 from KitchenSink.lib.sort_preferences import SortPreferences  # noqa: F401
 from KitchenSink.lib.sublime_linter import LintersCommand  # noqa: F401
 from KitchenSink.lib.tiler import Tiler  # noqa: F401
+from KitchenSink.lib.toggle_exclude_patterns import ToggleFileExcludePatterns  # noqa: F401
+from KitchenSink.lib.toggle_exclude_patterns import ToggleFolderExcludePatterns  # noqa: F401

@@ -22,37 +22,37 @@ import sublime_plugin
 from KitchenSink.lib.utils import save_preferences
 
 
-class FileExcludePatterns(sublime_plugin.WindowCommand):
+class ToggleFileExcludePatterns(sublime_plugin.WindowCommand):
 
     def input(self, args):
-        return FileExcludePatternInputHandler()
+        return FileExcludePattern()
 
     def run(self, file_exclude_pattern):
-        _run('file_exclude_patterns', file_exclude_pattern)
+        _toggle_exclude_pattern('file_exclude_patterns', file_exclude_pattern)
 
 
-class FileExcludePatternInputHandler(sublime_plugin.ListInputHandler):
+class FileExcludePattern(sublime_plugin.ListInputHandler):
 
     def list_items(self):
-        return _list_items('file_exclude_patterns')
+        return _exclude_patterns('file_exclude_patterns')
 
 
-class FolderExcludePatterns(sublime_plugin.WindowCommand):
+class ToggleFolderExcludePatterns(sublime_plugin.WindowCommand):
 
     def input(self, args):
-        return FolderExcludePatternInputHandler()
+        return FolderExcludePattern()
 
     def run(self, folder_exclude_pattern):
-        _run('folder_exclude_patterns', folder_exclude_pattern)
+        _toggle_exclude_pattern('folder_exclude_patterns', folder_exclude_pattern)
 
 
-class FolderExcludePatternInputHandler(sublime_plugin.ListInputHandler):
+class FolderExcludePattern(sublime_plugin.ListInputHandler):
 
     def list_items(self):
-        return _list_items('folder_exclude_patterns')
+        return _exclude_patterns('folder_exclude_patterns')
 
 
-def _list_items(key: str):
+def _exclude_patterns(key: str):
     preferences = sublime.load_settings('Preferences.sublime-settings')
 
     exclude_patterns = preferences.get(key, [])
@@ -71,7 +71,7 @@ def _list_items(key: str):
     return (items, -1)
 
 
-def _run(key: str, exclude_pattern: str) -> None:
+def _toggle_exclude_pattern(key: str, exclude_pattern: str) -> None:
     with save_preferences() as preferences:
         exclude_patterns = preferences.get(key, [])
 

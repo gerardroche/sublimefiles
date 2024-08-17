@@ -259,6 +259,7 @@
     "folder_exclude_patterns":
     [
         "*cache",
+        "*dist",
         ".Trash*",
         ".git",
         ".phan",
@@ -269,6 +270,7 @@
         "//htmlcov",
         "//public/build",
         "nbproject",
+        "node_modules",
         "storage",
         "tests",
         "tools",
