@@ -66,8 +66,8 @@
     "update_check": false,
 
     // Theme
-    "color_scheme": "MonokaiFreeGruvbox.sublime-color-scheme",
-    "monokaifree.no_vcs_status_badge": true,
+    "color_scheme": "MonokaiFree.sublime-color-scheme",
+    // "monokaifree.no_vcs_status_badge": true,
     "monokaifree.theme": false,
     "theme": "AdaptiveBladeRunner.sublime-theme",
 

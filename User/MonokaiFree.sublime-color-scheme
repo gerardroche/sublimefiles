@@ -3,10 +3,17 @@
 
     "variables": {
         "selection": "color(var(bg2) alpha(0.5))",
+        "medium_dark_bg": "#272822", // monokai
     },
     "globals": {
         "selection_corner_style": "square",
-        "line_highlight": "color(var(blue) alpha(0.3))",
+        "line_highlight": "#3c3836",
+
+        "line_diff_added": "color(var(green) alpha(0.6))",
+        "line_diff_deleted": "color(var(red) alpha(0.6))",
+        "line_diff_modified": "color(var(yellow) alpha(0.6))",
+
+        // "line_highlight": "color(var(blue) alpha(0.3))",
     },
     "rules": [
 
@@ -46,26 +53,26 @@
             // "foreground": "var(red)"
         },
 
-        {
-            "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.arguments.php meta.group.php punctuation.section.group.begin.php",
-            "foreground": "color(var(fg0) alpha(0.7))",
-            "font_style": "bold"
-        },
-        {
-            "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.arguments.php meta.group.php punctuation.section.group.end.php",
-            "foreground": "color(var(fg0) alpha(0.7))",
-            "font_style": "bold"
-        },
-        {
-            "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.php punctuation.definition.annotation",
-            "foreground": "color(var(fg0) alpha(0.7))",
-            "font_style": "bold"
-        },
-        {
-            "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.identifier.php variable.annotation.php",
-            "foreground": "color(var(fg0) alpha(0.7))",
-            "font_style": "bold"
-        },
+        // {
+        //     "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.arguments.php meta.group.php punctuation.section.group.begin.php",
+        //     "foreground": "color(var(fg0) alpha(0.7))",
+        //     "font_style": "bold"
+        // },
+        // {
+        //     "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.arguments.php meta.group.php punctuation.section.group.end.php",
+        //     "foreground": "color(var(fg0) alpha(0.7))",
+        //     "font_style": "bold"
+        // },
+        // {
+        //     "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.php punctuation.definition.annotation",
+        //     "foreground": "color(var(fg0) alpha(0.7))",
+        //     "font_style": "bold"
+        // },
+        // {
+        //     "scope": "embedding.php text.html.php meta.embedded.php source.php.embedded.html meta.annotation.identifier.php variable.annotation.php",
+        //     "foreground": "color(var(fg0) alpha(0.7))",
+        //     "font_style": "bold"
+        // },
 
         // feat(phpunit): file names
         {

@@ -9,20 +9,24 @@
 
         "dark_bg": "color(var(--background) blend(white 85%))",
         "medium_dark_bg": "color(var(--background) blend(black 60%))",
-        // "medium_dark_bg": "#393634", // updated
         "medium_bg": "color(var(--background) blend(black 80%))",
         "light_bg": "color(var(--background) blend(black 90%))",
 
         "link_fg": "hsl(215, 60%, 50%)",
 
-        "vcs_modified": "color(var(--bluish) min-contrast(var(--background) 2.5))",
-        "vcs_missing": "color(var(--redish) min-contrast(var(--background) 2.5))",
-        "vcs_staged": "color(var(--bluish) min-contrast(var(--background) 2.5))",
-        "vcs_added": "color(var(--greenish) min-contrast(var(--background) 2.5))",
-        "vcs_deleted": "color(var(--redish) min-contrast(var(--background) 2.5))",
-        "vcs_unmerged": "color(var(--orangish) min-contrast(var(--background) 2.5))",
-        "vcs_ignored": "color(var(--background) min-contrast(var(--background) 2.5))", // updated
-        "vcs_untracked": "color(var(--redish) min-contrast(var(--background) 2.5))", // updated
+        "medium_dark_bg": "#282828", // gruvbox
+        "line_highlight": "#3c3836", // gruvbox
+
+        "medium_dark_bg": "#272822", // monokai
+
+        "vcs_modified": "color(var(--bluish) min-contrast(var(--background) 3.5))",
+        "vcs_missing": "color(var(--redish) min-contrast(var(--background) 7.5))",
+        "vcs_staged": "color(var(--bluish) min-contrast(var(--background) 3.5))",
+        "vcs_added": "color(var(--greenish) min-contrast(var(--background) 3.5))",
+        "vcs_deleted": "color(var(--redish) min-contrast(var(--background) 3.5))",
+        "vcs_unmerged": "color(var(--orangish) min-contrast(var(--background) 3.5))",
+        "vcs_ignored": "color(var(--background) min-contrast(var(--background) 3.5))", // updated
+        "vcs_untracked": "color(var(--redish) min-contrast(var(--background) 7.5))", // updated
 
         "adaptive_dividers": "hsl(0, 0%, 38%)",
 
@@ -219,7 +223,7 @@
         {
             "class": "tree_row",
             "attributes": ["selectable", "hover"],
-            "layer0.tint": "color(white a(0.06))",
+            "layer0.tint": "var(line_highlight)",
             "layer0.opacity": 1.0,
         },
         {
@@ -237,7 +241,7 @@
         {
             "class": "tree_row",
             "attributes": ["selected"],
-            "layer0.tint": "color(white a(0.18))",
+            "layer0.tint": "var(line_highlight)",
             "layer0.opacity": 0.6,
         },
         {
@@ -2887,14 +2891,17 @@
         },
 
         // VCS sidebar files // updated
-        { "class": "icon_folder", "parents": [{"class": "file_system_entry", "attributes": ["added"]}], "layer0.tint": "var(vcs_added)", "layer0.opacity": 1.0 }, // updated
-        { "class": "icon_folder", "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}], "layer0.tint": "var(vcs_deleted)", "layer0.opacity": 1.0 }, // updated
-        { "class": "icon_folder", "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}], "layer0.tint": "var(vcs_ignored)", "layer0.opacity": 1.0 }, // updated
-        { "class": "icon_folder", "parents": [{"class": "file_system_entry", "attributes": ["missing"]}], "layer0.tint": "var(vcs_missing)", "layer0.opacity": 1.0 }, // updated
-        { "class": "icon_folder", "parents": [{"class": "file_system_entry", "attributes": ["modified"]}], "layer0.tint": "var(vcs_modified)", "layer0.opacity": 1.0 }, // updated
-        { "class": "icon_folder", "parents": [{"class": "file_system_entry", "attributes": ["staged"]}], "layer0.tint": "var(vcs_staged)", "layer0.opacity": 1.0 }, // updated
-        { "class": "icon_folder", "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}], "layer0.tint": "var(vcs_unmerged)", "layer0.opacity": 1.0 }, // updated
-        { "class": "icon_folder", "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}], "layer0.tint": "var(vcs_untracked)", "layer0.opacity": 1.0 }, // updated
+
+        // { "class": "icon_folder", "parents": [{"class": "file_system_entry", "attributes": ["added"]}], "layer0.tint": "var(vcs_added)", "layer0.opacity": 1.0 }, // updated
+        // { "class": "icon_folder", "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}], "layer0.tint": "var(vcs_deleted)", "layer0.opacity": 1.0 }, // updated
+        // { "class": "icon_folder", "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}], "layer0.tint": "var(vcs_ignored)", "layer0.opacity": 1.0 }, // updated
+        // { "class": "icon_folder", "parents": [{"class": "file_system_entry", "attributes": ["missing"]}], "layer0.tint": "var(vcs_missing)", "layer0.opacity": 1.0 }, // updated
+        // { "class": "icon_folder", "parents": [{"class": "file_system_entry", "attributes": ["modified"]}], "layer0.tint": "var(vcs_modified)", "layer0.opacity": 1.0 }, // updated
+        // { "class": "icon_folder", "parents": [{"class": "file_system_entry", "attributes": ["staged"]}], "layer0.tint": "var(vcs_staged)", "layer0.opacity": 1.0 }, // updated
+        // { "class": "icon_folder", "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}], "layer0.tint": "var(vcs_unmerged)", "layer0.opacity": 1.0 }, // updated
+        // { "class": "icon_folder", "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}], "layer0.tint": "var(vcs_untracked)", "layer0.opacity": 1.0 }, // updated
+
+        { "class": "sidebar_label", "settings": ["monokaifree.vcs_status_labels"], "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}], "color": "var(vcs_untracked)" }, // updated
         { "class": "sidebar_label", "settings": ["monokaifree.vcs_status_labels"], "parents": [{"class": "file_system_entry", "attributes": ["added"]}], "color": "var(vcs_added)" }, // updated
         { "class": "sidebar_label", "settings": ["monokaifree.vcs_status_labels"], "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}], "color": "var(vcs_deleted)" }, // updated
         { "class": "sidebar_label", "settings": ["monokaifree.vcs_status_labels"], "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}], "color": "var(vcs_ignored)" }, // updated
@@ -2902,7 +2909,7 @@
         { "class": "sidebar_label", "settings": ["monokaifree.vcs_status_labels"], "parents": [{"class": "file_system_entry", "attributes": ["modified"]}], "color": "var(vcs_modified)" }, // updated
         { "class": "sidebar_label", "settings": ["monokaifree.vcs_status_labels"], "parents": [{"class": "file_system_entry", "attributes": ["staged"]}], "color": "var(vcs_staged)" }, // updated
         { "class": "sidebar_label", "settings": ["monokaifree.vcs_status_labels"], "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}], "color": "var(vcs_unmerged)" }, // updated
-        { "class": "sidebar_label", "settings": ["monokaifree.vcs_status_labels"], "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}], "color": "var(vcs_untracked)" }, // updated
+
         { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["added"]}], "layer0.tint": "var(vcs_added)" }, // updated
         { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}], "layer0.tint": "var(vcs_deleted)" }, // updated
         { "class": "vcs_status_badge", "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}], "layer0.tint": "var(vcs_ignored)" }, // updated
