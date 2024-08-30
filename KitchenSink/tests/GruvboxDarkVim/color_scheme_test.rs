@@ -1,4 +1,4 @@
-// COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" "Rust"
+// COLOR SCHEME TEST "GruvboxDarkVim.sublime-color-scheme" "Rust"
 
 #[derive(Debug)]
 pub enum State {

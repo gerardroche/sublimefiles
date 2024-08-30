@@ -1,4 +1,4 @@
-<!-- COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" "Markdown" -->
+<!-- COLOR SCHEME TEST "GruvboxDarkVim.sublime-color-scheme" "Markdown" -->
 
 # This is an <h1> tag
 <!-- ^ fg=#b8bb26 fs=bold build>=3127 -->

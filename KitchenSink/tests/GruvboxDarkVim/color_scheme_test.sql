@@ -1,4 +1,4 @@
--- COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" "SQL"
+-- COLOR SCHEME TEST "GruvboxDarkVim.sublime-color-scheme" "SQL"
 
 SELECT * FROM x;
 -- ^ fg=#fb4934 fs=

@@ -1,4 +1,4 @@
-// COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" "JavaScript"
+// COLOR SCHEME TEST "GruvboxDarkVim.sublime-color-scheme" "JavaScript"
 
         // whitespace
 // ^ fg=#ebdbb2 bg=#282828 fs=

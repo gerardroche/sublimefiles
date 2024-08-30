@@ -1,4 +1,4 @@
-# COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" SKIP IF NOT "Bash"
+# COLOR SCHEME TEST "GruvboxDarkVim.sublime-color-scheme" SKIP IF NOT "Bash"
 
 set -e
 # ^ fg=#fb4934 fs=

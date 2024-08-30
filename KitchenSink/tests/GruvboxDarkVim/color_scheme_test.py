@@ -1,4 +1,4 @@
-# COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" "Python" # flake8: noqa
+# COLOR SCHEME TEST "GruvboxDarkVim.sublime-color-scheme" "Python" # flake8: noqa
 
     #     whitespace
 # ^ fg=#ebdbb2 bg=#282828 fs=

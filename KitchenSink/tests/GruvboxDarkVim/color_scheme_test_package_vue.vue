@@ -1,4 +1,4 @@
-<!-- COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" SKIP IF NOT "Vue Syntax Highlight/Vue Component"
+<!-- COLOR SCHEME TEST "GruvboxDarkVim.sublime-color-scheme" SKIP IF NOT "Vue Syntax Highlight/Vue Component"
 
 Vue Syntax Highlight
 ========================

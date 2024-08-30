@@ -1,4 +1,4 @@
-// COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" "Java"
+// COLOR SCHEME TEST "GruvboxDarkVim.sublime-color-scheme" "Java"
 
 package hi;
 // ^ fg=#8ec07c fs=

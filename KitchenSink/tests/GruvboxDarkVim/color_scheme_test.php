@@ -1,4 +1,4 @@
-<?php // COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" "PHP"
+<?php // COLOR SCHEME TEST "GruvboxDarkVim.sublime-color-scheme" "PHP"
 
         //
 // ^ fg=#ebdbb2 bg=#282828 fs=

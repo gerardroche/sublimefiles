@@ -1,4 +1,4 @@
-// COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" "Textile"
+// COLOR SCHEME TEST "GruvboxDarkVim.sublime-color-scheme" "Textile"
 
 h1. Heading
 #^^ fg=#8ec07c fs=

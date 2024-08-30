@@ -1,4 +1,4 @@
-// COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" "Go"
+// COLOR SCHEME TEST "GruvboxDarkVim.sublime-color-scheme" "Go"
 
 package examples
 // ^ fg=#fb4934 fs= build>=4140

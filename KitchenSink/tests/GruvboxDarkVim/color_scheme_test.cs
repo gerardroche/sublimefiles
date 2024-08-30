@@ -1,4 +1,4 @@
-// COLOR SCHEME TEST "GruvboxDark.sublime-color-scheme" "C#"
+// COLOR SCHEME TEST "GruvboxDarkVim.sublime-color-scheme" "C#"
 
 using System;
 // ^ fg=#8ec07c fs=
