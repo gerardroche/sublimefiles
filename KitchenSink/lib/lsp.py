@@ -25,7 +25,7 @@ import sublime_plugin
 
 class LspSourceActions(sublime_plugin.WindowCommand):
 
-    def run(self, action):
+    def run(self):
         self.window.run_command('lsp_code_actions', {
             'only_kinds': ['source']
         })
