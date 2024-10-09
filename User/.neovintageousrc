@@ -3,6 +3,7 @@ set smartcase
 
 let mapleader=","
 let maplocalleader="<Bslash>"
+
 nnoremap <C-d> <C-d>zz
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
