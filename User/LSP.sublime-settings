@@ -13,10 +13,10 @@
     "show_view_status": false,
 
     "diagnostics_highlight_style": {
-        "error": "",
+        // "error": "",
         "warning": "",
-        "info": "stippled",
-        "hint": "stippled",
+        // "info": "stippled",
+        // "hint": "stippled",
     },
 
     // "lsp_code_actions_on_save": {

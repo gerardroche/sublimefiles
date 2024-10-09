@@ -39,7 +39,7 @@
 			],
 			"env":
 			{
-				"MYPYPATH": "$PROJECTS_PATH/gerardroche/sublime-mypy-stubs:$HOME/.config/sublime-text/Packages",
+				"MYPYPATH": "$PROJECTS_PATH/gerardroche/sublime-mypy-stubs:$HOME/.config/sublime-text/Packages/NeoVintageous:$HOME/.config/sublime-text/Packages/NeoVintageous",
 			},
 			"executable":
 			[

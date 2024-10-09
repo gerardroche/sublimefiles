@@ -105,13 +105,17 @@ def _clear(window) -> None:
         _set_preference_on_clear(preferences, 'line_numbers', False)
         _set_preference_on_clear(preferences, 'rulers', [])
 
-    if window.is_minimap_visible():
-        window.set_minimap_visible(False)
-
     if window.is_menu_visible():
         window.set_menu_visible(False)
 
+    if window.is_status_bar_visible():
+        window.set_status_bar_visible(False)
+
+    if window.is_minimap_visible():
+        window.set_minimap_visible(False)
+
     _resize_groups_equally(window)
+
     window.run_command('sort_user_settings')
 
 
@@ -121,6 +125,8 @@ def _reset(window) -> None:
         _set_preference_on_clear(preferences, 'rulers', [[80, "stippled"], [120, "solid"]])
         _set_preference_on_reset(preferences, 'draw_indent_guides', True)
         _set_preference_on_reset(preferences, 'draw_white_space')
+        _set_preference_on_reset(preferences, 'highlight_gutter', True)
+        _set_preference_on_reset(preferences, 'highlight_line', True)
 
     if not window.is_sidebar_visible():
         window.set_sidebar_visible(True)

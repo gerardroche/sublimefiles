@@ -58,7 +58,7 @@ nnoremap <Leader>tl :TestLast<CR>
 nnoremap <Leader>tn :TestNearest<CR>
 nnoremap <Leader>ts :TestSwitch<CR>
 nnoremap <Leader>tv :TestVisit<CR>
-nnoremap <Leader>vd :KitchenSinkDumpVariable phpfunc=dump<CR>
+nnoremap <Leader>vd :KitchenSinkDumpVariable phpfunc=var_dump<CR>
 nnoremap <Leader>vm :KitchenSinkDumpVariable phpfunc=dump name=method<CR>
 nnoremap <Leader>vp :KitchenSinkDumpVariable phpfunc=print_r<CR>
 nnoremap <Leader>vr :KitchenSinkDumpVariable sublime_region_view_string=true<CR>
