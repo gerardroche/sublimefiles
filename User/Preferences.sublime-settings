@@ -1,4 +1,5 @@
 {
+
     "adaptive_dividers": false,
     "animation_enabled": false,
     "auto_complete": true,
@@ -13,11 +14,12 @@
     "caret_style": "solid",
     "debug": false,
     "detect_indentation": false,
+    "disable_plugin_host_3.3": true,
     "enable_tab_scrolling": false,
     "fade_fold_buttons": false,
     "file_tab_style": "square",
     "fold_buttons": false,
-    "font_size": 12,
+    "font_size": 15,
     "gutter": true,
     "hardware_acceleration": "opengl",
     "hide_new_tab_button": true,
@@ -389,7 +391,7 @@
     "docblockr.short_primitives": true,
     "docblockr.spacer_between_sections": true,
 
-    "goto_php_manual.path": "${PROJECTS_PATH}/.man",
+    "goto_php_manual.path": "~/php-manual/php-chunked-xhtml",
 
     "lsp.disable_on_hover": false,
     "lsp.disable_on_hover_gutter": false,
