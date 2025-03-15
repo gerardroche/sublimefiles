@@ -1,21 +1,21 @@
 # Libraries
-pack "https://github.com/SublimeText/sublime_lib.git" "library"
-pack "https://github.com/facelessuser/sublime-bracex.git" "library"
-pack "https://github.com/facelessuser/sublime-markdown-popups.git" --name "mdpopups" "library"
-pack "https://github.com/facelessuser/sublime-markdown.git" "library"
-pack "https://github.com/facelessuser/sublime-pymdownx.git" "library"
-pack "https://github.com/facelessuser/sublime-wcmatch.git" "library"
-pack "https://github.com/packagecontrol/pygments.git" "library"
-pack "https://github.com/packagecontrol/pyyaml.git" --name "yaml" "library"
-pack "https://github.com/python/typing_extensions.git" "library"
-pack "https://github.com/sublimelsp/lsp_utils.git" "library"
+pack "https://github.com/SublimeText/sublime_lib.git" library
+pack "https://github.com/facelessuser/sublime-bracex.git" library
+pack "https://github.com/facelessuser/sublime-markdown-popups.git" --name "mdpopups" library
+pack "https://github.com/facelessuser/sublime-markdown.git" library
+pack "https://github.com/facelessuser/sublime-pymdownx.git" library
+pack "https://github.com/facelessuser/sublime-wcmatch.git" library
+pack "https://github.com/packagecontrol/pygments.git" library
+pack "https://github.com/packagecontrol/pyyaml.git" --name "yaml" library
+pack "https://github.com/python/typing_extensions.git" library
+pack "https://github.com/sublimelsp/lsp_utils.git" library
 
 # Packages
 pack "https://github.com/Medalink/laravel-blade.git" --name "Laravel Blade Highlighter"
-pack "https://github.com/NeoVintageous/NeoVintageous.git" "noshallow"
-pack "https://github.com/NeoVintageous/NeoVintageousToggle.git" "noshallow"
-pack "https://github.com/SublimeLinter/SublimeLinter-flake8.git" --name "SublimeLinter-flake8"
-pack "https://github.com/SublimeLinter/SublimeLinter-mypy.git" --name "SublimeLinter-mypy"
+pack "https://github.com/NeoVintageous/NeoVintageous.git" noshallow
+pack "https://github.com/NeoVintageous/NeoVintageousToggle.git" noshallow
+pack "https://github.com/SublimeLinter/SublimeLinter-flake8.git"
+pack "https://github.com/SublimeLinter/SublimeLinter-mypy.git"
 pack "https://github.com/SublimeLinter/SublimeLinter.git"
 pack "https://github.com/SublimeText/AFileIcon.git" --name "A File Icon"
 pack "https://github.com/SublimeText/Origami.git"
@@ -26,42 +26,42 @@ pack "https://github.com/SublimeText/UnitTesting.git"
 pack "https://github.com/SublimeText/Vue.git"
 pack "https://github.com/braver/SideBarTools.git"
 pack "https://github.com/facelessuser/MarkdownPreview.git"
-pack "https://github.com/gerardroche/LSP.git" "noshallow"
-pack "https://github.com/gerardroche/NeoVintageousColemak.git" "noshallow"
-pack "https://github.com/gerardroche/NeoVintageousDvorak.git" "noshallow"
-pack "https://github.com/gerardroche/NeoVintageousFiles.git" "noshallow"
-pack "https://github.com/gerardroche/NeoVintageousHighlightLine.git" "noshallow"
-pack "https://github.com/gerardroche/NeoVintageousLineNumbers.git" "noshallow"
-pack "https://github.com/gerardroche/Python-Auto-Complete.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-api-completions.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-color-scheme-unit.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-doc-blockr.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-generate-syntax-test-assertions.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-git-open-modified.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-git-open.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-gitk.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-goto-definition-split.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-goto-documentation.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-goto-php-manual.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-khan.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-laravel-testing-completions.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-monokai-free.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-php-grammar.git" --name "PHPGrammar" "noshallow"
-pack "https://github.com/gerardroche/sublime-php-snippets.git" --name "PHPSnippets" "noshallow"
-pack "https://github.com/gerardroche/sublime-phpck.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-phpunit-completions.git" --name "PHPUnitCompletions" "noshallow"
-pack "https://github.com/gerardroche/sublime-phpunit.git" --name "PHPUnitKit" "noshallow"
-pack "https://github.com/gerardroche/sublime-pine.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-sensible.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-sesame.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-show-ascii-value.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-tailwind-css-completions.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-test.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-tmux.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-toggle-debug-mode.git" "noshallow"
-pack "https://github.com/gerardroche/sublime-toggler.git" "noshallow"
-pack "https://github.com/sublimelsp/LSP-css.git" --name "LSP-css"
-pack "https://github.com/sublimelsp/LSP-eslint.git" --name "LSP-eslint"
-pack "https://github.com/sublimelsp/LSP-pylsp.git" --name "LSP-pylsp"
-pack "https://github.com/sublimelsp/LSP-tailwindcss.git" --name "LSP-tailwindcss"
-pack "https://github.com/sublimelsp/LSP-volar.git" --name "LSP-volar"
+pack "https://github.com/gerardroche/LSP.git" noshallow
+pack "https://github.com/gerardroche/NeoVintageousColemak.git" noshallow
+pack "https://github.com/gerardroche/NeoVintageousDvorak.git" noshallow
+pack "https://github.com/gerardroche/NeoVintageousFiles.git" noshallow
+pack "https://github.com/gerardroche/NeoVintageousHighlightLine.git" noshallow
+pack "https://github.com/gerardroche/NeoVintageousLineNumbers.git" noshallow
+pack "https://github.com/gerardroche/Python-Auto-Complete.git" noshallow
+pack "https://github.com/gerardroche/sublime-api-completions.git" noshallow
+pack "https://github.com/gerardroche/sublime-color-scheme-unit.git" noshallow
+pack "https://github.com/gerardroche/sublime-doc-blockr.git" noshallow
+pack "https://github.com/gerardroche/sublime-generate-syntax-test-assertions.git" noshallow
+pack "https://github.com/gerardroche/sublime-git-open-modified.git" noshallow
+pack "https://github.com/gerardroche/sublime-git-open.git" noshallow
+pack "https://github.com/gerardroche/sublime-gitk.git" noshallow
+pack "https://github.com/gerardroche/sublime-goto-definition-split.git" noshallow
+pack "https://github.com/gerardroche/sublime-goto-documentation.git" noshallow
+pack "https://github.com/gerardroche/sublime-goto-php-manual.git" noshallow
+pack "https://github.com/gerardroche/sublime-khan.git" noshallow
+pack "https://github.com/gerardroche/sublime-laravel-testing-completions.git" noshallow
+pack "https://github.com/gerardroche/sublime-monokai-free.git" noshallow
+pack "https://github.com/gerardroche/sublime-php-grammar.git" --name "PHPGrammar" noshallow
+pack "https://github.com/gerardroche/sublime-php-snippets.git" --name "PHPSnippets" noshallow
+pack "https://github.com/gerardroche/sublime-phpck.git" noshallow
+pack "https://github.com/gerardroche/sublime-phpunit-completions.git" --name "PHPUnitCompletions" noshallow
+pack "https://github.com/gerardroche/sublime-phpunit.git" --name "PHPUnitKit" noshallow
+pack "https://github.com/gerardroche/sublime-pine.git" noshallow
+pack "https://github.com/gerardroche/sublime-sensible.git" noshallow
+pack "https://github.com/gerardroche/sublime-sesame.git" noshallow
+pack "https://github.com/gerardroche/sublime-show-ascii-value.git" noshallow
+pack "https://github.com/gerardroche/sublime-tailwind-css-completions.git" noshallow
+pack "https://github.com/gerardroche/sublime-test.git" noshallow
+pack "https://github.com/gerardroche/sublime-tmux.git" noshallow
+pack "https://github.com/gerardroche/sublime-toggle-debug-mode.git" noshallow
+pack "https://github.com/gerardroche/sublime-toggler.git" noshallow
+pack "https://github.com/sublimelsp/LSP-css.git"
+pack "https://github.com/sublimelsp/LSP-eslint.git"
+pack "https://github.com/sublimelsp/LSP-pylsp.git"
+pack "https://github.com/sublimelsp/LSP-tailwindcss.git"
+pack "https://github.com/sublimelsp/LSP-volar.git"

@@ -15,7 +15,7 @@ Usage: \$(basename "\$0") [-h|--help]
 USAGE
 }
 
-[ "\$#" = 0 ] && show_usage && exit 0
+[ "\$#" = 0 ] && show_usage && exit 1
 
 while [ "\$#" != 0 ]; do
     case "\$1" in
@@ -24,8 +24,8 @@ while [ "\$#" != 0 ]; do
         --dbname=*)     DB_NAME=\${1#*=} ;; # Delete everything up till "="
         --help|-h) show_usage; exit 0 ;;
         --) shift; break ;; # standard end of options list
-        -*) echo >&2 "\$(basename "\$0"): unknown option '\$1'"; exit 1 ;;
-        *)  echo >&2 "\$(basename "\$0"): unknown argument '\$1'"; exit 1 ;;
+        -*) echo "\$(basename "\$0"): unknown option '\$1'" >&2; exit 1 ;;
+        *)  echo "\$(basename "\$0"): unknown argument '\$1'" >&2; exit 1 ;;
     esac
     shift
 done
